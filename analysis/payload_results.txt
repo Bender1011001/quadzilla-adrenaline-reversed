@@ -1,0 +1,92 @@
+EXE size: 1632485 bytes
+
+=== SEARCHING FOR BZh (BZIP2) STREAMS ===
+Found 0 BZh streams
+
+
+=== DECODING BASE64 PAYLOADS ===
+Found 45 'c4aeUs' blocks
+  [0] 0x02A025: b64=401 -> raw=300 bytes
+       Header: 73869e52cfc00800010969a0ccc50564
+  [1] 0x02A1B9: decode error: Invalid base64-encoded string: number of data characters (157) cannot be 1 more than a multiple of 4
+  [2] 0x02A259: decode error: Invalid base64-encoded string: number of data characters (481) cannot be 1 more than a multiple of 4
+  [3] 0x02A43D: decode error: Invalid base64-encoded string: number of data characters (345) cannot be 1 more than a multiple of 4
+  [4] 0x02A599: b64=269 -> raw=200 bytes
+       Header: 73869e52ce140400010969a0ccc50564
+  [5] 0x02A6A9: b64=425 -> raw=318 bytes
+       Header: 73869e52ce140400010969a0ccc50564
+  [6] 0x02A855: b64=413 -> raw=308 bytes
+       Header: 73869e52ce140400010969a0ccc50564
+  [7] 0x02A9F5: decode error: Invalid base64-encoded string: number of data characters (413) cannot be 1 more than a multiple of 4
+  [8] 0x02AB95: b64=389 -> raw=291 bytes
+       Header: 73869e52ce140400010969a0ccc50564
+  [9] 0x02AD1D: b64=437 -> raw=327 bytes
+       Header: 73869e52ce140400010969a0ccc50564
+  [10] 0x02AED5: b64=405 -> raw=302 bytes
+       Header: 73869e52ce140400010969a0ccc50564
+  [11] 0x02B06D: decode error: Invalid base64-encoded string: number of data characters (401) cannot be 1 more than a multiple of 4
+  [12] 0x02B201: b64=409 -> raw=305 bytes
+       Header: 73869e52ce140400010969a0ccc50564
+  [13] 0x02B39D: decode error: Invalid base64-encoded string: number of data characters (321) cannot be 1 more than a multiple of 4
+  [14] 0x02B4E1: b64=429 -> raw=320 bytes
+       Header: 73869e52ce140400010969a0ccc50564
+  [15] 0x02B691: b64=409 -> raw=305 bytes
+       Header: 73869e52ce140400010969a0ccc50564
+  [16] 0x02B82D: b64=453 -> raw=338 bytes
+       Header: 73869e52ce140400010969a0ccc50564
+  [17] 0x02B9F5: decode error: Invalid base64-encoded string: number of data characters (313) cannot be 1 more than a multiple of 4
+  [18] 0x02BB31: decode error: Invalid base64-encoded string: number of data characters (345) cannot be 1 more than a multiple of 4
+  [19] 0x02BC8D: b64=313 -> raw=233 bytes
+       Header: 73869e52ce140400010969a0ccc50564
+  [20] 0x02BDC9: b64=401 -> raw=299 bytes
+       Header: 73869e52cc080c00010969a0ccc50564
+  [21] 0x02BF5D: b64=417 -> raw=312 bytes
+       Header: 73869e52ce140400010969a0ccc50564
+  [22] 0x02C101: decode error: Invalid base64-encoded string: number of data characters (397) cannot be 1 more than a multiple of 4
+  [23] 0x02C2A1: decode error: Invalid base64-encoded string: number of data characters (233) cannot be 1 more than a multiple of 4
+  [24] 0x02C38D: b64=325 -> raw=242 bytes
+       Header: 73869e52cd840400010969a0ccc50564
+  [25] 0x02C4D5: decode error: Invalid base64-encoded string: number of data characters (281) cannot be 1 more than a multiple of 4
+  [26] 0x02C5F1: b64=205 -> raw=152 bytes
+       Header: 73869e52cd000400010969a0ccc50564
+  [27] 0x02C6C1: b64=205 -> raw=152 bytes
+       Header: 73869e52cdc00400010969a0ccc50564
+  [28] 0x02C791: b64=189 -> raw=141 bytes
+       Header: 73869e52cd480400010969a0ccc50564
+  [29] 0x02C851: b64=173 -> raw=129 bytes
+       Header: 73869e52cdd80400010969a0ccc50564
+  [30] 0x02C901: decode error: Invalid base64-encoded string: number of data characters (237) cannot be 1 more than a multiple of 4
+  [31] 0x02C9F1: b64=313 -> raw=233 bytes
+       Header: 73869e52cdd80400010969a0ccc50564
+  [32] 0x02CB2D: decode error: Invalid base64-encoded string: number of data characters (141) cannot be 1 more than a multiple of 4
+  [33] 0x02CBBD: b64=261 -> raw=195 bytes
+       Header: 73869e52ce140400010969a0ccc50564
+  [34] 0x02CCC5: b64=97 -> raw=71 bytes
+       Header: 73869e52cdb40400010969a0ccc50564
+  [35] 0x02CD29: b64=233 -> raw=173 bytes
+       Header: 73869e52ce140400010969a0ccc50564
+  [36] 0x02CE15: decode error: Invalid base64-encoded string: number of data characters (129) cannot be 1 more than a multiple of 4
+  [37] 0x02CE99: b64=141 -> raw=104 bytes
+       Header: 73869e52cc640400010969a0ccc50564
+  [38] 0x02CF29: b64=153 -> raw=114 bytes
+       Header: 73869e52cde40400010969a0ccc50564
+  [39] 0x02CFC5: b64=125 -> raw=92 bytes
+       Header: 73869e52cff80000010969a0ccc50564
+  [40] 0x02D045: b64=133 -> raw=99 bytes
+       Header: 73869e52ce140400010969a0ccc50564
+  [41] 0x02D0CD: decode error: Invalid base64-encoded string: number of data characters (253) cannot be 1 more than a multiple of 4
+  [42] 0x02D1CD: b64=209 -> raw=155 bytes
+       Header: 73869e52cdc00400010969a0ccc50564
+  [43] 0x02D2A1: decode error: Invalid base64-encoded string: number of data characters (257) cannot be 1 more than a multiple of 4
+  [44] 0x02D3A5: b64=93 -> raw=69 bytes
+       Header: 73869e52ce140400010969a0ccc50564
+
+
+=== TRYING OVERLAY AS ENCRYPTED ZIP ===
+  PK\x03\x04 (local file header): NOT FOUND
+  PK\x01\x02 (central directory): NOT FOUND
+  PK\x05\x06 (end of central dir): NOT FOUND
+  7z signature: NOT FOUND
+  CAB signature: NOT FOUND
+
+Done!

@@ -1,0 +1,175 @@
+========================================================================
+FILE: e:\code.projects\GitHub-projects\quadzilla_rev\S03V126CDR12A.Smt
+Size: 4313006 bytes (4211.9 KB)
+Appears text-based: False
+First 128 bytes hex:
+  00000000: 53 6d 61 72 74 79 46 69 6c 65 30 30 30 30 30 31  SmartyFile000001
+  00000010: e5 84 87 e6 61 47 d3 e2 bd ec af 49 e9 88 8b ea  ....aG.....I....
+  00000020: 65 53 c7 f6 a1 f0 b3 55 fd 9c 9f ee f9 5f cb fa  eS.....U....._..
+  00000030: 95 c4 87 61 d1 f0 53 c2 cd 6b ff ce 99 c8 8b 6d  ...a..S..k.....m
+  00000040: c5 e4 47 d6 c1 77 e3 d2 8d dc 9f 79 c9 e8 4b da  ..G..w.....y..K.
+  00000050: 85 03 97 a6 f1 a0 e3 05 bd 9c 3f ae 99 0f 9b aa  ..........?.....
+  00000060: e5 b4 f7 11 81 b0 e3 b2 bd 1b 8f be e9 b8 fb 1d  ................
+  00000070: b5 84 d7 86 b1 27 b3 82 dd 8c cf 29 b9 88 db 8a  .....'.....)....
+  Signature 'gzip': found at offsets [2157, 92650, 105642, 113405, 123994, 124397, 930937, 2013156, 2562097, 2563140]...
+  Signature 'ZIP/PK': found at offsets [76575, 106973, 110779, 135517, 157529, 595266, 603799, 1056182]
+  Signature 'DOS/PE EXE': found at offsets [9443, 66077, 178619, 188107, 191179, 191411, 192699, 193211, 193723, 194235]...
+  Signature 'Smarty header': found at offsets [0]
+========================================================================
+FILE: e:\code.projects\GitHub-projects\quadzilla_rev\overlay.bin
+Size: 1272037 bytes (1242.2 KB)
+First non-zero byte at offset: None
+Zero bytes: 1272037 (100.0%)
+Shannon entropy: -0.000 bits/byte (max 8.0)
+Unique byte values: 1
+Most common bytes: [('0x00', 1272037)]
+  If ARM LE: SP=0x00000000, Reset=0x00000000
+  If ARM BE: SP=0x00000000, Reset=0x00000000
+FF-filled regions (>=64 bytes): 0
+
+ASCII strings >= 8 chars:
+Total strings found: 0
+========================================================================
+PROBING EXE: e:\code.projects\GitHub-projects\quadzilla_rev\ADR9802v2.8.4.exe
+Size: 1632485 bytes (1594.2 KB)
+
+Interesting strings in EXE:
+  0000004D: !This program cannot be run in DOS mode.
+  0003D9A3: - not enough space for _onexit/atexit table
+  0003D9DB: - unable to open console device
+  0003DA82: abnormal program termination
+  0003DB24: Microsoft Visual C++ Runtime Library
+  0003DB60: Program: 
+  0003DB70: <program name unknown>
+  00045176: OffsetRect
+  000454FC: GetVersionExA
+  0004553E: GetCommandLineA
+  00045550: GetVersion
+  0004570A: LCMapStringA
+  0004571A: LCMapStringW
+  000457FC: CompareStringA
+  0004580E: CompareStringW
+  000464D8: Cannot open file, filename is empty.
+  00046520: Cannot delete file, filename is null or empty
+  00046550: Cannot delete file
+  00046574: Cannot delete file, file does not exist
+  000465F4: Cannot set directory, bad path
+  00047208: c4aeUs4UBAABCWmgzMUFZJlNZZ2alZwAAoHe//99m7YCACowgAChAhgABFGQoAIAAAJAAojqr/7AA9sQhCnkmGkGQaNAANGjRkA009TCEApPUHqAADQBiAyA
+  00048770: c4aeUs4UBAABCWmgzMUFZJlNZAIKJSQAAo3e////m7IDACI0ACDAAEgAIAHQLAKAAAJAAizuv/rAA8jCCmTUeo9I0MjQGgGgAGho0NDCBoJGoMgAAAAAAAAA
+  00048914: c4aeUswIDAABCWmgzMUFZJlNZNWTxtgABWH/f5mZrsmM2VoISCCIIAaoCQiQAwAwgYiQwfgpX+feGsADZIVT0m0nqAaADTQ0AGhoDQMgaDE9TTCGhzCaMjQ0
+  00048BA0: c4aeUs2EBAABCWmgzMUFZJlNZRJlhDAAAmv2//7F4NkAQBEAEICAAMwBAAMAAAQAhADlbvxzIUDAAu1g0kRk0GEyAMRk0PUHqHpDyZCCp4U0wI0wEwQxDTTQ
+  0004D1E0: .?AVHashMap@@
+  0004D258: loadFileInfoAnsi failed: cannot get file time
+  0004D288: loadFileInfoAnsi failed: cannot open for reading
+  0004D2D4: loadFileInfoAnsi failed: cannot get attributes
+  0004D360: .?AVWindowsVersion@@
+  00054580: Cannot inflate from data source, no output object
+  0005801F: FirmwareUpdate\X2Updater.exe
+  0005806A: FirmwareUpdate/qz.inf
+  000582C1: FirmwareUpdate/FirmwareUpdate.pwd
+  00058305: FirmwareUpdate/FirmwareUpdate.pwk
+  00058349: FirmwareUpdate/FirmwareUpdate.qz
+  00069736: FirmwareUpdate/Quadzilla.dll
+  0006CA71: FirmwareUpdate/X2Updater.exe
+  00080A23: FirmwareUpdate/Working.exe
+  00083B67: FirmwareUpdate/quadzillaWorking0.bmp
+  00085A5F: FirmwareUpdate/quadzillaWorking1.bmp
+  00087959: FirmwareUpdate/quadzillaWorking2.bmp
+  00089858: FirmwareUpdate/quadzillaWorking3.bmp
+  0008B75D: FirmwareUpdate/quadzillaWorking4.bmp
+  0008D667: FirmwareUpdate/quadzillaWorking5.bmp
+  0008F574: FirmwareUpdate/quadzillaWorking6.bmp
+  00091482: FirmwareUpdate/quadzillaWorking7.bmp
+  00093391: FirmwareUpdate/quadzillaWorking8.bmp
+  000952A0: FirmwareUpdate/quadzillaWorking9.bmp
+  000971AF: FirmwareUpdate/quadzillaWorking10.bmp
+  000990BF: FirmwareUpdate/quadzillaWorking11.bmp
+  0009AFCF: FirmwareUpdate/quadzillaWorking12.bmp
+  0009CEDD: FirmwareUpdate/quadzillaWorking13.bmp
+  0009EDED: FirmwareUpdate/quadzillaWorking14.bmp
+  000A0CFC: FirmwareUpdate/quadzillaWorking15.bmp
+  000A2C0C: FirmwareUpdate/quadzillaWorking16.bmp
+  000A4B29: FirmwareUpdate/quadzillaWorking17.bmp
+  000A6A3C: FirmwareUpdate/quadzillaWorking18.bmp
+  000A894F: FirmwareUpdate/quadzillaWorking19.bmp
+  000AA861: FirmwareUpdate/quadzillaWorking20.bmp
+  000AC774: FirmwareUpdate/quadzillaWorking21.bmp
+  000AE687: FirmwareUpdate/quadzillaWorking22.bmp
+  000B05A7: FirmwareUpdate/quadzillaWorking23.bmp
+  000B24C8: FirmwareUpdate/quadzillaWorking24.bmp
+  000B43E1: FirmwareUpdate/quadzillaWorking25.bmp
+  000B62FC: FirmwareUpdate/quadzillaWorking26.bmp
+  000B820C: FirmwareUpdate/quadzillaWorking27.bmp
+  000BA11C: FirmwareUpdate/quadzillaWorking28.bmp
+  000BC02B: FirmwareUpdate/quadzillaWorking29.bmp
+  000BDF3A: FirmwareUpdate/quadzillaWorking30.bmp
+  000BFE4A: FirmwareUpdate/quadzillaWorking31.bmp
+  000C1D59: FirmwareUpdate/quadzillaWorking32.bmp
+  000C3C68: FirmwareUpdate/quadzillaWorking33.bmp
+  000C5B78: FirmwareUpdate/quadzillaWorking34.bmp
+  000C7A87: FirmwareUpdate/quadzillaWorking35.bmp
+  000C9995: FirmwareUpdate/quadzillaWorking36.bmp
+  000CB8A2: FirmwareUpdate/quadzillaWorking37.bmp
+  000CD7AA: FirmwareUpdate/quadzillaWorking38.bmp
+  000CF6AA: FirmwareUpdate/quadzillaWorking39.bmp
+  000D15A5: FirmwareUpdate/quadzillaWorking40.bmp
+  000D349C: FirmwareUpdate/quadzillaWorking41.bmp
+  000D5395: FirmwareUpdate/quadzillaWorking42.bmp
+  000D728C: FirmwareUpdate/quadzillaWorking43.bmp
+  000D9187: FirmwareUpdate/quadzillaWorking44.bmp
+  000DB087: FirmwareUpdate/quadzillaWorking45.bmp
+  000DCF8F: FirmwareUpdate/quadzillaWorking46.bmp
+  000DEE9C: FirmwareUpdate/quadzillaWorking47.bmp
+  000E0DAA: FirmwareUpdate/quadzillaWorking48.bmp
+  000E2CB9: FirmwareUpdate/quadzillaWorking49.bmp
+  000E4BC9: FirmwareUpdate/quadzillaWorking50.bmp
+  000E6AD8: FirmwareUpdate/quadzillaWorking51.bmp
+  000E89E7: FirmwareUpdate/quadzillaWorking52.bmp
+  000EA8F7: FirmwareUpdate/quadzillaWorking53.bmp
+  000EC806: FirmwareUpdate/quadzillaWorking54.bmp
+  000EE715: FirmwareUpdate/quadzillaWorking55.bmp
+  000F0625: FirmwareUpdate/quadzillaWorking56.bmp
+  000F2535: FirmwareUpdate/quadzillaWorking57.bmp
+  000F4450: FirmwareUpdate/quadzillaWorking58.bmp
+  000F6369: FirmwareUpdate/quadzillaWorking59.bmp
+  000F828A: FirmwareUpdate/quadzillaWorking60.bmp
+  000FA1AA: FirmwareUpdate/quadzillaWorking61.bmp
+  000FC0BD: FirmwareUpdate/quadzillaWorking62.bmp
+  000FDFD0: FirmwareUpdate/quadzillaWorking63.bmp
+  000FFEE2: FirmwareUpdate/quadzillaWorking64.bmp
+  00101DF5: FirmwareUpdate/quadzillaWorking65.bmp
+  00103D08: FirmwareUpdate/quadzillaWorking66.bmp
+  00105C25: FirmwareUpdate/quadzillaWorking67.bmp
+  00107B35: FirmwareUpdate/quadzillaWorking68.bmp
+  00109A44: FirmwareUpdate/quadzillaWorking69.bmp
+  0010B954: FirmwareUpdate/quadzillaWorking70.bmp
+  0010D862: FirmwareUpdate/quadzillaWorking71.bmp
+  0010F772: FirmwareUpdate/quadzillaWorking72.bmp
+  00111682: FirmwareUpdate/quadzillaWorking73.bmp
+  00113592: FirmwareUpdate/quadzillaWorking74.bmp
+  001154A2: FirmwareUpdate/quadzillaWorking75.bmp
+  001173B2: FirmwareUpdate/quadzillaWorking76.bmp
+  001192C1: FirmwareUpdate/quadzillaWorking77.bmp
+  0011B1CF: FirmwareUpdate/quadzillaWorking78.bmp
+  0011D0DA: FirmwareUpdate/quadzillaWorking79.bmp
+  0011EFE0: FirmwareUpdate/quadzillaWorking80.bmp
+  00120EE0: FirmwareUpdate/quadzillaWorking81.bmp
+  00122DDB: FirmwareUpdate/images/usb0.png
+  0012A021: FirmwareUpdate/images/usb1.png
+  00131336: FirmwareUpdate/images/usb2.png
+  001386A6: FirmwareUpdate/images/usb3.png
+  0013FA54: FirmwareUpdate/images/usb4.png
+  00146D60: FirmwareUpdate/images/usb5.png
+  0014DFD9: FirmwareUpdate/images/usb6.png
+  0015527F: FirmwareUpdate/images/usb7.png
+  0015C4AC: FirmwareUpdate/images/usb8.png
+  001635F2: FirmwareUpdate/images/usb9.png
+  0016A718: FirmwareUpdate/images/usb10.png
+  0017163E: FirmwareUpdate/images/usb11.png
+  00178458: FirmwareUpdate/images/usb12.png
+  0017F1E8: FirmwareUpdate/blank.bmp
+  0017F5A1: FirmwareUpdate/generic_pane.bmp
+  001823A5: FirmwareUpdate/setupWizard.exe
+  0018E88E: FirmwareUpdate/FirmwareUpdate.opt
+
+BZh signatures in EXE:

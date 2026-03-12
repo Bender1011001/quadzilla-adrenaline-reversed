@@ -1,0 +1,25 @@
+# Ghidra projects (large, generated)
+ghidra_project/
+*.gpr
+*.rep/
+gh_tmp/
+
+# Decompiled APK (too large, copyrighted)
+decompiled/
+
+# IDE
+.vscode/
+
+# Analysis intermediates (keep in analysis/ but don't commit large binaries)
+analysis/*.exe
+analysis/*.bin
+analysis/*.apk
+analysis/*.Smt
+
+# Python
+__pycache__/
+*.pyc
+
+# OS
+Thumbs.db
+.DS_Store

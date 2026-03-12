@@ -1,0 +1,731 @@
+{
+  "imports": [
+    {
+      "address": "EXTERNAL:00000001", 
+      "library": "MSCOREE.DLL", 
+      "name": "_CorDllMain"
+    }
+  ], 
+  "functions": [
+    {
+      "address": "0040245c", 
+      "size": 100, 
+      "name": ".ctor"
+    }, 
+    {
+      "address": "004024c1", 
+      "size": 57, 
+      "name": "Reset"
+    }, 
+    {
+      "address": "00402508", 
+      "size": 12, 
+      "name": "get_HexFileName"
+    }, 
+    {
+      "address": "00402515", 
+      "size": 9, 
+      "name": "set_HexFileName"
+    }, 
+    {
+      "address": "0040252c", 
+      "size": 12, 
+      "name": "get_QZFileName"
+    }, 
+    {
+      "address": "00402539", 
+      "size": 9, 
+      "name": "set_QZFileName"
+    }, 
+    {
+      "address": "00402550", 
+      "size": 12, 
+      "name": "get_EPWFileName"
+    }, 
+    {
+      "address": "0040255d", 
+      "size": 9, 
+      "name": "set_EPWFileName"
+    }, 
+    {
+      "address": "00402574", 
+      "size": 82, 
+      "name": "SetSerialNumber"
+    }, 
+    {
+      "address": "004025d4", 
+      "size": 74, 
+      "name": "GetSerialNumber"
+    }, 
+    {
+      "address": "0040262c", 
+      "size": 49, 
+      "name": "GetSerialNumberKey"
+    }, 
+    {
+      "address": "0040266c", 
+      "size": 126, 
+      "name": "ReadEPWFile"
+    }, 
+    {
+      "address": "004026f8", 
+      "size": 74, 
+      "name": "GetPassword"
+    }, 
+    {
+      "address": "00402750", 
+      "size": 49, 
+      "name": "GetPasswordKey"
+    }, 
+    {
+      "address": "00402790", 
+      "size": 91, 
+      "name": "GetEncryptedPassword"
+    }, 
+    {
+      "address": "004027f8", 
+      "size": 68, 
+      "name": "GeneratePassword"
+    }, 
+    {
+      "address": "00402848", 
+      "size": 109, 
+      "name": "WritePasswordToFile"
+    }, 
+    {
+      "address": "004028c4", 
+      "size": 114, 
+      "name": "ReadPasswordFromFile"
+    }, 
+    {
+      "address": "00402944", 
+      "size": 51, 
+      "name": "WritePasswordKeyToFile"
+    }, 
+    {
+      "address": "00402984", 
+      "size": 92, 
+      "name": "ReadPasswordKeyFromFile"
+    }, 
+    {
+      "address": "004029ec", 
+      "size": 131, 
+      "name": "EncryptPassword"
+    }, 
+    {
+      "address": "00402a7c", 
+      "size": 131, 
+      "name": "DecryptPassword"
+    }, 
+    {
+      "address": "00402b0c", 
+      "size": 70, 
+      "name": "WriteEncryptedPasswordToFile"
+    }, 
+    {
+      "address": "00402b60", 
+      "size": 126, 
+      "name": "EncryptHexFile"
+    }, 
+    {
+      "address": "00402bec", 
+      "size": 155, 
+      "name": "DecryptHexFile"
+    }, 
+    {
+      "address": "00402c94", 
+      "size": 357, 
+      "name": "WriteEncryptionFiles"
+    }, 
+    {
+      "address": "00402dfa", 
+      "size": 2, 
+      "name": "TestFunctions"
+    }, 
+    {
+      "address": "00402e08", 
+      "size": 297, 
+      "name": "GenerateSNKey"
+    }, 
+    {
+      "address": "00402f40", 
+      "size": 297, 
+      "name": "GeneratePasswordKey"
+    }, 
+    {
+      "address": "0040306a", 
+      "size": 10, 
+      "name": ".ctor"
+    }, 
+    {
+      "address": "00403080", 
+      "size": 63, 
+      "name": "get_ResourceManager"
+    }, 
+    {
+      "address": "004030cc", 
+      "size": 11, 
+      "name": "get_Culture"
+    }, 
+    {
+      "address": "004030d8", 
+      "size": 8, 
+      "name": "set_Culture"
+    }, 
+    {
+      "address": "004030ec", 
+      "size": 124, 
+      "name": ".ctor"
+    }, 
+    {
+      "address": "00403174", 
+      "size": 364, 
+      "name": "ConnectDevice"
+    }, 
+    {
+      "address": "00403315", 
+      "size": 9, 
+      "name": "ResetConnectionStatus"
+    }, 
+    {
+      "address": "0040332c", 
+      "size": 383, 
+      "name": "EstablishConnection"
+    }, 
+    {
+      "address": "004034ec", 
+      "size": 448, 
+      "name": "SendFile"
+    }, 
+    {
+      "address": "004036c8", 
+      "size": 371, 
+      "name": "PrepHexFile"
+    }, 
+    {
+      "address": "00403894", 
+      "size": 124, 
+      "name": "GetTotal"
+    }, 
+    {
+      "address": "0040392d", 
+      "size": 17, 
+      "name": "RaiseExceptionFlag"
+    }, 
+    {
+      "address": "0040393f", 
+      "size": 9, 
+      "name": "LowerExceptionFlag"
+    }, 
+    {
+      "address": "00403949", 
+      "size": 9, 
+      "name": "SetStatus"
+    }, 
+    {
+      "address": "00403960", 
+      "size": 12, 
+      "name": "GetStatus"
+    }, 
+    {
+      "address": "00403978", 
+      "size": 11, 
+      "name": "GetProgressStatus"
+    }, 
+    {
+      "address": "00403990", 
+      "size": 12, 
+      "name": "GetACKMessages"
+    }, 
+    {
+      "address": "004039a8", 
+      "size": 12, 
+      "name": "GetProgrammingMessages"
+    }, 
+    {
+      "address": "004039c0", 
+      "size": 12, 
+      "name": "GetExceptionMessages"
+    }, 
+    {
+      "address": "004039cd", 
+      "size": 9, 
+      "name": "SetFileName"
+    }, 
+    {
+      "address": "004039e4", 
+      "size": 12, 
+      "name": "GetFileName"
+    }, 
+    {
+      "address": "004039f1", 
+      "size": 9, 
+      "name": "SetKeyFileName"
+    }, 
+    {
+      "address": "00403a08", 
+      "size": 12, 
+      "name": "GetKeyFileName"
+    }, 
+    {
+      "address": "00403a20", 
+      "size": 49, 
+      "name": "SetSerialNumber"
+    }, 
+    {
+      "address": "00403a60", 
+      "size": 12, 
+      "name": "GetSerialNumber"
+    }, 
+    {
+      "address": "00403a6d", 
+      "size": 25, 
+      "name": "WriteExceptionMessage"
+    }, 
+    {
+      "address": "00403a87", 
+      "size": 27, 
+      "name": "WriteMessage"
+    }, 
+    {
+      "address": "00403aa3", 
+      "size": 27, 
+      "name": "WriteProgrammingMessage"
+    }, 
+    {
+      "address": "00403abf", 
+      "size": 27, 
+      "name": "WriteACKMessage"
+    }, 
+    {
+      "address": "00403ae8", 
+      "size": 54, 
+      "name": "WriteMessage"
+    }, 
+    {
+      "address": "00403b1f", 
+      "size": 35, 
+      "name": "ClearStatus"
+    }, 
+    {
+      "address": "00403b43", 
+      "size": 9, 
+      "name": "SetBootloadMode"
+    }, 
+    {
+      "address": "00403b58", 
+      "size": 12, 
+      "name": "GetBootloadMode"
+    }, 
+    {
+      "address": "00403b70", 
+      "size": 174, 
+      "name": "LinkCheck"
+    }, 
+    {
+      "address": "00403c48", 
+      "size": 138, 
+      "name": "LinkDisconnect"
+    }, 
+    {
+      "address": "00403cfc", 
+      "size": 126, 
+      "name": "ClosePort"
+    }, 
+    {
+      "address": "00403da4", 
+      "size": 252, 
+      "name": "BootloadModeCommand"
+    }, 
+    {
+      "address": "00403ec8", 
+      "size": 514, 
+      "name": "ModuleInformationRequest"
+    }, 
+    {
+      "address": "00404124", 
+      "size": 212, 
+      "name": "EncryptedKeyTransfer"
+    }, 
+    {
+      "address": "00404220", 
+      "size": 708, 
+      "name": "DataTransfer"
+    }, 
+    {
+      "address": "00404524", 
+      "size": 121, 
+      "name": "DataTransferComplete"
+    }, 
+    {
+      "address": "004045c8", 
+      "size": 235, 
+      "name": "SerialNumberProgram"
+    }, 
+    {
+      "address": "004046dc", 
+      "size": 196, 
+      "name": "FeatureCodeRead"
+    }, 
+    {
+      "address": "004047c8", 
+      "size": 240, 
+      "name": "FeatureCodeAdd"
+    }, 
+    {
+      "address": "004048e0", 
+      "size": 240, 
+      "name": "FeatureCodeDelete"
+    }, 
+    {
+      "address": "004049f8", 
+      "size": 196, 
+      "name": "AbortCommand"
+    }, 
+    {
+      "address": "00404ae4", 
+      "size": 665, 
+      "name": "GetResponse"
+    }, 
+    {
+      "address": "00404db5", 
+      "size": 20, 
+      "name": ".ctor"
+    }, 
+    {
+      "address": "00404dca", 
+      "size": 62, 
+      "name": "Configure"
+    }, 
+    {
+      "address": "00404e14", 
+      "size": 104, 
+      "name": "Init"
+    }, 
+    {
+      "address": "00404e88", 
+      "size": 18, 
+      "name": "Open"
+    }, 
+    {
+      "address": "00404ea8", 
+      "size": 18, 
+      "name": "Close"
+    }, 
+    {
+      "address": "00404ebb", 
+      "size": 18, 
+      "name": "WriteBytes"
+    }, 
+    {
+      "address": "00404edc", 
+      "size": 17, 
+      "name": "ReadByte"
+    }, 
+    {
+      "address": "00404efc", 
+      "size": 12, 
+      "name": "get_PortName"
+    }, 
+    {
+      "address": "00404f09", 
+      "size": 9, 
+      "name": "set_PortName"
+    }, 
+    {
+      "address": "00404f20", 
+      "size": 12, 
+      "name": "get_PortBaudRate"
+    }, 
+    {
+      "address": "00404f2d", 
+      "size": 9, 
+      "name": "set_PortBaudRate"
+    }, 
+    {
+      "address": "00404f44", 
+      "size": 12, 
+      "name": "get_PortParity"
+    }, 
+    {
+      "address": "00404f51", 
+      "size": 9, 
+      "name": "set_PortParity"
+    }, 
+    {
+      "address": "00404f68", 
+      "size": 12, 
+      "name": "get_PortDataBits"
+    }, 
+    {
+      "address": "00404f75", 
+      "size": 9, 
+      "name": "set_PortDataBits"
+    }, 
+    {
+      "address": "00404f8c", 
+      "size": 12, 
+      "name": "get_PortStopBits"
+    }, 
+    {
+      "address": "00404f99", 
+      "size": 9, 
+      "name": "set_PortStopBits"
+    }, 
+    {
+      "address": "00404fb0", 
+      "size": 12, 
+      "name": "get_PortHandshake"
+    }, 
+    {
+      "address": "00404fbd", 
+      "size": 9, 
+      "name": "set_PortHandshake"
+    }, 
+    {
+      "address": "00404fd4", 
+      "size": 12, 
+      "name": "get_PortBufferSize"
+    }, 
+    {
+      "address": "00404fe1", 
+      "size": 9, 
+      "name": "set_PortBufferSize"
+    }, 
+    {
+      "address": "00404ff8", 
+      "size": 16, 
+      "name": "get_PortReadTimeout"
+    }, 
+    {
+      "address": "00405009", 
+      "size": 14, 
+      "name": "set_PortReadTimeout"
+    }, 
+    {
+      "address": "00405024", 
+      "size": 16, 
+      "name": "get_PortWriteTimeout"
+    }, 
+    {
+      "address": "00405035", 
+      "size": 14, 
+      "name": "set_PortWriteTimeout"
+    }, 
+    {
+      "address": "00405050", 
+      "size": 99, 
+      "name": ".ctor"
+    }, 
+    {
+      "address": "004050c0", 
+      "size": 179, 
+      "name": "Configure"
+    }, 
+    {
+      "address": "00405180", 
+      "size": 164, 
+      "name": "ReadPortChar"
+    }, 
+    {
+      "address": "00405230", 
+      "size": 12, 
+      "name": "Read"
+    }, 
+    {
+      "address": "00405248", 
+      "size": 12, 
+      "name": "ReadChar"
+    }, 
+    {
+      "address": "00405260", 
+      "size": 55, 
+      "name": "CheckPort"
+    }, 
+    {
+      "address": "00405298", 
+      "size": 10, 
+      "name": "Write"
+    }, 
+    {
+      "address": "004052a3", 
+      "size": 9, 
+      "name": "TimerCommTest_Tick"
+    }, 
+    {
+      "address": "004052ad", 
+      "size": 9, 
+      "name": "TimerResponse_Tick"
+    }, 
+    {
+      "address": "0040986e", 
+      "size": 6, 
+      "name": "entry"
+    }
+  ], 
+  "interesting_strings": [
+    {
+      "address": "0040a0da", 
+      "type": "TerminatedUnicode", 
+      "value": "Translation"
+    }, 
+    {
+      "address": "0040a13a", 
+      "type": "TerminatedUnicode", 
+      "value": "CompanyName"
+    }, 
+    {
+      "address": "0040a1a0", 
+      "type": "TerminatedUnicode", 
+      "value": "Quadzilla"
+    }, 
+    {
+      "address": "0040a1ba", 
+      "type": "TerminatedUnicode", 
+      "value": "FileVersion"
+    }, 
+    {
+      "address": "0040a204", 
+      "type": "TerminatedUnicode", 
+      "value": "Quadzilla.dll"
+    }, 
+    {
+      "address": "0040a2b0", 
+      "type": "TerminatedUnicode", 
+      "value": "Quadzilla.dll"
+    }, 
+    {
+      "address": "0040a2ec", 
+      "type": "TerminatedUnicode", 
+      "value": "Quadzilla"
+    }, 
+    {
+      "address": "0040a306", 
+      "type": "TerminatedUnicode", 
+      "value": "ProductVersion"
+    }, 
+    {
+      "address": "0040a33a", 
+      "type": "TerminatedUnicode", 
+      "value": "Assembly Version"
+    }
+  ], 
+  "program": "Quadzilla.dll", 
+  "strings": [
+    {
+      "address": "00409852", 
+      "type": "TerminatedCString", 
+      "value": "_CorDllMain"
+    }, 
+    {
+      "address": "0040985e", 
+      "type": "TerminatedCString", 
+      "value": "mscoree.dll"
+    }, 
+    {
+      "address": "0040a0ba", 
+      "type": "TerminatedUnicode", 
+      "value": "VarFileInfo"
+    }, 
+    {
+      "address": "0040a0da", 
+      "type": "TerminatedUnicode", 
+      "value": "Translation"
+    }, 
+    {
+      "address": "0040a0fe", 
+      "type": "TerminatedUnicode", 
+      "value": "StringFileInfo"
+    }, 
+    {
+      "address": "0040a122", 
+      "type": "TerminatedUnicode", 
+      "value": "000004b0"
+    }, 
+    {
+      "address": "0040a13a", 
+      "type": "TerminatedUnicode", 
+      "value": "CompanyName"
+    }, 
+    {
+      "address": "0040a154", 
+      "type": "TerminatedUnicode", 
+      "value": "Lone Star Select"
+    }, 
+    {
+      "address": "0040a17e", 
+      "type": "TerminatedUnicode", 
+      "value": "FileDescription"
+    }, 
+    {
+      "address": "0040a1a0", 
+      "type": "TerminatedUnicode", 
+      "value": "Quadzilla"
+    }, 
+    {
+      "address": "0040a1ba", 
+      "type": "TerminatedUnicode", 
+      "value": "FileVersion"
+    }, 
+    {
+      "address": "0040a1d4", 
+      "type": "TerminatedUnicode", 
+      "value": "1.0.0.0"
+    }, 
+    {
+      "address": "0040a1ea", 
+      "type": "TerminatedUnicode", 
+      "value": "InternalName"
+    }, 
+    {
+      "address": "0040a204", 
+      "type": "TerminatedUnicode", 
+      "value": "Quadzilla.dll"
+    }, 
+    {
+      "address": "0040a226", 
+      "type": "TerminatedUnicode", 
+      "value": "LegalCopyright"
+    }, 
+    {
+      "address": "0040a28e", 
+      "type": "TerminatedUnicode", 
+      "value": "OriginalFilename"
+    }, 
+    {
+      "address": "0040a2b0", 
+      "type": "TerminatedUnicode", 
+      "value": "Quadzilla.dll"
+    }, 
+    {
+      "address": "0040a2d2", 
+      "type": "TerminatedUnicode", 
+      "value": "ProductName"
+    }, 
+    {
+      "address": "0040a2ec", 
+      "type": "TerminatedUnicode", 
+      "value": "Quadzilla"
+    }, 
+    {
+      "address": "0040a306", 
+      "type": "TerminatedUnicode", 
+      "value": "ProductVersion"
+    }, 
+    {
+      "address": "0040a324", 
+      "type": "TerminatedUnicode", 
+      "value": "1.0.0.0"
+    }, 
+    {
+      "address": "0040a33a", 
+      "type": "TerminatedUnicode", 
+      "value": "Assembly Version"
+    }, 
+    {
+      "address": "0040a35c", 
+      "type": "TerminatedUnicode", 
+      "value": "1.0.0.0"
+    }
+  ]
+}

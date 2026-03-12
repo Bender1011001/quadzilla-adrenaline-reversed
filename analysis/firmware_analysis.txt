@@ -1,0 +1,233 @@
+Firmware: 48897 bytes (47.8 KB)
+Base address: 0x00004000
+MD5: 8c4c796f52fcfa731f2037a57f612712
+
+=== MCU REGISTER ADDRESS SCAN ===
+Found 113 potential register addresses:
+  0xFFFFFFFF (╫4940)
+  0xFFFF4770 (╫14)
+  0xE0022096 (╫8)
+  0xE0022396 (╫8)
+  0xFFFFFC10 (╫5)
+  0xFFFFF43C (╫5)
+  0xFFFFF120 (╫5)
+  0xFFFF4708 (╫4)
+  0xFFFFFD00 (╫4)
+  0xFFFFF124 (╫4)
+  0xFFFFF128 (╫4)
+  0xE0002001 (╫4)
+  0xFFFFF434 (╫3)
+  0xFFFF4700 (╫3)
+  0xE003CBA0 (╫3)  LPC2xxx CAN AF range
+  0xFFFFF000 (╫2)
+  0xFFFFF134 (╫2)
+  0xFFFFFED4 (╫2)
+  0xE0030040 (╫2)
+  0xFFFFF430 (╫2)
+  0xFFFE0000 (╫2)
+  0xE0046022 (╫2)  LPC2xxx CAN1 range
+  0xFFFFF400 (╫2)
+  0xFFFFF410 (╫2)
+  0xFFFFF470 (╫2)
+  0xFFFFF474 (╫2)
+  0xFFFFF404 (╫2)
+  0xE0064A08 (╫2)
+  0xFFFFFD44 (╫1)
+  0xFFFFFC20 (╫1)
+
+=== CAN BUS / J1939 SCAN ===
+Found 128 potential CAN IDs:
+  0x00000708 at 0x009C78  PGN=0708
+  0x00000708 at 0x009E7C  PGN=0708
+  0x000007D1 at 0x0056E8  PGN=07D1
+  0x18080200 at 0x006398  PGN=0802
+  0x18080200 at 0x006404  PGN=0802
+  0x18080200 at 0x0065D4  PGN=0802
+  0x18080200 at 0x006678  PGN=0802
+  0x18080200 at 0x0066F4  PGN=0802
+  0x18080F89 at 0x005AE0  PGN=080F
+  0x18090E09 at 0x007DF0  PGN=090E
+  0x1812E001 at 0x005198  PGN=12E0
+  0x181800A8 at 0x004718  PGN=1800
+  0x181B589B at 0x007410  PGN=1B58
+  0x18280040 at 0x0042AC  PGN=2800
+  0x18280040 at 0x0042D8  PGN=2800
+  0x182848A3 at 0x005148  PGN=2848
+  0x18304833 at 0x004F78  PGN=3048
+  0x1830483D at 0x004F44  PGN=3048
+  0x1830484A at 0x004F04  PGN=3048
+  0x1830487D at 0x004E48  PGN=3048
+  0x1830488C at 0x004DFC  PGN=3048
+  0x18380040 at 0x006BB4  PGN=3800
+  0x18384F1C at 0x004AB8  PGN=384F
+  0x183F6BD0 at 0x004E58  PGN=3F6B
+  0x18400209 at 0x005AD0  PGN=4002
+  0x18400209 at 0x005BE4  PGN=4002
+  0x18407809 at 0x0073A8  PGN=4078
+  0x18407849 at 0x004FBC  PGN=4078
+  0x18407C21 at 0x005340  PGN=407C
+  0x185050C1 at 0x004208  PGN=5050
+  0x185050C1 at 0x004668  PGN=5050
+  0x185050C1 at 0x00468C  PGN=5050
+  0x1850F887 at 0x005464  PGN=50F8
+  0x18510209 at 0x006530  PGN=5102
+  0x18510209 at 0x0065B0  PGN=5102
+  0x18514A02 at 0x007388  PGN=514A
+  0x18514A06 at 0x007C48  PGN=514A
+  0x18514A06 at 0x007C94  PGN=514A
+  0x1864FC3F at 0x004CF4  PGN=64FC
+  0x189A4B0C at 0x004CE8  PGN=9A4B
+
+=== DATA TABLES SCAN ===
+Found 44 potential calibration tables:
+  0x0060AA: increasing 1550 -> 65472
+  0x0060D2: decreasing 65472 -> 1090
+  0x006124: increasing 1508 -> 65472
+  0x006156: increasing 1380 -> 2186
+  0x0061AE: increasing 504 -> 65472
+  0x006220: decreasing 65472 -> 1566
+  0x00974A: decreasing 5135 -> 0
+  0x009860: increasing 0 -> 1280
+  0x009B20: decreasing 1000 -> 0
+  0x009CCA: decreasing 65534 -> 0
+  0x009D88: decreasing 148 -> 0
+  0x009DEE: decreasing 65530 -> 0
+  0x009E12: decreasing 65530 -> 0
+  0x009E54: increasing 0 -> 1542
+  0x009EA8: decreasing 37993 -> 0
+  0x009ED0: decreasing 2032 -> 0
+  0x00A02E: increasing 0 -> 4111
+  0x00A040: increasing 1027 -> 8480
+  0x00A080: increasing 16961 -> 24414
+  0x00A302: decreasing 110 -> 0
+
+=== ALL STRINGS >=6 CHARS ===
+Found 103 strings:
+  0x004288: "h`>p(x"
+  0x0042B4: "(a>p(x"
+  0x0042E1: "`&p(x@"
+  0x0043AF: "$TsyLTa"
+  0x0043D7: "vg%Uvi%"
+  0x0043E7: "wq%Uwt%"
+  0x0043F3: "wz%%p}%ep"
+  0x004446: "ApVHai"
+  0x004464: "ApRH!j"
+  0x0044A4: "ApHHQi"
+  0x00476C: "0p x2xi"
+  0x004A51: " lF"pHq"
+  0x004B04: "d#0iGC8"
+  0x004B85: ""&*.26:>BFJNRVZ^bbffjjnnrrvv"
+  0x004C3A: ""&*.0y"
+  0x004C9F: "h"K0yd("
+  0x004CAE: "0yhCd!"
+  0x004CEC: "QVHCd!"
+  0x004FF2: "@xXCd!"
+  0x00533D: "!HC!|@"
+  0x005526: "Ap[H\I"
+  0x005B3A: "(z>!HCd!"
+  0x005BC0: "hz:!HCd!"
+  0x005BE8: "8IHC8I"
+  0x005F57: "pKySp'J"
+  0x005F6B: "pKzSp$J"
+  0x0062C9: "!1p@xa"
+  0x0062D6: "`w}!HCd!"
+  0x00649B: "Jd )xI"
+  0x0064A9: "Jd )xI"
+  0x0065EA: "HpfJhh"
+  0x0065FA: "2 (sdI"
+  0x00666B: "!irRH,"
+  0x006878: "2 hw~I"
+  0x0068DA: "2#CpnH"
+  0x006942: "2#Cq\H"
+  0x0069AA: "2#CrJH"
+  0x006A12: "2#Cs8H"
+  0x006D06: "fefr z"
+  0x006D7D: "v%wwIHx"
+  0x006F86: "N@3333"
+  0x006FD3: "h?IA`?I"
+  0x007009: "h6j7N6h&@"
+  0x00702B: "h)Ow`0N7h"
+  0x007037: "`/O7`/N&'7`"
+  0x00705B: "h6j-N6h&@"
+  0x0071D7: "pWKXL[M.h"
+  0x0071E4: "XN0`)`"
+  0x007213: "pJKKLNM.h"
+  0x007220: "KN0`)`"
+  0x007287: "`+M,`+M,`+M,`+M,`+M,`+M,`+M,`+M,`"
+  0x0074BB: "i@iPPpG"
+  0x007507: "`9L"`%L&M,`"
+  0x007545: ""Br+H J"
+  0x007665: "NpC(`"p"
+  0x007713: " 8p0p<"
+  0x0077C7: "M*iSP@"
+  0x007885: "` !9`@!9`>`A"
+  0x0078C4: "lp,paH"
+  0x0096EE: "#(-27<AFKPUZ_d"
+  0x009706: "#(-27<AFKP"
+  0x00971E: "#(-27<"
+  0x0098CB: "##((((("
+  0x0098D6: "##((-----"
+  0x0098E1: "##((---2222"
+  0x0098ED: "#(2<PPPPFFFF"
+  0x0098FA: "(-<FPZZPPFFF"
+  0x009907: "-7FPZZZPPFFF"
+  0x009914: "2APZZZZZPFFF"
+  0x009921: "7KUZ___ZPFFF"
+  0x00992E: "<U__dddZPPFF"
+  0x00993B: "A_ddddddZPPF"
+  0x009948: "FdddddddZPPF"
+  0x009955: "KddddddddZPF"
+  0x009962: "KdddddddddZP"
+  0x00996F: "KdddddddddZP"
+  0x00997C: "ddddddddddddZPF2("
+  0x009990: "ddddddddddddZPF2("
+  0x0099A4: "dddddddddddPF<2("
+  0x0099B8: "ddddddddddPF<2("
+  0x0099CC: "dddddddddPF<2("
+  0x0099E0: "ddddddddPF<2("
+  0x0099F4: "dddddddPF<2("
+  0x009A08: "ddddddPF<2("
+  0x009A1C: "dddddPF<2("
+  0x009A30: "ddddPF<2("
+  0x009A44: "dddPPF<2("
+  0x009A58: "ddZPPF<2("
+  0x009A6C: "d_ZZPF<2("
+  0x009A80: "d_ZZPF<2("
+  0x009A94: "d_ZZPF<2("
+  0x009AA8: "d_ZZPF<2("
+  0x009ABC: "d_ZZPF<2("
+  0x009AD0: "d_ZZPF<2("
+  0x009AE4: "d_ZZPF<2("
+  0x009AF8: "d_ZZPF<2("
+  0x009C80: "egiknqtwz}"
+  0x009FEA: "b@33c@@gJ"
+  0x00A05E: " !"#$%&'()*+,-./0123456789:;;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^^_`abcdddddddddddd,"
+  0x00A358: " !"#$%&'"
+  0x00A397: " !"$%&')* "
+  0x00FD00: "Aug  2 2018"
+  0x00FE00: "DADR9802"
+
+=== BRANCH/CALL TARGETS ===
+Found 151 unique BL targets:
+  0x0086A8 (called 2 times)
+  0x008678 (called 2 times)
+  0x3D69E0 (called 1 times)
+  0x7CB374 (called 1 times)
+  0x-1BA9A2C (called 1 times)
+  0x7CB7D4 (called 1 times)
+  0x7CB7F8 (called 1 times)
+  0x84493C (called 1 times)
+  0x-3BF8D4 (called 1 times)
+  0x02E734 (called 1 times)
+  0x-6BF8BC (called 1 times)
+  0x-B3F898 (called 1 times)
+  0x-BBF88C (called 1 times)
+  0x43B014 (called 1 times)
+  0xA62840 (called 1 times)
+  0x039114 (called 1 times)
+  0x0390B8 (called 1 times)
+  0x020940 (called 1 times)
+  0x015344 (called 1 times)
+  0x3F91DC (called 1 times)
+
+Done!

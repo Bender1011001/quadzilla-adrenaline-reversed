@@ -1,0 +1,297 @@
+EXE size: 1632485 bytes
+  Section .text: off=0x1000 size=0x3C000 end=0x3D000
+  Section .rdata: off=0x3D000 size=0x9000 end=0x46000
+  Section .data: off=0x46000 size=0x11000 end=0x57000
+  Section .rsrc: off=0x57000 size=0x1000 end=0x58000
+
+PE overlay: offset=0x58000, size=1272037 bytes
+Overlay header hex: 481290bf49ff91aa0100000000020d00736574757046696c656e616d651c004669726d776172655570646174655c5832557064617465722e6578650b006e6f49
+Overlay header ASCII: b'H\x12\x90\xbfI\xff\x91\xaa\x01\x00\x00\x00\x00\x02\r\x00setupFilename\x1c\x00FirmwareUpdate\\X2Updater.exe\x0b\x00noInterface\x04\x00true\x0b\x00'
+
+--- Searching for ZIP archives ---
+  Total ZIP archives: 0
+
+--- Searching for base64 payloads ---
+  Base64 at 0x2A025: 401 chars -> 300 bytes -> extracted\b64_00.bin
+    Header: 73869e52cfc00800010969a0ccc50564
+  Base64 at 0x2A599: 269 chars -> 200 bytes -> extracted\b64_01.bin
+    Header: 73869e52ce140400010969a0ccc50564
+  Base64 at 0x2A6A9: 425 chars -> 318 bytes -> extracted\b64_02.bin
+    Header: 73869e52ce140400010969a0ccc50564
+  Base64 at 0x2A855: 413 chars -> 308 bytes -> extracted\b64_03.bin
+    Header: 73869e52ce140400010969a0ccc50564
+  Base64 at 0x2AB95: 389 chars -> 291 bytes -> extracted\b64_04.bin
+    Header: 73869e52ce140400010969a0ccc50564
+  Base64 at 0x2AD1D: 437 chars -> 327 bytes -> extracted\b64_05.bin
+    Header: 73869e52ce140400010969a0ccc50564
+  Base64 at 0x2AED5: 405 chars -> 302 bytes -> extracted\b64_06.bin
+    Header: 73869e52ce140400010969a0ccc50564
+  Base64 at 0x2B201: 409 chars -> 305 bytes -> extracted\b64_07.bin
+    Header: 73869e52ce140400010969a0ccc50564
+  Base64 at 0x2B4E1: 429 chars -> 320 bytes -> extracted\b64_08.bin
+    Header: 73869e52ce140400010969a0ccc50564
+  Base64 at 0x2B691: 409 chars -> 305 bytes -> extracted\b64_09.bin
+    Header: 73869e52ce140400010969a0ccc50564
+  Base64 at 0x2B82D: 453 chars -> 338 bytes -> extracted\b64_10.bin
+    Header: 73869e52ce140400010969a0ccc50564
+  Base64 at 0x2BC8D: 313 chars -> 233 bytes -> extracted\b64_11.bin
+    Header: 73869e52ce140400010969a0ccc50564
+  Base64 at 0x2BDC9: 401 chars -> 299 bytes -> extracted\b64_12.bin
+    Header: 73869e52cc080c00010969a0ccc50564
+  Base64 at 0x2BF5D: 417 chars -> 312 bytes -> extracted\b64_13.bin
+    Header: 73869e52ce140400010969a0ccc50564
+  Base64 at 0x2C38D: 325 chars -> 242 bytes -> extracted\b64_14.bin
+    Header: 73869e52cd840400010969a0ccc50564
+  Base64 at 0x2C5F1: 205 chars -> 152 bytes -> extracted\b64_15.bin
+    Header: 73869e52cd000400010969a0ccc50564
+  Base64 at 0x2C6C1: 205 chars -> 152 bytes -> extracted\b64_16.bin
+    Header: 73869e52cdc00400010969a0ccc50564
+  Base64 at 0x2C791: 189 chars -> 141 bytes -> extracted\b64_17.bin
+    Header: 73869e52cd480400010969a0ccc50564
+  Base64 at 0x2C851: 173 chars -> 129 bytes -> extracted\b64_18.bin
+    Header: 73869e52cdd80400010969a0ccc50564
+  Base64 at 0x2C9F1: 313 chars -> 233 bytes -> extracted\b64_19.bin
+    Header: 73869e52cdd80400010969a0ccc50564
+  Base64 at 0x2CBBD: 261 chars -> 195 bytes -> extracted\b64_20.bin
+    Header: 73869e52ce140400010969a0ccc50564
+  Base64 at 0x2CCC5: 97 chars -> 71 bytes -> extracted\b64_21.bin
+    Header: 73869e52cdb40400010969a0ccc50564
+  Base64 at 0x2CD29: 233 chars -> 173 bytes -> extracted\b64_22.bin
+    Header: 73869e52ce140400010969a0ccc50564
+  Base64 at 0x2CE99: 141 chars -> 104 bytes -> extracted\b64_23.bin
+    Header: 73869e52cc640400010969a0ccc50564
+  Base64 at 0x2CF29: 153 chars -> 114 bytes -> extracted\b64_24.bin
+    Header: 73869e52cde40400010969a0ccc50564
+  Base64 at 0x2CFC5: 125 chars -> 92 bytes -> extracted\b64_25.bin
+    Header: 73869e52cff80000010969a0ccc50564
+  Base64 at 0x2D045: 133 chars -> 99 bytes -> extracted\b64_26.bin
+    Header: 73869e52ce140400010969a0ccc50564
+  Base64 at 0x2D1CD: 209 chars -> 155 bytes -> extracted\b64_27.bin
+    Header: 73869e52cdc00400010969a0ccc50564
+  Base64 at 0x2D3A5: 93 chars -> 69 bytes -> extracted\b64_28.bin
+    Header: 73869e52ce140400010969a0ccc50564
+  Total base64 payloads: 29
+
+--- Analyzing .Smt file ---
+  Size: 4313006 bytes
+  Header: b'SmartyFile000001'
+  After header: e58487e66147d3e2bdecaf49e9888bea6553c7f6a1f0b355fd9c9feef95fcbfa
+  Entropy after header: 7.999 bits/byte
+
+  Looking for structure in .Smt...
+    Shift 16: XOR has 1/32 zero bytes
+    Shift 32: XOR has 3/32 zero bytes
+    Shift 64: XOR has 1/32 zero bytes
+    Shift 128: XOR has 0/32 zero bytes
+    Shift 256: XOR has 2/32 zero bytes
+
+--- Checking SmartyUSB.exe ---
+  Size: 730112 bytes
+  Overlay: 0 bytes at 0xB2400
+  0x000050: This program must be run under Win32
+  0x001430: Classes::TComponent
+  0x003C1A: odDisabled
+  0x003C89: odComboBoxEdit
+  0x00495C: EnableThemeDialogTexture
+  0x004978: IsThemeDialogTextureEnabled
+  0x004A14: EnableTheming
+  0x004BCA: TComdlgFilterSpecArray
+  0x005810: comctl32.dll
+  0x005878: FlatSB_EnableScrollBar
+  0x005A84: DwmIsCompositionEnabled
+  0x005BC4: InitCommonControlsEx
+  0x006F4A: TBiDiMode
+  0x0070B1: htKeyword
+  0x00759D: EComponentError
+  0x00835A: TComponentNamel
+  0x008539: TComponent
+  0x01A5FD: EVariantUnexpectedError`
+  0x026E09: BiDiMode
+  0x026EDC: DragMode
+  0x026F92: ParentBiDiMode
+  0x027BB4: OnKeyDownt(E
+  0x027BD8: OnKeyPress((E
+  0x027BFD: OnKeyUpp'E
+  0x02818D: BiDiMode8
+  0x02A0FD: AutoHotkeysP
+  0x02A21E: Enabled0
+  0x02A588: AutoHotkeys
+  0x02A5FE: BiDiModedJB
+  0x02A90F: BiDiModexz@
+  0x02EDF4: \SYSTEM\CurrentControlSet\Control\Keyboard Layouts\
+  0x03098E: TPenMode
+  0x030F5D: TCanvash
+  0x030F6A: TCanvasD
+  0x030FC1: CopyMode
+  0x031329: TPicture
+  0x036741: TBitmapCanvas
+  0x036756: TBitmapCanvas(qC
+  0x039704: SOFTWARE\Microsoft\Windows NT\CurrentVersion\FontSubstitutes
+  0x03A604: EnabledT
+  0x03A843: OnCanResize
+  0x03AF5E: CanClose
+  0x03B016: TPopupMode
+  0x03B67A: BiDiModeX
+  0x03BA0F: KeyPreview
+  0x03BB3C: PopupModeh
+  0x03F098: GlassFrame.Enabled
+  0x045530: System\CurrentControlSet\Control\Keyboard Layouts\%.8x
+  0x049DEF: Picture8
+  0x04A4BC: EnabledX
+  0x04A941: BiDiModeH4E
+  0x04C79D: TCommonDialog
+  0x04C7B2: TCommonDialog8
+  0x04C862: TOpenOption
+  0x04C99D: ofEnableIncludeNotify
+  0x04C9B3: ofEnableSizing
+  0x04C9D4: ofForceShowHidden
+  0x04C9F6: TOpenOptions
+  0x04CA0E: TOpenOptionEx
+  0x04CA46: TOpenOptionsEx
+  0x04CCAC: Options@
+  0x04CCCE: OptionsExp
+  0x04CD12: OnCanClose
+  0x04CE0D: EPlatformVersionException
+  0x04CE2E: TFileDialogOption
+  0x04CE82: fdoPickFolders
+  0x04CF92: fdoForceShowHidden
+  0x04CFA5: fdoDefaultNoMiniMode
+  0x04CFDE: TFileDialogOptions
+  0x04D12C: CanChange
+  0x04DA6F: Optionsp
+  0x04ED35: TOpenPictureDialog
+  0x050E04: commdlg_help
+  0x050E14: commdlg_FindReplace
+  0x0514F1: TControlCanvas
+  0x0517BE: TDragMode
+  0x051E2E: TKeyEvent
+  0x051E7A: TKeyPressEvent
+  0x05227E: TCanResizeEvent
+  0x0528EA: HelpKeywordxz@
+  0x0643B8: WINNLSEnableIME
+  0x0643F8: ImmGetConversionStatus
+  0x064410: ImmSetConversionStatus
+  0x06443C: ImmSetCompositionWindow
+  0x064454: ImmSetCompositionFontA
+  0x06446C: ImmGetCompositionStringA
+  0x064D34: ComCtrls@WF
+  0x064D7B: ComCtrls
+  0x065005: TCustomStatusBar
+  0x065235: StatusBar
+  0x06523F: TStatusBar
+  0x0653D3: ComCtrls,
+  0x065BC5: ComCtrls$
+  0x065CBD: Enabledp
+  0x06612D: TConversion<kF
+  0x06613E: TConversionFormat
+  0x06658C: msctls_statusbar32
+  0x067714: Delphi Picture
+  0x067724: Delphi Component
+  0x095281: ProgramIconl
+  0x0952A5: Versiont
+  0x095450: Smarty - USB Update - 
+  0x095467: Unable to connect Smarty
+  0x095480: Unable to connect Smarty or File not compatible
+  0x0954B0: File not compatible with version of Smarty
+  0x0954DB: Unknown software version of Smarty
+  0x0954FE: Error sending data to Smarty
+  0x09551B: Flash verify error on Smarty
+  0x095538: Error closing USB to Smarty
+  0x095554: Transmission correctly performed to Smarty
+  0x09557F: Error erasing memory on Smarty
+  0x09559E: OK on Smarty - 
+  0x0955AE: Error on Smarty - 
+  0x0955C1: Download update file for new firmware!
+  0x0955E8: Download update file for old firmware!
+  0x095613: Smarty files (*.smt)|*.smt|All files (*.*)|*.*
+  0x09568A: FT_W32_SetCommState
+  0x0956BF: FT_W32_WaitCommEvent
+  0x0956D4: FT_W32_SetupComm
+  0x0956E5: FT_ListDevices
+  0x0956F4: FT_W32_GetCommState
+  0x095708: FT_W32_SetCommMask
+  0x09574A: FT_W32_SetCommTimeouts
+  0x095761: FT_W32_PurgeComm
+  0x095791: Smarty file not found
+  0x0957A7: Error reading Smarty file
+  0x0957C1: SmartyFile
+  0x0957CC: SmartyFile000001
+  0x0957F8: SmartyFile000002
+  0x09580E: SmartyFile000003
+  0x095824: SmartyFile000004
+  0x09583A: SmartyFile00POD4
+  0x095850: SmartyFile0PODF4
+  0x095866: SmartyFile000005
+  0x09587C: SmartyFile00POD5
+  0x095892: SmartyFile000006
+  0x0958A3: SmartyFile0S67US
+  0x0958B9: SmartyFile000J67
+  0x0958CA: SmartyFile0J67US
+  0x0958E0: SmartyFile000007
+  0x0958F6: SmartyFile000008
+  0x095971: %d minutes to complete upgrade
+  0x095990: 1 minute to complete upgrade
+  0x0959C7: %d seconds to complete upgrade
+  0x0959E6: 1 second to complete upgrade
+  0x095A3F: SmartyUSB Update
+  0x0960B0: Smarty - USB Update
+  0x09AD49: Can't adjust class address (no base class entry found)
+  0x09AD80: !"Can't adjust class address (no base class entry found)"
+  0x09B827: No such device
+  0x09B85C: Not same device
+  0x09B8AE: Cross-device link
+  0x09B931: No space left on device
+  0x09BA21: No such device or address
+  0x09BA5C: Block device required
+  0x09C54B: scanf : floating point formats not linked
+  0x09C79C: Abnormal program termination
+  0x09C7E0: No space for command line argument vector
+  0x09C80A: No space for command line argument
+  0x09C834: No space for copy of command line
+  0x09F8E2: VERSION.DLL
+  0x09F8EE: COMCTL32.DLL
+  0x09F8FB: COMDLG32.DLL
+  0x09F936: RegCloseKey
+  0x09F944: RegFlushKey
+  0x09F952: RegOpenKeyExA
+  0x09F984: CompareStringA
+  0x09FAA6: GetCommandLineA
+  0x09FCA6: GetVersion
+  0x09FCB4: GetVersionExA
+  0x09FE84: SetErrorMode
+  0x09FFD8: GetFileVersionInfoA
+  0x09FFEE: GetFileVersionInfoSizeA
+  0x0A0238: CreateCompatibleBitmap
+  0x0A0252: CreateCompatibleDC
+  0x0A03B6: GetDeviceCaps
+  0x0A0598: SetBkMode
+  0x0A05F4: SetStretchBltMode
+  0x0A0674: ActivateKeyboardLayout
+  0x0A086E: EnableMenuItem
+  0x0A0880: EnableScrollBar
+  0x0A0892: EnableWindow
+  0x0A09FA: GetKeyNameTextA
+  0x0A0A0C: GetKeyState
+  0x0A0A1A: GetKeyboardLayout
+  0x0A0A2E: GetKeyboardLayoutList
+  0x0A0A46: GetKeyboardLayoutNameA
+  0x0A0A60: GetKeyboardState
+  0x0A0A74: GetKeyboardType
+  0x0A0CF8: IsWindowEnabled
+  0x0A0D6E: LoadKeyboardLayoutA
+  0x0A0D92: MapVirtualKeyA
+  0x0A107E: SystemParametersInfoA
+  0x0A10FE: UpdateWindow
+  0x0A123C: SmartyUSB.exe
+  0x0A6738: ProgramIcon
+  0x0A6762: Picture.Data
+  0x0A7D94: Smarty USB update program
+  0x0A7DF2: Version 5.10A
+  0x0A88F2: Send update to Smarty
+  0x0A8A26: SmtE.Bin
+  0x0A8B22: File related commands
+  0x0A8BBD: Send|Send update to Smarty
+  0x0A8CAB: Help topics
+  0x0A8CE8: AAbout|Displays program information, version number, and copyright
+
+Done!

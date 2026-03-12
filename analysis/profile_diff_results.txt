@@ -1,0 +1,163 @@
+=== LOADED 14 PROFILES ===
+  4K                             v2.7     75 AIDs  (V2 Dodge 1998-2002 4k)
+  QZTEST                         v3.94    75 AIDs  (V2 Quadzilla Only)
+  V2 Dodge                       v2.7     73 AIDs  (V2 Dodge 1998-2002)
+  chevy0105_2_0                  v2.1     38 AIDs  (Chevy 2001-2005)
+  dodge0102_1_9                  v1.9     32 AIDs  (Dodge 2001-2002)
+  dodge0102_4k_1_9               v1.9     33 AIDs  (Dodge 2001-2002 4K)
+  dodge0304_2_0                  v1.7     29 AIDs  (Dodge 2003-2004)
+  dodge0405_2_0                  v1.8     29 AIDs  (Dodge 2004.5-2005)
+  dodge0607_2_0                  v1.9     37 AIDs  (Dodge 2006-2007)
+  dodge0709_2_0                  v1.9     53 AIDs  (Dodge 2007.5-2009)
+  dodge9800_1_9                  v1.9     33 AIDs  (Dodge 1998-2000)
+  dodge9800_4k_1_9               v1.9     34 AIDs  (Dodge 1998-2000 4K)
+  ford0304_2_0                   v1.9     31 AIDs  (Ford 2003-2004)
+  ford0507_2_0                   v1.9     41 AIDs  (Ford 2005-2007)
+
+=== QZTEST-ONLY AIDs (2) ù HIDDEN FEATURES ===
+  AID 145: AVG MPG reset                                                        [setting]
+  AID 181: Average MPG                                                          [sensor]
+
+=== PARAMETER DIFFERENCES (V2 vs QZTEST) ===
+
+=== MASTER AID TABLE (117 unique parameters) ===
+ AID  Name                                          Unit     Range                Section                        Sources
+--------------------------------------------------------------------------------------------------------------------------------------------
+   0  Fuel Pressure                                 PSI      0-100                sensor                         V2 Dodge,QZTEST,4K,dodge0102_1_9,dodge0102_4k_1_9,dodge0304_2_0,dodge0405_2_0,dodge0607_2_0,dodge0709_2_0,dodge9800_1_9,dodge9800_4k_1_9
+   1  Boost Pressure                                PSI      0-57                 sensor                         V2 Dodge,QZTEST,4K,chevy0105_2_0,dodge0102_1_9,dodge0102_4k_1_9,dodge0304_2_0,dodge0405_2_0,dodge0607_2_0,dodge0709_2_0,dodge9800_1_9,dodge9800_4k_1_9,ford0304_2_0,ford0507_2_0
+   3  Fuel Temp                                     DEGF     -40-215              sensor                         V2 Dodge,QZTEST,4K,dodge0102_1_9,dodge0102_4k_1_9,dodge9800_1_9,dodge9800_4k_1_9
+   4  Intake Air Temperature                        DEGF     0-215                sensor                         V2 Dodge,QZTEST,4K,chevy0105_2_0,dodge0102_1_9,dodge0102_4k_1_9,dodge0304_2_0,dodge0405_2_0,dodge0607_2_0,dodge0709_2_0,dodge9800_1_9,dodge9800_4k_1_9,ford0304_2_0,ford0507_2_0
+   5  Throttle Position                             PERC     0-100                sensor                         V2 Dodge,QZTEST,4K,chevy0105_2_0,dodge0102_1_9,dodge0102_4k_1_9,dodge0304_2_0,dodge0405_2_0,dodge0607_2_0,dodge0709_2_0,dodge9800_1_9,dodge9800_4k_1_9,ford0304_2_0,ford0507_2_0
+   6  Oil Pressure                                  PSI      0-158                sensor                         V2 Dodge,QZTEST,4K,dodge0304_2_0,dodge0405_2_0,dodge9800_1_9,dodge9800_4k_1_9
+   7  Engine Load                                   PERC     0-100                sensor                         V2 Dodge,QZTEST,4K,chevy0105_2_0,dodge0102_1_9,dodge0102_4k_1_9,dodge0304_2_0,dodge0405_2_0,dodge0607_2_0,dodge0709_2_0,dodge9800_1_9,dodge9800_4k_1_9,ford0304_2_0,ford0507_2_0
+   8  Vehicle Speed                                 MPH      0-130                sensor                         V2 Dodge,QZTEST,4K,chevy0105_2_0,dodge0102_1_9,dodge0102_4k_1_9,dodge0304_2_0,dodge0405_2_0,dodge0607_2_0,dodge0709_2_0,dodge9800_1_9,dodge9800_4k_1_9,ford0304_2_0,ford0507_2_0
+   9  Power Level                                                                 status                         V2 Dodge,QZTEST,4K,chevy0105_2_0,dodge0102_1_9,dodge0102_4k_1_9,dodge0304_2_0,dodge0405_2_0,dodge0607_2_0,dodge0709_2_0,dodge9800_1_9,dodge9800_4k_1_9,ford0304_2_0,ford0507_2_0
+  12  ECM Voltage                                   V        0-18                 sensor                         V2 Dodge,QZTEST,4K,dodge0102_1_9,dodge0102_4k_1_9,dodge0304_2_0,dodge0405_2_0,dodge9800_1_9,dodge9800_4k_1_9,ford0507_2_0
+  13  Backdown Percentage                           PERC     0-100                sensor                         V2 Dodge,QZTEST,4K,chevy0105_2_0,dodge0102_1_9,dodge0102_4k_1_9,dodge0304_2_0,dodge0405_2_0,dodge0607_2_0,dodge0709_2_0,dodge9800_1_9,dodge9800_4k_1_9,ford0304_2_0,ford0507_2_0
+  15  Number of Power Levels                                 6-15                 tuning:Tune Parameters         V2 Dodge,QZTEST,4K,chevy0105_2_0,dodge0102_1_9,dodge0102_4k_1_9,dodge0304_2_0,dodge0405_2_0,dodge0607_2_0,dodge0709_2_0,dodge9800_1_9,dodge9800_4k_1_9,ford0304_2_0,ford0507_2_0
+  16  Timing Limit                                  DEG      0-15                 tuning:Tune Parameters         dodge0102_1_9,dodge0102_4k_1_9,dodge9800_1_9,dodge9800_4k_1_9,ford0304_2_0,ford0507_2_0
+  17  Max Load Timing Offset                        DEG      0-3                  tuning:Timing Parameters       V2 Dodge,QZTEST,4K,dodge0102_1_9,dodge0102_4k_1_9,dodge9800_1_9,dodge9800_4k_1_9,ford0304_2_0,ford0507_2_0
+  18  TPS Pump Maximum                              PERC     0-100                tuning:Pump Tap Parameters     V2 Dodge,QZTEST,4K,dodge0102_1_9,dodge0102_4k_1_9,dodge9800_1_9,dodge9800_4k_1_9
+  19  TPS Pump Minimum                              PERC     0-100                tuning:Pump Tap Parameters     V2 Dodge,QZTEST,4K,dodge0102_1_9,dodge0102_4k_1_9,dodge9800_1_9,dodge9800_4k_1_9
+  20  TPS CAN Maximum                               PERC     0-100                tuning:Tune Parameters         dodge0102_1_9,dodge0102_4k_1_9,dodge9800_1_9,dodge9800_4k_1_9
+  21  TPS CAN Minimum                               PERC     0-100                tuning:Tune Parameters         dodge0102_1_9,dodge0102_4k_1_9,dodge9800_1_9,dodge9800_4k_1_9
+  22  Boost Scaling                                 PSI      20-40                tuning:Pump Tap Parameters     V2 Dodge,QZTEST,4K,chevy0105_2_0,dodge0102_1_9,dodge0102_4k_1_9,dodge0304_2_0,dodge0405_2_0,dodge0607_2_0,dodge0709_2_0,dodge9800_1_9,dodge9800_4k_1_9,ford0304_2_0,ford0507_2_0
+  24  Reset Factory Defaults                                                      tuning:Tune Parameters         dodge0709_2_0,ford0507_2_0
+  29  Barometer                                     PSI      10-16.9              sensor                         chevy0105_2_0,dodge0607_2_0,dodge0709_2_0,ford0507_2_0
+  30  Commanded EGR                                 PERC     0-100                sensor                         dodge0709_2_0,ford0507_2_0
+  31  EGR Error                                     PERC     -100-100             sensor                         dodge0709_2_0,ford0507_2_0
+  32  Current Gear                                                                status                         V2 Dodge,QZTEST,4K,chevy0105_2_0,dodge0102_1_9,dodge0102_4k_1_9,dodge0304_2_0,dodge0405_2_0,dodge0607_2_0,dodge0709_2_0,dodge9800_1_9,dodge9800_4k_1_9,ford0304_2_0,ford0507_2_0
+  33  Ambient Air Temperature                       DEGF     0-150                sensor                         dodge0607_2_0,dodge0709_2_0
+  34  Fuel Level                                    PERC     0-100                sensor                         dodge0607_2_0,dodge0709_2_0,ford0507_2_0
+  38  Warmups Since DTC Cleared                     SEC      0-255                sensor                         dodge0607_2_0,dodge0709_2_0,ford0507_2_0
+  39  Torque Converter Lock                                                       status                         V2 Dodge,QZTEST,4K,chevy0105_2_0,dodge0102_1_9,dodge0102_4k_1_9,dodge0304_2_0,dodge0405_2_0,dodge0607_2_0,dodge0709_2_0,dodge9800_1_9,dodge9800_4k_1_9,ford0304_2_0,ford0507_2_0
+  40  Transmission Slip                             PERC     0-100                sensor                         V2 Dodge,QZTEST,4K,chevy0105_2_0,dodge0102_1_9,dodge0102_4k_1_9,dodge0304_2_0,dodge0405_2_0,dodge0607_2_0,dodge0709_2_0,dodge9800_1_9,dodge9800_4k_1_9,ford0304_2_0,ford0507_2_0
+  41  Driver Demand Torque                          PERC     0-100                sensor                         chevy0105_2_0
+  42  Nominal Friction Torque                       PERC     0-100                sensor                         chevy0105_2_0
+  47  Rail Pressure Scaling                         PERC     0-100                tuning:Tuning Parameters       chevy0105_2_0,dodge0304_2_0,dodge0405_2_0,dodge0607_2_0,dodge0709_2_0
+  48  TPS Rail Pressure Max                         PERC     0-100                tuning:Tuning Parameters       chevy0105_2_0,dodge0304_2_0,dodge0405_2_0,dodge0607_2_0,dodge0709_2_0,ford0304_2_0,ford0507_2_0
+  49  TPS Rail Pressure Min                         PERC     0-100                tuning:Tuning Parameters       chevy0105_2_0,dodge0304_2_0,dodge0405_2_0,dodge0607_2_0,dodge0709_2_0,ford0304_2_0,ford0507_2_0
+  50  TPS Fuel Stretch Max                          PERC     0-100                tuning:Tuning Parameters       chevy0105_2_0,ford0304_2_0,ford0507_2_0
+  51  TPS Fuel Stretch Min                          PERC     0-100                tuning:Tuning Parameters       chevy0105_2_0,ford0304_2_0,ford0507_2_0
+  52  Percent of Max Injector Stretch               PERC     0-100                tuning:Tuning Parameters       chevy0105_2_0,dodge0304_2_0,dodge0405_2_0,dodge0607_2_0,dodge0709_2_0,ford0304_2_0,ford0507_2_0
+  53  Soot Regeneration                                                           status                         chevy0105_2_0,dodge0709_2_0
+  54  SOX Regeneration                                                            status                         chevy0105_2_0,dodge0709_2_0
+  59  Low PSI Timing Reduct                         DEG      0-5                  tuning:Timing Parameters       V2 Dodge,QZTEST,4K
+  60  Timing Reduct Scaling                         PERC     0-100                tuning:Timing Parameters       V2 Dodge,QZTEST,4K
+  61  Light Throttle Timing Adv                     DEG      0-8                  tuning:Timing Parameters       V2 Dodge,QZTEST,4K
+  62  Light Throttle Load Limit (Percent)           PERC     0-40                 tuning:Timing Parameters       V2 Dodge,QZTEST,4K
+  75  EGT                                           DEGF     0-1800               sensor                         V2 Dodge,QZTEST,4K,chevy0105_2_0,dodge0102_1_9,dodge0102_4k_1_9,dodge0304_2_0,dodge0405_2_0,dodge0607_2_0,dodge0709_2_0,dodge9800_1_9,dodge9800_4k_1_9,ford0304_2_0,ford0507_2_0
+  76  Transmission Temperature                      DEGF     0-280                sensor                         V2 Dodge,QZTEST,4K,chevy0105_2_0,dodge0102_1_9,dodge0102_4k_1_9,dodge0304_2_0,dodge0405_2_0,dodge0607_2_0,dodge0709_2_0,dodge9800_1_9,dodge9800_4k_1_9,ford0304_2_0,ford0507_2_0
+  77  ECM Voltage                                   V        0-18                 sensor                         dodge0607_2_0,dodge0709_2_0
+  78  RPM                                           RPM      0-4500               sensor                         V2 Dodge,QZTEST,4K,chevy0105_2_0,dodge0102_1_9,dodge0102_4k_1_9,dodge0304_2_0,dodge0405_2_0,dodge0607_2_0,dodge0709_2_0,dodge9800_1_9,dodge9800_4k_1_9,ford0304_2_0,ford0507_2_0
+  81  Boost Defuel Setting                          PSI      23-57                setting                        V2 Dodge,QZTEST,4K,chevy0105_2_0,dodge0102_1_9,dodge0102_4k_1_9,dodge0304_2_0,dodge0405_2_0,dodge0607_2_0,dodge0709_2_0,dodge9800_1_9,dodge9800_4k_1_9,ford0304_2_0,ford0507_2_0
+  83  Rail Pressure                                 PSI      0-29300              sensor                         chevy0105_2_0,dodge0304_2_0,dodge0405_2_0,dodge0607_2_0,dodge0709_2_0,ford0304_2_0,ford0507_2_0
+  84  Coolant                                       DEGF     0-280                sensor                         V2 Dodge,QZTEST,4K,chevy0105_2_0,dodge0102_1_9,dodge0102_4k_1_9,dodge0304_2_0,dodge0405_2_0,dodge0607_2_0,dodge0709_2_0,dodge9800_1_9,dodge9800_4k_1_9,ford0304_2_0,ford0507_2_0
+  85  Maximum Fuel Stretch                          USEC     1200-2200            tuning:Pump Tap Parameters     V2 Dodge,QZTEST,4K,chevy0105_2_0,dodge0102_1_9,dodge0102_4k_1_9,dodge9800_1_9,dodge9800_4k_1_9
+  86  MAF                                           GPS      0-655.35             sensor                         dodge0709_2_0,ford0304_2_0,ford0507_2_0
+  87  Runtime Since Start                           SEC      0-65535              sensor                         dodge0607_2_0,dodge0709_2_0,ford0507_2_0
+  88  Distance With MIL On                          MILES    0-40704              sensor                         dodge0709_2_0
+  89  Distance Since DTC Cleared                    MILES    0-40704              sensor                         dodge0607_2_0,dodge0709_2_0,ford0507_2_0
+  90  Output Shaft Speed                            RPM      0-8191               sensor                         chevy0105_2_0,dodge0607_2_0,dodge0709_2_0
+  91  Gear Change Defuel Setting                    PERC     0-100                setting                        chevy0105_2_0,dodge0709_2_0,ford0304_2_0,ford0507_2_0
+  92  Transmission Slip Defuel Setting              PERC     0-20                 setting                        chevy0105_2_0
+  93  Distance With MIL On                          MILES    0-40704              sensor                         dodge0607_2_0,dodge0709_2_0,ford0507_2_0
+  94  Time Since DTC Cleared                        SEC      0-65535              sensor                         dodge0607_2_0,dodge0709_2_0
+  96  Regeneration Filter Load                      PERC     0-45.5               sensor                         dodge0709_2_0
+  97  Total Regenerations Complete                           0-65535              sensor                         dodge0709_2_0
+  98  Total Regenerations Desired                            0-65535              sensor                         dodge0709_2_0
+ 100  O2 Sensor 1                                            0-2                  sensor                         dodge0709_2_0
+ 101  O2 Sensor 2                                            0-2                  sensor                         dodge0709_2_0
+ 102  Cat Temperature Bank 1 Sensor 1               DEGF     0-1800               sensor                         dodge0709_2_0
+ 103  Cat Temperature Bank 1 Sensor 2               DEGF     0-1800               sensor                         dodge0709_2_0
+ 104  RPM Limit                                     RPM      3200-3700            tuning:Tune Parameters         V2 Dodge,QZTEST,4K,dodge0102_4k_1_9,dodge9800_4k_1_9
+ 105  Gallon Trip                                            0-1000               sensor                         V2 Dodge,QZTEST,4K
+ 110  Minimum Pump Tap Fueling Percentage           PERC     0-50                 tuning:Pump Tap Parameters     V2 Dodge,QZTEST,4K
+ 111  Maximum Valet Mode Power                      PERC     0-100                tuning:Valet Mode Parameters   V2 Dodge,QZTEST,4K
+ 112  Pump Low Boost Scale PSI                      PSI      0-25                 tuning:Pump Tap Parameters     V2 Dodge,QZTEST,4K
+ 113  0 PSI                                         PERC     50-150               tuning:Boost Level Fueling - CAN Bus V2 Dodge,QZTEST,4K
+ 114  1 PSI                                         PERC     50-150               tuning:Boost Level Fueling - CAN Bus V2 Dodge,QZTEST,4K
+ 115  2 PSI                                         PERC     50-150               tuning:Boost Level Fueling - CAN Bus V2 Dodge,QZTEST,4K
+ 116  3 PSI                                         PERC     50-150               tuning:Boost Level Fueling - CAN Bus V2 Dodge,QZTEST,4K
+ 117  4 PSI                                         PERC     50-150               tuning:Boost Level Fueling - CAN Bus V2 Dodge,QZTEST,4K
+ 118  5 PSI                                         PERC     50-150               tuning:Boost Level Fueling - CAN Bus V2 Dodge,QZTEST,4K
+ 119  6 PSI                                         PERC     50-150               tuning:Boost Level Fueling - CAN Bus V2 Dodge,QZTEST,4K
+ 120  7 PSI                                         PERC     50-150               tuning:Boost Level Fueling - CAN Bus V2 Dodge,QZTEST,4K
+ 121  8 PSI                                         PERC     50-150               tuning:Boost Level Fueling - CAN Bus V2 Dodge,QZTEST,4K
+ 122  9 PSI                                         PERC     50-150               tuning:Boost Level Fueling - CAN Bus V2 Dodge,QZTEST,4K
+ 123  10 PSI                                        PERC     50-150               tuning:Boost Level Fueling - CAN Bus V2 Dodge,QZTEST,4K
+ 124  11 PSI                                        PERC     50-150               tuning:Boost Level Fueling - CAN Bus V2 Dodge,QZTEST,4K
+ 125  12 PSI                                        PERC     50-150               tuning:Boost Level Fueling - CAN Bus V2 Dodge,QZTEST,4K
+ 126  13 PSI                                        PERC     50-150               tuning:Boost Level Fueling - CAN Bus V2 Dodge,QZTEST,4K
+ 127  14 PSI                                        PERC     50-150               tuning:Boost Level Fueling - CAN Bus V2 Dodge,QZTEST,4K
+ 128  15 PSI                                        PERC     50-150               tuning:Boost Level Fueling - CAN Bus V2 Dodge,QZTEST,4K
+ 129  16 PSI                                        PERC     50-150               tuning:Boost Level Fueling - CAN Bus V2 Dodge,QZTEST,4K
+ 130  18 PSI                                        PERC     50-150               tuning:Boost Level Fueling - CAN Bus V2 Dodge,QZTEST,4K
+ 131  20 PSI                                        PERC     50-150               tuning:Boost Level Fueling - CAN Bus V2 Dodge,QZTEST,4K
+ 132  22 PSI                                        PERC     50-150               tuning:Boost Level Fueling - CAN Bus V2 Dodge,QZTEST,4K
+ 133  24 PSI                                        PERC     50-150               tuning:Boost Level Fueling - CAN Bus V2 Dodge,QZTEST,4K
+ 134  26 PSI                                        PERC     50-150               tuning:Boost Level Fueling - CAN Bus V2 Dodge,QZTEST,4K
+ 135  28 PSI                                        PERC     50-150               tuning:Boost Level Fueling - CAN Bus V2 Dodge,QZTEST,4K
+ 136  30+ PSI                                       PERC     50-150               tuning:Boost Level Fueling - CAN Bus V2 Dodge,QZTEST,4K
+ 137  1500RPM                                       DEG      0-20                 tuning:RPM Timing Max          V2 Dodge,QZTEST,4K
+ 138  2000RPM                                       DEG      0-26                 tuning:RPM Timing Max          V2 Dodge,QZTEST,4K
+ 139  2500RPM                                       DEG      0-30                 tuning:RPM Timing Max          V2 Dodge,QZTEST,4K
+ 140  3000RPM                                       DEG      0-30                 tuning:RPM Timing Max          V2 Dodge,QZTEST,4K
+ 141  Max                                           DEG      0-30                 tuning:RPM Timing Max          V2 Dodge,QZTEST,4K
+ 142  3500RPM                                       DEG      0-32                 tuning:RPM Timing Max          4K
+ 143  4000RPM                                       DEG      0-32                 tuning:RPM Timing Max          4K
+ 145  AVG MPG reset                                          0-1                  setting                        QZTEST
+ 146  MPG Offset                                    PERC     90-254               setting                        V2 Dodge,QZTEST,4K
+ 147  ECO                                                    0-1000               sensor                         V2 Dodge,QZTEST,4K
+ 148  CanBus Fuel                                            0-5000               sensor                         V2 Dodge,QZTEST,4K
+ 149  Timing                                        DEG      0-30.0               sensor                         V2 Dodge,QZTEST,4K
+ 150  EGT Defuel Setting                            DEGF     1200-1800            setting                        V2 Dodge,QZTEST,4K,chevy0105_2_0,dodge0102_1_9,dodge0102_4k_1_9,dodge0304_2_0,dodge0405_2_0,dodge0607_2_0,dodge0709_2_0,dodge9800_1_9,dodge9800_4k_1_9,ford0304_2_0,ford0507_2_0
+ 152  Turbo Timer Setting                           DEGF     100-500              setting                        V2 Dodge,QZTEST,4K,chevy0105_2_0,dodge0102_1_9,dodge0102_4k_1_9,dodge0304_2_0,dodge0405_2_0,dodge0607_2_0,dodge0709_2_0,dodge9800_1_9,dodge9800_4k_1_9,ford0304_2_0,ford0507_2_0
+ 153  High Idle Delay Setting                       SEC      0-900                setting                        V2 Dodge,QZTEST,4K,dodge0102_1_9,dodge0102_4k_1_9,dodge9800_1_9,dodge9800_4k_1_9
+ 154  Warmup Mode Setting                           DEGF     120-200              setting                        V2 Dodge,QZTEST,4K,chevy0105_2_0,dodge0102_1_9,dodge0102_4k_1_9,dodge0304_2_0,dodge0405_2_0,dodge0607_2_0,dodge0709_2_0,dodge9800_1_9,dodge9800_4k_1_9,ford0304_2_0,ford0507_2_0
+ 155  Rail Pressure Defuel Setting                  PSI      24000-29000          setting                        chevy0105_2_0
+ 181  Average MPG                                            0-1000               sensor                         QZTEST
+ 187  Regeneration Last Time                        SEC      0-1677721            sensor                         dodge0709_2_0
+ 188  Build Date                                             0-100000             sensor                         V2 Dodge,QZTEST,4K
+ 226  Drive Train Info                              INCHES   95.7-120.9           setting                        V2 Dodge,QZTEST,4K,chevy0105_2_0,dodge0102_1_9,dodge0102_4k_1_9,dodge0304_2_0,dodge0405_2_0,dodge0607_2_0,dodge0709_2_0,dodge9800_1_9,dodge9800_4k_1_9,ford0304_2_0,ford0507_2_0
+
+=== UNUSED AIDs (gaps in 0-226) ù 110 undocumented ===
+  AID 2
+  AID 10-11 (2 slots)
+  AID 14
+  AID 23
+  AID 25-28 (4 slots)
+  AID 35-37 (3 slots)
+  AID 43-46 (4 slots)
+  AID 55-58 (4 slots)
+  AID 63-74 (12 slots)
+  AID 79-80 (2 slots)
+  AID 82
+  AID 95
+  AID 99
+  AID 106-109 (4 slots)
+  AID 144
+  AID 151
+  AID 156-180 (25 slots)
+  AID 182-186 (5 slots)
+  AID 189-225 (37 slots)

@@ -1,0 +1,925 @@
+=== STATS ===
+Total strings: 1876
+Total functions: 3894
+Total imports: 375
+Interesting strings: 311
+
+=== INTERESTING STRINGS ===
+  00401e30: Classes::TComponent
+  00405198: IsThemeBackgroundPartiallyTransparent
+  0040535c: EnableThemeDialogTexture
+  00405378: IsThemeDialogTextureEnabled
+  00405414: EnableTheming
+  00405f7c: MAPI32.DLL
+  00406210: comctl32.dll
+  00406278: FlatSB_EnableScrollBar
+  004063e0: DWMAPI.DLL
+  00406478: DWMAPI.DLL
+  00406484: DwmIsCompositionEnabled
+  004065b4: comctl32.dll
+  004065c4: InitCommonControlsEx
+  0041cd04: Error
+  00422a44: combobox
+  00422c98: comctl32.dll
+  00425950: Bitmap
+  00425f78: comctl32.dll
+  00425f88: comctl32.dll
+  00425f98: ImageList_WriteEx
+  00427a9e: Transparent|tB
+  004285b3: 	OnKeyDownt(E
+  004285d7: 
+OnKeyPress((E
+  0042a7c0: TOwnerDrawState
+  0042affe: BiDiModedJB
+  0042b30f: BiDiModexz@
+  0042f7f4: \SYSTEM\CurrentControlSet\Control\Keyboard Layouts\
+  00431a7e: TProgressStage
+  004328e8: clDefault
+  00432b74: DEFAULT_CHARSET
+  00433230: Default
+  00437155: 
+TBitmapCanvas(qC
+  0043a104: SOFTWARE\Microsoft\Windows NT\CurrentVersion\FontSubstitutes
+  0043ca2a: 	OnKeyDownt(E
+  0043ca4e: 
+OnKeyPress((E
+  0043fa98: GlassFrame.Enabled
+  00445f30: System\CurrentControlSet\Control\Keyboard Layouts\%.8x
+  0044b341: BiDiModeH4E
+  0044db4e: TFileDialogOverwriteEvent
+  0044db84: TFileDialogOverwriteResponse
+  0044dbe4: Response!TFileDialogShareViolationResponse
+  0044f735: TOpenPictureDialog
+  00451728: Cancel
+  00451804: commdlg_help
+  00451814: commdlg_FindReplace
+  0045282d: 	TKeyEvent
+  0045287a: TKeyPressEvent
+  00452c7e: TCanResizeEvent
+  004532ea: HelpKeywordxz@
+  0045435c: crDefault
+  00454380: crCross
+  00464db8: WINNLSEnableIME
+  00464df8: ImmGetConversionStatus
+  00464e10: ImmSetConversionStatus
+  00464e3c: ImmSetCompositionWindow
+  00464e54: ImmSetCompositionFontA
+  00464e6c: ImmGetCompositionStringA
+  004659d2: ComCtrls
+  00465c11: ComCtrls
+  00465dd3: ComCtrls,
+  00465e7e: BiDiModeH4E
+  00466f8c: msctls_statusbar32
+  00468114: Delphi Picture
+  00468124: Delphi Component
+  0047cdd4: std::runtime_error *
+  0047ce64: std::runtime_error
+  0048035c: std::codecvt<char,char,int> *
+  004803cc: std::codecvt_base *
+  00480410: std::codecvt_base
+  00480530: std::codecvt<char,char,int>
+  00480bdc: std::_Fac_deletable *[2]
+  0048239c: std::_Fac_deletable *
+  004823e4: std::_Fac_deletable
+  004826c0: std::length_error
+  0048298c: std::length_error *
+  00482a40: std::logic_error *
+  00482a84: std::logic_error
+  004857f4: std::codecvt<wchar_t,char,int> *
+  00485848: std::codecvt<wchar_t,char,int>
+  00492e50: ERangeError &
+  00493ec8: ERangeError *
+  00494138: EIntError *
+  00494150: EMathError *
+  00494204: Sysutils::EMathError
+  00494264: Sysutils::EIntError
+  00494620: Sysutils::ERangeError
+  00496000: CodeGear C++ - Copyright 2007 CodeGear
+  00496450: Smarty - USB Update - 
+  00496467: Unable to connect Smarty
+  00496480: Unable to connect Smarty or File not compatible
+  004964b0: File not compatible with version of Smarty
+  004964db: Unknown software version of Smarty
+  004964fe: Error sending data to Smarty
+  0049651b: Flash verify error on Smarty
+  00496538: Error closing USB to Smarty
+  00496554: Transmission correctly performed to Smarty
+  0049657f: Error erasing memory on Smarty
+  0049659e: OK on Smarty - 
+  004965ae: Error on Smarty - 
+  004965c1: Download update file for new firmware!
+  004965e8: Download update file for old firmware!
+  00496613: Smarty files (*.smt)|*.smt|All files (*.*)|*.*
+  00496645: FTD2XX.DLL
+  00496650: FTD2XX.DLL not found
+  00496665: FT_W32_CreateFile
+  00496677: FT_W32_CloseHandle
+  0049668a: FT_W32_SetCommState
+  0049669e: FT_W32_WriteFile
+  004966af: FT_W32_ReadFile
+  004966bf: FT_W32_WaitCommEvent
+  004966d4: FT_W32_SetupComm
+  004966e5: FT_ListDevices
+  004966f4: FT_W32_GetCommState
+  00496708: FT_W32_SetCommMask
+  0049671b: FT_W32_GetLastError
+  0049672f: FT_W32_GetOverlappedResult
+  0049674a: FT_W32_SetCommTimeouts
+  00496761: FT_W32_PurgeComm
+  00496772: Error interfacing FTD2XX.DLL
+  00496791: Smarty file not found
+  004967a7: Error reading Smarty file
+  004967c1: SmartyFile
+  004967cc: SmartyFile000001
+  004967e2: SmartyFile000001
+  004967f8: SmartyFile000002
+  0049680e: SmartyFile000003
+  00496824: SmartyFile000004
+  0049683a: SmartyFile00POD4
+  00496850: SmartyFile0PODF4
+  00496866: SmartyFile000005
+  0049687c: SmartyFile00POD5
+  00496892: SmartyFile000006
+  004968a3: SmartyFile0S67US
+  004968b9: SmartyFile000J67
+  004968ca: SmartyFile0J67US
+  004968e0: SmartyFile000007
+  004968f6: SmartyFile000008
+  0049690c: SmartyFile0J67US
+  0049691d: SmartyFile000J67
+  00496933: SmartyFile0S67US
+  00496944: SmartyFile000006
+  00496971: %d minutes to complete upgrade
+  00496990: 1 minute to complete upgrade
+  004969c7: %d seconds to complete upgrade
+  004969e6: 1 second to complete upgrade
+  00496a03: %d minutes to complete upgrade
+  00496a22: 1 minute to complete upgrade
+  00496a3f: SmartyUSB Update
+  00496a50: Verifying memory, please wait
+  00496a6e: Smarty files (*.smt)|*.smt|All files (*.*)|*.*
+  004970b0: Smarty - USB Update
+  00497be8: Error
+  00497bf0: Runtime error     at 00000000
+  0049b948: @Borlndmm@SysRegisterExpectedMemoryLeak$qqrpi
+  0049b976: @Borlndmm@SysUnregisterExpectedMemoryLeak$qqrpi
+  0049bb90: ((unsigned __far *)vtablePtr)[-1] == 0
+  0049bd07: ((unsigned __far *)vtablePtr)[-1] == 0
+  0049bd49: Can't adjust class address (no base class entry found)
+  0049bd80: !"Can't adjust class address (no base class entry found)"
+  0049c4b0: allocating handle lock table
+  0049c714: Error 0
+  0049c7ba: Invalid memory block address
+  0049c7fa: Invalid access code
+  0049c81b: Bad address
+  0049c89c: Exec format error
+  0049c90b: Executable file in use
+  0049c956: Read-only file system
+  0049c9a6: File already exists
+  0049ca0e: Input/output error
+  0049ca21: No such device or address
+  0049cac6: Unknown error
+  0049cafc: allocating stream lock table
+  0049d54b: scanf : floating point formats not linked
+  0049d5b3: scanf : floating point formats not linked
+  0049d700: Error: system code page access failure; MBCS table not initialized
+  0049d79c: Abnormal program termination
+  0049d7e0: No space for command line argument vector
+  0049d80a: No space for command line argument
+  0049d834: No space for copy of command line
+  0049d858: No space for copy of command line
+  0049d990: creating thread data lock
+  0049d9ac: Semaphore error 
+  0049de4b: ERangeError
+  0049e0e5: !tpid || tpid->tpMask & (TM_IS_PTR | TM_IS_REF)
+  0049e36a: (vbFlag && (errPtr->ERRcInitDtc >= varType->tpClass.tpcDtorCount)) || (!vbFlag && (errPtr->ERRcInitDtc >= varType->tpClass.tpcNVdtCount)) || flags
+  0049e553: vdtCount
+  0049e592: dtrCount <= vdtCount
+  0049e5fb: dttPtr->dttFlags & (DTCVF_PTRVAL|DTCVF_RETVAL)
+  004abce2: VERSION.DLL
+  004abcee: COMCTL32.DLL
+  004abcfb: COMDLG32.DLL
+  004abd36: RegCloseKey
+  004abd44: RegFlushKey
+  004abd52: RegOpenKeyExA
+  004abd84: CompareStringA
+  004abdb4: CreateThread
+  004abe24: ExitThread
+  004abea6: GetCommandLineA
+  004abece: GetCurrentThreadId
+  004abf68: GetLastError
+  004abfd0: GetProcAddress
+  004ac03a: GetSystemDefaultLangID
+  004ac054: GetThreadLocale
+  004ac090: GetUserDefaultLCID
+  004ac0a6: GetVersion
+  004ac0b4: GetVersionExA
+  004ac19a: LCMapStringA
+  004ac20e: MultiByteToWideChar
+  004ac236: ReadFile
+  004ac284: SetErrorMode
+  004ac2c4: SetLastError
+  004ac2d4: SetThreadLocale
+  004ac3a8: WriteFile
+  004ac3d8: GetFileVersionInfoA
+  004ac3ee: GetFileVersionInfoSizeA
+  004ac54a: ImageList_Read
+  004ac5ba: ImageList_Write
+  004ac612: CreateBitmap
+  004ac638: CreateCompatibleBitmap
+  004ac652: CreateCompatibleDC
+  004ac67c: CreateDIBitmap
+  004ac742: GetBitmapBits
+  004ac796: GetDIBColorTable
+  004ac84e: GetStockObject
+  004ac998: SetBkMode
+  004ac9b4: SetDIBColorTable
+  004ac9f4: SetStretchBltMode
+  004aca74: ActivateKeyboardLayout
+  004acc6e: EnableMenuItem
+  004acc80: EnableScrollBar
+  004acc92: EnableWindow
+  004accc2: EnumThreadWindows
+  004acdfa: GetKeyNameTextA
+  004ace0c: GetKeyState
+  004ace1a: GetKeyboardLayout
+  004ace2e: GetKeyboardLayoutList
+  004ace46: GetKeyboardLayoutNameA
+  004ace60: GetKeyboardState
+  004ace74: GetKeyboardType
+  004ad034: GetWindowThreadProcessId
+  004ad0f8: IsWindowEnabled
+  004ad10a: IsWindowUnicode
+  004ad146: LoadBitmapA
+  004ad16e: LoadKeyboardLayoutA
+  004ad192: MapVirtualKeyA
+  004ad1a4: MapWindowPoints
+  004ad1d2: OffsetRect
+  004ad23e: RegisterClassA
+  004ad250: RegisterClipboardFormatA
+  004ad26c: RegisterWindowMessageA
+  004ad47e: SystemParametersInfoA
+  004ad4a8: TranslateMDISysAccel
+  004ad4c0: TranslateMessage
+  004ad4ea: UnregisterClassA
+  004ad4fe: UpdateWindow
+  004ae03c: SmartyUSB.exe
+  004b1d2a: Menu '%s' is already being used by another form
+  004b1dca: Error removing control from dock tree
+  004b1e7c: Error loading dock zone from the stream. Expecting version %d, but found %d.
+  004b1f2c: Unicode
+  004b1f3c: Big Endian Unicode
+  004b1fc0: Cannot change the size of a JPEG image
+  004b200e: JPEG error #%d
+  004b2184: Cancel
+  004b223c: Cancel
+  004b22aa: Cannot drag a form
+  004b2316: Bitmaps
+  004b2336: Error
+  004b2364: Error creating window class
+  004b239c: Cannot focus a disabled or invisible window
+  004b2482: Cannot hide an MDI Child Form
+  004b24be: Cannot change Visible in OnShow or OnHide
+  004b2512: Cannot make a visible window modal
+  004b264a: GroupIndex cannot be less than a previous menu item's GroupIndex
+  004b26cc: Cannot create form. No MDI forms are currently active
+  004b2738: A control cannot have itself as its parent
+  004b27c6: Bitmap image is not valid
+  004b2880: Scan line index out of range
+  004b28ba: Cannot change the size of an icon
+  004b2968: Canvas does not allow drawing
+  004b2a1e: Failed to read ImageList data from stream
+  004b2a72: Failed to write ImageList data to stream
+  004b2ac4: Error creating window device context
+  004b2d1c: Unexpected variant error
+  004b2e28: Abstract Error
+  004b2e46: Access violation at address %p in module '%s'. %s of address %p
+  004b2ec6: System Error.  Code: %d.
+
+%s
+  004b2f88: Format '%s' invalid or incompatible with argument
+  004b306a: Read
+  004b3074: Write
+  004b3080: Error creating variant or safe array
+  004b315e: Invalid variant type conversion
+  004b33b6: Range check error
+  004b3542: Access violation at address %p. %s of address %p
+  004b3680: Application Error
+  004b37be: Stream write error
+  004b3882: I/O error %d
+  004b392a: Read beyond end of file
+  004b39bc: Cannot open file "%s". %s
+  004b3a1c: ''%s'' is not a valid component name
+  004b3c36: Error reading %s%s%s: %s
+  004b3c68: Stream read error
+  004b3c8c: Property is read-only
+  004b3d3c: Unable to find a Table of Contents
+  004b3e28: No topic-based help system installed
+  004b3eaa: Cannot assign a %s to a %s
+  004b3f10: Can't write to a read-only resource stream
+  004b3f66: CheckSynchronize called from thread $%x, which is NOT the main thread
+  004b4018: A class named %s already exists
+  004b40a4: A component named %s already exists
+  004b4138: Cannot create file "%s". %s
+
+=== ALL STRINGS WITH 'smarty' (case insensitive) ===
+  00496450: Smarty - USB Update - 
+  00496467: Unable to connect Smarty
+  00496480: Unable to connect Smarty or File not compatible
+  004964b0: File not compatible with version of Smarty
+  004964db: Unknown software version of Smarty
+  004964fe: Error sending data to Smarty
+  0049651b: Flash verify error on Smarty
+  00496538: Error closing USB to Smarty
+  00496554: Transmission correctly performed to Smarty
+  0049657f: Error erasing memory on Smarty
+  0049659e: OK on Smarty - 
+  004965ae: Error on Smarty - 
+  00496613: Smarty files (*.smt)|*.smt|All files (*.*)|*.*
+  00496791: Smarty file not found
+  004967a7: Error reading Smarty file
+  004967c1: SmartyFile
+  004967cc: SmartyFile000001
+  004967e2: SmartyFile000001
+  004967f8: SmartyFile000002
+  0049680e: SmartyFile000003
+  00496824: SmartyFile000004
+  0049683a: SmartyFile00POD4
+  00496850: SmartyFile0PODF4
+  00496866: SmartyFile000005
+  0049687c: SmartyFile00POD5
+  00496892: SmartyFile000006
+  004968a3: SmartyFile0S67US
+  004968b9: SmartyFile000J67
+  004968ca: SmartyFile0J67US
+  004968e0: SmartyFile000007
+  004968f6: SmartyFile000008
+  0049690c: SmartyFile0J67US
+  0049691d: SmartyFile000J67
+  00496933: SmartyFile0S67US
+  00496944: SmartyFile000006
+  00496a3f: SmartyUSB Update
+  00496a6e: Smarty files (*.smt)|*.smt|All files (*.*)|*.*
+  004970b0: Smarty - USB Update
+  004ae03c: SmartyUSB.exe
+
+=== ALL STRINGS WITH 'FT_' (FTDI functions) ===
+  00496665: FT_W32_CreateFile
+  00496677: FT_W32_CloseHandle
+  0049668a: FT_W32_SetCommState
+  0049669e: FT_W32_WriteFile
+  004966af: FT_W32_ReadFile
+  004966bf: FT_W32_WaitCommEvent
+  004966d4: FT_W32_SetupComm
+  004966e5: FT_ListDevices
+  004966f4: FT_W32_GetCommState
+  00496708: FT_W32_SetCommMask
+  0049671b: FT_W32_GetLastError
+  0049672f: FT_W32_GetOverlappedResult
+  0049674a: FT_W32_SetCommTimeouts
+  00496761: FT_W32_PurgeComm
+
+=== STRINGS WITH setting/param/config/feature/option/mode/level/power ===
+  0042affe: BiDiModedJB
+  0042b30f: BiDiModexz@
+  00431a7e: TProgressStage
+  0044b341: BiDiModeH4E
+  00465e7e: BiDiModeH4E
+  004ac284: SetErrorMode
+  004ac998: SetBkMode
+  004ac9f4: SetStretchBltMode
+  004ad47e: SystemParametersInfoA
+
+=== STRINGS WITH USB/serial/baud/COM ===
+  004065c4: InitCommonControlsEx
+  00451804: commdlg_help
+  00451814: commdlg_FindReplace
+  00466f8c: msctls_statusbar32
+  00496450: Smarty - USB Update - 
+  00496538: Error closing USB to Smarty
+  0049668a: FT_W32_SetCommState
+  004966bf: FT_W32_WaitCommEvent
+  004966d4: FT_W32_SetupComm
+  004966e5: FT_ListDevices
+  004966f4: FT_W32_GetCommState
+  00496708: FT_W32_SetCommMask
+  0049674a: FT_W32_SetCommTimeouts
+  00496761: FT_W32_PurgeComm
+  00496a3f: SmartyUSB Update
+  004970b0: Smarty - USB Update
+  0049c827: No such device
+  0049c85c: Not same device
+  0049c8ae: Cross-device link
+  0049c931: No space left on device
+  0049ca21: No such device or address
+  0049ca5c: Block device required
+  0049d7e0: No space for command line argument vector
+  0049d80a: No space for command line argument
+  0049d834: No space for copy of command line
+  0049d858: No space for copy of command line
+  004abea6: GetCommandLineA
+  004ac7b6: GetDeviceCaps
+  004ae03c: SmartyUSB.exe
+  004b2ac4: Error creating window device context
+
+=== STRINGS WITH flash/erase/program/verify/write/read/send ===
+  00496450: Smarty - USB Update - 
+  004964fe: Error sending data to Smarty
+  0049651b: Flash verify error on Smarty
+  004965c1: Download update file for new firmware!
+  004965e8: Download update file for old firmware!
+  004969ad: Sending data, please wait
+  00496a3f: SmartyUSB Update
+  00496a50: Verifying memory, please wait
+  004970b0: Smarty - USB Update
+  0049d79c: Abnormal program termination
+  004ad2e2: SendMessageA
+  004ad2f2: SendMessageW
+  004ad4fe: UpdateWindow
+
+=== STRINGS WITH error/fault/code/DTC ===
+  004328e8: clDefault
+  00432b74: DEFAULT_CHARSET
+  00433230: Default
+  0045435c: crDefault
+  0047cdd4: std::runtime_error *
+  0047ce64: std::runtime_error
+  0048035c: std::codecvt<char,char,int> *
+  004803cc: std::codecvt_base *
+  00480410: std::codecvt_base
+  00480530: std::codecvt<char,char,int>
+  004826c0: std::length_error
+  0048298c: std::length_error *
+  00482a40: std::logic_error *
+  00482a84: std::logic_error
+  004857f4: std::codecvt<wchar_t,char,int> *
+  00485848: std::codecvt<wchar_t,char,int>
+  00492e50: ERangeError &
+  00493ec8: ERangeError *
+  00494138: EIntError *
+  00494150: EMathError *
+  00494204: Sysutils::EMathError
+  00494264: Sysutils::EIntError
+  00494620: Sysutils::ERangeError
+  00496000: CodeGear C++ - Copyright 2007 CodeGear
+  004964fe: Error sending data to Smarty
+  0049651b: Flash verify error on Smarty
+  00496538: Error closing USB to Smarty
+  0049657f: Error erasing memory on Smarty
+  004965ae: Error on Smarty - 
+  0049671b: FT_W32_GetLastError
+  00496772: Error interfacing FTD2XX.DLL
+  004967a7: Error reading Smarty file
+  00497bf0: Runtime error     at 00000000
+  0049c714: Error 0
+  0049c7fa: Invalid access code
+  0049c89c: Exec format error
+  0049ca0e: Input/output error
+  0049cac6: Unknown error
+  0049d700: Error: system code page access failure; MBCS table not initialized
+  0049d9ac: Semaphore error 
+  0049de4b: ERangeError
+  0049e36a: (vbFlag && (errPtr->ERRcInitDtc >= varType->tpClass.tpcDtorCount)) || (!vbFlag && (errPtr->ERRcInitDtc >= varType->tpClass.tpcNVdtCount)) || flags
+  0049e553: vdtCount
+  0049e592: dtrCount <= vdtCount
+  0049e5fb: dttPtr->dttFlags & (DTCVF_PTRVAL|DTCVF_RETVAL)
+  004abf68: GetLastError
+  004ac03a: GetSystemDefaultLangID
+  004ac090: GetUserDefaultLCID
+  004ac284: SetErrorMode
+  004ac2c4: SetLastError
+  004ad10a: IsWindowUnicode
+  004b1dca: Error removing control from dock tree
+  004b1e7c: Error loading dock zone from the stream. Expecting version %d, but found %d.
+  004b1f2c: Unicode
+  004b1f3c: Big Endian Unicode
+  004b200e: JPEG error #%d
+  004b2326: Warning
+  004b2364: Error creating window class
+  004b2ac4: Error creating window device context
+  004b2d1c: Unexpected variant error
+  004b2e28: Abstract Error
+  004b2ec6: System Error.  Code: %d.
+
+%s
+  004b3080: Error creating variant or safe array
+  004b33b6: Range check error
+  004b3680: Application Error
+  004b37be: Stream write error
+  004b3882: I/O error %d
+  004b3c36: Error reading %s%s%s: %s
+  004b3c68: Stream read error
+
+=== STRINGS WITH engine/fuel/boost/timing/RPM/injection ===
+  00405198: IsThemeBackgroundPartiallyTransparent
+  00427a9e: Transparent|tB
+  00496554: Transmission correctly performed to Smarty
+  004ad4a8: TranslateMDISysAccel
+  004ad4c0: TranslateMessage
+
+=== STRINGS WITH encrypt/decrypt/key/password/checksum/CRC ===
+  004285b3: 	OnKeyDownt(E
+  004285d7: 
+OnKeyPress((E
+  0042f7f4: \SYSTEM\CurrentControlSet\Control\Keyboard Layouts\
+  0043ca2a: 	OnKeyDownt(E
+  0043ca4e: 
+OnKeyPress((E
+  00445f30: System\CurrentControlSet\Control\Keyboard Layouts\%.8x
+  0045282d: 	TKeyEvent
+  0045287a: TKeyPressEvent
+  004532ea: HelpKeywordxz@
+  00454380: crCross
+  00487524: type_info_hash
+  004abd36: RegCloseKey
+  004abd44: RegFlushKey
+  004abd52: RegOpenKeyExA
+  004aca74: ActivateKeyboardLayout
+  004acdfa: GetKeyNameTextA
+  004ace0c: GetKeyState
+  004ace1a: GetKeyboardLayout
+  004ace2e: GetKeyboardLayoutList
+  004ace46: GetKeyboardLayoutNameA
+  004ace60: GetKeyboardState
+  004ace74: GetKeyboardType
+  004ad16e: LoadKeyboardLayoutA
+  004ad192: MapVirtualKeyA
+
+=== NAMED FUNCTIONS (non-FUN_, non-thunk) ===
+  ActivateKeyboardLayout @ 0049550c (size=6)
+  AdjustWindowRectEx @ 00495512 (size=6)
+  BeginPaint @ 00495518 (size=6)
+  BitBlt @ 00495378 (size=6)
+  CLSIDFromString @ 004958fc (size=6)
+  CallNextHookEx @ 0049551e (size=6)
+  CallWindowProcA @ 00495524 (size=6)
+  CharLowerA @ 0049552a (size=6)
+  CharLowerBuffA @ 00495530 (size=6)
+  CharNextA @ 00495536 (size=6)
+  CharToOemA @ 0049553c (size=6)
+  CheckMenuItem @ 00495542 (size=6)
+  ClientToScreen @ 00495548 (size=6)
+  CloseHandle @ 0049509c (size=6)
+  CoCreateInstance @ 00495902 (size=6)
+  CoTaskMemAlloc @ 00495908 (size=6)
+  CoTaskMemFree @ 0049590e (size=6)
+  CompareStringA @ 004950a2 (size=6)
+  CopyEnhMetaFileA @ 0049537e (size=6)
+  CreateBitmap @ 00495384 (size=6)
+  CreateBrushIndirect @ 0049538a (size=6)
+  CreateCompatibleBitmap @ 00495390 (size=6)
+  CreateCompatibleDC @ 00495396 (size=6)
+  CreateDIBSection @ 0049539c (size=6)
+  CreateDIBitmap @ 004953a2 (size=6)
+  CreateEventA @ 004950a8 (size=6)
+  CreateFileA @ 004950ae (size=6)
+  CreateFontIndirectA @ 004953a8 (size=6)
+  CreateHalftonePalette @ 004953ae (size=6)
+  CreateIcon @ 0049554e (size=6)
+  CreateMenu @ 00495554 (size=6)
+  CreatePalette @ 004953b4 (size=6)
+  CreatePenIndirect @ 004953ba (size=6)
+  CreatePopupMenu @ 0049555a (size=6)
+  CreateSolidBrush @ 004953c0 (size=6)
+  CreateThread @ 004950b4 (size=6)
+  CreateWindowExA @ 00495560 (size=6)
+  DefFrameProcA @ 00495566 (size=6)
+  DefWindowProcA @ 00495572 (size=6)
+  DeleteCriticalSection @ 004950ba (size=6)
+  DeleteDC @ 004953c6 (size=6)
+  DeleteEnhMetaFile @ 004953cc (size=6)
+  DeleteFileA @ 004950c0 (size=6)
+  DeleteMenu @ 00495578 (size=6)
+  DeleteObject @ 004953d2 (size=6)
+  DestroyCursor @ 0049557e (size=6)
+  DestroyIcon @ 00495584 (size=6)
+  DestroyMenu @ 0049558a (size=6)
+  DestroyWindow @ 00495590 (size=6)
+  DispatchMessageA @ 00495596 (size=6)
+  DispatchMessageW @ 0049559c (size=6)
+  DrawEdge @ 004955a2 (size=6)
+  DrawFrameControl @ 004955a8 (size=6)
+  DrawIcon @ 004955ae (size=6)
+  DrawIconEx @ 004955b4 (size=6)
+  DrawMenuBar @ 004955ba (size=6)
+  DrawTextA @ 004955c0 (size=6)
+  EnableMenuItem @ 004955c6 (size=6)
+  EnableWindow @ 004955d2 (size=6)
+  EndPaint @ 004955d8 (size=6)
+  EnterCriticalSection @ 004950c6 (size=6)
+  EnumCalendarInfoA @ 004950cc (size=6)
+  EnumChildWindows @ 004955de (size=6)
+  EnumThreadWindows @ 004955e4 (size=6)
+  EnumWindows @ 004955ea (size=6)
+  EqualRect @ 004955f0 (size=6)
+  ExcludeClipRect @ 004953d8 (size=6)
+  ExitProcess @ 004950d2 (size=6)
+  ExitThread @ 004950d8 (size=6)
+  FillRect @ 004955f6 (size=6)
+  FindClose @ 004950de (size=6)
+  FindFirstFileA @ 004950e4 (size=6)
+  FindResourceA @ 004950ea (size=6)
+  FindWindowA @ 004955fc (size=6)
+  FormatMessageA @ 004950f0 (size=6)
+  FrameRect @ 00495602 (size=6)
+  FreeLibrary @ 004950f6 (size=6)
+  FreeResource @ 004950fc (size=6)
+  GdiFlush @ 004953de (size=6)
+  GetACP @ 00495102 (size=6)
+  GetActiveWindow @ 00495608 (size=6)
+  GetBitmapBits @ 004953e4 (size=6)
+  GetBrushOrgEx @ 004953ea (size=6)
+  GetCPInfo @ 00495108 (size=6)
+  GetCapture @ 0049560e (size=6)
+  GetClassInfoA @ 00495614 (size=6)
+  GetClassLongA @ 0049561a (size=6)
+  GetClientRect @ 00495620 (size=6)
+  GetClipBox @ 004953f0 (size=6)
+  GetClipboardData @ 00495626 (size=6)
+  GetCommandLineA @ 0049510e (size=6)
+  GetCurrentPositionEx @ 004953f6 (size=6)
+  GetCurrentProcessId @ 00495114 (size=6)
+  GetCurrentThreadId @ 0049511a (size=6)
+  GetCursor @ 0049562c (size=6)
+  GetCursorPos @ 00495632 (size=6)
+  GetDC @ 00495638 (size=6)
+  GetDCEx @ 0049563e (size=6)
+  GetDCOrgEx @ 004953fc (size=6)
+  GetDIBColorTable @ 00495402 (size=6)
+  GetDIBits @ 00495408 (size=6)
+  GetDateFormatA @ 00495120 (size=6)
+  GetDesktopWindow @ 00495644 (size=6)
+  GetDeviceCaps @ 0049540e (size=6)
+  GetDiskFreeSpaceA @ 00495126 (size=6)
+  GetDlgItem @ 0049564a (size=6)
+  GetEnhMetaFileBits @ 00495414 (size=6)
+  GetEnhMetaFileHeader @ 0049541a (size=6)
+  GetEnhMetaFilePaletteEntries @ 00495420 (size=6)
+  GetEnvironmentStrings @ 0049512c (size=6)
+  GetFileAttributesA @ 00495132 (size=6)
+  GetFileSize @ 00495138 (size=6)
+  GetFileType @ 0049513e (size=6)
+  GetFileVersionInfoA @ 004952d8 (size=6)
+  GetFileVersionInfoSizeA @ 004952de (size=6)
+  GetFocus @ 00495650 (size=6)
+  GetForegroundWindow @ 00495656 (size=6)
+  GetFullPathNameA @ 00495144 (size=6)
+  GetIconInfo @ 0049565c (size=6)
+  GetKeyNameTextA @ 00495662 (size=6)
+  GetKeyState @ 00495668 (size=6)
+  GetKeyboardLayout @ 0049566e (size=6)
+  GetKeyboardLayoutList @ 00495674 (size=6)
+  GetKeyboardLayoutNameA @ 0049567a (size=6)
+  GetKeyboardState @ 00495680 (size=6)
+  GetKeyboardType @ 00495686 (size=6)
+  GetLastActivePopup @ 0049568c (size=6)
+  GetLastError @ 0049514a (size=6)
+  GetLocalTime @ 00495150 (size=6)
+  GetLocaleInfoA @ 00495156 (size=6)
+  GetMenu @ 00495692 (size=6)
+  GetMenuItemCount @ 00495698 (size=6)
+  GetMenuItemID @ 0049569e (size=6)
+  GetMenuItemInfoA @ 004956a4 (size=6)
+  GetMenuState @ 004956aa (size=6)
+  GetMenuStringA @ 004956b0 (size=6)
+  GetMessagePos @ 004956b6 (size=6)
+  GetModuleFileNameA @ 0049515c (size=6)
+  GetModuleHandleA @ 00495162 (size=6)
+  GetOEMCP @ 00495168 (size=6)
+  GetObjectA @ 00495426 (size=6)
+  GetPaletteEntries @ 0049542c (size=6)
+  GetParent @ 004956bc (size=6)
+  GetPixel @ 00495432 (size=6)
+  GetProcAddress @ 0049516e (size=6)
+  GetPropA @ 004956c2 (size=6)
+  GetRgnBox @ 00495438 (size=6)
+  GetStartupInfoA @ 0049517a (size=6)
+  GetStdHandle @ 00495180 (size=6)
+  GetStockObject @ 0049543e (size=6)
+  GetStringTypeA @ 00495186 (size=6)
+  GetStringTypeW @ 0049518c (size=6)
+  GetSubMenu @ 004956da (size=6)
+  GetSysColor @ 004956e0 (size=6)
+  GetSysColorBrush @ 004956e6 (size=6)
+  GetSystemDefaultLangID @ 00495192 (size=6)
+  GetSystemMenu @ 004956ec (size=6)
+  GetSystemMetrics @ 004956f2 (size=6)
+  GetSystemPaletteEntries @ 00495444 (size=6)
+  GetTextExtentPoint32A @ 0049544a (size=6)
+  GetTextMetricsA @ 00495450 (size=6)
+  GetThreadLocale @ 00495198 (size=6)
+  GetTickCount @ 0049519e (size=6)
+  GetTimeZoneInformation @ 004951a4 (size=6)
+  GetTopWindow @ 004956f8 (size=6)
+  GetUserDefaultLCID @ 004951aa (size=6)
+  GetVersion @ 004951b0 (size=6)
+  GetVersionExA @ 004951b6 (size=6)
+  GetWinMetaFileBits @ 00495456 (size=6)
+  GetWindow @ 004956fe (size=6)
+  GetWindowDC @ 00495704 (size=6)
+  GetWindowLongA @ 0049570a (size=6)
+  GetWindowLongW @ 00495710 (size=6)
+  GetWindowOrgEx @ 0049545c (size=6)
+  GetWindowPlacement @ 00495716 (size=6)
+  GetWindowRect @ 0049571c (size=6)
+  GetWindowTextA @ 00495722 (size=6)
+  GetWindowThreadProcessId @ 00495728 (size=6)
+  GlobalAddAtomA @ 004951bc (size=6)
+  GlobalDeleteAtom @ 004951c2 (size=6)
+  GlobalFindAtomA @ 004951c8 (size=6)
+  ImageList_Add @ 004952ec (size=6)
+  ImageList_BeginDrag @ 004952f2 (size=6)
+  ImageList_Create @ 004952f8 (size=6)
+  ImageList_Destroy @ 004952fe (size=6)
+  ImageList_DragEnter @ 00495304 (size=6)
+  ImageList_DragLeave @ 0049530a (size=6)
+  ImageList_DragMove @ 00495310 (size=6)
+  ImageList_DragShowNolock @ 00495316 (size=6)
+  ImageList_Draw @ 0049531c (size=6)
+  ImageList_DrawEx @ 00495322 (size=6)
+  ImageList_EndDrag @ 00495328 (size=6)
+  ImageList_GetBkColor @ 0049532e (size=6)
+  ImageList_GetIconSize @ 00495334 (size=6)
+  ImageList_GetImageCount @ 0049533a (size=6)
+  ImageList_Read @ 00495340 (size=6)
+  ImageList_Remove @ 00495346 (size=6)
+  ImageList_SetBkColor @ 0049534c (size=6)
+  ImageList_SetIconSize @ 00495352 (size=6)
+  ImageList_SetImageCount @ 00495358 (size=6)
+  ImageList_Write @ 0049535e (size=6)
+  InflateRect @ 0049572e (size=6)
+  InitCommonControls @ 00495364 (size=6)
+  InitializeCriticalSection @ 004951da (size=6)
+  InsertMenuA @ 00495734 (size=6)
+  InsertMenuItemA @ 0049573a (size=6)
+  InterlockedDecrement @ 004951e0 (size=6)
+  InterlockedExchange @ 004951e6 (size=6)
+  InterlockedIncrement @ 004951ec (size=6)
+  IntersectClipRect @ 00495462 (size=6)
+  IntersectRect @ 00495740 (size=6)
+  InvalidateRect @ 00495746 (size=6)
+  IsChild @ 0049574c (size=6)
+  IsDBCSLeadByteEx @ 004951f2 (size=6)
+  IsDialogMessageA @ 00495752 (size=6)
+  IsDialogMessageW @ 00495758 (size=6)
+  IsIconic @ 0049575e (size=6)
+  IsRectEmpty @ 00495764 (size=6)
+  IsValidLocale @ 004951f8 (size=6)
+  IsWindow @ 0049576a (size=6)
+  IsWindowEnabled @ 00495770 (size=6)
+  IsWindowUnicode @ 00495776 (size=6)
+  IsWindowVisible @ 0049577c (size=6)
+  IsZoomed @ 00495782 (size=6)
+  KillTimer @ 00495788 (size=6)
+  LCMapStringA @ 004951fe (size=6)
+  LeaveCriticalSection @ 00495204 (size=6)
+  LineTo @ 00495468 (size=6)
+  LoadBitmapA @ 0049578e (size=6)
+  LoadCursorA @ 00495794 (size=6)
+  LoadIconA @ 0049579a (size=6)
+  LoadLibraryA @ 0049520a (size=6)
+  LoadLibraryExA @ 00495210 (size=6)
+  LoadResource @ 00495216 (size=6)
+  LoadStringA @ 004957a6 (size=6)
+  LockResource @ 0049521c (size=6)
+  MapVirtualKeyA @ 004957ac (size=6)
+  MapWindowPoints @ 004957b2 (size=6)
+  MaskBlt @ 0049546e (size=6)
+  MessageBoxA @ 004957b8 (size=6)
+  MoveToEx @ 00495474 (size=6)
+  MulDiv @ 00495222 (size=6)
+  MultiByteToWideChar @ 00495228 (size=6)
+  OemToCharA @ 004957be (size=6)
+  OffsetRect @ 004957c4 (size=6)
+  PatBlt @ 0049547a (size=6)
+  PeekMessageA @ 004957ca (size=6)
+  PeekMessageW @ 004957d0 (size=6)
+  PlayEnhMetaFile @ 00495480 (size=6)
+  Polyline @ 00495486 (size=6)
+  PostMessageA @ 004957d6 (size=6)
+  PostQuitMessage @ 004957dc (size=6)
+  PtInRect @ 004957e2 (size=6)
+  RaiseException @ 0049522e (size=6)
+  ReadFile @ 00495234 (size=6)
+  RealizePalette @ 0049548c (size=6)
+  RectVisible @ 00495492 (size=6)
+  Rectangle @ 00495498 (size=6)
+  RedrawWindow @ 004957e8 (size=6)
+  RegCloseKey @ 00495084 (size=6)
+  RegFlushKey @ 0049508a (size=6)
+  RegOpenKeyExA @ 00495090 (size=6)
+  RegQueryValueExA @ 00495096 (size=6)
+  RegisterClassA @ 004957ee (size=6)
+  RegisterWindowMessageA @ 004957fa (size=6)
+  ReleaseCapture @ 00495800 (size=6)
+  ReleaseDC @ 00495806 (size=6)
+  RemoveMenu @ 0049580c (size=6)
+  RemovePropA @ 00495812 (size=6)
+  ResetEvent @ 0049523a (size=6)
+  RestoreDC @ 0049549e (size=6)
+  RtlUnwind @ 00495240 (size=6)
+  SafeArrayCreate @ 00495914 (size=6)
+  SafeArrayGetLBound @ 0049591a (size=6)
+  SafeArrayGetUBound @ 00495920 (size=6)
+  SafeArrayPtrOfIndex @ 00495926 (size=6)
+  SaveDC @ 004954a4 (size=6)
+  ScreenToClient @ 00495818 (size=6)
+  ScrollWindow @ 0049581e (size=6)
+  SelectObject @ 004954aa (size=6)
+  SelectPalette @ 004954b0 (size=6)
+  SendMessageA @ 00495824 (size=6)
+  SendMessageW @ 0049582a (size=6)
+  SetActiveWindow @ 00495830 (size=6)
+  SetBkColor @ 004954b6 (size=6)
+  SetBkMode @ 004954bc (size=6)
+  SetBrushOrgEx @ 004954c2 (size=6)
+  SetCapture @ 00495836 (size=6)
+  SetClassLongA @ 0049583c (size=6)
+  SetConsoleCtrlHandler @ 00495246 (size=6)
+  SetCursor @ 00495842 (size=6)
+  SetDIBColorTable @ 004954c8 (size=6)
+  SetEndOfFile @ 0049524c (size=6)
+  SetEnhMetaFileBits @ 004954ce (size=6)
+  SetErrorMode @ 00495252 (size=6)
+  SetEvent @ 00495258 (size=6)
+  SetFilePointer @ 0049525e (size=6)
+  SetFocus @ 00495848 (size=6)
+  SetForegroundWindow @ 0049584e (size=6)
+  SetHandleCount @ 00495264 (size=6)
+  SetLastError @ 0049526a (size=6)
+  SetMenu @ 00495854 (size=6)
+  SetMenuItemInfoA @ 0049585a (size=6)
+  SetParent @ 00495860 (size=6)
+  SetPixel @ 004954d4 (size=6)
+  SetPropA @ 00495866 (size=6)
+  SetROP2 @ 004954da (size=6)
+  SetRect @ 0049586c (size=6)
+  SetStretchBltMode @ 004954e0 (size=6)
+  SetTextColor @ 004954e6 (size=6)
+  SetThreadLocale @ 00495270 (size=6)
+  SetTimer @ 00495884 (size=6)
+  SetViewportOrgEx @ 004954ec (size=6)
+  SetWinMetaFileBits @ 004954f2 (size=6)
+  SetWindowLongA @ 0049588a (size=6)
+  SetWindowLongW @ 00495890 (size=6)
+  SetWindowOrgEx @ 004954f8 (size=6)
+  SetWindowPlacement @ 00495896 (size=6)
+  SetWindowPos @ 0049589c (size=6)
+  SetWindowTextA @ 004958a2 (size=6)
+  SetWindowsHookExA @ 004958a8 (size=6)
+  ShowOwnedPopups @ 004958ae (size=6)
+  ShowWindow @ 004958ba (size=6)
+  SizeofResource @ 00495276 (size=6)
+  Sleep @ 0049527c (size=6)
+  StretchBlt @ 004954fe (size=6)
+  SysAllocStringLen @ 0049592c (size=6)
+  SysFreeString @ 00495932 (size=6)
+  SysReAllocStringLen @ 00495938 (size=6)
+  SystemParametersInfoA @ 004958c0 (size=6)
+  TlsFree @ 00495288 (size=6)
+  TlsGetValue @ 0049528e (size=6)
+  TlsSetValue @ 00495294 (size=6)
+  TrackPopupMenu @ 004958c6 (size=6)
+  TranslateMDISysAccel @ 004958cc (size=6)
+  TranslateMessage @ 004958d2 (size=6)
+  UnhandledExceptionFilter @ 0049529a (size=6)
+  UnhookWindowsHookEx @ 004958d8 (size=6)
+  UnrealizeObject @ 00495504 (size=6)
+  UnregisterClassA @ 004958de (size=6)
+  UpdateWindow @ 004958e4 (size=6)
+  VariantChangeType @ 0049593e (size=6)
+  VariantClear @ 00495944 (size=6)
+  VariantCopy @ 0049594a (size=6)
+  VariantInit @ 00495950 (size=6)
+  VerQueryValueA @ 004952e4 (size=6)
+  VirtualAlloc @ 004952a0 (size=6)
+  VirtualFree @ 004952a6 (size=6)
+  VirtualQuery @ 004952ac (size=6)
+  WaitForSingleObject @ 004952b2 (size=6)
+  WaitMessage @ 004958ea (size=6)
+  WideCharToMultiByte @ 004952b8 (size=6)
+  WindowFromPoint @ 004958f0 (size=6)
+  WriteFile @ 004952be (size=6)
+  _TrackMouseEvent @ 0049536a (size=6)
+  __GetExceptDLLinfo @ 00401461 (size=5)
+  entry @ 00401408 (size=2)
+  lstrcpyA @ 004952c4 (size=6)
+  lstrcpynA @ 004952ca (size=6)
+  lstrlenA @ 004952d0 (size=6)
+  thunk_FUN_00415002 @ 00414ff8 (size=2)
+  thunk_FUN_0041f3b4 @ 0041febc (size=7)
+  thunk_FUN_0041fad8 @ 0041fad0 (size=5)
+  thunk_FUN_0042021c @ 00420218 (size=2)
+  thunk_FUN_00421094 @ 004210d8 (size=5)
+  thunk_FUN_00421094 @ 004210e0 (size=5)
+  thunk_FUN_00421750 @ 00421ae4 (size=5)
+  thunk_FUN_0042e654 @ 0042e650 (size=2)
+  thunk_FUN_0042f8e2 @ 0042f8dc (size=2)
+  thunk_FUN_00446789 @ 00446784 (size=2)
+  thunk_FUN_004488b8 @ 00494c6c (size=5)
+  thunk_FUN_0045b5c1 @ 0045b5bc (size=2)
+  thunk_FUN_00486980 @ 00486889 (size=5)
+  thunk_FUN_0048d200 @ 0048d1e8 (size=6)
+  thunk_FUN_0048d200 @ 0048d1ee (size=6)
+  thunk_FUN_0048d560 @ 0048cf9c (size=5)
+  wsprintfA @ 004958f6 (size=6)

@@ -1,0 +1,132 @@
+﻿{
+"vehicle":"V2 Dodge 1998-2002",
+"version":"2.7",
+"parameters":
+	{
+		"sensors" : [
+			{"name":"Backdown Percentage","aid":"13","decimalDigits":0,"unit":"PERC","multiplyFactor":1,"offset":0,"formatter":0,"minValue":0,"maxValue":100,"warningValue":0,"warningRule":0, "minmax":"high"},
+			{"name":"Boost Pressure","aid":"1","decimalDigits":0,"unit":"PSI","multiplyFactor":1,"offset":0,"formatter":0,"minValue":0,"maxValue":57,"warningValue":25,"warningRule":1, "minmax":"high"},
+			{"name":"Coolant","aid":"84","decimalDigits":0,"unit":"DEGF","multiplyFactor":1,"offset":-40,"formatter":0,"minValue":0,"maxValue":280,"warningValue":220,"warningRule":1, "minmax":"high"},
+			{"name":"ECM Voltage","aid":"12","decimalDigits":1,"unit":"V","multiplyFactor":0.1,"offset":0,"formatter":0,"minValue":0,"maxValue":18,"warningValue":16,"warningRule":0, "minmax":"both"},
+			{"name":"EGT","aid":"75","decimalDigits":0,"unit":"DEGF","multiplyFactor":1,"offset":0,"formatter":0,"minValue":0,"maxValue":1800,"warningValue":1350,"warningRule":1, "minmax":"high"},
+			{"name":"Engine Load","aid":"7","decimalDigits":0,"unit":"PERC","multiplyFactor":1,"offset":0,"formatter":0,"minValue":0,"maxValue":100,"warningValue":0,"warningRule":0, "minmax":"high"},
+			{"name":"Fuel Pressure","aid":"0","decimalDigits":0,"unit":"PSI","multiplyFactor":1,"offset":0,"formatter":0,"minValue":0,"maxValue":100,"warningValue":9,"warningRule":2, "minmax":"low"},
+			{"name":"Intake Air Temperature","aid":"4","decimalDigits":0,"unit":"DEGF","multiplyFactor":1,"offset":-40,"formatter":0,"minValue":0,"maxValue":215,"warningValue":0,"warningRule":0, "minmax":"high"},
+			{"name":"Oil Pressure","aid":"6","decimalDigits":0,"unit":"PSI","multiplyFactor":1,"offset":0,"formatter":0,"minValue":0,"maxValue":158,"warningValue":0,"warningRule":0, "minmax":"both"},
+		   	{"name":"RPM","aid":"78","decimalDigits":0,"unit":"RPM","multiplyFactor":1,"offset":0,"formatter":0,"minValue":0,"maxValue":4500,"warningValue":0,"warningRule":0, "minmax":"high"},
+  			{"name":"Throttle Position","aid":"5","decimalDigits":0,"unit":"PERC","multiplyFactor":1,"offset":0,"formatter":0,"minValue":0,"maxValue":100,"warningValue":0,"warningRule":0, "minmax":"high"},
+			{"name":"Transmission Slip","aid":"40","decimalDigits":0,"unit":"PERC","multiplyFactor":1,"offset":0,"formatter":0,"minValue":0,"maxValue":100,"warningValue":0,"warningRule":0, "minmax":"high"},
+			{"name":"Transmission Temperature","aid":"76","decimalDigits":0,"unit":"DEGF","multiplyFactor":1,"offset":0,"formatter":0,"minValue":0,"maxValue":280,"warningValue":240,"warningRule":1, "minmax":"high"},
+			{"name":"Vehicle Speed","aid":"8","decimalDigits":0,"unit":"MPH","multiplyFactor":1,"offset":0,"formatter":0,"minValue":0,"maxValue":130,"warningValue":0,"warningRule":0, "minmax":"high"},
+			{"name":"CanBus Fuel","aid":"148","decimalDigits":0,"unit":"","multiplyFactor":1,"offset":0,"formatter":0,"minValue":0,"maxValue":5000,"warningValue":0,"warningRule":0, "minmax":"high"},
+			{"name":"Fuel Temp","aid":"3","decimalDigits":0,"unit":"DEGF","multiplyFactor":1,"offset":-40,"formatter":0,"minValue":-40,"maxValue":215,"warningValue":160,"warningRule":1, "minmax":"high"},
+			{"name":"Timing","aid":"149","decimalDigits":2,"unit":"DEG","multiplyFactor":0.01,"offset":0,"formatter":0,"minValue":0,"maxValue":30.00,"warningValue":0,"warningRule":0, "minmax":"high"},
+                        {"name":"ECO", "aid":"147","decimalDigits":2,"unit":"","multiplyFactor":0.01,"offset":0,"formatter":0,"minValue":0,"maxValue":1000,"warningValue":100,"warningRule":0, "minmax":"high"},
+                        {"name":"Gallon Trip","aid":"105","decimalDigits":2,"unit":"","multiplyFactor":0.01,"offset":0,"formatter":0,"minValue":0,"maxValue":1000,"warningValue":1000,"warningRule":0, "minmax":"high"},			
+                        {"name":"Build Date","aid":"188","decimalDigits":0,"unit":"","multiplyFactor":1,"offset":0,"formatter":0,"minValue":0,"maxValue":100000,"warningValue":0,"warningRule":0, "minmax":"high"}
+		],
+		"settings" : [
+			{"name":"Boost Defuel Setting","aid":81, "decimalDigits":0,"unit":"PSI","minValue":23, "maxValue":57, "options":[], "toggable":true, "formatter":4},
+			{"name":"EGT Defuel Setting","aid":150, "decimalDigits":0,"unit":"DEGF","minValue":1200, "maxValue":1800, "options":[], "toggable":true, "formatter":6},
+			{"name":"High Idle Delay Setting","aid":153, "decimalDigits":0,"unit":"SEC","minValue":0, "maxValue":900, "options":[], "toggable":true, "formatter":6},
+			{"name":"Warmup Mode Setting","aid":154, "decimalDigits":0,"unit":"DEGF","minValue":120, "maxValue":200, "options":[], "toggable":true, "formatter":6},
+                        {"name":"MPG Offset","aid":146, "decimalDigits":0,"unit":"PERC","minValue":90, "maxValue":254, "options":[], "toggable":true, "formatter":4},
+			{"name":"Turbo Timer Setting","aid":152, "decimalDigits":0,"unit":"DEGF","additionalUnit":"SEC","minValue":100, "maxValue":500, "additionalMinValue":10, "additionalMaxValue":600, 
+				"options":["EGT Based","Time Based"], "toggable":true, "formatter":7},
+				
+			{"name":"Drive Train Info","aid":226, "decimalDigits":1, "unit":"INCHES","minValue":95.7, "maxValue":120.9,
+				"options":["No Selection","Automatic","Manual, 5 Speed","Manual, 6 Speed"],"optionValues":["100","0","1","2"], 
+				"options1":["No Selection","3.73","4.10","Chevy","3.54","3.55"],"optionValues1":["100","0","1","2","3","4"], 
+				"formatter":8}
+		],
+	    "tuning" : [
+		{
+  		    "name": "Tune Parameters",
+  		    "type": "list",
+  		    "items": [
+  			{"name":"Number of Power Levels","aid":"15","decimalDigits":0,"unit":"","multiplyFactor":1,"formatter":0,"minValue":6,"maxValue":15},
+			{"name":"RPM Limit","aid":"104","decimalDigits":0,"unit":"RPM","multiplyFactor":1,"formatter":0,"minValue":3200,"maxValue":3700} ]
+		},
+		{
+		    "name": "Valet Mode Parameters",
+		    "type": "list",
+		    "items": [
+			{"name":"Maximum Valet Mode Power","aid":"111","decimalDigits":0,"unit":"PERC","multiplyFactor":1,"formatter":0,"minValue":0,"maxValue":100} ]
+		},
+		{
+		    "name": "Pump Tap Parameters",
+		    "type": "list",
+		    "items": [
+		    	{"name":"Maximum Fuel Stretch","aid":"85","decimalDigits":0,"unit":"USEC","multiplyFactor":1,"formatter":0,"minValue":1200,"maxValue":2200},
+	  		{"name":"TPS Pump Maximum","aid":"18","decimalDigits":0,"unit":"PERC","multiplyFactor":1,"formatter":0,"minValue":0,"maxValue":100},
+	  		{"name":"TPS Pump Minimum","aid":"19","decimalDigits":0,"unit":"PERC","multiplyFactor":1,"formatter":0,"minValue":0,"maxValue":100},
+			{"name":"Minimum Pump Tap Fueling Percentage","aid":"110","decimalDigits":0,"unit":"PERC","multiplyFactor":1,"formatter":0,"minValue":0,"maxValue":50},
+			{"name":"Pump Low Boost Scale PSI","aid":"112","decimalDigits":0,"unit":"PSI","multiplyFactor":1,"formatter":0,"minValue":0,"maxValue":25},
+	 		{"name":"Boost Scaling","aid":"22","decimalDigits":0,"unit":"PSI","multiplyFactor":1,"formatter":0,"minValue":20,"maxValue":40}]
+		},
+		{
+		    "name": "Timing Parameters",
+		    "type": "list",
+		    "items": [
+			{"name":"Max Load Timing Offset","aid":"17","decimalDigits":1,"unit":"DEG","multiplyFactor":0.1,"formatter":0,"minValue":0,"maxValue":3},
+			{"name":"Low PSI Timing Reduct","aid":"59","decimalDigits":1,"unit":"DEG","multiplyFactor":0.1,"formatter":0,"minValue":0,"maxValue":5},
+			{"name":"Timing Reduct Scaling","aid":"60","decimalDigits":0,"unit":"PERC","multiplyFactor":1,"formatter":0,"minValue":0,"maxValue":100},
+			{"name":"Light Throttle Timing Adv","aid":"61","decimalDigits":1,"unit":"DEG","multiplyFactor":0.1,"formatter":0,"minValue":0,"maxValue":8},
+			{"name":"Light Throttle Load Limit (Percent)","aid":"62","decimalDigits":0,"unit":"PERC","multiplyFactor":1,"formatter":0,"minValue":0,"maxValue":40}]
+	  	},
+		{			
+  		    "name": "RPM Timing Max",
+  		    "type": "equalizer",
+		    "high" : 30,
+		    "low" : 0,
+		    "unit": "DEG", 
+		    "resolution": 1, 
+		    "default": 15,
+  		    "items": [
+                        {"minValue":"0","warningvaluelow":"11","warningvaluehigh":"17","decimalDigits":"1","formatter":"0","multiplyFactor":"0.1","name":"1500RPM","unit":"DEG","maxValue":"20","aid":"137"},
+			{"minValue":"0","warningvaluelow":"15","warningvaluehigh":"20","decimalDigits":"1","formatter":"0","multiplyFactor":"0.1","name":"2000RPM","unit":"DEG","maxValue":"26","aid":"138"},
+			{"minValue":"0","warningvaluelow":"19","warningvaluehigh":"23","decimalDigits":"1","formatter":"0","multiplyFactor":"0.1","name":"2500RPM","unit":"DEG","maxValue":"30","aid":"139"},
+			{"minValue":"0","warningvaluelow":"21","warningvaluehigh":"26","decimalDigits":"1","formatter":"0","multiplyFactor":"0.1","name":"3000RPM","unit":"DEG","maxValue":"30","aid":"140"},
+			{"minValue":"0","warningvaluelow":"22","warningvaluehigh":"27","decimalDigits":"1","formatter":"0","multiplyFactor":"0.1","name":"Max","unit":"DEG","maxValue":"30","aid":"141"} ]
+		},
+		{			
+  		    "name": "Boost Level Fueling - CAN Bus",
+  		    "type": "equalizer",
+		    "high" : 150,
+		    "low" : 50,
+		    "unit": "PERC", 
+		    "resolution": 10, 
+		    "default": 100,
+  		    "items": [
+			{"name": "0 PSI","aid":"113","decimalDigits":0,"unit":"PERC","multiplyFactor":1,"formatter":0,"minValue":50,"maxValue":150,"warningvaluelow":65,"warningvaluehigh":115},
+			{"name": "1 PSI","aid":"114","decimalDigits":0,"unit":"PERC","multiplyFactor":1,"formatter":0,"minValue":50,"maxValue":150,"warningvaluelow":65,"warningvaluehigh":115},
+			{"name": "2 PSI","aid":"115","decimalDigits":0,"unit":"PERC","multiplyFactor":1,"formatter":0,"minValue":50,"maxValue":150,"warningvaluelow":65,"warningvaluehigh":115},
+			{"name": "3 PSI","aid":"116","decimalDigits":0,"unit":"PERC","multiplyFactor":1,"formatter":0,"minValue":50,"maxValue":150,"warningvaluelow":65,"warningvaluehigh":115},
+			{"name": "4 PSI","aid":"117","decimalDigits":0,"unit":"PERC","multiplyFactor":1,"formatter":0,"minValue":50,"maxValue":150,"warningvaluelow":65,"warningvaluehigh":115},
+			{"name": "5 PSI","aid":"118","decimalDigits":0,"unit":"PERC","multiplyFactor":1,"formatter":0,"minValue":50,"maxValue":150,"warningvaluelow":65,"warningvaluehigh":115},
+			{"name": "6 PSI","aid":"119","decimalDigits":0,"unit":"PERC","multiplyFactor":1,"formatter":0,"minValue":50,"maxValue":150,"warningvaluelow":65,"warningvaluehigh":125},
+			{"name": "7 PSI","aid":"120","decimalDigits":0,"unit":"PERC","multiplyFactor":1,"formatter":0,"minValue":50,"maxValue":150,"warningvaluelow":65,"warningvaluehigh":125},
+			{"name": "8 PSI","aid":"121","decimalDigits":0,"unit":"PERC","multiplyFactor":1,"formatter":0,"minValue":50,"maxValue":150,"warningvaluelow":65,"warningvaluehigh":125},
+			{"name": "9 PSI","aid":"122","decimalDigits":0,"unit":"PERC","multiplyFactor":1,"formatter":0,"minValue":50,"maxValue":150,"warningvaluelow":65,"warningvaluehigh":125},
+			{"name":"10 PSI","aid":"123","decimalDigits":0,"unit":"PERC","multiplyFactor":1,"formatter":0,"minValue":50,"maxValue":150,"warningvaluelow":65,"warningvaluehigh":125},
+			{"name":"11 PSI","aid":"124","decimalDigits":0,"unit":"PERC","multiplyFactor":1,"formatter":0,"minValue":50,"maxValue":150,"warningvaluelow":65,"warningvaluehigh":130},
+			{"name":"12 PSI","aid":"125","decimalDigits":0,"unit":"PERC","multiplyFactor":1,"formatter":0,"minValue":50,"maxValue":150,"warningvaluelow":65,"warningvaluehigh":130},
+			{"name":"13 PSI","aid":"126","decimalDigits":0,"unit":"PERC","multiplyFactor":1,"formatter":0,"minValue":50,"maxValue":150,"warningvaluelow":65,"warningvaluehigh":130},
+			{"name":"14 PSI","aid":"127","decimalDigits":0,"unit":"PERC","multiplyFactor":1,"formatter":0,"minValue":50,"maxValue":150,"warningvaluelow":65,"warningvaluehigh":130},
+			{"name":"15 PSI","aid":"128","decimalDigits":0,"unit":"PERC","multiplyFactor":1,"formatter":0,"minValue":50,"maxValue":150,"warningvaluelow":65,"warningvaluehigh":140},
+			{"name":"16 PSI","aid":"129","decimalDigits":0,"unit":"PERC","multiplyFactor":1,"formatter":0,"minValue":50,"maxValue":150,"warningvaluelow":65,"warningvaluehigh":140},
+			{"name":"18 PSI","aid":"130","decimalDigits":0,"unit":"PERC","multiplyFactor":1,"formatter":0,"minValue":50,"maxValue":150,"warningvaluelow":65,"warningvaluehigh":140},
+			{"name":"20 PSI","aid":"131","decimalDigits":0,"unit":"PERC","multiplyFactor":1,"formatter":0,"minValue":50,"maxValue":150,"warningvaluelow":65,"warningvaluehigh":150},
+			{"name":"22 PSI","aid":"132","decimalDigits":0,"unit":"PERC","multiplyFactor":1,"formatter":0,"minValue":50,"maxValue":150,"warningvaluelow":65,"warningvaluehigh":150},
+			{"name":"24 PSI","aid":"133","decimalDigits":0,"unit":"PERC","multiplyFactor":1,"formatter":0,"minValue":50,"maxValue":150,"warningvaluelow":65,"warningvaluehigh":150},
+			{"name":"26 PSI","aid":"134","decimalDigits":0,"unit":"PERC","multiplyFactor":1,"formatter":0,"minValue":50,"maxValue":150,"warningvaluelow":65,"warningvaluehigh":150},
+			{"name":"28 PSI","aid":"135","decimalDigits":0,"unit":"PERC","multiplyFactor":1,"formatter":0,"minValue":50,"maxValue":150,"warningvaluelow":65,"warningvaluehigh":150},
+			{"name":"30+ PSI","aid":"136","decimalDigits":0,"unit":"PERC","multiplyFactor":1,"formatter":0,"minValue":50,"maxValue":150,"warningvaluelow":65,"warningvaluehigh":150} ]
+		}
+		
+		],
+		"currentGear" : {"name":"Current Gear","aid":"32","decimalDigits":0,"unit":"","multiplyFactor":1,"offset":0,"formatter":2},
+		"powerLevel"  : {"name":"Power Level","aid":"9","decimalDigits":0,"unit":"","multiplyFactor":1,"offset":0,"formatter":3},
+		"torqueLock"  : {"name":"Torque Converter Lock","aid":"39","decimalDigits":0,"unit":"","multiplyFactor":1,"offset":0,"formatter":1}
+	}
+}

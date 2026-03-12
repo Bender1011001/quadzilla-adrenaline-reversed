@@ -1,0 +1,577 @@
+Loading firmware...
+  Range: 0x00004000 - 0x0000FF00 (48897 bytes, 47.8 KB)
+
+=== INTERRUPT VECTORS ===
+  Reset       : 0xEA00000F  -> 0x00004044  (ARM branch)
+  Undef       : 0xEA000038  -> 0x000040EC  (ARM branch)
+  SWI         : 0xEA000037  -> 0x000040EC  (ARM branch)
+  PrefAbort   : 0xEA000036  -> 0x000040EC  (ARM branch)
+  DataAbort   : 0xEA000035  -> 0x000040EC  (ARM branch)
+  Rsvd        : 0xEA000034  -> 0x000040EC  (ARM branch)
+  IRQ         : 0xEA00001C  -> 0x00004090  (ARM branch)
+  FIQ         : 0xE1A09000
+
+  Reset handler at: 0x00004044
+  Found BX R0 at 0x00004050 -> ARM-to-Thumb switch!
+  Found BX R0 at 0x0000407C -> ARM-to-Thumb switch!
+  Found BX R0 at 0x00004088 -> ARM-to-Thumb switch!
+  Found BX R0 at 0x000040BC -> ARM-to-Thumb switch!
+  Found BX R0 at 0x000040F4 -> ARM-to-Thumb switch!
+
+=== FUNCTION PROLOGUES ===
+  Thumb PUSH {..., LR}: 39 functions
+    0x00004114: PUSH {R4, R5, LR}
+    0x00004214: PUSH {R4, R5, R6, R7, LR}
+    0x00004384: PUSH {R4, R5, R6, LR}
+    0x000046D0: PUSH {R0, R1, R4, R5, R6, R7, LR}
+    0x000048E8: PUSH {R4, R5, LR}
+    0x0000495C: PUSH {LR}
+    0x0000497C: PUSH {LR}
+    0x00004A94: PUSH {R4, R5, R6, R7, LR}
+    0x00004B38: PUSH {R4, R5, R6, R7, LR}
+    0x00004D38: PUSH {R4, R5, R6, R7, LR}
+    0x0000506C: PUSH {R5, LR}
+    0x000050F0: PUSH {R4, R5, R6, R7, LR}
+    0x0000575C: PUSH {R4, R5, R6, LR}
+    0x000059E8: PUSH {R1, R4, R5, R6, R7, LR}
+    0x00005CF0: PUSH {R4, R5, R6, R7, LR}
+    0x00005E04: PUSH {R4, R5, R6, R7, LR}
+    0x00005EBC: PUSH {LR}
+    0x00005F14: PUSH {LR}
+    0x0000601C: PUSH {R4, R5, R6, R7, LR}
+    0x00006B20: PUSH {R4, R5, R6, LR}
+    0x00006B64: PUSH {R4, R5, R6, LR}
+    0x00006B9C: PUSH {R4, R5, R6, R7, LR}
+    0x00006C94: PUSH {R4, R5, R6, R7, LR}
+    0x000073E4: PUSH {R4, LR}
+    0x000074E8: PUSH {R4, R5, LR}
+    0x000076CC: PUSH {R4, R5, R6, R7, LR}
+    0x000077B8: PUSH {R4, R5, R6, R7, LR}
+    0x00007AF8: PUSH {LR}
+    0x00007B1C: PUSH {LR}
+    0x00007BCC: PUSH {LR}
+    0x00007CC4: PUSH {R1, R2, R4, R5, R6, R7, LR}
+    0x00007D80: PUSH {R1, R2, R3, R4, R5, R6, R7, LR}
+    0x00007E64: PUSH {R2, R3, R4, R5, R6, R7, LR}
+    0x00007EB4: PUSH {R4, R5, R6, R7, LR}
+    0x00007EFC: PUSH {LR}
+    0x0000800C: PUSH {LR}
+    0x00008038: PUSH {R4, R5, R6, R7, LR}
+    0x000081A8: PUSH {R4, R5, R6, R7, LR}
+    0x0000B18C: PUSH {LR}
+
+  ARM STMDB SP!, {..., LR}: 7 functions
+    0x00004028: 0xE92D500E
+    0x00004094: 0xE92D4000
+    0x0000409C: 0xE92D4000
+    0x000040B4: 0xE92D500E
+    0x0000893C: 0xE92D4000
+    0x000089B0: 0xE92D4000
+    0x00008A50: 0xE92D4000
+
+=== ASCII STRINGS ===
+  0x000041FA: "eh%`R"
+  0x0000424E: "1O8x"
+  0x0000425F: "`>p(x"
+  0x00004278: "(O8x"
+  0x00004288: "h`>p(x"
+  0x00004291: "@)p`"
+  0x000042A2: " O8x"
+  0x000042B4: "(a>p(x"
+  0x000042BD: "@)p "
+  0x000042E1: "`&p(x@"
+  0x000042EA: "(p(x"
+  0x000042F3: " (p!H"
+  0x0000439B: "r##Sr"
+  0x000043AF: "$TsyLTa"
+  0x000043BB: "&&tet"
+  0x000043D1: "%%be%"
+  0x000043D7: "vg%Uvi%"
+  0x000043E7: "wq%Uwt%"
+  0x000043F3: "wz%%p}%ep"
+  0x0000441F: "r!sas"
+  0x00004436: "(tXH"
+  0x0000443D: "pXHQh"
+  0x00004446: "ApVHai"
+  0x00004450: "ApUH"
+  0x0000445A: "ApSH"
+  0x00004464: "ApRH!j"
+  0x0000446E: "ApsH"
+  0x00004485: "pMHa|"
+  0x00004495: "pJHQz"
+  0x000044A4: "ApHHQi"
+  0x000044AE: "ApFH"
+  0x000044B9: "pFHQ{"
+  0x000044C5: "pEHQ~"
+  0x000044DD: "pCHQ"
+  0x000044EF: "pAH!x"
+  0x000044F5: "pAHax"
+  0x00004507: "p?H!y"
+  0x0000450D: "p?Hay"
+  0x0000451F: "p=H!z"
+  0x00004525: "p=Haz"
+  0x00004572: ")dPh"
+  0x0000465A: "eh%`R"
+  0x0000467E: "eh%`R"
+  0x000046D4: "d'.L"
+  0x000046E3: "!HC,I"
+  0x000046FD: " BC%I"
+  0x0000476C: "0p x2xi"
+  0x00004783: "  p8"
+  0x000047BC: "Ssx "
+  0x00004807: "sP{0"
+  0x00004821: "pKJ'K"
+  0x0000483D: "h"L"M"
+  0x0000486F: "p!p+p"
+  0x00004909: "M-hE"
+  0x00004968: "d"PC"
+  0x00004983: "!HCd!"
+  0x00004A51: " lF"pHq"
+  0x00004AAA: ""L$h"
+  0x00004ABC: "GV0{"
+  0x00004AC4: "`Cd!"
+  0x00004AF4: "d$`CY"
+  0x00004B04: "d#0iGC8"
+  0x00004B14: "XCd!"
+  0x00004B3E: "xNxO"
+  0x00004B66: "XCd!"
+  0x00004B85: ""&*.26:>BFJNRVZ^bbffjjnnrrvv"
+  0x00004BFF: "~hCd!"
+  0x00004C10: "PCd!"
+  0x00004C3A: ""&*.0y"
+  0x00004C67: "{hCd!"
+  0x00004C7F: "xhCd!"
+  0x00004C9F: "h"K0yd("
+  0x00004CAE: "0yhCd!"
+  0x00004CEC: "QVHCd!"
+  0x00004E1D: "kUkE"
+  0x00004E5E: "UlxH"
+  0x00004E7B: "!LCsI"
+  0x00004E89: "xhFsI"
+  0x00004EB1: "xHCd!"
+  0x00004ED7: "x3(hF"
+  0x00004F35: "kUkE"
+  0x00004FA5: "bMC("
+  0x00004FBA: "iFIx@"
+  0x00004FDC: "`Cd!"
+  0x00004FE6: "XCd!"
+  0x00004FF2: "@xXCd!"
+  0x00004FFE: "`Cd!"
+  0x00005132: "hFAp"
+  0x000051ED: " FC0"
+  0x00005213: "!HCd!"
+  0x000052AB: "qhFBx"
+  0x000052DE: "HCd!"
+  0x00005330: "HCd!"
+  0x0000533D: "!HC!|@"
+  0x00005429: "pd!MC"
+  0x0000546F: "!HC e"
+  0x000054C0: "lImH"
+  0x0000551E: "Hp\H"
+  0x00005526: "Ap[H\I"
+  0x0000553A: "HpkH"
+  0x0000553F: "h(0YI"
+  0x00005548: "HpFH"
+  0x00005554: "HpVH"
+  0x00005595: "pMHVJ"
+  0x0000559D: "pLHLJ"
+  0x000055A5: "pLM.H"
+  0x000055B9: "p`j)I"
+  0x000055DB: " `bBI"
+  0x00005ACA: " b`y"
+  0x00005B3A: "(z>!HCd!"
+  0x00005B58: "ZJ[K"
+  0x00005B84: "(9!c"
+  0x00005B9A: "({i{"
+  0x00005BC0: "hz:!HCd!"
+  0x00005BE0: "({i{"
+  0x00005BE8: "8IHC8I"
+  0x00005C69: " `v!"
+  0x00005CFF: "v,tn"
+  0x00005D79: "vnt1"
+  0x00005E0C: "hF0!"
+  0x00005E1F: "!1p!I"
+  0x00005E27: " BC H"
+  0x00005E54: "hF@!"
+  0x00005E60: "hFP!"
+  0x00005F1E: ","=H"
+  0x00005F41: "p+JKx"
+  0x00005F4F: "xSp)J"
+  0x00005F57: "pKySp'J"
+  0x00005F63: "ySp&J"
+  0x00005F6B: "pKzSp$J"
+  0x00006297: "!1pAx"
+  0x000062B3: " 0pEH"
+  0x000062C0: "!wCI"
+  0x000062C9: "!1p@xa"
+  0x000062D6: "`w}!HCd!"
+  0x000062E7: "!HCd!"
+  0x0000631F: "!1p@x"
+  0x00006345: "!1p@x"
+  0x0000636B: "!1p@x"
+  0x00006391: "!1pAx"
+  0x000063FD: "!1pAx"
+  0x0000643F: "!1pAx"
+  0x00006467: "!1pAx"
+  0x0000649B: "Jd )xI"
+  0x000064A9: "Jd )xI"
+  0x000064EA: "d!At"
+  0x00006574: "Qp{J"
+  0x00006598: "QpuJ"
+  0x000065C6: "QplJ"
+  0x000065E2: "h`gI"
+  0x000065EA: "HpfJhh"
+  0x000065FA: "2 (sdI"
+  0x00006625: " hs]I"
+  0x0000666B: "!irRH,"
+  0x00006690: "(aLI"
+  0x000066AC: "GHAx"
+  0x000067FC: "2 (v"
+  0x00006814: "2 hv"
+  0x00006860: "2 (w"
+  0x00006878: "2 hw~I"
+  0x000068DA: "2#CpnH"
+  0x00006942: "2#Cq\H"
+  0x000069AA: "2#CrJH"
+  0x00006A12: "2#Cs8H"
+  0x00006C59: "wAwpG"
+  0x00006CBB: "pfp`y"
+  0x00006D06: "fefr z"
+  0x00006D47: "efu }"
+  0x00006D5B: "u&u ~"
+  0x00006D64: "&f&v"
+  0x00006D72: " f )"
+  0x00006D7D: "v%wwIHx"
+  0x00006D88: "ffNp"
+  0x00006E0C: " gWH"
+  0x00006E2C: "`gPH"
+  0x00006E4C: "Ms {"
+  0x00006EA2: "Ha3H"
+  0x00006EFA: "#J#K"
+  0x00006F4C: " d%p"
+  0x00006F86: "N@3333"
+  0x00006FB6: "EM(h"
+  0x00006FD3: "h?IA`?I"
+  0x00006FE3: "`?I&""
+  0x00006FFE: "7j'@"
+  0x00007009: "h6j7N6h&@"
+  0x0000702B: "h)Ow`0N7h"
+  0x00007037: "`/O7`/N&'7`"
+  0x0000704F: "h7j'@"
+  0x0000705B: "h6j-N6h&@"
+  0x000070BF: "dXdXc"
+  0x0000717D: "hmIuJ"
+  0x0000718C: "2M,p"
+  0x000071D7: "pWKXL[M.h"
+  0x000071E4: "XN0`)`"
+  0x000071F7: "`!`XH"
+  0x00007213: "pJKKLNM.h"
+  0x00007220: "KN0`)`"
+  0x00007233: "`!`>H"
+  0x0000725E: "@ 'I"
+  0x00007271: "`$J4#"
+  0x00007287: "`+M,`+M,`+M,`+M,`+M,`+M,`+M,`+M,`"
+  0x000072B9: "Ny'7`"
+  0x000072D9: "N!'7`"
+  0x000073D5: "HpGB"
+  0x0000749F: "iQXAa"
+  0x000074AD: "CBPpG"
+  0x000074BB: "i@iPPpG"
+  0x00007501: "`:K&J"
+  0x00007507: "`9L"`%L&M,`"
+  0x0000751F: "`$J%K"
+  0x0000752B: "`$J%K"
+  0x00007545: ""Br+H J"
+  0x0000765F: "Ovj>`"
+  0x00007665: "NpC(`"p"
+  0x00007681: "Ovj>`"
+  0x00007687: "N.`"p"
+  0x000076EE: "/M(x"
+  0x000076F7: "z-N.O"
+  0x00007713: " 8p0p<"
+  0x00007731: " 8p0p"
+  0x00007751: " 8p0p"
+  0x00007771: " 8p0p"
+  0x0000778D: " 8p0p"
+  0x000077C7: "M*iSP@"
+  0x000077FA: "lp,p"
+  0x00007885: "` !9`@!9`>`A"
+  0x00007892: "9`rI"
+  0x000078C4: "lp,paH"
+  0x000078EC: "yHzI"
+  0x0000791A: "9`uI"
+  0x0000794F: "peHYI"
+  0x00007956: "aJQC"
+  0x0000797D: " (rLH"
+  0x00007983: "pXHVI"
+  0x0000798D: "pUHj"
+  0x00007999: "pSHJI"
+  0x000079B0: "8`)H1"
+  0x00007A28: "9`2I"
+  0x00007BA0: "lF$x"
+  0x00007BC3: "!/Cy@"
+  0x00007BF6: "pGK)"
+  0x00007D18: "*xkF"
+  0x00007E73: "p&x7"
+  0x00007EBB: "& x0@"
+  0x00007EC3: "C#p+"
+  0x00007EDD: "C&p9"
+  0x00007F50: "HpJt"
+  0x00007FAE: "nF6x"
+  0x0000804C: "UN0j"
+  0x00008062: "(00b"
+  0x000080FB: " prK"
+  0x00008147: " pp%"
+  0x00008195: " 0p("
+  0x000083D4: "5tup"
+  0x0000842D: " 3~1"
+  0x00008496: "uu5p"
+  0x00008D05: "4#B}"
+  0x000091E9: " "R*"
+  0x000096EE: "#(-27<AFKPUZ_d"
+  0x00009706: "#(-27<AFKP"
+  0x0000971E: "#(-27<"
+  0x000098C0: "#####"
+  0x000098CB: "##((((("
+  0x000098D6: "##((-----"
+  0x000098E1: "##((---2222"
+  0x000098ED: "#(2<PPPPFFFF"
+  0x000098FA: "(-<FPZZPPFFF"
+  0x00009907: "-7FPZZZPPFFF"
+  0x00009914: "2APZZZZZPFFF"
+  0x00009921: "7KUZ___ZPFFF"
+  0x0000992E: "<U__dddZPPFF"
+  0x0000993B: "A_ddddddZPPF"
+  0x00009948: "FdddddddZPPF"
+  0x00009955: "KddddddddZPF"
+  0x00009962: "KdddddddddZP"
+  0x0000996F: "KdddddddddZP"
+  0x0000997C: "ddddddddddddZPF2("
+  0x00009990: "ddddddddddddZPF2("
+  0x000099A4: "dddddddddddPF<2("
+  0x000099B8: "ddddddddddPF<2("
+  0x000099CC: "dddddddddPF<2("
+  0x000099E0: "ddddddddPF<2("
+  0x000099F4: "dddddddPF<2("
+  0x00009A08: "ddddddPF<2("
+  0x00009A1C: "dddddPF<2("
+  0x00009A30: "ddddPF<2("
+  0x00009A44: "dddPPF<2("
+  0x00009A58: "ddZPPF<2("
+  0x00009A6C: "d_ZZPF<2("
+  0x00009A80: "d_ZZPF<2("
+  0x00009A94: "d_ZZPF<2("
+  0x00009AA8: "d_ZZPF<2("
+  0x00009ABC: "d_ZZPF<2("
+  0x00009AD0: "d_ZZPF<2("
+  0x00009AE4: "d_ZZPF<2("
+  0x00009AF8: "d_ZZPF<2("
+  0x00009C80: "egiknqtwz}"
+  0x00009FC9: "QX@\"
+  0x00009FDE: "n@33"
+  0x00009FEA: "b@33c@@gJ"
+  0x0000A05E: " !"#$%&'()*+,-./0123456789:;;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^^_`abcdddddddddddd,"
+  0x0000A358: " !"#$%&'"
+  0x0000A397: " !"$%&')* "
+  0x0000FD00: "Aug  2 2018"
+  0x0000FE00: "DADR9802"
+
+=== REGION ANALYSIS ===
+  CODE  0x00004000 - 0x0000FF00 (48896 bytes)
+
+=== BYTE PATTERN ANALYSIS ===
+  Zero bytes: 5999 (12.3%)
+  0xFF bytes: 20559 (42.0%)
+
+=== BLOCK ENTROPY ===
+  0x00004000: entropy=5.06 [###############         ] CODE
+  0x00004100: entropy=5.79 [#################       ] COMPRESSED/RANDOM
+  0x00004200: entropy=5.59 [################        ] COMPRESSED/RANDOM
+  0x00004300: entropy=5.74 [#################       ] ASCII
+  0x00004400: entropy=5.06 [###############         ] ASCII
+  0x00004500: entropy=5.01 [###############         ] CODE
+  0x00004600: entropy=5.50 [################        ] CODE
+  0x00004700: entropy=5.91 [#################       ] COMPRESSED/RANDOM
+  0x00004800: entropy=5.77 [#################       ] COMPRESSED/RANDOM
+  0x00004900: entropy=6.01 [##################      ] COMPRESSED/RANDOM
+  0x00004A00: entropy=6.16 [##################      ] COMPRESSED/RANDOM
+  0x00004B00: entropy=6.03 [##################      ] COMPRESSED/RANDOM
+  0x00004C00: entropy=6.02 [##################      ] COMPRESSED/RANDOM
+  0x00004D00: entropy=5.91 [#################       ] COMPRESSED/RANDOM
+  0x00004E00: entropy=5.90 [#################       ] COMPRESSED/RANDOM
+  0x00004F00: entropy=5.81 [#################       ] COMPRESSED/RANDOM
+  0x00005000: entropy=5.54 [################        ] COMPRESSED/RANDOM
+  0x00005100: entropy=5.95 [#################       ] COMPRESSED/RANDOM
+  0x00005200: entropy=5.83 [#################       ] COMPRESSED/RANDOM
+  0x00005300: entropy=5.76 [#################       ] COMPRESSED/RANDOM
+  0x00005400: entropy=5.52 [################        ] COMPRESSED/RANDOM
+  0x00005500: entropy=5.42 [################        ] ASCII
+  0x00005600: entropy=4.42 [#############           ] CODE
+  0x00005700: entropy=5.29 [###############         ] CODE
+  0x00005800: entropy=4.27 [############            ] CODE
+  0x00005900: entropy=4.95 [##############          ] CODE
+  0x00005A00: entropy=5.80 [#################       ] COMPRESSED/RANDOM
+  0x00005B00: entropy=5.58 [################        ] COMPRESSED/RANDOM
+  0x00005C00: entropy=5.88 [#################       ] COMPRESSED/RANDOM
+  0x00005D00: entropy=5.90 [#################       ] COMPRESSED/RANDOM
+  0x00005E00: entropy=5.63 [################        ] COMPRESSED/RANDOM
+  0x00005F00: entropy=5.68 [#################       ] COMPRESSED/RANDOM
+  0x00006000: entropy=4.95 [##############          ] CODE
+  0x00006100: entropy=3.24 [#########               ] CODE
+  0x00006200: entropy=5.26 [###############         ] CODE
+  0x00006300: entropy=5.31 [###############         ] CODE
+  0x00006400: entropy=5.83 [#################       ] COMPRESSED/RANDOM
+  0x00006500: entropy=5.59 [################        ] ASCII
+  0x00006600: entropy=5.78 [#################       ] COMPRESSED/RANDOM
+  0x00006700: entropy=4.31 [############            ] CODE
+  0x00006800: entropy=5.17 [###############         ] CODE
+  0x00006900: entropy=4.90 [##############          ] CODE
+  0x00006A00: entropy=4.55 [#############           ] CODE
+  0x00006B00: entropy=5.42 [################        ] CODE
+  0x00006C00: entropy=5.61 [################        ] COMPRESSED/RANDOM
+  0x00006D00: entropy=5.71 [#################       ] ASCII
+  0x00006E00: entropy=5.65 [################        ] ASCII
+  0x00006F00: entropy=5.63 [################        ] COMPRESSED/RANDOM
+  0x00007000: entropy=5.63 [################        ] ASCII
+  0x00007100: entropy=5.49 [################        ] CODE
+  0x00007200: entropy=5.44 [################        ] ASCII
+  0x00007300: entropy=5.10 [###############         ] CODE
+  0x00007400: entropy=5.63 [################        ] COMPRESSED/RANDOM
+  0x00007500: entropy=5.34 [################        ] CODE
+  0x00007600: entropy=5.84 [#################       ] COMPRESSED/RANDOM
+  0x00007700: entropy=5.33 [################        ] CODE
+  0x00007800: entropy=5.61 [################        ] ASCII
+  0x00007900: entropy=5.50 [################        ] ASCII
+  0x00007A00: entropy=5.12 [###############         ] CODE
+  0x00007B00: entropy=5.48 [################        ] CODE
+  0x00007C00: entropy=5.55 [################        ] COMPRESSED/RANDOM
+  0x00007D00: entropy=5.74 [#################       ] COMPRESSED/RANDOM
+  0x00007E00: entropy=5.86 [#################       ] COMPRESSED/RANDOM
+  0x00007F00: entropy=5.92 [#################       ] COMPRESSED/RANDOM
+  0x00008000: entropy=5.56 [################        ] COMPRESSED/RANDOM
+  0x00008100: entropy=5.41 [################        ] CODE
+  0x00008200: entropy=5.41 [################        ] CODE
+  0x00008300: entropy=5.59 [################        ] COMPRESSED/RANDOM
+  0x00008400: entropy=5.55 [################        ] COMPRESSED/RANDOM
+  0x00008500: entropy=5.29 [###############         ] CODE
+  0x00008600: entropy=5.00 [##############          ] CODE
+  0x00008700: entropy=5.08 [###############         ] CODE
+  0x00008800: entropy=5.16 [###############         ] CODE
+  0x00008900: entropy=5.08 [###############         ] CODE
+  0x00008A00: entropy=5.49 [################        ] CODE
+  0x00008B00: entropy=4.99 [##############          ] CODE
+  0x00008C00: entropy=5.29 [###############         ] CODE
+  0x00008D00: entropy=5.19 [###############         ] CODE
+  0x00008E00: entropy=5.65 [################        ] COMPRESSED/RANDOM
+  0x00008F00: entropy=5.38 [################        ] CODE
+  0x00009000: entropy=5.07 [###############         ] CODE
+  0x00009100: entropy=4.82 [##############          ] CODE
+  0x00009200: entropy=5.24 [###############         ] CODE
+  0x00009300: entropy=4.78 [##############          ] CODE
+  0x00009400: entropy=5.20 [###############         ] CODE
+  0x00009500: entropy=5.29 [###############         ] CODE
+  0x00009600: entropy=5.25 [###############         ] CODE
+  0x00009700: entropy=1.20 [###                     ] DATA/TABLE
+  0x00009800: entropy=2.65 [#######                 ] DATA/TABLE
+  0x00009900: entropy=2.97 [########                ] ASCII
+  0x00009A00: entropy=3.05 [#########               ] CODE
+  0x00009B00: entropy=0.29 [                        ] ZERO/CONST
+  0x00009C00: entropy=2.14 [######                  ] DATA/TABLE
+  0x00009D00: entropy=3.23 [#########               ] CODE
+  0x00009E00: entropy=1.48 [####                    ] DATA/TABLE
+  0x00009F00: entropy=2.60 [#######                 ] DATA/TABLE
+  0x0000A000: entropy=5.85 [#################       ] COMPRESSED/RANDOM
+  0x0000A100: entropy=4.10 [############            ] CODE
+  0x0000A200: entropy=3.82 [###########             ] CODE
+  0x0000A300: entropy=4.45 [#############           ] CODE
+  0x0000A400: entropy=4.84 [##############          ] CODE
+  0x0000A500: entropy=4.81 [##############          ] CODE
+  0x0000A600: entropy=4.79 [##############          ] CODE
+  0x0000A700: entropy=4.88 [##############          ] CODE
+  0x0000A800: entropy=4.84 [##############          ] CODE
+  0x0000A900: entropy=1.38 [####                    ] DATA/TABLE
+  0x0000AA00: entropy=1.56 [####                    ] DATA/TABLE
+  0x0000AB00: entropy=3.09 [#########               ] CODE
+  0x0000AC00: entropy=0.11 [                        ] ZERO/CONST
+  0x0000AD00: entropy=1.56 [####                    ] DATA/TABLE
+  0x0000AE00: entropy=2.05 [######                  ] DATA/TABLE
+  0x0000AF00: entropy=3.29 [#########               ] CODE
+  0x0000B000: entropy=0.11 [                        ] ZERO/CONST
+  0x0000B100: entropy=4.42 [#############           ] CODE
+  0x0000B200: entropy=0.00 [                        ] ZERO/CONST
+  0x0000B300: entropy=0.00 [                        ] ZERO/CONST
+  0x0000B400: entropy=0.00 [                        ] ZERO/CONST
+  0x0000B500: entropy=0.00 [                        ] ZERO/CONST
+  0x0000B600: entropy=0.00 [                        ] ZERO/CONST
+  0x0000B700: entropy=0.00 [                        ] ZERO/CONST
+  0x0000B800: entropy=0.00 [                        ] ZERO/CONST
+  0x0000B900: entropy=0.00 [                        ] ZERO/CONST
+  0x0000BA00: entropy=0.00 [                        ] ZERO/CONST
+  0x0000BB00: entropy=0.00 [                        ] ZERO/CONST
+  0x0000BC00: entropy=0.00 [                        ] ZERO/CONST
+  0x0000BD00: entropy=0.00 [                        ] ZERO/CONST
+  0x0000BE00: entropy=0.00 [                        ] ZERO/CONST
+  0x0000BF00: entropy=0.00 [                        ] ZERO/CONST
+  0x0000C000: entropy=0.00 [                        ] ZERO/CONST
+  0x0000C100: entropy=0.00 [                        ] ZERO/CONST
+  0x0000C200: entropy=0.00 [                        ] ZERO/CONST
+  0x0000C300: entropy=0.00 [                        ] ZERO/CONST
+  0x0000C400: entropy=0.00 [                        ] ZERO/CONST
+  0x0000C500: entropy=0.00 [                        ] ZERO/CONST
+  0x0000C600: entropy=0.00 [                        ] ZERO/CONST
+  0x0000C700: entropy=0.00 [                        ] ZERO/CONST
+  0x0000C800: entropy=0.00 [                        ] ZERO/CONST
+  0x0000C900: entropy=0.00 [                        ] ZERO/CONST
+  0x0000CA00: entropy=0.00 [                        ] ZERO/CONST
+  0x0000CB00: entropy=0.00 [                        ] ZERO/CONST
+  0x0000CC00: entropy=0.00 [                        ] ZERO/CONST
+  0x0000CD00: entropy=0.00 [                        ] ZERO/CONST
+  0x0000CE00: entropy=0.00 [                        ] ZERO/CONST
+  0x0000CF00: entropy=0.00 [                        ] ZERO/CONST
+  0x0000D000: entropy=0.00 [                        ] ZERO/CONST
+  0x0000D100: entropy=0.00 [                        ] ZERO/CONST
+  0x0000D200: entropy=0.00 [                        ] ZERO/CONST
+  0x0000D300: entropy=0.00 [                        ] ZERO/CONST
+  0x0000D400: entropy=0.00 [                        ] ZERO/CONST
+  0x0000D500: entropy=0.00 [                        ] ZERO/CONST
+  0x0000D600: entropy=0.00 [                        ] ZERO/CONST
+  0x0000D700: entropy=0.00 [                        ] ZERO/CONST
+  0x0000D800: entropy=0.00 [                        ] ZERO/CONST
+  0x0000D900: entropy=0.00 [                        ] ZERO/CONST
+  0x0000DA00: entropy=0.00 [                        ] ZERO/CONST
+  0x0000DB00: entropy=0.00 [                        ] ZERO/CONST
+  0x0000DC00: entropy=0.00 [                        ] ZERO/CONST
+  0x0000DD00: entropy=0.00 [                        ] ZERO/CONST
+  0x0000DE00: entropy=0.00 [                        ] ZERO/CONST
+  0x0000DF00: entropy=0.00 [                        ] ZERO/CONST
+  0x0000E000: entropy=0.00 [                        ] ZERO/CONST
+  0x0000E100: entropy=0.00 [                        ] ZERO/CONST
+  0x0000E200: entropy=0.00 [                        ] ZERO/CONST
+  0x0000E300: entropy=0.00 [                        ] ZERO/CONST
+  0x0000E400: entropy=0.00 [                        ] ZERO/CONST
+  0x0000E500: entropy=0.00 [                        ] ZERO/CONST
+  0x0000E600: entropy=0.00 [                        ] ZERO/CONST
+  0x0000E700: entropy=0.00 [                        ] ZERO/CONST
+  0x0000E800: entropy=0.00 [                        ] ZERO/CONST
+  0x0000E900: entropy=0.00 [                        ] ZERO/CONST
+  0x0000EA00: entropy=0.00 [                        ] ZERO/CONST
+  0x0000EB00: entropy=0.00 [                        ] ZERO/CONST
+  0x0000EC00: entropy=0.00 [                        ] ZERO/CONST
+  0x0000ED00: entropy=0.00 [                        ] ZERO/CONST
+  0x0000EE00: entropy=0.00 [                        ] ZERO/CONST
+  0x0000EF00: entropy=0.00 [                        ] ZERO/CONST
+  0x0000F000: entropy=0.00 [                        ] ZERO/CONST
+  0x0000F100: entropy=0.00 [                        ] ZERO/CONST
+  0x0000F200: entropy=0.00 [                        ] ZERO/CONST
+  0x0000F300: entropy=0.00 [                        ] ZERO/CONST
+  0x0000F400: entropy=0.00 [                        ] ZERO/CONST
+  0x0000F500: entropy=0.00 [                        ] ZERO/CONST
+  0x0000F600: entropy=0.00 [                        ] ZERO/CONST
+  0x0000F700: entropy=0.00 [                        ] ZERO/CONST
+  0x0000F800: entropy=0.00 [                        ] ZERO/CONST
+  0x0000F900: entropy=0.00 [                        ] ZERO/CONST
+  0x0000FA00: entropy=0.00 [                        ] ZERO/CONST
+  0x0000FB00: entropy=0.00 [                        ] ZERO/CONST
+  0x0000FC00: entropy=0.00 [                        ] ZERO/CONST
+  0x0000FD00: entropy=0.41 [#                       ] ZERO/CONST
+  0x0000FE00: entropy=0.40 [#                       ] ZERO/CONST
