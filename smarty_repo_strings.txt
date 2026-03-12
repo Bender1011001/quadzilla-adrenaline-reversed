@@ -1,0 +1,468 @@
+=== smarty.rep\projectState ===
+<A VALUE="smarty:" />
+<STATE NAME="SHOW_TABLE" TYPE="boolean" VALUE="false" />
+<COMPONENT_INFO NAME="Program Tree" OWNER="ProgramTreePlugin" TITLE="Program Trees" ACTIVE="true" GROUP="Default" INSTANCE_ID="3683325923348768173" />
+<COMPONENT_INFO NAME="Listing" OWNER="CodeBrowserPlugin" TITLE="Listing:  SmartyUSB.exe" ACTIVE="false" GROUP="Core" INSTANCE_ID="3683325923348768181" />
+<COMPONENT_INFO NAME="Bytes" OWNER="ByteViewerPlugin" TITLE="Bytes: SmartyUSB.exe" ACTIVE="false" GROUP="Default" INSTANCE_ID="3683325923348768176" />
+<COMPONENT_INFO NAME="Equates Table" OWNER="EquateTablePlugin" TITLE="Equates Table" ACTIVE="false" GROUP="Default" INSTANCE_ID="3683325923348768179" />
+<COMPONENT_INFO NAME="External Programs" OWNER="ReferencesPlugin" TITLE="External Programs" ACTIVE="false" GROUP="Default" INSTANCE_ID="3683325923348768182" />
+<COMPONENT_INFO NAME="Relocation Table" OWNER="RelocationTablePlugin" TITLE="Relocation Table" ACTIVE="false" GROUP="Default" INSTANCE_ID="3683325941799511456" />
+<COMPONENT_INFO NAME="Memory Map" OWNER="MemoryMapPlugin" TITLE="Memory Map" ACTIVE="false" GROUP="Default" INSTANCE_ID="3683325923348768166" />
+<COMPONENT_INFO NAME="Symbol Table" OWNER="SymbolTablePlugin" TITLE="Symbol Table" ACTIVE="false" GROUP="symbolTable" INSTANCE_ID="3683325941747082686" />
+<COMPONENT_INFO NAME="Symbol References" OWNER="SymbolTablePlugin" TITLE="Symbol References" ACTIVE="false" GROUP="symbolTable" INSTANCE_ID="3683325941747082687" />
+<COMPONENT_INFO NAME="Checksum Generator" OWNER="ComputeChecksumsPlugin" TITLE="Checksum Generator" ACTIVE="false" GROUP="Default" INSTANCE_ID="3683325923348768180" />
+<COMPONENT_INFO NAME="Source Files and Transforms" OWNER="SourceFilesTablePlugin" TITLE="Source Files and Transforms" ACTIVE="false" GROUP="Default" INSTANCE_ID="3683325923348768183" />
+<COMPONENT_INFO NAME="Strings" OWNER="StringTablePlugin" TITLE="String Search" ACTIVE="false" GROUP="String Search" INSTANCE_ID="3680102894777135372" />
+<STATE NAME="MEMENTO_CLASS0" TYPE="string" VALUE="ghidra.app.plugin.core.gotoquery.DefaultNavigatableLocationMemento" />
+<STATE NAME="MEMENTO_CLASS1" TYPE="string" VALUE="ghidra.app.plugin.core.gotoquery.DefaultNavigatableLocationMemento" />
+<STATE NAME="MEMENTO_CLASS" TYPE="string" VALUE="ghidra.app.plugin.core.gotoquery.DefaultNavigatableLocationMemento" />
+<STATE NAME="PROGRAM_ID" TYPE="long" VALUE="3683325478236644785" />
+<STATE NAME="PROGRAM_PATH_" TYPE="string" VALUE="smarty:/SmartyUSB.exe" />
+<STATE NAME="_CLASSNAME" TYPE="string" VALUE="ghidra.program.util.MemoryBlockStartFieldLocation" />
+<STATE NAME="_CLASSNAME" TYPE="string" VALUE="ghidra.program.util.LabelFieldLocation" />
+<PLUGIN NAME="ProgramTreePlugin">
+<STATE NAME="Current Viewname" TYPE="string" VALUE="Program Tree" />
+<ARRAY NAME="GroupNameProgram Tree0" TYPE="string">
+<A VALUE="SmartyUSB.exe" />
+<STATE NAME="NumberOfGroupsProgram Tree" TYPE="int" VALUE="1" />
+<STATE NAME="TreeName-0" TYPE="string" VALUE="Program Tree" />
+<STATE NAME="_CLASSNAME" TYPE="string" VALUE="ghidra.program.util.FunctionThunkFieldLocation" />
+<STATE NAME="Block Column" TYPE="int" VALUE="0" />
+<STATE NAME="Block Num" TYPE="int" VALUE="0" />
+<STATE NAME="Block Offset" TYPE="string" VALUE="0" />
+<PLUGIN NAME="ProgramManagerPlugin">
+<STATE NAME="CURRENT_FILE" TYPE="string" VALUE="SmartyUSB.exe" />
+<STATE NAME="NUM_PROGRAMS" TYPE="int" VALUE="1" />
+<STATE NAME="PATHNAME_0" TYPE="string" VALUE="/SmartyUSB.exe" />
+<STATE NAME="PROJECT_NAME_0" TYPE="string" VALUE="smarty" />
+
+=== smarty.rep\idata\~index.dat ===
+00000000:SmartyUSB.exe:c0a81aa78895948013514900
+
+=== smarty.rep\idata\~journal.bak ===
+IADD:00000000:/SmartyUSB.exe
+IDSET:/SmartyUSB.exe:c0a81aa78895948013514900
+
+=== smarty.rep\idata\00\00000000.prp ===
+<STATE NAME="CONTENT_TYPE" TYPE="string" VALUE="Program" />
+<STATE NAME="READ_ONLY" TYPE="boolean" VALUE="false" />
+<STATE NAME="NAME" TYPE="string" VALUE="SmartyUSB.exe" />
+
+=== smarty.rep\idata\00\~00000000.db\db.1.gbf ===
+ID;Key;Value;
+Range Map - AddressSet - CodeMap
+IndexKey;
+Property Map - Lengths
+Property Map - Composites
+Range Map - Fragment Addresses0
+Property Table
+Fragment Table0
+Key;Name;Comments;
+Module Table0
+Key;Name;Comments;ChildCount;
+#Key;Parent ID;Child ID;Child Index;
+Key;Name;Modification Number;
+Key;Value;
+KEY;Parent ID;Child ID;
+:Key;Equate ID;Equate Reference;Operand Index;Varnode Hash;
+Key;Equate Name;Equate Value;
+Key;Hash;Storage;
+$Key;Address;Action;Labels;User;Date;
+gKey;Name;Address;Namespace;Symbol Type;String Data;Flags;Locator Hash;Primary;Datatype;Variable Offset;
+ContextTable
+Keys;Register Context;
+Keys;Bytes;Address;InDelaySlot;
+9Key;Address;Comment Type;Pos1;Pos2;String Data;User;Date;
+&Address;EOL;Pre;Post;Plate;Repeatable;
+CKey;Filename;Offset;Size;Chain Buffer IDs;Layered Chain Buffer IDs;
+Sub Memory Blocks
+JKey;Parent ID;Type;Length;Starting Offset;Source ID;Source Address/Offset;
+Memory Blocks
+AKey;Name;Comments;Source Name;Flags;Start Address;Length;Segment;
+ADDRESS MAP
+Key;Space Name;Segment;Deleted;
+Program
+Program Name
+SmartyUSB.exe
+dataOrg.size_alignment_map.8
+dataOrg.size_alignment_map.4
+dataOrg.size_alignment_map.2
+dataOrg.size_alignment_map.1
+Program Tree
+$Program Information.SectionAlignment
+Program Information.Relocatable
+Program Information.FSRL
+Sfile:///C:/Users/admin/Downloads/SmartyUSB.exe?MD5=6e738c287e052fe68aa0c59c3df319e6
+%Program Information.Executable SHA256
+"Program Information.Executable MD5
+'Program Information.Executable Location
+'/C:/Users/admin/Downloads/SmartyUSB.exe
+%Program Information.Executable Format
+Portable Executable (PE)
+Program Information.Date Created
+/Program Information.Created With Ghidra Version
+Program Information.Compiler
+IMAGE_DIRECTORY_ENTRY_EXPORT
+)ghidra.program.model.data.UnicodeDataType
+/ghidra.program.model.data.PascalUnicodeDataType
+0ghidra.program.model.data.DialogResourceDataType
+.ghidra.program.model.data.IconResourceDataType
+BitmapResource
+0ghidra.program.model.data.BitmapResourceDataType
+2ghidra.program.model.data.TerminatedStringDataType
+'ghidra.program.model.data.IBO32DataType
+&ghidra.program.model.data.ByteDataType
+'ghidra.program.model.data.DWordDataType
+&ghidra.program.model.data.WordDataType
+&ghidra.program.model.data.CharDataType
+CodePage
+LoaderFlags
+CheckSum
+PointerToSymbolTable
+e_program
+Actual DOS program
+File address of relocation table
+Checksum
+Pages in file
+Bytes of last page
+IMAGE_SCN_MEM_WRITE
+IMAGE_SCN_MEM_READ
+IMAGE_SCN_MEM_NOT_PAGED
+IMAGE_DIRECTORY_ENTRY_IMPORT
+!0  ImageList_Write  <<not bound>>
+0  ImageList_Read  <<not bound>>
+0  WriteFile  <<not bound>>
+!0  SetThreadLocale  <<not bound>>
+0  ReadFile  <<not bound>>
+0  LCMapStringA  <<not bound>>
+!0  GetThreadLocale  <<not bound>>
+$0  GetCurrentThreadId  <<not bound>>
+0  ExitThread  <<not bound>>
+0  CreateThread  <<not bound>>
+0  RegOpenKeyExA  <<not bound>>
+0  RegFlushKey  <<not bound>>
+0  RegCloseKey  <<not bound>>
+IMAGE_IMPORT_DESCRIPTOR
+Export Library Name
+Export Ordinal Values
+Export Name Pointers
+Export Function Pointers
+IMAGE_IMPORT_BY_NAME
+"IMAGE_IMPORT_DESCRIPTOR - DLL NAME
+4Rsrc_StringTable_ff3_0 Size of resource: 0x364 bytes
+3Rsrc_StringTable_ff2_0 Size of resource: 0x40 bytes
+9Rsrc_Bitmap_PREVIEWGLYPH_409 Size of resource: 0xe8 bytes
+3Rsrc_Bitmap_BBYES_409 Size of resource: 0x1d0 bytes
+5Rsrc_Bitmap_BBRETRY_409 Size of resource: 0x1d0 bytes
+2Rsrc_Bitmap_BBOK_409 Size of resource: 0x1d0 bytes
+2Rsrc_Bitmap_BBNO_409 Size of resource: 0x1d0 bytes
+6Rsrc_Bitmap_BBIGNORE_409 Size of resource: 0x1d0 bytes
+4Rsrc_Bitmap_BBHELP_409 Size of resource: 0x1d0 bytes
+5Rsrc_Bitmap_BBCLOSE_409 Size of resource: 0x1d0 bytes
+6Rsrc_Bitmap_BBCANCEL_409 Size of resource: 0x1d0 bytes
+3Rsrc_Bitmap_BBALL_409 Size of resource: 0x1e4 bytes
+5Rsrc_Bitmap_BBABORT_409 Size of resource: 0x1d0 bytes
+(0  ActivateKeyboardLayout  <<not bound>>
+"0  SetViewportOrgEx  <<not bound>>
+"0  SetDIBColorTable  <<not bound>>
+"0  GetDIBColorTable  <<not bound>>
+0  GetBitmapBits  <<not bound>>
+0  CreateDIBitmap  <<not bound>>
+(0  CreateCompatibleBitmap  <<not bound>>
+0  CreateBitmap  <<not bound>>
+WriteFileP
+SetThreadLocaleP
+ReadFileP
+LCMapStringAP
+GetThreadLocaleP
+ExitThreadP
+RegOpenKeyExAP
+RegFlushKeyP
+RegCloseKeyP
+Rsrc_StringTable_1000_0
+Rsrc_StringTable_fff_0
+Rsrc_StringTable_ffe_0
+Rsrc_StringTable_ffd_0
+Rsrc_StringTable_ffc_0
+Rsrc_StringTable_ffb_0
+Rsrc_StringTable_ffa_0
+Rsrc_StringTable_ff9_0
+Rsrc_StringTable_ff8_0
+Rsrc_StringTable_ff7_0
+Rsrc_StringTable_ff6_0
+Rsrc_StringTable_ff5_0
+Rsrc_StringTable_ff4_0
+Rsrc_StringTable_ff3_0
+Rsrc_StringTable_ff2_0
+Rsrc_Bitmap_PREVIEWGLYPH_409
+Rsrc_Bitmap_BBYES_409
+Rsrc_Bitmap_BBRETRY_409
+Rsrc_Bitmap_BBOK_409
+Rsrc_Bitmap_BBNO_409
+Rsrc_Bitmap_BBIGNORE_409
+Rsrc_Bitmap_BBHELP_409
+Rsrc_Bitmap_BBCLOSE_409
+Rsrc_Bitmap_BBCANCEL_409
+Rsrc_Bitmap_BBALL_409
+Rsrc_Bitmap_BBABORT_409
+WriteFile
+SetViewportOrgEx
+SetThreadLocale
+SetDIBColorTable
+Rsrc_StringTable_fff_0
+Rsrc_StringTable_ffe_0
+Rsrc_StringTable_ffd_0
+Rsrc_StringTable_ffc_0
+Rsrc_StringTable_ffb_0
+Rsrc_StringTable_ffa_0
+Rsrc_StringTable_ff9_0
+Rsrc_StringTable_ff8_0
+Rsrc_StringTable_ff7_0
+Rsrc_StringTable_ff6_0
+Rsrc_StringTable_ff5_0
+Rsrc_StringTable_ff4_0
+Rsrc_StringTable_ff3_0
+Rsrc_StringTable_ff2_0
+Rsrc_StringTable_1000_0
+Rsrc_Bitmap_PREVIEWGLYPH_409
+Rsrc_Bitmap_BBYES_409
+Rsrc_Bitmap_BBRETRY_409
+Rsrc_Bitmap_BBOK_409
+Rsrc_Bitmap_BBNO_409
+Rsrc_Bitmap_BBIGNORE_409
+Rsrc_Bitmap_BBHELP_409
+Rsrc_Bitmap_BBCLOSE_409
+Rsrc_Bitmap_BBCANCEL_409
+Rsrc_Bitmap_BBALL_409
+Rsrc_Bitmap_BBABORT_409
+RegOpenKeyExA
+RegFlushKey
+RegCloseKey
+ReadFile
+MapWindowPoints
+MapVirtualKeyA
+LoadKeyboardLayoutA
+LoadBitmapA
+LCMapStringA
+ImageList_Write
+ImageList_Read
+GetWindowThreadProcessId
+GetThreadLocale
+GetKeyboardType
+
+=== smarty.rep\idata\00\~00000000.db\db.2.gbf ===
+/Range Map - AddressSet - WindowsResourceChecked
+IndexKey;
+)Range Map - AddressSet - PreFunctionMatch
+Range Map - SCOPE ADDRESSES
+ID;Key;Value;
+Range Map - AddressSet - CodeMap
+Property Map - Lengths
+Property Map - Composites
+Range Map - Fragment Addresses0
+Property Table
+Fragment Table0
+Key;Name;Comments;
+Module Table0
+Key;Name;Comments;ChildCount;
+#Key;Parent ID;Child ID;Child Index;
+Key;Name;Modification Number;
+Key;Value;
+KEY;Parent ID;Child ID;
+:Key;Equate ID;Equate Reference;Operand Index;Varnode Hash;
+Key;Equate Name;Equate Value;
+Key;Hash;Storage;
+$Key;Address;Action;Labels;User;Date;
+gKey;Name;Address;Namespace;Symbol Type;String Data;Flags;Locator Hash;Primary;Datatype;Variable Offset;
+ContextTable
+Keys;Register Context;
+Keys;Bytes;Address;InDelaySlot;
+9Key;Address;Comment Type;Pos1;Pos2;String Data;User;Date;
+&Address;EOL;Pre;Post;Plate;Repeatable;
+CKey;Filename;Offset;Size;Chain Buffer IDs;Layered Chain Buffer IDs;
+Sub Memory Blocks
+JKey;Parent ID;Type;Length;Starting Offset;Source ID;Source Address/Offset;
+Memory Blocks
+AKey;Name;Comments;Source Name;Flags;Start Address;Length;Segment;
+ADDRESS MAP
+Key;Space Name;Segment;Deleted;
+Program
+Program Name
+SmartyUSB.exe
+dataOrg.size_alignment_map.8
+dataOrg.size_alignment_map.4
+dataOrg.size_alignment_map.2
+dataOrg.size_alignment_map.1
+Program Tree
+)Program Information.Should Ask To Analyze
+$Program Information.SectionAlignment
+Program Information.Relocatable
+Program Information.FSRL
+Sfile:///C:/Users/admin/Downloads/SmartyUSB.exe?MD5=6e738c287e052fe68aa0c59c3df319e6
+%Program Information.Executable SHA256
+"Program Information.Executable MD5
+'Program Information.Executable Location
+'/C:/Users/admin/Downloads/SmartyUSB.exe
+%Program Information.Executable Format
+Portable Executable (PE)
+Program Information.Date Created
+/Program Information.Created With Ghidra Version
+Program Information.Compiler
+Program Information.Analyzed
+tagBITMAPINFOHEADER
+tagBITMAPINFO
+_SECURITY_ATTRIBUTES
+HKEY__
+HBITMAP__
+IMAGE_DIRECTORY_ENTRY_EXPORT
+2ghidra.program.model.data.UnsignedLongLongDataType
+,ghidra.program.model.data.Undefined3DataType
+,ghidra.program.model.data.LongDoubleDataType
+*ghidra.program.model.data.LongLongDataType
+)ghidra.program.model.data.BooleanDataType
+'ghidra.program.model.data.FloatDataType
+'ghidra.program.model.data.ShortDataType
+(ghidra.program.model.data.DoubleDataType
+.ghidra.program.model.data.UnsignedCharDataType
+/ghidra.program.model.data.UnsignedShortDataType
+*ghidra.program.model.data.WideCharDataType
+1ghidra.program.model.data.UnsignedIntegerDataType
+&ghidra.program.model.data.VoidDataType
+&ghidra.program.model.data.LongDataType
+.ghidra.program.model.data.UnsignedLongDataType
+)ghidra.program.model.data.IntegerDataType
+(ghidra.program.model.data.StringDataType
+,ghidra.program.model.data.Undefined8DataType
+,ghidra.program.model.data.Undefined2DataType
+,ghidra.program.model.data.Undefined1DataType
+,ghidra.program.model.data.Undefined4DataType
+)ghidra.program.model.data.UnicodeDataType
+/ghidra.program.model.data.PascalUnicodeDataType
+0ghidra.program.model.data.DialogResourceDataType
+.ghidra.program.model.data.IconResourceDataType
+BitmapResource
+0ghidra.program.model.data.BitmapResourceDataType
+2ghidra.program.model.data.TerminatedStringDataType
+'ghidra.program.model.data.IBO32DataType
+&ghidra.program.model.data.ByteDataType
+'ghidra.program.model.data.DWordDataType
+&ghidra.program.model.data.WordDataType
+&ghidra.program.model.data.CharDataType
+LockSemaphore
+OwningThread
+CodePage
+LoaderFlags
+CheckSum
+PointerToSymbolTable
+e_program
+Actual DOS program
+File address of relocation table
+Checksum
+Pages in file
+Bytes of last page
+IMAGE_SCN_MEM_WRITE
+IMAGE_SCN_MEM_READ
+IMAGE_SCN_MEM_NOT_PAGED
+IMAGE_DIRECTORY_ENTRY_IMPORT
+!0  ImageList_Write  <<not bound>>
+0  ImageList_Read  <<not bound>>
+0  WriteFile  <<not bound>>
+!0  SetThreadLocale  <<not bound>>
+0  ReadFile  <<not bound>>
+0  LCMapStringA  <<not bound>>
+!0  GetThreadLocale  <<not bound>>
+$0  GetCurrentThreadId  <<not bound>>
+0  ExitThread  <<not bound>>
+0  CreateThread  <<not bound>>
+0  RegOpenKeyExA  <<not bound>>
+0  RegFlushKey  <<not bound>>
+0  RegCloseKey  <<not bound>>
+IMAGE_IMPORT_DESCRIPTOR
+Export Library Name
+Export Ordinal Values
+Export Name Pointers
+Export Function Pointers
+IMAGE_IMPORT_BY_NAME
+"IMAGE_IMPORT_DESCRIPTOR - DLL NAME
+4Rsrc_StringTable_ff3_0 Size of resource: 0x364 bytes
+3Rsrc_StringTable_ff2_0 Size of resource: 0x40 bytes
+9Rsrc_Bitmap_PREVIEWGLYPH_409 Size of resource: 0xe8 bytes
+3Rsrc_Bitmap_BBYES_409 Size of resource: 0x1d0 bytes
+5Rsrc_Bitmap_BBRETRY_409 Size of resource: 0x1d0 bytes
+2Rsrc_Bitmap_BBOK_409 Size of resource: 0x1d0 bytes
+2Rsrc_Bitmap_BBNO_409 Size of resource: 0x1d0 bytes
+6Rsrc_Bitmap_BBIGNORE_409 Size of resource: 0x1d0 bytes
+4Rsrc_Bitmap_BBHELP_409 Size of resource: 0x1d0 bytes
+5Rsrc_Bitmap_BBCLOSE_409 Size of resource: 0x1d0 bytes
+6Rsrc_Bitmap_BBCANCEL_409 Size of resource: 0x1d0 bytes
+3Rsrc_Bitmap_BBALL_409 Size of resource: 0x1e4 bytes
+5Rsrc_Bitmap_BBABORT_409 Size of resource: 0x1d0 bytes
+(0  ActivateKeyboardLayout  <<not bound>>
+"0  SetViewportOrgEx  <<not bound>>
+"0  SetDIBColorTable  <<not bound>>
+"0  GetDIBColorTable  <<not bound>>
+0  GetBitmapBits  <<not bound>>
+0  CreateDIBitmap  <<not bound>>
+(0  CreateCompatibleBitmap  <<not bound>>
+0  CreateBitmap  <<not bound>>
+Rsrc_StringTable_1000_0
+Rsrc_StringTable_fff_0
+Rsrc_StringTable_ffe_0
+Rsrc_StringTable_ffd_0
+Rsrc_StringTable_ffc_0
+Rsrc_StringTable_ffb_0
+Rsrc_StringTable_ffa_0
+Rsrc_StringTable_ff9_0
+Rsrc_StringTable_ff8_0
+Rsrc_StringTable_ff7_0
+Rsrc_StringTable_ff6_0
+Rsrc_StringTable_ff5_0
+Rsrc_StringTable_ff4_0
+Rsrc_StringTable_ff3_0
+Rsrc_StringTable_ff2_0
+Rsrc_Bitmap_PREVIEWGLYPH_409
+Rsrc_Bitmap_BBYES_409
+Rsrc_Bitmap_BBRETRY_409
+Rsrc_Bitmap_BBOK_409
+Rsrc_Bitmap_BBNO_409
+Rsrc_Bitmap_BBIGNORE_409
+Rsrc_Bitmap_BBHELP_409
+Rsrc_Bitmap_BBCLOSE_409
+Rsrc_Bitmap_BBCANCEL_409
+Rsrc_Bitmap_BBALL_409
+Rsrc_Bitmap_BBABORT_409
+GetWindowThreadProcessId
+GetThreadLocale
+GetKeyboardType
+GetKeyboardState
+GetKeyboardLayoutNameA
+GetKeyboardLayoutList
+GetKeyboardLayout
+GetKeyState
+GetKeyNameTextA
+GetDIBColorTable
+GetCurrentThreadId
+GetBitmapBits
+ExitThread
+EnumThreadWindows
+CreateThread
+CreateDIBitmap
+CreateCompatibleBitmap
+CreateBitmap
+ActivateKeyboardLayout
+SetViewportOrgEx
+
+=== smarty.rep\user\00\00000000.prp ===
+<STATE NAME="CONTENT_TYPE" TYPE="string" VALUE="ProgramUserData" />
+<STATE NAME="READ_ONLY" TYPE="boolean" VALUE="false" />
+
+=== smarty.rep\user\00\~00000000.db\db.1.gbf ===
+ID;Key;Value;
+ADDRESS MAP
+Key;Space Name;Segment;Deleted;
+IndexKey;
+ProgramUserData
+Key;Value;
+LAST_PROGRAM_LOCATION
+<STATE NAME="_CLASSNAME" TYPE="string" VALUE="ghidra.program.util.FunctionThunkFieldLocation" />
+
