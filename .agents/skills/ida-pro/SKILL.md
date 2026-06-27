@@ -1,6 +1,6 @@
 ---
-name: reverse-engineering-ida
-description: Instructions and guidelines for reverse engineering mixed ARM/Thumb firmware using headless IDA Pro 9.3 and IDAPython scripts on Windows.
+name: ida-pro
+description: Instructions and guidelines for reverse engineering firmware and software using headless IDA Pro 9.3 and IDAPython scripts on Windows.
 ---
 
 # Reverse Engineering with Headless IDA Pro 9.3
