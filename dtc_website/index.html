@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OBD-II DTC Code Lookup — Cummins / Dodge / Quadzilla</title>
+    <meta name="description" content="Complete OBD-II diagnostic trouble code database with 1,258 P-codes including P2xxx enhanced codes. Search engine, sensor, fuel, transmission, and manufacturer-specific codes for Cummins ISB, VP44, Dodge Ram, and more.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0a0e17;
+            --bg-secondary: #111827;
+            --bg-card: #1a2235;
+            --bg-card-hover: #1f2a42;
+            --bg-input: #0f1629;
+            --border: #2a3550;
+            --border-focus: #3b82f6;
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --accent-blue: #3b82f6;
+            --accent-cyan: #06b6d4;
+            --accent-green: #10b981;
+            --accent-amber: #f59e0b;
+            --accent-red: #ef4444;
+            --accent-purple: #8b5cf6;
+            --glow-blue: rgba(59, 130, 246, 0.15);
+            --glow-cyan: rgba(6, 182, 212, 0.1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Animated background grid */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: 
+                radial-gradient(ellipse at 20% 50%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 20%, rgba(6, 182, 212, 0.06) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 80%, rgba(139, 92, 246, 0.04) 0%, transparent 50%);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Header */
+        header {
+            padding: 48px 0 32px;
+            text-align: center;
+        }
+
+        .logo-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(6, 182, 212, 0.1));
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            border-radius: 100px;
+            padding: 6px 16px;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--accent-cyan);
+            margin-bottom: 16px;
+        }
+
+        .logo-badge .dot {
+            width: 6px; height: 6px;
+            background: var(--accent-green);
+            border-radius: 50%;
+            animation: pulse-dot 2s infinite;
+        }
+
+        @keyframes pulse-dot {
+            0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4); }
+            50% { opacity: 0.8; box-shadow: 0 0 0 4px rgba(16, 185, 129, 0); }
+        }
+
+        h1 {
+            font-size: clamp(28px, 5vw, 48px);
+            font-weight: 800;
+            background: linear-gradient(135deg, #f1f5f9 0%, #94a3b8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.1;
+            margin-bottom: 12px;
+        }
+
+        .subtitle {
+            font-size: 16px;
+            color: var(--text-secondary);
+            font-weight: 400;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Stats bar */
+        .stats-bar {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            margin: 24px 0 32px;
+            flex-wrap: wrap;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--accent-cyan);
+        }
+
+        .stat-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+
+        /* Search */
+        .search-wrapper {
+            position: relative;
+            max-width: 700px;
+            margin: 0 auto 16px;
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+            pointer-events: none;
+        }
+
+        #searchInput {
+            width: 100%;
+            padding: 16px 20px 16px 52px;
+            background: var(--bg-input);
+            border: 1.5px solid var(--border);
+            border-radius: 16px;
+            color: var(--text-primary);
+            font-size: 16px;
+            font-family: 'Inter', sans-serif;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        #searchInput:focus {
+            border-color: var(--accent-blue);
+            box-shadow: 0 0 0 4px var(--glow-blue), 0 8px 32px rgba(0,0,0,0.3);
+        }
+
+        #searchInput::placeholder {
+            color: var(--text-muted);
+        }
+
+        /* Filter chips */
+        .filter-bar {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 32px;
+            flex-wrap: wrap;
+        }
+
+        .filter-chip {
+            padding: 7px 16px;
+            border-radius: 100px;
+            border: 1px solid var(--border);
+            background: transparent;
+            color: var(--text-secondary);
+            font-size: 13px;
+            font-weight: 500;
+            font-family: 'Inter', sans-serif;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            user-select: none;
+        }
+
+        .filter-chip:hover {
+            border-color: var(--accent-blue);
+            color: var(--text-primary);
+            background: rgba(59, 130, 246, 0.08);
+        }
+
+        .filter-chip.active {
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+            border-color: transparent;
+            color: white;
+            font-weight: 600;
+            box-shadow: 0 2px 12px rgba(59, 130, 246, 0.3);
+        }
+
+        /* Results info */
+        .results-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+            padding: 0 4px;
+        }
+
+        .results-count {
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        .results-count span {
+            color: var(--accent-cyan);
+            font-weight: 600;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* DTC Grid */
+        .dtc-grid {
+            display: grid;
+            gap: 8px;
+        }
+
+        .dtc-card {
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            align-items: center;
+            padding: 14px 20px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            transition: all 0.2s ease;
+            cursor: default;
+        }
+
+        .dtc-card:hover {
+            background: var(--bg-card-hover);
+            border-color: rgba(59, 130, 246, 0.3);
+            transform: translateX(4px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+        }
+
+        .dtc-code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 15px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .dtc-code.cat-engine { color: var(--accent-red); }
+        .dtc-code.cat-fuel { color: var(--accent-amber); }
+        .dtc-code.cat-emission { color: var(--accent-green); }
+        .dtc-code.cat-trans { color: var(--accent-purple); }
+        .dtc-code.cat-sensor { color: var(--accent-cyan); }
+        .dtc-code.cat-other { color: var(--accent-blue); }
+
+        .dtc-desc {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.4;
+        }
+
+        .dtc-card:hover .dtc-desc {
+            color: var(--text-primary);
+        }
+
+        /* Category indicator dot */
+        .dtc-code::before {
+            content: '';
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+
+        .dtc-code.cat-engine::before { background: var(--accent-red); }
+        .dtc-code.cat-fuel::before { background: var(--accent-amber); }
+        .dtc-code.cat-emission::before { background: var(--accent-green); }
+        .dtc-code.cat-trans::before { background: var(--accent-purple); }
+        .dtc-code.cat-sensor::before { background: var(--accent-cyan); }
+        .dtc-code.cat-other::before { background: var(--accent-blue); }
+
+        /* Empty state */
+        .empty-state {
+            text-align: center;
+            padding: 64px 20px;
+            color: var(--text-muted);
+        }
+
+        .empty-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+            opacity: 0.4;
+        }
+
+        .empty-state h3 {
+            font-size: 18px;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 48px 0 32px;
+            color: var(--text-muted);
+            font-size: 12px;
+        }
+
+        footer a {
+            color: var(--accent-blue);
+            text-decoration: none;
+        }
+
+        /* Virtual scroll container */
+        #dtcList {
+            position: relative;
+        }
+
+        /* Highlight matched text */
+        mark {
+            background: rgba(59, 130, 246, 0.25);
+            color: var(--text-primary);
+            border-radius: 2px;
+            padding: 0 1px;
+        }
+
+        /* Loading animation */
+        .skeleton {
+            background: linear-gradient(90deg, var(--bg-card) 25%, var(--bg-card-hover) 50%, var(--bg-card) 75%);
+            background-size: 200% 100%;
+            animation: shimmer 1.5s infinite;
+            border-radius: 12px;
+            height: 52px;
+        }
+
+        @keyframes shimmer {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            header { padding: 32px 0 24px; }
+            .stats-bar { gap: 20px; }
+            .dtc-card { grid-template-columns: 80px 1fr; padding: 12px 14px; }
+            .dtc-code { font-size: 13px; }
+            .dtc-desc { font-size: 13px; }
+        }
+
+        /* Scroll to top */
+        .scroll-top {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            background: var(--accent-blue);
+            color: white;
+            border: none;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            box-shadow: 0 4px 16px rgba(59, 130, 246, 0.4);
+            transition: all 0.2s;
+            z-index: 100;
+        }
+
+        .scroll-top:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(59, 130, 246, 0.5);
+        }
+
+        .scroll-top.visible {
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-badge">
+                <span class="dot"></span>
+                DTC Code Database
+            </div>
+            <h1>Diagnostic Trouble Codes</h1>
+            <p class="subtitle">Complete OBD-II P-code reference for Cummins, Dodge, Ford, and universal diagnostics. Extracted from real tuner firmware.</p>
+        </header>
+
+        <div class="stats-bar">
+            <div class="stat">
+                <div class="stat-value" id="totalCodes">—</div>
+                <div class="stat-label">Total Codes</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value" id="genericCodes">—</div>
+                <div class="stat-label">Generic (P0)</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value" id="mfgCodes">—</div>
+                <div class="stat-label">Mfg-Specific (P1)</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value" id="enhancedCodes">—</div>
+                <div class="stat-label">Enhanced (P2)</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value" id="matchCount">—</div>
+                <div class="stat-label">Showing</div>
+            </div>
+        </div>
+
+        <div class="search-wrapper">
+            <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.35-4.35"></path>
+            </svg>
+            <input type="text" id="searchInput" placeholder="Search by code (P0216) or keyword (injection, sensor, fuel...)" autocomplete="off" autofocus>
+        </div>
+
+        <div class="filter-bar">
+            <button class="filter-chip active" data-filter="all">All Codes</button>
+            <button class="filter-chip" data-filter="engine">🔴 Engine</button>
+            <button class="filter-chip" data-filter="fuel">🟡 Fuel System</button>
+            <button class="filter-chip" data-filter="sensor">🔵 Sensors</button>
+            <button class="filter-chip" data-filter="emission">🟢 Emissions</button>
+            <button class="filter-chip" data-filter="trans">🟣 Transmission</button>
+        </div>
+
+        <div class="results-info">
+            <div class="results-count">Showing <span id="visibleCount">0</span> of <span id="totalCount">0</span> codes</div>
+        </div>
+
+        <div class="dtc-grid" id="dtcList"></div>
+
+        <footer>
+            <p>DTC data extracted from Quadzilla/Smarty tuner firmware &amp; TtsComUtils.dll • 1,258 codes • P0012–P2603</p>
+            <p style="margin-top: 4px;">Data is provided for reference only. Always consult your vehicle's service manual for definitive diagnosis.</p>
+        </footer>
+    </div>
+
+    <button class="scroll-top" id="scrollTop" title="Scroll to top">↑</button>
+
+    <script>
+    // Complete DTC database - embedded inline for zero-dependency static hosting
+    const DTC_DATA = [{"code":"P0012","description":"Intake Camshaft Position Timing - Over-Retarded (Bank 1)"},{"code":"P0015","description":"Exhaust Camshaft Position Timing - Over-Retarded (Bank 1)"},{"code":"P0016","description":"Crankshaft Position - Camshaft Position Correlation (Bank 1 Sensor A)"},{"code":"P0017","description":"Crankshaft Position - Camshaft Position Correlation (Bank 1 Sensor B)"},{"code":"P0018","description":"Crankshaft Position - Camshaft Position Correlation (Bank 2 Sensor A)"},{"code":"P0019","description":"Crankshaft Position - Camshaft Position Correlation (Bank 2 Sensor B)"},{"code":"P0022","description":"Intake Camshaft Position Timing - Over-Retarded (Bank 2)"},{"code":"P0025","description":"Exhaust Camshaft Position Timing - Over-Retarded (Bank 2)"},{"code":"P0026","description":"Intake Valve Control Solenoid Circuit Range/Performance (Bank 1)"},{"code":"P0027","description":"Exhaust Valve Control Solenoid Circuit Range/Performance (Bank 1)"},{"code":"P0028","description":"Intake Valve Control Solenoid Circuit Range/Performance (Bank 2)"},{"code":"P0029","description":"Exhaust Valve Control Solenoid Circuit Range/Performance (Bank 2)"},{"code":"P0030","description":"HO2S Heater Control Circuit (Bank 1 Sensor 1)"},{"code":"P0031","description":"HO2S Heater Control Circuit Low (Bank 1 Sensor 1)"},{"code":"P0032","description":"HO2S Heater Control Circuit High (Bank 1 Sensor 1)"},{"code":"P0036","description":"HO2S Heater Control Circuit (Bank 1 Sensor 2)"},{"code":"P0037","description":"HO2S Heater Control Circuit Low (Bank 1 Sensor 2)"},{"code":"P0038","description":"HO2S Heater Control Circuit High (Bank 1 Sensor 2)"},{"code":"P0050","description":"HO2S Heater Control Circuit (Bank 2 Sensor 1)"},{"code":"P0051","description":"HO2S Heater Control Circuit Low (Bank 2 Sensor 1)"},{"code":"P0052","description":"HO2S Heater Control Circuit High (Bank 2 Sensor 1)"},{"code":"P0053","description":"HO2S Heater Resistance (Bank 1 Sensor 1)"},{"code":"P0054","description":"HO2S Heater Resistance (Bank 1 Sensor 2)"},{"code":"P0056","description":"HO2S Heater Control Circuit (Bank 2 Sensor 2)"},{"code":"P0057","description":"HO2S Heater Control Circuit Low (Bank 2 Sensor 2)"},{"code":"P0058","description":"HO2S Heater Control Circuit High (Bank 2 Sensor 2)"},{"code":"P0059","description":"HO2S Heater Resistance (Bank 2 Sensor 1)"},{"code":"P0060","description":"HO2S Heater Resistance (Bank 2 Sensor 2)"},{"code":"P0071","description":"Ambient Air Temperature Sensor Range/Performance"},{"code":"P0072","description":"Ambient Air Temperature Sensor Circuit Low Input"},{"code":"P0073","description":"Ambient Air Temperature Sensor Circuit High Input"},{"code":"P0100","description":"Mass or Volume Air Flow Circuit Malfunction"},{"code":"P0101","description":"Mass or Volume Air Flow Circuit Range/Performance Problem"},{"code":"P0102","description":"Mass or Volume Air Flow Circuit Low Input"},{"code":"P0103","description":"Mass or Volume Air Flow Circuit High Input"},{"code":"P0104","description":"Mass or Volume Air Flow Circuit Intermittent"},{"code":"P0105","description":"Manifold Absolute Pressure/Barometric Pressure Circuit Malfunction"},{"code":"P0106","description":"Manifold Absolute Pressure/Barometric Pressure Circuit Range/Performance Problem"},{"code":"P0107","description":"Manifold Absolute Pressure/Barometric Pressure Circuit Low Input"},{"code":"P0108","description":"Manifold Absolute Pressure/Barometric Pressure Circuit High Input"},{"code":"P0109","description":"Manifold Absolute Pressure/Barometric Pressure Circuit Intermittent"},{"code":"P0109","description":"Intake Air Temperature Circuit Malfunction"},{"code":"P0110","description":"IAT Circuit Malfunction"},{"code":"P0111","description":"Intake Air Temperature Circuit Range/Performance Problem"},{"code":"P0112","description":"Intake Air Temperature Circuit Low Input"},{"code":"P0113","description":"Intake Air Temperature Circuit High Input"},{"code":"P0114","description":"Intake Air Temperature Circuit Intermittent"},{"code":"P0115","description":"Engine Coolant Temperature Circuit Malfunction"},{"code":"P0116","description":"Engine Coolant Temperature Circuit Range Performance Problem"},{"code":"P0117","description":"Engine Coolant Temperature Circuit Low Input"},{"code":"P0118","description":"Engine Coolant Temperature Circuit High Input"},{"code":"P0119","description":"Engine Coolant Temperature Circuit Intermittent"},{"code":"P0120","description":"Throttle Position Sensor/Switch A Circuit Malfunction"},{"code":"P0121","description":"Throttle Position Sensor/Switch A Circuit Range/Performance Problem"},{"code":"P0122","description":"Throttle Position Sensor/Switch A Circuit Low Input"},{"code":"P0123","description":"Throttle Position Sensor/Switch A Circuit High Input"},{"code":"P0124","description":"Throttle Position Sensor/Switch A Circuit Intermittent"},{"code":"P0125","description":"Insufficient Coolant Temperature for Closed Loop Fuel Control"},{"code":"P0126","description":"Insufficient Coolant Temperature for Stable Operation"},{"code":"P0128","description":"Coolant Thermostat Malfunction"},{"code":"P0130","description":"O2 Sensor Circuit Malfunction (Bank 1 Sensor 1)"},{"code":"P0131","description":"O2 Sensor Circuit Low Voltage (Bank 1 Sensor 1)"},{"code":"P0132","description":"O2 Sensor Circuit High Voltage (Bank 1 Sensor 1)"},{"code":"P0133","description":"O2 Sensor Circuit Slow Response (Bank 1 Sensor 1)"},{"code":"P0134","description":"O2 Sensor Circuit No Activity Detected (Bank 1 Sensor 1)"},{"code":"P0135","description":"O2 Sensor Heater Circuit Malfunction (Bank 1 Sensor 1)"},{"code":"P0136","description":"O2 Sensor Circuit Malfunction (Bank 1 Sensor 2)"},{"code":"P0137","description":"O2 Sensor Circuit Low Voltage (Bank 1 Sensor 2)"},{"code":"P0138","description":"O2 Sensor Circuit High Voltage (Bank 1 Sensor 2)"},{"code":"P0139","description":"O2 Sensor Circuit Slow Response (Bank 1 Sensor 2)"},{"code":"P0140","description":"O2 Sensor Circuit No Activity Detected (Bank 1 Sensor 2)"},{"code":"P0141","description":"O2 Sensor Heater Circuit Malfunction (Bank 1 Sensor 2)"},{"code":"P0142","description":"O2 Sensor Circuit Malfunction (Bank 1 Sensor 3)"},{"code":"P0143","description":"O2 Sensor Circuit Low Voltage (Bank 1 Sensor 3)"},{"code":"P0144","description":"O2 Sensor Circuit High Voltage (Bank 1 Sensor 3)"},{"code":"P0145","description":"O2 Sensor Circuit Slow Response (Bank 1 Sensor 3)"},{"code":"P0146","description":"O2 Sensor Circuit No Activity Detected (Bank 1 Sensor 3)"},{"code":"P0147","description":"O2 Sensor Heater Circuit Malfunction (Bank 1 Sensor 3)"},{"code":"P0150","description":"O2 Sensor Circuit Malfunction (Bank 2 Sensor 1)"},{"code":"P0151","description":"O2 Sensor Circuit Low Voltage (Bank 2 Sensor 1)"},{"code":"P0152","description":"O2 Sensor Circuit High Voltage (Bank 2 Sensor 1)"},{"code":"P0153","description":"O2 Sensor Circuit Slow Response (Bank 2 Sensor 1)"},{"code":"P0154","description":"O2 Sensor Circuit No Activity Detected (Bank 2 Sensor 1)"},{"code":"P0155","description":"O2 Sensor Heater Circuit Malfunction (Bank 2 Sensor 1)"},{"code":"P0156","description":"O2 Sensor Circuit Malfunction (Bank 2 Sensor 2)"},{"code":"P0157","description":"O2 Sensor Circuit Low Voltage (Bank 2 Sensor 2)"},{"code":"P0158","description":"O2 Sensor Circuit High Voltage (Bank 2 Sensor 2)"},{"code":"P0159","description":"O2 Sensor Circuit Slow Response (Bank 2 Sensor 2)"},{"code":"P0160","description":"O2 Sensor Circuit No Activity Detected (Bank 2 Sensor 2)"},{"code":"P0161","description":"O2 Sensor Heater Circuit Malfunction (Bank 2 Sensor 2)"},{"code":"P0162","description":"O2 Sensor Circuit Malfunction (Bank 2 Sensor 3)"},{"code":"P0163","description":"O2 Sensor Circuit Low Voltage (Bank 2 Sensor 3)"},{"code":"P0164","description":"O2 Sensor Circuit High Voltage (Bank 2 Sensor 3)"},{"code":"P0165","description":"O2 Sensor Circuit Slow Response (Bank 2 Sensor 3)"},{"code":"P0166","description":"O2 Sensor Circuit No Activity Detected (Bank 2 Sensor 3)"},{"code":"P0167","description":"O2 Sensor Heater Circuit Malfunction (Bank 2 Sensor 3)"},{"code":"P0170","description":"Fuel Trim Malfunction (Bank 1)"},{"code":"P0171","description":"Fuel Trim System Lean (Bank 1)"},{"code":"P0172","description":"Fuel Trim too Rich (Bank 1)"},{"code":"P0173","description":"Fuel Trim Malfunction (Bank 2)"},{"code":"P0174","description":"Fuel Trim too Lean (Bank 2)"},{"code":"P0175","description":"Fuel Trim too Rich (Bank 2)"},{"code":"P0176","description":"Fuel Composition Sensor Circuit Malfunction"},{"code":"P0177","description":"Fuel Composition Sensor Circuit Range/Performance"},{"code":"P0178","description":"Fuel Composition Sensor Circuit Low Input"},{"code":"P0179","description":"Fuel Composition Sensor Circuit High Input"},{"code":"P0180","description":"Fuel Temperature Sensor A Circuit Malfunction"},{"code":"P0181","description":"Fuel Temperature Sensor A Circuit Range/Performance"},{"code":"P0182","description":"Fuel Temperature Sensor A Circuit Low Input"},{"code":"P0183","description":"Fuel Temperature Sensor A Circuit High Input"},{"code":"P0184","description":"Fuel Temperature Sensor A Circuit Intermittent"},{"code":"P0185","description":"Fuel Temperature Sensor B Circuit Malfunction"},{"code":"P0186","description":"Fuel Temperature Sensor B Circuit Range/Performance"},{"code":"P0187","description":"Fuel Temperature Sensor B Circuit Low Input"},{"code":"P0188","description":"Fuel Temperature Sensor B Circuit High Input"},{"code":"P0189","description":"Fuel Temperature Sensor B Circuit Intermittent"},{"code":"P0190","description":"Fuel Rail Pressure Sensor Circuit Malfunction"},{"code":"P0191","description":"Fuel Rail Pressure Sensor Circuit Range/Performance"},{"code":"P0192","description":"Fuel Rail Pressure Sensor Circuit Low Input"},{"code":"P0193","description":"Fuel Rail Pressure Sensor Circuit High Input"},{"code":"P0194","description":"Fuel Rail Pressure Sensor Circuit Intermittent"},{"code":"P0195","description":"Engine Oil Temperature Sensor Malfunction"},{"code":"P0196","description":"Engine Oil Temperature Sensor Range/Performance"},{"code":"P0197","description":"Engine Oil Temperature Sensor Low"},{"code":"P0198","description":"Engine Oil Temperature Sensor High"},{"code":"P0199","description":"Engine Oil Temperature Sensor Intermittent"},{"code":"P0200","description":"Injector Circuit Malfunction"},{"code":"P0201","description":"Injector Circuit Malfunction - Cylinder 1"},{"code":"P0202","description":"Injector Circuit Malfunction - Cylinder 2"},{"code":"P0203","description":"Injector Circuit Malfunction - Cylinder 3"},{"code":"P0204","description":"Injector Circuit Malfunction - Cylinder 4"},{"code":"P0205","description":"Injector Circuit Malfunction - Cylinder 5"},{"code":"P0206","description":"Injector Circuit Malfunction - Cylinder 6"},{"code":"P0207","description":"Injector Circuit Malfunction - Cylinder 7"},{"code":"P0208","description":"Injector Circuit Malfunction - Cylinder 8"},{"code":"P0209","description":"Injector Circuit Malfunction - Cylinder 9"},{"code":"P0210","description":"Injector Circuit Malfunction - Cylinder 10"},{"code":"P0211","description":"Injector Circuit Malfunction - Cylinder 11"},{"code":"P0212","description":"Injector Circuit Malfunction - Cylinder 12"},{"code":"P0213","description":"Cold Start Injector 1 Malfunction"},{"code":"P0214","description":"Cold Start Injector 2 Malfunction"},{"code":"P0215","description":"Engine Shutoff Solenoid Malfunction"},{"code":"P0216","description":"Injection Timing Control Circuit Malfunction"},{"code":"P0217","description":"Engine Overtemp Condition"},{"code":"P0218","description":"Transmission Over Temperature Condition"},{"code":"P0219","description":"Engine Overspeed Condition"},{"code":"P0220","description":"Throttle/Petal Position Sensor/Switch B Circuit Malfunction"},{"code":"P0221","description":"Throttle/Petal Position Sensor/Switch B Circuit Range/Performance Problem"},{"code":"P0222","description":"Throttle/Petal Position Sensor/Switch B Circuit Low Input"},{"code":"P0223","description":"Throttle/Petal Position Sensor/Switch B Circuit High Input"},{"code":"P0224","description":"Throttle/Petal Position Sensor/Switch B Circuit Intermittent"},{"code":"P0225","description":"Throttle/Petal Position Sensor/Switch C Circuit Malfunction"},{"code":"P0226","description":"Throttle/Petal Position Sensor/Switch C Circuit Range/Performance Problem"},{"code":"P0227","description":"Throttle/Petal Position Sensor/Switch C Circuit Low Input"},{"code":"P0228","description":"Throttle/Petal Position Sensor/Switch C Circuit High Input"},{"code":"P0229","description":"Throttle/Petal Position Sensor/Switch C Circuit Intermittent"},{"code":"P0230","description":"Fuel Pump Primary Circuit Malfunction"},{"code":"P0231","description":"Fuel Pump Secondary Circuit Low"},{"code":"P0232","description":"Fuel Pump Secondary Circuit High"},{"code":"P0233","description":"Fuel Pump Secondary Circuit Intermittent"},{"code":"P0234","description":"Engine Overboost Condition"},{"code":"P0235","description":"Turbocharger Boost Sensor A Circuit Malfunction"},{"code":"P0236","description":"Turbocharger Boost Sensor A Circuit Range/Performance"},{"code":"P0237","description":"Turbocharger Boost Sensor A Circuit Low"},{"code":"P0238","description":"Turbocharger Boost Sensor A Circuit High"},{"code":"P0239","description":"Turbocharger Boost Sensor B Malfunction"},{"code":"P0240","description":"Turbocharger Boost Sensor B Circuit Range/Performance"},{"code":"P0241","description":"Turbocharger Boost Sensor B Circuit Low"},{"code":"P0242","description":"Turbocharger Boost Sensor B Circuit High"},{"code":"P0243","description":"Turbocharger Wastegate Solenoid A Malfunction"},{"code":"P0244","description":"Turbocharger Wastegate Solenoid A Range/Performance"},{"code":"P0245","description":"Turbocharger Wastegate Solenoid A Low"},{"code":"P0246","description":"Turbocharger Wastegate Solenoid A High"},{"code":"P0247","description":"Turbocharger Wastegate Solenoid B Malfunction"},{"code":"P0248","description":"Turbocharger Wastegate Solenoid B Range/Performance"},{"code":"P0249","description":"Turbocharger Wastegate Solenoid B Low"},{"code":"P0250","description":"Turbocharger Wastegate Solenoid B High"},{"code":"P0251","description":"Injection Pump Fuel Metering Control \"A\" Malfunction (Cam/Rotor/Injector)"},{"code":"P0252","description":"Injection Pump Fuel Metering Control \"A\" Range/Performance (Cam/Rotor/Injector)"},{"code":"P0253","description":"Injection Pump Fuel Metering Control \"A\" Low (Cam/Rotor/Injector)"},{"code":"P0254","description":"Injection Pump Fuel Metering Control \"A\" High (Cam/Rotor/Injector)"},{"code":"P0255","description":"Injection Pump Fuel Metering Control \"A\" Intermittent (Cam/Rotor/Injector)"},{"code":"P0256","description":"Injection Pump Fuel Metering Control \"B\" Malfunction (Cam/Rotor/Injector)"},{"code":"P0257","description":"Injection Pump Fuel Metering Control \"B\" Range/Performance (Cam/Rotor/Injector)"},{"code":"P0258","description":"Injection Pump Fuel Metering Control \"B\" Low (Cam/Rotor/Injector)"},{"code":"P0259","description":"Injection Pump Fuel Metering Control \"B\" High (Cam/Rotor/Injector)"},{"code":"P0260","description":"Injection Pump Fuel Metering Control \"B\" Intermittent (Cam/Rotor/Injector)"},{"code":"P0261","description":"Cylinder 1 Injector Circuit Low"},{"code":"P0262","description":"Cylinder 1 Injector Circuit High"},{"code":"P0263","description":"Cylinder 1 Contribution/Balance Fault"},{"code":"P0264","description":"Cylinder 2 Injector Circuit Low"},{"code":"P0265","description":"Cylinder 2 Injector Circuit High"},{"code":"P0266","description":"Cylinder 2 Contribution/Balance Fault"},{"code":"P0267","description":"Cylinder 3 Injector Circuit Low"},{"code":"P0268","description":"Cylinder 3 Injector Circuit High"},{"code":"P0269","description":"Cylinder 3 Contribution/Balance Fault"},{"code":"P0270","description":"Cylinder 4 Injector Circuit Low"},{"code":"P0271","description":"Cylinder 4 Injector Circuit High"},{"code":"P0272","description":"Cylinder 4 Contribution/Balance Fault"},{"code":"P0273","description":"Cylinder 5 Injector Circuit Low"},{"code":"P0274","description":"Cylinder 5 Injector Circuit High"},{"code":"P0275","description":"Cylinder 5 Contribution/Balance Fault"},{"code":"P0276","description":"Cylinder 6 Injector Circuit Low"},{"code":"P0277","description":"Cylinder 6 Injector Circuit High"},{"code":"P0278","description":"Cylinder 6 Contribution/Balance Fault"},{"code":"P0279","description":"Cylinder 7 Injector Circuit Low"},{"code":"P0280","description":"Cylinder 7 Injector Circuit High"},{"code":"P0281","description":"Cylinder 7 Contribution/Balance Fault"},{"code":"P0282","description":"Cylinder 8 Injector Circuit Low"},{"code":"P0283","description":"Cylinder 8 Injector Circuit High"},{"code":"P0284","description":"Cylinder 8 Contribution/Balance Fault"},{"code":"P0285","description":"Cylinder 9 Injector Circuit Low"},{"code":"P0286","description":"Cylinder 9 Injector Circuit High"},{"code":"P0287","description":"Cylinder 9 Contribution/Balance Fault"},{"code":"P0288","description":"Cylinder 10 Injector Circuit Low"},{"code":"P0289","description":"Cylinder 10 Injector Circuit High"},{"code":"P0290","description":"Cylinder 10 Contribution/Balance Fault"},{"code":"P0291","description":"Cylinder 11 Injector Circuit Low"},{"code":"P0292","description":"Cylinder 11 Injector Circuit High"},{"code":"P0293","description":"Cylinder 11 Contribution/Balance Fault"},{"code":"P0294","description":"Cylinder 12 Injector Circuit Low"},{"code":"P0295","description":"Cylinder 12 Injector Circuit High"},{"code":"P0296","description":"Cylinder 12 Contribution/Range Fault"},{"code":"P0300","description":"Random/Multiple Cylinder Misfire Detected"},{"code":"P0301","description":"Cylinder 1 Misfire Detected"},{"code":"P0302","description":"Cylinder 2 Misfire Detected"},{"code":"P0303","description":"Cylinder 3 Misfire Detected"},{"code":"P0304","description":"Cylinder 4 Misfire Detected"},{"code":"P0305","description":"Cylinder 5 Misfire Detected"},{"code":"P0306","description":"Cylinder 6 Misfire Detected"},{"code":"P0307","description":"Cylinder 7 Misfire Detected"},{"code":"P0308","description":"Cylinder 8 Misfire Detected"},{"code":"P0309","description":"Cylinder 9 Misfire Detected"},{"code":"P0310","description":"Cylinder 10 Misfire Detected"},{"code":"P0311","description":"Cylinder 11 Misfire Detected"},{"code":"P0312","description":"Cylinder 12 Misfire Detected"},{"code":"P0320","description":"Ignition/Distributor Engine Speed Input Circuit Malfunction"},{"code":"P0321","description":"Ignition/Distributor Engine Speed Input Circuit Range/Performance"},{"code":"P0322","description":"Ignition/Distributor Engine Speed Input Circuit No Signal"},{"code":"P0323","description":"Ignition/Distributor Engine Speed Input Circuit Intermittent"},{"code":"P0325","description":"Knock Sensor 1 Circuit Malfunction (Bank 1 or Single Sensor)"},{"code":"P0326","description":"Knock Sensor 1 Circuit Range/Performance (Bank 1 or Single Sensor)"},{"code":"P0327","description":"Knock Sensor 1 Circuit Low Input (Bank 1 or Single Sensor)"},{"code":"P0328","description":"Knock Sensor 1 Circuit High Input (Bank 1 or Single Sensor)"},{"code":"P0329","description":"Knock Sensor 1 Circuit Intermittent (Bank 1 or Single Sensor)"},{"code":"P0330","description":"Knock Sensor 2 Circuit Malfunction (Bank 2)"},{"code":"P0331","description":"Knock Sensor 2 Circuit Range/Performance (Bank 2)"},{"code":"P0332","description":"Knock Sensor 2 Circuit Low Input (Bank 2)"},{"code":"P0333","description":"Knock Sensor 2 Circuit High Input (Bank 2)"},{"code":"P0334","description":"Knock Sensor 2 Circuit Intermittent (Bank 2)"},{"code":"P0335","description":"Crankshaft Position Sensor A Circuit Malfunction"},{"code":"P0336","description":"Crankshaft Position Sensor A Circuit Range/Performance"},{"code":"P0337","description":"Crankshaft Position Sensor A Circuit Low Input"},{"code":"P0338","description":"Crankshaft Position Sensor A Circuit High Input"},{"code":"P0339","description":"Crankshaft Position Sensor A Circuit Intermittent"},{"code":"P0340","description":"Camshaft Position Sensor Circuit Malfunction"},{"code":"P0341","description":"Camshaft Position Sensor Circuit Range/Performance"},{"code":"P0342","description":"Camshaft Position Sensor Circuit Low Input"},{"code":"P0343","description":"Camshaft Position Sensor Circuit High Input"},{"code":"P0344","description":"Camshaft Position Sensor Circuit Intermittent"},{"code":"P0346","description":"Camshaft Position Sensor A Circuit Range/Performance (Bank 2)"},{"code":"P0350","description":"Ignition Coil Primary/Secondary Circuit Malfunction"},{"code":"P0351","description":"Ignition Coil A Primary/Secondary Circuit Malfunction"},{"code":"P0352","description":"Ignition Coil B Primary/Secondary Circuit Malfunction"},{"code":"P0353","description":"Ignition Coil C Primary/Secondary Circuit Malfunction"},{"code":"P0354","description":"Ignition Coil D Primary/Secondary Circuit Malfunction"},{"code":"P0355","description":"Ignition Coil E Primary/Secondary Circuit Malfunction"},{"code":"P0356","description":"Ignition Coil F Primary/Secondary Circuit Malfunction"},{"code":"P0357","description":"Ignition Coil G Primary/Secondary Circuit Malfunction"},{"code":"P0358","description":"Ignition Coil H Primary/Secondary Circuit Malfunction"},{"code":"P0359","description":"Ignition Coil I Primary/Secondary Circuit Malfunction"},{"code":"P0360","description":"Ignition Coil J Primary/Secondary Circuit Malfunction"},{"code":"P0361","description":"Ignition Coil K Primary/Secondary Circuit Malfunction"},{"code":"P0362","description":"Ignition Coil L Primary/Secondary Circuit Malfunction"},{"code":"P0366","description":"Camshaft Position Sensor B Circuit Range/Performance (Bank 1)"},{"code":"P0370","description":"Timing Reference High Resolution Signal A Malfunction"},{"code":"P0371","description":"Timing Reference High Resolution Signal A Too Many Pulses"},{"code":"P0372","description":"Timing Reference High Resolution Signal A Too Few Pulses"},{"code":"P0373","description":"Timing Reference High Resolution Signal A Intermittent/Erratic Pulses"},{"code":"P0374","description":"Timing Reference High Resolution Signal A No Pulses"},{"code":"P0375","description":"Timing Reference High Resolution Signal B Malfunction"},{"code":"P0376","description":"Timing Reference High Resolution Signal B Too Many Pulses"},{"code":"P0377","description":"Timing Reference High Resolution Signal B Too Few Pulses"},{"code":"P0378","description":"Timing Reference High Resolution Signal B Intermittent/Erratic Pulses"},{"code":"P0379","description":"Timing Reference High Resolution Signal B No Pulses"},{"code":"P0380","description":"Glow Plug/Heater Circuit \"A\" Malfunction"},{"code":"P0381","description":"Glow Plug/Heater Indicator Circuit Malfunction"},{"code":"P0382","description":"Exhaust Gas Recirculation Flow Malfunction"},{"code":"P0385","description":"Crankshaft Position Sensor B Circuit Malfunction"},{"code":"P0386","description":"Crankshaft Position Sensor B Circuit Range/Performance"},{"code":"P0387","description":"Crankshaft Position Sensor B Circuit Low Input"},{"code":"P0388","description":"Crankshaft Position Sensor B Circuit High Input"},{"code":"P0389","description":"Crankshaft Position Sensor B Circuit Intermittent"},{"code":"P0391","description":"Camshaft Position Sensor B Circuit Range/Performance (Bank 2)"},{"code":"P0400","description":"Exhaust Gas Recirculation Flow Malfunction"},{"code":"P0401","description":"Exhaust Gas Recirculation Flow Insufficient Detected"},{"code":"P0402","description":"Exhaust Gas Recirculation Flow Excessive Detected"},{"code":"P0403","description":"Exhaust Gas Recirculation Circuit Malfunction"},{"code":"P0404","description":"Exhaust Gas Recirculation Circuit Range/Performance"},{"code":"P0405","description":"Exhaust Gas Recirculation Sensor A Circuit Low"},{"code":"P0406","description":"Exhaust Gas Recirculation Sensor A Circuit High"},{"code":"P0407","description":"Exhaust Gas Recirculation Sensor B Circuit Low"},{"code":"P0408","description":"Exhaust Gas Recirculation Sensor B Circuit High"},{"code":"P0410","description":"Secondary Air Injection System Malfunction"},{"code":"P0411","description":"Secondary Air Injection System Incorrect Flow Detected"},{"code":"P0412","description":"Secondary Air Injection System Switching Valve A Circuit Malfunction"},{"code":"P0413","description":"Secondary Air Injection System Switching Valve A Circuit Open"},{"code":"P0414","description":"Secondary Air Injection System Switching Valve A Circuit Shorted"},{"code":"P0415","description":"Secondary Air Injection System Switching Valve B Circuit Malfunction"},{"code":"P0416","description":"Secondary Air Injection System Switching Valve B Circuit Open"},{"code":"P0417","description":"Secondary Air Injection System Switching Valve B Circuit Shorted"},{"code":"P0418","description":"Secondary Air Injection System Relay \"A\" Circuit Malfunction"},{"code":"P0419","description":"Secondary Air Injection System Relay \"B\" Circuit Malfunction"},{"code":"P0420","description":"Catalyst System Efficiency Below Threshold (Bank 1)"},{"code":"P0421","description":"Warm Up Catalyst Efficiency Below Threshold (Bank 1)"},{"code":"P0422","description":"Main Catalyst Efficiency Below Threshold (Bank 1)"},{"code":"P0423","description":"Heated Catalyst Efficiency Below Threshold (Bank 1)"},{"code":"P0424","description":"Heated Catalyst Temperature Below Threshold (Bank 1)"},{"code":"P0426","description":"Catalyst Temperature Sensor Range/Performance (Bank 1)"},{"code":"P0427","description":"Catalyst Temperature Sensor Low Input (Bank 1)"},{"code":"P0428","description":"Catalyst Temperature Sensor High Input (Bank 1)"},{"code":"P0430","description":"Catalyst System Efficiency Below Threshold (Bank 2)"},{"code":"P0431","description":"Warm Up Catalyst Efficiency Below Threshold (Bank 2)"},{"code":"P0432","description":"Main Catalyst Efficiency Below Threshold (Bank 2)"},{"code":"P0433","description":"Heated Catalyst Efficiency Below Threshold (Bank 2)"},{"code":"P0434","description":"Heated Catalyst Temperature Below Threshold (Bank 2)"},{"code":"P0436","description":"Catalyst Temperature Sensor Range/Performance (Bank 2)"},{"code":"P0437","description":"Catalyst Temperature Sensor Low Input (Bank 2)"},{"code":"P0438","description":"Catalyst Temperature Sensor High Input (Bank 2)"},{"code":"P0440","description":"Evaporative Emission Control System Malfunction"},{"code":"P0441","description":"Evaporative Emission Control System Incorrect Purge Flow"},{"code":"P0442","description":"Evaporative Emission Control System Leak Detected (small leak)"},{"code":"P0443","description":"Evaporative Emission Control System Purge Control Valve Circuit Malfunction"},{"code":"P0444","description":"Evaporative Emission Control System Purge Control Valve Circuit Open"},{"code":"P0445","description":"Evaporative Emission Control System Purge Control Valve Circuit Shorted"},{"code":"P0446","description":"Evaporative Emission Control System Vent Control Circuit Malfunction"},{"code":"P0447","description":"Evaporative Emission Control System Vent Control Circuit Open"},{"code":"P0448","description":"Evaporative Emission Control System Vent Control Circuit Shorted"},{"code":"P0449","description":"Evaporative Emission Control System Vent Valve/Solenoid Circuit Malfunction"},{"code":"P0450","description":"Evaporative Emission Control System Pressure Sensor Malfunction"},{"code":"P0451","description":"Evaporative Emission Control System Pressure Sensor Range/Performance"},{"code":"P0452","description":"Evaporative Emission Control System Pressure Sensor Low Input"},{"code":"P0453","description":"Evaporative Emission Control System Pressure Sensor High Input"},{"code":"P0454","description":"Evaporative Emission Control System Pressure Sensor Intermittent"},{"code":"P0455","description":"Evaporative Emission Control System Leak Detected (gross leak)"},{"code":"P0460","description":"Fuel Level Sensor Circuit Malfunction"},{"code":"P0461","description":"Fuel Level Sensor Circuit Range/Performance"},{"code":"P0462","description":"Fuel Level Sensor Circuit Low Input"},{"code":"P0463","description":"Fuel Level Sensor Circuit High Input"},{"code":"P0464","description":"Fuel Level Sensor Circuit Intermittent"},{"code":"P0465","description":"Purge Flow Sensor Circuit Malfunction"},{"code":"P0466","description":"Purge Flow Sensor Circuit Range/Performance"},{"code":"P0467","description":"Purge Flow Sensor Circuit Low Input"},{"code":"P0468","description":"Purge Flow Sensor Circuit High Input"},{"code":"P0469","description":"Purge Flow Sensor Circuit Intermittent"},{"code":"P0470","description":"Exhaust Pressure Sensor Malfunction"},{"code":"P0471","description":"Exhaust Pressure Sensor Range/Performance"},{"code":"P0472","description":"Exhaust Pressure Sensor Low"},{"code":"P0473","description":"Exhaust Pressure Sensor High"},{"code":"P0474","description":"Exhaust Pressure Sensor Intermittent"},{"code":"P0475","description":"Exhaust Pressure Control Valve Malfunction"},{"code":"P0476","description":"Exhaust Pressure Control Valve Range/Performance"},{"code":"P0477","description":"Exhaust Pressure Control Valve Low"},{"code":"P0478","description":"Exhaust Pressure Control Valve High"},{"code":"P0479","description":"Exhaust Pressure Control Valve Intermittent"},{"code":"P0480","description":"Cooling Fan 1 Control Circuit Malfunction"},{"code":"P0481","description":"Cooling Fan 2 Control Circuit Malfunction"},{"code":"P0482","description":"Cooling Fan 3 Control Circuit Malfunction"},{"code":"P0483","description":"Cooling Fan Rationality Check Malfunction"},{"code":"P0484","description":"Cooling Fan Circuit Over Current"},{"code":"P0485","description":"Cooling Fan Power/Ground Circuit Malfunction"},{"code":"P0500","description":"Vehicle Speed Sensor Malfunction"},{"code":"P0501","description":"Vehicle Speed Sensor Range/Performance"},{"code":"P0502","description":"Vehicle Speed Sensor Low Input"},{"code":"P0503","description":"Vehicle Speed Sensor Intermittent/Erratic/High"},{"code":"P0505","description":"Idle Control System Malfunction"},{"code":"P0506","description":"Idle Control System RPM Lower Than Expected"},{"code":"P0507","description":"Idle Control System RPM Higher Than Expected"},{"code":"P0510","description":"Closed Throttle Position Switch Malfunction"},{"code":"P0512","description":"Starter Request Circuit"},{"code":"P0520","description":"Engine Oil Pressure Sensor/Switch Circuit Malfunction"},{"code":"P0521","description":"Engine Oil Pressure Sensor/Switch Circuit Range/Performance"},{"code":"P0522","description":"Engine Oil Pressure Sensor/Switch Circuit Low Voltage"},{"code":"P0523","description":"Engine Oil Pressure Sensor/Switch Circuit High Voltage"},{"code":"P0530","description":"A/C Refrigerant Pressure Sensor Circuit Malfunction"},{"code":"P0531","description":"A/C Refrigerant Pressure Sensor Circuit Range/Performance"},{"code":"P0532","description":"A/C Refrigerant Pressure Sensor Circuit Low Input"},{"code":"P0533","description":"A/C Refrigerant Pressure Sensor Circuit High Input"},{"code":"P0534","description":"Air Conditioner Refrigerant Charge Loss"},{"code":"P0550","description":"Power Steering Pressure Sensor Circuit Malfunction"},{"code":"P0551","description":"Power Steering Pressure Sensor Circuit Range/Performance"},{"code":"P0552","description":"Power Steering Pressure Sensor Circuit Low Input"},{"code":"P0553","description":"Power Steering Pressure Sensor Circuit High Input"},{"code":"P0554","description":"Power Steering Pressure Sensor Circuit Intermittent"},{"code":"P0560","description":"System Voltage Malfunction"},{"code":"P0561","description":"System Voltage Unstable"},{"code":"P0562","description":"System Voltage Low"},{"code":"P0562","description":"A/C pressure sensor low voltage(Chrysler)"},{"code":"P0563","description":"System Voltage High"},{"code":"P0565","description":"Cruise Control On Signal Malfunction"},{"code":"P0566","description":"Cruise Control Off Signal Malfunction"},{"code":"P0567","description":"Cruise Control Resume Signal Malfunction"},{"code":"P0568","description":"Cruise Control Set Signal Malfunction"},{"code":"P0569","description":"Cruise Control Coast Signal Malfunction"},{"code":"P0570","description":"Cruise Control Accel Signal Malfunction"},{"code":"P0571","description":"Cruise Control/Brake Switch A Circuit Malfunction"},{"code":"P0572","description":"Cruise Control/Brake Switch A Circuit Low"},{"code":"P0573","description":"Cruise Control/Brake Switch A Circuit High"},{"code":"P0574","description":"Cruise Control Related Malfunction"},{"code":"P0575","description":"Cruise Control Related Malfunction"},{"code":"P0576","description":"Cruise Control Related Malfunction"},{"code":"P0576","description":"Cruise Control Related Malfunction"},{"code":"P0577","description":"Cruise Control Input Circuit High"},{"code":"P0578","description":"Cruise Control Related Malfunction"},{"code":"P0579","description":"Cruise Control Related Malfunction"},{"code":"P0580","description":"Cruise Control Related Malfunction"},{"code":"P0600","description":"Serial Communication Link Malfunction"},{"code":"P0601","description":"Control Module Read Only Memory(ROM)"},{"code":"P0602","description":"Control Module Programming Error"},{"code":"P0603","description":"Internal Control Module Keep Alive Memory (KAM) Error"},{"code":"P0604","description":"Internal Control Module Random Access Memory (RAM) Error"},{"code":"P0605","description":"Internal Control Module Read Only Memory (ROM) Error"},{"code":"P0606","description":"PCM Processor Fault"},{"code":"P0607","description":"Control Module Performance"},{"code":"P0608","description":"Control Module VSS Output \"A\" Malfunction"},{"code":"P0609","description":"Control Module VSS Output \"B\" Malfunction"},{"code":"P0616","description":"Starter Relay Circuit Low"},{"code":"P0617","description":"Starter Relay Circuit High"},{"code":"P0620","description":"Generator Control Circuit Malfunction"},{"code":"P0621","description":"Generator Lamp \"L\" Control Circuit Malfunction"},{"code":"P0622","description":"Generator Field \"F\" Control Circuit Malfunction"},{"code":"P0641","description":"Sensor Reference Voltage A Circuit Open"},{"code":"P0650","description":"Malfunction Indicator Lamp (MIL) Control Circuit Malfunction"},{"code":"P0651","description":"Sensor Reference Voltage B Circuit Open"},{"code":"P0654","description":"Engine RPM Output Circuit Malfunction"},{"code":"P0655","description":"Engine Hot Lamp Output Control Circuit Malfucntion"},{"code":"P0656","description":"Fuel Level Output Circuit Malfunction"},{"code":"P0691","description":"Fan 1 Control Circuit Low"},{"code":"P0692","description":"Fan 1 Control Circuit High"},{"code":"P0693","description":"Fan 2 Control Circuit Low"},{"code":"P0694","description":"Fan 2 Control Circuit High"},{"code":"P0700","description":"Transmission Control System Malfunction"},{"code":"P0701","description":"Transmission Control System Range/Performance"},{"code":"P0702","description":"Transmission Control System Electrical"},{"code":"P0703","description":"Torque Converter/Brake Switch B Circuit Malfunction"},{"code":"P0704","description":"Clutch Switch Input Circuit Malfunction"},{"code":"P0705","description":"Transmission Range Sensor Circuit malfunction (PRNDL Input)"},{"code":"P0706","description":"Transmission Range Sensor Circuit Range/Performance"},{"code":"P0707","description":"Transmission Range Sensor Circuit Low Input"},{"code":"P0708","description":"Transmission Range Sensor Circuit High Input"},{"code":"P0709","description":"Transmission Range Sensor Circuit Intermittent"},{"code":"P0710","description":"Transmission Fluid Temperature Sensor Circuit Malfunction"},{"code":"P0711","description":"Transmission Fluid Temperature Sensor Circuit Range/Performance"},{"code":"P0712","description":"Transmission Fluid Temperature Sensor Circuit Low Input"},{"code":"P0713","description":"Transmission Fluid Temperature Sensor Circuit High Input"},{"code":"P0714","description":"Transmission Fluid Temperature Sensor Circuit Intermittent"},{"code":"P0715","description":"Input/Turbine Speed Sensor Circuit Malfunction"},{"code":"P0716","description":"Input/Turbine Speed Sensor Circuit Range/Performance"},{"code":"P0717","description":"Input/Turbine Speed Sensor Circuit No Signal"},{"code":"P0718","description":"Input/Turbine Speed Sensor Circuit Intermittent"},{"code":"P0719","description":"Torque Converter/Brake Switch B Circuit Low"},{"code":"P0720","description":"Output Speed Sensor Circuit Malfunction"},{"code":"P0721","description":"Output Speed Sensor Range/Performance"},{"code":"P0722","description":"Output Speed Sensor No Signal"},{"code":"P0723","description":"Output Speed Sensor Intermittent"},{"code":"P0724","description":"Torque Converter/Brake Switch B Circuit High"},{"code":"P0725","description":"Engine Speed input Circuit Malfunction"},{"code":"P0726","description":"Engine Speed Input Circuit Range/Performance"},{"code":"P0727","description":"Engine Speed Input Circuit No Signal"},{"code":"P0728","description":"Engine Speed Input Circuit Intermittent"},{"code":"P0730","description":"Incorrect Gear Ratio"},{"code":"P0731","description":"Gear 1 Incorrect ratio"},{"code":"P0732","description":"Gear 2 Incorrect ratio"},{"code":"P0733","description":"Gear 3 Incorrect ratio"},{"code":"P0734","description":"Gear 4 Incorrect ratio"},{"code":"P0735","description":"Gear 5 Incorrect ratio"},{"code":"P0736","description":"Reverse incorrect gear ratio"},{"code":"P0740","description":"Torque Converter Clutch Circuit Malfuction"},{"code":"P0741","description":"Torque Converter Clutch Circuit Performance or Stuck Off"},{"code":"P0742","description":"Torque Converter Clutch Circuit Stuck On"},{"code":"P0743","description":"Torque Converter Clutch Circuit Electrical"},{"code":"P0744","description":"Torque Converter Clutch Circuit Intermittent"},{"code":"P0745","description":"Pressure Control Solenoid Malfunction"},{"code":"P0746","description":"Pressure Control Solenoid Performance or Stuck Off"},{"code":"P0747","description":"Pressure Control Solenoid Stuck On"},{"code":"P0748","description":"Pressure Control Solenoid Electrical"},{"code":"P0749","description":"Pressure Control Solenoid Intermittent"},{"code":"P0750","description":"Shift Solenoid A Malfunction"},{"code":"P0751","description":"Shift Solenoid A Performance or Stuck Off/"},{"code":"P0752","description":"Shift Solenoid A Stuck On"},{"code":"P0753","description":"Shift Solenoid A Electrical/"},{"code":"P0754","description":"Shift Solenoid A Intermittent"},{"code":"P0755","description":"Shift Solenoid B Malfunction"},{"code":"P0756","description":"Shift Solenoid B Performance or Stuck Off/"},{"code":"P0757","description":"Shift Solenoid B Stuck On"},{"code":"P0758","description":"Shift Solenoid B Electrical/ 2-3 Shift Solenoid Circuit Electrical"},{"code":"P0759","description":"Shift Solenoid B Intermittent"},{"code":"P0760","description":"Shift Solenoid C Malfunction"},{"code":"P0761","description":"Shift Solenoid C Performance or Stuck Off"},{"code":"P0762","description":"Shift Solenoid C Stuck On"},{"code":"P0763","description":"Shift Solenoid C Electrical"},{"code":"P0764","description":"Shift Solenoid C Intermittent"},{"code":"P0765","description":"Shift Solenoid D Malfunction"},{"code":"P0766","description":"Shift Solenoid D Performance or Stuck Off"},{"code":"P0767","description":"Shift Solenoid D Stuck On"},{"code":"P0768","description":"Shift Solenoid D Electrical"},{"code":"P0769","description":"Shift Solenoid D Intermittent"},{"code":"P0770","description":"Shift Solenoid E Malfunction"},{"code":"P0771","description":"Shift Solenoid E Performance or Stuck Off"},{"code":"P0772","description":"Shift Solenoid E Stuck On"},{"code":"P0773","description":"Shift Solenoid E Electrical"},{"code":"P0774","description":"Shift Solenoid E Intermittent"},{"code":"P0775","description":"Pressure Control Solenoid B Malfunction"},{"code":"P0776","description":"Pressure Control Solenoid B Performance"},{"code":"P0777","description":"Pressure Control Solenoid B Stuck On"},{"code":"P0778","description":"Pressure Control Solenoid B Electrical"},{"code":"P0779","description":"Pressure Control Solenoid B Intermittent"},{"code":"P0780","description":"Shift Malfunction"},{"code":"P0781","description":"1-2 Shift Malfunction"},{"code":"P0782","description":"2-3 Shift Malfunction"},{"code":"P0783","description":"3-4 Shift Malfunction"},{"code":"P0784","description":"4-5 Shift Malfunction"},{"code":"P0785","description":"Shift/Timing Solenoid Malfunction/ 3-2 Shift Solenoid Circuit Electrical"},{"code":"P0786","description":"Shift/Timing Solenoid Range/Performance"},{"code":"P0787","description":"Shift/Timing Solenoid Low"},{"code":"P0788","description":"Shift/Timing Solenoid High"},{"code":"P0789","description":"Shift/Timing Solenoid Intermittent"},{"code":"P0790","description":"Normal/Performance Switch Circuit Malfunction"},{"code":"P0801","description":"Reverse Inhibit Control Circuit Malfunction"},{"code":"P0803","description":"1-4 Upshift (Skip Shift) Solenoid Control Circuit Malfunction"},{"code":"P0804","description":"1-4 Upshift (Skip Shift) Lamp Control Circuit Malfunction"},{"code":"P0915","description":"Gear Shift Position Circuit Range/Performance"},{"code":"P0916","description":"Gear Shift Position Circuit Low"},{"code":"P0917","description":"Gear Shift Position Circuit High"},{"code":"P1001","description":"KOER (Key On Engine Running) Test Not Able To Complete"},{"code":"P1002","description":"KOER (Key On Engine Running) Test Abort"},{"code":"P1009","description":"Intake Valve Timing Control Performance (Bank 2)"},{"code":"P1017","description":"Variable Valve Timing Circuit (Bank 1)"},{"code":"P1019","description":"Variable Valve Timing Circuit (Bank 2)"},{"code":"P1100","description":"MAF Sensor Intermittent/ Check of all OBDII Systems Not Complete"},{"code":"P1101","description":"MAF Sensor Out Of Self Test Range./"},{"code":"P1102","description":"MAF Sensor In Range But Lower Than Expected"},{"code":"P1103","description":"MAF Sensor In Range But Higher Than Expected"},{"code":"P1104","description":"MAF Ground Malfunction"},{"code":"P1105","description":"Dual Alternator Upper Fault"},{"code":"P1106","description":"Dual Alternator Lower Fault/ Manifold Absolute Pressure (MAP) Sensor Circuit Intermittent High Voltage"},{"code":"P1107","description":"Dual Alternator Lower Circuit Malfunction/ Manifold Absolute Pressure (MAP) Sensor Circuit Intermittent Low Voltage"},{"code":"P1108","description":"Dual Alternator Battery Lamp Circuit Malfunction"},{"code":"P1109","description":"IAT - B Sensor Intermittent"},{"code":"P1110","description":"IAT Sensor (D/C) Open/Short"},{"code":"P1111","description":"Intake Air Temperature (IAT) Sensor Circuit Intermittent High Voltage"},{"code":"P1112","description":"Intake Air Temperature (IAT) Sensor Circuit Intermittent Low Voltage"},{"code":"P1113","description":"IAT Sensor Open/Short"},{"code":"P1114","description":"Engine Coolant Temperature (ECT) Sensor Circuit Intermittent Low Voltage/IAT - B Circuit Low Input"},{"code":"P1115","description":"Engine Coolant Temperature (ECT) Sensor Circuit Intermittent High Voltage/IAT - B Circuit High Input"},{"code":"P1116","description":"Engine Coolant sensor out of range/ECT Sensor Out Of Self Test Range"},{"code":"P1117","description":"Engine Coolant Sensor intermittent/ECT Sensor Intermittent"},{"code":"P1118","description":"Manifold Absolute Temperature Circuit Low Input"},{"code":"P1119","description":"Manifold Absolute Temperature Circuit High Input"},{"code":"P1120","description":"Throttle position sensor out of range"},{"code":"P1121","description":"Throttle Position (TP) Sensor Circuit Intermittent High Voltage"},{"code":"P1122","description":"Throttle Position (TP) Sensor Circuit Intermittent Low Voltage"},{"code":"P1123","description":"Throttle Position Sensor In Range But Higher Than Expected"},{"code":"P1124","description":"Throttle Position Sensor Out Of Self Test Range"},{"code":"P1125","description":"Throttle position sensor intermittent"},{"code":"P1126","description":"Throttle Position (Narrow Range) Sensor Circuit Malfunction"},{"code":"P1127","description":"Exhaust Not Warm, Downstream O2 Sensor"},{"code":"P1128","description":"Upstream Heated O2 Sensors Swapped"},{"code":"P1129","description":"Downstream Heated O2 Sensors Swapped"},{"code":"P1130","description":"Lack Of HO2S Switch - Adaptive Fuel At Limit"},{"code":"P1131","description":"Lack Of HO2S Switch - Sensor Indicates Lean"},{"code":"P1132","description":"Lack Of HO2S Switch - Sensor Indicates Rich"},{"code":"P1133","description":"HO2S Insufficient Switching Sensor 1"},{"code":"P1134","description":"HO2S Transition Time Ratio Sensor 1"},{"code":"P1135","description":"Pedal Position Sensor A Circuit Intermittent"},{"code":"P1136","description":"Fan Control Circuit Malfunction"},{"code":"P1137","description":"Lack Of HO2S Switch - Sensor Indicates Lean"},{"code":"P1138","description":"Lack Of HO2S12 Switch - Sensor Indicates Rich"},{"code":"P1139","description":"Water In Fuel Indicator Circuit Malfunction"},{"code":"P1140","description":"Water In Fuel Condition"},{"code":"P1141","description":"Fuel Restriction Indicator Circuit Malfunction"},{"code":"P1142","description":"Fuel Restriction Condition"},{"code":"P1143","description":"Air Assist Control Valve Range/Performance"},{"code":"P1144","description":"Air Assist Control Valve Circuit Malfunction"},{"code":"P1150","description":"Lack Of HO2S21 Switch - Adaptive Fuel At Limit"},{"code":"P1151","description":"Lack Of HO2S21 Switch - Sensor Indicates Lean"},{"code":"P1152","description":"Lack Of HO2S21 Switch - Sensor Indicates Rich"},{"code":"P1153","description":"Bank 2 Fuel Control Shifted Lean"},{"code":"P1154","description":"Bank 2 Fuel Control Shifted Rich"},{"code":"P1155","description":"Alternative Fuel Controller"},{"code":"P1156","description":"Fuel Select Switch Malfunction"},{"code":"P1157","description":"Lack Of HO2S22 Switch - Sensor Indicates Lean"},{"code":"P1158","description":"Lack Of HO2S22 Switch - Sensor Indicates Rich"},{"code":"P1159","description":"Fuel Stepper Motor Malfunction"},{"code":"P1167","description":"Invalid Test,throttle not depressed"},{"code":"P1168","description":"Fuel Rail Sensor In-Range Low Failure"},{"code":"P1169","description":"Fuel Rail Sensor In-Range High Failure"},{"code":"P1170","description":"ESO - Engine Shut Off Solenoid Fault"},{"code":"P1171","description":"Rotor Sensor Fault"},{"code":"P1172","description":"Rotor Control Fault"},{"code":"P1173","description":"Rotor Calibration Fault"},{"code":"P1174","description":"Cam Sensor Fault"},{"code":"P1175","description":"Cam Control Fault"},{"code":"P1176","description":"Cam Calibration Fault"},{"code":"P1177","description":"Synchronization Fault"},{"code":"P1178","description":"( open )"},{"code":"P1180","description":"Fuel Delivery System Malfunction - Low"},{"code":"P1181","description":"Fuel Delivery System Malfunction - High"},{"code":"P1182","description":"Fuel Shut Off Solenoid Malfunction"},{"code":"P1183","description":"Engine Oil Temperature Circuit Malfunction"},{"code":"P1184","description":"Engine Oil Temperature Out Of Self Test Range"},{"code":"P1185","description":"FTS High - Fuel Pump Temperature Sensor High"},{"code":"P1186","description":"FTS Low - Fuel Pump Temperature Sensor Low"},{"code":"P1187","description":"Variant Selection"},{"code":"P1188","description":"Calibration Memory Fault"},{"code":"P1189","description":"Pump Speed Signal Fault"},{"code":"P1190","description":"Calibration Resistor Out Of Range"},{"code":"P1191","description":"Key Line Voltage"},{"code":"P1192","description":"Voltage External"},{"code":"P1193","description":"EGR Drive Overcurrent"},{"code":"P1194","description":"ECU A/D Converter"},{"code":"P1195","description":"SCP HBCC Failed To Initialize"},{"code":"P1196","description":"Key Off Voltage High"},{"code":"P1197","description":"Key Off Voltage Low"},{"code":"P1198","description":"Pump Rotor Control Underfueling"},{"code":"P1199","description":"Fuel Level Input Circuit Low"},{"code":"P1200","description":"Injector Control Circuit"},{"code":"P1201","description":"Injector Circuit Open / Shorted - Cylinder #1"},{"code":"P1202","description":"Injector Circuit Open / Shorted - Cylinder #2"},{"code":"P1203","description":"Injector Circuit Open / Shorted - Cylinder #3"},{"code":"P1204","description":"Injector Circuit Open / Shorted - Cylinder #4"},{"code":"P1205","description":"Injector Circuit Open / Shorted - Cylinder #5"},{"code":"P1206","description":"Injector Circuit Open / Shorted - Cylinder #6"},{"code":"P1209","description":"Injector Control Pressure System Fault"},{"code":"P1210","description":"Injector Control Pressure Above Expected Level"},{"code":"P1211","description":"Injector Control Pressure Sensor Above / Below Desired"},{"code":"P1212","description":"Injector Control Pressure Not Detected During Crank"},{"code":"P1213","description":"Start Injector Circuit Malfunction"},{"code":"P1214","description":"Pedal Position Sensor B Circuit Intermittent"},{"code":"P1215","description":"Pedal Position Sensor C Circuit Low Input"},{"code":"P1216","description":"Pedal Position Sensor C Circuit High Input"},{"code":"P1217","description":"Pedal Position Sensor C Circuit Intermittent"},{"code":"P1218","description":"CID High"},{"code":"P1219","description":"CID Low"},{"code":"P1220","description":"Series Throttle Control System Malfunction"},{"code":"P1221","description":"Traction Control System Malfunction"},{"code":"P1222","description":"Traction Control Output Circuit Malfunction"},{"code":"P1223","description":"Pedal Demand Sensor B Circuit High Input"},{"code":"P1224","description":"Throttle Position Sensor B Out Of Self Test Range"},{"code":"P1225","description":"Needle Lift Sensor Malfunction"},{"code":"P1226","description":"Control Sleeve Sensor Malfunction"},{"code":"P1227","description":"Wastegate Failed Closed (Over Pressure)"},{"code":"P1228","description":"Wastegate Failed Open (Under Pressure)"},{"code":"P1229","description":"Intercooler Pump Driver Fault"},{"code":"P1230","description":"Fuel Pump Low Speed Malfunction"},{"code":"P1231","description":"Fuel Pump Secondary Circuit Low, High Speed"},{"code":"P1232","description":"Fuel Pump Speed Primary Circuit Malfunction"},{"code":"P1233","description":"Fuel Pump Driver Module Off Line"},{"code":"P1234","description":"Fuel Pump Driver Module Off Line"},{"code":"P1235","description":"Fuel Pump Control Out Of Range"},{"code":"P1236","description":"Fuel Pump Control Out Of Range"},{"code":"P1237","description":"Fuel Pump Secondary Circuit Malfunction"},{"code":"P1238","description":"Fuel Pump Secondary Circuit Malfunction"},{"code":"P1239","description":"Speed Fuel Pump Positive Feed Fault"},{"code":"P1240","description":"Sensor Power Supply Malfunction"},{"code":"P1241","description":"Sensor Power Supply Low Input"},{"code":"P1242","description":"Sensor Power Supply High Input"},{"code":"P1243","description":"Second Fuel Pump Faulty or Ground Fault"},{"code":"P1244","description":"Alternator Load Input Failed High"},{"code":"P1245","description":"Alternator Load Input Failed Low"},{"code":"P1246","description":"Alternator Load Input Failed"},{"code":"P1247","description":"Turbo Boost Pressure Low"},{"code":"P1248","description":"Turbo Boost Pressure Not Detected"},{"code":"P1249","description":"Wastegate Control Valve Performance"},{"code":"P1250","description":"PRC Solenoid Circuit Malfunction"},{"code":"P1251","description":"Air Mixture Solenoid Circuit Malfunction"},{"code":"P1252","description":"Pedal Correlation PDS1 and LPDS High"},{"code":"P1253","description":"Pedal Correlation PDS1 and LPDS Low"},{"code":"P1254","description":"Pedal Correlation PDS2 and LPDS High"},{"code":"P1255","description":"Pedal Correlation PDS2 and LPDS Low"},{"code":"P1256","description":"Pedal Correlation PDS1 and HPDS"},{"code":"P1257","description":"Pedal Correlation PDS2 and HPDS"},{"code":"P1258","description":"Pedal Correlation PDS1 and PDS2"},{"code":"P1259","description":"Immobilizer to PCM Signal Error"},{"code":"P1260","description":"THEFT Detected, Vehicle Immobilzed"},{"code":"P1261","description":"Cylinder #1 High To Low Side Short"},{"code":"P1262","description":"Cylinder #2 High To Low Side Short"},{"code":"P1263","description":"Cylinder #3 High To Low Side Short"},{"code":"P1264","description":"Cylinder #4 High To Low Side Short"},{"code":"P1265","description":"Cylinder #5 High To Low Side Short"},{"code":"P1266","description":"Cylinder #6 High To Low Side Short"},{"code":"P1267","description":"Cylinder #7 High To Low Side Short"},{"code":"P1268","description":"Cylinder #8 High To Low Side Short"},{"code":"P1269","description":"Immobilizer Code Not Programmed"},{"code":"P1270","description":"Engine RPM Or Speed Limiter Reached"},{"code":"P1271","description":"Cylinder #1 High To Low Side Open"},{"code":"P1272","description":"Cylinder #2 High To Low Side Open"},{"code":"P1273","description":"Cylinder #3 High To Low Side Open"},{"code":"P1274","description":"Cylinder #4 High To Low Side Open"},{"code":"P1275","description":"Cylinder #5 High To Low Side Open"},{"code":"P1276","description":"Cylinder #6 High To Low Side Open"},{"code":"P1277","description":"Cylinder #7 High To Low Side Open"},{"code":"P1278","description":"Cylinder #8 High To Low Side Open"},{"code":"P1280","description":"Injection Control Pressure Out Of Range Low"},{"code":"P1281","description":"Injection Control Pressure Out Of Range High"},{"code":"P1282","description":"Excessive Injection Control Pressure"},{"code":"P1283","description":"IPR Circuit Failure"},{"code":"P1284","description":"Aborted KOER - ICP Failure"},{"code":"P1285","description":"Cylinder head over temp sensed"},{"code":"P1286","description":"Fuel Pulse In Range But Lower Than Expected"},{"code":"P1287","description":"Fuel Pulse In Range But Higher Than Expected"},{"code":"P1288","description":"Cylinder Head Temp Sensor Out Of Self Test Range"},{"code":"P1289","description":"Cylinder Head Temp Sensor High Input"},{"code":"P1290","description":"Cylinder Head Temp Sensor Low Input"},{"code":"P1291","description":"Injector High Side Short To GND Or VBATT - Bank 1"},{"code":"P1292","description":"Injector High Side Short To GND Or VBATT - Bank 2"},{"code":"P1293","description":"Injector High Side Open - Bank 1"},{"code":"P1294","description":"Injector High Side Open - Bank 2/Target idle not reached"},{"code":"P1295","description":"Multi-faults - Bank 1 - With Low Side Shorts"},{"code":"P1296","description":"Multi-faults - Bank 2 - With Low Side Shorts"},{"code":"P1297","description":"Injector High Sides Shorted Together"},{"code":"P1298","description":"IDM Failure"},{"code":"P1299","description":"Cylinder Head Overtemperature Protection Active"},{"code":"P1300","description":"Boost Calibration Fault"},{"code":"P1301","description":"Boost Calibration High"},{"code":"P1302","description":"Boost Calibration Low"},{"code":"P1303","description":"EGR Calibration Fault"},{"code":"P1304","description":"EGR Calibration High"},{"code":"P1305","description":"EGR Calibration Low"},{"code":"P1306","description":"Kickdown Relay Pull - In Circuit Fault"},{"code":"P1307","description":"Kickdown Relay Hold Circuit Fault"},{"code":"P1308","description":"A/C Clutch Circuit Fault"},{"code":"P1309","description":"Misfire Monitor AICE Chip Fault"},{"code":"P1313","description":"Misfire Rate Catalyst Damage Fault - Bank 1"},{"code":"P1314","description":"Misfire Rate Catalyst Damage Fault - Bank 2"},{"code":"P1315","description":"Persistent Misfire"},{"code":"P1316","description":"Injector Circuit / IDM Codes Detected"},{"code":"P1317","description":"Injector Circuit / IDM Codes Not Updated"},{"code":"P1336","description":"Crank / Cam Sensor Range / Performance"},{"code":"P1340","description":"Camshaft Position Sensor B Circuit Malfunction"},{"code":"P1341","description":"Camshaft Position Sensor B Range / Performance"},{"code":"P1345","description":"SGC (Cam Position) Sensor Circuit Malfunction/ Crankshaft Position - Camshaft Position Correlation"},{"code":"P1346","description":"Fuel Level Sensor B Circuit Malfunction"},{"code":"P1347","description":"Fuel Level Sensor B Range / Performance"},{"code":"P1348","description":"Fuel Level Sensor B Circuit Low"},{"code":"P1349","description":"Fuel Level Sensor B Circuit High"},{"code":"P1350","description":"Fuel Level Sensor B Intermittent/Bypass Line Monitor"},{"code":"P1351","description":"IDM Input Circuit Malfunction/ Ignition Coil Control Circuit High Voltage"},{"code":"P1352","description":"Ignition Coil A Primary Circuit Malfunction"},{"code":"P1353","description":"Ignition Coil B Primary Circuit Malfunction"},{"code":"P1354","description":"Ignition Coil C Primary Circuit Malfunction"},{"code":"P1355","description":"Ignition Coil D Primary Circuit Malfunction"},{"code":"P1356","description":"Ignition Coil E Primary Circuit Malfunction / PIP Signal Fault"},{"code":"P1357","description":"Ignition Coil F Primary Circuit Malfunction / PIP Signal Out Of Range"},{"code":"P1358","description":"Ignition Coil G Primary Circuit Malfunction / IDM Signal Fault"},{"code":"P1360","description":"Ignition Coil A Secondary Circuit Malfunction"},{"code":"P1361","description":"Ignition Control (IC) Circuit Low Voltage"},{"code":"P1362","description":"Ignition Coil C Secondary Circuit Malfunction"},{"code":"P1363","description":"Ignition Coil D Secondary Circuit Malfunction"},{"code":"P1364","description":"Ignition Coil Primary Circuit Failure"},{"code":"P1365","description":"Ignition Coil Secondary Circuit Failure"},{"code":"P1366","description":"Ignition Spare"},{"code":"P1367","description":"Ignition Spare"},{"code":"P1368","description":"Ignition Spare"},{"code":"P1369","description":"Engine Temperature Light Monitor Failure"},{"code":"P1370","description":"Insufficient RMP Increase During Spark Test"},{"code":"P1371","description":"Ignition Coil - Cylinder 1 - Early Activation Fault"},{"code":"P1372","description":"Ignition Coil - Cylinder 2 - Early Activation Fault"},{"code":"P1373","description":"Ignition Coil - Cylinder 3 - Early Activation Fault"},{"code":"P1374","description":"Crankshaft Position (CKP)/Ignition Coil - Cylinder 4 - Early Activation Fault"},{"code":"P1375","description":"Ignition Coil - Cylinder 5 - Early Activation Fault"},{"code":"P1376","description":"Ignition Coil - Cylinder 6 - Early Activation Fault"},{"code":"P1380","description":"Misfire Detected - Rough Road Data Not Available"},{"code":"P1381","description":"Variable Cam Timing Overadvanced (Bank #1)/ Misfire Detected - No Communication with BCM"},{"code":"P1382","description":"Variable Cam Timing Solenoid #1 Circuit Malfunction"},{"code":"P1383","description":"Variable Cam Timing Overretarded (Bank #1)"},{"code":"P1384","description":"VVT Solenoid A Malfunction"},{"code":"P1385","description":"Variable Cam Timing Solenoid B Malfunction"},{"code":"P1386","description":"Variable Cam Timing Overadvanced (Bank #2)"},{"code":"P1387","description":"Variable Cam Timing Solenoid #2 Circuit Malfunction"},{"code":"P1388","description":"Variable Cam Timing Overretarded (Bank #2)"},{"code":"P1389","description":"Glow Plug Circuit High Side Low Input"},{"code":"P1390","description":"Octane Adjust Pin Out Of Self Test Range"},{"code":"P1391","description":"Glow Plug Circuit Low Input (Bank #1)"},{"code":"P1392","description":"Glow Plug Circuit High Input (Bank #1)"},{"code":"P1393","description":"Glow Plug Circuit Low Input (Bank #2)"},{"code":"P1394","description":"Glow Plug Circuit High Input (Bank #2)"},{"code":"P1395","description":"Glow Plug Monitor Fault (Bank #1)"},{"code":"P1396","description":"Glow Plug Monitor Fault (Bank #2)"},{"code":"P1397","description":"System Voltage Out Of Self Test Range"},{"code":"P1398","description":"VVT Solenoid B Circuit High Input"},{"code":"P1399","description":"Glow Plug Circuit High Side, High Input"},{"code":"P1400","description":"DPFE Circuit Low Input"},{"code":"P1401","description":"DPFE Circuit High Input"},{"code":"P1402","description":"EGR Metering Orifice Restricted"},{"code":"P1403","description":"DPFE Sensor Hoses Reversed"},{"code":"P1404","description":"IAT - B Circuit Malfunction/ Exhaust Gas Recirculation Closed Position Performance"},{"code":"P1405","description":"DPFE Sensor Upstream Hose Off Or Plugged"},{"code":"P1406","description":"Exhaust Gas Recirculation (EGR) Position Sensor Performance"},{"code":"P1407","description":"EGR No Flow Detected"},{"code":"P1408","description":"EGR Flow Out Of Self Test Range"},{"code":"P1409","description":"EVR Control Circuit Malfunction"},{"code":"P1411","description":"SAI System Incorrect Downstream Flow Detected"},{"code":"P1413","description":"SAI System Monitor Circuit Low Input"},{"code":"P1414","description":"SAI System Monitor Circuit High Input"},{"code":"P1415","description":"Air Pump Circuit Malfunction/ (AIR) System Bank 1"},{"code":"P1416","description":"Port Air Circuit Malfunction/ (AIR) System Bank 2"},{"code":"P1417","description":"Port Air Relief Circuit Malfunction"},{"code":"P1418","description":"Split Air #1 Circuit Malfunction"},{"code":"P1419","description":"Split Air #2 Circuit Malfunction"},{"code":"P1420","description":"Catalyst Temperature Sensor Failure"},{"code":"P1421","description":"Catalyst Damage"},{"code":"P1422","description":"EGI Temperature Sensor Failure"},{"code":"P1423","description":"EGI Functionality Test Failed"},{"code":"P1424","description":"EGI Glow Plug Primary Failure"},{"code":"P1425","description":"EGI Glow Plug Secondary Failure"},{"code":"P1426","description":"EGI Mini - MAF Failed Out Of Range"},{"code":"P1427","description":"EGI Mini - MAF Failed Short Circuit"},{"code":"P1428","description":"EGI Mini - MAF Failed Open Circuit"},{"code":"P1429","description":"Electric Air Pump Primary Failure"},{"code":"P1430","description":"Electric Air Pump Secondary Failure"},{"code":"P1433","description":"A/C Refrigerant Temperature Circuit Low"},{"code":"P1434","description":"A/C Refrigerant Temperature Circuit High"},{"code":"P1435","description":"A/C Refrigerant Temperature Circuit Range/Performance"},{"code":"P1436","description":"A/C Evaporator Air Temperature Circuit Low"},{"code":"P1437","description":"A/C Evaporator Air Temperature Circuit High"},{"code":"P1438","description":"A/C Evaporator Air Temperature Circuit Range/Performance"},{"code":"P1439","description":"Floor Temperature Switch Circuit Malfunction"},{"code":"P1440","description":"Purge Valve Stuck Open"},{"code":"P1441","description":"Evaporative Emission (EVAP) System Flow During Non-Purge Chevrolet Only"},{"code":"P1441","description":"Evaporative Emission (EVAP) System Flow During Non-Purge Oldsmobile Only"},{"code":"P1442","description":"Evaporative Emission Control System Leak Detected"},{"code":"P1443","description":"Evaporative Emission Control System Control Valve"},{"code":"P1444","description":"Purge Flow Sensor Circuit Low Input"},{"code":"P1445","description":"Purge Flow Sensor Circuit High Input"},{"code":"P1446","description":"Evaporative Vac Solenoid Circuit Malfunction"},{"code":"P1447","description":"ELC System Closure Valve Flow Fault"},{"code":"P1448","description":"ELC System 2 Fault"},{"code":"P1449","description":"Evaporative Check Solenoid Circuit Malfunction"},{"code":"P1450","description":"Unable To Bleed Up Fuel Tank Vacuum"},{"code":"P1451","description":"Evap Emission Control Sys Vent Control Valve Circuit"},{"code":"P1452","description":"Unable To Bleed - Up Vacuum in Tank"},{"code":"P1453","description":"Fuel Tank Pressure Relief Valve Malfunction"},{"code":"P1454","description":"Evaporative System Vacuum Test Malfunction"},{"code":"P1455","description":"Evap Emission Control Sys Leak Detected (Gross Leak/No Flow)"},{"code":"P1456","description":"Fuel Tank Temperature Sensor Circuit Malfunction"},{"code":"P1457","description":"Unable To Pull Vacuum In Tank"},{"code":"P1460","description":"Wide open throttle A/C cutoff relay circuit"},{"code":"P1461","description":"A/C pressure sensor circuit voltage low"},{"code":"P1462","description":"A/C pressure sensor circuit voltage high"},{"code":"P1463","description":"A/C Pressure Sensor Insufficient Pressure Change"},{"code":"P1464","description":"A/C Demand Out of Self Test Range"},{"code":"P1465","description":"A/C Relay Circuit Malfunction"},{"code":"P1466","description":"A/C Refrigerant Temperature Sensor/Circuit Malfunction"},{"code":"P1467","description":"A/C Compressor Temperature Sensor Malfunction"},{"code":"P1468","description":"SSPOD Open Circuit or Closed Circuit Fault"},{"code":"P1469","description":"Low A/C Cycling Period"},{"code":"P1470","description":"A/C Cycling Period Too Short"},{"code":"P1471","description":"Electrodrive Fan 1 Operational Failure (Driver Side)"},{"code":"P1472","description":"Electrodrive Fan 2 Operational Failure (Passenger Side)"},{"code":"P1473","description":"Fan Secondary High With Fan(s) Off"},{"code":"P1474","description":"Low Fan Control Primary Circuit Malfunction"},{"code":"P1475","description":"Fan Relay (Low) Circuit Malfunction"},{"code":"P1476","description":"Fan Relay (High) Circuit Malfunction"},{"code":"P1477","description":"Additional Fan Relay Circuit Malfunction"},{"code":"P1478","description":"Cooling Fan Driver Fault"},{"code":"P1479","description":"High Fan Control Primary Circuit Malfunction"},{"code":"P1480","description":"Fan Secondary Low with Low Fan On"},{"code":"P1481","description":"Fan Secondary Low With High Fan On"},{"code":"P1482","description":"SCP"},{"code":"P1483","description":"Power To Fan Circuit Overcurrent"},{"code":"P1484","description":"Open Power To Ground VCRM"},{"code":"P1485","description":"EGRV Circuit Malfunction"},{"code":"P1486","description":"EGRA Circuit Malfunction"},{"code":"P1487","description":"EGRCHK Solenoid Circuit Malfunction"},{"code":"P1490","description":"Secondary Air Relief Solenoid Circuit Malfunction"},{"code":"P1491","description":"Secondary Switch Solenoid Circuit Malfunction"},{"code":"P1492","description":"APLSOL Solenoid Circuit Malfunction"},{"code":"P1493","description":"RCNT Solenoid Circuit Malfunction"},{"code":"P1494","description":"SPCUT Solenoid Circuit Malfunction"},{"code":"P1495","description":"TCSPL Solenoid Circuit Malfunction"},{"code":"P1500","description":"Vehicle Speed Sensor Intermittent"},{"code":"P1501","description":"Vehicle Speed Sensor Out Of Self Test Range"},{"code":"P1502","description":"Vehicle Speed Sensor Intermittent Malfunction"},{"code":"P1503","description":"Auxillary Speed Sensor Fault"},{"code":"P1504","description":"Idle Air Control Circuit Malfunction"},{"code":"P1505","description":"Idle Air Control System At Adaptive Clip"},{"code":"P1506","description":"Idle Air Control Overspeed Error"},{"code":"P1507","description":"Idle Air Control Underspeed Error"},{"code":"P1508","description":"Idle Control System Circuit Open"},{"code":"P1509","description":"Idle Control System Circuit Shorted"},{"code":"P1510","description":"Idle Signal Circuit Malfunction"},{"code":"P1511","description":"Idle Switch (Electric Control Throttle) Circuit Malfunction"},{"code":"P1512","description":"Intake Manifold Runner Control (Bank 1) Stuck Closed"},{"code":"P1513","description":"Intake Manifold Runner Control (Bank 2) Stuck Closed"},{"code":"P1514","description":"High Load Neutral/Drive Fault"},{"code":"P1515","description":"Electric Current Circuit Malfunction"},{"code":"P1516","description":"IMRC Input Error (Bank 1)"},{"code":"P1517","description":"IMRC Input Error (Bank 2)"},{"code":"P1518","description":"Intake Manifold Runner Control (Stuck Open)"},{"code":"P1519","description":"Intake Manifold Runner Control (Stuck Closed)"},{"code":"P1520","description":"Intake Manifold Runner Control Circuit Malfunction"},{"code":"P1521","description":"Variable Intake Solenoid #1 Circuit Malfunction"},{"code":"P1522","description":"Variable Intake Solenoid #2 Circuit Malfunction"},{"code":"P1523","description":"IVC Solenoid Circuit Malfunction"},{"code":"P1524","description":"Variable Intake Solenoid System"},{"code":"P1525","description":"Air Bypass Valve System"},{"code":"P1526","description":"Air Bypass System"},{"code":"P1527","description":"Accelerate Warmup Solenoid Circuit Malfunction"},{"code":"P1528","description":"Subsidiary Throttle Valve Solenoid Circuit Malfunction"},{"code":"P1529","description":"SCAIR Solenoid Circuit Malfunction"},{"code":"P1530","description":"A/C Clutch Circuit Malfunction"},{"code":"P1531","description":"Invalid Test - Accelerator Pedal Movement"},{"code":"P1532","description":"IMCC Circuit Malfunction, Bank B"},{"code":"P1533","description":"AAI Circuit Malfunction"},{"code":"P1534","description":"Inertia Switch Activated"},{"code":"P1535","description":"Blower Fan Speed Circuit Range/Performance"},{"code":"P1536","description":"Parking Brake Switch Circuit Failure"},{"code":"P1537","description":"Intake Manifold Runner Control (Bank 1) Stuck Open"},{"code":"P1538","description":"Intake Manifold Runner Control (Bank 2) Stuck Open"},{"code":"P1539","description":"Power To A/C Clutch Circuit Overcurrent"},{"code":"P1540","description":"Air Bypass Valve Circuit Malfunction"},{"code":"P1549","description":"IMCC Circuit Malfunction, Bank B"},{"code":"P1550","description":"PSPS Out Of Self Test Range"},{"code":"P1565","description":"Speed Control Command Switch Out of Range High"},{"code":"P1566","description":"Speed Control Command Switch Out of Range Low"},{"code":"P1567","description":"Speed Control Output Circuit Continuity"},{"code":"P1568","description":"Speed Control Unable to Hold Speed"},{"code":"P1571","description":"Brake Switch Malfunction"},{"code":"P1572","description":"Brake Pedal Switch Circuit Malfunction"},{"code":"P1573","description":"Throttle Position Not Available"},{"code":"P1574","description":"Throttle Position Sensor Disagreement btwn Sensors"},{"code":"P1575","description":"Pedal Position Out of Self Test Range"},{"code":"P1576","description":"Pedal Position Not Available"},{"code":"P1577","description":"Pedal Position Sensor Disagreement btwn Sensors"},{"code":"P1578","description":"ETC Power Less Than Demand"},{"code":"P1579","description":"ETC In Power Limiting Mode"},{"code":"P1580","description":"Electronic Throttle Monitor PCM Override"},{"code":"P1581","description":"Electronic Throttle Monitor Malfunction"},{"code":"P1582","description":"Electronic Throttle Monitor Data Available"},{"code":"P1583","description":"Electronic Throttle Monitor Cruise Disable"},{"code":"P1584","description":"TCU Detected IPE Circuit Malfunction"},{"code":"P1585","description":"Throttle Control Unit Malfunction"},{"code":"P1586","description":"Throttle Control Unit Throttle Position Malfunction"},{"code":"P1587","description":"Throttle Control Unit Modulated Command Malfunction"},{"code":"P1588","description":"Throttle Control Unit Detected Loss of Return Spring"},{"code":"P1589","description":"TCU Unable To Control Desired Throttle Angle"},{"code":"P1600","description":"Loss of KAM Power; Open Circuit"},{"code":"P1601","description":"ECM/TCM Serial Communication Error"},{"code":"P1602","description":"Immobilizer/ECM Communication Error"},{"code":"P1603","description":"EEPROM Malfunction"},{"code":"P1604","description":"Code Word Unregestered"},{"code":"P1605","description":"Keep Alive Memory Test Failure"},{"code":"P1606","description":"ECM Control Relay O/P Circuit Malfunction"},{"code":"P1607","description":"MIL O/P Circuit Malfunction"},{"code":"P1608","description":"Internal ECM Malfunction"},{"code":"P1609","description":"Diagnostic Lamp Driver Fault"},{"code":"P1610","description":"SBDS Interactive Codes"},{"code":"P1611","description":"SBDS Interactive Codes"},{"code":"P1612","description":"SBDS Interactive Codes"},{"code":"P1613","description":"SBDS Interactive Codes"},{"code":"P1614","description":"SBDS Interactive Codes"},{"code":"P1615","description":"SBDS Interactive Codes"},{"code":"P1616","description":"SBDS Interactive Codes"},{"code":"P1617","description":"SBDS Interactive Codes"},{"code":"P1618","description":"SBDS Interactive Codes"},{"code":"P1619","description":"SBDS Interactive Codes"},{"code":"P1620","description":"SBDS Interactive Codes"},{"code":"P1621","description":"Control Module Long Term Memory Performance/ Immobilizer Code Words Do Not Match"},{"code":"P1622","description":"Immobilizer ID Does Not Match"},{"code":"P1623","description":"Immobilizer Code Word/ID Number Write Failure"},{"code":"P1624","description":"Anti Theft System"},{"code":"P1625","description":"B+ Supply To VCRM Fan Circuit Malfunction"},{"code":"P1626","description":"Theft Deterrent Fuel Enable Signal Not Received/ B+ Supply To VCRM A/C Circuit Malfunction"},{"code":"P1627","description":"Module Supply Voltage Out Of Range"},{"code":"P1628","description":"Module Ignition Supply Input Malfunction"},{"code":"P1629","description":"Internal Voltage Regulator Malfunction"},{"code":"P1630","description":"Internal Vref Malfunction"},{"code":"P1631","description":"Theft Deterrent Start Enable Signal Not Correct/ Main Relay Malfunction (Power Hold)"},{"code":"P1632","description":"Smart Alternator Faults Sensor/Circuit Malfunction"},{"code":"P1633","description":"KAM Voltage Too Low"},{"code":"P1634","description":"Data Output Link Circuit Failure"},{"code":"P1635","description":"Tire / Axle Ratio Out of Acceptable Range"},{"code":"P1636","description":"Inductive Signature Chip Communication Error"},{"code":"P1637","description":"Can Link ECM/ABSCM Circuit / Network Malfunction"},{"code":"P1638","description":"Can Link ECM/INSTM Circuit / Network Malfunction"},{"code":"P1639","description":"Vehicle ID Block Corrupted or Not Programmed"},{"code":"P1640","description":"Powertrain DTCs Available in Another Module"},{"code":"P1641","description":"Fuel Pump Primary Circuit Failure"},{"code":"P1642","description":"Fuel Pump Monitor Circuit High Input"},{"code":"P1643","description":"Fuel Pump Monitor Circuit Low Input"},{"code":"P1644","description":"Fuel Pump Speed Control Circuit Malfunction"},{"code":"P1645","description":"Fuel Pump Resistor Switch Circuit Malfunction"},{"code":"P1650","description":"PSP Switch Out of Self Test Range"},{"code":"P1651","description":"PSP Switch Input Malfunction"},{"code":"P1652","description":"IAC Monitor Disabled by PSP Switch Failed On"},{"code":"P1653","description":"Power Steering Output Circuit Malfunction"},{"code":"P1654","description":"Recirculation Override Circuit Malfunction"},{"code":"P1655","description":"Starter Disable Circuit Malfunction"},{"code":"P1656","description":"Wastegate Control Valve Circuit Malfunction"},{"code":"P1657","description":"Wastegate Control Valve Circuit Low"},{"code":"P1658","description":"Wastegate Control Valve Circuit High"},{"code":"P1660","description":"Output Circuit Check Signal High"},{"code":"P1661","description":"Output Circuit Check Signal Low"},{"code":"P1662","description":"IDM_EN Circuit Failure"},{"code":"P1663","description":"Fuel Demand Command Signal Circuit Malfunction"},{"code":"P1667","description":"CI Circuit Malfunction"},{"code":"P1668","description":"PCM - IDM Communications Error"},{"code":"P1670","description":"Electronic Feedback Signal Not Detected"},{"code":"P1680","description":"Metering Oil Pump Malfunction"},{"code":"P1681","description":"Metering Oil Pump Malfunction"},{"code":"P1682","description":"Metering Oil Pump Malfunction"},{"code":"P1683","description":"Metering Oil Pump Temperature Sensor Circuit Malfunction"},{"code":"P1684","description":"Metering Oil Pump Position Sensor Circuit Malfunction"},{"code":"P1685","description":"Metering Oil Pump Stepping Motor Circuit Malfunction"},{"code":"P1686","description":"Metering Oil Pump Stepping Motor Circuit Malfunction"},{"code":"P1687","description":"Metering Oil Pump Stepping Motor Circuit Malfunction"},{"code":"P1688","description":"Metering Oil Pump Stepping Motor Circuit Malfunction"},{"code":"P1689","description":"Oil Pressure Control Solenoid Circuit Malfunction"},{"code":"P1690","description":"Wastegate Solenoid Circuit Malfunction"},{"code":"P1691","description":"Turbo Pressure Control Solenoid Circuit Malfunction"},{"code":"P1692","description":"Turbo Control Solenoid Circuit Malfunction"},{"code":"P1693","description":"Turbo Charge Control Circuit Malfunction"},{"code":"P1694","description":"Turbo Charge Relief Circuit Malfunction"},{"code":"P1700","description":"Transmission Indeterminate Failure (Failed to Neutral)"},{"code":"P1701","description":"Reverse Engagement Error"},{"code":"P1702","description":"TRS Circuit Intermittent Malfunction"},{"code":"P1703","description":"Brake Switch Out Of Self Test Range"},{"code":"P1704","description":"Digital TRS Failed to Transition States in KOEO / KOER"},{"code":"P1705","description":"Not in P or N During KOEO / KOER"},{"code":"P1706","description":"High Vehicle Speed Observed in Park"},{"code":"P1707","description":"Transfer Case Neutral Indicator Hard Fault Present"},{"code":"P1708","description":"Clutch Switch Circuit Malfunction"},{"code":"P1709","description":"PNP Switch Out Of Self Test Range"},{"code":"P1711","description":"TFT Sensor Out Of Self Test Range"},{"code":"P1712","description":"Trans Torque Reduction Request Signal Malfunction"},{"code":"P1713","description":"TFT Sensor In Range Failure Low Value"},{"code":"P1714","description":"SSA Inductive Signature Malfunction"},{"code":"P1715","description":"SSB Inductive Signature Malfunction"},{"code":"P1716","description":"SSC Inductive Signature Malfunction"},{"code":"P1717","description":"SSD Inductive Signature Malfunction"},{"code":"P1718","description":"TFT Sensor In Range Failure High"},{"code":"P1720","description":"Vehicle Speed (Meter) Circuit Malfunction"},{"code":"P1721","description":"Gear 1 Incorrect Ratio"},{"code":"P1722","description":"Gear 2 Incorrect Ratio"},{"code":"P1723","description":"Gear 3 incorrect Ratio"},{"code":"P1724","description":"Gear 4 Incorrect Ratio"},{"code":"P1725","description":"Insufficient Engine Speed Increase During Self Test"},{"code":"P1726","description":"Insufficient Engine Speed Decrease During Self Test"},{"code":"P1727","description":"Coast Clutch Solenoid Inductive Signature Malfunction"},{"code":"P1728","description":"Transmission Slip Error"},{"code":"P1729","description":"4x4 Low Switch Error"},{"code":"P1730","description":"Gear Control Malfunction 2,3,5"},{"code":"P1731","description":"1-2 Shift Malfunction"},{"code":"P1732","description":"2-3 Shift Malfunction"},{"code":"P1733","description":"3-4 Shift Malfunction"},{"code":"P1734","description":"Gear Control Malfunction"},{"code":"P1735","description":"First Gear Switch Circuit Malfunction"},{"code":"P1736","description":"Second Gear Switch Circuit Malfunction"},{"code":"P1737","description":"Lockup Solenoid System"},{"code":"P1738","description":"Shift Time Error"},{"code":"P1739","description":"Slip Solenoid System"},{"code":"P1740","description":"Torque Converter Clutch Inductive Signature Malfunction"},{"code":"P1741","description":"Torque Converter Clutch Control Error"},{"code":"P1742","description":"Torque Converter Clutch Solenoid Failed On"},{"code":"P1743","description":"Torque Converter Clutch Solenoid Failied On"},{"code":"P1744","description":"Torque Converter Clutch System Performance"},{"code":"P1745","description":"Line Pressure Solenoid System"},{"code":"P1746","description":"Pressure Control Solenoid \"A\" Open Circuit"},{"code":"P1747","description":"Pressure Control Solenoid \"A\" Short Circuit"},{"code":"P1748","description":"EPC Malfunction"},{"code":"P1749","description":"Pressure Control Solenoid Failed Low"},{"code":"P1751","description":"Shift Solenoid A Performance"},{"code":"P1754","description":"Coast Clutch Solenoid Circuit Malfunction"},{"code":"P1755","description":"Intermediate Speed Sensor (ISS) Malfunction"},{"code":"P1756","description":"Shift Solenoid B Performance"},{"code":"P1760","description":"Pressure Control Solenoid \"A\" Short Circuit"},{"code":"P1761","description":"Shift Solenoid C Performance"},{"code":"P1762","description":"Overdrive Band Failed Off"},{"code":"P1765","description":"Timing Solenoid Circuit Malfunction"},{"code":"P1767","description":"Torque Converter Clutch Circuit Malfunction"},{"code":"P1768","description":"Performance / Normal / Winter Mode Input Malfunction"},{"code":"P1769","description":"AG4 Transmission Torque Modulation Fault"},{"code":"P1770","description":"Clutch Solenoid Circuit Malfunction"},{"code":"P1772","description":"Low Gear Solenoid Circuit Malfunction"},{"code":"P1775","description":"Transmission System MIL Fault"},{"code":"P1776","description":"Ignition Retard Request Duration Fault"},{"code":"P1777","description":"Ignition Retard Request Circuit Fault"},{"code":"P1778","description":"Transmission Reverse I/P Circuit Malfunction"},{"code":"P1779","description":"TCIL Circuit Malfunction"},{"code":"P1780","description":"Trans Control Switch (O/D Cancel) Out of Self Test Range"},{"code":"P1781","description":"4X4 Switch Out of Self Test Range"},{"code":"P1782","description":"P/ES Circuit Out Of Self Test Range"},{"code":"P1783","description":"Transmission Overtemperature Condition"},{"code":"P1784","description":"Transmission Mechanical Failure - First And Reverse"},{"code":"P1785","description":"Transmission Mechanical Failure - First And Second"},{"code":"P1786","description":"3-2 Downshift Error"},{"code":"P1787","description":"2-1 Downshift Error"},{"code":"P1788","description":"Pressure Control Solenoid \"B\" Open Circuit"},{"code":"P1789","description":"Pressure Control Solenoid \"B\" Short Circuit"},{"code":"P1790","description":"TP (Mechanical) Circuit Malfunction"},{"code":"P1791","description":"TP (Electric) Circuit Malfunction"},{"code":"P1792","description":"Barometer Pressure Circuit Malfunction"},{"code":"P1793","description":"Intake Air Volume Circuit Malfunction"},{"code":"P1794","description":"Battery Voltage Circuit Malfunction"},{"code":"P1795","description":"Idle Switch Circuit Malfunction"},{"code":"P1796","description":"Kick Down Switch Circuit Malfunction"},{"code":"P1797","description":"Neutral Switch Circuit Malfunction"},{"code":"P1798","description":"Coolant Temperature Circuit Malfunction"},{"code":"P1799","description":"Hold Switch Circuit Malfunction"},{"code":"P1800","description":"Transmission Clutch Interlock Safety Switch Circuit Failure"},{"code":"P1801","description":"Transmission Clutch Interlock Safety Switch Open Circuit"},{"code":"P1802","description":"Transmission Clutch Interlock Safety Switch Short Circuit To Battery"},{"code":"P1803","description":"Transmission Clutch Interlock Safety Switch Short Circuit To Ground"},{"code":"P1804","description":"Transmission 4-Wheel Drive High Indicator Circuit Failure"},{"code":"P1805","description":"Transmission 4-Wheel Drive High Indicator Open Circuit"},{"code":"P1806","description":"Transmission 4-Wheel Drive High Indicator Short Circuit To Battery"},{"code":"P1807","description":"Transmission 4-Wheel Drive High Indicator Short Circuit To Ground"},{"code":"P1808","description":"Transmission 4-Wheel Drive Low Indicator Circuit Failure"},{"code":"P1809","description":"Transmission 4-Wheel Drive Low Indicator Open Circuit"},{"code":"P1810","description":"TFP Valve Position Switch Circuit/ Transmission 4-Wheel Drive Low Indicator Short Circuit To Battery"},{"code":"P1811","description":"Transmission 4-Wheel Drive Low Indicator Short Circuit To Ground"},{"code":"P1812","description":"Transmission 4-Wheel Drive Mode Select Circuit Failure"},{"code":"P1813","description":"Transmission 4-Wheel Drive Mode Select Open Circuit"},{"code":"P1814","description":"Transmission 4-Wheel Drive Mode Select Short Circuit To Battery"},{"code":"P1815","description":"Transmission 4-Wheel Drive Mode Select Short Circuit To Ground"},{"code":"P1816","description":"Transmission Neutral Safety Switch Circuit Failure"},{"code":"P1817","description":"Transmission Neutral Safety Switch Open Circuit"},{"code":"P1818","description":"Transmission Neutral Safety Switch Short Circuit To Battery"},{"code":"P1819","description":"Transmission Neutral Safety Switch Short Circuit To Ground"},{"code":"P1820","description":"Transmission Transfer Case Clockwise Shift Relay Coil Circuit Failure"},{"code":"P1821","description":"Transmission Transfer Case Clockwise Shift Relay Coil Open Circuit"},{"code":"P1822","description":"Transmission Transfer Case Clockwise Shift Relay Coil Short Circuit To Battery"},{"code":"P1823","description":"Transmission Transfer Case Clockwise Shift Relay Coil Short Circuit To Ground"},{"code":"P1824","description":"Transmission 4-Wheel Drive Clutch Relay Circuit Failure"},{"code":"P1825","description":"Transmission 4-Wheel Drive Clutch Relay Open Circuit"},{"code":"P1826","description":"Transmission 4-Wheel Drive Low Clutch Relay Circuit To Battery"},{"code":"P1827","description":"Transmission 4-Wheel Drive Low Clutch Relay Circuit To Ground"},{"code":"P1828","description":"Transmission Transfer Case Counter Clockwise Shift Relay Coil Circuit Failure"},{"code":"P1829","description":"Transmission Transfer Case Counter Clockwise Shift Relay Coil Open Circuit"},{"code":"P1830","description":"Transmission Transfer Case Counter Clockwise Shift Relay Coil Short Circuit To Battery"},{"code":"P1831","description":"Transmission Transfer Case Counter Clockwise Shift Relay Coil Short Circuit To Ground"},{"code":"P1832","description":"Transmission Transfer Case Differential Lock-Up Solenoid Circuit Failure"},{"code":"P1833","description":"Transmission Transfer Case Differential Lock-Up Solenoid Open Circuit"},{"code":"P1834","description":"Transmission Transfer Case Differential Lock-Up Solenoid Short Circuit To Battery"},{"code":"P1835","description":"Transmission Transfer Case Differential Lock-Up Solenoid Short Circuit To Ground"},{"code":"P1836","description":"Transmission Transfer Case Front Shaft Speed Sensor Circuit Failure"},{"code":"P1837","description":"Transmission Transfer Case Rear Shaft Speed Sensor Circuit Failure"},{"code":"P1838","description":"Transmission Transfer Case Shift Motor Circuit Failure"},{"code":"P1839","description":"Transmission Transfer Case Shift Motor Open Circuit"},{"code":"P1840","description":"Transmission Transfer Case Shift Motor Short Circuit To Battery"},{"code":"P1841","description":"Transmission Transfer Case Shift Motor Short Circuit To Ground"},{"code":"P1842","description":"Transmission Transfer Case Differential Lock-Up Feedback Switch Circuit Failure"},{"code":"P1843","description":"Transmission Transfer Case Differential Lock-Up Feedback Switch Open Circuit"},{"code":"P1844","description":"Transmission Transfer Case Differential Lock-Up Feedback Switch Short Circuit To Battery"},{"code":"P1845","description":"Transmission Transfer Case Differential Lock-Up Feedback Switch Short Circuit To Ground"},{"code":"P1846","description":"Transmission Transfer Case Contact Plate 'A' Circuit Failure"},{"code":"P1847","description":"Transmission Transfer Case Contact Plate 'A' Open Circuit"},{"code":"P1848","description":"Transmission Transfer Case Contact Plate 'A' Short Circuit To Battery"},{"code":"P1849","description":"Transmission Transfer Case Contact Plate 'A' Short Circuit To Ground"},{"code":"P1850","description":"Transmission Transfer Case Contact Plate 'B' Circuit Failure"},{"code":"P1851","description":"Transmission Transfer Case Contact Plate 'B' Open Circuit"},{"code":"P1852","description":"Transmission Transfer Case Contact Plate 'B' Short Circuit To Battery"},{"code":"P1853","description":"Transmission Transfer Case Contact Plate 'B' Short Circuit To Ground"},{"code":"P1854","description":"Transmission Transfer Case Contact Plate 'C' Circuit Failure"},{"code":"P1855","description":"Transmission Transfer Case Contact Plate 'C' Open Circuit"},{"code":"P1856","description":"Transmission Transfer Case Contact Plate 'C' Short Circuit To Battery"},{"code":"P1857","description":"Transmission Transfer Case Contact Plate 'C' Short Circuit To Ground"},{"code":"P1858","description":"Transmission Transfer Case Contact Plate 'D' Circuit Failure"},{"code":"P1859","description":"Transmission Transfer Case Contact Plate 'D' Open Circuit"},{"code":"P1860","description":"TCC PWM Solenoid Circuit Electrical/ Transmission Transfer Case Contact Plate 'D' Short Circuit To Battery"},{"code":"P1861","description":"Transmission Transfer Case Contact Plate 'D' Short Circuit To Ground"},{"code":"P1862","description":"Transmission Transfer Case Contact Plate Power Circuit Failure"},{"code":"P1863","description":"Transmission Transfer Case Contact Plate Power Open Circuit"},{"code":"P1864","description":"Transmission Transfer Case Contact Plate Power Short To Battery"},{"code":"P1865","description":"Transmission Transfer Case Contact Plate Power Short To Ground"},{"code":"P1866","description":"Transmission Transfer Case System Concern - Servicing Required"},{"code":"P1867","description":"Transmission Transfer Case Contact Plate General Circuit Failure"},{"code":"P1868","description":"Transmission Automatic 4-Wheel Drive Indicator (Lamp) Circuit Failure"},{"code":"P1869","description":"Transmission Automatic 4-Wheel Drive Indicator (Lamp) Circuit Short To Battery"},{"code":"P1870","description":"Transmission Component Slipping/ Transmission Mechanical Transfer Case 4x4 Switch Circuit Failure"},{"code":"P1871","description":"Transmission Mechanical Transfer Case 4x4 Switch Circuit Short To Battery"},{"code":"P1872","description":"Transmission Mechanical 4-Wheel Drive Axle Lock Lamp Circuit Failure"},{"code":"P1873","description":"Transmission Mechanical 4-Wheel Drive Axle Lock Lamp Circuit Short To Battery"},{"code":"P1874","description":"Transmission Automatic Hall Effect Sensor Power Circuit Failure"},{"code":"P1875","description":"Transmission Automatic Hall Effect Sensor Power Circuit Short To Battery / 4WD Low Switch Circuit Electrical"},{"code":"P1876","description":"Transmission Transfer Case 2-Wheel Drive Solenoid Circuit Failure"},{"code":"P1877","description":"Transmission Transfer Case 2-Wheel Drive Solenoid Circuit Short To Battery"},{"code":"P1878","description":"Transmission Transfer Case Disengaged Solenoid Circuit Failure"},{"code":"P1879","description":"Transmission Transfer Case Disengaged Solenoid Open Circuit"},{"code":"P1880","description":"Transmission Transfer Case Disengaged Solenoid Short to Battery"},{"code":"P1881","description":"Engine Coolant Level Switch Circuit Failure, GEM"},{"code":"P1882","description":"Engine Coolant Level Switch Circuit Short to Ground"},{"code":"P1883","description":"Engine Coolant Level Switch Circuit Failure, GEM"},{"code":"P1884","description":"Engine Coolant Level Lamp Circuit Short to Ground"},{"code":"P1885","description":"Transmission Transfer Case Disengaged Solenoid Short to Ground"},{"code":"P1886","description":"4X4 Initialization Failure"},{"code":"P1890","description":"Transmission 4WD Mode Select Return Input Circuit Failure"},{"code":"P1891","description":"Transmission Transfer Case Contact Plate Ground Return Open Circuit"},{"code":"P1900","description":"OSS Circuit Intermittent Malfunction"},{"code":"P1901","description":"TSS Circuit Intermittent Malfunction"},{"code":"P1902","description":"Pressure Control Solenoid \"B\" Intermittent Short"},{"code":"P1903","description":"Pressure Control Solenoid \"C\" Short Circuit"},{"code":"P1904","description":"Pressure Control Solenoid \"C\" Open Circuit"},{"code":"P1905","description":"Pressure Control Solenoid \"C\" Intermittent Short"},{"code":"P1906","description":"Kickdown Pull Relay Open or Short Circuit to Ground"},{"code":"P1907","description":"Kickdown Hold Relay Open or Short Circuit to Ground"},{"code":"P1908","description":"Transmission Pressure Circuit Solenoid Open or Short to Ground"},{"code":"P1909","description":"Trans Temp Sensor Circuit Open or Shorted to Pwr or Gnd"},{"code":"P1910","description":"VFS A Pressure Output Failed Low"},{"code":"P1911","description":"VFS B Pressure Output Failed Low"},{"code":"P1912","description":"VFS C Pressure Output Failed Low"},{"code":"P1913","description":"Pressure Switch A Circuit Malfunction"},{"code":"P1914","description":"Manually Shifted Automatic (MSA) Sw Circuit Malf"},{"code":"P1915","description":"Reverse Switch Circuit Malfunction"},{"code":"P1916","description":"High Clutch Drum Speed Sensor Malfunction"},{"code":"P1917","description":"High Clutch Drum Speed Sensor Intermittent"},{"code":"P1918","description":"Transmission Range Display Circuit Malfunction"},{"code":"P2100","description":"Throttle Actuator Control Motor Circuit / Open"},{"code":"P2101","description":"Throttle Actuator Control Motor Circuit Range/Performance"},{"code":"P2102","description":"Throttle Actuator Control Motor Circuit Low"},{"code":"P2103","description":"Throttle Actuator Control Motor Circuit High"},{"code":"P2105","description":"Throttle Actuator Control System - Forced Engine Shutdown"},{"code":"P2107","description":"Throttle Actuator Control Module Processor"},{"code":"P2119","description":"Throttle Actuator Control Throttle Body Range/Performance"},{"code":"P2121","description":"Throttle/Pedal Position Sensor/Switch D Circuit Range/Performance"},{"code":"P2122","description":"Throttle/Pedal Position Sensor/Switch D Circuit Low Input"},{"code":"P2123","description":"Throttle/Pedal Position Sensor/Switch D Circuit High Input"},{"code":"P2124","description":"Throttle/Pedal Position Sensor/Switch D Circuit Intermittent"},{"code":"P2127","description":"Throttle/Pedal Position Sensor/Switch E Circuit Low Input"},{"code":"P2128","description":"Throttle/Pedal Position Sensor/Switch E Circuit High Input"},{"code":"P2129","description":"Throttle/Pedal Position Sensor/Switch E Circuit Intermittent"},{"code":"P2135","description":"Throttle/Pedal Position Sensor/Switch A/B Voltage Correlation"},{"code":"P2138","description":"Throttle/Pedal Position Sensor/Switch D/E Voltage Correlation"},{"code":"P2146","description":"Fuel Injector Group A Supply Voltage Circuit / Open"},{"code":"P2149","description":"Fuel Injector Group B Supply Voltage Circuit / Open"},{"code":"P2176","description":"Throttle Actuator Control System - Idle Position Not Learned"},{"code":"P2195","description":"O2 Sensor Signal Biased / Stuck Lean (Bank 1 Sensor 1)"},{"code":"P2196","description":"O2 Sensor Signal Biased / Stuck Rich (Bank 1 Sensor 1)"},{"code":"P2197","description":"O2 Sensor Signal Biased / Stuck Lean (Bank 2 Sensor 1)"},{"code":"P2198","description":"O2 Sensor Signal Biased / Stuck Rich (Bank 2 Sensor 1)"},{"code":"P2270","description":"O2 Sensor Signal Biased / Stuck Lean (Bank 1 Sensor 2)"},{"code":"P2271","description":"O2 Sensor Signal Biased / Stuck Rich (Bank 1 Sensor 2)"},{"code":"P2272","description":"O2 Sensor Signal Biased / Stuck Lean (Bank 2 Sensor 2)"},{"code":"P2273","description":"O2 Sensor Signal Biased / Stuck Rich (Bank 2 Sensor 2)"},{"code":"P2279","description":"Intake Air System Leak"},{"code":"P2300","description":"Ignition Coil A Primary Control Circuit Low"},{"code":"P2301","description":"Ignition Coil A Primary Control Circuit High"},{"code":"P2303","description":"Ignition Coil B Primary Control Circuit Low"},{"code":"P2304","description":"Ignition Coil B Primary Control Circuit High"},{"code":"P2306","description":"Ignition Coil C Primary Control Circuit Low"},{"code":"P2307","description":"Ignition Coil C Primary Control Circuit High"},{"code":"P2309","description":"Ignition Coil D Primary Control Circuit Low"},{"code":"P2310","description":"Ignition Coil D Primary Control Circuit High"},{"code":"P2505","description":"ECM/PCM Power Input Signal / Secondary Circuit"},{"code":"P2600","description":"Coolant Pump Control Circuit / Open"},{"code":"P2602","description":"Coolant Pump Control Circuit Low"},{"code":"P2603","description":"Coolant Pump Control Circuit High"}];
+
+    // Category classification based on code range and keywords
+    function categorize(code, desc) {
+        const d = desc.toLowerCase();
+        const num = parseInt(code.slice(1));
+
+        if (num >= 700 && num < 800 || num >= 1700 && num < 1800 || num >= 1800) {
+            if (d.includes('transmis') || d.includes('shift') || d.includes('solenoid') ||
+                d.includes('torque conv') || d.includes('clutch') || d.includes('gear') ||
+                d.includes('pressure control sol') || d.includes('transfer case')) return 'trans';
+        }
+        if (d.includes('sensor') || d.includes('circuit') || d.includes('switch') ||
+            d.includes('signal') || d.includes('input') || d.includes('voltage')) return 'sensor';
+        if (d.includes('fuel') || d.includes('inject') || d.includes('pump') ||
+            d.includes('metering') || d.includes('rail')) return 'fuel';
+        if (d.includes('emission') || d.includes('evap') || d.includes('egr') ||
+            d.includes('catalyst') || d.includes('air inject') || d.includes('purge') ||
+            d.includes('o2 sensor') || d.includes('oxygen') || d.includes('ho2s')) return 'emission';
+        if (d.includes('engine') || d.includes('misfire') || d.includes('knock') ||
+            d.includes('ignition') || d.includes('idle') || d.includes('throttle') ||
+            d.includes('rpm') || d.includes('overspeed') || d.includes('overtemp') ||
+            d.includes('overboost') || d.includes('cam') || d.includes('crank') ||
+            d.includes('timing') || d.includes('rotor') || d.includes('vp44')) return 'engine';
+        if (num >= 700 || num >= 1700) return 'trans';
+        return 'other';
+    }
+
+    // Process data
+    const dtcEntries = DTC_DATA.map(d => ({
+        code: d.code,
+        desc: d.description,
+        cat: categorize(d.code, d.description),
+        searchText: (d.code + ' ' + d.description).toLowerCase()
+    }));
+
+    // Stats
+    const totalP0 = dtcEntries.filter(d => d.code.startsWith('P0')).length;
+    const totalP1 = dtcEntries.filter(d => d.code.startsWith('P1')).length;
+    const totalP2 = dtcEntries.filter(d => d.code.startsWith('P2')).length;
+    document.getElementById('totalCodes').textContent = dtcEntries.length.toLocaleString();
+    document.getElementById('genericCodes').textContent = totalP0;
+    document.getElementById('mfgCodes').textContent = totalP1;
+    document.getElementById('enhancedCodes').textContent = totalP2;
+
+    const listEl = document.getElementById('dtcList');
+    const searchInput = document.getElementById('searchInput');
+    const visibleCountEl = document.getElementById('visibleCount');
+    const totalCountEl = document.getElementById('totalCount');
+    const matchCountEl = document.getElementById('matchCount');
+
+    totalCountEl.textContent = dtcEntries.length;
+
+    let currentFilter = 'all';
+    let currentSearch = '';
+    let displayedEntries = [];
+
+    function escapeHtml(str) {
+        return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    }
+
+    function highlightMatch(text, query) {
+        if (!query) return escapeHtml(text);
+        const escaped = escapeHtml(text);
+        const regex = new RegExp('(' + query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
+        return escaped.replace(regex, '<mark>$1</mark>');
+    }
+
+    function renderList() {
+        const query = currentSearch.toLowerCase().trim();
+        
+        displayedEntries = dtcEntries.filter(d => {
+            if (currentFilter !== 'all' && d.cat !== currentFilter) return false;
+            if (query && !d.searchText.includes(query)) return false;
+            return true;
+        });
+
+        visibleCountEl.textContent = displayedEntries.length;
+        matchCountEl.textContent = displayedEntries.length;
+
+        if (displayedEntries.length === 0) {
+            listEl.innerHTML = `
+                <div class="empty-state">
+                    <div class="empty-icon">🔍</div>
+                    <h3>No codes found</h3>
+                    <p>Try a different search term or filter</p>
+                </div>`;
+            return;
+        }
+
+        // Render all (the list is small enough at ~1162 items)
+        const html = displayedEntries.map(d => `
+            <div class="dtc-card">
+                <div class="dtc-code cat-${d.cat}">${highlightMatch(d.code, query)}</div>
+                <div class="dtc-desc">${highlightMatch(d.desc, query)}</div>
+            </div>
+        `).join('');
+
+        listEl.innerHTML = html;
+    }
+
+    // Search handler with debounce
+    let searchTimer;
+    searchInput.addEventListener('input', () => {
+        clearTimeout(searchTimer);
+        searchTimer = setTimeout(() => {
+            currentSearch = searchInput.value;
+            renderList();
+        }, 100);
+    });
+
+    // Filter chips
+    document.querySelectorAll('.filter-chip').forEach(chip => {
+        chip.addEventListener('click', () => {
+            document.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
+            chip.classList.add('active');
+            currentFilter = chip.dataset.filter;
+            renderList();
+        });
+    });
+
+    // Scroll to top button
+    const scrollBtn = document.getElementById('scrollTop');
+    window.addEventListener('scroll', () => {
+        scrollBtn.classList.toggle('visible', window.scrollY > 400);
+    });
+    scrollBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Keyboard shortcut: Ctrl+K or / to focus search
+    document.addEventListener('keydown', e => {
+        if ((e.ctrlKey && e.key === 'k') || (e.key === '/' && document.activeElement !== searchInput)) {
+            e.preventDefault();
+            searchInput.focus();
+            searchInput.select();
+        }
+        if (e.key === 'Escape') {
+            searchInput.blur();
+        }
+    });
+
+    // Initial render
+    renderList();
+    </script>
+</body>
+</html>

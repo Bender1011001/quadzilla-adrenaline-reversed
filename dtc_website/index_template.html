@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OBD-II DTC Code Lookup — Cummins / Dodge / Quadzilla</title>
+    <meta name="description" content="Complete OBD-II diagnostic trouble code database with 1,258 P-codes including P2xxx enhanced codes. Search engine, sensor, fuel, transmission, and manufacturer-specific codes for Cummins ISB, VP44, Dodge Ram, and more.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0a0e17;
+            --bg-secondary: #111827;
+            --bg-card: #1a2235;
+            --bg-card-hover: #1f2a42;
+            --bg-input: #0f1629;
+            --border: #2a3550;
+            --border-focus: #3b82f6;
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --accent-blue: #3b82f6;
+            --accent-cyan: #06b6d4;
+            --accent-green: #10b981;
+            --accent-amber: #f59e0b;
+            --accent-red: #ef4444;
+            --accent-purple: #8b5cf6;
+            --glow-blue: rgba(59, 130, 246, 0.15);
+            --glow-cyan: rgba(6, 182, 212, 0.1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Animated background grid */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: 
+                radial-gradient(ellipse at 20% 50%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 20%, rgba(6, 182, 212, 0.06) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 80%, rgba(139, 92, 246, 0.04) 0%, transparent 50%);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Header */
+        header {
+            padding: 48px 0 32px;
+            text-align: center;
+        }
+
+        .logo-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(6, 182, 212, 0.1));
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            border-radius: 100px;
+            padding: 6px 16px;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--accent-cyan);
+            margin-bottom: 16px;
+        }
+
+        .logo-badge .dot {
+            width: 6px; height: 6px;
+            background: var(--accent-green);
+            border-radius: 50%;
+            animation: pulse-dot 2s infinite;
+        }
+
+        @keyframes pulse-dot {
+            0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4); }
+            50% { opacity: 0.8; box-shadow: 0 0 0 4px rgba(16, 185, 129, 0); }
+        }
+
+        h1 {
+            font-size: clamp(28px, 5vw, 48px);
+            font-weight: 800;
+            background: linear-gradient(135deg, #f1f5f9 0%, #94a3b8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.1;
+            margin-bottom: 12px;
+        }
+
+        .subtitle {
+            font-size: 16px;
+            color: var(--text-secondary);
+            font-weight: 400;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Stats bar */
+        .stats-bar {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            margin: 24px 0 32px;
+            flex-wrap: wrap;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--accent-cyan);
+        }
+
+        .stat-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+
+        /* Search */
+        .search-wrapper {
+            position: relative;
+            max-width: 700px;
+            margin: 0 auto 16px;
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+            pointer-events: none;
+        }
+
+        #searchInput {
+            width: 100%;
+            padding: 16px 20px 16px 52px;
+            background: var(--bg-input);
+            border: 1.5px solid var(--border);
+            border-radius: 16px;
+            color: var(--text-primary);
+            font-size: 16px;
+            font-family: 'Inter', sans-serif;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        #searchInput:focus {
+            border-color: var(--accent-blue);
+            box-shadow: 0 0 0 4px var(--glow-blue), 0 8px 32px rgba(0,0,0,0.3);
+        }
+
+        #searchInput::placeholder {
+            color: var(--text-muted);
+        }
+
+        /* Filter chips */
+        .filter-bar {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 32px;
+            flex-wrap: wrap;
+        }
+
+        .filter-chip {
+            padding: 7px 16px;
+            border-radius: 100px;
+            border: 1px solid var(--border);
+            background: transparent;
+            color: var(--text-secondary);
+            font-size: 13px;
+            font-weight: 500;
+            font-family: 'Inter', sans-serif;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            user-select: none;
+        }
+
+        .filter-chip:hover {
+            border-color: var(--accent-blue);
+            color: var(--text-primary);
+            background: rgba(59, 130, 246, 0.08);
+        }
+
+        .filter-chip.active {
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+            border-color: transparent;
+            color: white;
+            font-weight: 600;
+            box-shadow: 0 2px 12px rgba(59, 130, 246, 0.3);
+        }
+
+        /* Results info */
+        .results-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+            padding: 0 4px;
+        }
+
+        .results-count {
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        .results-count span {
+            color: var(--accent-cyan);
+            font-weight: 600;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* DTC Grid */
+        .dtc-grid {
+            display: grid;
+            gap: 8px;
+        }
+
+        .dtc-card {
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            align-items: center;
+            padding: 14px 20px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            transition: all 0.2s ease;
+            cursor: default;
+        }
+
+        .dtc-card:hover {
+            background: var(--bg-card-hover);
+            border-color: rgba(59, 130, 246, 0.3);
+            transform: translateX(4px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+        }
+
+        .dtc-code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 15px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .dtc-code.cat-engine { color: var(--accent-red); }
+        .dtc-code.cat-fuel { color: var(--accent-amber); }
+        .dtc-code.cat-emission { color: var(--accent-green); }
+        .dtc-code.cat-trans { color: var(--accent-purple); }
+        .dtc-code.cat-sensor { color: var(--accent-cyan); }
+        .dtc-code.cat-other { color: var(--accent-blue); }
+
+        .dtc-desc {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.4;
+        }
+
+        .dtc-card:hover .dtc-desc {
+            color: var(--text-primary);
+        }
+
+        /* Category indicator dot */
+        .dtc-code::before {
+            content: '';
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+
+        .dtc-code.cat-engine::before { background: var(--accent-red); }
+        .dtc-code.cat-fuel::before { background: var(--accent-amber); }
+        .dtc-code.cat-emission::before { background: var(--accent-green); }
+        .dtc-code.cat-trans::before { background: var(--accent-purple); }
+        .dtc-code.cat-sensor::before { background: var(--accent-cyan); }
+        .dtc-code.cat-other::before { background: var(--accent-blue); }
+
+        /* Empty state */
+        .empty-state {
+            text-align: center;
+            padding: 64px 20px;
+            color: var(--text-muted);
+        }
+
+        .empty-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+            opacity: 0.4;
+        }
+
+        .empty-state h3 {
+            font-size: 18px;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 48px 0 32px;
+            color: var(--text-muted);
+            font-size: 12px;
+        }
+
+        footer a {
+            color: var(--accent-blue);
+            text-decoration: none;
+        }
+
+        /* Virtual scroll container */
+        #dtcList {
+            position: relative;
+        }
+
+        /* Highlight matched text */
+        mark {
+            background: rgba(59, 130, 246, 0.25);
+            color: var(--text-primary);
+            border-radius: 2px;
+            padding: 0 1px;
+        }
+
+        /* Loading animation */
+        .skeleton {
+            background: linear-gradient(90deg, var(--bg-card) 25%, var(--bg-card-hover) 50%, var(--bg-card) 75%);
+            background-size: 200% 100%;
+            animation: shimmer 1.5s infinite;
+            border-radius: 12px;
+            height: 52px;
+        }
+
+        @keyframes shimmer {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            header { padding: 32px 0 24px; }
+            .stats-bar { gap: 20px; }
+            .dtc-card { grid-template-columns: 80px 1fr; padding: 12px 14px; }
+            .dtc-code { font-size: 13px; }
+            .dtc-desc { font-size: 13px; }
+        }
+
+        /* Scroll to top */
+        .scroll-top {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            background: var(--accent-blue);
+            color: white;
+            border: none;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            box-shadow: 0 4px 16px rgba(59, 130, 246, 0.4);
+            transition: all 0.2s;
+            z-index: 100;
+        }
+
+        .scroll-top:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(59, 130, 246, 0.5);
+        }
+
+        .scroll-top.visible {
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-badge">
+                <span class="dot"></span>
+                DTC Code Database
+            </div>
+            <h1>Diagnostic Trouble Codes</h1>
+            <p class="subtitle">Complete OBD-II P-code reference for Cummins, Dodge, Ford, and universal diagnostics. Extracted from real tuner firmware.</p>
+        </header>
+
+        <div class="stats-bar">
+            <div class="stat">
+                <div class="stat-value" id="totalCodes">—</div>
+                <div class="stat-label">Total Codes</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value" id="genericCodes">—</div>
+                <div class="stat-label">Generic (P0)</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value" id="mfgCodes">—</div>
+                <div class="stat-label">Mfg-Specific (P1)</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value" id="enhancedCodes">—</div>
+                <div class="stat-label">Enhanced (P2)</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value" id="matchCount">—</div>
+                <div class="stat-label">Showing</div>
+            </div>
+        </div>
+
+        <div class="search-wrapper">
+            <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.35-4.35"></path>
+            </svg>
+            <input type="text" id="searchInput" placeholder="Search by code (P0216) or keyword (injection, sensor, fuel...)" autocomplete="off" autofocus>
+        </div>
+
+        <div class="filter-bar">
+            <button class="filter-chip active" data-filter="all">All Codes</button>
+            <button class="filter-chip" data-filter="engine">🔴 Engine</button>
+            <button class="filter-chip" data-filter="fuel">🟡 Fuel System</button>
+            <button class="filter-chip" data-filter="sensor">🔵 Sensors</button>
+            <button class="filter-chip" data-filter="emission">🟢 Emissions</button>
+            <button class="filter-chip" data-filter="trans">🟣 Transmission</button>
+        </div>
+
+        <div class="results-info">
+            <div class="results-count">Showing <span id="visibleCount">0</span> of <span id="totalCount">0</span> codes</div>
+        </div>
+
+        <div class="dtc-grid" id="dtcList"></div>
+
+        <footer>
+            <p>DTC data extracted from Quadzilla/Smarty tuner firmware &amp; TtsComUtils.dll • 1,258 codes • P0012–P2603</p>
+            <p style="margin-top: 4px;">Data is provided for reference only. Always consult your vehicle's service manual for definitive diagnosis.</p>
+        </footer>
+    </div>
+
+    <button class="scroll-top" id="scrollTop" title="Scroll to top">↑</button>
+
+    <script>
+    // Complete DTC database - embedded inline for zero-dependency static hosting
+    const DTC_DATA = INJECT_DTC_DATA;
+
+    // Category classification based on code range and keywords
+    function categorize(code, desc) {
+        const d = desc.toLowerCase();
+        const num = parseInt(code.slice(1));
+
+        if (num >= 700 && num < 800 || num >= 1700 && num < 1800 || num >= 1800) {
+            if (d.includes('transmis') || d.includes('shift') || d.includes('solenoid') ||
+                d.includes('torque conv') || d.includes('clutch') || d.includes('gear') ||
+                d.includes('pressure control sol') || d.includes('transfer case')) return 'trans';
+        }
+        if (d.includes('sensor') || d.includes('circuit') || d.includes('switch') ||
+            d.includes('signal') || d.includes('input') || d.includes('voltage')) return 'sensor';
+        if (d.includes('fuel') || d.includes('inject') || d.includes('pump') ||
+            d.includes('metering') || d.includes('rail')) return 'fuel';
+        if (d.includes('emission') || d.includes('evap') || d.includes('egr') ||
+            d.includes('catalyst') || d.includes('air inject') || d.includes('purge') ||
+            d.includes('o2 sensor') || d.includes('oxygen') || d.includes('ho2s')) return 'emission';
+        if (d.includes('engine') || d.includes('misfire') || d.includes('knock') ||
+            d.includes('ignition') || d.includes('idle') || d.includes('throttle') ||
+            d.includes('rpm') || d.includes('overspeed') || d.includes('overtemp') ||
+            d.includes('overboost') || d.includes('cam') || d.includes('crank') ||
+            d.includes('timing') || d.includes('rotor') || d.includes('vp44')) return 'engine';
+        if (num >= 700 || num >= 1700) return 'trans';
+        return 'other';
+    }
+
+    // Process data
+    const dtcEntries = DTC_DATA.map(d => ({
+        code: d.code,
+        desc: d.description,
+        cat: categorize(d.code, d.description),
+        searchText: (d.code + ' ' + d.description).toLowerCase()
+    }));
+
+    // Stats
+    const totalP0 = dtcEntries.filter(d => d.code.startsWith('P0')).length;
+    const totalP1 = dtcEntries.filter(d => d.code.startsWith('P1')).length;
+    const totalP2 = dtcEntries.filter(d => d.code.startsWith('P2')).length;
+    document.getElementById('totalCodes').textContent = dtcEntries.length.toLocaleString();
+    document.getElementById('genericCodes').textContent = totalP0;
+    document.getElementById('mfgCodes').textContent = totalP1;
+    document.getElementById('enhancedCodes').textContent = totalP2;
+
+    const listEl = document.getElementById('dtcList');
+    const searchInput = document.getElementById('searchInput');
+    const visibleCountEl = document.getElementById('visibleCount');
+    const totalCountEl = document.getElementById('totalCount');
+    const matchCountEl = document.getElementById('matchCount');
+
+    totalCountEl.textContent = dtcEntries.length;
+
+    let currentFilter = 'all';
+    let currentSearch = '';
+    let displayedEntries = [];
+
+    function escapeHtml(str) {
+        return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    }
+
+    function highlightMatch(text, query) {
+        if (!query) return escapeHtml(text);
+        const escaped = escapeHtml(text);
+        const regex = new RegExp('(' + query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
+        return escaped.replace(regex, '<mark>$1</mark>');
+    }
+
+    function renderList() {
+        const query = currentSearch.toLowerCase().trim();
+        
+        displayedEntries = dtcEntries.filter(d => {
+            if (currentFilter !== 'all' && d.cat !== currentFilter) return false;
+            if (query && !d.searchText.includes(query)) return false;
+            return true;
+        });
+
+        visibleCountEl.textContent = displayedEntries.length;
+        matchCountEl.textContent = displayedEntries.length;
+
+        if (displayedEntries.length === 0) {
+            listEl.innerHTML = `
+                <div class="empty-state">
+                    <div class="empty-icon">🔍</div>
+                    <h3>No codes found</h3>
+                    <p>Try a different search term or filter</p>
+                </div>`;
+            return;
+        }
+
+        // Render all (the list is small enough at ~1162 items)
+        const html = displayedEntries.map(d => `
+            <div class="dtc-card">
+                <div class="dtc-code cat-${d.cat}">${highlightMatch(d.code, query)}</div>
+                <div class="dtc-desc">${highlightMatch(d.desc, query)}</div>
+            </div>
+        `).join('');
+
+        listEl.innerHTML = html;
+    }
+
+    // Search handler with debounce
+    let searchTimer;
+    searchInput.addEventListener('input', () => {
+        clearTimeout(searchTimer);
+        searchTimer = setTimeout(() => {
+            currentSearch = searchInput.value;
+            renderList();
+        }, 100);
+    });
+
+    // Filter chips
+    document.querySelectorAll('.filter-chip').forEach(chip => {
+        chip.addEventListener('click', () => {
+            document.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
+            chip.classList.add('active');
+            currentFilter = chip.dataset.filter;
+            renderList();
+        });
+    });
+
+    // Scroll to top button
+    const scrollBtn = document.getElementById('scrollTop');
+    window.addEventListener('scroll', () => {
+        scrollBtn.classList.toggle('visible', window.scrollY > 400);
+    });
+    scrollBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Keyboard shortcut: Ctrl+K or / to focus search
+    document.addEventListener('keydown', e => {
+        if ((e.ctrlKey && e.key === 'k') || (e.key === '/' && document.activeElement !== searchInput)) {
+            e.preventDefault();
+            searchInput.focus();
+            searchInput.select();
+        }
+        if (e.key === 'Escape') {
+            searchInput.blur();
+        }
+    });
+
+    // Initial render
+    renderList();
+    </script>
+</body>
+</html>
