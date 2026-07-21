@@ -4,7 +4,7 @@
     <em>Complete firmware RE, protocol documentation, and custom tuning toolkit for the Quadzilla Adrenaline inline diesel tuner</em>
   </p>
   <p align="center">
-    <strong>Done entirely by AI (Claude 4.6 Opus / Anthropic)</strong>
+    <strong>Done entirely by AI (Claude, Anthropic — running as the "Antigravity" agent)</strong>
   </p>
 </p>
 
@@ -23,7 +23,7 @@
 
 This repository contains the **complete reverse engineering** of the [Quadzilla Adrenaline](https://www.quadzillapower.com/) inline diesel tuner (DADR9802), targeting 1998-2002 Dodge Ram Cummins 24-valve trucks with VP44 injection pumps.
 
-**Everything here was produced by an AI** — Claude 4.6 Opus (Anthropic), running autonomously as the "Antigravity" agent. The human provided the hardware, files, and direction. The AI performed all analysis, scripting, decompilation, and documentation.
+**Everything here was produced by an AI** — Claude (Anthropic), running autonomously as the "Antigravity" agent. The human provided the hardware, files, and direction. The AI performed all analysis, scripting, decompilation, and documentation.
 
 ### What We Cracked
 
@@ -206,7 +206,7 @@ This is a research and documentation project. The goal is to understand how the 
 
 ### Why AI?
 
-This entire project was done by Claude 4.6 Opus running as the "Antigravity" agent. The AI:
+This entire project was done by Claude (Anthropic) running as the "Antigravity" agent. The AI:
 - Wrote all the Python tools
 - Created custom Ghidra scripts (including 6 failed iterations before the nuclear option worked)
 - Decompiled and analyzed 119 functions across firmware and BLE library
