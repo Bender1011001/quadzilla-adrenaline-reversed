@@ -10,11 +10,30 @@ decompiled/
 # IDE
 .vscode/
 
-# Analysis intermediates (keep in analysis/ but don't commit large binaries)
-analysis/*.exe
-analysis/*.bin
-analysis/*.apk
-analysis/*.Smt
+# Vendor / proprietary binaries — NEVER commit these.
+# Patterns are deliberately unanchored so they apply at the repo root too,
+# not just inside analysis/. The working tree routinely holds the vendor's
+# installers, firmware images and libraries (DataMaster-BT.exe,
+# FirmwareUpdater-BT.exe, S03V*_flash.bin, C1Sizer.ocx, DTCDB.sqlite, ...);
+# committing any of them would redistribute copyrighted software.
+*.exe
+*.dll
+*.ocx
+*.bin
+*.hex
+*.apk
+*.Smt
+*.7z
+*.zip
+*.sqlite
+*.manifest
+# Vendor documentation bundles (DataMaster/MasterTune help + license files).
+# NOTE: do not add a `Docs/` pattern here — core.ignorecase is true on
+# Windows, so it would also match this repo's tracked `docs/` directory.
+*.chm
+*.rtf
+*.url
+/Bin/
 
 # Python
 __pycache__/

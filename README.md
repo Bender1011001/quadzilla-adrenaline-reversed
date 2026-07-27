@@ -65,7 +65,7 @@ quadzilla_rev/
 │       ├── ghidra_decompile_all.py    ← ⭐ THE script — decompiles all 57 firmware functions
 │       ├── ghidra_nuclear.py          ← Nuclear approach for mixed ARM/Thumb analysis
 │       ├── ghidra_x2com.py            ← X2com library decompilation
-│       └── (6 more iterative scripts) ← Earlier attempts, kept for reference
+│       └── (7 more iterative scripts) ← Earlier attempts, kept for reference
 │
 ├── vehicles/                          ← 14 vehicle profile JSONs from Quadzilla's server
 │
@@ -227,7 +227,11 @@ Modifying fueling and timing on a diesel engine can cause **catastrophic failure
 
 ## License
 
-This is research documentation of publicly available consumer hardware and software. All analysis was performed through clean-room decompilation of legally purchased products. No proprietary source code or copyrighted materials are included in this repository.
+Independent research and documentation of a consumer device the author legally purchased, published for interoperability, repair, and educational purposes. Not affiliated with or endorsed by Quadzilla; all product names and marks belong to their respective owners.
+
+**Not redistributed here:** no vendor binaries, installers, firmware images, DLLs, or vendor documentation. `.gitignore` is configured to keep them out of the repository.
+
+**What is here:** analysis artifacts derived from those binaries — decompiler output (`decompiled_firmware_full.c`, `decompiled_x2com.c`), extracted strings, and vehicle profile JSON retrieved from the vendor's public update server. Decompiler output is a derived representation of copyrighted firmware and is included for analysis and protocol documentation, not as a replacement for the product. If you are the rights holder and want something removed, open an issue.
 
 ---
 

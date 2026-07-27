@@ -1,8 +1,11 @@
 # Quadzilla Adrenaline Firmware Reverse Engineering
 
 ## Status
-- **Working**: Firmware decryption/encryption, basic USB comms, AID database (117 mapped), binary analysis
-- **In Progress**: Full decompilation of all 50+ functions (need Ghidra GUI for remaining 30)
+- **Working**: Firmware decryption/encryption, basic USB comms, AID database
+  (117 mapped), binary analysis, decompilation (57 of 60 firmware functions)
+- **Remaining**: 3 firmware functions not recovered; no custom firmware has
+  been built or flashed — the custom-firmware tiers in the docs are analysis
+  of what the free flash space allows, not work that was carried out
 - **Broken**: Nothing critical
 
 ## Tech Stack
@@ -31,9 +34,9 @@
 - `docs/QUADZILLA_RE_COMPLETE.md` — Full RE writeup from AI perspective
 - `docs/AID_REFERENCE.md`        — Complete parameter database (117 AIDs)
 - `ghidra/scripts/ghidra_decompile_all.py` — The Ghidra script that works
-- `analyze_binary.py`      — Raw binary analysis (entropy, prologues, strings)
-- `decompiled_firmware_full.c` — 19 decompiled C functions (~17KB)
-- `ghidra_nuclear.py`      — Best Ghidra script (clear+thumb+disassemble+decompile)
+- `tools/analyze_binary.py`      — Raw binary analysis (entropy, prologues, strings)
+- `decompiled_firmware_full.c` — 57 decompiled C functions (~125KB)
+- `ghidra/scripts/ghidra_nuclear.py` — Best Ghidra script (clear+thumb+disassemble+decompile)
 
 ## Function Map (60 total, 57 decompiled to C — 125KB)
 
