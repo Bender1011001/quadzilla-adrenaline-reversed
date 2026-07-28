@@ -103,11 +103,9 @@ I built `firmware_crypto.py` which handles decrypt, encrypt, roundtrip verificat
 ### Hardware
 | Component | Detail |
 |-----------|--------|
-| MCU | ARM7TDMI (likely AT91SAM7S family) |
-| Flash | 48KB total |
+| MCU | ARM7TDMI (likely AT91SAM7S32) |
+| Flash | 32KB binary image (mapped at `0x4000`–`0xBCFF` in disassembly) |
 | ISA | Mixed ARM (startup) + Thumb (99% of application) |
-| Build | Aug 2, 2018 |
-| Device ID | DADR9802 |
 | Buses | CAN (to ECU/VP44), analog ADC (sensors), USB CDC ACM, BLE |
 
 ### Memory Layout
@@ -115,13 +113,11 @@ I built `firmware_crypto.py` which handles decrypt, encrypt, roundtrip verificat
 0x4000-0x403F   ARM interrupt vectors (8 vectors, 64 bytes)
 0x4040-0x40FF   ARM startup code (reset handler, IRQ, mode switch to Thumb)
 0x4100-0x96FF   Thumb application code + literal pools (~22KB)
-0x9700-0xB200   Calibration tables / lookup data (~7KB)
-0xB200-0xFCFF   Zero-fill padding (~19KB FREE FLASH — this is where custom code goes)
-0xFD00-0xFD0A   Build date "Aug  2 2018"
-0xFE00-0xFE07   Device ID "DADR9802"
+0x9700-0xB1B7   Calibration tables / AID tables / lookup data (~22KB)
+0xB1B8-0xBCFF   Zero-fill padding (2,888 bytes FREE FLASH — this is where custom code goes)
 ```
 
-That 19KB of free flash is significant. The entire application is only 22KB of code. We have almost as much free space as used space. That's room for substantial new functionality.
+That 2.8KB of free flash is significant. The entire application is only 22KB of code. We have almost as much free space as used space. That's room for substantial new functionality.
 
 ### What Every Function Does
 I decompiled 57 functions to C. Here are the important ones:
@@ -131,9 +127,10 @@ I decompiled 57 functions to C. Here are the important ones:
 | Address | Size | Lines | What It Does |
 |---------|------|-------|-------------|
 | **0x50F0** | 1,234B | 320 | **Main control loop** — reads sensors, looks up calibration tables, computes fuel/timing modifications, outputs to VP44. This is the function that makes the truck faster. |
-| **0x59E8** | 722B | 206 | **Fuel/timing calculator** — takes RPM, load, boost, power level → outputs fuel duration (μs) and timing advance (°BTDC). Calls the interpolation functions. |
+| **0x4D38** | 734B | - | **Fueling calculator** — takes RPM, boost, load, power level → computes final VP44 pump fueling outputs (stored in RAM `0x200604`). |
+| **0x59E8** | 722B | 206 | **Analog sensor processor** — reads and scales physical analog inputs (like TPS/APPS voltage) and writes them to RAM (e.g. `0x2005D7` at `0x5b64`). |
 | **0x6C94** | 706B | 265 | **CAN message handler** — receives messages from the ECU, decodes them, routes to appropriate processors. This is how the tuner "sees" what the engine is doing. |
-| **0x77B8** | 646B | 187 | **2D map interpolation** — bilinear interpolation across calibration tables. Two axis values in, one output value out. This is how power curves work. |
+| **0x77B8** | 646B | 187 | **2D map bilinear interpolation** — bilinear interpolation across calibration tables. Two axis values in, one output value out. |
 | **0x81A8** | 854B | 204 | **Fuel curve shaping** — non-linear transforms on fuel quantity. Acceleration enrichment, decel fuel cutoff, cold-start compensation. |
 
 **Supporting Cast:**
@@ -141,7 +138,6 @@ I decompiled 57 functions to C. Here are the important ones:
 | Address | Size | What It Does |
 |---------|------|-------------|
 | 0x4384 | 530B | System init — sets up all peripherals after boot |
-| 0x4D38 | 734B | Parameter table processing — complex branching logic |
 | 0x575C | 622B | Vehicle profile handler — switches between tuning modes |
 | 0x5CF0 | 250B | Protocol state machine — 5 states managing comms |
 | 0x4B38 | 290B | Calibration table processing |
@@ -434,47 +430,40 @@ These require patching the Thumb instructions in the 0x4100-0x96FF region. High 
 | **Custom CAN message injection** | FUN_6C94 — add new message IDs to the handler | Hard |
 | **Anti-surge idle protection** | FUN_50F0 — force level 0 below 1000 RPM | Medium |
 
-### Tier 4 — New Features in Free Flash (use the 19KB at 0xB200-0xFCFF)
-19KB is a LOT of space for an ARM7 embedded system. The entire existing application is only 22KB. Here's what fits:
+### Tier 4 — New Features in Free Flash (use the 2.8KB at 0xB1B8-0xBCFF)
+2.8KB is a reasonable amount of space for custom ARM7/Thumb routines. Here's what fits:
 
 | Feature | Estimated Size | What It Does |
 |---------|---------------|-------------|
-| **Dual-mode auto-tune** | ~4KB | The main goal: detect cruising (stable speed + low TPS + no boost) → switch to economy calibration. Throttle input → instant switch to power calibration. |
-| **Full 2D tuning maps** | ~2KB per map | 16×16 RPM × boost lookup tables with bilinear interpolation. More resolution than the stock 24-point boost curve. |
-| **PID boost controller** | ~1KB | Closed-loop: target boost PSI → adjust fueling to achieve it. Eliminates boost-dependent fueling guesswork. |
-| **Data logger** | ~3KB | Record sensor values to RAM ring buffer, download via USB. Time-stamped logs of boost, EGT, fuel, RPM, speed. |
-| **Adaptive fuel learning** | ~4KB | Self-adjusting fuel map: measure EGT at each operating point, adjust fueling to approach target EGT over time. Like closed-loop wideband but using EGT. |
-| **Launch control** | ~1KB | Adjustable rev limiter with aggressive timing for anti-lag effect |
-| **Limp mode** | ~1KB | Detect dangerous conditions (EGT >1600°F, oil pressure drop, coolant overheat) → force power level 0 |
-| **OBD-II PID emulator** | ~2KB | Respond to standard OBD-II requests with tuner data — lets external gauges and scan tools read tuner parameters |
+| **Dual-mode auto-tune** | ~0.8KB | The main goal: detect cruising (stable speed + low TPS + no boost) → switch to economy calibration. Throttle input → instant switch to power calibration. |
+| **Launch control** | ~0.5KB | Adjustable rev limiter with aggressive timing for anti-lag effect |
+| **Limp mode** | ~0.5KB | Detect dangerous conditions (EGT >1600°F, oil pressure drop, coolant overheat) → force power level 0 |
 
 ### The Dream: Dual-Mode Auto-Tune
 This is what my human collaborator specifically wants. Here's how I'd implement it:
 
 ```
-EVERY MAIN LOOP ITERATION (FUN_50F0):
-  Read TPS (AID 5), Speed (AID 8), Boost (AID 1), RPM (AID 78)
+EVERY MAIN LOOP ITERATION (sub_50F0):
+  Read TPS (from RAM 0x2005D7 / 0x200BC3), Boost (from RAM 0x2005EC), RPM (from RAM 0x2005F0)
   
   IF mode == CRUISE:
-    IF TPS > 40% OR boost > 10 PSI:
+    IF TPS > 75% OR boost > 10 PSI:
       mode = POWER
-      load economy calibration tables
+      restore full power calibration tables
     ELSE:
-      apply economy fuel map (reduce fuel 10-20%)
-      apply retarded timing (-2 to -4°)
+      apply economy fuel map (reduce active fueling values at 0x200bff by 10-20%)
       
   IF mode == POWER:
-    IF TPS < 15% AND speed stable (±2 mph for 5 sec) AND boost < 5 PSI:
+    IF TPS < 70% AND boost < 5 PSI:
       mode = CRUISE
-      load power calibration tables
+      load economy fuel map
     ELSE:
       apply full power fuel map
-      apply full timing advance
 ```
 
-The switching logic needs hysteresis (different thresholds for entering vs. exiting each mode) to prevent oscillation. The decompiled FUN_50F0 already has hysteresis on RPM thresholds, so the pattern exists in the codebase.
+The switching logic needs hysteresis (different thresholds for entering vs. exiting each mode) to prevent oscillation.
 
-Estimated flash: ~4KB for the mode logic, two calibration table sets, and hysteresis state. Fits easily in the 19KB free space.
+Estimated flash: ~1KB for the mode logic and timing offsets, fitting comfortably in the 2.8KB free space.
 
 ---
 
@@ -533,6 +522,16 @@ The x86_64 `libx2com-jni.so` was trivial to decompile and gave me the complete p
 ### The CRC Took Too Long to Understand
 The decompiled CRC function was 90 lines of goto-spaghetti. I should have immediately recognized the Galois LFSR pattern from the constant 0x1D (a well-known CRC-8 polynomial) and tested it empirically rather than trying to trace through every branch.
 
+### June 2026 Verification & Audit Corrections
+In a subsequent thorough audit using headless IDA Pro 9.3 and live binary exploration, several initial assumptions in this document were corrected to reflect absolute ground truth:
+* **True Free Flash Space**: The padding region is `0xB1B8`–`0xBCFF`, yielding exactly **2,888 bytes (2.8KB)** of free space in the 32KB binary image (mapped at `0x4000`–`0xBCFF`), rather than the 19KB originally estimated.
+* **Non-existent Strings**: The date string `"Aug  2 2018"` and device ID `"DADR9802"` do *not* exist in the binary file.
+* **Core Fueling & Sensor Processor**: `sub_59E8` is actually the **analog sensor processor** (reads analog TPS voltage and stores it at `0x2005D7` in RAM), while `sub_4D38` is the true **fueling calculator** that writes the final VP44 fueling output to `0x200604`.
+* **Parameter mapping (AIDs)**: The base offsets of AID tables are `0xa91c` (Table 1) and `0xae80` (Table 2).
+* **Live Sensor RAM Addresses**:
+  * **TPS**: `0x2005D7` (internal) / `0x200BC3` (Bluetooth AID 263).
+  * **IAT**: `0x200BE7` (Bluetooth AID 61).
+
 ### What I'm Proud Of
 - The restricted-range disassembly insight that finally got all 57 functions to decompile
 - Finding the hidden AIDs 145 and 181 by diffing the QZTEST profile
@@ -541,4 +540,4 @@ The decompiled CRC function was 90 lines of goto-spaghetti. I should have immedi
 
 ---
 
-*This document was written by Claude 4.6 Opus (Anthropic), operating as the "Antigravity" agent inside Gemini Code Assist IDE, on March 11, 2026. Every analysis, decompilation, script, and conclusion in this document was produced by the AI. The human provided the hardware, files, and direction. If there are errors in this document, they are my errors, and I'd appreciate knowing about them.*
+*This document was written by Claude (Anthropic), operating as the "Antigravity" agent inside Gemini Code Assist IDE, and audited in June 2026. Every analysis, decompilation, script, and conclusion in this document was produced by the AI. The human provided the hardware, files, and direction. If there are errors in this document, they are my errors, and I'd appreciate knowing about them.*

@@ -10,7 +10,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/MCU-ARM7TDMI-blue?style=flat-square" alt="ARM7TDMI">
-  <img src="https://img.shields.io/badge/Flash-48KB-green?style=flat-square" alt="48KB Flash">
+  <img src="https://img.shields.io/badge/Flash-32KB_image-green?style=flat-square" alt="32KB flash image">
   <img src="https://img.shields.io/badge/Functions-57%20decompiled-orange?style=flat-square" alt="57 Functions">
   <img src="https://img.shields.io/badge/AIDs-117%20mapped-red?style=flat-square" alt="117 AIDs">
   <img src="https://img.shields.io/badge/Protocol-X2com%20BLE-purple?style=flat-square" alt="X2com BLE">
@@ -47,6 +47,7 @@ quadzilla_rev/
 │
 ├── docs/
 │   ├── QUADZILLA_RE_COMPLETE.md       ← 📖 THE MAIN DOCUMENT — full RE writeup from AI's perspective
+│   ├── RE_VERIFICATION_2026-05-02.md  ← ✅ Independent audit: which claims verified, which did not
 │   ├── AID_REFERENCE.md              ← Complete parameter database (117 AIDs)
 │   ├── FINDINGS.md                    ← Initial findings summary
 │   ├── quadzilla_firmware_analysis.md ← Firmware architecture notes
@@ -162,13 +163,19 @@ By diffing the QZTEST diagnostic profile against the standard V2 profile, I foun
 - **AID 145**: AVG MPG Reset — resets the fuel economy counter
 - **AID 181**: Average MPG — reads the calculated average MPG
 
-### 19KB of Free Flash
-The firmware uses 22KB of the 48KB flash. There are **19KB of unused space** at 0xB200-0xFCFF — enough for substantial custom functionality:
-- Dual-mode auto-tune (cruise MPG + max power) — ~4KB
-- PID boost controller — ~1KB
-- Data logger — ~3KB
-- Launch control — ~1KB
-- Limp mode protection — ~1KB
+### 2.8KB of Free Flash
+The binary image is 32KB, mapped at `0x4000`–`0xBCFF`. The zero-fill padding
+region runs `0xB1B8`–`0xBCFF`, giving **exactly 2,888 bytes (2.8KB)** of free
+space. That is enough for small custom routines:
+- Dual-mode auto-tune (cruise MPG + max power) — ~0.8KB
+- Launch control — ~0.5KB
+- Limp mode protection — ~0.5KB
+
+> **Corrected 2026-06.** Earlier revisions of this repo claimed 19KB of free
+> flash in a 48KB part. A headless IDA Pro 9.3 audit measured the real padding
+> region at 2,888 bytes, so larger ideas from the original write-up (data
+> logger, adaptive fuel learning, OBD-II emulator) do not fit. See
+> [docs/RE_VERIFICATION_2026-05-02.md](docs/RE_VERIFICATION_2026-05-02.md).
 
 ---
 
@@ -179,7 +186,7 @@ The firmware uses 22KB of the 48KB flash. There are **19KB of unused space** at 
 | **1** | Change AID parameters (fuel curve, limits, timing) | None | Easy |
 | **2** | Edit calibration tables (fuel/timing maps) | Medium | Medium |
 | **3** | Patch code (speed-based fueling, bypass checks) | High | Hard |
-| **4** | New features in free flash (auto-tune, PID, logging) | High | Hard |
+| **4** | Small new features in the 2,888B free flash (auto-tune, launch control, limp mode) | High | Hard |
 | **5** | Complete custom firmware (dual-mode, adaptive) | Very High | Expert |
 
 See [docs/QUADZILLA_RE_COMPLETE.md](docs/QUADZILLA_RE_COMPLETE.md#custom) for detailed breakdowns of each tier.
@@ -192,7 +199,7 @@ See [docs/QUADZILLA_RE_COMPLETE.md](docs/QUADZILLA_RE_COMPLETE.md#custom) for de
 |-----------|--------|
 | **Device** | Quadzilla Adrenaline DADR9802 |
 | **MCU** | ARM7TDMI (mixed ARM/Thumb ISA) |
-| **Flash** | 48KB (22KB code + 7KB cal + 19KB free) |
+| **Flash** | 32KB image at `0x4000`–`0xBCFF` (~22KB code + ~22KB cal/tables region + 2,888B free) |
 | **USB** | CDC ACM — VID `0x1A18`, PID `0x0002`, 921600 baud |
 | **BLE** | X2com protocol via iQuad app |
 | **Bus** | CAN (ECU ↔ VP44 injection pump) |

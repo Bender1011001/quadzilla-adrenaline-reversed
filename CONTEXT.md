@@ -9,10 +9,11 @@
 - **Broken**: Nothing critical
 
 ## Tech Stack
-- MCU: ARM7TDMI (AT91SAM7S or similar), 48KB flash  
+- MCU: ARM7TDMI (likely AT91SAM7S32); 32KB binary image mapped at 0x4000-0xBCFF
 - ISA: Mixed ARM (startup) + Thumb (application code)
 - Firmware: Intel HEX, XOR cipher-chain encrypted
-- Build: Aug 2 2018, Device ID: DADR9802
+- Device model: DADR9802 (product marking; note that no build-date or
+  device-ID string is actually present inside the firmware image)
 - Tools: Python 3.x, Ghidra 11.3.2 (Java 17), Jython 2.7
 
 ## Memory Map
@@ -20,11 +21,14 @@
 0x4000-0x403F  ARM interrupt vectors (8 vectors, ARM branch instructions)
 0x4040-0x40FF  ARM startup code (reset handler, IRQ, mode switching)
 0x4100-0x96FF  Thumb application code + literal pools (~22KB)
-0x9700-0xB200  Calibration tables / lookup data (~7KB)  
-0xB200-0xFCFF  Zero-fill padding (~19KB unused flash)
-0xFD00-0xFD0A  Build date string "Aug  2 2018"
-0xFE00-0xFE07  Device ID string "DADR9802"
-0xFF00         End of firmware
+0x9700-0xB1B7  Calibration tables / AID tables / lookup data
+0xB1B8-0xBCFF  Zero-fill padding (2,888 bytes unused flash)
+0xBCFF         End of 32KB binary image
+
+# Corrected 2026-06 (headless IDA Pro 9.3 audit): earlier notes claimed a
+# 48KB part with ~19KB free. They also placed a build-date string
+# "Aug  2 2018" at 0xFD00 and a device ID "DADR9802" at 0xFE00 — neither
+# string exists in the binary. See docs/RE_VERIFICATION_2026-05-02.md.
 ```
 
 ## Key Files
