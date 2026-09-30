@@ -11,7 +11,7 @@ import subprocess
 import threading
 from datetime import datetime
 
-TEMP_DIR = os.environ.get('TEMP', r'C:\Users\admin\AppData\Local\Temp')
+TEMP_DIR = os.environ.get('TEMP', r'C:\Users\<user>\AppData\Local\Temp')
 CAPTURE_DIR = r'extracted\from_exe'
 EXE_PATH = os.path.abspath(r'ADR9802v2.8.4.exe')
 

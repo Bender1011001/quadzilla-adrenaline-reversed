@@ -1,9 +1,13 @@
 #!/usr/bin/env python3
 """
-Quadzilla Adrenaline X2com Serial Communication Tool
-=====================================================
-Communicates with the Quadzilla Adrenaline tuner via USB CDC ACM serial port.
-Implements the X2com protocol reversed from Quadzilla.dll and X2Updater.exe.
+Quadzilla Adrenaline USB serial tool (read-only subset)
+========================================================
+Talks to the Adrenaline over its USB CDC ACM serial port using the update-protocol
+opcodes recovered from Quadzilla.dll / X2Updater.exe.
+
+The CLI sends only LINK_CHECK, MODULE_INFO, FEATURE_READ and DISCONNECT. The flashing,
+serial-number and feature-code opcodes are defined below as constants for reference and
+are deliberately not reachable from the CLI.
 
 Protocol: 921600 baud, 8N1, no handshake
 USB: VID 0x1A18, PID 0x0002
@@ -207,18 +211,14 @@ class QuadzillaConnection:
         return features
     
     def probe_aid(self, aid):
+        """Read a single AID over USB. Not implemented.
+
+        The USB link carries X2com frames (see tools/x2com_crc.py and
+        docs/TECHNICAL_REFERENCE.md), but framing them for the USB transport has not
+        been reproduced or tested, so this method refuses rather than guess.
         """
-        Attempt to read a single AID value using the X2com CWA (Command With Ack) pattern.
-        This sends a request for the AID and waits for a response.
-        
-        Note: The exact packet format depends on the X2com JNI implementation.
-        This is a best-effort probe based on the protocol analysis.
-        """
-        # The X2com protocol uses a request/response pattern
-        # The exact format needs to be determined from libx2com-jni.so analysis
-        # For now, we document what we know and provide the framework
-        pass
-    
+        raise NotImplementedError("AID probing over USB is not implemented")
+
     def scan_aids(self, start=0, end=255):
         """Scan AID range for responding parameters."""
         results = {}
@@ -269,13 +269,7 @@ def cmd_ports(args):
 
 def cmd_scan(args):
     """Scan for responding AIDs."""
-    conn = QuadzillaConnection(port=args.port)
-    conn.connect()
-    try:
-        if conn.link_check():
-            conn.scan_aids(args.start, args.end)
-    finally:
-        conn.disconnect()
+    sys.exit("scan: AID probing over USB is not implemented (see QuadzillaConnection.probe_aid)")
 
 
 def main():
@@ -287,7 +281,7 @@ Examples:
   %(prog)s ports                    # List serial ports
   %(prog)s info                     # Get module info
   %(prog)s features                 # Read feature codes
-  %(prog)s scan --start 0 --end 255 # Scan all AIDs
+  %(prog)s scan                     # not implemented
         """
     )
     parser.add_argument('-p', '--port', help='Serial port (auto-detect if not specified)')

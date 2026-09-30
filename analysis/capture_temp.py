@@ -18,7 +18,7 @@ import time
 import threading
 from pathlib import Path
 
-TEMP_DIR = os.environ.get('TEMP', os.environ.get('TMP', r'C:\Users\admin\AppData\Local\Temp'))
+TEMP_DIR = os.environ.get('TEMP', os.environ.get('TMP', r'C:\Users\<user>\AppData\Local\Temp'))
 CAPTURE_DIR = r'extracted\captured'
 EXE_PATH = r'ADR9802v2.8.4.exe'
 

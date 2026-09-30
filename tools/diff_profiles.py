@@ -51,8 +51,12 @@ def extract_aids(profile):
     return aids
 
 def main():
-    base = os.path.dirname(os.path.abspath(__file__))
-    
+    # Profiles live in <repo>/vehicles; an alternative directory may be given as argv[1].
+    repo_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    base = sys.argv[1] if len(sys.argv) > 1 else os.path.join(repo_root, 'vehicles')
+    if not os.path.isdir(base):
+        sys.exit(f"profile directory not found: {base}")
+
     # Load profiles
     profiles = {}
     profile_files = {

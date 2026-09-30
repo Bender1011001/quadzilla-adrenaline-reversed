@@ -1,0 +1,31 @@
+{
+  "format": "sam7s-peripheral-map-v1",
+  "source": {
+    "title": "SAM7S Series Datasheet, Figure 8-1 Memory Mapping",
+    "vendor": "Atmel / Microchip Technology",
+    "document": "doc6175.pdf",
+    "url": "https://ww1.microchip.com/downloads/en/devicedoc/doc6175.pdf",
+    "note": "This maps the observed address layout. It does not independently prove the exact SAM7S density/part suffix fitted to the device."
+  },
+  "ranges": [
+    {"name": "TC0_TC1_TC2", "start": "0xfffa0000", "end": "0xfffa4000"},
+    {"name": "UDP", "start": "0xfffb0000", "end": "0xfffb4000"},
+    {"name": "TWI", "start": "0xfffb8000", "end": "0xfffbc000"},
+    {"name": "USART0", "start": "0xfffc0000", "end": "0xfffc4000"},
+    {"name": "USART1", "start": "0xfffc4000", "end": "0xfffc8000"},
+    {"name": "PWMC", "start": "0xfffcc000", "end": "0xfffd0000"},
+    {"name": "SSC", "start": "0xfffd4000", "end": "0xfffd8000"},
+    {"name": "ADC", "start": "0xfffd8000", "end": "0xfffdc000"},
+    {"name": "SPI", "start": "0xfffe0000", "end": "0xfffe4000"},
+    {"name": "AIC", "start": "0xfffff000", "end": "0xfffff200"},
+    {"name": "DBGU", "start": "0xfffff200", "end": "0xfffff400"},
+    {"name": "PIOA", "start": "0xfffff400", "end": "0xfffff600"},
+    {"name": "PMC", "start": "0xfffffc00", "end": "0xfffffd00"},
+    {"name": "RSTC", "start": "0xfffffd00", "end": "0xfffffd10"},
+    {"name": "RTT", "start": "0xfffffd20", "end": "0xfffffd30"},
+    {"name": "PIT", "start": "0xfffffd30", "end": "0xfffffd40"},
+    {"name": "WDT", "start": "0xfffffd40", "end": "0xfffffd50"},
+    {"name": "VREG", "start": "0xfffffd60", "end": "0xfffffd70"},
+    {"name": "MC", "start": "0xffffff00", "end": "0x100000000"}
+  ]
+}

@@ -1,3 +1,5 @@
+> **Archived, early-stage notes.** Written before the firmware was extracted; the status line below is obsolete. Current results: [../SECURITY_ASSESSMENT.md](../SECURITY_ASSESSMENT.md) and [../REVERSE_ENGINEERING_REPORT.md](../REVERSE_ENGINEERING_REPORT.md).
+
 # Quadzilla Adrenaline Tuner - Reverse Engineering Findings
 
 ## Status Summary

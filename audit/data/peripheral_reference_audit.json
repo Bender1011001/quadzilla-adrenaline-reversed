@@ -1,0 +1,1224 @@
+{
+  "format": "quadzilla-peripheral-reference-audit-v1",
+  "raw_sha256": "1ae519ba6194e8f7bdaaa94333a83a9e6fda3b0563f87f7d48383b37288c1780",
+  "map_source": {
+    "title": "SAM7S Series Datasheet, Figure 8-1 Memory Mapping",
+    "vendor": "Atmel / Microchip Technology",
+    "document": "doc6175.pdf",
+    "url": "https://ww1.microchip.com/downloads/en/devicedoc/doc6175.pdf",
+    "note": "This maps the observed address layout. It does not independently prove the exact SAM7S density/part suffix fitted to the device."
+  },
+  "summary": {
+    "entries_with_peripheral_references": 21,
+    "peripheral_references": 136,
+    "mapped_references": 136,
+    "unmapped_references": 0,
+    "block_reference_counts": {
+      "ADC": 11,
+      "AIC": 29,
+      "PIOA": 40,
+      "PMC": 6,
+      "RSTC": 3,
+      "SPI": 6,
+      "TC0_TC1_TC2": 6,
+      "USART0": 35
+    }
+  },
+  "entries": [
+    {
+      "entry": "0x4214",
+      "semantic_status": "unlabeled_static_entry",
+      "semantics": [],
+      "blocks": {
+        "ADC": 7
+      },
+      "references": [
+        {
+          "site": "0x4216",
+          "target": "0xfffd801c",
+          "region": "peripheral",
+          "block": "ADC",
+          "block_offset": "0x1c"
+        },
+        {
+          "site": "0x4222",
+          "target": "0xfffd803c",
+          "region": "peripheral",
+          "block": "ADC",
+          "block_offset": "0x3c"
+        },
+        {
+          "site": "0x4244",
+          "target": "0xfffd8040",
+          "region": "peripheral",
+          "block": "ADC",
+          "block_offset": "0x40"
+        },
+        {
+          "site": "0x426e",
+          "target": "0xfffd8044",
+          "region": "peripheral",
+          "block": "ADC",
+          "block_offset": "0x44"
+        },
+        {
+          "site": "0x4298",
+          "target": "0xfffd8048",
+          "region": "peripheral",
+          "block": "ADC",
+          "block_offset": "0x48"
+        },
+        {
+          "site": "0x42c4",
+          "target": "0xfffd804c",
+          "region": "peripheral",
+          "block": "ADC",
+          "block_offset": "0x4c"
+        },
+        {
+          "site": "0x42f6",
+          "target": "0xfffd8000",
+          "region": "peripheral",
+          "block": "ADC",
+          "block_offset": "0x0"
+        }
+      ]
+    },
+    {
+      "entry": "0x4330",
+      "semantic_status": "unlabeled_static_entry",
+      "semantics": [],
+      "blocks": {
+        "ADC": 4,
+        "PMC": 1
+      },
+      "references": [
+        {
+          "site": "0x4330",
+          "target": "0xfffffc10",
+          "region": "peripheral",
+          "block": "PMC",
+          "block_offset": "0x10"
+        },
+        {
+          "site": "0x4336",
+          "target": "0xfffd8014",
+          "region": "peripheral",
+          "block": "ADC",
+          "block_offset": "0x14"
+        },
+        {
+          "site": "0x433c",
+          "target": "0xfffd8004",
+          "region": "peripheral",
+          "block": "ADC",
+          "block_offset": "0x4"
+        },
+        {
+          "site": "0x4344",
+          "target": "0xfffd8010",
+          "region": "peripheral",
+          "block": "ADC",
+          "block_offset": "0x10"
+        },
+        {
+          "site": "0x4348",
+          "target": "0xfffd8000",
+          "region": "peripheral",
+          "block": "ADC",
+          "block_offset": "0x0"
+        }
+      ]
+    },
+    {
+      "entry": "0x571c",
+      "semantic_status": "unlabeled_static_entry",
+      "semantics": [],
+      "blocks": {
+        "PIOA": 1
+      },
+      "references": [
+        {
+          "site": "0x571c",
+          "target": "0xfffff434",
+          "region": "peripheral",
+          "block": "PIOA",
+          "block_offset": "0x34"
+        }
+      ]
+    },
+    {
+      "entry": "0x573c",
+      "semantic_status": "unlabeled_static_entry",
+      "semantics": [],
+      "blocks": {
+        "PIOA": 1
+      },
+      "references": [
+        {
+          "site": "0x573c",
+          "target": "0xfffff430",
+          "region": "peripheral",
+          "block": "PIOA",
+          "block_offset": "0x30"
+        }
+      ]
+    },
+    {
+      "entry": "0x575c",
+      "semantic_status": "unlabeled_static_entry",
+      "semantics": [],
+      "blocks": {
+        "RSTC": 1
+      },
+      "references": [
+        {
+          "site": "0x59ac",
+          "target": "0xfffffd00",
+          "region": "peripheral",
+          "block": "RSTC",
+          "block_offset": "0x0"
+        }
+      ]
+    },
+    {
+      "entry": "0x59e8",
+      "semantic_status": "documented_static_role",
+      "semantics": [
+        {
+          "entry": "0x59e8",
+          "label": "Incoming capture unpacker and writer for the 0x2005C4 SRAM structure",
+          "assurance": "static_instruction_trace",
+          "evidence": [
+            "quadzilla_mcu_map.json:functions.sub_59E8"
+          ]
+        }
+      ],
+      "blocks": {
+        "PIOA": 5
+      },
+      "references": [
+        {
+          "site": "0x5a1e",
+          "target": "0xfffff43c",
+          "region": "peripheral",
+          "block": "PIOA",
+          "block_offset": "0x3c"
+        },
+        {
+          "site": "0x5a58",
+          "target": "0xfffff43c",
+          "region": "peripheral",
+          "block": "PIOA",
+          "block_offset": "0x3c"
+        },
+        {
+          "site": "0x5a92",
+          "target": "0xfffff43c",
+          "region": "peripheral",
+          "block": "PIOA",
+          "block_offset": "0x3c"
+        },
+        {
+          "site": "0x5c7a",
+          "target": "0xfffff43c",
+          "region": "peripheral",
+          "block": "PIOA",
+          "block_offset": "0x3c"
+        },
+        {
+          "site": "0x5ca2",
+          "target": "0xfffff43c",
+          "region": "peripheral",
+          "block": "PIOA",
+          "block_offset": "0x3c"
+        }
+      ]
+    },
+    {
+      "entry": "0x5cf0",
+      "semantic_status": "unlabeled_static_entry",
+      "semantics": [],
+      "blocks": {
+        "PIOA": 2
+      },
+      "references": [
+        {
+          "site": "0x5d66",
+          "target": "0xfffff43c",
+          "region": "peripheral",
+          "block": "PIOA",
+          "block_offset": "0x3c"
+        },
+        {
+          "site": "0x5d86",
+          "target": "0xfffff43c",
+          "region": "peripheral",
+          "block": "PIOA",
+          "block_offset": "0x3c"
+        }
+      ]
+    },
+    {
+      "entry": "0x5e04",
+      "semantic_status": "unlabeled_static_entry",
+      "semantics": [],
+      "blocks": {
+        "RSTC": 1
+      },
+      "references": [
+        {
+          "site": "0x5e92",
+          "target": "0xfffffd00",
+          "region": "peripheral",
+          "block": "RSTC",
+          "block_offset": "0x0"
+        }
+      ]
+    },
+    {
+      "entry": "0x6b9c",
+      "semantic_status": "unlabeled_static_entry",
+      "semantics": [],
+      "blocks": {
+        "SPI": 1
+      },
+      "references": [
+        {
+          "site": "0x6bae",
+          "target": "0xfffe0008",
+          "region": "peripheral",
+          "block": "SPI",
+          "block_offset": "0x8"
+        }
+      ]
+    },
+    {
+      "entry": "0x6bd8",
+      "semantic_status": "unlabeled_static_entry",
+      "semantics": [],
+      "blocks": {
+        "AIC": 5,
+        "PMC": 1,
+        "SPI": 5
+      },
+      "references": [
+        {
+          "site": "0x6bda",
+          "target": "0xfffffc10",
+          "region": "peripheral",
+          "block": "PMC",
+          "block_offset": "0x10"
+        },
+        {
+          "site": "0x6be0",
+          "target": "0xfffe0004",
+          "region": "peripheral",
+          "block": "SPI",
+          "block_offset": "0x4"
+        },
+        {
+          "site": "0x6be4",
+          "target": "0xfffe0030",
+          "region": "peripheral",
+          "block": "SPI",
+          "block_offset": "0x30"
+        },
+        {
+          "site": "0x6bea",
+          "target": "0xfffe0000",
+          "region": "peripheral",
+          "block": "SPI",
+          "block_offset": "0x0"
+        },
+        {
+          "site": "0x6bee",
+          "target": "0xfffff094",
+          "region": "peripheral",
+          "block": "AIC",
+          "block_offset": "0x94"
+        },
+        {
+          "site": "0x6bf2",
+          "target": "0xfffff124",
+          "region": "peripheral",
+          "block": "AIC",
+          "block_offset": "0x124"
+        },
+        {
+          "site": "0x6bfa",
+          "target": "0xfffff014",
+          "region": "peripheral",
+          "block": "AIC",
+          "block_offset": "0x14"
+        },
+        {
+          "site": "0x6c00",
+          "target": "0xfffff128",
+          "region": "peripheral",
+          "block": "AIC",
+          "block_offset": "0x128"
+        },
+        {
+          "site": "0x6c04",
+          "target": "0xfffe0018",
+          "region": "peripheral",
+          "block": "SPI",
+          "block_offset": "0x18"
+        },
+        {
+          "site": "0x6c0a",
+          "target": "0xfffff120",
+          "region": "peripheral",
+          "block": "AIC",
+          "block_offset": "0x120"
+        },
+        {
+          "site": "0x6c0e",
+          "target": "0xfffe0014",
+          "region": "peripheral",
+          "block": "SPI",
+          "block_offset": "0x14"
+        }
+      ]
+    },
+    {
+      "entry": "0x6c68",
+      "semantic_status": "unlabeled_static_entry",
+      "semantics": [],
+      "blocks": {
+        "TC0_TC1_TC2": 2
+      },
+      "references": [
+        {
+          "site": "0x6c70",
+          "target": "0xfffa0060",
+          "region": "peripheral",
+          "block": "TC0_TC1_TC2",
+          "block_offset": "0x60"
+        },
+        {
+          "site": "0x6c78",
+          "target": "0xfffa005c",
+          "region": "peripheral",
+          "block": "TC0_TC1_TC2",
+          "block_offset": "0x5c"
+        }
+      ]
+    },
+    {
+      "entry": "0x6c94",
+      "semantic_status": "unlabeled_static_entry",
+      "semantics": [],
+      "blocks": {
+        "AIC": 2
+      },
+      "references": [
+        {
+          "site": "0x6dc4",
+          "target": "0xfffff120",
+          "region": "peripheral",
+          "block": "AIC",
+          "block_offset": "0x120"
+        },
+        {
+          "site": "0x6dc8",
+          "target": "0xfffff110",
+          "region": "peripheral",
+          "block": "AIC",
+          "block_offset": "0x110"
+        }
+      ]
+    },
+    {
+      "entry": "0x6fb4",
+      "semantic_status": "unlabeled_static_entry",
+      "semantics": [],
+      "blocks": {
+        "AIC": 9,
+        "PMC": 1,
+        "TC0_TC1_TC2": 4
+      },
+      "references": [
+        {
+          "site": "0x6fc4",
+          "target": "0xfffffc10",
+          "region": "peripheral",
+          "block": "PMC",
+          "block_offset": "0x10"
+        },
+        {
+          "site": "0x6fd8",
+          "target": "0xfffff0b0",
+          "region": "peripheral",
+          "block": "AIC",
+          "block_offset": "0xb0"
+        },
+        {
+          "site": "0x6fdc",
+          "target": "0xfffff124",
+          "region": "peripheral",
+          "block": "AIC",
+          "block_offset": "0x124"
+        },
+        {
+          "site": "0x6fe4",
+          "target": "0xfffff030",
+          "region": "peripheral",
+          "block": "AIC",
+          "block_offset": "0x30"
+        },
+        {
+          "site": "0x6fea",
+          "target": "0xfffff128",
+          "region": "peripheral",
+          "block": "AIC",
+          "block_offset": "0x128"
+        },
+        {
+          "site": "0x6fee",
+          "target": "0xfffff120",
+          "region": "peripheral",
+          "block": "AIC",
+          "block_offset": "0x120"
+        },
+        {
+          "site": "0x700c",
+          "target": "0xfffa0020",
+          "region": "peripheral",
+          "block": "TC0_TC1_TC2",
+          "block_offset": "0x20"
+        },
+        {
+          "site": "0x7014",
+          "target": "0xfffa001c",
+          "region": "peripheral",
+          "block": "TC0_TC1_TC2",
+          "block_offset": "0x1c"
+        },
+        {
+          "site": "0x7030",
+          "target": "0xfffff0b4",
+          "region": "peripheral",
+          "block": "AIC",
+          "block_offset": "0xb4"
+        },
+        {
+          "site": "0x703c",
+          "target": "0xfffff034",
+          "region": "peripheral",
+          "block": "AIC",
+          "block_offset": "0x34"
+        },
+        {
+          "site": "0x705e",
+          "target": "0xfffa0060",
+          "region": "peripheral",
+          "block": "TC0_TC1_TC2",
+          "block_offset": "0x60"
+        },
+        {
+          "site": "0x7066",
+          "target": "0xfffa005c",
+          "region": "peripheral",
+          "block": "TC0_TC1_TC2",
+          "block_offset": "0x5c"
+        },
+        {
+          "site": "0x7086",
+          "target": "0xfffff0b8",
+          "region": "peripheral",
+          "block": "AIC",
+          "block_offset": "0xb8"
+        },
+        {
+          "site": "0x7090",
+          "target": "0xfffff038",
+          "region": "peripheral",
+          "block": "AIC",
+          "block_offset": "0x38"
+        }
+      ]
+    },
+    {
+      "entry": "0x7178",
+      "semantic_status": "unlabeled_static_entry",
+      "semantics": [],
+      "blocks": {
+        "USART0": 5
+      },
+      "references": [
+        {
+          "site": "0x717a",
+          "target": "0xfffc0014",
+          "region": "peripheral",
+          "block": "USART0",
+          "block_offset": "0x14"
+        },
+        {
+          "site": "0x717e",
+          "target": "0xfffc0120",
+          "region": "peripheral",
+          "block": "USART0",
+          "block_offset": "0x120"
+        },
+        {
+          "site": "0x7180",
+          "target": "0xfffc000c",
+          "region": "peripheral",
+          "block": "USART0",
+          "block_offset": "0xc"
+        },
+        {
+          "site": "0x7192",
+          "target": "0xfffc0104",
+          "region": "peripheral",
+          "block": "USART0",
+          "block_offset": "0x104"
+        },
+        {
+          "site": "0x71a2",
+          "target": "0xfffc0124",
+          "region": "peripheral",
+          "block": "USART0",
+          "block_offset": "0x124"
+        }
+      ]
+    },
+    {
+      "entry": "0x71d0",
+      "semantic_status": "unlabeled_static_entry",
+      "semantics": [],
+      "blocks": {
+        "USART0": 6
+      },
+      "references": [
+        {
+          "site": "0x71d8",
+          "target": "0xfffc0118",
+          "region": "peripheral",
+          "block": "USART0",
+          "block_offset": "0x118"
+        },
+        {
+          "site": "0x71da",
+          "target": "0xfffc011c",
+          "region": "peripheral",
+          "block": "USART0",
+          "block_offset": "0x11c"
+        },
+        {
+          "site": "0x71dc",
+          "target": "0xfffc010c",
+          "region": "peripheral",
+          "block": "USART0",
+          "block_offset": "0x10c"
+        },
+        {
+          "site": "0x71e4",
+          "target": "0xfffc0108",
+          "region": "peripheral",
+          "block": "USART0",
+          "block_offset": "0x108"
+        },
+        {
+          "site": "0x71fa",
+          "target": "0xfffc0008",
+          "region": "peripheral",
+          "block": "USART0",
+          "block_offset": "0x8"
+        },
+        {
+          "site": "0x7200",
+          "target": "0xfffc0120",
+          "region": "peripheral",
+          "block": "USART0",
+          "block_offset": "0x120"
+        }
+      ]
+    },
+    {
+      "entry": "0x720c",
+      "semantic_status": "unlabeled_static_entry",
+      "semantics": [],
+      "blocks": {
+        "USART0": 7
+      },
+      "references": [
+        {
+          "site": "0x7214",
+          "target": "0xfffc0110",
+          "region": "peripheral",
+          "block": "USART0",
+          "block_offset": "0x110"
+        },
+        {
+          "site": "0x7216",
+          "target": "0xfffc0114",
+          "region": "peripheral",
+          "block": "USART0",
+          "block_offset": "0x114"
+        },
+        {
+          "site": "0x7218",
+          "target": "0xfffc0104",
+          "region": "peripheral",
+          "block": "USART0",
+          "block_offset": "0x104"
+        },
+        {
+          "site": "0x7220",
+          "target": "0xfffc0100",
+          "region": "peripheral",
+          "block": "USART0",
+          "block_offset": "0x100"
+        },
+        {
+          "site": "0x7236",
+          "target": "0xfffc0000",
+          "region": "peripheral",
+          "block": "USART0",
+          "block_offset": "0x0"
+        },
+        {
+          "site": "0x7242",
+          "target": "0xfffc0008",
+          "region": "peripheral",
+          "block": "USART0",
+          "block_offset": "0x8"
+        },
+        {
+          "site": "0x724a",
+          "target": "0xfffc0120",
+          "region": "peripheral",
+          "block": "USART0",
+          "block_offset": "0x120"
+        }
+      ]
+    },
+    {
+      "entry": "0x725c",
+      "semantic_status": "unlabeled_static_entry",
+      "semantics": [],
+      "blocks": {
+        "AIC": 5,
+        "PMC": 1,
+        "USART0": 17
+      },
+      "references": [
+        {
+          "site": "0x7260",
+          "target": "0xfffffc10",
+          "region": "peripheral",
+          "block": "PMC",
+          "block_offset": "0x10"
+        },
+        {
+          "site": "0x7264",
+          "target": "0xfffc000c",
+          "region": "peripheral",
+          "block": "USART0",
+          "block_offset": "0xc"
+        },
+        {
+          "site": "0x726c",
+          "target": "0xfffc0000",
+          "region": "peripheral",
+          "block": "USART0",
+          "block_offset": "0x0"
+        },
+        {
+          "site": "0x7272",
+          "target": "0xfffc0020",
+          "region": "peripheral",
+          "block": "USART0",
+          "block_offset": "0x20"
+        },
+        {
+          "site": "0x727a",
+          "target": "0xfffc0028",
+          "region": "peripheral",
+          "block": "USART0",
+          "block_offset": "0x28"
+        },
+        {
+          "site": "0x727e",
+          "target": "0xfffc0120",
+          "region": "peripheral",
+          "block": "USART0",
+          "block_offset": "0x120"
+        },
+        {
+          "site": "0x7288",
+          "target": "0xfffc0118",
+          "region": "peripheral",
+          "block": "USART0",
+          "block_offset": "0x118"
+        },
+        {
+          "site": "0x728c",
+          "target": "0xfffc011c",
+          "region": "peripheral",
+          "block": "USART0",
+          "block_offset": "0x11c"
+        },
+        {
+          "site": "0x7290",
+          "target": "0xfffc0110",
+          "region": "peripheral",
+          "block": "USART0",
+          "block_offset": "0x110"
+        },
+        {
+          "site": "0x7294",
+          "target": "0xfffc0114",
+          "region": "peripheral",
+          "block": "USART0",
+          "block_offset": "0x114"
+        },
+        {
+          "site": "0x7298",
+          "target": "0xfffc0108",
+          "region": "peripheral",
+          "block": "USART0",
+          "block_offset": "0x108"
+        },
+        {
+          "site": "0x729c",
+          "target": "0xfffc010c",
+          "region": "peripheral",
+          "block": "USART0",
+          "block_offset": "0x10c"
+        },
+        {
+          "site": "0x72a0",
+          "target": "0xfffc0100",
+          "region": "peripheral",
+          "block": "USART0",
+          "block_offset": "0x100"
+        },
+        {
+          "site": "0x72a4",
+          "target": "0xfffc0104",
+          "region": "peripheral",
+          "block": "USART0",
+          "block_offset": "0x104"
+        },
+        {
+          "site": "0x72b0",
+          "target": "0xfffc0004",
+          "region": "peripheral",
+          "block": "USART0",
+          "block_offset": "0x4"
+        },
+        {
+          "site": "0x72b8",
+          "target": "0xfffc0024",
+          "region": "peripheral",
+          "block": "USART0",
+          "block_offset": "0x24"
+        },
+        {
+          "site": "0x72c6",
+          "target": "0xfffc000c",
+          "region": "peripheral",
+          "block": "USART0",
+          "block_offset": "0xc"
+        },
+        {
+          "site": "0x72cc",
+          "target": "0xfffff098",
+          "region": "peripheral",
+          "block": "AIC",
+          "block_offset": "0x98"
+        },
+        {
+          "site": "0x72d0",
+          "target": "0xfffff124",
+          "region": "peripheral",
+          "block": "AIC",
+          "block_offset": "0x124"
+        },
+        {
+          "site": "0x72d8",
+          "target": "0xfffff018",
+          "region": "peripheral",
+          "block": "AIC",
+          "block_offset": "0x18"
+        },
+        {
+          "site": "0x72de",
+          "target": "0xfffff128",
+          "region": "peripheral",
+          "block": "AIC",
+          "block_offset": "0x128"
+        },
+        {
+          "site": "0x72e2",
+          "target": "0xfffff120",
+          "region": "peripheral",
+          "block": "AIC",
+          "block_offset": "0x120"
+        },
+        {
+          "site": "0x72e6",
+          "target": "0xfffc0008",
+          "region": "peripheral",
+          "block": "USART0",
+          "block_offset": "0x8"
+        }
+      ]
+    },
+    {
+      "entry": "0x7448",
+      "semantic_status": "unlabeled_static_entry",
+      "semantics": [],
+      "blocks": {
+        "AIC": 2,
+        "PIOA": 2
+      },
+      "references": [
+        {
+          "site": "0x7452",
+          "target": "0xfffff43c",
+          "region": "peripheral",
+          "block": "PIOA",
+          "block_offset": "0x3c"
+        },
+        {
+          "site": "0x7474",
+          "target": "0xfffff124",
+          "region": "peripheral",
+          "block": "AIC",
+          "block_offset": "0x124"
+        },
+        {
+          "site": "0x7478",
+          "target": "0xfffff128",
+          "region": "peripheral",
+          "block": "AIC",
+          "block_offset": "0x128"
+        },
+        {
+          "site": "0x747c",
+          "target": "0xfffff44c",
+          "region": "peripheral",
+          "block": "PIOA",
+          "block_offset": "0x4c"
+        }
+      ]
+    },
+    {
+      "entry": "0x74e8",
+      "semantic_status": "unlabeled_static_entry",
+      "semantics": [],
+      "blocks": {
+        "AIC": 5,
+        "PIOA": 15,
+        "PMC": 2
+      },
+      "references": [
+        {
+          "site": "0x74f8",
+          "target": "0xfffffc14",
+          "region": "peripheral",
+          "block": "PMC",
+          "block_offset": "0x14"
+        },
+        {
+          "site": "0x74fe",
+          "target": "0xfffffc10",
+          "region": "peripheral",
+          "block": "PMC",
+          "block_offset": "0x10"
+        },
+        {
+          "site": "0x7502",
+          "target": "0xfffff400",
+          "region": "peripheral",
+          "block": "PIOA",
+          "block_offset": "0x0"
+        },
+        {
+          "site": "0x7508",
+          "target": "0xfffff410",
+          "region": "peripheral",
+          "block": "PIOA",
+          "block_offset": "0x10"
+        },
+        {
+          "site": "0x750e",
+          "target": "0xfffff414",
+          "region": "peripheral",
+          "block": "PIOA",
+          "block_offset": "0x14"
+        },
+        {
+          "site": "0x7514",
+          "target": "0xfffff434",
+          "region": "peripheral",
+          "block": "PIOA",
+          "block_offset": "0x34"
+        },
+        {
+          "site": "0x7518",
+          "target": "0xfffff4a4",
+          "region": "peripheral",
+          "block": "PIOA",
+          "block_offset": "0xa4"
+        },
+        {
+          "site": "0x751c",
+          "target": "0xfffff4a0",
+          "region": "peripheral",
+          "block": "PIOA",
+          "block_offset": "0xa0"
+        },
+        {
+          "site": "0x7520",
+          "target": "0xfffff454",
+          "region": "peripheral",
+          "block": "PIOA",
+          "block_offset": "0x54"
+        },
+        {
+          "site": "0x7526",
+          "target": "0xfffff450",
+          "region": "peripheral",
+          "block": "PIOA",
+          "block_offset": "0x50"
+        },
+        {
+          "site": "0x752c",
+          "target": "0xfffff460",
+          "region": "peripheral",
+          "block": "PIOA",
+          "block_offset": "0x60"
+        },
+        {
+          "site": "0x7532",
+          "target": "0xfffff464",
+          "region": "peripheral",
+          "block": "PIOA",
+          "block_offset": "0x64"
+        },
+        {
+          "site": "0x7538",
+          "target": "0xfffff43c",
+          "region": "peripheral",
+          "block": "PIOA",
+          "block_offset": "0x3c"
+        },
+        {
+          "site": "0x7548",
+          "target": "0xfffff470",
+          "region": "peripheral",
+          "block": "PIOA",
+          "block_offset": "0x70"
+        },
+        {
+          "site": "0x754e",
+          "target": "0xfffff474",
+          "region": "peripheral",
+          "block": "PIOA",
+          "block_offset": "0x74"
+        },
+        {
+          "site": "0x7554",
+          "target": "0xfffff404",
+          "region": "peripheral",
+          "block": "PIOA",
+          "block_offset": "0x4"
+        },
+        {
+          "site": "0x755a",
+          "target": "0xfffff088",
+          "region": "peripheral",
+          "block": "AIC",
+          "block_offset": "0x88"
+        },
+        {
+          "site": "0x755e",
+          "target": "0xfffff124",
+          "region": "peripheral",
+          "block": "AIC",
+          "block_offset": "0x124"
+        },
+        {
+          "site": "0x7566",
+          "target": "0xfffff008",
+          "region": "peripheral",
+          "block": "AIC",
+          "block_offset": "0x8"
+        },
+        {
+          "site": "0x756c",
+          "target": "0xfffff128",
+          "region": "peripheral",
+          "block": "AIC",
+          "block_offset": "0x128"
+        },
+        {
+          "site": "0x7570",
+          "target": "0xfffff440",
+          "region": "peripheral",
+          "block": "PIOA",
+          "block_offset": "0x40"
+        },
+        {
+          "site": "0x7576",
+          "target": "0xfffff120",
+          "region": "peripheral",
+          "block": "AIC",
+          "block_offset": "0x120"
+        }
+      ]
+    },
+    {
+      "entry": "0x760c",
+      "semantic_status": "unlabeled_static_entry",
+      "semantics": [],
+      "blocks": {
+        "PIOA": 1
+      },
+      "references": [
+        {
+          "site": "0x760e",
+          "target": "0xfffff43c",
+          "region": "peripheral",
+          "block": "PIOA",
+          "block_offset": "0x3c"
+        }
+      ]
+    },
+    {
+      "entry": "0x77b8",
+      "semantic_status": "unlabeled_static_entry",
+      "semantics": [],
+      "blocks": {
+        "AIC": 1,
+        "PIOA": 13,
+        "RSTC": 1
+      },
+      "references": [
+        {
+          "site": "0x77de",
+          "target": "0xfffff134",
+          "region": "peripheral",
+          "block": "AIC",
+          "block_offset": "0x134"
+        },
+        {
+          "site": "0x780c",
+          "target": "0xfffff430",
+          "region": "peripheral",
+          "block": "PIOA",
+          "block_offset": "0x30"
+        },
+        {
+          "site": "0x781e",
+          "target": "0xfffff434",
+          "region": "peripheral",
+          "block": "PIOA",
+          "block_offset": "0x34"
+        },
+        {
+          "site": "0x7870",
+          "target": "0xfffff470",
+          "region": "peripheral",
+          "block": "PIOA",
+          "block_offset": "0x70"
+        },
+        {
+          "site": "0x7874",
+          "target": "0xfffff474",
+          "region": "peripheral",
+          "block": "PIOA",
+          "block_offset": "0x74"
+        },
+        {
+          "site": "0x7878",
+          "target": "0xfffff404",
+          "region": "peripheral",
+          "block": "PIOA",
+          "block_offset": "0x4"
+        },
+        {
+          "site": "0x787e",
+          "target": "0xfffff400",
+          "region": "peripheral",
+          "block": "PIOA",
+          "block_offset": "0x0"
+        },
+        {
+          "site": "0x7882",
+          "target": "0xfffff410",
+          "region": "peripheral",
+          "block": "PIOA",
+          "block_offset": "0x10"
+        },
+        {
+          "site": "0x78a0",
+          "target": "0xfffff430",
+          "region": "peripheral",
+          "block": "PIOA",
+          "block_offset": "0x30"
+        },
+        {
+          "site": "0x78b8",
+          "target": "0xfffff43c",
+          "region": "peripheral",
+          "block": "PIOA",
+          "block_offset": "0x3c"
+        },
+        {
+          "site": "0x78e4",
+          "target": "0xfffff43c",
+          "region": "peripheral",
+          "block": "PIOA",
+          "block_offset": "0x3c"
+        },
+        {
+          "site": "0x78ec",
+          "target": "0xfffffd00",
+          "region": "peripheral",
+          "block": "RSTC",
+          "block_offset": "0x0"
+        },
+        {
+          "site": "0x791c",
+          "target": "0xfffff43c",
+          "region": "peripheral",
+          "block": "PIOA",
+          "block_offset": "0x3c"
+        },
+        {
+          "site": "0x79b2",
+          "target": "0xfffff430",
+          "region": "peripheral",
+          "block": "PIOA",
+          "block_offset": "0x30"
+        },
+        {
+          "site": "0x7a2a",
+          "target": "0xfffff43c",
+          "region": "peripheral",
+          "block": "PIOA",
+          "block_offset": "0x3c"
+        }
+      ]
+    }
+  ],
+  "unmapped": [],
+  "interpretation": "A mapped address proves that an instruction references a peripheral register block. It does not by itself distinguish initialization, status, data transfer or interrupt handling.",
+  "inputs": {
+    "catalog": {
+      "path": "E:\\code.projects\\dodge\\quadzilla_rev\\captures\\quadzilla_re\\execution_entry_catalog.json",
+      "sha256": "aff5f4139b5996241e6dd2f5152aea231075faf7d74d697f68ab230449411a3b"
+    },
+    "peripheral_map": {
+      "path": "E:\\code.projects\\dodge\\quadzilla_rev\\captures\\quadzilla_re\\sam7s_peripheral_map.json",
+      "sha256": "19a30754292a5e56b15a4a6e32af7d3f252aaae58105890f1fdb247cc5abc611"
+    }
+  }
+}

@@ -1,307 +1,301 @@
 #!/usr/bin/env python3
-"""
-Quadzilla Firmware Encryption/Decryption Tool
-=============================================
-Implements the XOR cipher-chain encryption used by Quadzilla for firmware updates.
+"""Quadzilla Adrenaline ``.qz`` firmware-update container: decrypt, encrypt, verify.
 
-Algorithm (from X2Crypt class in Quadzilla.dll):
-  - Uses a 256-entry CRC32 substitution table for key generation
-  - Encryption: ciphertext[i] = plaintext[i] ^ key[i%8] ^ prev_ciphertext[i-1]
-  - Decryption: plaintext[i] = ciphertext[i] ^ key[i%8] ^ prev_ciphertext[i-1]
-  - Password key is derived from the .pwk file via CRC32 table
+The vendor updater (X2Updater / ``Quadzilla.dll``, class ``X2Crypt``) protects the
+Intel HEX firmware file with an 8-byte key using a ciphertext-feedback XOR chain::
 
-Usage:
-  python firmware_crypto.py decrypt input.qz output.bin --key-file key.pwk
-  python firmware_crypto.py encrypt input.bin output.qz --key-file key.pwk
-  python firmware_crypto.py info input.qz
+    E[i] = P[i] ^ K[i % 8] ^ E[i-1]        (E[-1] = 0)
+    P[i] = E[i] ^ K[i % 8] ^ E[i-1]
+
+The 8-byte key (``.pwk``) is derived from an 8-byte password (``.pwd``) by
+``generate_password_key`` below. Both files, the algorithm and the ciphertext ship in
+the same installer package, so this is obfuscation rather than confidentiality; see
+docs/SECURITY_ASSESSMENT.md (findings F1 and F2).
+
+The key-derivation table is the standard AES ``Te0`` round table. It is computed here
+from the Rijndael S-box and checked against the vendor's table by the test-suite.
+The cipher itself uses no AES rounds.
+
+Only static analysis of the update package was performed. Nothing in this module
+has been tested against a device, and the device-side acceptance rules are unknown.
+
+Usage::
+
+    python firmware_crypto.py decrypt  FirmwareUpdate.qz out.hex  --pwd-file FirmwareUpdate.pwd
+    python firmware_crypto.py decrypt  FirmwareUpdate.qz out.hex  --pwk-file FirmwareUpdate.pwk
+    python firmware_crypto.py decrypt  FirmwareUpdate.qz out.hex  --key 111d6f202ee5a103 --bin out.bin
+    python firmware_crypto.py encrypt  image.hex out.qz --key <16 hex chars>
+    python firmware_crypto.py verify   FirmwareUpdate.qz --pwd-file FirmwareUpdate.pwd
+    python firmware_crypto.py recover-key FirmwareUpdate.qz
+    python firmware_crypto.py info     out.hex
 """
-import struct
+from __future__ import annotations
+
 import argparse
-import os
+import math
 import sys
 
-
-# CRC32 lookup table (same as .NET Quadzilla.dll X2Crypt class)
-def build_crc32_table():
-    """Build the 256-entry CRC32 substitution table used for key derivation."""
-    table = []
-    for i in range(256):
-        crc = i
-        for _ in range(8):
-            if crc & 1:
-                crc = (crc >> 1) ^ 0xEDB88320
-            else:
-                crc >>= 1
-        table.append(crc & 0xFFFFFFFF)
-    return table
-
-CRC32_TABLE = build_crc32_table()
+KEY_LEN = 8
 
 
-def derive_key_from_password(password_bytes):
+# --- key derivation -------------------------------------------------------
+
+def _aes_sbox() -> list[int]:
+    """Rijndael S-box, generated (multiplicative inverse + affine transform)."""
+    sbox = [0] * 256
+    p = q = 1
+    while True:
+        p = p ^ ((p << 1) & 0xFF) ^ (0x1B if p & 0x80 else 0)  # p *= 3 in GF(2^8)
+        q ^= (q << 1) & 0xFF
+        q ^= (q << 2) & 0xFF
+        q ^= (q << 4) & 0xFF
+        if q & 0x80:
+            q ^= 0x09                                          # q /= 3 in GF(2^8)
+        rot = lambda v, n: ((v << n) | (v >> (8 - n))) & 0xFF
+        sbox[p] = (q ^ rot(q, 1) ^ rot(q, 2) ^ rot(q, 3) ^ rot(q, 4) ^ 0x63) & 0xFF
+        if p == 1:
+            break
+    sbox[0] = 0x63
+    return sbox
+
+
+def _build_te0() -> list[int]:
+    sbox = _aes_sbox()
+
+    def xtime(a: int) -> int:
+        return ((a << 1) ^ 0x1B) & 0xFF if a & 0x80 else (a << 1) & 0xFF
+
+    return [
+        (xtime(s) << 24) | (s << 16) | (s << 8) | (xtime(s) ^ s)
+        for s in sbox
+    ]
+
+
+#: X2Crypt's ``e_table`` (identical to the AES ``Te0`` table).
+E_TABLE = _build_te0()
+
+
+def generate_password_key(password: bytes) -> bytes:
+    """Derive the 8-byte key (``.pwk``) from the 8-byte password (``.pwd``).
+
+    Port of ``X2Crypt.GeneratePasswordKey``. Byte ``password[row*4 + col]`` indexes
+    ``E_TABLE``; entries are rotated left by ``8*col`` bits and XOR-folded per row.
     """
-    Derive the 8-byte encryption key from password bytes.
-    Uses CRC32 table-based transformation as seen in Quadzilla.dll.
-    """
-    # The password key file (.pwk) contains the raw key bytes
-    # For the standard firmware update, the key is embedded in the .pwk resource
-    if len(password_bytes) >= 8:
-        return password_bytes[:8]
-    # Pad with zeros if shorter
-    return password_bytes.ljust(8, b'\x00')
+    if len(password) != KEY_LEN:
+        raise ValueError(f"password must be {KEY_LEN} bytes, got {len(password)}")
+    acc = [0, 0]
+    for col in range(4):
+        for row in range(2):
+            value = E_TABLE[password[row * 4 + col]]
+            if col:
+                shift = col * 8
+                value = ((value << shift) | (value >> (32 - shift))) & 0xFFFFFFFF
+            acc[row] = value if col == 0 else acc[row] ^ value
+    key = bytearray(KEY_LEN)
+    for col in range(4):
+        for row in range(2):
+            key[row * 4 + col] = (acc[row] >> (8 * col)) & 0xFF
+    return bytes(key)
 
 
-def decrypt_firmware(encrypted_data, key):
-    """
-    Decrypt firmware using XOR cipher-chain.
-    
-    Algorithm: plaintext[i] = encrypted[i] ^ key[i % 8] ^ encrypted[i-1]
-    (first byte: plaintext[0] = encrypted[0] ^ key[0])
-    """
-    if len(key) < 8:
-        raise ValueError(f"Key must be 8 bytes, got {len(key)}")
-    
-    decrypted = bytearray(len(encrypted_data))
+# --- cipher ---------------------------------------------------------------
+
+def _check_key(key: bytes) -> None:
+    if len(key) != KEY_LEN:
+        raise ValueError(
+            f"key must be exactly {KEY_LEN} bytes, got {len(key)} "
+            "(truncated .pwk/.pwd files from a damaged extraction are a common cause)"
+        )
+
+
+def decrypt_chain(ciphertext: bytes, key: bytes) -> bytes:
+    _check_key(key)
+    out = bytearray(len(ciphertext))
     prev = 0
-    
-    for i in range(len(encrypted_data)):
-        decrypted[i] = (encrypted_data[i] ^ key[i % 8] ^ prev) & 0xFF
-        prev = encrypted_data[i]
-    
-    return bytes(decrypted)
+    for i, c in enumerate(ciphertext):
+        out[i] = c ^ key[i % KEY_LEN] ^ prev
+        prev = c
+    return bytes(out)
 
 
-def encrypt_firmware(plaintext_data, key):
-    """
-    Encrypt firmware using XOR cipher-chain (reverse of decrypt).
-    
-    Algorithm: encrypted[i] = plaintext[i] ^ key[i % 8] ^ encrypted[i-1]
-    (first byte: encrypted[0] = plaintext[0] ^ key[0])
-    """
-    if len(key) < 8:
-        raise ValueError(f"Key must be 8 bytes, got {len(key)}")
-    
-    encrypted = bytearray(len(plaintext_data))
+def encrypt_chain(plaintext: bytes, key: bytes) -> bytes:
+    _check_key(key)
+    out = bytearray(len(plaintext))
     prev = 0
-    
-    for i in range(len(plaintext_data)):
-        encrypted[i] = (plaintext_data[i] ^ key[i % 8] ^ prev) & 0xFF
-        prev = encrypted[i]
-    
-    return bytes(encrypted)
+    for i, p in enumerate(plaintext):
+        prev = out[i] = p ^ key[i % KEY_LEN] ^ prev
+    return bytes(out)
 
 
-def verify_roundtrip(data, key):
-    """Verify encryption/decryption roundtrip integrity."""
-    encrypted = encrypt_firmware(data, key)
-    decrypted = decrypt_firmware(encrypted, key)
-    return data == decrypted
+def recover_key_known_plaintext(ciphertext: bytes, known: bytes = b":1040000") -> bytes:
+    """Recover the key from ciphertext alone using the predictable Intel HEX header.
+
+    Every Intel HEX record starts with ``:``; the image is loaded at 0x4000 with
+    16-byte records, so the first 8 plaintext bytes are ``:1040000``. Since
+    ``K[i] = P[i] ^ E[i] ^ E[i-1]``, eight known bytes give the whole key, which shows
+    that secrecy of the key files adds nothing.
+    """
+    if len(known) < KEY_LEN or len(ciphertext) < KEY_LEN:
+        raise ValueError("need at least 8 bytes of ciphertext and known plaintext")
+    key = bytearray(KEY_LEN)
+    prev = 0
+    for i in range(KEY_LEN):
+        key[i] = known[i] ^ ciphertext[i] ^ prev
+        prev = ciphertext[i]
+    return bytes(key)
 
 
-def analyze_firmware(data, label=""):
-    """Print analysis of firmware binary."""
+# --- Intel HEX ------------------------------------------------------------
+
+def parse_ihex(text: str) -> tuple[dict[int, int], int, int]:
+    """Parse Intel HEX. Returns ``(address -> byte, record_count, checksum_errors)``."""
+    memory: dict[int, int] = {}
+    records = bad = 0
+    base = 0
+    for line in text.replace("\r", "").split("\n"):
+        line = line.strip()
+        if not line.startswith(":"):
+            continue
+        raw = bytes.fromhex(line[1:])
+        records += 1
+        if sum(raw) & 0xFF:
+            bad += 1
+        count, addr, rtype = raw[0], (raw[1] << 8) | raw[2], raw[3]
+        data = raw[4:4 + count]
+        if rtype == 0x00:
+            for offset, byte in enumerate(data):
+                memory[base + addr + offset] = byte
+        elif rtype == 0x04:
+            base = ((data[0] << 8) | data[1]) << 16
+    return memory, records, bad
+
+
+def ihex_to_image(memory: dict[int, int], fill: int = 0xFF) -> tuple[int, bytes]:
+    if not memory:
+        raise ValueError("no data records")
+    lo, hi = min(memory), max(memory)
+    return lo, bytes(memory.get(a, fill) for a in range(lo, hi + 1))
+
+
+# --- reporting ------------------------------------------------------------
+
+def describe(data: bytes, label: str = "") -> None:
     prefix = f"[{label}] " if label else ""
-    print(f"{prefix}Size: {len(data)} bytes ({len(data)/1024:.1f} KB)")
-    
-    # Check for ARM vectors at start
-    if len(data) >= 32:
-        vectors = struct.unpack_from('<8I', data, 0)
-        is_arm = all(0x00000000 <= v <= 0x00100000 for v in vectors[:4])
-        if is_arm:
-            print(f"{prefix}ARM vectors detected at offset 0:")
-            for i, v in enumerate(vectors):
-                names = ['Reset', 'Undefined', 'SWI', 'PrefAbort', 'DataAbort', 'Reserved', 'IRQ', 'FIQ']
-                print(f"  {names[i]:12s}: 0x{v:08X}")
-    
-    # Look for device ID string
-    for offset in range(len(data) - 8):
-        chunk = data[offset:offset+8]
-        try:
-            s = chunk.decode('ascii')
-            if s.startswith('DADR'):
-                print(f"{prefix}Device ID at 0x{offset:04X}: {s}")
-        except (UnicodeDecodeError, ValueError):
-            pass
-    
-    # Look for build date strings
-    for offset in range(len(data) - 20):
-        chunk = data[offset:offset+20]
-        try:
-            s = chunk.decode('ascii')
-            months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 
-                      'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-            for m in months:
-                if m in s and ('20' in s or '19' in s):
-                    # Clean up and print
-                    end = s.find('\x00')
-                    if end > 0:
-                        s = s[:end]
-                    print(f"{prefix}Build date at 0x{offset:04X}: {s.strip()}")
-                    break
-        except (UnicodeDecodeError, ValueError):
-            pass
-    
-    # Entropy check (high entropy = still encrypted)
-    byte_counts = [0] * 256
+    print(f"{prefix}size: {len(data)} bytes")
+    counts = [0] * 256
     for b in data:
-        byte_counts[b] += 1
-    entropy = 0
-    for count in byte_counts:
-        if count > 0:
-            p = count / len(data)
-            entropy -= p * (p and __import__('math').log2(p))
-    print(f"{prefix}Entropy: {entropy:.2f} bits/byte (8.0 = random/encrypted, <7.0 = normal code)")
-    
-    # Check for repeated patterns (sign of real code vs encrypted)
-    null_runs = 0
-    max_null_run = 0
-    current_null = 0
-    for b in data:
-        if b == 0x00:
-            current_null += 1
-            max_null_run = max(max_null_run, current_null)
-        else:
-            if current_null >= 4:
-                null_runs += 1
-            current_null = 0
-    print(f"{prefix}Null runs (≥4): {null_runs}, longest: {max_null_run}")
+        counts[b] += 1
+    entropy = -sum((c / len(data)) * math.log2(c / len(data)) for c in counts if c) if data else 0.0
+    print(f"{prefix}entropy: {entropy:.2f} bits/byte")
+    if data[:1] == b":":
+        memory, records, bad = parse_ihex(data.decode("ascii", "replace"))
+        if memory:
+            lo, image = ihex_to_image(memory)
+            print(f"{prefix}Intel HEX: {records} records, {bad} checksum errors, "
+                  f"image 0x{lo:X}-0x{lo + len(image) - 1:X} ({len(image)} bytes)")
 
 
-def cmd_decrypt(args):
-    """Decrypt a .qz firmware file."""
-    with open(args.input, 'rb') as f:
-        encrypted = f.read()
-    
-    if args.key_file:
-        with open(args.key_file, 'rb') as f:
-            key = derive_key_from_password(f.read())
-    elif args.key:
-        key = bytes.fromhex(args.key)
-    else:
-        print("[-] Must specify --key-file or --key")
-        sys.exit(1)
-    
-    print(f"[+] Input:  {args.input} ({len(encrypted)} bytes)")
-    print(f"[+] Key:    {key.hex()}")
-    
-    decrypted = decrypt_firmware(encrypted, key)
-    
-    with open(args.output, 'wb') as f:
-        f.write(decrypted)
-    
-    print(f"[+] Output: {args.output} ({len(decrypted)} bytes)")
-    analyze_firmware(decrypted, "Decrypted")
+# --- CLI ------------------------------------------------------------------
+
+def _read(path: str) -> bytes:
+    with open(path, "rb") as fh:
+        return fh.read()
 
 
-def cmd_encrypt(args):
-    """Encrypt a modified firmware binary back to .qz format."""
-    with open(args.input, 'rb') as f:
-        plaintext = f.read()
-    
-    if args.key_file:
-        with open(args.key_file, 'rb') as f:
-            key = derive_key_from_password(f.read())
-    elif args.key:
-        key = bytes.fromhex(args.key)
-    else:
-        print("[-] Must specify --key-file or --key")
-        sys.exit(1)
-    
-    print(f"[+] Input:  {args.input} ({len(plaintext)} bytes)")
-    print(f"[+] Key:    {key.hex()}")
-    
-    # Verify roundtrip before writing
-    if not verify_roundtrip(plaintext, key):
-        print("[-] FATAL: Roundtrip verification failed!")
-        sys.exit(1)
-    print("[+] Roundtrip verification: PASS")
-    
-    encrypted = encrypt_firmware(plaintext, key)
-    
-    with open(args.output, 'wb') as f:
-        f.write(encrypted)
-    
-    print(f"[+] Output: {args.output} ({len(encrypted)} bytes)")
+def _key_from_args(args: argparse.Namespace) -> bytes:
+    if args.key:
+        return bytes.fromhex(args.key)
+    if args.pwk_file:
+        return _read(args.pwk_file)
+    if args.pwd_file:
+        return generate_password_key(_read(args.pwd_file))
+    sys.exit("specify one of --key, --pwk-file, --pwd-file")
 
 
-def cmd_info(args):
-    """Analyze a firmware file (encrypted or decrypted)."""
-    with open(args.input, 'rb') as f:
-        data = f.read()
-    
-    print(f"File: {args.input}")
-    analyze_firmware(data)
+def cmd_decrypt(args: argparse.Namespace) -> None:
+    data = _read(args.input)
+    key = _key_from_args(args)
+    plain = decrypt_chain(data, key)
+    with open(args.output, "wb") as fh:
+        fh.write(plain)
+    print(f"[+] {args.input} ({len(data)} bytes) -> {args.output}")
+    describe(plain, "plaintext")
+    if args.bin:
+        memory, _, _ = parse_ihex(plain.decode("ascii", "replace"))
+        base, image = ihex_to_image(memory)
+        with open(args.bin, "wb") as fh:
+            fh.write(image)
+        print(f"[+] binary image: {args.bin} (load address 0x{base:X}, {len(image)} bytes)")
 
 
-def cmd_verify(args):
-    """Verify decrypt→encrypt roundtrip produces identical output."""
-    with open(args.encrypted, 'rb') as f:
-        original_encrypted = f.read()
-    
-    if args.key_file:
-        with open(args.key_file, 'rb') as f:
-            key = derive_key_from_password(f.read())
-    elif args.key:
-        key = bytes.fromhex(args.key)
-    else:
-        print("[-] Must specify --key-file or --key")
-        sys.exit(1)
-    
-    # Decrypt
-    decrypted = decrypt_firmware(original_encrypted, key)
-    # Re-encrypt
-    re_encrypted = encrypt_firmware(decrypted, key)
-    
-    if original_encrypted == re_encrypted:
-        print("[+] VERIFIED: decrypt→encrypt roundtrip produces identical output")
-    else:
-        # Find first difference
-        for i in range(min(len(original_encrypted), len(re_encrypted))):
-            if original_encrypted[i] != re_encrypted[i]:
-                print(f"[-] MISMATCH at byte {i}: original=0x{original_encrypted[i]:02X} re-encrypted=0x{re_encrypted[i]:02X}")
-                break
-        print(f"[-] FAILED: {sum(a != b for a, b in zip(original_encrypted, re_encrypted))} bytes differ")
+def cmd_encrypt(args: argparse.Namespace) -> None:
+    plain = _read(args.input)
+    key = _key_from_args(args)
+    encrypted = encrypt_chain(plain, key)
+    if decrypt_chain(encrypted, key) != plain:
+        sys.exit("roundtrip check failed")
+    with open(args.output, "wb") as fh:
+        fh.write(encrypted)
+    print(f"[+] {args.input} ({len(plain)} bytes) -> {args.output} (roundtrip verified)")
 
 
-def main():
-    parser = argparse.ArgumentParser(
-        description='Quadzilla Firmware Encryption/Decryption Tool',
-        formatter_class=argparse.RawDescriptionHelpFormatter,
-    )
-    sub = parser.add_subparsers(dest='command')
-    
-    # Decrypt
-    dec = sub.add_parser('decrypt', help='Decrypt .qz firmware')
-    dec.add_argument('input', help='Encrypted .qz file')
-    dec.add_argument('output', help='Output decrypted binary')
-    dec.add_argument('--key-file', help='Password key file (.pwk)')
-    dec.add_argument('--key', help='Hex key string (16 hex chars = 8 bytes)')
-    
-    # Encrypt
-    enc = sub.add_parser('encrypt', help='Encrypt firmware to .qz')
-    enc.add_argument('input', help='Plaintext firmware binary')
-    enc.add_argument('output', help='Output encrypted .qz file')
-    enc.add_argument('--key-file', help='Password key file (.pwk)')
-    enc.add_argument('--key', help='Hex key string (16 hex chars = 8 bytes)')
-    
-    # Info
-    inf = sub.add_parser('info', help='Analyze firmware file')
-    inf.add_argument('input', help='Firmware file to analyze')
-    
-    # Verify
-    ver = sub.add_parser('verify', help='Verify roundtrip integrity')
-    ver.add_argument('encrypted', help='Original encrypted .qz file')
-    ver.add_argument('--key-file', help='Password key file (.pwk)')
-    ver.add_argument('--key', help='Hex key string')
-    
-    args = parser.parse_args()
-    if not args.command:
-        parser.print_help()
-        return
-    
-    {'decrypt': cmd_decrypt, 'encrypt': cmd_encrypt, 
-     'info': cmd_info, 'verify': cmd_verify}[args.command](args)
+def cmd_verify(args: argparse.Namespace) -> None:
+    data = _read(args.input)
+    key = _key_from_args(args)
+    plain = decrypt_chain(data, key)
+    ok = encrypt_chain(plain, key) == data
+    print("[+] re-encrypting the decrypted file reproduces the original" if ok
+          else "[-] roundtrip mismatch")
+    memory, records, bad = parse_ihex(plain.decode("ascii", "replace"))
+    print(f"[{'+' if memory and not bad else '-'}] Intel HEX: {records} records, {bad} checksum errors")
+    sys.exit(0 if ok and memory and not bad else 1)
 
 
-if __name__ == '__main__':
+def cmd_recover_key(args: argparse.Namespace) -> None:
+    key = recover_key_known_plaintext(_read(args.input))
+    plain = decrypt_chain(_read(args.input), key)
+    _, records, bad = parse_ihex(plain.decode("ascii", "replace"))
+    print(f"key (from known plaintext): {key.hex()}")
+    print(f"validation: {records} Intel HEX records, {bad} checksum errors")
+
+
+def cmd_info(args: argparse.Namespace) -> None:
+    describe(_read(args.input))
+
+
+def main(argv: list[str] | None = None) -> None:
+    parser = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
+    sub = parser.add_subparsers(dest="command", required=True)
+
+    def add_key_args(p: argparse.ArgumentParser) -> None:
+        p.add_argument("--key", help="8-byte key as 16 hex characters")
+        p.add_argument("--pwk-file", help="8-byte derived key file (.pwk)")
+        p.add_argument("--pwd-file", help="8-byte password file (.pwd); key is derived")
+
+    p = sub.add_parser("decrypt", help="decrypt a .qz file to Intel HEX")
+    p.add_argument("input"); p.add_argument("output")
+    p.add_argument("--bin", help="also write the flat binary image")
+    add_key_args(p); p.set_defaults(func=cmd_decrypt)
+
+    p = sub.add_parser("encrypt", help="encrypt an Intel HEX file into .qz form")
+    p.add_argument("input"); p.add_argument("output")
+    add_key_args(p); p.set_defaults(func=cmd_encrypt)
+
+    p = sub.add_parser("verify", help="check decrypt/encrypt roundtrip and HEX checksums")
+    p.add_argument("input"); add_key_args(p); p.set_defaults(func=cmd_verify)
+
+    p = sub.add_parser("recover-key", help="recover the key from ciphertext alone")
+    p.add_argument("input"); p.set_defaults(func=cmd_recover_key)
+
+    p = sub.add_parser("info", help="describe a file")
+    p.add_argument("input"); p.set_defaults(func=cmd_info)
+
+    args = parser.parse_args(argv)
+    try:
+        args.func(args)
+    except (ValueError, OSError) as exc:
+        sys.exit(f"error: {exc}")
+
+
+if __name__ == "__main__":
     main()

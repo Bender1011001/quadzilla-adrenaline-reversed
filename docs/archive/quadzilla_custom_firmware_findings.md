@@ -1,3 +1,5 @@
+> **Archived.** Corrects the note above but predates the device-image analysis. Current results: [../SECURITY_ASSESSMENT.md](../SECURITY_ASSESSMENT.md).
+
 # Quadzilla Custom Firmware — What We Learned, Evidence, and What We Can Really Do
 
 This document consolidates the reverse-engineering findings from the provided Quadzilla update assets and decompiled code, explains the true nature of the core “state machine,” and identifies concrete, feasible customizations you can perform on the firmware payloads today. All statements are backed with exact code/file references and external specs where appropriate.

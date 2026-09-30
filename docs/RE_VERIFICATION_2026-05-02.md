@@ -1,8 +1,10 @@
 # Quadzilla RE Findings Verification - 2026-05-02
 
+> **Historical audit.** Kept as the record of how the first round of claims was checked. Later resolutions: the "14 profiles / 117 AIDs" item is now reproducible from the `vehicles/` directory (`python tools/diff_profiles.py`); the function count is superseded by [FIRMWARE_AUDIT.md](FIRMWARE_AUDIT.md); the transport, APK-provenance and other corrections are in the [errata](SECURITY_ASSESSMENT.md#errata-corrections-made-to-earlier-claims-in-this-repository).
+
 ## Scope
 
-This pass verifies the local findings and reverse-engineering map in `E:\code.projects\quadzilla_rev` against the actual files in the repo. The older reports are useful history, but several claims are stale or over-stated.
+This pass verifies the local findings and reverse-engineering map in the project working directory against the actual files. The older reports are useful history, but several claims are stale or over-stated.
 
 ## Verdict Matrix
 
@@ -51,7 +53,7 @@ This pass verifies the local findings and reverse-engineering map in `E:\code.pr
 
 ## Do Not Rely On Without New Evidence
 
-- The `QUADZILLA_RE_COMPLETE.md` claims of 14 profiles, 117 AIDs, 57/60 firmware functions, build date at `0xFD00`, device ID at `0xFE00`, 19 KB free flash, or known live fueling functions are not supported by the current local evidence.
+- The the original `QUADZILLA_RE_COMPLETE.md` (since replaced by `REVERSE_ENGINEERING_REPORT.md`) claims of 14 profiles, 117 AIDs, 57/60 firmware functions, build date at `0xFD00`, device ID at `0xFE00`, 19 KB free flash, or known live fueling functions are not supported by the current local evidence.
 - `quadzilla_firmware_analysis.md` is superseded where it treats `FUN_00427401` as an ECU fueling/table state machine.
 - `overlay.bin` should not be used as the source overlay for the current package. Use `overlay_extracted.bin`.
 - The TPS patch binary should not be treated as a working runtime patch. It is currently only free-space code bytes.
@@ -61,7 +63,7 @@ This pass verifies the local findings and reverse-engineering map in `E:\code.pr
 In our June 27, 2026 audit, all remaining stale and unverified claims were resolved:
 * **DTC Website**: Rebuilt `dtc_website/index.html` from `dtc_database.json`, successfully updating the site to contain all 1,258 entries.
 * **AID Mappings & Profiles**: Mapped Table 1 (`0xa91c`) and Table 2 (`0xae80`) bases, extracting the 24-point boost-to-fueling curve (AIDs 113 to 136 mapping to `0x200b3b`–`0x200b69`).
-* **Firmware Functions & Free Space**: Verified the true free space is 2,888 bytes (`0xB1B8`–`0xBCFF` absolute). Re-identified the true fueling calculator as `sub_4D38` and the analog sensor processor as `sub_59E8`. Deleted all incorrect references to date/device ID strings in `QUADZILLA_RE_COMPLETE.md`.
+* **Firmware Functions & Free Space**: Verified the true free space is 2,888 bytes (`0xB1B8`–`0xBCFF` absolute). Re-identified the true fueling calculator as `sub_4D38` and the analog sensor processor as `sub_59E8`. Deleted all incorrect references to date/device ID strings in the original `QUADZILLA_RE_COMPLETE.md` (since replaced by `REVERSE_ENGINEERING_REPORT.md`).
 * **TPS & IAT RAM Locations**: Located the exact RAM variables for TPS (`0x2005D7` / `0x200BC3`) and IAT (`0x200BE7`) in the memory map.
 
 ## Verification Commands Run

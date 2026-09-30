@@ -1,0 +1,94 @@
+{
+  "format": "quadzilla-semantic-labels-v1",
+  "raw_sha256": "1ae519ba6194e8f7bdaaa94333a83a9e6fda3b0563f87f7d48383b37288c1780",
+  "labels": [
+    {
+      "entry": "0x4818",
+      "label": "TPS/input gate that reads SRAM byte 0x2005D7",
+      "assurance": "static_instruction_trace",
+      "evidence": ["quadzilla_mcu_map.json:functions.sub_4818"]
+    },
+    {
+      "entry": "0x499c",
+      "label": "Backdown-percentage threshold walk used to update AID 13",
+      "assurance": "static_closed_chain",
+      "evidence": ["quadzilla_vp44_chain.json:roles.backdown_percent"]
+    },
+    {
+      "entry": "0x4a94",
+      "label": "Applied-stretch percentage arithmetic using the AID 85 working copy",
+      "assurance": "static_closed_chain",
+      "evidence": ["quadzilla_mcu_map.json:functions.sub_4A94", "quadzilla_vp44_chain.json:roles.internal_limited_stretch"]
+    },
+    {
+      "entry": "0x4b38",
+      "label": "Capture/fuel path that copies 0x2005E8 to telemetry word 0x200604",
+      "assurance": "static_instruction_trace",
+      "evidence": ["quadzilla_mcu_map.json:functions.sub_4B38"]
+    },
+    {
+      "entry": "0x4d38",
+      "label": "Percentage/scalar arithmetic feeding the 0x200604 telemetry path",
+      "assurance": "static_instruction_trace",
+      "evidence": ["quadzilla_mcu_map.json:functions.sub_4D38"]
+    },
+    {
+      "entry": "0x50f0",
+      "label": "Main control loop that applies AID 13 derate and drives the TC0 path",
+      "assurance": "static_closed_chain",
+      "evidence": ["quadzilla_mcu_map.json:functions.sub_50F0", "quadzilla_vp44_chain.json:hardware_output"]
+    },
+    {
+      "entry": "0x59e8",
+      "label": "Incoming capture unpacker and writer for the 0x2005C4 SRAM structure",
+      "assurance": "static_instruction_trace",
+      "evidence": ["quadzilla_mcu_map.json:functions.sub_59E8"]
+    },
+    {
+      "entry": "0x5f34",
+      "label": "Writer of SRAM byte 0x200BE7; live AID meaning remains unproven",
+      "assurance": "static_instruction_trace",
+      "evidence": ["quadzilla_mcu_map.json:functions.sub_5F34"]
+    },
+    {
+      "entry": "0x601c",
+      "label": "AID ingest and validation dispatcher, including AID 85 clamp/echo",
+      "assurance": "static_instruction_trace",
+      "evidence": ["quadzilla_mcu_map.json:functions.sub_601C", "quadzilla_vp44_chain.json:roles.requested_stretch_setting"]
+    },
+    {
+      "entry": "0x6fa0",
+      "label": "AT91 TC channel write helper used for the TC0_RC output",
+      "assurance": "static_closed_chain",
+      "evidence": ["quadzilla_mcu_map.json:functions.sub_6FA0", "quadzilla_vp44_chain.json:hardware_output"]
+    },
+    {
+      "entry": "0x7bf8",
+      "label": "AID payload-width selector using the 75/150/185/220 brackets",
+      "assurance": "static_instruction_trace",
+      "evidence": ["CONTEXT.md:Architecture Quirks", "quadzilla_x2com.md"]
+    },
+    {
+      "entry": "0x7c1c",
+      "label": "AID-to-SRAM resolver for pointer table 1",
+      "assurance": "static_instruction_trace",
+      "evidence": ["CONTEXT.md:Architecture Quirks", "quadzilla_aid_map.json"]
+    },
+    {
+      "entry": "0x7c68",
+      "label": "AID-to-SRAM resolver for pointer table 2",
+      "assurance": "static_instruction_trace",
+      "evidence": ["CONTEXT.md:Architecture Quirks", "quadzilla_aid_map.json"]
+    },
+    {
+      "entry": "0x7d80",
+      "label": "AID data reader that consumes the pointer returned by the table-2 resolver",
+      "assurance": "static_instruction_trace",
+      "evidence": ["CONTEXT.md:Architecture Quirks", "firmware_v2.8.4HF.bin.asm"]
+    }
+  ],
+  "limitations": [
+    "Labels describe static firmware roles and do not prove live engine behavior.",
+    "Unlabeled execution entries require further instruction-level review; they are not inert or unused by default."
+  ]
+}

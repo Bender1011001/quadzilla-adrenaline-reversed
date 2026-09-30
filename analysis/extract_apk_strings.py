@@ -1,14 +1,21 @@
 #!/usr/bin/env python3
 """
-Extract strings and class/method names from the iQuad APK's DEX file.
+Extract strings and class/method names from an Android APK's DEX files.
 APK is just a ZIP - extract classes.dex and scan for parameter names.
+
+Usage: python extract_apk_strings.py path/to/app.apk
+
+Use the iQuad app itself (package com.quadzillapower.iquad, ~2.9 MB, contains
+lib/*/libx2com-jni.so). A 20 MB "iquad.apk" that an earlier revision analysed was the
+Aptoide store client, not iQuad; its string dump was removed.
 """
 import zipfile
 import os
 import re
 import struct
+import sys
 
-APK_PATH = r'E:\code.projects\quadzilla_rev\iquad.apk'
+APK_PATH = sys.argv[1] if len(sys.argv) > 1 else sys.exit(__doc__)
 OUT_DIR = r'extracted/iquad'
 
 def extract_dex_strings(dex_data):

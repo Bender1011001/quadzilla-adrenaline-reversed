@@ -1,3 +1,5 @@
+> **Superseded and partly wrong.** This note treats `FUN_00427401` as an ECU fueling-table builder. It is a bzip2 decompressor inside the Windows updater (see [RE_VERIFICATION_2026-05-02.md](../RE_VERIFICATION_2026-05-02.md)). Kept only as an audit trail of a wrong turn.
+
 # Quadzilla Firmware Reverse Engineering Analysis
 
 ## Project Overview

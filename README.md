@@ -1,247 +1,79 @@
-<p align="center">
-  <h1 align="center">⚡ Quadzilla Adrenaline — Reverse Engineered</h1>
-  <p align="center">
-    <em>Complete firmware RE, protocol documentation, and custom tuning toolkit for the Quadzilla Adrenaline inline diesel tuner</em>
-  </p>
-  <p align="center">
-    <strong>Done entirely by AI (Claude, Anthropic — running as the "Antigravity" agent)</strong>
-  </p>
-</p>
+# Quadzilla Adrenaline: firmware and protocol security analysis
 
-<p align="center">
-  <img src="https://img.shields.io/badge/MCU-ARM7TDMI-blue?style=flat-square" alt="ARM7TDMI">
-  <img src="https://img.shields.io/badge/Flash-32KB_image-green?style=flat-square" alt="32KB flash image">
-  <img src="https://img.shields.io/badge/Functions-57%20decompiled-orange?style=flat-square" alt="57 Functions">
-  <img src="https://img.shields.io/badge/AIDs-117%20mapped-red?style=flat-square" alt="117 AIDs">
-  <img src="https://img.shields.io/badge/Protocol-X2com%20BLE-purple?style=flat-square" alt="X2com BLE">
-  <img src="https://img.shields.io/badge/by-AI%20🤖-black?style=flat-square" alt="By AI">
-</p>
+[![tests](https://github.com/Bender1011001/quadzilla-adrenaline-reversed/actions/workflows/ci.yml/badge.svg)](https://github.com/Bender1011001/quadzilla-adrenaline-reversed/actions/workflows/ci.yml)
+[![license: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
----
+Static security analysis of the **Quadzilla Adrenaline** (DADR9802), an aftermarket inline tuner for 1998.5-2002 Dodge Ram 5.9 Cummins trucks. It sits between the
+ECM and the VP44 injection pump and changes fuel quantity and timing in real time, so an unauthorised write to it can damage an engine.
 
-## What Is This?
+The work covers the firmware update package, the ARM7 firmware image, the iQuad Android app and its native protocol library, and the vendor's parameter profiles.
+Everything is reproducible from scripts and tests in this repository. Claims that could not be verified are labelled, and corrections to earlier versions of this
+repository are listed in the [errata](docs/SECURITY_ASSESSMENT.md#errata-corrections-made-to-earlier-claims-in-this-repository).
 
-This repository contains the **complete reverse engineering** of the [Quadzilla Adrenaline](https://www.quadzillapower.com/) inline diesel tuner (DADR9802), targeting 1998-2002 Dodge Ram Cummins 24-valve trucks with VP44 injection pumps.
+## Results
 
-**Everything here was produced by an AI** — Claude (Anthropic), running autonomously as the "Antigravity" agent. The human provided the hardware, files, and direction. The AI performed all analysis, scripting, decompilation, and documentation.
+| # | Finding | Severity | Evidence |
+|---|---|---|---|
+| F1 | "Encrypted" firmware is a keyed XOR chain; password, key and algorithm ship in the installer; key recoverable from 8 bytes of known plaintext | Low | verified |
+| F2 | Update package has no signature, MAC or hash, only Intel HEX line checksums | Medium (potential) | verified for package; device check untested |
+| F3 | Phone link is Bluetooth **Classic** RFCOMM with no app-level pairing or crypto | Info | verified; pairing strength untested |
+| F4 | X2com control protocol has no authentication, nonce or encryption; CRC-8/SAE-J1850 only | Medium | verified statically |
+| F5 | Parameter limits are client-side; device-side clamping not located | Low | inferred |
 
-### What We Cracked
+Full write-up with CWE mappings, reproduction commands, recommendations and what was *not* tested: **[docs/SECURITY_ASSESSMENT.md](docs/SECURITY_ASSESSMENT.md)**.
 
-| Component | Result |
-|-----------|--------|
-| 🔓 **Firmware encryption** | XOR cipher-chain — key extracted from .NET DLL, roundtrip verified |
-| 🧠 **Firmware code** | 57/60 functions decompiled to **125KB of C code** |
-| 📡 **BLE protocol (X2com)** | Complete: CRC-8, frame format, 6 message types, state machine |
-| 🔌 **USB protocol** | 15 opcodes, 921600 baud, full flash sequence |
-| 🎛️ **Parameters (AIDs)** | 117 mapped from 14 vehicle profiles — including 2 hidden |
-| 📱 **iQuad app** | APK decompiled, native library (62 functions, 224KB C) |
+Supporting analysis:
 
----
+- **Two-tool firmware audit:** IDA Pro 9.3 and Ghidra 11.3.2 independently reconciled to 145 execution entries in a 32,000-byte image, asserted by tests
+  ([docs/FIRMWARE_AUDIT.md](docs/FIRMWARE_AUDIT.md)).
+- **Reverse engineering report:** method, dead ends and open questions ([docs/REVERSE_ENGINEERING_REPORT.md](docs/REVERSE_ENGINEERING_REPORT.md)).
+- **Technical reference:** memory map, X2com frames, USB opcodes, AIDs ([docs/TECHNICAL_REFERENCE.md](docs/TECHNICAL_REFERENCE.md)).
 
-## Repository Structure
+## Try it
 
-```
-quadzilla_rev/
-├── README.md                          ← You are here
-├── CONTEXT.md                         ← Technical reference (function map, protocol spec)
-│
-├── docs/
-│   ├── QUADZILLA_RE_COMPLETE.md       ← 📖 THE MAIN DOCUMENT — full RE writeup from AI's perspective
-│   ├── RE_VERIFICATION_2026-05-02.md  ← ✅ Independent audit: which claims verified, which did not
-│   ├── AID_REFERENCE.md              ← Complete parameter database (117 AIDs)
-│   ├── FINDINGS.md                    ← Initial findings summary
-│   ├── quadzilla_firmware_analysis.md ← Firmware architecture notes
-│   └── quadzilla_custom_firmware_findings.md ← Custom firmware possibilities
-│
-├── tools/
-│   ├── firmware_crypto.py             ← 🔑 Encrypt/decrypt firmware (XOR cipher-chain)
-│   ├── quadzilla_tool.py              ← 🔌 USB serial communication tool
-│   ├── analyze_binary.py              ← 🔍 Raw binary analysis (find functions, ISA, memory map)
-│   ├── diff_profiles.py               ← 📊 Vehicle profile differ (finds hidden AIDs)
-│   ├── analyze_firmware.py            ← Firmware structure analysis
-│   └── analyze_calibration.py         ← Calibration table mapper
-│
-├── ghidra/
-│   └── scripts/
-│       ├── ghidra_decompile_all.py    ← ⭐ THE script — decompiles all 57 firmware functions
-│       ├── ghidra_nuclear.py          ← Nuclear approach for mixed ARM/Thumb analysis
-│       ├── ghidra_x2com.py            ← X2com library decompilation
-│       └── (7 more iterative scripts) ← Earlier attempts, kept for reference
-│
-├── vehicles/                          ← 14 vehicle profile JSONs from Quadzilla's server
-│
-├── decompiled_firmware_full.c         ← 💎 All 57 firmware functions (125KB)
-├── decompiled_x2com.c                 ← 💎 All 62 X2com protocol functions (224KB)
-│
-└── analysis/                          ← Intermediate outputs, scratch scripts, raw data
-```
+Python 3.10+, standard library only (`pyserial` for the USB tool).
 
----
-
-## The Main Document
-
-**📖 [docs/QUADZILLA_RE_COMPLETE.md](docs/QUADZILLA_RE_COMPLETE.md)** — The full reverse engineering writeup, written from the AI's first-person perspective. It covers:
-
-1. **How I got in** — 4 attack surfaces (Windows updater, encrypted firmware, Android app, native BLE library)
-2. **The encryption** — Why it's not really encryption (XOR cipher-chain with key shipped alongside)
-3. **Firmware architecture** — Memory map, boot sequence, 60 functions with purposes
-4. **The Ghidra struggle** — What went wrong, 6 failed scripts, and the nuclear option that worked
-5. **X2com BLE protocol** — Complete spec: CRC-8 (poly 0x1D), frame format, 6 message types
-6. **USB serial protocol** — 15 opcodes with the full firmware flash sequence
-7. **AID parameter system** — 117 tunable parameters, 4-segment architecture, hidden features
-8. **Custom firmware possibilities** — 5 tiers from parameter tweaks to complete new features
-9. **What I got wrong** — Honest mistakes and lessons learned
-
----
-
-## Quick Start
-
-### Decrypt Firmware
 ```bash
-# Extract the key from X2Updater's Quadzilla.dll, then:
-python tools/firmware_crypto.py decrypt FirmwareUpdate.qz decrypted.hex --key-file key.pwk
-
-# Verify roundtrip
-python tools/firmware_crypto.py verify FirmwareUpdate.qz --key-file key.pwk
+python -m unittest discover -s tests -t . -v     # 24 tests, no vendor files needed
+python tools/diff_profiles.py                     # 14 vendor profiles, 117 unique AIDs, QZTEST-only {145, 181}
+python tools/x2com_crc.py                         # CRC-8/SAE-J1850 check value: 0x4B
 ```
 
-### Talk to the Tuner (USB)
+With your own copy of the vendor update package (not included):
+
 ```bash
-pip install pyserial
-
-# Get module info
-python tools/quadzilla_tool.py info
-
-# Read feature codes
-python tools/quadzilla_tool.py features
-
-# Scan for responding AIDs
-python tools/quadzilla_tool.py scan --start 0 --end 255
+python tools/firmware_crypto.py recover-key FirmwareUpdate.qz          # key from ciphertext alone
+python tools/firmware_crypto.py decrypt FirmwareUpdate.qz fw.hex --pwd-file FirmwareUpdate.pwd --bin fw.bin
+# expected image SHA-256: 1ae519ba6194e8f7bdaaa94333a83a9e6fda3b0563f87f7d48383b37288c1780
+python -m unittest tests.test_firmware_audit -v                        # audit numbers vs the committed data
 ```
 
-### Decompile the Firmware (Ghidra)
-```bash
-# Requires Ghidra 11.3.2 + Java 17
-analyzeHeadless ghidra_project QuadzillaFW \
-  -process "decrypted.hex" \
-  -noanalysis \
-  -postScript ghidra/scripts/ghidra_decompile_all.py
+## Layout
+
+```
+docs/    SECURITY_ASSESSMENT.md  findings, errata        FIRMWARE_AUDIT.md   two-tool cross-check
+         REVERSE_ENGINEERING_REPORT.md                   TECHNICAL_REFERENCE.md   AID_REFERENCE.md
+         RE_VERIFICATION_2026-05-02.md  earlier audit    archive/   superseded notes, kept as a record
+tools/   firmware_crypto.py  x2com_crc.py  diff_profiles.py  quadzilla_tool.py (read-only USB subset)  analyze_*.py
+audit/   data/ (IDA + Ghidra exports, reconciliation)   tools/ (export and reconcile scripts)
+ghidra/  scripts used for the first-pass decompile
+tests/   unit tests (crypto, CRC, profiles, audit numbers)
+vehicles/  14 vendor profile JSONs     decompiled_*.c  decompiler output (see NOTICE.md)     analysis/  working notes and scratch scripts
 ```
 
-### Diff Vehicle Profiles
-```bash
-python tools/diff_profiles.py
-# Outputs all 117 AIDs with names, units, ranges, and which vehicles use them
-```
+## Methodology and AI assistance
 
----
+The analysis was done with AI coding assistants (Claude) working under the repository owner's direction on hardware and files the owner supplied.
+Nothing is accepted on an assistant's say-so: a result stays only if a script, a test, or a second independent tool reproduces it, and several earlier
+claims did not survive that check (see the errata). The two-disassembler audit and the test suite exist for that reason.
 
-## Key Findings
+## Scope and responsible use
 
-### The "Encryption"
-```
-E[i] = P[i] ^ KEY[i % 8] ^ E[i-1]     (that's it)
-```
-Key is shipped inside the .NET DLL. No code signing. No integrity check. Firmware modifications flash without complaint.
-
-### The Boost Fueling Curve (AIDs 113-136)
-The tuner has a **24-point user-adjustable fuel curve indexed by boost pressure**:
-```
-AID 113: Fueling at 0 PSI   (50-150%)
-AID 114: Fueling at 1 PSI   (50-150%)
-...
-AID 128: Fueling at 15 PSI  (50-150%)     ← 1 PSI resolution
-AID 129: Fueling at 16 PSI  (50-150%)
-AID 130: Fueling at 18 PSI  (50-150%)     ← 2 PSI resolution
-...
-AID 136: Fueling at 30+ PSI (50-150%)
-```
-100% = stock fueling. Each point is independently adjustable via BLE or USB.
-
-### Hidden Parameters
-By diffing the QZTEST diagnostic profile against the standard V2 profile, I found 2 AIDs that Quadzilla hides from regular users:
-- **AID 145**: AVG MPG Reset — resets the fuel economy counter
-- **AID 181**: Average MPG — reads the calculated average MPG
-
-### 2.8KB of Free Flash
-The binary image is 32KB, mapped at `0x4000`–`0xBCFF`. The zero-fill padding
-region runs `0xB1B8`–`0xBCFF`, giving **exactly 2,888 bytes (2.8KB)** of free
-space. That is enough for small custom routines:
-- Dual-mode auto-tune (cruise MPG + max power) — ~0.8KB
-- Launch control — ~0.5KB
-- Limp mode protection — ~0.5KB
-
-> **Corrected 2026-06.** Earlier revisions of this repo claimed 19KB of free
-> flash in a 48KB part. A headless IDA Pro 9.3 audit measured the real padding
-> region at 2,888 bytes, so larger ideas from the original write-up (data
-> logger, adaptive fuel learning, OBD-II emulator) do not fit. See
-> [docs/RE_VERIFICATION_2026-05-02.md](docs/RE_VERIFICATION_2026-05-02.md).
-
----
-
-## Custom Firmware Possibilities
-
-| Tier | What | Risk | Difficulty |
-|------|------|------|-----------|
-| **1** | Change AID parameters (fuel curve, limits, timing) | None | Easy |
-| **2** | Edit calibration tables (fuel/timing maps) | Medium | Medium |
-| **3** | Patch code (speed-based fueling, bypass checks) | High | Hard |
-| **4** | Small new features in the 2,888B free flash (auto-tune, launch control, limp mode) | High | Hard |
-| **5** | Complete custom firmware (dual-mode, adaptive) | Very High | Expert |
-
-See [docs/QUADZILLA_RE_COMPLETE.md](docs/QUADZILLA_RE_COMPLETE.md#custom) for detailed breakdowns of each tier.
-
----
-
-## Hardware
-
-| Component | Detail |
-|-----------|--------|
-| **Device** | Quadzilla Adrenaline DADR9802 |
-| **MCU** | ARM7TDMI (mixed ARM/Thumb ISA) |
-| **Flash** | 32KB image at `0x4000`–`0xBCFF` (~22KB code + ~22KB cal/tables region + 2,888B free) |
-| **USB** | CDC ACM — VID `0x1A18`, PID `0x0002`, 921600 baud |
-| **BLE** | X2com protocol via iQuad app |
-| **Bus** | CAN (ECU ↔ VP44 injection pump) |
-| **Sensors** | Boost, EGT, TPS, oil pressure, battery, speed |
-
----
-
-## About This Project
-
-This is a research and documentation project. The goal is to understand how the Quadzilla Adrenaline works at a fundamental level — the firmware, the protocols, the tuning parameters — and share that knowledge with the diesel performance community.
-
-### Why AI?
-
-This entire project was done by Claude (Anthropic) running as the "Antigravity" agent. The AI:
-- Wrote all the Python tools
-- Created custom Ghidra scripts (including 6 failed iterations before the nuclear option worked)
-- Decompiled and analyzed 119 functions across firmware and BLE library
-- Mapped all 117 parameters from 14 vehicle profiles
-- Wrote all documentation
-- Made mistakes, figured out why, and fixed them
-
-The [main document](docs/QUADZILLA_RE_COMPLETE.md) is written from the AI's first-person perspective because it's more honest and more interesting than pretending a human did the work.
-
-### ⚠️ Safety Warning
-
-Modifying fueling and timing on a diesel engine can cause **catastrophic failure**:
-- Excessive fuel without airflow → EGT > 1600°F → melted pistons, cracked heads
-- Over-fueling damages the VP44 injection pump ($1500+ replacement)
-- Always have EGT monitoring, start conservative, and have K-TAG backups
-
----
+Independent research on a product the author owns. No vendor binaries, installers, firmware images or APKs are included (`.gitignore` blocks them); see
+[NOTICE.md](NOTICE.md) for what is and is not in the tree. No modified firmware has been flashed and no radio traffic was captured. No vendor contact is
+recorded here. Changing fuel or timing on a diesel can destroy an engine and may be illegal for road use; nothing here is a tuning guide.
 
 ## License
 
-Independent research and documentation of a consumer device the author legally purchased, published for interoperability, repair, and educational purposes. Not affiliated with or endorsed by Quadzilla; all product names and marks belong to their respective owners.
-
-**Not redistributed here:** no vendor binaries, installers, firmware images, DLLs, or vendor documentation. `.gitignore` is configured to keep them out of the repository.
-
-**What is here:** analysis artifacts derived from those binaries — decompiler output (`decompiled_firmware_full.c`, `decompiled_x2com.c`), extracted strings, and vehicle profile JSON retrieved from the vendor's public update server. Decompiler output is a derived representation of copyrighted firmware and is included for analysis and protocol documentation, not as a replacement for the product. If you are the rights holder and want something removed, open an issue.
-
----
-
-<p align="center">
-  <em>Built by an AI. For the diesel community. 🏴‍☠️</em>
-</p>
+MIT for original work ([LICENSE](LICENSE)). Decompiler output, vendor profile JSON and derived analysis artifacts remain the property of their owners and are
+included for analysis and interoperability documentation only.

@@ -1,0 +1,6154 @@
+{
+  "format": "quadzilla-cross-disassembler-audit-v1",
+  "raw_sha256": "1ae519ba6194e8f7bdaaa94333a83a9e6fda3b0563f87f7d48383b37288c1780",
+  "function_entries": {
+    "ida": 122,
+    "ghidra": 133,
+    "shared_exact": 109,
+    "union": 146,
+    "jaccard": 0.746575,
+    "shared": [
+      "0x4114",
+      "0x41f0",
+      "0x4214",
+      "0x4330",
+      "0x4384",
+      "0x4650",
+      "0x4674",
+      "0x4698",
+      "0x46d0",
+      "0x47b0",
+      "0x4818",
+      "0x48e8",
+      "0x495c",
+      "0x497c",
+      "0x499c",
+      "0x4a94",
+      "0x4b38",
+      "0x4d38",
+      "0x506c",
+      "0x50f0",
+      "0x56fc",
+      "0x5704",
+      "0x5714",
+      "0x571c",
+      "0x573c",
+      "0x575c",
+      "0x59e8",
+      "0x5cf0",
+      "0x5e04",
+      "0x5ebc",
+      "0x5f04",
+      "0x5f0c",
+      "0x5f14",
+      "0x5f34",
+      "0x601c",
+      "0x6042",
+      "0x6048",
+      "0x604c",
+      "0x6b08",
+      "0x6b10",
+      "0x6b20",
+      "0x6b64",
+      "0x6b8c",
+      "0x6b9c",
+      "0x6bd8",
+      "0x6c94",
+      "0x6fa0",
+      "0x6fb4",
+      "0x7120",
+      "0x7128",
+      "0x7138",
+      "0x7140",
+      "0x7148",
+      "0x7150",
+      "0x7158",
+      "0x7160",
+      "0x7168",
+      "0x71d0",
+      "0x720c",
+      "0x725c",
+      "0x7364",
+      "0x7380",
+      "0x7398",
+      "0x73bc",
+      "0x73cc",
+      "0x73d4",
+      "0x73dc",
+      "0x73e4",
+      "0x7498",
+      "0x74b4",
+      "0x74e8",
+      "0x760c",
+      "0x76cc",
+      "0x7af8",
+      "0x7b10",
+      "0x7b1c",
+      "0x7b28",
+      "0x7b30",
+      "0x7b38",
+      "0x7b4c",
+      "0x7b60",
+      "0x7bcc",
+      "0x7bf8",
+      "0x7c1c",
+      "0x7c68",
+      "0x7cc4",
+      "0x7d80",
+      "0x7e64",
+      "0x7eb4",
+      "0x7efc",
+      "0x7f28",
+      "0x7f40",
+      "0x7f58",
+      "0x800c",
+      "0x8038",
+      "0x81a8",
+      "0x8504",
+      "0x854c",
+      "0x8678",
+      "0x86a8",
+      "0x86d8",
+      "0x86f0",
+      "0x8788",
+      "0x87e8",
+      "0x8908",
+      "0x893c",
+      "0x8970",
+      "0x89b0",
+      "0x9038"
+    ],
+    "ida_only": [
+      {
+        "start": "0x408c",
+        "name": "sub_408C",
+        "end": "0x4090",
+        "size": 4,
+        "inside_other_function": null,
+        "boundary_interpretation": "unique_candidate"
+      },
+      {
+        "start": "0x40e0",
+        "name": "sub_40E0",
+        "end": "0x40e4",
+        "size": 4,
+        "inside_other_function": null,
+        "boundary_interpretation": "unique_candidate"
+      },
+      {
+        "start": "0x40e4",
+        "name": "sub_40E4",
+        "end": "0x40e8",
+        "size": 4,
+        "inside_other_function": null,
+        "boundary_interpretation": "unique_candidate"
+      },
+      {
+        "start": "0x40e8",
+        "name": "sub_40E8",
+        "end": "0x40ec",
+        "size": 4,
+        "inside_other_function": null,
+        "boundary_interpretation": "unique_candidate"
+      },
+      {
+        "start": "0x6b44",
+        "name": "nullsub_1",
+        "end": "0x6b46",
+        "size": 2,
+        "inside_other_function": null,
+        "boundary_interpretation": "unique_candidate"
+      },
+      {
+        "start": "0x6c48",
+        "name": "sub_6C48",
+        "end": "0x6c5e",
+        "size": 22,
+        "inside_other_function": null,
+        "boundary_interpretation": "unique_candidate"
+      },
+      {
+        "start": "0x6c68",
+        "name": "sub_6C68",
+        "end": "0x6c82",
+        "size": 26,
+        "inside_other_function": null,
+        "boundary_interpretation": "unique_candidate"
+      },
+      {
+        "start": "0x7178",
+        "name": "sub_7178",
+        "end": "0x71be",
+        "size": 70,
+        "inside_other_function": null,
+        "boundary_interpretation": "unique_candidate"
+      },
+      {
+        "start": "0x7444",
+        "name": "nullsub_2",
+        "end": "0x7446",
+        "size": 2,
+        "inside_other_function": null,
+        "boundary_interpretation": "unique_candidate"
+      },
+      {
+        "start": "0x7448",
+        "name": "sub_7448",
+        "end": "0x7486",
+        "size": 62,
+        "inside_other_function": null,
+        "boundary_interpretation": "unique_candidate"
+      },
+      {
+        "start": "0x77b8",
+        "name": "sub_77B8",
+        "end": "0x7a3e",
+        "size": 646,
+        "inside_other_function": null,
+        "boundary_interpretation": "unique_candidate"
+      },
+      {
+        "start": "0xae82",
+        "name": "sub_AE82",
+        "end": "0xb114",
+        "size": 658,
+        "inside_other_function": null,
+        "boundary_interpretation": "unique_candidate"
+      },
+      {
+        "start": "0xb114",
+        "name": "sub_B114",
+        "end": "0xb122",
+        "size": 14,
+        "inside_other_function": null,
+        "boundary_interpretation": "unique_candidate"
+      }
+    ],
+    "ghidra_only": [
+      {
+        "start": "0x4000",
+        "name": "thunk_FUN_00004044",
+        "end": "0x4004",
+        "size": 4,
+        "inside_other_function": null,
+        "boundary_interpretation": "unique_candidate"
+      },
+      {
+        "start": "0x4044",
+        "name": "FUN_00004044",
+        "end": "0x408c",
+        "size": 72,
+        "inside_other_function": null,
+        "boundary_interpretation": "unique_candidate"
+      },
+      {
+        "start": "0x414c",
+        "name": "FUN_0000414c",
+        "end": "0x41be",
+        "size": 114,
+        "inside_other_function": null,
+        "boundary_interpretation": "unique_candidate"
+      },
+      {
+        "start": "0x604e",
+        "name": "caseD_b",
+        "end": "0x6b08",
+        "size": 2024,
+        "inside_other_function": "0x601c",
+        "boundary_interpretation": "split_or_chunk_disagreement"
+      },
+      {
+        "start": "0x6b48",
+        "name": "FUN_00006b48",
+        "end": "0x6b60",
+        "size": 24,
+        "inside_other_function": null,
+        "boundary_interpretation": "unique_candidate"
+      },
+      {
+        "start": "0x74c4",
+        "name": "FUN_000074c4",
+        "end": "0x74de",
+        "size": 26,
+        "inside_other_function": null,
+        "boundary_interpretation": "unique_candidate"
+      },
+      {
+        "start": "0x7b04",
+        "name": "FUN_00007b04",
+        "end": "0x7b0a",
+        "size": 6,
+        "inside_other_function": null,
+        "boundary_interpretation": "unique_candidate"
+      },
+      {
+        "start": "0x7be8",
+        "name": "FUN_00007be8",
+        "end": "0x7bee",
+        "size": 6,
+        "inside_other_function": null,
+        "boundary_interpretation": "unique_candidate"
+      },
+      {
+        "start": "0x7bf0",
+        "name": "FUN_00007bf0",
+        "end": "0x7bf8",
+        "size": 8,
+        "inside_other_function": null,
+        "boundary_interpretation": "unique_candidate"
+      },
+      {
+        "start": "0x7fd8",
+        "name": "FUN_00007fd8",
+        "end": "0x800a",
+        "size": 50,
+        "inside_other_function": null,
+        "boundary_interpretation": "unique_candidate"
+      },
+      {
+        "start": "0x8530",
+        "name": "FUN_00008530",
+        "end": "0x854a",
+        "size": 26,
+        "inside_other_function": null,
+        "boundary_interpretation": "unique_candidate"
+      },
+      {
+        "start": "0x8564",
+        "name": "thunk_FUN_00008568",
+        "end": "0x8566",
+        "size": 2,
+        "inside_other_function": null,
+        "boundary_interpretation": "unique_candidate"
+      },
+      {
+        "start": "0x8568",
+        "name": "FUN_00008568",
+        "end": "0x8574",
+        "size": 12,
+        "inside_other_function": null,
+        "boundary_interpretation": "unique_candidate"
+      },
+      {
+        "start": "0x8574",
+        "name": "thunk_FUN_00008578",
+        "end": "0x8576",
+        "size": 2,
+        "inside_other_function": null,
+        "boundary_interpretation": "unique_candidate"
+      },
+      {
+        "start": "0x8578",
+        "name": "FUN_00008578",
+        "end": "0x8584",
+        "size": 12,
+        "inside_other_function": null,
+        "boundary_interpretation": "unique_candidate"
+      },
+      {
+        "start": "0x8584",
+        "name": "thunk_FUN_00008588",
+        "end": "0x8586",
+        "size": 2,
+        "inside_other_function": null,
+        "boundary_interpretation": "unique_candidate"
+      },
+      {
+        "start": "0x8588",
+        "name": "FUN_00008588",
+        "end": "0x8678",
+        "size": 240,
+        "inside_other_function": null,
+        "boundary_interpretation": "unique_candidate"
+      },
+      {
+        "start": "0x874c",
+        "name": "FUN_0000874c",
+        "end": "0x8788",
+        "size": 60,
+        "inside_other_function": "0x86f0",
+        "boundary_interpretation": "split_or_chunk_disagreement"
+      },
+      {
+        "start": "0x88a4",
+        "name": "FUN_000088a4",
+        "end": "0x8908",
+        "size": 100,
+        "inside_other_function": null,
+        "boundary_interpretation": "unique_candidate"
+      },
+      {
+        "start": "0x90b0",
+        "name": "FUN_000090b0",
+        "end": "0x90e4",
+        "size": 52,
+        "inside_other_function": null,
+        "boundary_interpretation": "unique_candidate"
+      },
+      {
+        "start": "0x90e4",
+        "name": "FUN_000090e4",
+        "end": "0x913c",
+        "size": 88,
+        "inside_other_function": null,
+        "boundary_interpretation": "unique_candidate"
+      },
+      {
+        "start": "0x913c",
+        "name": "FUN_0000913c",
+        "end": "0x92cc",
+        "size": 400,
+        "inside_other_function": null,
+        "boundary_interpretation": "unique_candidate"
+      },
+      {
+        "start": "0x92cc",
+        "name": "FUN_000092cc",
+        "end": "0x94b4",
+        "size": 488,
+        "inside_other_function": null,
+        "boundary_interpretation": "unique_candidate"
+      },
+      {
+        "start": "0x95f4",
+        "name": "FUN_000095f4",
+        "end": "0x96c4",
+        "size": 516,
+        "inside_other_function": null,
+        "boundary_interpretation": "unique_candidate"
+      }
+    ]
+  },
+  "shared_function_boundaries": {
+    "same_end": 88,
+    "different_end": 21,
+    "different": [
+      {
+        "start": "0x56fc",
+        "ida_end": "0x5704",
+        "ghidra_end": "0x5700"
+      },
+      {
+        "start": "0x5714",
+        "ida_end": "0x571c",
+        "ghidra_end": "0x5718"
+      },
+      {
+        "start": "0x5f04",
+        "ida_end": "0x5f0c",
+        "ghidra_end": "0x5f08"
+      },
+      {
+        "start": "0x5f0c",
+        "ida_end": "0x5f14",
+        "ghidra_end": "0x5f10"
+      },
+      {
+        "start": "0x6b08",
+        "ida_end": "0x6b10",
+        "ghidra_end": "0x6b0c"
+      },
+      {
+        "start": "0x7120",
+        "ida_end": "0x7128",
+        "ghidra_end": "0x7124"
+      },
+      {
+        "start": "0x7128",
+        "ida_end": "0x7132",
+        "ghidra_end": "0x8cfc"
+      },
+      {
+        "start": "0x7138",
+        "ida_end": "0x7140",
+        "ghidra_end": "0x713c"
+      },
+      {
+        "start": "0x7140",
+        "ida_end": "0x7148",
+        "ghidra_end": "0x7144"
+      },
+      {
+        "start": "0x7148",
+        "ida_end": "0x7150",
+        "ghidra_end": "0x714c"
+      },
+      {
+        "start": "0x7150",
+        "ida_end": "0x7158",
+        "ghidra_end": "0x7154"
+      },
+      {
+        "start": "0x7158",
+        "ida_end": "0x7160",
+        "ghidra_end": "0x715c"
+      },
+      {
+        "start": "0x7160",
+        "ida_end": "0x7168",
+        "ghidra_end": "0x7164"
+      },
+      {
+        "start": "0x8678",
+        "ida_end": "0x867c",
+        "ghidra_end": "0x86a8"
+      },
+      {
+        "start": "0x86a8",
+        "ida_end": "0x86ac",
+        "ghidra_end": "0x86d8"
+      },
+      {
+        "start": "0x86f0",
+        "ida_end": "0x8788",
+        "ghidra_end": "0x874c"
+      },
+      {
+        "start": "0x8788",
+        "ida_end": "0x8794",
+        "ghidra_end": "0x87e8"
+      },
+      {
+        "start": "0x87e8",
+        "ida_end": "0x8810",
+        "ghidra_end": "0x88a4"
+      },
+      {
+        "start": "0x8908",
+        "ida_end": "0x890c",
+        "ghidra_end": "0x893c"
+      },
+      {
+        "start": "0x8970",
+        "ida_end": "0x8974",
+        "ghidra_end": "0x89b0"
+      },
+      {
+        "start": "0x9038",
+        "ida_end": "0x903c",
+        "ghidra_end": "0x90b0"
+      }
+    ]
+  },
+  "direct_call_edges": {
+    "ida": 136,
+    "ghidra": 159,
+    "shared": 115,
+    "union": 180,
+    "jaccard": 0.638889,
+    "ida_only": [
+      {
+        "caller": "0x601c",
+        "callee": "0x4384"
+      },
+      {
+        "caller": "0x601c",
+        "callee": "0x47b0"
+      },
+      {
+        "caller": "0x601c",
+        "callee": "0x601c"
+      },
+      {
+        "caller": "0x601c",
+        "callee": "0x6042"
+      },
+      {
+        "caller": "0x601c",
+        "callee": "0x6048"
+      },
+      {
+        "caller": "0x601c",
+        "callee": "0x604c"
+      },
+      {
+        "caller": "0x601c",
+        "callee": "0x6b08"
+      },
+      {
+        "caller": "0x601c",
+        "callee": "0x6b10"
+      },
+      {
+        "caller": "0x601c",
+        "callee": "0x7128"
+      },
+      {
+        "caller": "0x601c",
+        "callee": "0x7138"
+      },
+      {
+        "caller": "0x601c",
+        "callee": "0x7160"
+      },
+      {
+        "caller": "0x77b8",
+        "callee": "0x4384"
+      },
+      {
+        "caller": "0x77b8",
+        "callee": "0x47b0"
+      },
+      {
+        "caller": "0x77b8",
+        "callee": "0x5f14"
+      },
+      {
+        "caller": "0x77b8",
+        "callee": "0x73cc"
+      },
+      {
+        "caller": "0x77b8",
+        "callee": "0x73d4"
+      },
+      {
+        "caller": "0x77b8",
+        "callee": "0x73dc"
+      },
+      {
+        "caller": "0x77b8",
+        "callee": "0x73e4"
+      },
+      {
+        "caller": "0x77b8",
+        "callee": "0x74e8"
+      },
+      {
+        "caller": "0x77b8",
+        "callee": "0x760c"
+      },
+      {
+        "caller": "0x77b8",
+        "callee": "0x76cc"
+      }
+    ],
+    "ghidra_only": [
+      {
+        "caller": "0x4044",
+        "callee": "0x4114"
+      },
+      {
+        "caller": "0x4044",
+        "callee": "0x414c"
+      },
+      {
+        "caller": "0x4114",
+        "callee": "0x8530"
+      },
+      {
+        "caller": "0x4384",
+        "callee": "0x8574"
+      },
+      {
+        "caller": "0x4384",
+        "callee": "0x8584"
+      },
+      {
+        "caller": "0x48e8",
+        "callee": "0x8584"
+      },
+      {
+        "caller": "0x495c",
+        "callee": "0x8574"
+      },
+      {
+        "caller": "0x497c",
+        "callee": "0x8584"
+      },
+      {
+        "caller": "0x4a94",
+        "callee": "0x8574"
+      },
+      {
+        "caller": "0x4b38",
+        "callee": "0x8574"
+      },
+      {
+        "caller": "0x4d38",
+        "callee": "0x8574"
+      },
+      {
+        "caller": "0x4d38",
+        "callee": "0x8584"
+      },
+      {
+        "caller": "0x506c",
+        "callee": "0x8584"
+      },
+      {
+        "caller": "0x50f0",
+        "callee": "0x8574"
+      },
+      {
+        "caller": "0x50f0",
+        "callee": "0x8584"
+      },
+      {
+        "caller": "0x59e8",
+        "callee": "0x8564"
+      },
+      {
+        "caller": "0x59e8",
+        "callee": "0x8574"
+      },
+      {
+        "caller": "0x59e8",
+        "callee": "0x8584"
+      },
+      {
+        "caller": "0x5cf0",
+        "callee": "0x6b48"
+      },
+      {
+        "caller": "0x5f14",
+        "callee": "0x8530"
+      },
+      {
+        "caller": "0x604e",
+        "callee": "0x4384"
+      },
+      {
+        "caller": "0x604e",
+        "callee": "0x47b0"
+      },
+      {
+        "caller": "0x604e",
+        "callee": "0x6042"
+      },
+      {
+        "caller": "0x604e",
+        "callee": "0x6048"
+      },
+      {
+        "caller": "0x604e",
+        "callee": "0x604c"
+      },
+      {
+        "caller": "0x604e",
+        "callee": "0x604e"
+      },
+      {
+        "caller": "0x604e",
+        "callee": "0x6b08"
+      },
+      {
+        "caller": "0x604e",
+        "callee": "0x6b10"
+      },
+      {
+        "caller": "0x604e",
+        "callee": "0x7128"
+      },
+      {
+        "caller": "0x604e",
+        "callee": "0x7138"
+      },
+      {
+        "caller": "0x604e",
+        "callee": "0x7160"
+      },
+      {
+        "caller": "0x604e",
+        "callee": "0x8574"
+      },
+      {
+        "caller": "0x604e",
+        "callee": "0x8584"
+      },
+      {
+        "caller": "0x6b64",
+        "callee": "0x6b48"
+      },
+      {
+        "caller": "0x6b9c",
+        "callee": "0x6b48"
+      },
+      {
+        "caller": "0x7128",
+        "callee": "0x8678"
+      },
+      {
+        "caller": "0x7128",
+        "callee": "0x86a8"
+      },
+      {
+        "caller": "0x7efc",
+        "callee": "0x7fd8"
+      },
+      {
+        "caller": "0x8038",
+        "callee": "0x7be8"
+      },
+      {
+        "caller": "0x8038",
+        "callee": "0x7bf0"
+      },
+      {
+        "caller": "0x8038",
+        "callee": "0x7fd8"
+      },
+      {
+        "caller": "0x81a8",
+        "callee": "0x7b04"
+      },
+      {
+        "caller": "0x81a8",
+        "callee": "0x7bf0"
+      },
+      {
+        "caller": "0x81a8",
+        "callee": "0x7fd8"
+      }
+    ]
+  },
+  "critical_functions": [
+    {
+      "start": "0x4818",
+      "ida": true,
+      "ghidra": true,
+      "cross_tool_confirmed": true
+    },
+    {
+      "start": "0x499c",
+      "ida": true,
+      "ghidra": true,
+      "cross_tool_confirmed": true
+    },
+    {
+      "start": "0x4a94",
+      "ida": true,
+      "ghidra": true,
+      "cross_tool_confirmed": true
+    },
+    {
+      "start": "0x4b38",
+      "ida": true,
+      "ghidra": true,
+      "cross_tool_confirmed": true
+    },
+    {
+      "start": "0x4d38",
+      "ida": true,
+      "ghidra": true,
+      "cross_tool_confirmed": true
+    },
+    {
+      "start": "0x50f0",
+      "ida": true,
+      "ghidra": true,
+      "cross_tool_confirmed": true
+    },
+    {
+      "start": "0x59e8",
+      "ida": true,
+      "ghidra": true,
+      "cross_tool_confirmed": true
+    },
+    {
+      "start": "0x601c",
+      "ida": true,
+      "ghidra": true,
+      "cross_tool_confirmed": true
+    },
+    {
+      "start": "0x6fa0",
+      "ida": true,
+      "ghidra": true,
+      "cross_tool_confirmed": true
+    },
+    {
+      "start": "0x7bf8",
+      "ida": true,
+      "ghidra": true,
+      "cross_tool_confirmed": true
+    },
+    {
+      "start": "0x7c1c",
+      "ida": true,
+      "ghidra": true,
+      "cross_tool_confirmed": true
+    },
+    {
+      "start": "0x7c68",
+      "ida": true,
+      "ghidra": true,
+      "cross_tool_confirmed": true
+    },
+    {
+      "start": "0x7d80",
+      "ida": true,
+      "ghidra": true,
+      "cross_tool_confirmed": true
+    }
+  ],
+  "critical_all_cross_tool_confirmed": true,
+  "interpretation": "Shared starts are independently recognized function entries. Tool-only starts and boundary/call disagreements remain candidates requiring instruction-level review.",
+  "legacy_ida_inventory": {
+    "entries": 122,
+    "all_in_current_ida": true,
+    "missing_from_current_ida": [],
+    "cross_tool_confirmed": 109,
+    "not_cross_tool_confirmed": [
+      "0x408c",
+      "0x40e0",
+      "0x40e4",
+      "0x40e8",
+      "0x6b44",
+      "0x6c48",
+      "0x6c68",
+      "0x7178",
+      "0x7444",
+      "0x7448",
+      "0x77b8",
+      "0xae82",
+      "0xb114"
+    ]
+  },
+  "adjudication": {
+    "unit": "execution_entries_including_vectors_thunks_and_alternate_entries",
+    "confirmed": 145,
+    "rejected_partitions": 1,
+    "unresolved": 0,
+    "confirmed_starts": [
+      "0x4000",
+      "0x4044",
+      "0x408c",
+      "0x40e0",
+      "0x40e4",
+      "0x40e8",
+      "0x4114",
+      "0x414c",
+      "0x41f0",
+      "0x4214",
+      "0x4330",
+      "0x4384",
+      "0x4650",
+      "0x4674",
+      "0x4698",
+      "0x46d0",
+      "0x47b0",
+      "0x4818",
+      "0x48e8",
+      "0x495c",
+      "0x497c",
+      "0x499c",
+      "0x4a94",
+      "0x4b38",
+      "0x4d38",
+      "0x506c",
+      "0x50f0",
+      "0x56fc",
+      "0x5704",
+      "0x5714",
+      "0x571c",
+      "0x573c",
+      "0x575c",
+      "0x59e8",
+      "0x5cf0",
+      "0x5e04",
+      "0x5ebc",
+      "0x5f04",
+      "0x5f0c",
+      "0x5f14",
+      "0x5f34",
+      "0x601c",
+      "0x6042",
+      "0x6048",
+      "0x604c",
+      "0x604e",
+      "0x6b08",
+      "0x6b10",
+      "0x6b20",
+      "0x6b44",
+      "0x6b48",
+      "0x6b64",
+      "0x6b8c",
+      "0x6b9c",
+      "0x6bd8",
+      "0x6c48",
+      "0x6c68",
+      "0x6c94",
+      "0x6fa0",
+      "0x6fb4",
+      "0x7120",
+      "0x7128",
+      "0x7138",
+      "0x7140",
+      "0x7148",
+      "0x7150",
+      "0x7158",
+      "0x7160",
+      "0x7168",
+      "0x7178",
+      "0x71d0",
+      "0x720c",
+      "0x725c",
+      "0x7364",
+      "0x7380",
+      "0x7398",
+      "0x73bc",
+      "0x73cc",
+      "0x73d4",
+      "0x73dc",
+      "0x73e4",
+      "0x7444",
+      "0x7448",
+      "0x7498",
+      "0x74b4",
+      "0x74c4",
+      "0x74e8",
+      "0x760c",
+      "0x76cc",
+      "0x77b8",
+      "0x7af8",
+      "0x7b04",
+      "0x7b10",
+      "0x7b1c",
+      "0x7b28",
+      "0x7b30",
+      "0x7b38",
+      "0x7b4c",
+      "0x7b60",
+      "0x7bcc",
+      "0x7be8",
+      "0x7bf0",
+      "0x7bf8",
+      "0x7c1c",
+      "0x7c68",
+      "0x7cc4",
+      "0x7d80",
+      "0x7e64",
+      "0x7eb4",
+      "0x7efc",
+      "0x7f28",
+      "0x7f40",
+      "0x7f58",
+      "0x7fd8",
+      "0x800c",
+      "0x8038",
+      "0x81a8",
+      "0x8504",
+      "0x8530",
+      "0x854c",
+      "0x8564",
+      "0x8568",
+      "0x8574",
+      "0x8578",
+      "0x8584",
+      "0x8588",
+      "0x8678",
+      "0x86a8",
+      "0x86d8",
+      "0x86f0",
+      "0x874c",
+      "0x8788",
+      "0x87e8",
+      "0x88a4",
+      "0x8908",
+      "0x893c",
+      "0x8970",
+      "0x89b0",
+      "0x9038",
+      "0x90b0",
+      "0x90e4",
+      "0x913c",
+      "0x92cc",
+      "0x95f4",
+      "0xb114"
+    ],
+    "rejected": [
+      {
+        "start": "0xae82",
+        "tools": [
+          "IDA"
+        ],
+        "status": "rejected_data_as_function",
+        "reason": "entry lies inside known aid_pointer_table_2",
+        "inside_ida_function": null,
+        "known_data_region": "aid_pointer_table_2",
+        "evidence": {
+          "control_transfers": [],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      }
+    ],
+    "unresolved_entries": [],
+    "entries": [
+      {
+        "start": "0x4000",
+        "tools": [
+          "Ghidra"
+        ],
+        "status": "confirmed_reset_vector",
+        "reason": "raw image entry and external entry point",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x4044",
+        "tools": [
+          "Ghidra"
+        ],
+        "status": "confirmed_reset_target",
+        "reason": "ARM reset vector at 0x4000 branches here",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x408c",
+        "tools": [
+          "IDA"
+        ],
+        "status": "confirmed_pointer_referenced",
+        "reason": "Thumb/ARM entry address is present in a literal pool or IDA data reference",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x408c",
+              "site": "0x408c",
+              "target": "0x408c",
+              "mnemonic": "B"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": [
+            {
+              "at": "0x4108",
+              "value": "0x408c"
+            }
+          ]
+        }
+      },
+      {
+        "start": "0x40e0",
+        "tools": [
+          "IDA"
+        ],
+        "status": "confirmed_pointer_referenced",
+        "reason": "Thumb/ARM entry address is present in a literal pool or IDA data reference",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x40e0",
+              "site": "0x40e0",
+              "target": "0x40e0",
+              "mnemonic": "B"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": [
+            {
+              "at": "0x41e0",
+              "value": "0x40e0"
+            }
+          ]
+        }
+      },
+      {
+        "start": "0x40e4",
+        "tools": [
+          "IDA"
+        ],
+        "status": "confirmed_pointer_referenced",
+        "reason": "Thumb/ARM entry address is present in a literal pool or IDA data reference",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x40e4",
+              "site": "0x40e4",
+              "target": "0x40e4",
+              "mnemonic": "B"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": [
+            {
+              "at": "0x41e4",
+              "value": "0x40e4"
+            }
+          ]
+        }
+      },
+      {
+        "start": "0x40e8",
+        "tools": [
+          "IDA"
+        ],
+        "status": "confirmed_pointer_referenced",
+        "reason": "Thumb/ARM entry address is present in a literal pool or IDA data reference",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x40e8",
+              "site": "0x40e8",
+              "target": "0x40e8",
+              "mnemonic": "B"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": [
+            {
+              "at": "0x41ec",
+              "value": "0x40e8"
+            }
+          ]
+        }
+      },
+      {
+        "start": "0x4114",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [],
+          "data_references": [],
+          "literal_pointer_hits": [
+            {
+              "at": "0x4104",
+              "value": "0x4115"
+            }
+          ]
+        }
+      },
+      {
+        "start": "0x414c",
+        "tools": [
+          "Ghidra"
+        ],
+        "status": "confirmed_indirect_or_alternate_entry",
+        "reason": "IDA branch-exchange or literal-pointer evidence reaches this exact entry",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [],
+          "data_references": [],
+          "literal_pointer_hits": [
+            {
+              "at": "0x40fc",
+              "value": "0x414d"
+            }
+          ]
+        }
+      },
+      {
+        "start": "0x41f0",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x4214",
+              "site": "0x425a",
+              "target": "0x41f0",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x4214",
+              "site": "0x4284",
+              "target": "0x41f0",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x4214",
+              "site": "0x42b0",
+              "target": "0x41f0",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x4214",
+              "site": "0x42dc",
+              "target": "0x41f0",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x4214",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x76cc",
+              "site": "0x76ce",
+              "target": "0x4214",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x4330",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x74e8",
+              "site": "0x7586",
+              "target": "0x4330",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x4384",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x601c",
+              "site": "0x66a6",
+              "target": "0x4384",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x77b8",
+              "site": "0x77f6",
+              "target": "0x4384",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x4650",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x50f0",
+              "site": "0x5574",
+              "target": "0x4650",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x4674",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x50f0",
+              "site": "0x54da",
+              "target": "0x4674",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x4698",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x50f0",
+              "site": "0x55b2",
+              "target": "0x4698",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x46d0",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x50f0",
+              "site": "0x55ac",
+              "target": "0x46d0",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x47b0",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x4b38",
+              "site": "0x4c90",
+              "target": "0x47b0",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x506c",
+              "site": "0x5070",
+              "target": "0x47b0",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x601c",
+              "site": "0x6242",
+              "target": "0x47b0",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x77b8",
+              "site": "0x784a",
+              "target": "0x47b0",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x77b8",
+              "site": "0x78da",
+              "target": "0x47b0",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x4818",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x50f0",
+              "site": "0x523c",
+              "target": "0x4818",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x48e8",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x50f0",
+              "site": "0x5302",
+              "target": "0x48e8",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x495c",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x497c",
+              "site": "0x497e",
+              "target": "0x495c",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x50f0",
+              "site": "0x5422",
+              "target": "0x495c",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x497c",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x50f0",
+              "site": "0x5112",
+              "target": "0x497c",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x499c",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x50f0",
+              "site": "0x522e",
+              "target": "0x499c",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x4a94",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x50f0",
+              "site": "0x5324",
+              "target": "0x4a94",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x4b38",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x50f0",
+              "site": "0x52d2",
+              "target": "0x4b38",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x4d38",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x50f0",
+              "site": "0x525e",
+              "target": "0x4d38",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x506c",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x50f0",
+              "site": "0x5236",
+              "target": "0x506c",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x50f0",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x76cc",
+              "site": "0x76e0",
+              "target": "0x50f0",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x56fc",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x46d0",
+              "site": "0x4750",
+              "target": "0x56fc",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x50f0",
+              "site": "0x54b0",
+              "target": "0x56fc",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x50f0",
+              "site": "0x5500",
+              "target": "0x56fc",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x5704",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x50f0",
+              "site": "0x5492",
+              "target": "0x5704",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x50f0",
+              "site": "0x54f2",
+              "target": "0x5704",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x5714",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x50f0",
+              "site": "0x5504",
+              "target": "0x5714",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x571c",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x5cf0",
+              "site": "0x5ddc",
+              "target": "0x571c",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x573c",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x575c",
+              "site": "0x5760",
+              "target": "0x573c",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x575c",
+              "site": "0x5766",
+              "target": "0x573c",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x59e8",
+              "site": "0x59f8",
+              "target": "0x573c",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x59e8",
+              "site": "0x5a6a",
+              "target": "0x573c",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x575c",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x74e8",
+              "site": "0x7582",
+              "target": "0x575c",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x59e8",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x575c",
+              "site": "0x59b8",
+              "target": "0x59e8",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x76cc",
+              "site": "0x76d8",
+              "target": "0x59e8",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x5cf0",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x575c",
+              "site": "0x59c0",
+              "target": "0x5cf0",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x76cc",
+              "site": "0x76ea",
+              "target": "0x5cf0",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x5e04",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x5ebc",
+              "site": "0x5eea",
+              "target": "0x5e04",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x5ebc",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x59e8",
+              "site": "0x5a6e",
+              "target": "0x5ebc",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x59e8",
+              "site": "0x5a8c",
+              "target": "0x5ebc",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x5f04",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x46d0",
+              "site": "0x4720",
+              "target": "0x5f04",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x46d0",
+              "site": "0x4732",
+              "target": "0x5f04",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x46d0",
+              "site": "0x4738",
+              "target": "0x5f04",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x46d0",
+              "site": "0x474a",
+              "target": "0x5f04",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x46d0",
+              "site": "0x475c",
+              "target": "0x5f04",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x50f0",
+              "site": "0x54c4",
+              "target": "0x5f04",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x59e8",
+              "site": "0x5b50",
+              "target": "0x5f04",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x5f0c",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x46d0",
+              "site": "0x4768",
+              "target": "0x5f0c",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x59e8",
+              "site": "0x5b60",
+              "target": "0x5f0c",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x5f14",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x77b8",
+              "site": "0x77ec",
+              "target": "0x5f14",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x5f34",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x5f14",
+              "site": "0x5f26",
+              "target": "0x5f34",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x601c",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x76cc",
+              "site": "0x76dc",
+              "target": "0x601c",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x6042",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x601c",
+              "site": "0x6a3e",
+              "target": "0x6042",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x6048",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x601c",
+              "site": "0x6a44",
+              "target": "0x6048",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x6042",
+              "site": "0x6044",
+              "target": "0x6048",
+              "mnemonic": "BCS"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x604c",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x601c",
+              "site": "0x68c6",
+              "target": "0x604c",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x601c",
+              "site": "0x68e0",
+              "target": "0x604c",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x601c",
+              "site": "0x68fa",
+              "target": "0x604c",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x601c",
+              "site": "0x6914",
+              "target": "0x604c",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x601c",
+              "site": "0x692e",
+              "target": "0x604c",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x601c",
+              "site": "0x6948",
+              "target": "0x604c",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x601c",
+              "site": "0x6962",
+              "target": "0x604c",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x601c",
+              "site": "0x697c",
+              "target": "0x604c",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x601c",
+              "site": "0x6996",
+              "target": "0x604c",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x601c",
+              "site": "0x69b0",
+              "target": "0x604c",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x601c",
+              "site": "0x69ca",
+              "target": "0x604c",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x601c",
+              "site": "0x69e4",
+              "target": "0x604c",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x601c",
+              "site": "0x69fe",
+              "target": "0x604c",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x601c",
+              "site": "0x6a18",
+              "target": "0x604c",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x601c",
+              "site": "0x6a32",
+              "target": "0x604c",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x604e",
+        "tools": [
+          "Ghidra"
+        ],
+        "status": "confirmed_direct_call_target",
+        "reason": "IDA decodes at least one direct call to this exact entry",
+        "inside_ida_function": "0x601c",
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x601c",
+              "site": "0x6082",
+              "target": "0x604e",
+              "mnemonic": "BHI"
+            },
+            {
+              "function": "0x601c",
+              "site": "0x608a",
+              "target": "0x604e",
+              "mnemonic": "ADD"
+            },
+            {
+              "function": "0x601c",
+              "site": "0x624a",
+              "target": "0x604e",
+              "mnemonic": "B"
+            },
+            {
+              "function": "0x601c",
+              "site": "0x6258",
+              "target": "0x604e",
+              "mnemonic": "B"
+            },
+            {
+              "function": "0x601c",
+              "site": "0x6272",
+              "target": "0x604e",
+              "mnemonic": "B"
+            },
+            {
+              "function": "0x601c",
+              "site": "0x6280",
+              "target": "0x604e",
+              "mnemonic": "B"
+            },
+            {
+              "function": "0x601c",
+              "site": "0x62d4",
+              "target": "0x604e",
+              "mnemonic": "B"
+            },
+            {
+              "function": "0x601c",
+              "site": "0x62fe",
+              "target": "0x604e",
+              "mnemonic": "B"
+            },
+            {
+              "function": "0x601c",
+              "site": "0x632c",
+              "target": "0x604e",
+              "mnemonic": "B"
+            },
+            {
+              "function": "0x601c",
+              "site": "0x6352",
+              "target": "0x604e",
+              "mnemonic": "B"
+            },
+            {
+              "function": "0x601c",
+              "site": "0x6378",
+              "target": "0x604e",
+              "mnemonic": "B"
+            },
+            {
+              "function": "0x601c",
+              "site": "0x63a6",
+              "target": "0x604e",
+              "mnemonic": "B"
+            },
+            {
+              "function": "0x601c",
+              "site": "0x6412",
+              "target": "0x604e",
+              "mnemonic": "B"
+            },
+            {
+              "function": "0x601c",
+              "site": "0x6454",
+              "target": "0x604e",
+              "mnemonic": "B"
+            },
+            {
+              "function": "0x601c",
+              "site": "0x647c",
+              "target": "0x604e",
+              "mnemonic": "B"
+            },
+            {
+              "function": "0x601c",
+              "site": "0x64b6",
+              "target": "0x604e",
+              "mnemonic": "B"
+            },
+            {
+              "function": "0x601c",
+              "site": "0x64ce",
+              "target": "0x604e",
+              "mnemonic": "B"
+            },
+            {
+              "function": "0x601c",
+              "site": "0x64f2",
+              "target": "0x604e",
+              "mnemonic": "B"
+            },
+            {
+              "function": "0x601c",
+              "site": "0x6556",
+              "target": "0x604e",
+              "mnemonic": "B"
+            },
+            {
+              "function": "0x601c",
+              "site": "0x65a8",
+              "target": "0x604e",
+              "mnemonic": "B"
+            },
+            {
+              "function": "0x601c",
+              "site": "0x6602",
+              "target": "0x604e",
+              "mnemonic": "B"
+            },
+            {
+              "function": "0x601c",
+              "site": "0x662c",
+              "target": "0x604e",
+              "mnemonic": "B"
+            },
+            {
+              "function": "0x601c",
+              "site": "0x669a",
+              "target": "0x604e",
+              "mnemonic": "B"
+            },
+            {
+              "function": "0x601c",
+              "site": "0x66a4",
+              "target": "0x604e",
+              "mnemonic": "B"
+            },
+            {
+              "function": "0x601c",
+              "site": "0x66aa",
+              "target": "0x604e",
+              "mnemonic": "B"
+            },
+            {
+              "function": "0x601c",
+              "site": "0x66e8",
+              "target": "0x604e",
+              "mnemonic": "B"
+            },
+            {
+              "function": "0x601c",
+              "site": "0x66ec",
+              "target": "0x604e",
+              "mnemonic": "B"
+            },
+            {
+              "function": "0x601c",
+              "site": "0x684c",
+              "target": "0x604e",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x6b08",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x601c",
+              "site": "0x66c6",
+              "target": "0x6b08",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x6b10",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x601c",
+              "site": "0x66e0",
+              "target": "0x6b10",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x6b20",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x73e4",
+              "site": "0x7422",
+              "target": "0x6b20",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x6b44",
+        "tools": [
+          "IDA"
+        ],
+        "status": "confirmed_pointer_referenced",
+        "reason": "Thumb/ARM entry address is present in a literal pool or IDA data reference",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [],
+          "data_references": [
+            {
+              "function": "0x6bd8",
+              "site": "0x6bf6",
+              "target": "0x6b45"
+            }
+          ],
+          "literal_pointer_hits": [
+            {
+              "at": "0x6c30",
+              "value": "0x6b45"
+            }
+          ]
+        }
+      },
+      {
+        "start": "0x6b48",
+        "tools": [
+          "Ghidra"
+        ],
+        "status": "confirmed_direct_call_target",
+        "reason": "IDA decodes at least one direct call to this exact entry",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x5cf0",
+              "site": "0x5d7e",
+              "target": "0x6b48",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x6b64",
+              "site": "0x6b6c",
+              "target": "0x6b48",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x6b9c",
+              "site": "0x6ba6",
+              "target": "0x6b48",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x6b64",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x575c",
+              "site": "0x5790",
+              "target": "0x6b64",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x575c",
+              "site": "0x57b2",
+              "target": "0x6b64",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x575c",
+              "site": "0x57e2",
+              "target": "0x6b64",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x575c",
+              "site": "0x57f8",
+              "target": "0x6b64",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x575c",
+              "site": "0x580e",
+              "target": "0x6b64",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x575c",
+              "site": "0x5824",
+              "target": "0x6b64",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x575c",
+              "site": "0x583a",
+              "target": "0x6b64",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x575c",
+              "site": "0x5850",
+              "target": "0x6b64",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x575c",
+              "site": "0x5866",
+              "target": "0x6b64",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x575c",
+              "site": "0x587c",
+              "target": "0x6b64",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x575c",
+              "site": "0x5892",
+              "target": "0x6b64",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x575c",
+              "site": "0x58a8",
+              "target": "0x6b64",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x575c",
+              "site": "0x58be",
+              "target": "0x6b64",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x575c",
+              "site": "0x58d4",
+              "target": "0x6b64",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x575c",
+              "site": "0x58ea",
+              "target": "0x6b64",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x575c",
+              "site": "0x58fe",
+              "target": "0x6b64",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x575c",
+              "site": "0x5914",
+              "target": "0x6b64",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x575c",
+              "site": "0x592a",
+              "target": "0x6b64",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x575c",
+              "site": "0x5940",
+              "target": "0x6b64",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x575c",
+              "site": "0x5956",
+              "target": "0x6b64",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x575c",
+              "site": "0x596c",
+              "target": "0x6b64",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x575c",
+              "site": "0x5982",
+              "target": "0x6b64",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x575c",
+              "site": "0x5998",
+              "target": "0x6b64",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x59e8",
+              "site": "0x5ab4",
+              "target": "0x6b64",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x59e8",
+              "site": "0x5af4",
+              "target": "0x6b64",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x59e8",
+              "site": "0x5c8a",
+              "target": "0x6b64",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x5cf0",
+              "site": "0x5d40",
+              "target": "0x6b64",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x5cf0",
+              "site": "0x5d72",
+              "target": "0x6b64",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x5cf0",
+              "site": "0x5d94",
+              "target": "0x6b64",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x5cf0",
+              "site": "0x5dc8",
+              "target": "0x6b64",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x5e04",
+              "site": "0x5e38",
+              "target": "0x6b64",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x5e04",
+              "site": "0x5e7e",
+              "target": "0x6b64",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x6b8c",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x59e8",
+              "site": "0x5c72",
+              "target": "0x6b8c",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x59e8",
+              "site": "0x5c9a",
+              "target": "0x6b8c",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x5cf0",
+              "site": "0x5dd2",
+              "target": "0x6b8c",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x6b9c",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x575c",
+              "site": "0x57cc",
+              "target": "0x6b9c",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x59e8",
+              "site": "0x5a7c",
+              "target": "0x6b9c",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x6bd8",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x74e8",
+              "site": "0x757e",
+              "target": "0x6bd8",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x6c48",
+        "tools": [
+          "IDA"
+        ],
+        "status": "confirmed_pointer_referenced",
+        "reason": "Thumb/ARM entry address is present in a literal pool or IDA data reference",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [],
+          "data_references": [
+            {
+              "function": "0x6fb4",
+              "site": "0x6fe0",
+              "target": "0x6c49"
+            }
+          ],
+          "literal_pointer_hits": [
+            {
+              "at": "0x70e0",
+              "value": "0x6c49"
+            }
+          ]
+        }
+      },
+      {
+        "start": "0x6c68",
+        "tools": [
+          "IDA"
+        ],
+        "status": "confirmed_pointer_referenced",
+        "reason": "Thumb/ARM entry address is present in a literal pool or IDA data reference",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [],
+          "data_references": [
+            {
+              "function": "0x6fb4",
+              "site": "0x7038",
+              "target": "0x6c69"
+            }
+          ],
+          "literal_pointer_hits": [
+            {
+              "at": "0x70f8",
+              "value": "0x6c69"
+            }
+          ]
+        }
+      },
+      {
+        "start": "0x6c94",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [],
+          "data_references": [
+            {
+              "function": "0x6fb4",
+              "site": "0x708c",
+              "target": "0x6c95"
+            }
+          ],
+          "literal_pointer_hits": [
+            {
+              "at": "0x7104",
+              "value": "0x6c95"
+            }
+          ]
+        }
+      },
+      {
+        "start": "0x6fa0",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x50f0",
+              "site": "0x538a",
+              "target": "0x6fa0",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x6fb4",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x74e8",
+              "site": "0x757a",
+              "target": "0x6fb4",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x7120",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x50f0",
+              "site": "0x5474",
+              "target": "0x7120",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x50f0",
+              "site": "0x549e",
+              "target": "0x7120",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x6c94",
+              "site": "0x6ed0",
+              "target": "0x7120",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x6c94",
+              "site": "0x6ef6",
+              "target": "0x7120",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x6c94",
+              "site": "0x6f32",
+              "target": "0x7120",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x7128",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x50f0",
+              "site": "0x547c",
+              "target": "0x7128",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x50f0",
+              "site": "0x54a6",
+              "target": "0x7128",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x59e8",
+              "site": "0x5b5c",
+              "target": "0x7128",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x601c",
+              "site": "0x66ce",
+              "target": "0x7128",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x6c94",
+              "site": "0x6ed8",
+              "target": "0x7128",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x6c94",
+              "site": "0x6efe",
+              "target": "0x7128",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x6c94",
+              "site": "0x6f12",
+              "target": "0x7128",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x6c94",
+              "site": "0x6f3a",
+              "target": "0x7128",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x7138",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x50f0",
+              "site": "0x5480",
+              "target": "0x7138",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x50f0",
+              "site": "0x54aa",
+              "target": "0x7138",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x50f0",
+              "site": "0x54b8",
+              "target": "0x7138",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x601c",
+              "site": "0x66d2",
+              "target": "0x7138",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x6c94",
+              "site": "0x6edc",
+              "target": "0x7138",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x6c94",
+              "site": "0x6f28",
+              "target": "0x7138",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x6c94",
+              "site": "0x6f3e",
+              "target": "0x7138",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x7140",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x46d0",
+              "site": "0x472c",
+              "target": "0x7140",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x46d0",
+              "site": "0x4742",
+              "target": "0x7140",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x59e8",
+              "site": "0x5b48",
+              "target": "0x7140",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x6c94",
+              "site": "0x6ee6",
+              "target": "0x7140",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x7148",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x46d0",
+              "site": "0x4756",
+              "target": "0x7148",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x6c94",
+              "site": "0x6eec",
+              "target": "0x7148",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x6c94",
+              "site": "0x6f48",
+              "target": "0x7148",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x7150",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x50f0",
+              "site": "0x54c8",
+              "target": "0x7150",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x6c94",
+              "site": "0x6ef0",
+              "target": "0x7150",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x7158",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x6c94",
+              "site": "0x6f02",
+              "target": "0x7158",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x7160",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x46d0",
+              "site": "0x4760",
+              "target": "0x7160",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x50f0",
+              "site": "0x5486",
+              "target": "0x7160",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x50f0",
+              "site": "0x54b4",
+              "target": "0x7160",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x50f0",
+              "site": "0x54e6",
+              "target": "0x7160",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x59e8",
+              "site": "0x5b54",
+              "target": "0x7160",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x601c",
+              "site": "0x66d8",
+              "target": "0x7160",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x6c94",
+              "site": "0x6f0a",
+              "target": "0x7160",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x6c94",
+              "site": "0x6f1c",
+              "target": "0x7160",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x7168",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x6c94",
+              "site": "0x6f24",
+              "target": "0x7168",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x7178",
+        "tools": [
+          "IDA"
+        ],
+        "status": "confirmed_pointer_referenced",
+        "reason": "Thumb/ARM entry address is present in a literal pool or IDA data reference",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [],
+          "data_references": [
+            {
+              "function": "0x725c",
+              "site": "0x72d4",
+              "target": "0x7179"
+            }
+          ],
+          "literal_pointer_hits": [
+            {
+              "at": "0x7320",
+              "value": "0x7179"
+            }
+          ]
+        }
+      },
+      {
+        "start": "0x71d0",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x7af8",
+              "site": "0x7afa",
+              "target": "0x71d0",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x720c",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x7b1c",
+              "site": "0x7b20",
+              "target": "0x720c",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x725c",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x74e8",
+              "site": "0x758a",
+              "target": "0x725c",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x7364",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x4214",
+              "site": "0x42c8",
+              "target": "0x7364",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x7380",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x4214",
+              "site": "0x4272",
+              "target": "0x7380",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x7398",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x4214",
+              "site": "0x4248",
+              "target": "0x7398",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x73bc",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x4214",
+              "site": "0x429c",
+              "target": "0x73bc",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x73cc",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x77b8",
+              "site": "0x77d2",
+              "target": "0x73cc",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x73d4",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x77b8",
+              "site": "0x7852",
+              "target": "0x73d4",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x73dc",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x77b8",
+              "site": "0x77d6",
+              "target": "0x73dc",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x73e4",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x77b8",
+              "site": "0x77da",
+              "target": "0x73e4",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x7444",
+        "tools": [
+          "IDA"
+        ],
+        "status": "confirmed_pointer_referenced",
+        "reason": "Thumb/ARM entry address is present in a literal pool or IDA data reference",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [],
+          "data_references": [
+            {
+              "function": "0x77b8",
+              "site": "0x77e0",
+              "target": "0x7445"
+            }
+          ],
+          "literal_pointer_hits": [
+            {
+              "at": "0x7a48",
+              "value": "0x7445"
+            }
+          ]
+        }
+      },
+      {
+        "start": "0x7448",
+        "tools": [
+          "IDA"
+        ],
+        "status": "confirmed_pointer_referenced",
+        "reason": "Thumb/ARM entry address is present in a literal pool or IDA data reference",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [],
+          "data_references": [
+            {
+              "function": "0x74e8",
+              "site": "0x7562",
+              "target": "0x7449"
+            }
+          ],
+          "literal_pointer_hits": [
+            {
+              "at": "0x75dc",
+              "value": "0x7449"
+            }
+          ]
+        }
+      },
+      {
+        "start": "0x7498",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x6b20",
+              "site": "0x6b2c",
+              "target": "0x7498",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x74b4",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x6b20",
+              "site": "0x6b3a",
+              "target": "0x74b4",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x74c4",
+        "tools": [
+          "Ghidra"
+        ],
+        "status": "confirmed_direct_call_target",
+        "reason": "IDA decodes at least one direct call to this exact entry",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x77b8",
+              "site": "0x7934",
+              "target": "0x74c4",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x77b8",
+              "site": "0x79b8",
+              "target": "0x74c4",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x74e8",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x50f0",
+              "site": "0x55e4",
+              "target": "0x74e8",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x77b8",
+              "site": "0x77e8",
+              "target": "0x74e8",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x77b8",
+              "site": "0x78c0",
+              "target": "0x74e8",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x760c",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x77b8",
+              "site": "0x783e",
+              "target": "0x760c",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x76cc",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x77b8",
+              "site": "0x7924",
+              "target": "0x76cc",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x77b8",
+              "site": "0x7a20",
+              "target": "0x76cc",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x77b8",
+        "tools": [
+          "IDA"
+        ],
+        "status": "confirmed_pointer_referenced",
+        "reason": "Thumb/ARM entry address is present in a literal pool or IDA data reference",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [],
+          "data_references": [],
+          "literal_pointer_hits": [
+            {
+              "at": "0x410c",
+              "value": "0x77b9"
+            }
+          ]
+        }
+      },
+      {
+        "start": "0x7af8",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x81a8",
+              "site": "0x81e6",
+              "target": "0x7af8",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x81a8",
+              "site": "0x8212",
+              "target": "0x7af8",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x81a8",
+              "site": "0x8252",
+              "target": "0x7af8",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x81a8",
+              "site": "0x8286",
+              "target": "0x7af8",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x81a8",
+              "site": "0x82c8",
+              "target": "0x7af8",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x81a8",
+              "site": "0x82fc",
+              "target": "0x7af8",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x81a8",
+              "site": "0x833e",
+              "target": "0x7af8",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x81a8",
+              "site": "0x839a",
+              "target": "0x7af8",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x81a8",
+              "site": "0x8404",
+              "target": "0x7af8",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x81a8",
+              "site": "0x846e",
+              "target": "0x7af8",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x81a8",
+              "site": "0x84c6",
+              "target": "0x7af8",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x7b04",
+        "tools": [
+          "Ghidra"
+        ],
+        "status": "confirmed_direct_call_target",
+        "reason": "IDA decodes at least one direct call to this exact entry",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x81a8",
+              "site": "0x81ae",
+              "target": "0x7b04",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x7b10",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x8038",
+              "site": "0x8042",
+              "target": "0x7b10",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x7b1c",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x800c",
+              "site": "0x802c",
+              "target": "0x7b1c",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x8038",
+              "site": "0x8066",
+              "target": "0x7b1c",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x7b28",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x8038",
+              "site": "0x817e",
+              "target": "0x7b28",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x7b30",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x8038",
+              "site": "0x8132",
+              "target": "0x7b30",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x7b38",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x81a8",
+              "site": "0x8472",
+              "target": "0x7b38",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x81a8",
+              "site": "0x84ca",
+              "target": "0x7b38",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x7b4c",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x81a8",
+              "site": "0x839e",
+              "target": "0x7b4c",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x81a8",
+              "site": "0x8408",
+              "target": "0x7b4c",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x7b60",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x7bcc",
+              "site": "0x7bd4",
+              "target": "0x7b60",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x7e64",
+              "site": "0x7e84",
+              "target": "0x7b60",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x7eb4",
+              "site": "0x7ee4",
+              "target": "0x7b60",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x7bcc",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x8038",
+              "site": "0x8074",
+              "target": "0x7bcc",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x7be8",
+        "tools": [
+          "Ghidra"
+        ],
+        "status": "confirmed_direct_call_target",
+        "reason": "IDA decodes at least one direct call to this exact entry",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x8038",
+              "site": "0x8082",
+              "target": "0x7be8",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x7bf0",
+        "tools": [
+          "Ghidra"
+        ],
+        "status": "confirmed_direct_call_target",
+        "reason": "IDA decodes at least one direct call to this exact entry",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x8038",
+              "site": "0x806c",
+              "target": "0x7bf0",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x81a8",
+              "site": "0x81da",
+              "target": "0x7bf0",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x81a8",
+              "site": "0x8206",
+              "target": "0x7bf0",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x81a8",
+              "site": "0x8246",
+              "target": "0x7bf0",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x81a8",
+              "site": "0x827a",
+              "target": "0x7bf0",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x81a8",
+              "site": "0x82bc",
+              "target": "0x7bf0",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x81a8",
+              "site": "0x82f0",
+              "target": "0x7bf0",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x81a8",
+              "site": "0x8332",
+              "target": "0x7bf0",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x81a8",
+              "site": "0x838e",
+              "target": "0x7bf0",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x81a8",
+              "site": "0x83f8",
+              "target": "0x7bf0",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x81a8",
+              "site": "0x8462",
+              "target": "0x7bf0",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x81a8",
+              "site": "0x84ba",
+              "target": "0x7bf0",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x7bf8",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x7cc4",
+              "site": "0x7d42",
+              "target": "0x7bf8",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x7d80",
+              "site": "0x7dea",
+              "target": "0x7bf8",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x7c1c",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x7cc4",
+              "site": "0x7d4e",
+              "target": "0x7c1c",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x7c68",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x7d80",
+              "site": "0x7dd8",
+              "target": "0x7c68",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x7cc4",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x7e64",
+              "site": "0x7ea2",
+              "target": "0x7cc4",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x7d80",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x7eb4",
+              "site": "0x7eca",
+              "target": "0x7d80",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x7e64",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x8038",
+              "site": "0x80aa",
+              "target": "0x7e64",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x8038",
+              "site": "0x80ba",
+              "target": "0x7e64",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x8038",
+              "site": "0x80e0",
+              "target": "0x7e64",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x8038",
+              "site": "0x8114",
+              "target": "0x7e64",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x8038",
+              "site": "0x8160",
+              "target": "0x7e64",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x7eb4",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x81a8",
+              "site": "0x81d4",
+              "target": "0x7eb4",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x81a8",
+              "site": "0x8200",
+              "target": "0x7eb4",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x81a8",
+              "site": "0x8240",
+              "target": "0x7eb4",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x81a8",
+              "site": "0x8274",
+              "target": "0x7eb4",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x81a8",
+              "site": "0x82b6",
+              "target": "0x7eb4",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x81a8",
+              "site": "0x82ea",
+              "target": "0x7eb4",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x81a8",
+              "site": "0x832c",
+              "target": "0x7eb4",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x81a8",
+              "site": "0x8388",
+              "target": "0x7eb4",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x81a8",
+              "site": "0x83f2",
+              "target": "0x7eb4",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x81a8",
+              "site": "0x845c",
+              "target": "0x7eb4",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x81a8",
+              "site": "0x84b4",
+              "target": "0x7eb4",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x7efc",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x76cc",
+              "site": "0x7706",
+              "target": "0x7efc",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x76cc",
+              "site": "0x7724",
+              "target": "0x7efc",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x76cc",
+              "site": "0x7744",
+              "target": "0x7efc",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x76cc",
+              "site": "0x7764",
+              "target": "0x7efc",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x76cc",
+              "site": "0x7780",
+              "target": "0x7efc",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x7f28",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x6c94",
+              "site": "0x6cfa",
+              "target": "0x7f28",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x7f40",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x6c94",
+              "site": "0x6cda",
+              "target": "0x7f40",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x7f58",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x8038",
+              "site": "0x8126",
+              "target": "0x7f58",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x8038",
+              "site": "0x8172",
+              "target": "0x7f58",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x81a8",
+              "site": "0x83c4",
+              "target": "0x7f58",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x81a8",
+              "site": "0x84ec",
+              "target": "0x7f58",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x7fd8",
+        "tools": [
+          "Ghidra"
+        ],
+        "status": "confirmed_direct_call_target",
+        "reason": "IDA decodes at least one direct call to this exact entry",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x7efc",
+              "site": "0x7f1a",
+              "target": "0x7fd8",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x8038",
+              "site": "0x80ce",
+              "target": "0x7fd8",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x8038",
+              "site": "0x80f6",
+              "target": "0x7fd8",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x81a8",
+              "site": "0x837a",
+              "target": "0x7fd8",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x81a8",
+              "site": "0x83e4",
+              "target": "0x7fd8",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x81a8",
+              "site": "0x844e",
+              "target": "0x7fd8",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x81a8",
+              "site": "0x84a6",
+              "target": "0x7fd8",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x800c",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x74e8",
+              "site": "0x758e",
+              "target": "0x800c",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x8038",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x601c",
+              "site": "0x6024",
+              "target": "0x8038",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x81a8",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x76cc",
+              "site": "0x779c",
+              "target": "0x81a8",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x8504",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x59e8",
+              "site": "0x5b0a",
+              "target": "0x8504",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x59e8",
+              "site": "0x5b32",
+              "target": "0x8504",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x59e8",
+              "site": "0x5b70",
+              "target": "0x8504",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x59e8",
+              "site": "0x5b92",
+              "target": "0x8504",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x59e8",
+              "site": "0x5bb8",
+              "target": "0x8504",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x59e8",
+              "site": "0x5bd8",
+              "target": "0x8504",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x59e8",
+              "site": "0x5c02",
+              "target": "0x8504",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x59e8",
+              "site": "0x5c1a",
+              "target": "0x8504",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x59e8",
+              "site": "0x5c5a",
+              "target": "0x8504",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x8530",
+        "tools": [
+          "Ghidra"
+        ],
+        "status": "confirmed_direct_call_target",
+        "reason": "IDA decodes at least one direct call to this exact entry",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x4114",
+              "site": "0x4128",
+              "target": "0x8530",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x5f14",
+              "site": "0x5f22",
+              "target": "0x8530",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x854c",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x4114",
+              "site": "0x413e",
+              "target": "0x854c",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x8564",
+        "tools": [
+          "Ghidra"
+        ],
+        "status": "confirmed_direct_call_target",
+        "reason": "IDA decodes at least one direct call to this exact entry",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x59e8",
+              "site": "0x5c28",
+              "target": "0x8564",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x8568",
+        "tools": [
+          "Ghidra"
+        ],
+        "status": "confirmed_interworking_body",
+        "reason": "immediately follows a Thumb BX-PC/NOP mode-switch thunk",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x8574",
+        "tools": [
+          "Ghidra"
+        ],
+        "status": "confirmed_direct_call_target",
+        "reason": "IDA decodes at least one direct call to this exact entry",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x4384",
+              "site": "0x454a",
+              "target": "0x8574",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x4384",
+              "site": "0x4556",
+              "target": "0x8574",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x4384",
+              "site": "0x4562",
+              "target": "0x8574",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x4384",
+              "site": "0x456e",
+              "target": "0x8574",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x4384",
+              "site": "0x457a",
+              "target": "0x8574",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x495c",
+              "site": "0x496c",
+              "target": "0x8574",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x4a94",
+              "site": "0x4ac8",
+              "target": "0x8574",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x4a94",
+              "site": "0x4ad8",
+              "target": "0x8574",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x4a94",
+              "site": "0x4afa",
+              "target": "0x8574",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x4a94",
+              "site": "0x4b0e",
+              "target": "0x8574",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x4a94",
+              "site": "0x4b18",
+              "target": "0x8574",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x4b38",
+              "site": "0x4b60",
+              "target": "0x8574",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x4b38",
+              "site": "0x4b6a",
+              "target": "0x8574",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x4b38",
+              "site": "0x4c04",
+              "target": "0x8574",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x4b38",
+              "site": "0x4c14",
+              "target": "0x8574",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x4b38",
+              "site": "0x4c6c",
+              "target": "0x8574",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x4b38",
+              "site": "0x4c84",
+              "target": "0x8574",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x4b38",
+              "site": "0x4cb4",
+              "target": "0x8574",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x4b38",
+              "site": "0x4cf2",
+              "target": "0x8574",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x4d38",
+              "site": "0x4e02",
+              "target": "0x8574",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x4d38",
+              "site": "0x4e18",
+              "target": "0x8574",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x4d38",
+              "site": "0x4e34",
+              "target": "0x8574",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x4d38",
+              "site": "0x4e4e",
+              "target": "0x8574",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x4d38",
+              "site": "0x4e6c",
+              "target": "0x8574",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x4d38",
+              "site": "0x4eb6",
+              "target": "0x8574",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x4d38",
+              "site": "0x4f0a",
+              "target": "0x8574",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x4d38",
+              "site": "0x4f30",
+              "target": "0x8574",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x4d38",
+              "site": "0x4f4a",
+              "target": "0x8574",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x4d38",
+              "site": "0x4f64",
+              "target": "0x8574",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x4d38",
+              "site": "0x4f7e",
+              "target": "0x8574",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x4d38",
+              "site": "0x5002",
+              "target": "0x8574",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x50f0",
+              "site": "0x5152",
+              "target": "0x8574",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x50f0",
+              "site": "0x5172",
+              "target": "0x8574",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x50f0",
+              "site": "0x51c0",
+              "target": "0x8574",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x50f0",
+              "site": "0x51e6",
+              "target": "0x8574",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x50f0",
+              "site": "0x5218",
+              "target": "0x8574",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x50f0",
+              "site": "0x52e2",
+              "target": "0x8574",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x50f0",
+              "site": "0x5334",
+              "target": "0x8574",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x50f0",
+              "site": "0x5454",
+              "target": "0x8574",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x50f0",
+              "site": "0x5462",
+              "target": "0x8574",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x59e8",
+              "site": "0x5b42",
+              "target": "0x8574",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x59e8",
+              "site": "0x5b80",
+              "target": "0x8574",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x59e8",
+              "site": "0x5ba8",
+              "target": "0x8574",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x59e8",
+              "site": "0x5bee",
+              "target": "0x8574",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x59e8",
+              "site": "0x5c4a",
+              "target": "0x8574",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x601c",
+              "site": "0x62ec",
+              "target": "0x8574",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x601c",
+              "site": "0x6550",
+              "target": "0x8574",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x601c",
+              "site": "0x65a2",
+              "target": "0x8574",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x8578",
+        "tools": [
+          "Ghidra"
+        ],
+        "status": "confirmed_interworking_body",
+        "reason": "immediately follows a Thumb BX-PC/NOP mode-switch thunk",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x8584",
+        "tools": [
+          "Ghidra"
+        ],
+        "status": "confirmed_direct_call_target",
+        "reason": "IDA decodes at least one direct call to this exact entry",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x4384",
+              "site": "0x4432",
+              "target": "0x8584",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x4384",
+              "site": "0x4584",
+              "target": "0x8584",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x48e8",
+              "site": "0x491c",
+              "target": "0x8584",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x497c",
+              "site": "0x4988",
+              "target": "0x8584",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x4d38",
+              "site": "0x4e9c",
+              "target": "0x8584",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x4d38",
+              "site": "0x4ea6",
+              "target": "0x8584",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x4d38",
+              "site": "0x4fac",
+              "target": "0x8584",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x4d38",
+              "site": "0x4fe0",
+              "target": "0x8584",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x4d38",
+              "site": "0x4fea",
+              "target": "0x8584",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x4d38",
+              "site": "0x4ff8",
+              "target": "0x8584",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x506c",
+              "site": "0x50b0",
+              "target": "0x8584",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x50f0",
+              "site": "0x51f4",
+              "target": "0x8584",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x50f0",
+              "site": "0x5226",
+              "target": "0x8584",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x59e8",
+              "site": "0x5b18",
+              "target": "0x8584",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x59e8",
+              "site": "0x5bc8",
+              "target": "0x8584",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x601c",
+              "site": "0x62de",
+              "target": "0x8584",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x601c",
+              "site": "0x64a2",
+              "target": "0x8584",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x601c",
+              "site": "0x64b0",
+              "target": "0x8584",
+              "mnemonic": "BL"
+            },
+            {
+              "function": "0x601c",
+              "site": "0x650c",
+              "target": "0x8584",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x8588",
+        "tools": [
+          "Ghidra"
+        ],
+        "status": "confirmed_interworking_body",
+        "reason": "immediately follows a Thumb BX-PC/NOP mode-switch thunk",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x8678",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x86a8",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x86d8",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x7120",
+              "site": "0x7122",
+              "target": "0x86d8",
+              "mnemonic": "BX"
+            }
+          ],
+          "data_references": [
+            {
+              "function": "0x7120",
+              "site": "0x7120",
+              "target": "0x86d8"
+            }
+          ],
+          "literal_pointer_hits": [
+            {
+              "at": "0x7124",
+              "value": "0x86d8"
+            }
+          ]
+        }
+      },
+      {
+        "start": "0x86f0",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x6b08",
+              "site": "0x6b0a",
+              "target": "0x86f0",
+              "mnemonic": "BX"
+            }
+          ],
+          "data_references": [
+            {
+              "function": "0x6b08",
+              "site": "0x6b08",
+              "target": "0x86f0"
+            }
+          ],
+          "literal_pointer_hits": [
+            {
+              "at": "0x6b0c",
+              "value": "0x86f0"
+            }
+          ]
+        }
+      },
+      {
+        "start": "0x874c",
+        "tools": [
+          "Ghidra"
+        ],
+        "status": "confirmed_indirect_or_alternate_entry",
+        "reason": "IDA branch-exchange or literal-pointer evidence reaches this exact entry",
+        "inside_ida_function": "0x86f0",
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x7158",
+              "site": "0x715a",
+              "target": "0x874c",
+              "mnemonic": "BX"
+            }
+          ],
+          "data_references": [
+            {
+              "function": "0x7158",
+              "site": "0x7158",
+              "target": "0x874c"
+            }
+          ],
+          "literal_pointer_hits": [
+            {
+              "at": "0x715c",
+              "value": "0x874c"
+            }
+          ]
+        }
+      },
+      {
+        "start": "0x8788",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x5f0c",
+              "site": "0x5f0e",
+              "target": "0x8788",
+              "mnemonic": "BX"
+            }
+          ],
+          "data_references": [
+            {
+              "function": "0x5f0c",
+              "site": "0x5f0c",
+              "target": "0x8788"
+            }
+          ],
+          "literal_pointer_hits": [
+            {
+              "at": "0x5f10",
+              "value": "0x8788"
+            }
+          ]
+        }
+      },
+      {
+        "start": "0x87e8",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x7138",
+              "site": "0x713a",
+              "target": "0x87e8",
+              "mnemonic": "BX"
+            }
+          ],
+          "data_references": [
+            {
+              "function": "0x7138",
+              "site": "0x7138",
+              "target": "0x87e8"
+            }
+          ],
+          "literal_pointer_hits": [
+            {
+              "at": "0x713c",
+              "value": "0x87e8"
+            }
+          ]
+        }
+      },
+      {
+        "start": "0x88a4",
+        "tools": [
+          "Ghidra"
+        ],
+        "status": "confirmed_indirect_or_alternate_entry",
+        "reason": "IDA branch-exchange or literal-pointer evidence reaches this exact entry",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x7160",
+              "site": "0x7162",
+              "target": "0x88a4",
+              "mnemonic": "BX"
+            }
+          ],
+          "data_references": [
+            {
+              "function": "0x7160",
+              "site": "0x7160",
+              "target": "0x88a4"
+            }
+          ],
+          "literal_pointer_hits": [
+            {
+              "at": "0x7164",
+              "value": "0x88a4"
+            }
+          ]
+        }
+      },
+      {
+        "start": "0x8908",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x893c",
+              "site": "0x8940",
+              "target": "0x8908",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x893c",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x5704",
+              "site": "0x570c",
+              "target": "0x893c",
+              "mnemonic": "BX"
+            }
+          ],
+          "data_references": [
+            {
+              "function": "0x5704",
+              "site": "0x5706",
+              "target": "0x893c"
+            }
+          ],
+          "literal_pointer_hits": [
+            {
+              "at": "0x5710",
+              "value": "0x893c"
+            }
+          ]
+        }
+      },
+      {
+        "start": "0x8970",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x89b0",
+              "site": "0x89b4",
+              "target": "0x8970",
+              "mnemonic": "BL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0x89b0",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x6b10",
+              "site": "0x6b18",
+              "target": "0x89b0",
+              "mnemonic": "BX"
+            }
+          ],
+          "data_references": [
+            {
+              "function": "0x6b10",
+              "site": "0x6b12",
+              "target": "0x89b0"
+            }
+          ],
+          "literal_pointer_hits": [
+            {
+              "at": "0x6b1c",
+              "value": "0x89b0"
+            }
+          ]
+        }
+      },
+      {
+        "start": "0x9038",
+        "tools": [
+          "IDA",
+          "Ghidra"
+        ],
+        "status": "confirmed_cross_tool",
+        "reason": "exact function start recognized by IDA and Ghidra",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x7140",
+              "site": "0x7142",
+              "target": "0x9038",
+              "mnemonic": "BX"
+            }
+          ],
+          "data_references": [
+            {
+              "function": "0x7140",
+              "site": "0x7140",
+              "target": "0x9038"
+            }
+          ],
+          "literal_pointer_hits": [
+            {
+              "at": "0x7144",
+              "value": "0x9038"
+            }
+          ]
+        }
+      },
+      {
+        "start": "0x90b0",
+        "tools": [
+          "Ghidra"
+        ],
+        "status": "confirmed_indirect_or_alternate_entry",
+        "reason": "IDA branch-exchange or literal-pointer evidence reaches this exact entry",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x7150",
+              "site": "0x7152",
+              "target": "0x90b0",
+              "mnemonic": "BX"
+            }
+          ],
+          "data_references": [
+            {
+              "function": "0x7150",
+              "site": "0x7150",
+              "target": "0x90b0"
+            }
+          ],
+          "literal_pointer_hits": [
+            {
+              "at": "0x7154",
+              "value": "0x90b0"
+            }
+          ]
+        }
+      },
+      {
+        "start": "0x90e4",
+        "tools": [
+          "Ghidra"
+        ],
+        "status": "confirmed_indirect_or_alternate_entry",
+        "reason": "IDA branch-exchange or literal-pointer evidence reaches this exact entry",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x5714",
+              "site": "0x5716",
+              "target": "0x90e4",
+              "mnemonic": "BX"
+            }
+          ],
+          "data_references": [
+            {
+              "function": "0x5714",
+              "site": "0x5714",
+              "target": "0x90e4"
+            }
+          ],
+          "literal_pointer_hits": [
+            {
+              "at": "0x5718",
+              "value": "0x90e4"
+            }
+          ]
+        }
+      },
+      {
+        "start": "0x913c",
+        "tools": [
+          "Ghidra"
+        ],
+        "status": "confirmed_indirect_or_alternate_entry",
+        "reason": "IDA branch-exchange or literal-pointer evidence reaches this exact entry",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x5f04",
+              "site": "0x5f06",
+              "target": "0x913c",
+              "mnemonic": "BX"
+            }
+          ],
+          "data_references": [
+            {
+              "function": "0x5f04",
+              "site": "0x5f04",
+              "target": "0x913c"
+            }
+          ],
+          "literal_pointer_hits": [
+            {
+              "at": "0x5f08",
+              "value": "0x913c"
+            }
+          ]
+        }
+      },
+      {
+        "start": "0x92cc",
+        "tools": [
+          "Ghidra"
+        ],
+        "status": "confirmed_indirect_or_alternate_entry",
+        "reason": "IDA branch-exchange or literal-pointer evidence reaches this exact entry",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x56fc",
+              "site": "0x56fe",
+              "target": "0x92cc",
+              "mnemonic": "BX"
+            }
+          ],
+          "data_references": [
+            {
+              "function": "0x56fc",
+              "site": "0x56fc",
+              "target": "0x92cc"
+            }
+          ],
+          "literal_pointer_hits": [
+            {
+              "at": "0x5700",
+              "value": "0x92cc"
+            }
+          ]
+        }
+      },
+      {
+        "start": "0x95f4",
+        "tools": [
+          "Ghidra"
+        ],
+        "status": "confirmed_indirect_or_alternate_entry",
+        "reason": "IDA branch-exchange or literal-pointer evidence reaches this exact entry",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0x7148",
+              "site": "0x714a",
+              "target": "0x95f4",
+              "mnemonic": "BX"
+            }
+          ],
+          "data_references": [
+            {
+              "function": "0x7148",
+              "site": "0x7148",
+              "target": "0x95f4"
+            }
+          ],
+          "literal_pointer_hits": [
+            {
+              "at": "0x714c",
+              "value": "0x95f4"
+            }
+          ]
+        }
+      },
+      {
+        "start": "0xae82",
+        "tools": [
+          "IDA"
+        ],
+        "status": "rejected_data_as_function",
+        "reason": "entry lies inside known aid_pointer_table_2",
+        "inside_ida_function": null,
+        "known_data_region": "aid_pointer_table_2",
+        "evidence": {
+          "control_transfers": [],
+          "data_references": [],
+          "literal_pointer_hits": []
+        }
+      },
+      {
+        "start": "0xb114",
+        "tools": [
+          "IDA"
+        ],
+        "status": "confirmed_pointer_referenced",
+        "reason": "Thumb/ARM entry address is present in a literal pool or IDA data reference",
+        "inside_ida_function": null,
+        "known_data_region": null,
+        "evidence": {
+          "control_transfers": [
+            {
+              "function": "0xb114",
+              "site": "0xb11c",
+              "target": "0xb114",
+              "mnemonic": "BPL"
+            }
+          ],
+          "data_references": [],
+          "literal_pointer_hits": [
+            {
+              "at": "0x96e4",
+              "value": "0xb114"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "inputs": {
+    "ida": {
+      "path": "E:\\code.projects\\dodge\\quadzilla_rev\\captures\\quadzilla_re\\ida_function_map.json",
+      "sha256": "d49b3511effa8e1aaf33984334a30484ad1dfe1d668bf0898a4b3e8b8451b049"
+    },
+    "ghidra": {
+      "path": "E:\\code.projects\\dodge\\quadzilla_rev\\captures\\quadzilla_re\\ghidra_function_map.json",
+      "sha256": "54d7119dabcd9088a473d63083e7312d38f265ab8e030f6910dc56b38d7dd213"
+    },
+    "legacy": {
+      "path": "E:\\code.projects\\dodge\\quadzilla_rev\\firmware_analysis_results.json",
+      "sha256": "5d06e0c2e43f67a05d824d17fbb16219435de8ce17dde6f223b6d5d43206a410"
+    },
+    "raw_image": {
+      "path": "E:\\code.projects\\dodge\\quadzilla_rev\\firmware_v2.8.4HF.bin",
+      "sha256": "1ae519ba6194e8f7bdaaa94333a83a9e6fda3b0563f87f7d48383b37288c1780"
+    }
+  }
+}
