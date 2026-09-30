@@ -88,7 +88,7 @@ Ideas from earlier notes that do not fit (a data logger, adaptive fuel learning,
 ## 8. Reproducing
 
 ```bash
-python -m unittest discover -s tests -t . -v        # 24 tests, no vendor files needed
+python -m unittest discover -s tests -t . -v        # 30 tests, no vendor files needed
 python tools/diff_profiles.py                        # 14 profiles, 117 unique AIDs, QZTEST-only {145, 181}
 python tools/x2com_crc.py 41051022                   # frame CRC helper
 # with your own copy of the vendor package:

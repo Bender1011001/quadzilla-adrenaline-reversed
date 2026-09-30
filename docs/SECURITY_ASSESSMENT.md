@@ -18,7 +18,7 @@ engine. This assessment asks who can change what, and what stops them.
 | F2 | Update package carries only Intel HEX line checksums: no signature, MAC or hash | 345, 494 | Medium (potential) | **Verified** for the package; device-side check **untested** |
 | F3 | Phone link is Bluetooth Classic RFCOMM with no app-level pairing or crypto | 287 | Info | **Verified** in the APK; pairing strength **untested** |
 | F4 | X2com protocol has no authentication, nonce or encryption; a CRC-8 is the only check | 306, 294 | Medium | **Verified** (static); on-air behaviour **untested** |
-| F5 | Parameter limits (e.g. fueling 50-150 %) are defined in app-side JSON; the device clamps at least AID 85, coverage of the rest unknown | 602 | Low | **Inferred** |
+| F5 | The device clamps most values, but its limits differ from the app's (AID 85 floor 800 vs 1200 us; timing points 137-138 up to 30 deg vs 20/26) | 602 | Low | **Verified** statically; run-time behaviour untested |
 
 Severity is a qualitative judgement of realistic impact. Every attack needs proximity or
 physical access to a 20-year-old aftermarket part, and the asset is engine health, not
@@ -132,14 +132,32 @@ and engine damage, not data loss.
 **Fix:** require authenticated, encrypted pairing; add an application-level challenge-response with a MAC;
 enforce limits on the device (F5); rate-limit and log writes.
 
-### F5. Limits are defined app-side; device-side coverage is partial (Low, inferred)
+### F5. The device clamps most values, but its limits differ from the app's (Low, verified statically)
 
-Minimum and maximum values (for example 50-150 % on AIDs 113-136) are fields of the vendor's JSON profiles
-(`QuadAttribute`: `minValue`, `maxValue`, `multiplyFactor`, `offset`) and are enforced by the app's UI. The firmware does
-clamp at least one parameter: the audited ingest dispatcher (`0x601C`) clamps AID 85 (requested stretch). Whether that clamp
-equals the UI's limit, and whether the boost-fueling curve (113-136) and timing entries (137-143) are clamped on the device
-at all, was not established. A peer speaking X2com directly is bound only by whatever the device enforces.
-**Needs a device test.**
+The app's limits are fields of the vendor's JSON profiles (`QuadAttribute`: `minValue`, `maxValue`, `multiplyFactor`). The firmware does
+not rely on them: the audited ingest dispatcher (`0x601C`) is one `switch` over 57 AID numbers and range-checks the value each case stores.
+`python tools/aid_clamps.py` extracts the clamp literals and sets them beside the profile (asserted by `tests/test_aid_clamps.py`).
+
+| AIDs | App limit | Device clamp (raw) | Relation |
+|---|---|---|---|
+| 113-121 (fueling curve; 122-136 share one 50-150 path) | 50-150 % | 50-150 | equal |
+| 139-141 (timing, 2500 RPM and up) | 0-30 deg | 0-300 at x0.1 = 30.0 deg | equal |
+| 17, 22, 59, 61, 62, 110, 112 | per profile | equal in the extracted literals | equal |
+| **85** (max fuel stretch) | **1200-2200 us** | **800-2200** (upper bound operand 2201 read from the image at `0x67C0`) | **device allows 400 us lower** |
+| **137, 138** (timing at 1500 and 2000 RPM) | **0-20 and 0-26 deg** | 0-30.0 deg | **device allows more advance** |
+| 15 | 6-15 | 5-14 | off by one |
+| 104 (RPM limit) | 3200-3700 | floor 3200, upper bound not determined | partial |
+| 146, 150-154, 226 | per profile | no range-check literals found in this function | unknown |
+
+So the vendor UI is not the only barrier, which limits the impact of F4, but a peer that speaks X2com directly can set AID 85 to 800-1199 us
+and the lowest two timing points to 30 deg, values the app never offers. The scaling (raw = display / `multiplyFactor`) is inferred; it is
+corroborated by five AIDs (17, 59, 139-141) whose device clamp equals the profile maximum divided by 0.1. Where a case shows no literals it may
+validate elsewhere, so "unknown" means not established. **Needs a device test to confirm behaviour at run time.**
+
+```bash
+python tools/aid_clamps.py
+python -c "import struct;print(struct.unpack_from('<I', open('fw.bin','rb').read(), 0x67c0-0x4000)[0])"   # 2201
+```
 
 ## Also checked, no issue found
 
@@ -152,7 +170,7 @@ at all, was not established. A peer speaking X2com directly is bound only by wha
 ## Not tested
 
 Modified-firmware acceptance by the bootloader; Bluetooth pairing mode and PIN; on-air traffic capture and replay;
-device-side range checks; behaviour of the updater when the `.qz` is tampered with.
+run-time behaviour of the device-side range checks (F5 is from static analysis); behaviour of the updater when the `.qz` is tampered with.
 
 ## Errata: corrections made to earlier claims in this repository
 
