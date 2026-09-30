@@ -18,7 +18,7 @@ repository are listed in the [errata](docs/SECURITY_ASSESSMENT.md#errata-correct
 | F2 | Update package has no signature, MAC or hash, only Intel HEX line checksums | Medium (potential) | verified for package; device check untested |
 | F3 | Phone link is Bluetooth **Classic** RFCOMM with no app-level pairing or crypto | Info | verified; pairing strength untested |
 | F4 | X2com control protocol has no authentication, nonce or encryption; CRC-8/SAE-J1850 only | Medium | verified statically |
-| F5 | Parameter limits are client-side; device-side clamping not located | Low | inferred |
+| F5 | Parameter limits are defined app-side; the device clamps at least AID 85, coverage of the rest unknown | Low | inferred |
 
 Full write-up with CWE mappings, reproduction commands, recommendations and what was *not* tested: **[docs/SECURITY_ASSESSMENT.md](docs/SECURITY_ASSESSMENT.md)**.
 

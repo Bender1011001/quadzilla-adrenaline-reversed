@@ -18,7 +18,7 @@ engine. This assessment asks who can change what, and what stops them.
 | F2 | Update package carries only Intel HEX line checksums: no signature, MAC or hash | 345, 494 | Medium (potential) | **Verified** for the package; device-side check **untested** |
 | F3 | Phone link is Bluetooth Classic RFCOMM with no app-level pairing or crypto | 287 | Info | **Verified** in the APK; pairing strength **untested** |
 | F4 | X2com protocol has no authentication, nonce or encryption; a CRC-8 is the only check | 306, 294 | Medium | **Verified** (static); on-air behaviour **untested** |
-| F5 | Parameter limits (e.g. fueling 50-150 %) are defined in app-side JSON; device-side clamping not located | 602 | Low | **Inferred** |
+| F5 | Parameter limits (e.g. fueling 50-150 %) are defined in app-side JSON; the device clamps at least AID 85, coverage of the rest unknown | 602 | Low | **Inferred** |
 
 Severity is a qualitative judgement of realistic impact. Every attack needs proximity or
 physical access to a 20-year-old aftermarket part, and the asset is engine health, not
@@ -30,9 +30,9 @@ personal data. "Medium" reflects that the consequence of an unauthorised write i
 disassemblers; inspected the APK's dex, manifest and native library; decompiled and searched
 the native X2com library; enumerated the vendor's 14 published vehicle profiles.
 
-**Did not:** capture or inject Bluetooth traffic; analyse the on-device bootloader (it is not
-part of the update image); flash any modified image; test pairing behaviour of the unit.
-Findings that hinge on those say so.
+**Did not:** connect to a device (none was on the bench in the passes recorded here); capture or
+inject Bluetooth traffic; analyse the on-device bootloader (it is not part of the update image);
+flash any modified image; test pairing behaviour of the unit. Findings that hinge on those say so.
 
 **Tooling:** Python 3, Ghidra 11.3.2, IDA Pro 9.3 (headless), `ilspycmd`, `zipfile`/dex string
 parsing. AI coding assistants were used under the owner's direction for scripting and
@@ -117,9 +117,11 @@ implemented and tested in `tools/x2com_crc.py`.
   directly, so a captured frame replays (CWE-294).
 - A keyword search of the full decompile (`decompiled_x2com.c`) finds no occurrence of
   `auth`, `hmac`, `nonce`, `encrypt`, `decrypt`, `aes`, `cipher`, `challenge`, `secret`, `password` or `signature`.
-- On the device, the multi-AID write routine (`0x7CC4`) copies received value bytes to the RAM address returned by the
-  AID lookup (`0x7C1C`). Inside that function the only conditions are "the AID exists" and "at most 14 AIDs per
-  frame". Callers were not audited.
+- On the device, the audited AID ingest dispatcher (`0x601C`) validates incoming values (it includes an AID 85 clamp) and
+  the audited resolver `0x7C1C` maps an AID to its SRAM location. No audited entry and no label describes an authentication,
+  session or key check. The first-pass multi-AID write routine (`0x7CC4`, not among the 14 audited entries) copies received
+  value bytes to the address `0x7C1C` returns; its only conditions are "the AID exists" and "at most 14 AIDs per frame".
+  Callers were not audited, so this is absence of evidence, not proof of absence.
 
 Per the vendor profiles, the writable AIDs include a 24-point fueling-versus-boost curve (AIDs 113-136,
 50-150 %) and RPM timing limits (AIDs 137-143). Reproduce with `python tools/diff_profiles.py`.
@@ -130,12 +132,14 @@ and engine damage, not data loss.
 **Fix:** require authenticated, encrypted pairing; add an application-level challenge-response with a MAC;
 enforce limits on the device (F5); rate-limit and log writes.
 
-### F5. Limits are client-side (Low, inferred)
+### F5. Limits are defined app-side; device-side coverage is partial (Low, inferred)
 
 Minimum and maximum values (for example 50-150 % on AIDs 113-136) are fields of the vendor's JSON profiles
-(`QuadAttribute`: `minValue`, `maxValue`, `multiplyFactor`, `offset`), enforced by the app's UI. A peer that speaks
-X2com directly is not subject to them unless the firmware clamps independently. No clamp was found in the write
-routine; consumers of the stored values were not audited. **Needs a device test.**
+(`QuadAttribute`: `minValue`, `maxValue`, `multiplyFactor`, `offset`) and are enforced by the app's UI. The firmware does
+clamp at least one parameter: the audited ingest dispatcher (`0x601C`) clamps AID 85 (requested stretch). Whether that clamp
+equals the UI's limit, and whether the boost-fueling curve (113-136) and timing entries (137-143) are clamped on the device
+at all, was not established. A peer speaking X2com directly is bound only by whatever the device enforces.
+**Needs a device test.**
 
 ## Also checked, no issue found
 
@@ -166,6 +170,9 @@ Finding your own mistakes before a reader does is part of the method. These were
 | "Key extracted from the .NET DLL" | Key derives from `.pwd`; both files ship beside the DLL | `decrypt_firmware.py` reproduction |
 | `firmware_crypto.py` derived the key from a CRC32 table and zero-padded short keys | Real derivation implemented; wrong-length keys rejected | end-to-end run on the real `.qz` |
 | `quadzilla_tool.py scan` | Was a stub that printed "0 responding AIDs"; now says it is not implemented | code review |
+| `0x4D38` "fueling calculator", `0x59E8` "analog sensor processor" (first pass and the June audit) | Audited roles: scalar arithmetic feeding the `0x200604` telemetry word; incoming-capture unpacker. `0x200604` is telemetry, not the pump output | two-tool audit + static chain trace |
+| AID pointer table 2 at `0xAE80` | `0xAD18`-`0xB113` | audit (`0xAE82` lies inside it) |
+| "`FirmwareUpdate.pwk` is 4 bytes, not the full key" (a lab note) | The 4-byte file was a truncated extraction. The full key is 8 bytes, derived from the 8-byte `.pwd`, and decrypts the `.qz` to the audited image | end-to-end run, SHA-256 match |
 
 ## Suggested disclosure
 

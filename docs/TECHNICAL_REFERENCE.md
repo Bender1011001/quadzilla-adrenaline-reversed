@@ -26,34 +26,52 @@ Details and reproduction: [SECURITY_ASSESSMENT.md F1/F2](SECURITY_ASSESSMENT.md)
 0x4000-0x403F  ARM exception vectors (8 x branch)
 0x4040-0x40FF  ARM startup: reset handler, stacks, switch to Thumb
 0x4100-0x96FF  Thumb application code and literal pools
-0x9700-0xB1B7  tables: AID pointer/size tables (0xA91C, 0xAE80), calibration data
+0x9700-0xB1B7  tables: AID pointer table 1 at 0xA91C, pointer table 2 at 0xAD18-0xB113, other data
 0xB1B8-0xBCFF  erased (0xFF), 2,888 bytes
 ```
 
-Source: IDA Pro audit of the decrypted image (June 2026). Earlier notes claimed a 48 KB part with ~19 KB free and
-build-date/device-ID strings at `0xFD00`/`0xFE00`; none of that exists in the image.
+Source: IDA Pro and Ghidra audit of the decrypted image. Earlier notes claimed a 48 KB part with ~19 KB free, build-date and
+device-ID strings at `0xFD00`/`0xFE00`, and a second table at `0xAE80`; none of that holds for this image.
 
 ## Functions
 
-The authoritative inventory is the two-tool audit: 145 confirmed execution entries, 14 with an evidence-backed role
-(`audit/data/semantic_labels.json`). The table lists entries of interest from the first-pass decompile
-(`decompiled_firmware_full.c`); treat a role as a hypothesis unless the last column says audited.
+The authoritative inventory is the two-tool audit: 145 confirmed execution entries, 14 with an evidence-backed role. These are the 14, verbatim
+from `audit/data/semantic_labels.json`. `trace` means a static instruction trace; `chain` means part of the closed static chain below. The labels describe
+static roles and do not prove live engine behaviour.
 
-| Address | Size | Role | Basis |
-|---|---|---|---|
-| `0x4D38` | 734 B | fueling calculation; writes final pump fueling value to RAM `0x200604` | audited (June 2026) |
-| `0x59E8` | 722 B | analog sensor processing; TPS voltage to RAM `0x2005D7` | audited (June 2026) |
-| `0x50F0` | 1,234 B | largest function, main control loop | first-pass label |
-| `0x6C94` | 706 B | CAN message handler | first-pass label |
-| `0x77B8` | 646 B | 2-D table interpolation | first-pass label |
-| `0x601C` | 100 B (785 decompiled lines) | communication protocol switch | first-pass label |
-| `0x5CF0` | 250 B | protocol state machine (5 states) | first-pass label |
-| `0x7BF8` / `0x7C1C` / `0x7C68` | 34 / 54 / 54 B | AID to segment / RAM pointer / size | first-pass label |
-| `0x7CC4` / `0x7D80` | 186 / 228 B | write / read multiple AIDs | first-pass label |
-| `0x6B20`-`0x6B9C` | small | CAN controller init, ready check, transmit | first-pass label |
+| Entry | Role | Assurance |
+|---|---|---|
+| `0x4818` | TPS/input gate that reads SRAM byte `0x2005D7` | trace |
+| `0x499C` | backdown-percentage threshold walk used to update AID 13 | chain |
+| `0x4A94` | applied-stretch percentage arithmetic using the AID 85 working copy | chain |
+| `0x4B38` | capture/fuel path that copies `0x2005E8` to telemetry word `0x200604` | trace |
+| `0x4D38` | percentage/scalar arithmetic feeding the `0x200604` telemetry path | trace |
+| `0x50F0` | main control loop that applies the AID 13 derate and drives the TC0 path | chain |
+| `0x59E8` | incoming-capture unpacker and writer for the `0x2005C4` SRAM structure | trace |
+| `0x5F34` | writer of SRAM byte `0x200BE7`; live AID meaning remains unproven | trace |
+| `0x601C` | AID ingest and validation dispatcher, including the AID 85 clamp/echo | trace |
+| `0x6FA0` | AT91 timer-channel write helper used for the TC0_RC output | chain |
+| `0x7BF8` | AID payload-width selector using the 75/150/185/220 brackets | trace |
+| `0x7C1C` | AID-to-SRAM resolver for pointer table 1 | trace |
+| `0x7C68` | AID-to-SRAM resolver for pointer table 2 | trace |
+| `0x7D80` | AID data reader that consumes the pointer returned by the table-2 resolver | trace |
 
-Known RAM locations: TPS `0x2005D7` (internal) and `0x200BC3` (AID 263), intake air temperature `0x200BE7` (AID 61), boost-fueling
-curve AIDs 113-136 at `0x200B3B`-`0x200B69`.
+Earlier first-pass labels (for example "fueling calculator" for `0x4D38`, "analog sensor processor" for `0x59E8`, "CAN handler" for `0x6C94`) are **not**
+carried forward; the audit replaced or did not confirm them.
+
+### The static pulse-stretch chain
+
+The tuner acts on the pump through an AT91 timer channel, not by editing ECM tables:
+
+```
+AID 85 (requested stretch) -> SRAM 0x200B30 / 0x200590 -> 0x601C clamp -> 0x4A94 -> minus AID 13 (backdown) -> 0x6FA0 -> TC0_RC
+```
+
+`0x200604` is a telemetry word (a scaled copy surfaced as AID 149), **not** the timer operand. This is a structural trace of the image; it has not been
+measured on a bench or with the engine running. Converting the timer value to microseconds needs a measured clock.
+
+Known SRAM locations: the TPS-gate input byte `0x2005D7`, the capture structure at `0x2005C4`, telemetry `0x200604`, and the boost-curve AIDs 113-136 at
+`0x200B3B`-`0x200B69`.
 
 ### Disassembly caveat
 

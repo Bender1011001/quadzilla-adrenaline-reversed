@@ -39,8 +39,11 @@ slate, then disassemble from each known entry with an address range capped at th
 That produced the first-pass 57 decompiled functions. A later two-tool audit (IDA Pro 9.3 and Ghidra 11.3.2, independently) reconciled the union to
 **145 execution entries** ([FIRMWARE_AUDIT.md](FIRMWARE_AUDIT.md)), so 57 was a hand-seeded subset.
 
-**What the image contains** (audited roles only): the fueling calculation at `0x4D38`, the analog sensor processor at `0x59E8`, the AID table lookup and
-multi-AID read/write routines around `0x7BF8`-`0x7D80`, and CAN handling. 2,888 bytes at `0xB1B8`-`0xBCFF` are erased.
+**What the image contains** (audited roles only, 14 of 145 entries): AID ingest and validation (`0x601C`), AID width and SRAM resolvers (`0x7BF8`-`0x7D80`), a
+TPS/input gate (`0x4818`), the stretch arithmetic and AID 13 backdown logic (`0x4A94`, `0x499C`, `0x50F0`), and the timer write that drives the output (`0x6FA0`). Together
+they form a closed static chain from the requested-stretch setting (AID 85) to the AT91 TC0_RC output ([TECHNICAL_REFERENCE.md](TECHNICAL_REFERENCE.md)). Two
+labels from the first pass did not survive the audit: `0x4D38` is scalar arithmetic feeding a telemetry word, not a fueling calculator, and `0x59E8` unpacks incoming
+captures rather than processing analog sensors. 2,888 bytes at `0xB1B8`-`0xBCFF` are erased.
 
 ## 4. X2com and the parameter system
 

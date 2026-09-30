@@ -18,10 +18,11 @@ in the docs and test vectors is the static value that ships in the vendor's publ
 ## Responsible use
 
 The work is static analysis of an installer, an Android app and a firmware image the author
-obtained legitimately, plus the vendor's publicly served profile JSON. Device interaction is
-limited to the read-only USB queries in `tools/quadzilla_tool.py`. No modified firmware has
-been flashed to a device (see "Not tested" in docs/SECURITY_ASSESSMENT.md). If you are the
-rights holder and want something removed, open an issue.
+obtained legitimately, plus the vendor's publicly served profile JSON. It did not require a
+device, and none was connected in the passes recorded here. The optional USB tool
+(`tools/quadzilla_tool.py`) only sends read-only queries. No modified firmware has been
+flashed to anything (see "Not tested" in docs/SECURITY_ASSESSMENT.md). If you are the rights
+holder and want something removed, open an issue.
 
 Changing fuel or timing on a diesel can destroy an engine and may be illegal for road use in
 your jurisdiction. Nothing here is a tuning guide.
