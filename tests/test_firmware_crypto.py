@@ -67,7 +67,8 @@ class IntelHex(unittest.TestCase):
         self.assertEqual((base, len(image)), (0x4000, 64))
 
     def test_checksum_error_detected(self):
-        text = _synthetic_hex(2).decode().replace(":10400000", ":10400001", 1)
+        # Corrupt a data byte, keeping the record's structural fields valid.
+        text = _synthetic_hex(2).decode().replace(":1040000000", ":1040000001", 1)
         _, records, bad = fc.parse_ihex(text)
         self.assertEqual((records, bad), (2, 1))
 

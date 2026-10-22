@@ -27,8 +27,7 @@ errors, image `0x4000`-`0xBCFF`. `tools/firmware_crypto.py` reproduces this end 
 
 ## 3. The firmware image
 
-Hardware: ARM7TDMI, SAM7S-class. The image is ARM for the first 256 bytes (vectors, reset, mode switch) and Thumb thereafter, with literal pools
-interleaved.
+Hardware: ARM7TDMI, SAM7S-class. The image mixes ARM startup, Thumb application code, ARM interworking bodies and interleaved literal pools.
 
 **The disassembly problem.** Ghidra's auto-analysis classified about 96 % of the image as data because it read literal pools as data and then refused to
 disassemble around them. Approaches that failed, in order: setting Thumb mode before analysis (ignored by the analyzer); forcing Thumb on undefined
@@ -53,7 +52,7 @@ retransmit timers and the CRC. The CRC is CRC-8/SAE-J1850 (init `0xFF`, poly `0x
 
 Parameters ("AIDs") are addressed by number; width is fixed by range (1, 2, 3, 4 bytes, then variable). Across the 14 vendor profiles there are 117 unique
 AIDs, including a 24-point fueling-versus-boost curve (113-136) and RPM timing entries (137-143). Two AIDs (145, 181) appear only in the vendor's internal
-QZTEST profile. Whether each AID is honoured by the device, and whether the device clamps values itself, is **not established**.
+QZTEST profile. The ingest dispatcher contains static clamps for a subset of AIDs (security assessment F5). Runtime handling of every profile AID remains untested.
 
 ## 5. The iQuad app
 
@@ -81,14 +80,14 @@ Ideas from earlier notes that do not fit (a data logger, adaptive fuel learning,
 
 1. Does the on-device bootloader verify anything beyond the Intel HEX line checksums?
 2. What pairing mode and PIN does the Bluetooth module use?
-3. Does the firmware clamp AID writes independently of the app's limits?
+3. Do the statically identified clamps cover every incoming-write path, and how do they behave on hardware?
 4. Roles of the 131 unlabelled execution entries.
 5. The X2com-over-USB framing needed to probe AIDs (`quadzilla_tool.py scan` is deliberately unimplemented).
 
 ## 8. Reproducing
 
 ```bash
-python -m unittest discover -s tests -t . -v        # 30 tests, no vendor files needed
+python -m unittest discover -s tests -t . -v        # offline tests, no vendor files needed
 python tools/diff_profiles.py                        # 14 profiles, 117 unique AIDs, QZTEST-only {145, 181}
 python tools/x2com_crc.py 41051022                   # frame CRC helper
 # with your own copy of the vendor package:

@@ -171,7 +171,10 @@ def adjudicate_entries(ida: dict[str, Any], ghidra: dict[str, Any], raw: bytes) 
         other_container = None
         status = "unresolved"
         reason = "no independent entry evidence"
-        if start in iset and start in gset:
+        if data_region:
+            status = "rejected_data_as_function"
+            reason = f"entry lies inside known {data_region}"
+        elif start in iset and start in gset:
             status = "confirmed_cross_tool"
             reason = "exact function start recognized by IDA and Ghidra"
         elif start in iset:
@@ -337,6 +340,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--ida", type=Path, required=True)
     parser.add_argument("--ghidra", type=Path, required=True)
     parser.add_argument("--legacy", type=Path)
+    parser.add_argument("--image", type=Path, help="local raw image; overrides historical export path")
     parser.add_argument("--output", type=Path, required=True)
     return parser
 
@@ -348,7 +352,7 @@ def main(argv: list[str] | None = None) -> int:
     validate_map(ida, args.ida)
     validate_map(ghidra, args.ghidra)
     legacy = read_json(args.legacy) if args.legacy else None
-    raw_path_value = ida.get("raw_image")
+    raw_path_value = args.image or ida.get("raw_image")
     if not raw_path_value:
         raise ValueError("IDA map lacks raw_image path")
     raw_path = Path(str(raw_path_value))

@@ -23,10 +23,19 @@ decompiled/
 *.hex
 *.apk
 *.Smt
+*.smt
+*.qz
+*.pwk
+*.pwd
+*.so
 *.7z
 *.zip
 *.sqlite
 *.manifest
+*.i64
+*.idb
+*.bndb
+/audit_runs/
 # Vendor documentation bundles (DataMaster/MasterTune help + license files).
 # NOTE: do not add a `Docs/` pattern here — core.ignorecase is true on
 # Windows, so it would also match this repo's tracked `docs/` directory.

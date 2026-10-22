@@ -7,7 +7,7 @@ Static security analysis of the **Quadzilla Adrenaline** (DADR9802), an aftermar
 ECM and the VP44 injection pump and changes fuel quantity and timing in real time, so an unauthorised write to it can damage an engine.
 
 The work covers the firmware update package, the ARM7 firmware image, the iQuad Android app and its native protocol library, and the vendor's parameter profiles.
-Everything is reproducible from scripts and tests in this repository. Claims that could not be verified are labelled, and corrections to earlier versions of this
+The repository includes reproduction scripts and offline tests; some claims still depend on separately obtained vendor artifacts and licensed analysis tools. Claims that could not be verified are labelled, and corrections to earlier versions of this
 repository are listed in the [errata](docs/SECURITY_ASSESSMENT.md#errata-corrections-made-to-earlier-claims-in-this-repository).
 
 ## Results
@@ -34,7 +34,7 @@ Supporting analysis:
 Python 3.10+, standard library only (`pyserial` for the USB tool).
 
 ```bash
-python -m unittest discover -s tests -t . -v     # 30 tests, no vendor files needed
+python -m unittest discover -s tests -t . -v     # offline tests, no vendor files needed
 python tools/diff_profiles.py                     # 14 vendor profiles, 117 unique AIDs, QZTEST-only {145, 181}
 python tools/x2com_crc.py                         # CRC-8/SAE-J1850 check value: 0x4B
 python tools/aid_clamps.py                        # device-side value clamps for 57 AIDs vs the app's limits
@@ -48,6 +48,8 @@ python tools/firmware_crypto.py decrypt FirmwareUpdate.qz fw.hex --pwd-file Firm
 # expected image SHA-256: 1ae519ba6194e8f7bdaaa94333a83a9e6fda3b0563f87f7d48383b37288c1780
 python -m unittest tests.test_firmware_audit -v                        # audit numbers vs the committed data
 ```
+
+Latest review: [October 22 verification](docs/VERIFICATION_2026-10-22.md) covers strict firmware parsing, fresh IDA/Binary Ninja checks and remaining limits.
 
 ## Layout
 
@@ -64,7 +66,7 @@ vehicles/  14 vendor profile JSONs     decompiled_*.c  decompiler output (see NO
 
 ## Methodology and AI assistance
 
-The analysis was done with AI coding assistants (Claude) working under the repository owner's direction on hardware and files the owner supplied.
+The analysis was done with AI coding assistants (Claude and Codex) working under the repository owner's direction on hardware and files the owner supplied.
 Nothing is accepted on an assistant's say-so: a result stays only if a script, a test, or a second independent tool reproduces it, and several earlier
 claims did not survive that check (see the errata). The two-disassembler audit and the test suite exist for that reason.
 

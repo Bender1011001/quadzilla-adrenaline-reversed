@@ -11,7 +11,8 @@ Static analysis only: it reads decompiler output, it does not run anything.
     python tools/aid_clamps.py [decompiled_firmware_full.c] [vehicle_profile.json]
 
 Notes:
-* Stacked ``case`` labels share one body, so only the first label of a stack carries literals.
+* This is a lexical listing, not a control-flow evaluator. Later cases can jump into
+  code under an earlier label; missing local literals do not mean missing checks.
 * Literals are in the firmware's raw units. The profile's ``multiplyFactor`` converts to display units.
 """
 from __future__ import annotations
@@ -39,7 +40,7 @@ def dispatcher_body(source: str) -> list[str]:
 
 
 def cases(lines: list[str]) -> dict[int, list[str]]:
-    """Map AID -> body lines of its ``case`` (up to the next label)."""
+    """Map AID -> local case text, without following goto or shared targets."""
     starts = [(int(m.group(1), 0), i) for i, line in enumerate(lines)
               if (m := re.match(r"\s*case\s+(0x[0-9a-fA-F]+|\d+)\s*:", line))]
     bounds = [i for _, i in starts] + [len(lines)]

@@ -69,7 +69,7 @@ idat -A -S"audit/tools/ida_export_quadzilla.py" firmware_v2.8.4HF.bin.i64
 
 # reconcile and catalogue (Python only)
 python audit/tools/compare_quadzilla_disassemblers.py --ida audit/data/ida_function_map.json \
-  --ghidra audit/data/ghidra_function_map.json --output /tmp/cross_disassembler_audit.json
+  --ghidra audit/data/ghidra_function_map.json --image fw.bin --output /tmp/cross_disassembler_audit.json
 python audit/tools/build_quadzilla_entry_catalog.py --audit audit/data/cross_disassembler_audit.json \
   --ida audit/data/ida_function_map.json --ghidra audit/data/ghidra_function_map.json \
   --labels audit/data/semantic_labels.json --output /tmp/execution_entry_catalog.json
@@ -77,3 +77,12 @@ python audit/tools/build_quadzilla_entry_catalog.py --audit audit/data/cross_dis
 # verify the committed numbers
 python -m unittest tests.test_firmware_audit -v
 ```
+
+The `--image` argument supplies the locally obtained image instead of relying on
+the historical absolute path in an export. The IDA exporter also accepts explicit
+`IMAGE OUTPUT` script arguments and checks database bytes against that image.
+
+An additional [October 22 review](VERIFICATION_2026-10-22.md) records fresh IDA
+traces and a catalog-seeded Binary Ninja check of 14 Thumb entries. That check
+supports specific instruction traces; it does not replace this two-tool entry
+inventory or constitute independent entry discovery.

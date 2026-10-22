@@ -142,11 +142,12 @@ class QuadzillaConnection:
     def recv_raw(self, count, timeout=None):
         """Receive raw bytes."""
         old_timeout = self.serial.timeout
-        if timeout:
+        if timeout is not None:
             self.serial.timeout = timeout
-        data = self.serial.read(count)
-        self.serial.timeout = old_timeout
-        return data
+        try:
+            return self.serial.read(count)
+        finally:
+            self.serial.timeout = old_timeout
     
     def link_check(self):
         """Send link check and verify response."""
@@ -170,18 +171,10 @@ class QuadzillaConnection:
             'raw': resp.hex(),
             'response_code': resp[0],
             'data': resp[1:].hex(),
-            # Parse known fields from Quadzilla.dll decompilation
-            'firmware_version': resp[1:5].hex(),
-            'serial_number': resp[5:13].hex(),
-            'device_id': resp[13:21].hex(),
-            'hw_rev': resp[21:25].hex(),
         }
         
         print(f"[+] Module Info:")
-        print(f"    Firmware: {info['firmware_version']}")
-        print(f"    Serial:   {info['serial_number']}")
-        print(f"    Device:   {info['device_id']}")
-        print(f"    HW Rev:   {info['hw_rev']}")
+        print(f"    Raw response (field layout unverified): {info['raw']}")
         return info
     
     def read_feature_codes(self):
@@ -201,6 +194,8 @@ class QuadzillaConnection:
         features = []
         if count > 0:
             data = self.recv_raw(count * 8, timeout=3.0)
+            if len(data) != count * 8:
+                raise ConnectionError(f"Feature read truncated: expected {count * 8} bytes, got {len(data)}")
             for i in range(count):
                 code = data[i*8:(i+1)*8]
                 features.append(code.hex())

@@ -22,7 +22,7 @@ class DispatcherClamps(unittest.TestCase):
             self.assertIn(aid, self.cases)
 
     def test_fueling_curve_points_clamp_to_the_apps_range(self):
-        for aid in range(113, 122):  # stacked labels 122-136 share one body (see aid_clamps.py notes)
+        for aid in range(113, 122):  # later cases jump into shared code, not evaluated by this parser
             assigned, compared = self.literals(aid)
             self.assertEqual(assigned, [50, 150], aid)
             self.assertIn(151, compared, aid)
@@ -49,8 +49,9 @@ class DispatcherClamps(unittest.TestCase):
         for aid in (139, 140, 141):
             self.assertEqual(app_raw_max(aid), 300, aid)         # equal
 
-    def test_stacked_labels_yield_empty_bodies_not_fabricated_limits(self):
+    def test_goto_only_case_does_not_fabricate_local_literals(self):
         self.assertEqual(self.literals(123), ([], []))
+        self.assertIn("goto code_r0x000068e4;", self.cases[123])
 
 
 if __name__ == "__main__":

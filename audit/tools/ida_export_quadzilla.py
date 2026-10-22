@@ -17,8 +17,9 @@ import idc
 
 IMAGE_START = 0x4000
 IMAGE_END = 0xBD00
-OUT = Path(r"E:\code.projects\dodge\quadzilla_rev\captures\quadzilla_re\ida_function_map.json")
-RAW = Path(r"E:\code.projects\dodge\quadzilla_rev\firmware_v2.8.4HF.bin")
+ROOT = Path(__file__).resolve().parents[2]
+OUT = Path(idc.ARGV[2]) if len(idc.ARGV) > 2 else ROOT / "audit/data/ida_function_map.json"
+RAW = Path(idc.ARGV[1]) if len(idc.ARGV) > 1 else Path(ida_nalt.get_input_file_path())
 
 
 def hex_ea(value):
@@ -27,6 +28,8 @@ def hex_ea(value):
 
 def main():
     ida_auto.auto_wait()
+    if ida_bytes.get_bytes(IMAGE_START, IMAGE_END - IMAGE_START) != RAW.read_bytes():
+        raise RuntimeError("database bytes differ from the supplied raw image")
     functions = []
     calls = set()
     transfers = set()
