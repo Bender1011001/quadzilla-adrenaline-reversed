@@ -1,0 +1,410 @@
+{
+  "format": "quadzilla-bounded-decode-v1",
+  "raw_sha256": "1ae519ba6194e8f7bdaaa94333a83a9e6fda3b0563f87f7d48383b37288c1780",
+  "tool_version": "5.2.8722 Personal",
+  "limitation": "decoder supports a superset of ARMv4T; explicit mode and bounds are supplied hypotheses",
+  "ranges": [
+    {
+      "start": "0x8564",
+      "end": "0x8568",
+      "architecture": "thumb2",
+      "instructions": [
+        {
+          "address": "0x8564",
+          "length": 2,
+          "text": "bx      pc"
+        },
+        {
+          "address": "0x8566",
+          "length": 2,
+          "text": "mov     r8, r8"
+        }
+      ]
+    },
+    {
+      "start": "0x8568",
+      "end": "0x8574",
+      "architecture": "armv7",
+      "instructions": [
+        {
+          "address": "0x8568",
+          "length": 4,
+          "text": "and     r0, r0, #0xff"
+        },
+        {
+          "address": "0x856c",
+          "length": 4,
+          "text": "and     r1, r1, #0xff"
+        },
+        {
+          "address": "0x8570",
+          "length": 4,
+          "text": "b       0x8578"
+        }
+      ]
+    },
+    {
+      "start": "0x8574",
+      "end": "0x8578",
+      "architecture": "thumb2",
+      "instructions": [
+        {
+          "address": "0x8574",
+          "length": 2,
+          "text": "bx      pc"
+        },
+        {
+          "address": "0x8576",
+          "length": 2,
+          "text": "mov     r8, r8"
+        }
+      ]
+    },
+    {
+      "start": "0x8578",
+      "end": "0x8584",
+      "architecture": "armv7",
+      "instructions": [
+        {
+          "address": "0x8578",
+          "length": 4,
+          "text": "push    {r2, r3}"
+        },
+        {
+          "address": "0x857c",
+          "length": 4,
+          "text": "mov     r12, #0"
+        },
+        {
+          "address": "0x8580",
+          "length": 4,
+          "text": "b       0x85a0"
+        }
+      ]
+    },
+    {
+      "start": "0x8584",
+      "end": "0x8588",
+      "architecture": "thumb2",
+      "instructions": [
+        {
+          "address": "0x8584",
+          "length": 2,
+          "text": "bx      pc"
+        },
+        {
+          "address": "0x8586",
+          "length": 2,
+          "text": "mov     r8, r8"
+        }
+      ]
+    },
+    {
+      "start": "0x8588",
+      "end": "0x8678",
+      "architecture": "armv7",
+      "instructions": [
+        {
+          "address": "0x8588",
+          "length": 4,
+          "text": "push    {r2, r3}"
+        },
+        {
+          "address": "0x858c",
+          "length": 4,
+          "text": "asr.s   r12, r1, #0x20"
+        },
+        {
+          "address": "0x8590",
+          "length": 4,
+          "text": "rsbhs   r1, r1, #0"
+        },
+        {
+          "address": "0x8594",
+          "length": 4,
+          "text": "lsl     r12, r12, #0x1"
+        },
+        {
+          "address": "0x8598",
+          "length": 4,
+          "text": "eor.s   r12, r12, r0, asr  #0x20"
+        },
+        {
+          "address": "0x859c",
+          "length": 4,
+          "text": "rsbhs   r0, r0, #0"
+        },
+        {
+          "address": "0x85a0",
+          "length": 4,
+          "text": "mov.s   r2, r1"
+        },
+        {
+          "address": "0x85a4",
+          "length": 4,
+          "text": "beq     0x8670"
+        },
+        {
+          "address": "0x85a8",
+          "length": 4,
+          "text": "mov     r3, #0"
+        },
+        {
+          "address": "0x85ac",
+          "length": 4,
+          "text": "cmp     r1, r0, lsr  #0x10"
+        },
+        {
+          "address": "0x85b0",
+          "length": 4,
+          "text": "lslls   r1, r1, #0x10"
+        },
+        {
+          "address": "0x85b4",
+          "length": 4,
+          "text": "cmp     r1, r0, lsr  #0x8"
+        },
+        {
+          "address": "0x85b8",
+          "length": 4,
+          "text": "lslls   r1, r1, #0x8"
+        },
+        {
+          "address": "0x85bc",
+          "length": 4,
+          "text": "cmp     r1, r0, lsr  #0x1"
+        },
+        {
+          "address": "0x85c0",
+          "length": 4,
+          "text": "bhi     0x8648"
+        },
+        {
+          "address": "0x85c4",
+          "length": 4,
+          "text": "cmp     r1, r0, lsr  #0x2"
+        },
+        {
+          "address": "0x85c8",
+          "length": 4,
+          "text": "bhi     0x8640"
+        },
+        {
+          "address": "0x85cc",
+          "length": 4,
+          "text": "cmp     r1, r0, lsr  #0x3"
+        },
+        {
+          "address": "0x85d0",
+          "length": 4,
+          "text": "bhi     0x8634"
+        },
+        {
+          "address": "0x85d4",
+          "length": 4,
+          "text": "cmp     r1, r0, lsr  #0x4"
+        },
+        {
+          "address": "0x85d8",
+          "length": 4,
+          "text": "bhi     0x8628"
+        },
+        {
+          "address": "0x85dc",
+          "length": 4,
+          "text": "cmp     r1, r0, lsr  #0x5"
+        },
+        {
+          "address": "0x85e0",
+          "length": 4,
+          "text": "bhi     0x861c"
+        },
+        {
+          "address": "0x85e4",
+          "length": 4,
+          "text": "cmp     r1, r0, lsr  #0x6"
+        },
+        {
+          "address": "0x85e8",
+          "length": 4,
+          "text": "bhi     0x8610"
+        },
+        {
+          "address": "0x85ec",
+          "length": 4,
+          "text": "cmp     r1, r0, lsr  #0x7"
+        },
+        {
+          "address": "0x85f0",
+          "length": 4,
+          "text": "bhi     0x8604"
+        },
+        {
+          "address": "0x85f4",
+          "length": 4,
+          "text": "cmp     r0, r1, lsl  #0x7"
+        },
+        {
+          "address": "0x85f8",
+          "length": 4,
+          "text": "subhs   r0, r0, r1, lsl  #0x7"
+        },
+        {
+          "address": "0x85fc",
+          "length": 4,
+          "text": "adc     r3, r3, r3"
+        },
+        {
+          "address": "0x8600",
+          "length": 4,
+          "text": "cmp     r0, r1, lsl  #0x6"
+        },
+        {
+          "address": "0x8604",
+          "length": 4,
+          "text": "subhs   r0, r0, r1, lsl  #0x6"
+        },
+        {
+          "address": "0x8608",
+          "length": 4,
+          "text": "adc     r3, r3, r3"
+        },
+        {
+          "address": "0x860c",
+          "length": 4,
+          "text": "cmp     r0, r1, lsl  #0x5"
+        },
+        {
+          "address": "0x8610",
+          "length": 4,
+          "text": "subhs   r0, r0, r1, lsl  #0x5"
+        },
+        {
+          "address": "0x8614",
+          "length": 4,
+          "text": "adc     r3, r3, r3"
+        },
+        {
+          "address": "0x8618",
+          "length": 4,
+          "text": "cmp     r0, r1, lsl  #0x4"
+        },
+        {
+          "address": "0x861c",
+          "length": 4,
+          "text": "subhs   r0, r0, r1, lsl  #0x4"
+        },
+        {
+          "address": "0x8620",
+          "length": 4,
+          "text": "adc     r3, r3, r3"
+        },
+        {
+          "address": "0x8624",
+          "length": 4,
+          "text": "cmp     r0, r1, lsl  #0x3"
+        },
+        {
+          "address": "0x8628",
+          "length": 4,
+          "text": "subhs   r0, r0, r1, lsl  #0x3"
+        },
+        {
+          "address": "0x862c",
+          "length": 4,
+          "text": "adc     r3, r3, r3"
+        },
+        {
+          "address": "0x8630",
+          "length": 4,
+          "text": "cmp     r0, r1, lsl  #0x2"
+        },
+        {
+          "address": "0x8634",
+          "length": 4,
+          "text": "subhs   r0, r0, r1, lsl  #0x2"
+        },
+        {
+          "address": "0x8638",
+          "length": 4,
+          "text": "adc     r3, r3, r3"
+        },
+        {
+          "address": "0x863c",
+          "length": 4,
+          "text": "cmp     r0, r1, lsl  #0x1"
+        },
+        {
+          "address": "0x8640",
+          "length": 4,
+          "text": "subhs   r0, r0, r1, lsl  #0x1"
+        },
+        {
+          "address": "0x8644",
+          "length": 4,
+          "text": "adc     r3, r3, r3"
+        },
+        {
+          "address": "0x8648",
+          "length": 4,
+          "text": "cmp     r0, r1"
+        },
+        {
+          "address": "0x864c",
+          "length": 4,
+          "text": "subhs   r0, r0, r1"
+        },
+        {
+          "address": "0x8650",
+          "length": 4,
+          "text": "adc     r3, r3, r3"
+        },
+        {
+          "address": "0x8654",
+          "length": 4,
+          "text": "cmp     r1, r2"
+        },
+        {
+          "address": "0x8658",
+          "length": 4,
+          "text": "lsrhi   r1, r1, #0x8"
+        },
+        {
+          "address": "0x865c",
+          "length": 4,
+          "text": "bhi     0x85f4"
+        },
+        {
+          "address": "0x8660",
+          "length": 4,
+          "text": "mov     r1, r3"
+        },
+        {
+          "address": "0x8664",
+          "length": 4,
+          "text": "lsl.s   r3, r12, #0x1f"
+        },
+        {
+          "address": "0x8668",
+          "length": 4,
+          "text": "rsbhs   r1, r1, #0"
+        },
+        {
+          "address": "0x866c",
+          "length": 4,
+          "text": "rsbmi   r0, r0, #0"
+        },
+        {
+          "address": "0x8670",
+          "length": 4,
+          "text": "pop     {r2, r3}"
+        },
+        {
+          "address": "0x8674",
+          "length": 4,
+          "text": "bx      lr"
+        }
+      ]
+    }
+  ]
+}

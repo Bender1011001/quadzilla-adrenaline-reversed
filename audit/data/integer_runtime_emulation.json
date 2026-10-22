@@ -1,0 +1,1040 @@
+{
+  "format": "quadzilla-integer-emulation-v1",
+  "raw_sha256": "1ae519ba6194e8f7bdaaa94333a83a9e6fda3b0563f87f7d48383b37288c1780",
+  "emulator": "Unicorn",
+  "version": "2.1.4",
+  "cpu": "ARM926 functional surrogate",
+  "limits": [
+    "not hardware or cycle validation",
+    "not an exhaustive 32-bit proof",
+    "instruction budget 2048 per call",
+    "only ROM read/execute and SRAM read/write mapped; no peripherals"
+  ],
+  "preservation_checked": "R2..R11 and SP",
+  "return_convention": "R0 remainder; R1 quotient",
+  "suites": [
+    {
+      "entry": "0x8564",
+      "isa": "thumb",
+      "kind": "u8",
+      "cases": 65536,
+      "mismatches": [],
+      "visited_addresses": [
+        "0x8564",
+        "0x8568",
+        "0x856c",
+        "0x8570",
+        "0x8578",
+        "0x857c",
+        "0x8580",
+        "0x85a0",
+        "0x85a4",
+        "0x85a8",
+        "0x85ac",
+        "0x85b0",
+        "0x85b4",
+        "0x85b8",
+        "0x85bc",
+        "0x85c0",
+        "0x85c4",
+        "0x85c8",
+        "0x85cc",
+        "0x85d0",
+        "0x85d4",
+        "0x85d8",
+        "0x85dc",
+        "0x85e0",
+        "0x85e4",
+        "0x85e8",
+        "0x85ec",
+        "0x85f0",
+        "0x85f4",
+        "0x85f8",
+        "0x85fc",
+        "0x8600",
+        "0x8604",
+        "0x8608",
+        "0x860c",
+        "0x8610",
+        "0x8614",
+        "0x8618",
+        "0x861c",
+        "0x8620",
+        "0x8624",
+        "0x8628",
+        "0x862c",
+        "0x8630",
+        "0x8634",
+        "0x8638",
+        "0x863c",
+        "0x8640",
+        "0x8644",
+        "0x8648",
+        "0x864c",
+        "0x8650",
+        "0x8654",
+        "0x8658",
+        "0x865c",
+        "0x8660",
+        "0x8664",
+        "0x8668",
+        "0x866c",
+        "0x8670",
+        "0x8674"
+      ],
+      "examples": [
+        {
+          "inputs": [
+            0,
+            0
+          ],
+          "r0_remainder": 0,
+          "r1_quotient": 0
+        },
+        {
+          "inputs": [
+            0,
+            1
+          ],
+          "r0_remainder": 0,
+          "r1_quotient": 0
+        },
+        {
+          "inputs": [
+            0,
+            2
+          ],
+          "r0_remainder": 0,
+          "r1_quotient": 0
+        },
+        {
+          "inputs": [
+            0,
+            3
+          ],
+          "r0_remainder": 0,
+          "r1_quotient": 0
+        },
+        {
+          "inputs": [
+            0,
+            4
+          ],
+          "r0_remainder": 0,
+          "r1_quotient": 0
+        },
+        {
+          "inputs": [
+            0,
+            5
+          ],
+          "r0_remainder": 0,
+          "r1_quotient": 0
+        },
+        {
+          "inputs": [
+            0,
+            6
+          ],
+          "r0_remainder": 0,
+          "r1_quotient": 0
+        },
+        {
+          "inputs": [
+            0,
+            7
+          ],
+          "r0_remainder": 0,
+          "r1_quotient": 0
+        },
+        {
+          "inputs": [
+            7,
+            0
+          ],
+          "r0_remainder": 7,
+          "r1_quotient": 0
+        },
+        {
+          "inputs": [
+            100,
+            3
+          ],
+          "r0_remainder": 1,
+          "r1_quotient": 33
+        }
+      ]
+    },
+    {
+      "entry": "0x8574",
+      "isa": "thumb",
+      "kind": "u32",
+      "cases": 4321,
+      "mismatches": [],
+      "visited_addresses": [
+        "0x8574",
+        "0x8578",
+        "0x857c",
+        "0x8580",
+        "0x85a0",
+        "0x85a4",
+        "0x85a8",
+        "0x85ac",
+        "0x85b0",
+        "0x85b4",
+        "0x85b8",
+        "0x85bc",
+        "0x85c0",
+        "0x85c4",
+        "0x85c8",
+        "0x85cc",
+        "0x85d0",
+        "0x85d4",
+        "0x85d8",
+        "0x85dc",
+        "0x85e0",
+        "0x85e4",
+        "0x85e8",
+        "0x85ec",
+        "0x85f0",
+        "0x85f4",
+        "0x85f8",
+        "0x85fc",
+        "0x8600",
+        "0x8604",
+        "0x8608",
+        "0x860c",
+        "0x8610",
+        "0x8614",
+        "0x8618",
+        "0x861c",
+        "0x8620",
+        "0x8624",
+        "0x8628",
+        "0x862c",
+        "0x8630",
+        "0x8634",
+        "0x8638",
+        "0x863c",
+        "0x8640",
+        "0x8644",
+        "0x8648",
+        "0x864c",
+        "0x8650",
+        "0x8654",
+        "0x8658",
+        "0x865c",
+        "0x8660",
+        "0x8664",
+        "0x8668",
+        "0x866c",
+        "0x8670",
+        "0x8674"
+      ],
+      "examples": [
+        {
+          "inputs": [
+            0,
+            0
+          ],
+          "r0_remainder": 0,
+          "r1_quotient": 0
+        },
+        {
+          "inputs": [
+            0,
+            1
+          ],
+          "r0_remainder": 0,
+          "r1_quotient": 0
+        },
+        {
+          "inputs": [
+            0,
+            2
+          ],
+          "r0_remainder": 0,
+          "r1_quotient": 0
+        },
+        {
+          "inputs": [
+            0,
+            3
+          ],
+          "r0_remainder": 0,
+          "r1_quotient": 0
+        },
+        {
+          "inputs": [
+            0,
+            7
+          ],
+          "r0_remainder": 0,
+          "r1_quotient": 0
+        },
+        {
+          "inputs": [
+            0,
+            100
+          ],
+          "r0_remainder": 0,
+          "r1_quotient": 0
+        },
+        {
+          "inputs": [
+            0,
+            127
+          ],
+          "r0_remainder": 0,
+          "r1_quotient": 0
+        },
+        {
+          "inputs": [
+            0,
+            128
+          ],
+          "r0_remainder": 0,
+          "r1_quotient": 0
+        },
+        {
+          "inputs": [
+            7,
+            0
+          ],
+          "r0_remainder": 7,
+          "r1_quotient": 0
+        },
+        {
+          "inputs": [
+            100,
+            3
+          ],
+          "r0_remainder": 1,
+          "r1_quotient": 33
+        },
+        {
+          "inputs": [
+            2147483648,
+            4294967295
+          ],
+          "r0_remainder": 2147483648,
+          "r1_quotient": 0
+        },
+        {
+          "inputs": [
+            4294967289,
+            0
+          ],
+          "r0_remainder": 4294967289,
+          "r1_quotient": 0
+        },
+        {
+          "inputs": [
+            4294967289,
+            3
+          ],
+          "r0_remainder": 0,
+          "r1_quotient": 1431655763
+        }
+      ]
+    },
+    {
+      "entry": "0x8584",
+      "isa": "thumb",
+      "kind": "s32",
+      "cases": 4321,
+      "mismatches": [],
+      "visited_addresses": [
+        "0x8584",
+        "0x8588",
+        "0x858c",
+        "0x8590",
+        "0x8594",
+        "0x8598",
+        "0x859c",
+        "0x85a0",
+        "0x85a4",
+        "0x85a8",
+        "0x85ac",
+        "0x85b0",
+        "0x85b4",
+        "0x85b8",
+        "0x85bc",
+        "0x85c0",
+        "0x85c4",
+        "0x85c8",
+        "0x85cc",
+        "0x85d0",
+        "0x85d4",
+        "0x85d8",
+        "0x85dc",
+        "0x85e0",
+        "0x85e4",
+        "0x85e8",
+        "0x85ec",
+        "0x85f0",
+        "0x85f4",
+        "0x85f8",
+        "0x85fc",
+        "0x8600",
+        "0x8604",
+        "0x8608",
+        "0x860c",
+        "0x8610",
+        "0x8614",
+        "0x8618",
+        "0x861c",
+        "0x8620",
+        "0x8624",
+        "0x8628",
+        "0x862c",
+        "0x8630",
+        "0x8634",
+        "0x8638",
+        "0x863c",
+        "0x8640",
+        "0x8644",
+        "0x8648",
+        "0x864c",
+        "0x8650",
+        "0x8654",
+        "0x8658",
+        "0x865c",
+        "0x8660",
+        "0x8664",
+        "0x8668",
+        "0x866c",
+        "0x8670",
+        "0x8674"
+      ],
+      "examples": [
+        {
+          "inputs": [
+            0,
+            0
+          ],
+          "r0_remainder": 0,
+          "r1_quotient": 0
+        },
+        {
+          "inputs": [
+            0,
+            1
+          ],
+          "r0_remainder": 0,
+          "r1_quotient": 0
+        },
+        {
+          "inputs": [
+            0,
+            2
+          ],
+          "r0_remainder": 0,
+          "r1_quotient": 0
+        },
+        {
+          "inputs": [
+            0,
+            3
+          ],
+          "r0_remainder": 0,
+          "r1_quotient": 0
+        },
+        {
+          "inputs": [
+            0,
+            7
+          ],
+          "r0_remainder": 0,
+          "r1_quotient": 0
+        },
+        {
+          "inputs": [
+            0,
+            100
+          ],
+          "r0_remainder": 0,
+          "r1_quotient": 0
+        },
+        {
+          "inputs": [
+            0,
+            127
+          ],
+          "r0_remainder": 0,
+          "r1_quotient": 0
+        },
+        {
+          "inputs": [
+            0,
+            128
+          ],
+          "r0_remainder": 0,
+          "r1_quotient": 0
+        },
+        {
+          "inputs": [
+            7,
+            0
+          ],
+          "r0_remainder": 7,
+          "r1_quotient": 0
+        },
+        {
+          "inputs": [
+            100,
+            3
+          ],
+          "r0_remainder": 1,
+          "r1_quotient": 33
+        },
+        {
+          "inputs": [
+            2147483648,
+            4294967295
+          ],
+          "r0_remainder": 0,
+          "r1_quotient": 2147483648
+        },
+        {
+          "inputs": [
+            4294967289,
+            0
+          ],
+          "r0_remainder": 7,
+          "r1_quotient": 0
+        },
+        {
+          "inputs": [
+            4294967289,
+            3
+          ],
+          "r0_remainder": 4294967295,
+          "r1_quotient": 4294967294
+        }
+      ]
+    },
+    {
+      "entry": "0x8568",
+      "isa": "arm",
+      "kind": "u8",
+      "cases": 4321,
+      "mismatches": [],
+      "visited_addresses": [
+        "0x8568",
+        "0x856c",
+        "0x8570",
+        "0x8578",
+        "0x857c",
+        "0x8580",
+        "0x85a0",
+        "0x85a4",
+        "0x85a8",
+        "0x85ac",
+        "0x85b0",
+        "0x85b4",
+        "0x85b8",
+        "0x85bc",
+        "0x85c0",
+        "0x85c4",
+        "0x85c8",
+        "0x85cc",
+        "0x85d0",
+        "0x85d4",
+        "0x85d8",
+        "0x85dc",
+        "0x85e0",
+        "0x85e4",
+        "0x85e8",
+        "0x85ec",
+        "0x85f0",
+        "0x85f4",
+        "0x85f8",
+        "0x85fc",
+        "0x8600",
+        "0x8604",
+        "0x8608",
+        "0x860c",
+        "0x8610",
+        "0x8614",
+        "0x8618",
+        "0x861c",
+        "0x8620",
+        "0x8624",
+        "0x8628",
+        "0x862c",
+        "0x8630",
+        "0x8634",
+        "0x8638",
+        "0x863c",
+        "0x8640",
+        "0x8644",
+        "0x8648",
+        "0x864c",
+        "0x8650",
+        "0x8654",
+        "0x8658",
+        "0x865c",
+        "0x8660",
+        "0x8664",
+        "0x8668",
+        "0x866c",
+        "0x8670",
+        "0x8674"
+      ],
+      "examples": [
+        {
+          "inputs": [
+            0,
+            0
+          ],
+          "r0_remainder": 0,
+          "r1_quotient": 0
+        },
+        {
+          "inputs": [
+            0,
+            1
+          ],
+          "r0_remainder": 0,
+          "r1_quotient": 0
+        },
+        {
+          "inputs": [
+            0,
+            2
+          ],
+          "r0_remainder": 0,
+          "r1_quotient": 0
+        },
+        {
+          "inputs": [
+            0,
+            3
+          ],
+          "r0_remainder": 0,
+          "r1_quotient": 0
+        },
+        {
+          "inputs": [
+            0,
+            7
+          ],
+          "r0_remainder": 0,
+          "r1_quotient": 0
+        },
+        {
+          "inputs": [
+            0,
+            100
+          ],
+          "r0_remainder": 0,
+          "r1_quotient": 0
+        },
+        {
+          "inputs": [
+            0,
+            127
+          ],
+          "r0_remainder": 0,
+          "r1_quotient": 0
+        },
+        {
+          "inputs": [
+            0,
+            128
+          ],
+          "r0_remainder": 0,
+          "r1_quotient": 0
+        },
+        {
+          "inputs": [
+            7,
+            0
+          ],
+          "r0_remainder": 7,
+          "r1_quotient": 0
+        },
+        {
+          "inputs": [
+            100,
+            3
+          ],
+          "r0_remainder": 1,
+          "r1_quotient": 33
+        },
+        {
+          "inputs": [
+            2147483648,
+            4294967295
+          ],
+          "r0_remainder": 0,
+          "r1_quotient": 0
+        },
+        {
+          "inputs": [
+            4294967289,
+            0
+          ],
+          "r0_remainder": 249,
+          "r1_quotient": 0
+        },
+        {
+          "inputs": [
+            4294967289,
+            3
+          ],
+          "r0_remainder": 0,
+          "r1_quotient": 83
+        }
+      ]
+    },
+    {
+      "entry": "0x8578",
+      "isa": "arm",
+      "kind": "u32",
+      "cases": 4321,
+      "mismatches": [],
+      "visited_addresses": [
+        "0x8578",
+        "0x857c",
+        "0x8580",
+        "0x85a0",
+        "0x85a4",
+        "0x85a8",
+        "0x85ac",
+        "0x85b0",
+        "0x85b4",
+        "0x85b8",
+        "0x85bc",
+        "0x85c0",
+        "0x85c4",
+        "0x85c8",
+        "0x85cc",
+        "0x85d0",
+        "0x85d4",
+        "0x85d8",
+        "0x85dc",
+        "0x85e0",
+        "0x85e4",
+        "0x85e8",
+        "0x85ec",
+        "0x85f0",
+        "0x85f4",
+        "0x85f8",
+        "0x85fc",
+        "0x8600",
+        "0x8604",
+        "0x8608",
+        "0x860c",
+        "0x8610",
+        "0x8614",
+        "0x8618",
+        "0x861c",
+        "0x8620",
+        "0x8624",
+        "0x8628",
+        "0x862c",
+        "0x8630",
+        "0x8634",
+        "0x8638",
+        "0x863c",
+        "0x8640",
+        "0x8644",
+        "0x8648",
+        "0x864c",
+        "0x8650",
+        "0x8654",
+        "0x8658",
+        "0x865c",
+        "0x8660",
+        "0x8664",
+        "0x8668",
+        "0x866c",
+        "0x8670",
+        "0x8674"
+      ],
+      "examples": [
+        {
+          "inputs": [
+            0,
+            0
+          ],
+          "r0_remainder": 0,
+          "r1_quotient": 0
+        },
+        {
+          "inputs": [
+            0,
+            1
+          ],
+          "r0_remainder": 0,
+          "r1_quotient": 0
+        },
+        {
+          "inputs": [
+            0,
+            2
+          ],
+          "r0_remainder": 0,
+          "r1_quotient": 0
+        },
+        {
+          "inputs": [
+            0,
+            3
+          ],
+          "r0_remainder": 0,
+          "r1_quotient": 0
+        },
+        {
+          "inputs": [
+            0,
+            7
+          ],
+          "r0_remainder": 0,
+          "r1_quotient": 0
+        },
+        {
+          "inputs": [
+            0,
+            100
+          ],
+          "r0_remainder": 0,
+          "r1_quotient": 0
+        },
+        {
+          "inputs": [
+            0,
+            127
+          ],
+          "r0_remainder": 0,
+          "r1_quotient": 0
+        },
+        {
+          "inputs": [
+            0,
+            128
+          ],
+          "r0_remainder": 0,
+          "r1_quotient": 0
+        },
+        {
+          "inputs": [
+            7,
+            0
+          ],
+          "r0_remainder": 7,
+          "r1_quotient": 0
+        },
+        {
+          "inputs": [
+            100,
+            3
+          ],
+          "r0_remainder": 1,
+          "r1_quotient": 33
+        },
+        {
+          "inputs": [
+            2147483648,
+            4294967295
+          ],
+          "r0_remainder": 2147483648,
+          "r1_quotient": 0
+        },
+        {
+          "inputs": [
+            4294967289,
+            0
+          ],
+          "r0_remainder": 4294967289,
+          "r1_quotient": 0
+        },
+        {
+          "inputs": [
+            4294967289,
+            3
+          ],
+          "r0_remainder": 0,
+          "r1_quotient": 1431655763
+        }
+      ]
+    },
+    {
+      "entry": "0x8588",
+      "isa": "arm",
+      "kind": "s32",
+      "cases": 4321,
+      "mismatches": [],
+      "visited_addresses": [
+        "0x8588",
+        "0x858c",
+        "0x8590",
+        "0x8594",
+        "0x8598",
+        "0x859c",
+        "0x85a0",
+        "0x85a4",
+        "0x85a8",
+        "0x85ac",
+        "0x85b0",
+        "0x85b4",
+        "0x85b8",
+        "0x85bc",
+        "0x85c0",
+        "0x85c4",
+        "0x85c8",
+        "0x85cc",
+        "0x85d0",
+        "0x85d4",
+        "0x85d8",
+        "0x85dc",
+        "0x85e0",
+        "0x85e4",
+        "0x85e8",
+        "0x85ec",
+        "0x85f0",
+        "0x85f4",
+        "0x85f8",
+        "0x85fc",
+        "0x8600",
+        "0x8604",
+        "0x8608",
+        "0x860c",
+        "0x8610",
+        "0x8614",
+        "0x8618",
+        "0x861c",
+        "0x8620",
+        "0x8624",
+        "0x8628",
+        "0x862c",
+        "0x8630",
+        "0x8634",
+        "0x8638",
+        "0x863c",
+        "0x8640",
+        "0x8644",
+        "0x8648",
+        "0x864c",
+        "0x8650",
+        "0x8654",
+        "0x8658",
+        "0x865c",
+        "0x8660",
+        "0x8664",
+        "0x8668",
+        "0x866c",
+        "0x8670",
+        "0x8674"
+      ],
+      "examples": [
+        {
+          "inputs": [
+            0,
+            0
+          ],
+          "r0_remainder": 0,
+          "r1_quotient": 0
+        },
+        {
+          "inputs": [
+            0,
+            1
+          ],
+          "r0_remainder": 0,
+          "r1_quotient": 0
+        },
+        {
+          "inputs": [
+            0,
+            2
+          ],
+          "r0_remainder": 0,
+          "r1_quotient": 0
+        },
+        {
+          "inputs": [
+            0,
+            3
+          ],
+          "r0_remainder": 0,
+          "r1_quotient": 0
+        },
+        {
+          "inputs": [
+            0,
+            7
+          ],
+          "r0_remainder": 0,
+          "r1_quotient": 0
+        },
+        {
+          "inputs": [
+            0,
+            100
+          ],
+          "r0_remainder": 0,
+          "r1_quotient": 0
+        },
+        {
+          "inputs": [
+            0,
+            127
+          ],
+          "r0_remainder": 0,
+          "r1_quotient": 0
+        },
+        {
+          "inputs": [
+            0,
+            128
+          ],
+          "r0_remainder": 0,
+          "r1_quotient": 0
+        },
+        {
+          "inputs": [
+            7,
+            0
+          ],
+          "r0_remainder": 7,
+          "r1_quotient": 0
+        },
+        {
+          "inputs": [
+            100,
+            3
+          ],
+          "r0_remainder": 1,
+          "r1_quotient": 33
+        },
+        {
+          "inputs": [
+            2147483648,
+            4294967295
+          ],
+          "r0_remainder": 0,
+          "r1_quotient": 2147483648
+        },
+        {
+          "inputs": [
+            4294967289,
+            0
+          ],
+          "r0_remainder": 7,
+          "r1_quotient": 0
+        },
+        {
+          "inputs": [
+            4294967289,
+            3
+          ],
+          "r0_remainder": 4294967295,
+          "r1_quotient": 4294967294
+        }
+      ]
+    }
+  ]
+}

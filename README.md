@@ -59,6 +59,8 @@ The [startup and persistence review](docs/STARTUP_PERSISTENCE_REVIEW.md) support
 
 The [USART0 buffer review](docs/USART0_BUFFER_REVIEW.md) expands the baseline to 36 semantic roles, leaving 109 baseline entries unlabeled. It traces DMA and frame parsing, identifies queue-full behavior, and models the conditions under which a reused short-receive buffer can retain a CRC-valid suffix.
 
+The [integer execution review](docs/INTEGER_ARITHMETIC_REVIEW.md) brings baseline coverage to 42 roles, with 103 pending. It executes the real division and stretch-arithmetic bytes in an offline ARM emulator, establishes remainder/quotient register conventions, and checks exceptional values, staged rounding and signed-cell assumptions.
+
 ## Layout
 
 ```

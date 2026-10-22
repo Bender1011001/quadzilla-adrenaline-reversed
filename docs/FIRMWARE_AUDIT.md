@@ -41,10 +41,10 @@ It is not a count of original C functions, and the two tools still disagree on w
 
 | | |
 |---|---|
-| Entries with an evidence-backed static role | 36 |
-| Entries still unlabelled | 109 |
+| Entries with an evidence-backed static role | 42 |
+| Entries still unlabelled | 103 |
 
-The 109 unlabelled entries are a work queue, not findings. Labels from the first-pass notes are treated as hypotheses
+The 103 unlabelled entries are a work queue, not findings. Labels from the first-pass notes are treated as hypotheses
 unless they appear in `audit/data/semantic_labels.json`.
 
 The initial audit assigned 14 roles; the [offline write-path review](OFFLINE_WRITE_PATH_REVIEW.md)
@@ -54,6 +54,10 @@ The [USART0 buffer review](USART0_BUFFER_REVIEW.md) adds fifteen more roles,
 bringing the baseline semantic total to 36. Six separately adjudicated source
 starts are listed in the [startup review](STARTUP_PERSISTENCE_REVIEW.md); 145 is
 the historical baseline count, not the complete supported minimum of 151.
+
+Six division-runtime entry/body roles from the
+[integer execution review](INTEGER_ARITHMETIC_REVIEW.md) bring the current
+baseline total to 42 roles, with 103 entries pending semantic review.
 
 ### Peripheral map
 

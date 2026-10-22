@@ -341,6 +341,66 @@
         "audit/data/uart_buffer_binaryninja.json",
         "docs/USART0_BUFFER_REVIEW.md"
       ]
+    },
+    {
+      "entry": "0x8564",
+      "label": "u8 division Thumb entry; R0 remainder, R1 quotient",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/integer_runtime_emulation.json:entry.0x8564",
+        "audit/data/integer_runtime_binaryninja.json",
+        "docs/INTEGER_ARITHMETIC_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x8568",
+      "label": "u8 division ARM body; R0 remainder, R1 quotient",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/integer_runtime_emulation.json:entry.0x8568",
+        "audit/data/integer_runtime_binaryninja.json",
+        "docs/INTEGER_ARITHMETIC_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x8574",
+      "label": "u32 division Thumb entry; R0 remainder, R1 quotient",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/integer_runtime_emulation.json:entry.0x8574",
+        "audit/data/integer_runtime_binaryninja.json",
+        "docs/INTEGER_ARITHMETIC_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x8578",
+      "label": "u32 division ARM body; R0 remainder, R1 quotient",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/integer_runtime_emulation.json:entry.0x8578",
+        "audit/data/integer_runtime_binaryninja.json",
+        "docs/INTEGER_ARITHMETIC_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x8584",
+      "label": "s32 division Thumb entry; R0 remainder, R1 quotient",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/integer_runtime_emulation.json:entry.0x8584",
+        "audit/data/integer_runtime_binaryninja.json",
+        "docs/INTEGER_ARITHMETIC_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x8588",
+      "label": "s32 division ARM body; R0 remainder, R1 quotient",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/integer_runtime_emulation.json:entry.0x8588",
+        "audit/data/integer_runtime_binaryninja.json",
+        "docs/INTEGER_ARITHMETIC_REVIEW.md"
+      ]
     }
   ],
   "limitations": [

@@ -1,0 +1,2659 @@
+{
+  "format": "quadzilla-integer-caller-sites-v1",
+  "raw_sha256": "1ae519ba6194e8f7bdaaa94333a83a9e6fda3b0563f87f7d48383b37288c1780",
+  "interpretation": "decoded direct-call sites only; IDA owner partitions and nearby context are not a complete dataflow proof",
+  "calls": [
+    {
+      "caller_partition": "0x4384",
+      "site": "0x4432",
+      "target": "0x8584",
+      "context": [
+        {
+          "address": "0x442c",
+          "text": "MOVS            R0, #0x64 ; 'd'"
+        },
+        {
+          "address": "0x442e",
+          "text": "LDRB            R1, [R2]"
+        },
+        {
+          "address": "0x4430",
+          "text": "SUBS            R1, R1, #1"
+        },
+        {
+          "address": "0x4432",
+          "text": "BL              loc_8582+2"
+        },
+        {
+          "address": "0x4436",
+          "text": "STRB            R0, [R5,#0x10]"
+        },
+        {
+          "address": "0x4438",
+          "text": "LDR             R0, =0x200BEA"
+        },
+        {
+          "address": "0x443a",
+          "text": "LDRB            R1, [R2]"
+        },
+        {
+          "address": "0x443c",
+          "text": "STRB            R1, [R0]"
+        }
+      ]
+    },
+    {
+      "caller_partition": "0x4384",
+      "site": "0x454a",
+      "target": "0x8574",
+      "context": [
+        {
+          "address": "0x4544",
+          "text": "STRB            R1, [R0]"
+        },
+        {
+          "address": "0x4546",
+          "text": "LSLS            R0, R1, #7"
+        },
+        {
+          "address": "0x4548",
+          "text": "MOVS            R1, #0xA"
+        },
+        {
+          "address": "0x454a",
+          "text": "BL              loc_8572+2"
+        },
+        {
+          "address": "0x454e",
+          "text": "STR             R1, [R5,#0x34]"
+        },
+        {
+          "address": "0x4550",
+          "text": "LDR             R0, [R4,#0x18]"
+        },
+        {
+          "address": "0x4552",
+          "text": "LSLS            R0, R0, #7"
+        },
+        {
+          "address": "0x4554",
+          "text": "MOVS            R1, #0xA"
+        }
+      ]
+    },
+    {
+      "caller_partition": "0x4384",
+      "site": "0x4556",
+      "target": "0x8574",
+      "context": [
+        {
+          "address": "0x4550",
+          "text": "LDR             R0, [R4,#0x18]"
+        },
+        {
+          "address": "0x4552",
+          "text": "LSLS            R0, R0, #7"
+        },
+        {
+          "address": "0x4554",
+          "text": "MOVS            R1, #0xA"
+        },
+        {
+          "address": "0x4556",
+          "text": "BL              loc_8572+2"
+        },
+        {
+          "address": "0x455a",
+          "text": "STR             R1, [R5,#0x38]"
+        },
+        {
+          "address": "0x455c",
+          "text": "LDR             R0, [R4,#0x1C]"
+        },
+        {
+          "address": "0x455e",
+          "text": "LSLS            R0, R0, #7"
+        },
+        {
+          "address": "0x4560",
+          "text": "MOVS            R1, #0xA"
+        }
+      ]
+    },
+    {
+      "caller_partition": "0x4384",
+      "site": "0x4562",
+      "target": "0x8574",
+      "context": [
+        {
+          "address": "0x455c",
+          "text": "LDR             R0, [R4,#0x1C]"
+        },
+        {
+          "address": "0x455e",
+          "text": "LSLS            R0, R0, #7"
+        },
+        {
+          "address": "0x4560",
+          "text": "MOVS            R1, #0xA"
+        },
+        {
+          "address": "0x4562",
+          "text": "BL              loc_8572+2"
+        },
+        {
+          "address": "0x4566",
+          "text": "STR             R1, [R5,#0x3C]"
+        },
+        {
+          "address": "0x4568",
+          "text": "LDR             R0, [R4,#0x20]"
+        },
+        {
+          "address": "0x456a",
+          "text": "LSLS            R0, R0, #7"
+        },
+        {
+          "address": "0x456c",
+          "text": "MOVS            R1, #0xA"
+        }
+      ]
+    },
+    {
+      "caller_partition": "0x4384",
+      "site": "0x456e",
+      "target": "0x8574",
+      "context": [
+        {
+          "address": "0x4568",
+          "text": "LDR             R0, [R4,#0x20]"
+        },
+        {
+          "address": "0x456a",
+          "text": "LSLS            R0, R0, #7"
+        },
+        {
+          "address": "0x456c",
+          "text": "MOVS            R1, #0xA"
+        },
+        {
+          "address": "0x456e",
+          "text": "BL              loc_8572+2"
+        },
+        {
+          "address": "0x4572",
+          "text": "STR             R1, [R5,#0x40]"
+        },
+        {
+          "address": "0x4574",
+          "text": "LDR             R0, [R2,#4]"
+        },
+        {
+          "address": "0x4576",
+          "text": "LSLS            R0, R0, #7"
+        },
+        {
+          "address": "0x4578",
+          "text": "MOVS            R1, #0xA"
+        }
+      ]
+    },
+    {
+      "caller_partition": "0x4384",
+      "site": "0x457a",
+      "target": "0x8574",
+      "context": [
+        {
+          "address": "0x4574",
+          "text": "LDR             R0, [R2,#4]"
+        },
+        {
+          "address": "0x4576",
+          "text": "LSLS            R0, R0, #7"
+        },
+        {
+          "address": "0x4578",
+          "text": "MOVS            R1, #0xA"
+        },
+        {
+          "address": "0x457a",
+          "text": "BL              loc_8572+2"
+        },
+        {
+          "address": "0x457e",
+          "text": "STR             R1, [R5,#0x44]"
+        },
+        {
+          "address": "0x4580",
+          "text": "LSLS            R0, R6, #7"
+        },
+        {
+          "address": "0x4582",
+          "text": "MOVS            R1, #0xA"
+        },
+        {
+          "address": "0x4584",
+          "text": "BL              loc_8582+2"
+        }
+      ]
+    },
+    {
+      "caller_partition": "0x4384",
+      "site": "0x4584",
+      "target": "0x8584",
+      "context": [
+        {
+          "address": "0x457e",
+          "text": "STR             R1, [R5,#0x44]"
+        },
+        {
+          "address": "0x4580",
+          "text": "LSLS            R0, R6, #7"
+        },
+        {
+          "address": "0x4582",
+          "text": "MOVS            R1, #0xA"
+        },
+        {
+          "address": "0x4584",
+          "text": "BL              loc_8582+2"
+        },
+        {
+          "address": "0x4588",
+          "text": "STR             R1, [R5,#0x48]"
+        },
+        {
+          "address": "0x458a",
+          "text": "STRB            R3, [R5,#1]"
+        },
+        {
+          "address": "0x458c",
+          "text": "MOVS            R0, #1"
+        },
+        {
+          "address": "0x458e",
+          "text": "STRB            R0, [R5,#2]"
+        }
+      ]
+    },
+    {
+      "caller_partition": "0x48e8",
+      "site": "0x491c",
+      "target": "0x8584",
+      "context": [
+        {
+          "address": "0x4916",
+          "text": "BNE             loc_492A"
+        },
+        {
+          "address": "0x4918",
+          "text": "MOVS            R0, R5"
+        },
+        {
+          "address": "0x491a",
+          "text": "MOVS            R1, #0x28 ; '('"
+        },
+        {
+          "address": "0x491c",
+          "text": "BL              loc_8582+2"
+        },
+        {
+          "address": "0x4920",
+          "text": "ADDS            R0, R3, R1"
+        },
+        {
+          "address": "0x4922",
+          "text": "ADDS            R0, R0, R5"
+        },
+        {
+          "address": "0x4924",
+          "text": "LDR             R1, [R2,#0x58]"
+        },
+        {
+          "address": "0x4926",
+          "text": "SUBS            R3, R0, R1"
+        }
+      ]
+    },
+    {
+      "caller_partition": "0x495c",
+      "site": "0x496c",
+      "target": "0x8574",
+      "context": [
+        {
+          "address": "0x4966",
+          "text": "MOVS            R0, R1"
+        },
+        {
+          "address": "0x4968",
+          "text": "MOVS            R2, #0x64 ; 'd'"
+        },
+        {
+          "address": "0x496a",
+          "text": "MULS            R0, R2"
+        },
+        {
+          "address": "0x496c",
+          "text": "BL              loc_8572+2"
+        },
+        {
+          "address": "0x4970",
+          "text": "LSLS            R0, R1, #0x18"
+        },
+        {
+          "address": "0x4972",
+          "text": "LSRS            R0, R0, #0x18"
+        },
+        {
+          "address": "0x4974",
+          "text": "POP             {R1}"
+        },
+        {
+          "address": "0x4976",
+          "text": "BX              R1"
+        }
+      ]
+    },
+    {
+      "caller_partition": "0x497c",
+      "site": "0x4988",
+      "target": "0x8584",
+      "context": [
+        {
+          "address": "0x4982",
+          "text": "MOVS            R1, #0x13"
+        },
+        {
+          "address": "0x4984",
+          "text": "MULS            R0, R1"
+        },
+        {
+          "address": "0x4986",
+          "text": "MOVS            R1, #0x64 ; 'd'"
+        },
+        {
+          "address": "0x4988",
+          "text": "BL              loc_8582+2"
+        },
+        {
+          "address": "0x498c",
+          "text": "LSLS            R0, R1, #0x18"
+        },
+        {
+          "address": "0x498e",
+          "text": "LSRS            R0, R0, #0x18"
+        },
+        {
+          "address": "0x4990",
+          "text": "CMP             R0, #0x14"
+        },
+        {
+          "address": "0x4992",
+          "text": "BCC             loc_4996"
+        }
+      ]
+    },
+    {
+      "caller_partition": "0x4a94",
+      "site": "0x4ac8",
+      "target": "0x8574",
+      "context": [
+        {
+          "address": "0x4ac2",
+          "text": "BCS             loc_4ACE"
+        },
+        {
+          "address": "0x4ac4",
+          "text": "MULS            R0, R4"
+        },
+        {
+          "address": "0x4ac6",
+          "text": "MOVS            R1, #0x64 ; 'd'"
+        },
+        {
+          "address": "0x4ac8",
+          "text": "BL              loc_8572+2"
+        },
+        {
+          "address": "0x4acc",
+          "text": "MOVS            R7, R1"
+        },
+        {
+          "address": "0x4ace",
+          "text": "CMP             R2, #0x64 ; 'd'"
+        },
+        {
+          "address": "0x4ad0",
+          "text": "BCS             loc_4AE2"
+        },
+        {
+          "address": "0x4ad2",
+          "text": "SUBS            R0, R2, R3"
+        }
+      ]
+    },
+    {
+      "caller_partition": "0x4a94",
+      "site": "0x4ad8",
+      "target": "0x8574",
+      "context": [
+        {
+          "address": "0x4ad2",
+          "text": "SUBS            R0, R2, R3"
+        },
+        {
+          "address": "0x4ad4",
+          "text": "MULS            R0, R7"
+        },
+        {
+          "address": "0x4ad6",
+          "text": "LDR             R1, [SP,#4+var_4]"
+        },
+        {
+          "address": "0x4ad8",
+          "text": "BL              loc_8572+2"
+        },
+        {
+          "address": "0x4adc",
+          "text": "MOVS            R7, R1"
+        },
+        {
+          "address": "0x4ade",
+          "text": "B               loc_4AE2"
+        },
+        {
+          "address": "0x4ae0",
+          "text": "MOVS            R7, #0"
+        },
+        {
+          "address": "0x4ae2",
+          "text": "LDRB            R1, [R6,#0xB]"
+        }
+      ]
+    },
+    {
+      "caller_partition": "0x4a94",
+      "site": "0x4afa",
+      "target": "0x8574",
+      "context": [
+        {
+          "address": "0x4af4",
+          "text": "MOVS            R4, #0x64 ; 'd'"
+        },
+        {
+          "address": "0x4af6",
+          "text": "MULS            R0, R4"
+        },
+        {
+          "address": "0x4af8",
+          "text": "SUBS            R1, R3, R1"
+        },
+        {
+          "address": "0x4afa",
+          "text": "BL              loc_8572+2"
+        },
+        {
+          "address": "0x4afe",
+          "text": "MOVS            R3, R1"
+        },
+        {
+          "address": "0x4b00",
+          "text": "CMP             R3, #0x65 ; 'e'"
+        },
+        {
+          "address": "0x4b02",
+          "text": "BCC             loc_4B06"
+        },
+        {
+          "address": "0x4b04",
+          "text": "MOVS            R3, #0x64 ; 'd'"
+        }
+      ]
+    },
+    {
+      "caller_partition": "0x4a94",
+      "site": "0x4b0e",
+      "target": "0x8574",
+      "context": [
+        {
+          "address": "0x4b08",
+          "text": "MULS            R7, R0"
+        },
+        {
+          "address": "0x4b0a",
+          "text": "MOVS            R0, R7"
+        },
+        {
+          "address": "0x4b0c",
+          "text": "MOVS            R1, #0x64 ; 'd'"
+        },
+        {
+          "address": "0x4b0e",
+          "text": "BL              loc_8572+2"
+        },
+        {
+          "address": "0x4b12",
+          "text": "MOVS            R0, R1"
+        },
+        {
+          "address": "0x4b14",
+          "text": "MULS            R0, R3"
+        },
+        {
+          "address": "0x4b16",
+          "text": "MOVS            R1, #0x64 ; 'd'"
+        },
+        {
+          "address": "0x4b18",
+          "text": "BL              loc_8572+2"
+        }
+      ]
+    },
+    {
+      "caller_partition": "0x4a94",
+      "site": "0x4b18",
+      "target": "0x8574",
+      "context": [
+        {
+          "address": "0x4b12",
+          "text": "MOVS            R0, R1"
+        },
+        {
+          "address": "0x4b14",
+          "text": "MULS            R0, R3"
+        },
+        {
+          "address": "0x4b16",
+          "text": "MOVS            R1, #0x64 ; 'd'"
+        },
+        {
+          "address": "0x4b18",
+          "text": "BL              loc_8572+2"
+        },
+        {
+          "address": "0x4b1c",
+          "text": "MOVS            R0, R1"
+        },
+        {
+          "address": "0x4b1e",
+          "text": "ADD             SP, SP, #4"
+        },
+        {
+          "address": "0x4b20",
+          "text": "POP             {R4-R7}"
+        },
+        {
+          "address": "0x4b22",
+          "text": "POP             {R1}"
+        }
+      ]
+    },
+    {
+      "caller_partition": "0x4b38",
+      "site": "0x4b60",
+      "target": "0x8574",
+      "context": [
+        {
+          "address": "0x4b5a",
+          "text": "LDR             R1, =0xFFFFF3E4"
+        },
+        {
+          "address": "0x4b5c",
+          "text": "ADDS            R0, R0, R1"
+        },
+        {
+          "address": "0x4b5e",
+          "text": "MOVS            R1, #5"
+        },
+        {
+          "address": "0x4b60",
+          "text": "BL              loc_8572+2"
+        },
+        {
+          "address": "0x4b64",
+          "text": "MOVS            R0, R1"
+        },
+        {
+          "address": "0x4b66",
+          "text": "MULS            R0, R3"
+        },
+        {
+          "address": "0x4b68",
+          "text": "MOVS            R1, #0x64 ; 'd'"
+        },
+        {
+          "address": "0x4b6a",
+          "text": "BL              loc_8572+2"
+        }
+      ]
+    },
+    {
+      "caller_partition": "0x4b38",
+      "site": "0x4b6a",
+      "target": "0x8574",
+      "context": [
+        {
+          "address": "0x4b64",
+          "text": "MOVS            R0, R1"
+        },
+        {
+          "address": "0x4b66",
+          "text": "MULS            R0, R3"
+        },
+        {
+          "address": "0x4b68",
+          "text": "MOVS            R1, #0x64 ; 'd'"
+        },
+        {
+          "address": "0x4b6a",
+          "text": "BL              loc_8572+2"
+        },
+        {
+          "address": "0x4b6e",
+          "text": "MOVS            R2, R1"
+        },
+        {
+          "address": "0x4b70",
+          "text": "ADDS            R2, #0x64 ; 'd'"
+        },
+        {
+          "address": "0x4b72",
+          "text": "B               loc_4B76"
+        },
+        {
+          "address": "0x4b74",
+          "text": "MOVS            R2, #0"
+        }
+      ]
+    },
+    {
+      "caller_partition": "0x4b38",
+      "site": "0x4c04",
+      "target": "0x8574",
+      "context": [
+        {
+          "address": "0x4bfe",
+          "text": "LDRB            R0, [R6,#0x1B]; jumptable 0000000000004B80 default case"
+        },
+        {
+          "address": "0x4c00",
+          "text": "MULS            R0, R5"
+        },
+        {
+          "address": "0x4c02",
+          "text": "MOVS            R1, #0x64 ; 'd'"
+        },
+        {
+          "address": "0x4c04",
+          "text": "BL              loc_8572+2"
+        },
+        {
+          "address": "0x4c08",
+          "text": "MOVS            R4, R1"
+        },
+        {
+          "address": "0x4c0a",
+          "text": "CMP             R5, R4"
+        },
+        {
+          "address": "0x4c0c",
+          "text": "BCS             loc_4C8E"
+        },
+        {
+          "address": "0x4c0e",
+          "text": "MOVS            R0, R4"
+        }
+      ]
+    },
+    {
+      "caller_partition": "0x4b38",
+      "site": "0x4c14",
+      "target": "0x8574",
+      "context": [
+        {
+          "address": "0x4c0e",
+          "text": "MOVS            R0, R4"
+        },
+        {
+          "address": "0x4c10",
+          "text": "MULS            R0, R2"
+        },
+        {
+          "address": "0x4c12",
+          "text": "MOVS            R1, #0x64 ; 'd'"
+        },
+        {
+          "address": "0x4c14",
+          "text": "BL              loc_8572+2"
+        },
+        {
+          "address": "0x4c18",
+          "text": "ADDS            R4, R4, R1"
+        },
+        {
+          "address": "0x4c1a",
+          "text": "B               loc_4C8E"
+        },
+        {
+          "address": "0x4c1c",
+          "text": "LDRB            R0, [R7,#0xF]"
+        },
+        {
+          "address": "0x4c1e",
+          "text": "LDRB            R2, [R7,#0x10]"
+        }
+      ]
+    },
+    {
+      "caller_partition": "0x4b38",
+      "site": "0x4c6c",
+      "target": "0x8574",
+      "context": [
+        {
+          "address": "0x4c66",
+          "text": "LDRB            R0, [R6,#0xE]; jumptable 0000000000004C30 default case"
+        },
+        {
+          "address": "0x4c68",
+          "text": "MULS            R0, R5"
+        },
+        {
+          "address": "0x4c6a",
+          "text": "MOVS            R1, #0x64 ; 'd'"
+        },
+        {
+          "address": "0x4c6c",
+          "text": "BL              loc_8572+2"
+        },
+        {
+          "address": "0x4c70",
+          "text": "MOVS            R4, R1"
+        },
+        {
+          "address": "0x4c72",
+          "text": "CMP             R5, R4"
+        },
+        {
+          "address": "0x4c74",
+          "text": "BCS             loc_4C8E"
+        },
+        {
+          "address": "0x4c76",
+          "text": "B               loc_4C8C"
+        }
+      ]
+    },
+    {
+      "caller_partition": "0x4b38",
+      "site": "0x4c84",
+      "target": "0x8574",
+      "context": [
+        {
+          "address": "0x4c7e",
+          "text": "LDRB            R0, [R0]"
+        },
+        {
+          "address": "0x4c80",
+          "text": "MULS            R0, R5"
+        },
+        {
+          "address": "0x4c82",
+          "text": "MOVS            R1, #0x64 ; 'd'"
+        },
+        {
+          "address": "0x4c84",
+          "text": "BL              loc_8572+2"
+        },
+        {
+          "address": "0x4c88",
+          "text": "MOVS            R4, R1"
+        },
+        {
+          "address": "0x4c8a",
+          "text": "B               loc_4C8E"
+        },
+        {
+          "address": "0x4c8c",
+          "text": "MOVS            R4, R5"
+        },
+        {
+          "address": "0x4c8e",
+          "text": "MOVS            R0, #0"
+        }
+      ]
+    },
+    {
+      "caller_partition": "0x4b38",
+      "site": "0x4cb4",
+      "target": "0x8574",
+      "context": [
+        {
+          "address": "0x4cae",
+          "text": "LDRB            R0, [R6,#4]"
+        },
+        {
+          "address": "0x4cb0",
+          "text": "MULS            R0, R5"
+        },
+        {
+          "address": "0x4cb2",
+          "text": "MOVS            R1, #0x64 ; 'd'"
+        },
+        {
+          "address": "0x4cb4",
+          "text": "BL              loc_8572+2"
+        },
+        {
+          "address": "0x4cb8",
+          "text": "MOVS            R4, R1"
+        },
+        {
+          "address": "0x4cba",
+          "text": "MOVS            R0, #1"
+        },
+        {
+          "address": "0x4cbc",
+          "text": "B               loc_4CC2"
+        },
+        {
+          "address": "0x4cbe",
+          "text": "MOVS            R0, #0"
+        }
+      ]
+    },
+    {
+      "caller_partition": "0x4b38",
+      "site": "0x4cf2",
+      "target": "0x8574",
+      "context": [
+        {
+          "address": "0x4cec",
+          "text": "LDRSB           R1, [R2,R1]"
+        },
+        {
+          "address": "0x4cee",
+          "text": "MULS            R0, R1"
+        },
+        {
+          "address": "0x4cf0",
+          "text": "MOVS            R1, #0x64 ; 'd'"
+        },
+        {
+          "address": "0x4cf2",
+          "text": "BL              loc_8572+2"
+        },
+        {
+          "address": "0x4cf6",
+          "text": "ADDS            R4, R4, R1"
+        },
+        {
+          "address": "0x4cf8",
+          "text": "MOVS            R0, #0x1000"
+        },
+        {
+          "address": "0x4cfc",
+          "text": "CMP             R4, R0"
+        },
+        {
+          "address": "0x4cfe",
+          "text": "BLT             loc_4D02"
+        }
+      ]
+    },
+    {
+      "caller_partition": "0x4d38",
+      "site": "0x4e02",
+      "target": "0x8574",
+      "context": [
+        {
+          "address": "0x4dfc",
+          "text": "LDR             R0, =0xFFFFFC19"
+        },
+        {
+          "address": "0x4dfe",
+          "text": "ADDS            R0, R6, R0"
+        },
+        {
+          "address": "0x4e00",
+          "text": "MOVS            R1, #5"
+        },
+        {
+          "address": "0x4e02",
+          "text": "BL              loc_8572+2"
+        },
+        {
+          "address": "0x4e06",
+          "text": "LDR             R5, [R2,#0x34]"
+        },
+        {
+          "address": "0x4e08",
+          "text": "B               loc_4FA6"
+        },
+        {
+          "address": "0x4e0a",
+          "text": "MOVS            R0, #0x7D0"
+        },
+        {
+          "address": "0x4e0e",
+          "text": "CMP             R6, R0"
+        }
+      ]
+    },
+    {
+      "caller_partition": "0x4d38",
+      "site": "0x4e18",
+      "target": "0x8574",
+      "context": [
+        {
+          "address": "0x4e12",
+          "text": "LDR             R0, =0xFFFFFA25"
+        },
+        {
+          "address": "0x4e14",
+          "text": "ADDS            R0, R6, R0"
+        },
+        {
+          "address": "0x4e16",
+          "text": "MOVS            R1, #5"
+        },
+        {
+          "address": "0x4e18",
+          "text": "BL              loc_8572+2"
+        },
+        {
+          "address": "0x4e1c",
+          "text": "LDR             R0, [R2,#0x38]"
+        },
+        {
+          "address": "0x4e1e",
+          "text": "LDR             R5, [R2,#0x34]"
+        },
+        {
+          "address": "0x4e20",
+          "text": "SUBS            R5, R0, R5"
+        },
+        {
+          "address": "0x4e22",
+          "text": "LDR             R0, [R2,#0x34]"
+        }
+      ]
+    },
+    {
+      "caller_partition": "0x4d38",
+      "site": "0x4e34",
+      "target": "0x8574",
+      "context": [
+        {
+          "address": "0x4e2e",
+          "text": "LDR             R0, =0xFFFFF831"
+        },
+        {
+          "address": "0x4e30",
+          "text": "ADDS            R0, R6, R0"
+        },
+        {
+          "address": "0x4e32",
+          "text": "MOVS            R1, #5"
+        },
+        {
+          "address": "0x4e34",
+          "text": "BL              loc_8572+2"
+        },
+        {
+          "address": "0x4e38",
+          "text": "LDR             R0, [R2,#0x3C]"
+        },
+        {
+          "address": "0x4e3a",
+          "text": "LDR             R5, [R2,#0x38]"
+        },
+        {
+          "address": "0x4e3c",
+          "text": "SUBS            R5, R0, R5"
+        },
+        {
+          "address": "0x4e3e",
+          "text": "LDR             R0, [R2,#0x38]"
+        }
+      ]
+    },
+    {
+      "caller_partition": "0x4d38",
+      "site": "0x4e4e",
+      "target": "0x8574",
+      "context": [
+        {
+          "address": "0x4e48",
+          "text": "LDR             R0, =0xFFFFF63D"
+        },
+        {
+          "address": "0x4e4a",
+          "text": "ADDS            R0, R6, R0"
+        },
+        {
+          "address": "0x4e4c",
+          "text": "MOVS            R1, #5"
+        },
+        {
+          "address": "0x4e4e",
+          "text": "BL              loc_8572+2"
+        },
+        {
+          "address": "0x4e52",
+          "text": "LDR             R0, [R2,#0x40]"
+        },
+        {
+          "address": "0x4e54",
+          "text": "LDR             R5, [R2,#0x3C]"
+        },
+        {
+          "address": "0x4e56",
+          "text": "SUBS            R5, R0, R5"
+        },
+        {
+          "address": "0x4e58",
+          "text": "LDR             R0, [R2,#0x3C]"
+        }
+      ]
+    },
+    {
+      "caller_partition": "0x4d38",
+      "site": "0x4e6c",
+      "target": "0x8574",
+      "context": [
+        {
+          "address": "0x4e66",
+          "text": "LDR             R0, =0xFFFFF449"
+        },
+        {
+          "address": "0x4e68",
+          "text": "ADDS            R0, R6, R0"
+        },
+        {
+          "address": "0x4e6a",
+          "text": "MOVS            R1, #5"
+        },
+        {
+          "address": "0x4e6c",
+          "text": "BL              loc_8572+2"
+        },
+        {
+          "address": "0x4e70",
+          "text": "LDR             R0, [R2,#0x40]"
+        },
+        {
+          "address": "0x4e72",
+          "text": "SUBS            R5, R5, R0"
+        },
+        {
+          "address": "0x4e74",
+          "text": "B               loc_4E24"
+        },
+        {
+          "address": "0x4e76",
+          "text": "MOVS            R1, #0x64 ; 'd'"
+        }
+      ]
+    },
+    {
+      "caller_partition": "0x4d38",
+      "site": "0x4e9c",
+      "target": "0x8584",
+      "context": [
+        {
+          "address": "0x4e94",
+          "text": "MULS            R0, R4"
+        },
+        {
+          "address": "0x4e96",
+          "text": "LSLS            R0, R0, #7"
+        },
+        {
+          "address": "0x4e98",
+          "text": "MOVS            R1, #0x3E8"
+        },
+        {
+          "address": "0x4e9c",
+          "text": "BL              loc_8582+2"
+        },
+        {
+          "address": "0x4ea0",
+          "text": "STR             R1, [SP,#0x18+var_14]"
+        },
+        {
+          "address": "0x4ea2",
+          "text": "LSLS            R0, R4, #7"
+        },
+        {
+          "address": "0x4ea4",
+          "text": "MOVS            R1, #0xA"
+        },
+        {
+          "address": "0x4ea6",
+          "text": "BL              loc_8582+2"
+        }
+      ]
+    },
+    {
+      "caller_partition": "0x4d38",
+      "site": "0x4ea6",
+      "target": "0x8584",
+      "context": [
+        {
+          "address": "0x4ea0",
+          "text": "STR             R1, [SP,#0x18+var_14]"
+        },
+        {
+          "address": "0x4ea2",
+          "text": "LSLS            R0, R4, #7"
+        },
+        {
+          "address": "0x4ea4",
+          "text": "MOVS            R1, #0xA"
+        },
+        {
+          "address": "0x4ea6",
+          "text": "BL              loc_8582+2"
+        },
+        {
+          "address": "0x4eaa",
+          "text": "STR             R1, [SP,#0x18+var_10]"
+        },
+        {
+          "address": "0x4eac",
+          "text": "LDR             R0, [R2,#0x48]"
+        },
+        {
+          "address": "0x4eae",
+          "text": "MOV             R1, SP"
+        },
+        {
+          "address": "0x4eb0",
+          "text": "LDRB            R1, [R1,#0x18+var_18]"
+        }
+      ]
+    },
+    {
+      "caller_partition": "0x4d38",
+      "site": "0x4eb6",
+      "target": "0x8574",
+      "context": [
+        {
+          "address": "0x4eb0",
+          "text": "LDRB            R1, [R1,#0x18+var_18]"
+        },
+        {
+          "address": "0x4eb2",
+          "text": "MULS            R0, R1"
+        },
+        {
+          "address": "0x4eb4",
+          "text": "MOVS            R1, #0x64 ; 'd'"
+        },
+        {
+          "address": "0x4eb6",
+          "text": "BL              loc_8572+2"
+        },
+        {
+          "address": "0x4eba",
+          "text": "STR             R1, [SP,#0x18+var_4]"
+        },
+        {
+          "address": "0x4ebc",
+          "text": "LDR             R0, [R2,#0x44]"
+        },
+        {
+          "address": "0x4ebe",
+          "text": "STR             R0, [R2,#0x2C]"
+        },
+        {
+          "address": "0x4ec0",
+          "text": "MOV             R0, SP"
+        }
+      ]
+    },
+    {
+      "caller_partition": "0x4d38",
+      "site": "0x4f0a",
+      "target": "0x8574",
+      "context": [
+        {
+          "address": "0x4f04",
+          "text": "LDR             R0, =0xFFFFFC19"
+        },
+        {
+          "address": "0x4f06",
+          "text": "ADDS            R0, R6, R0"
+        },
+        {
+          "address": "0x4f08",
+          "text": "MOVS            R1, #5"
+        },
+        {
+          "address": "0x4f0a",
+          "text": "BL              loc_8572+2"
+        },
+        {
+          "address": "0x4f0e",
+          "text": "LDR             R0, [R2,#0x34]"
+        },
+        {
+          "address": "0x4f10",
+          "text": "SUBS            R5, R0, R7"
+        },
+        {
+          "address": "0x4f12",
+          "text": "STR             R3, [SP,#0x18+var_14]"
+        },
+        {
+          "address": "0x4f14",
+          "text": "STR             R3, [SP,#0x18+var_10]"
+        }
+      ]
+    },
+    {
+      "caller_partition": "0x4d38",
+      "site": "0x4f30",
+      "target": "0x8574",
+      "context": [
+        {
+          "address": "0x4f2a",
+          "text": "LDR             R0, =0xFFFFFA25"
+        },
+        {
+          "address": "0x4f2c",
+          "text": "ADDS            R0, R6, R0"
+        },
+        {
+          "address": "0x4f2e",
+          "text": "MOVS            R1, #5"
+        },
+        {
+          "address": "0x4f30",
+          "text": "BL              loc_8572+2"
+        },
+        {
+          "address": "0x4f34",
+          "text": "LDR             R0, [R2,#0x38]"
+        },
+        {
+          "address": "0x4f36",
+          "text": "LDR             R5, [R2,#0x34]"
+        },
+        {
+          "address": "0x4f38",
+          "text": "SUBS            R5, R0, R5"
+        },
+        {
+          "address": "0x4f3a",
+          "text": "LDR             R7, [R2,#0x34]"
+        }
+      ]
+    },
+    {
+      "caller_partition": "0x4d38",
+      "site": "0x4f4a",
+      "target": "0x8574",
+      "context": [
+        {
+          "address": "0x4f44",
+          "text": "LDR             R0, =0xFFFFF831"
+        },
+        {
+          "address": "0x4f46",
+          "text": "ADDS            R0, R6, R0"
+        },
+        {
+          "address": "0x4f48",
+          "text": "MOVS            R1, #5"
+        },
+        {
+          "address": "0x4f4a",
+          "text": "BL              loc_8572+2"
+        },
+        {
+          "address": "0x4f4e",
+          "text": "LDR             R0, [R2,#0x3C]"
+        },
+        {
+          "address": "0x4f50",
+          "text": "LDR             R5, [R2,#0x38]"
+        },
+        {
+          "address": "0x4f52",
+          "text": "SUBS            R5, R0, R5"
+        },
+        {
+          "address": "0x4f54",
+          "text": "LDR             R7, [R2,#0x38]"
+        }
+      ]
+    },
+    {
+      "caller_partition": "0x4d38",
+      "site": "0x4f64",
+      "target": "0x8574",
+      "context": [
+        {
+          "address": "0x4f5e",
+          "text": "LDR             R0, =0xFFFFF63D"
+        },
+        {
+          "address": "0x4f60",
+          "text": "ADDS            R0, R6, R0"
+        },
+        {
+          "address": "0x4f62",
+          "text": "MOVS            R1, #5"
+        },
+        {
+          "address": "0x4f64",
+          "text": "BL              loc_8572+2"
+        },
+        {
+          "address": "0x4f68",
+          "text": "LDR             R0, [R2,#0x40]"
+        },
+        {
+          "address": "0x4f6a",
+          "text": "LDR             R5, [R2,#0x3C]"
+        },
+        {
+          "address": "0x4f6c",
+          "text": "SUBS            R5, R0, R5"
+        },
+        {
+          "address": "0x4f6e",
+          "text": "LDR             R7, [R2,#0x3C]"
+        }
+      ]
+    },
+    {
+      "caller_partition": "0x4d38",
+      "site": "0x4f7e",
+      "target": "0x8574",
+      "context": [
+        {
+          "address": "0x4f78",
+          "text": "LDR             R0, =0xFFFFF449"
+        },
+        {
+          "address": "0x4f7a",
+          "text": "ADDS            R0, R6, R0"
+        },
+        {
+          "address": "0x4f7c",
+          "text": "MOVS            R1, #5"
+        },
+        {
+          "address": "0x4f7e",
+          "text": "BL              loc_8572+2"
+        },
+        {
+          "address": "0x4f82",
+          "text": "LDR             R0, [R2,#0x44]"
+        },
+        {
+          "address": "0x4f84",
+          "text": "LDR             R5, [R2,#0x40]"
+        },
+        {
+          "address": "0x4f86",
+          "text": "SUBS            R5, R0, R5"
+        },
+        {
+          "address": "0x4f88",
+          "text": "LDR             R7, [R2,#0x40]"
+        }
+      ]
+    },
+    {
+      "caller_partition": "0x4d38",
+      "site": "0x4fac",
+      "target": "0x8584",
+      "context": [
+        {
+          "address": "0x4fa6",
+          "text": "MULS            R5, R1"
+        },
+        {
+          "address": "0x4fa8",
+          "text": "MOVS            R0, R5"
+        },
+        {
+          "address": "0x4faa",
+          "text": "MOVS            R1, #0x64 ; 'd'"
+        },
+        {
+          "address": "0x4fac",
+          "text": "BL              loc_8582+2"
+        },
+        {
+          "address": "0x4fb0",
+          "text": "CMP             R4, #0"
+        },
+        {
+          "address": "0x4fb2",
+          "text": "BEQ             loc_4FC8"
+        },
+        {
+          "address": "0x4fb4",
+          "text": "ADDS            R0, R1, R7"
+        },
+        {
+          "address": "0x4fb6",
+          "text": "LDR             R1, [R2,#0x48]"
+        }
+      ]
+    },
+    {
+      "caller_partition": "0x4d38",
+      "site": "0x4fe0",
+      "target": "0x8584",
+      "context": [
+        {
+          "address": "0x4fda",
+          "text": "LDR             R0, [SP,#0x18+var_C]"
+        },
+        {
+          "address": "0x4fdc",
+          "text": "MULS            R0, R4"
+        },
+        {
+          "address": "0x4fde",
+          "text": "MOVS            R1, #0x64 ; 'd'"
+        },
+        {
+          "address": "0x4fe0",
+          "text": "BL              loc_8582+2"
+        },
+        {
+          "address": "0x4fe4",
+          "text": "MOVS            R0, R1"
+        },
+        {
+          "address": "0x4fe6",
+          "text": "MULS            R0, R3"
+        },
+        {
+          "address": "0x4fe8",
+          "text": "MOVS            R1, #0x64 ; 'd'"
+        },
+        {
+          "address": "0x4fea",
+          "text": "BL              loc_8582+2"
+        }
+      ]
+    },
+    {
+      "caller_partition": "0x4d38",
+      "site": "0x4fea",
+      "target": "0x8584",
+      "context": [
+        {
+          "address": "0x4fe4",
+          "text": "MOVS            R0, R1"
+        },
+        {
+          "address": "0x4fe6",
+          "text": "MULS            R0, R3"
+        },
+        {
+          "address": "0x4fe8",
+          "text": "MOVS            R1, #0x64 ; 'd'"
+        },
+        {
+          "address": "0x4fea",
+          "text": "BL              loc_8582+2"
+        },
+        {
+          "address": "0x4fee",
+          "text": "MOVS            R5, R1"
+        },
+        {
+          "address": "0x4ff0",
+          "text": "LDR             R0, [SP,#0x18+var_8]"
+        },
+        {
+          "address": "0x4ff2",
+          "text": "LDRB            R0, [R0,#1]"
+        },
+        {
+          "address": "0x4ff4",
+          "text": "MULS            R0, R3"
+        }
+      ]
+    },
+    {
+      "caller_partition": "0x4d38",
+      "site": "0x4ff8",
+      "target": "0x8584",
+      "context": [
+        {
+          "address": "0x4ff2",
+          "text": "LDRB            R0, [R0,#1]"
+        },
+        {
+          "address": "0x4ff4",
+          "text": "MULS            R0, R3"
+        },
+        {
+          "address": "0x4ff6",
+          "text": "MOVS            R1, #0x64 ; 'd'"
+        },
+        {
+          "address": "0x4ff8",
+          "text": "BL              loc_8582+2"
+        },
+        {
+          "address": "0x4ffc",
+          "text": "MOVS            R0, R1"
+        },
+        {
+          "address": "0x4ffe",
+          "text": "MULS            R0, R4"
+        },
+        {
+          "address": "0x5000",
+          "text": "MOVS            R1, #0x64 ; 'd'"
+        },
+        {
+          "address": "0x5002",
+          "text": "BL              loc_8572+2"
+        }
+      ]
+    },
+    {
+      "caller_partition": "0x4d38",
+      "site": "0x5002",
+      "target": "0x8574",
+      "context": [
+        {
+          "address": "0x4ffc",
+          "text": "MOVS            R0, R1"
+        },
+        {
+          "address": "0x4ffe",
+          "text": "MULS            R0, R4"
+        },
+        {
+          "address": "0x5000",
+          "text": "MOVS            R1, #0x64 ; 'd'"
+        },
+        {
+          "address": "0x5002",
+          "text": "BL              loc_8572+2"
+        },
+        {
+          "address": "0x5006",
+          "text": "CMP             R1, R5"
+        },
+        {
+          "address": "0x5008",
+          "text": "BCS             loc_500C"
+        },
+        {
+          "address": "0x500a",
+          "text": "MOVS            R5, R1"
+        },
+        {
+          "address": "0x500c",
+          "text": "SUBS            R0, R2, R5"
+        }
+      ]
+    },
+    {
+      "caller_partition": "0x506c",
+      "site": "0x50b0",
+      "target": "0x8584",
+      "context": [
+        {
+          "address": "0x50aa",
+          "text": "MOVS            R0, #0"
+        },
+        {
+          "address": "0x50ac",
+          "text": "B               loc_50B6"
+        },
+        {
+          "address": "0x50ae",
+          "text": "SUBS            R0, R2, R3"
+        },
+        {
+          "address": "0x50b0",
+          "text": "BL              loc_8582+2"
+        },
+        {
+          "address": "0x50b4",
+          "text": "MOVS            R0, R1"
+        },
+        {
+          "address": "0x50b6",
+          "text": "LDR             R1, =0x200BCD"
+        },
+        {
+          "address": "0x50b8",
+          "text": "LDRB            R1, [R1]"
+        },
+        {
+          "address": "0x50ba",
+          "text": "CMP             R1, #0xD"
+        }
+      ]
+    },
+    {
+      "caller_partition": "0x50f0",
+      "site": "0x5152",
+      "target": "0x8574",
+      "context": [
+        {
+          "address": "0x514c",
+          "text": "MOVS            R1, #0xC"
+        },
+        {
+          "address": "0x514e",
+          "text": "MULS            R0, R1"
+        },
+        {
+          "address": "0x5150",
+          "text": "LDR             R1, =0xBB8"
+        },
+        {
+          "address": "0x5152",
+          "text": "BL              loc_8572+2"
+        },
+        {
+          "address": "0x5156",
+          "text": "STRB            R1, [R2]"
+        },
+        {
+          "address": "0x5158",
+          "text": "LDR             R0, =0x579"
+        },
+        {
+          "address": "0x515a",
+          "text": "CMP             R5, R0"
+        },
+        {
+          "address": "0x515c",
+          "text": "BCC             loc_5164"
+        }
+      ]
+    },
+    {
+      "caller_partition": "0x50f0",
+      "site": "0x5172",
+      "target": "0x8574",
+      "context": [
+        {
+          "address": "0x516a",
+          "text": "MOVS            R1, #0x13"
+        },
+        {
+          "address": "0x516c",
+          "text": "MULS            R0, R1"
+        },
+        {
+          "address": "0x516e",
+          "text": "MOVS            R1, #0x1F4"
+        },
+        {
+          "address": "0x5172",
+          "text": "BL              loc_8572+2"
+        },
+        {
+          "address": "0x5176",
+          "text": "STRB            R1, [R2,#1]"
+        },
+        {
+          "address": "0x5178",
+          "text": "LDR             R0, =0x2005DB"
+        },
+        {
+          "address": "0x517a",
+          "text": "LDRB            R0, [R0]"
+        },
+        {
+          "address": "0x517c",
+          "text": "LDR             R2, =0x2008A4"
+        }
+      ]
+    },
+    {
+      "caller_partition": "0x50f0",
+      "site": "0x51c0",
+      "target": "0x8574",
+      "context": [
+        {
+          "address": "0x51ba",
+          "text": "MOVS            R1, #0x13"
+        },
+        {
+          "address": "0x51bc",
+          "text": "MULS            R0, R1"
+        },
+        {
+          "address": "0x51be",
+          "text": "MOVS            R1, R3"
+        },
+        {
+          "address": "0x51c0",
+          "text": "BL              loc_8572+2"
+        },
+        {
+          "address": "0x51c4",
+          "text": "LSLS            R1, R1, #0x18"
+        },
+        {
+          "address": "0x51c6",
+          "text": "LSRS            R1, R1, #0x18"
+        },
+        {
+          "address": "0x51c8",
+          "text": "STR             R1, [SP,#0x14+var_C]"
+        },
+        {
+          "address": "0x51ca",
+          "text": "LDR             R0, =0x20058D"
+        }
+      ]
+    },
+    {
+      "caller_partition": "0x50f0",
+      "site": "0x51e6",
+      "target": "0x8574",
+      "context": [
+        {
+          "address": "0x51e0",
+          "text": "MOVS            R0, #0x13"
+        },
+        {
+          "address": "0x51e2",
+          "text": "MULS            R0, R2"
+        },
+        {
+          "address": "0x51e4",
+          "text": "MOVS            R1, R3"
+        },
+        {
+          "address": "0x51e6",
+          "text": "BL              loc_8572+2"
+        },
+        {
+          "address": "0x51ea",
+          "text": "PUSH            {R1}"
+        },
+        {
+          "address": "0x51ec",
+          "text": "MOVS            R0, #0x13"
+        },
+        {
+          "address": "0x51ee",
+          "text": "MULS            R6, R0"
+        },
+        {
+          "address": "0x51f0",
+          "text": "MOVS            R0, R6"
+        }
+      ]
+    },
+    {
+      "caller_partition": "0x50f0",
+      "site": "0x51f4",
+      "target": "0x8584",
+      "context": [
+        {
+          "address": "0x51ee",
+          "text": "MULS            R6, R0"
+        },
+        {
+          "address": "0x51f0",
+          "text": "MOVS            R0, R6"
+        },
+        {
+          "address": "0x51f2",
+          "text": "MOVS            R1, R3"
+        },
+        {
+          "address": "0x51f4",
+          "text": "BL              loc_8582+2"
+        },
+        {
+          "address": "0x51f8",
+          "text": "MOVS            R0, R1"
+        },
+        {
+          "address": "0x51fa",
+          "text": "POP             {R1}"
+        },
+        {
+          "address": "0x51fc",
+          "text": "SUBS            R6, R1, R0"
+        },
+        {
+          "address": "0x51fe",
+          "text": "STRB            R2, [R4,#7]"
+        }
+      ]
+    },
+    {
+      "caller_partition": "0x50f0",
+      "site": "0x5218",
+      "target": "0x8574",
+      "context": [
+        {
+          "address": "0x5212",
+          "text": "MOVS            R1, #0x13"
+        },
+        {
+          "address": "0x5214",
+          "text": "MULS            R0, R1"
+        },
+        {
+          "address": "0x5216",
+          "text": "MOVS            R1, #0x64 ; 'd'"
+        },
+        {
+          "address": "0x5218",
+          "text": "BL              loc_8572+2"
+        },
+        {
+          "address": "0x521c",
+          "text": "LSLS            R1, R1, #0x18"
+        },
+        {
+          "address": "0x521e",
+          "text": "LSRS            R1, R1, #0x18"
+        },
+        {
+          "address": "0x5220",
+          "text": "STR             R1, [SP,#0x14+var_8]"
+        },
+        {
+          "address": "0x5222",
+          "text": "MOVS            R0, R7"
+        }
+      ]
+    },
+    {
+      "caller_partition": "0x50f0",
+      "site": "0x5226",
+      "target": "0x8584",
+      "context": [
+        {
+          "address": "0x5220",
+          "text": "STR             R1, [SP,#0x14+var_8]"
+        },
+        {
+          "address": "0x5222",
+          "text": "MOVS            R0, R7"
+        },
+        {
+          "address": "0x5224",
+          "text": "MOVS            R1, #0xFA"
+        },
+        {
+          "address": "0x5226",
+          "text": "BL              loc_8582+2"
+        },
+        {
+          "address": "0x522a",
+          "text": "CMP             R0, #0"
+        },
+        {
+          "address": "0x522c",
+          "text": "BNE             loc_5236"
+        },
+        {
+          "address": "0x522e",
+          "text": "BL              sub_499C"
+        },
+        {
+          "address": "0x5232",
+          "text": "LDR             R1, =0x200BCD"
+        }
+      ]
+    },
+    {
+      "caller_partition": "0x50f0",
+      "site": "0x52e2",
+      "target": "0x8574",
+      "context": [
+        {
+          "address": "0x52dc",
+          "text": "MOVS            R0, R2"
+        },
+        {
+          "address": "0x52de",
+          "text": "MULS            R0, R1"
+        },
+        {
+          "address": "0x52e0",
+          "text": "MOVS            R1, #0x64 ; 'd'"
+        },
+        {
+          "address": "0x52e2",
+          "text": "BL              loc_8572+2"
+        },
+        {
+          "address": "0x52e6",
+          "text": "SUBS            R0, R2, R1"
+        },
+        {
+          "address": "0x52e8",
+          "text": "LDRB            R1, [R4,#9]"
+        },
+        {
+          "address": "0x52ea",
+          "text": "ADD             SP, SP, #0xC"
+        },
+        {
+          "address": "0x52ec",
+          "text": "CMP             R1, #0"
+        }
+      ]
+    },
+    {
+      "caller_partition": "0x50f0",
+      "site": "0x5334",
+      "target": "0x8574",
+      "context": [
+        {
+          "address": "0x532e",
+          "text": "MOVS            R0, R2"
+        },
+        {
+          "address": "0x5330",
+          "text": "MULS            R0, R1"
+        },
+        {
+          "address": "0x5332",
+          "text": "MOVS            R1, #0x64 ; 'd'"
+        },
+        {
+          "address": "0x5334",
+          "text": "BL              loc_8572+2"
+        },
+        {
+          "address": "0x5338",
+          "text": "SUBS            R6, R2, R1"
+        },
+        {
+          "address": "0x533a",
+          "text": "LDRB            R0, [R4,#0xF]"
+        },
+        {
+          "address": "0x533c",
+          "text": "MOVS            R1, #3"
+        },
+        {
+          "address": "0x533e",
+          "text": "MULS            R0, R1"
+        }
+      ]
+    },
+    {
+      "caller_partition": "0x50f0",
+      "site": "0x5454",
+      "target": "0x8574",
+      "context": [
+        {
+          "address": "0x544e",
+          "text": "MULS            R1, R0"
+        },
+        {
+          "address": "0x5450",
+          "text": "MOVS            R0, R1"
+        },
+        {
+          "address": "0x5452",
+          "text": "MOVS            R1, #0x64 ; 'd'"
+        },
+        {
+          "address": "0x5454",
+          "text": "BL              loc_8572+2"
+        },
+        {
+          "address": "0x5458",
+          "text": "MOVS            R2, R1"
+        },
+        {
+          "address": "0x545a",
+          "text": "LDR             R0, =0x200ACC"
+        },
+        {
+          "address": "0x545c",
+          "text": "LDR             R0, [R0]"
+        },
+        {
+          "address": "0x545e",
+          "text": "MULS            R0, R6"
+        }
+      ]
+    },
+    {
+      "caller_partition": "0x50f0",
+      "site": "0x5462",
+      "target": "0x8574",
+      "context": [
+        {
+          "address": "0x545c",
+          "text": "LDR             R0, [R0]"
+        },
+        {
+          "address": "0x545e",
+          "text": "MULS            R0, R6"
+        },
+        {
+          "address": "0x5460",
+          "text": "LDR             R1, =0x898"
+        },
+        {
+          "address": "0x5462",
+          "text": "BL              loc_8572+2"
+        },
+        {
+          "address": "0x5466",
+          "text": "ADDS            R0, R2, R1"
+        },
+        {
+          "address": "0x5468",
+          "text": "LDR             R1, =0x2005EC"
+        },
+        {
+          "address": "0x546a",
+          "text": "LDR             R1, [R1]"
+        },
+        {
+          "address": "0x546c",
+          "text": "MULS            R0, R1"
+        }
+      ]
+    },
+    {
+      "caller_partition": "0x59e8",
+      "site": "0x5b18",
+      "target": "0x8584",
+      "context": [
+        {
+          "address": "0x5b12",
+          "text": "LDRB            R0, [R5,#7]"
+        },
+        {
+          "address": "0x5b14",
+          "text": "LSLS            R0, R0, #2"
+        },
+        {
+          "address": "0x5b16",
+          "text": "MOVS            R1, #0xA"
+        },
+        {
+          "address": "0x5b18",
+          "text": "BL              loc_8582+2"
+        },
+        {
+          "address": "0x5b1c",
+          "text": "CMP             R1, #0x65 ; 'e'"
+        },
+        {
+          "address": "0x5b1e",
+          "text": "BCC             loc_5B22"
+        },
+        {
+          "address": "0x5b20",
+          "text": "MOVS            R1, #0x64 ; 'd'"
+        },
+        {
+          "address": "0x5b22",
+          "text": "STR             R1, [R4,#0x2C]"
+        }
+      ]
+    },
+    {
+      "caller_partition": "0x59e8",
+      "site": "0x5b42",
+      "target": "0x8574",
+      "context": [
+        {
+          "address": "0x5b3c",
+          "text": "MOVS            R1, #0x3E ; '>'"
+        },
+        {
+          "address": "0x5b3e",
+          "text": "MULS            R0, R1"
+        },
+        {
+          "address": "0x5b40",
+          "text": "MOVS            R1, #0x64 ; 'd'"
+        },
+        {
+          "address": "0x5b42",
+          "text": "BL              loc_8572+2"
+        },
+        {
+          "address": "0x5b46",
+          "text": "MOVS            R0, R1"
+        },
+        {
+          "address": "0x5b48",
+          "text": "BL              sub_7140"
+        },
+        {
+          "address": "0x5b4c",
+          "text": "LDR             R1, =0x2006E8"
+        },
+        {
+          "address": "0x5b4e",
+          "text": "LDR             R1, [R1]"
+        }
+      ]
+    },
+    {
+      "caller_partition": "0x59e8",
+      "site": "0x5b80",
+      "target": "0x8574",
+      "context": [
+        {
+          "address": "0x5b7a",
+          "text": "MOVS            R1, #9"
+        },
+        {
+          "address": "0x5b7c",
+          "text": "MULS            R0, R1"
+        },
+        {
+          "address": "0x5b7e",
+          "text": "MOVS            R1, #5"
+        },
+        {
+          "address": "0x5b80",
+          "text": "BL              loc_8572+2"
+        },
+        {
+          "address": "0x5b84",
+          "text": "SUBS            R1, #0x28 ; '('"
+        },
+        {
+          "address": "0x5b86",
+          "text": "STR             R1, [R4,#0x30]"
+        },
+        {
+          "address": "0x5b88",
+          "text": "B               loc_5CB2"
+        },
+        {
+          "address": "0x5b8a",
+          "text": "MOVS            R2, #4"
+        }
+      ]
+    },
+    {
+      "caller_partition": "0x59e8",
+      "site": "0x5ba8",
+      "target": "0x8574",
+      "context": [
+        {
+          "address": "0x5ba2",
+          "text": "MOVS            R1, #5"
+        },
+        {
+          "address": "0x5ba4",
+          "text": "MULS            R0, R1"
+        },
+        {
+          "address": "0x5ba6",
+          "text": "MOVS            R1, #0xA"
+        },
+        {
+          "address": "0x5ba8",
+          "text": "BL              loc_8572+2"
+        },
+        {
+          "address": "0x5bac",
+          "text": "STR             R1, [R4,#0x34]"
+        },
+        {
+          "address": "0x5bae",
+          "text": "B               loc_5CB2"
+        },
+        {
+          "address": "0x5bb0",
+          "text": "MOVS            R2, #4"
+        },
+        {
+          "address": "0x5bb2",
+          "text": "MOVS            R1, R4"
+        }
+      ]
+    },
+    {
+      "caller_partition": "0x59e8",
+      "site": "0x5bc8",
+      "target": "0x8584",
+      "context": [
+        {
+          "address": "0x5bc2",
+          "text": "MOVS            R1, #0x3A ; ':'"
+        },
+        {
+          "address": "0x5bc4",
+          "text": "MULS            R0, R1"
+        },
+        {
+          "address": "0x5bc6",
+          "text": "MOVS            R1, #0x64 ; 'd'"
+        },
+        {
+          "address": "0x5bc8",
+          "text": "BL              loc_8582+2"
+        },
+        {
+          "address": "0x5bcc",
+          "text": "STRB            R1, [R4,#0x14]"
+        },
+        {
+          "address": "0x5bce",
+          "text": "B               loc_5CB2"
+        },
+        {
+          "address": "0x5bd0",
+          "text": "MOVS            R2, #2"
+        },
+        {
+          "address": "0x5bd2",
+          "text": "MOVS            R1, R4"
+        }
+      ]
+    },
+    {
+      "caller_partition": "0x59e8",
+      "site": "0x5bee",
+      "target": "0x8574",
+      "context": [
+        {
+          "address": "0x5be8",
+          "text": "LDR             R1, =0x465"
+        },
+        {
+          "address": "0x5bea",
+          "text": "MULS            R0, R1"
+        },
+        {
+          "address": "0x5bec",
+          "text": "LDR             R1, =0x2710"
+        },
+        {
+          "address": "0x5bee",
+          "text": "BL              loc_8572+2"
+        },
+        {
+          "address": "0x5bf2",
+          "text": "LDR             R0, =0xFFFFFE34"
+        },
+        {
+          "address": "0x5bf4",
+          "text": "ADDS            R0, R1, R0"
+        },
+        {
+          "address": "0x5bf6",
+          "text": "STR             R0, [R4,#0x38]"
+        },
+        {
+          "address": "0x5bf8",
+          "text": "B               loc_5CB2"
+        }
+      ]
+    },
+    {
+      "caller_partition": "0x59e8",
+      "site": "0x5c28",
+      "target": "0x8564",
+      "context": [
+        {
+          "address": "0x5c22",
+          "text": "LDRB            R0, [R5,#7]"
+        },
+        {
+          "address": "0x5c24",
+          "text": "LSLS            R0, R0, #1"
+        },
+        {
+          "address": "0x5c26",
+          "text": "MOVS            R1, #7"
+        },
+        {
+          "address": "0x5c28",
+          "text": "BL              loc_8562+2"
+        },
+        {
+          "address": "0x5c2c",
+          "text": "LDR             R0, =0x200AFE"
+        },
+        {
+          "address": "0x5c2e",
+          "text": "LDRB            R0, [R0]"
+        },
+        {
+          "address": "0x5c30",
+          "text": "CMP             R0, #1"
+        },
+        {
+          "address": "0x5c32",
+          "text": "BNE             loc_5C40"
+        }
+      ]
+    },
+    {
+      "caller_partition": "0x59e8",
+      "site": "0x5c4a",
+      "target": "0x8574",
+      "context": [
+        {
+          "address": "0x5c44",
+          "text": "MOVS            R1, #9"
+        },
+        {
+          "address": "0x5c46",
+          "text": "MULS            R0, R1"
+        },
+        {
+          "address": "0x5c48",
+          "text": "MOVS            R1, #5"
+        },
+        {
+          "address": "0x5c4a",
+          "text": "BL              loc_8572+2"
+        },
+        {
+          "address": "0x5c4e",
+          "text": "STRB            R1, [R4,#0x15]"
+        },
+        {
+          "address": "0x5c50",
+          "text": "B               loc_5CB2"
+        },
+        {
+          "address": "0x5c52",
+          "text": "MOVS            R2, #4"
+        },
+        {
+          "address": "0x5c54",
+          "text": "MOVS            R1, R4"
+        }
+      ]
+    },
+    {
+      "caller_partition": "0x601c",
+      "site": "0x62de",
+      "target": "0x8584",
+      "context": [
+        {
+          "address": "0x62d8",
+          "text": "MOVS            R1, #0x7D ; '}'"
+        },
+        {
+          "address": "0x62da",
+          "text": "MULS            R0, R1"
+        },
+        {
+          "address": "0x62dc",
+          "text": "MOVS            R1, #0x64 ; 'd'"
+        },
+        {
+          "address": "0x62de",
+          "text": "BL              loc_8582+2"
+        },
+        {
+          "address": "0x62e2",
+          "text": "STR             R1, [R6,#4]"
+        },
+        {
+          "address": "0x62e4",
+          "text": "MOVS            R0, R1"
+        },
+        {
+          "address": "0x62e6",
+          "text": "MOVS            R1, #0x19"
+        },
+        {
+          "address": "0x62e8",
+          "text": "MULS            R0, R1"
+        }
+      ]
+    },
+    {
+      "caller_partition": "0x601c",
+      "site": "0x62ec",
+      "target": "0x8574",
+      "context": [
+        {
+          "address": "0x62e6",
+          "text": "MOVS            R1, #0x19"
+        },
+        {
+          "address": "0x62e8",
+          "text": "MULS            R0, R1"
+        },
+        {
+          "address": "0x62ea",
+          "text": "MOVS            R1, #0x64 ; 'd'"
+        },
+        {
+          "address": "0x62ec",
+          "text": "BL              loc_8572+2"
+        },
+        {
+          "address": "0x62f0",
+          "text": "STR             R1, [R6,#8]"
+        },
+        {
+          "address": "0x62f2",
+          "text": "B               loc_626E"
+        },
+        {
+          "address": "0x62f4",
+          "text": "LDR             R0, =0x200B1B; jumptable 000000000000608A case 64"
+        },
+        {
+          "address": "0x62f6",
+          "text": "LDRB            R0, [R0]"
+        }
+      ]
+    },
+    {
+      "caller_partition": "0x601c",
+      "site": "0x64a2",
+      "target": "0x8584",
+      "context": [
+        {
+          "address": "0x649c",
+          "text": "MOVS            R0, #0x64 ; 'd'"
+        },
+        {
+          "address": "0x649e",
+          "text": "LDRB            R1, [R5]"
+        },
+        {
+          "address": "0x64a0",
+          "text": "SUBS            R1, R1, #1"
+        },
+        {
+          "address": "0x64a2",
+          "text": "BL              loc_8582+2"
+        },
+        {
+          "address": "0x64a6",
+          "text": "STRB            R1, [R2]"
+        },
+        {
+          "address": "0x64a8",
+          "text": "LDR             R2, =0x200434"
+        },
+        {
+          "address": "0x64aa",
+          "text": "MOVS            R0, #0x64 ; 'd'"
+        },
+        {
+          "address": "0x64ac",
+          "text": "LDRB            R1, [R5]"
+        }
+      ]
+    },
+    {
+      "caller_partition": "0x601c",
+      "site": "0x64b0",
+      "target": "0x8584",
+      "context": [
+        {
+          "address": "0x64aa",
+          "text": "MOVS            R0, #0x64 ; 'd'"
+        },
+        {
+          "address": "0x64ac",
+          "text": "LDRB            R1, [R5]"
+        },
+        {
+          "address": "0x64ae",
+          "text": "SUBS            R1, R1, #1"
+        },
+        {
+          "address": "0x64b0",
+          "text": "BL              loc_8582+2"
+        },
+        {
+          "address": "0x64b4",
+          "text": "STRB            R0, [R2]"
+        },
+        {
+          "address": "0x64b6",
+          "text": "B               def_608A; jumptable 000000000000608A default case, cases 11-14,16,20,21,23,25-58,63,65-79,83,84,86-103,105-109,142-145,147-149,155-225"
+        },
+        {
+          "address": "0x64b8",
+          "text": "LDR             R0, =0x200B20; jumptable 000000000000608A case 17"
+        },
+        {
+          "address": "0x64ba",
+          "text": "LDRB            R0, [R0]"
+        }
+      ]
+    },
+    {
+      "caller_partition": "0x601c",
+      "site": "0x650c",
+      "target": "0x8584",
+      "context": [
+        {
+          "address": "0x6506",
+          "text": "LDRB            R0, [R0,#0x12]"
+        },
+        {
+          "address": "0x6508",
+          "text": "LSLS            R0, R0, #7"
+        },
+        {
+          "address": "0x650a",
+          "text": "MOVS            R1, #0xA"
+        },
+        {
+          "address": "0x650c",
+          "text": "BL              loc_8582+2"
+        },
+        {
+          "address": "0x6510",
+          "text": "STR             R1, [R2]"
+        },
+        {
+          "address": "0x6512",
+          "text": "B               loc_64C8"
+        },
+        {
+          "address": "0x6514",
+          "text": "LDR             R1, =0x200B27; jumptable 000000000000608A case 62"
+        },
+        {
+          "address": "0x6516",
+          "text": "LDRB            R1, [R1]"
+        }
+      ]
+    },
+    {
+      "caller_partition": "0x601c",
+      "site": "0x6550",
+      "target": "0x8574",
+      "context": [
+        {
+          "address": "0x654a",
+          "text": "LDR             R0, [R0,#0x14]"
+        },
+        {
+          "address": "0x654c",
+          "text": "LSLS            R0, R0, #7"
+        },
+        {
+          "address": "0x654e",
+          "text": "MOVS            R1, #0xA"
+        },
+        {
+          "address": "0x6550",
+          "text": "BL              loc_8572+2"
+        },
+        {
+          "address": "0x6554",
+          "text": "STR             R1, [R2]"
+        },
+        {
+          "address": "0x6556",
+          "text": "B               def_608A; jumptable 000000000000608A default case, cases 11-14,16,20,21,23,25-58,63,65-79,83,84,86-103,105-109,142-145,147-149,155-225"
+        },
+        {
+          "address": "0x6558",
+          "text": "LDR             R1, =0x200B2A; jumptable 000000000000608A case 138"
+        },
+        {
+          "address": "0x655a",
+          "text": "LDRB            R2, [R1]"
+        }
+      ]
+    },
+    {
+      "caller_partition": "0x601c",
+      "site": "0x65a2",
+      "target": "0x8574",
+      "context": [
+        {
+          "address": "0x659c",
+          "text": "LDR             R0, [R0,#0x1C]"
+        },
+        {
+          "address": "0x659e",
+          "text": "LSLS            R0, R0, #7"
+        },
+        {
+          "address": "0x65a0",
+          "text": "MOVS            R1, #0xA"
+        },
+        {
+          "address": "0x65a2",
+          "text": "BL              loc_8572+2"
+        },
+        {
+          "address": "0x65a6",
+          "text": "STR             R1, [R2]"
+        },
+        {
+          "address": "0x65a8",
+          "text": "B               def_608A; jumptable 000000000000608A default case, cases 11-14,16,20,21,23,25-58,63,65-79,83,84,86-103,105-109,142-145,147-149,155-225"
+        },
+        {
+          "address": "0x65aa",
+          "text": "LDR             R1, =0x200B2E; jumptable 000000000000608A case 140"
+        },
+        {
+          "address": "0x65ac",
+          "text": "LDRB            R2, [R1]"
+        }
+      ]
+    }
+  ]
+}
