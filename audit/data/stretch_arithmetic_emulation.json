@@ -1,0 +1,761 @@
+{
+  "format": "quadzilla-stretch-arithmetic-emulation-v1",
+  "raw_sha256": "1ae519ba6194e8f7bdaaa94333a83a9e6fda3b0563f87f7d48383b37288c1780",
+  "emulator": "Unicorn 2.1.4",
+  "cpu": "ARM926 functional surrogate",
+  "cases": 2092,
+  "mismatches": [],
+  "examples": [
+    {
+      "fields": {
+        "step": 0,
+        "residue": 0,
+        "captured": 10,
+        "minimum": 50,
+        "low": 0,
+        "high": 10,
+        "requested": 1700,
+        "table_byte": 0,
+        "percent": 0
+      },
+      "actual_r0": 0
+    },
+    {
+      "fields": {
+        "step": 0,
+        "residue": 0,
+        "captured": 10,
+        "minimum": 50,
+        "low": 0,
+        "high": 10,
+        "requested": 1700,
+        "table_byte": 0,
+        "percent": 1
+      },
+      "actual_r0": 0
+    },
+    {
+      "fields": {
+        "step": 0,
+        "residue": 0,
+        "captured": 10,
+        "minimum": 50,
+        "low": 0,
+        "high": 10,
+        "requested": 1700,
+        "table_byte": 0,
+        "percent": 50
+      },
+      "actual_r0": 34
+    },
+    {
+      "fields": {
+        "step": 0,
+        "residue": 0,
+        "captured": 10,
+        "minimum": 50,
+        "low": 0,
+        "high": 10,
+        "requested": 1700,
+        "table_byte": 0,
+        "percent": 99
+      },
+      "actual_r0": 68
+    },
+    {
+      "fields": {
+        "step": 0,
+        "residue": 0,
+        "captured": 10,
+        "minimum": 50,
+        "low": 0,
+        "high": 10,
+        "requested": 1700,
+        "table_byte": 0,
+        "percent": 100
+      },
+      "actual_r0": 85
+    },
+    {
+      "fields": {
+        "step": 0,
+        "residue": 0,
+        "captured": 10,
+        "minimum": 50,
+        "low": 0,
+        "high": 10,
+        "requested": 1700,
+        "table_byte": 50,
+        "percent": 0
+      },
+      "actual_r0": 0
+    },
+    {
+      "fields": {
+        "step": 0,
+        "residue": 0,
+        "captured": 10,
+        "minimum": 50,
+        "low": 0,
+        "high": 10,
+        "requested": 1700,
+        "table_byte": 50,
+        "percent": 1
+      },
+      "actual_r0": 0
+    },
+    {
+      "fields": {
+        "step": 0,
+        "residue": 0,
+        "captured": 10,
+        "minimum": 50,
+        "low": 0,
+        "high": 10,
+        "requested": 1700,
+        "table_byte": 50,
+        "percent": 50
+      },
+      "actual_r0": 425
+    },
+    {
+      "fields": {
+        "step": 0,
+        "residue": 0,
+        "captured": 10,
+        "minimum": 50,
+        "low": 0,
+        "high": 10,
+        "requested": 1700,
+        "table_byte": 50,
+        "percent": 99
+      },
+      "actual_r0": 833
+    },
+    {
+      "fields": {
+        "step": 0,
+        "residue": 0,
+        "captured": 10,
+        "minimum": 50,
+        "low": 0,
+        "high": 10,
+        "requested": 1700,
+        "table_byte": 50,
+        "percent": 100
+      },
+      "actual_r0": 850
+    },
+    {
+      "fields": {
+        "step": 0,
+        "residue": 0,
+        "captured": 10,
+        "minimum": 50,
+        "low": 0,
+        "high": 10,
+        "requested": 1700,
+        "table_byte": 100,
+        "percent": 0
+      },
+      "actual_r0": 0
+    },
+    {
+      "fields": {
+        "step": 0,
+        "residue": 0,
+        "captured": 10,
+        "minimum": 50,
+        "low": 0,
+        "high": 10,
+        "requested": 1700,
+        "table_byte": 100,
+        "percent": 1
+      },
+      "actual_r0": 17
+    },
+    {
+      "fields": {
+        "step": 0,
+        "residue": 0,
+        "captured": 10,
+        "minimum": 50,
+        "low": 0,
+        "high": 10,
+        "requested": 1700,
+        "table_byte": 100,
+        "percent": 50
+      },
+      "actual_r0": 850
+    },
+    {
+      "fields": {
+        "step": 0,
+        "residue": 0,
+        "captured": 10,
+        "minimum": 50,
+        "low": 0,
+        "high": 10,
+        "requested": 1700,
+        "table_byte": 100,
+        "percent": 99
+      },
+      "actual_r0": 1683
+    },
+    {
+      "fields": {
+        "step": 0,
+        "residue": 0,
+        "captured": 10,
+        "minimum": 50,
+        "low": 0,
+        "high": 10,
+        "requested": 1700,
+        "table_byte": 100,
+        "percent": 100
+      },
+      "actual_r0": 1700
+    },
+    {
+      "fields": {
+        "step": 0,
+        "residue": 0,
+        "captured": 10,
+        "minimum": 50,
+        "low": 0,
+        "high": 10,
+        "requested": 1700,
+        "table_byte": 127,
+        "percent": 0
+      },
+      "actual_r0": 0
+    },
+    {
+      "fields": {
+        "step": 0,
+        "residue": 0,
+        "captured": 10,
+        "minimum": 50,
+        "low": 0,
+        "high": 10,
+        "requested": 1700,
+        "table_byte": 127,
+        "percent": 1
+      },
+      "actual_r0": 17
+    },
+    {
+      "fields": {
+        "step": 0,
+        "residue": 0,
+        "captured": 10,
+        "minimum": 50,
+        "low": 0,
+        "high": 10,
+        "requested": 1700,
+        "table_byte": 127,
+        "percent": 50
+      },
+      "actual_r0": 1071
+    },
+    {
+      "fields": {
+        "step": 0,
+        "residue": 0,
+        "captured": 10,
+        "minimum": 50,
+        "low": 0,
+        "high": 10,
+        "requested": 1700,
+        "table_byte": 127,
+        "percent": 99
+      },
+      "actual_r0": 2125
+    },
+    {
+      "fields": {
+        "step": 0,
+        "residue": 0,
+        "captured": 10,
+        "minimum": 50,
+        "low": 0,
+        "high": 10,
+        "requested": 1700,
+        "table_byte": 127,
+        "percent": 100
+      },
+      "actual_r0": 2159
+    },
+    {
+      "fields": {
+        "step": 0,
+        "residue": 0,
+        "captured": 10,
+        "minimum": 50,
+        "low": 0,
+        "high": 10,
+        "requested": 1700,
+        "table_byte": 128,
+        "percent": 0
+      },
+      "actual_r0": 0
+    },
+    {
+      "fields": {
+        "step": 0,
+        "residue": 0,
+        "captured": 10,
+        "minimum": 50,
+        "low": 0,
+        "high": 10,
+        "requested": 1700,
+        "table_byte": 128,
+        "percent": 1
+      },
+      "actual_r0": 42949639
+    },
+    {
+      "fields": {
+        "step": 0,
+        "residue": 0,
+        "captured": 10,
+        "minimum": 50,
+        "low": 0,
+        "high": 10,
+        "requested": 1700,
+        "table_byte": 128,
+        "percent": 50
+      },
+      "actual_r0": 42948568
+    },
+    {
+      "fields": {
+        "step": 0,
+        "residue": 0,
+        "captured": 10,
+        "minimum": 50,
+        "low": 0,
+        "high": 10,
+        "requested": 1700,
+        "table_byte": 128,
+        "percent": 99
+      },
+      "actual_r0": 42947514
+    },
+    {
+      "fields": {
+        "step": 0,
+        "residue": 0,
+        "captured": 10,
+        "minimum": 50,
+        "low": 0,
+        "high": 10,
+        "requested": 1700,
+        "table_byte": 128,
+        "percent": 100
+      },
+      "actual_r0": 42947496
+    },
+    {
+      "fields": {
+        "step": 0,
+        "residue": 0,
+        "captured": 10,
+        "minimum": 50,
+        "low": 0,
+        "high": 10,
+        "requested": 1700,
+        "table_byte": 140,
+        "percent": 0
+      },
+      "actual_r0": 0
+    },
+    {
+      "fields": {
+        "step": 0,
+        "residue": 0,
+        "captured": 10,
+        "minimum": 50,
+        "low": 0,
+        "high": 10,
+        "requested": 1700,
+        "table_byte": 140,
+        "percent": 1
+      },
+      "actual_r0": 42949639
+    },
+    {
+      "fields": {
+        "step": 0,
+        "residue": 0,
+        "captured": 10,
+        "minimum": 50,
+        "low": 0,
+        "high": 10,
+        "requested": 1700,
+        "table_byte": 140,
+        "percent": 50
+      },
+      "actual_r0": 42948670
+    },
+    {
+      "fields": {
+        "step": 0,
+        "residue": 0,
+        "captured": 10,
+        "minimum": 50,
+        "low": 0,
+        "high": 10,
+        "requested": 1700,
+        "table_byte": 140,
+        "percent": 99
+      },
+      "actual_r0": 42947718
+    },
+    {
+      "fields": {
+        "step": 0,
+        "residue": 0,
+        "captured": 10,
+        "minimum": 50,
+        "low": 0,
+        "high": 10,
+        "requested": 1700,
+        "table_byte": 140,
+        "percent": 100
+      },
+      "actual_r0": 42947700
+    },
+    {
+      "fields": {
+        "step": 0,
+        "residue": 0,
+        "captured": 10,
+        "minimum": 50,
+        "low": 0,
+        "high": 10,
+        "requested": 1700,
+        "table_byte": 150,
+        "percent": 0
+      },
+      "actual_r0": 0
+    },
+    {
+      "fields": {
+        "step": 0,
+        "residue": 0,
+        "captured": 10,
+        "minimum": 50,
+        "low": 0,
+        "high": 10,
+        "requested": 1700,
+        "table_byte": 150,
+        "percent": 1
+      },
+      "actual_r0": 42949639
+    },
+    {
+      "fields": {
+        "step": 0,
+        "residue": 0,
+        "captured": 10,
+        "minimum": 50,
+        "low": 0,
+        "high": 10,
+        "requested": 1700,
+        "table_byte": 150,
+        "percent": 50
+      },
+      "actual_r0": 42948755
+    },
+    {
+      "fields": {
+        "step": 0,
+        "residue": 0,
+        "captured": 10,
+        "minimum": 50,
+        "low": 0,
+        "high": 10,
+        "requested": 1700,
+        "table_byte": 150,
+        "percent": 99
+      },
+      "actual_r0": 42947888
+    },
+    {
+      "fields": {
+        "step": 0,
+        "residue": 0,
+        "captured": 10,
+        "minimum": 50,
+        "low": 0,
+        "high": 10,
+        "requested": 1700,
+        "table_byte": 150,
+        "percent": 100
+      },
+      "actual_r0": 42947870
+    },
+    {
+      "fields": {
+        "step": 0,
+        "residue": 0,
+        "captured": 10,
+        "minimum": 50,
+        "low": 0,
+        "high": 10,
+        "requested": 1700,
+        "table_byte": 255,
+        "percent": 0
+      },
+      "actual_r0": 0
+    },
+    {
+      "fields": {
+        "step": 0,
+        "residue": 0,
+        "captured": 10,
+        "minimum": 50,
+        "low": 0,
+        "high": 10,
+        "requested": 1700,
+        "table_byte": 255,
+        "percent": 1
+      },
+      "actual_r0": 42949656
+    },
+    {
+      "fields": {
+        "step": 0,
+        "residue": 0,
+        "captured": 10,
+        "minimum": 50,
+        "low": 0,
+        "high": 10,
+        "requested": 1700,
+        "table_byte": 255,
+        "percent": 50
+      },
+      "actual_r0": 42949656
+    },
+    {
+      "fields": {
+        "step": 0,
+        "residue": 0,
+        "captured": 10,
+        "minimum": 50,
+        "low": 0,
+        "high": 10,
+        "requested": 1700,
+        "table_byte": 255,
+        "percent": 99
+      },
+      "actual_r0": 42949639
+    },
+    {
+      "fields": {
+        "step": 0,
+        "residue": 0,
+        "captured": 10,
+        "minimum": 50,
+        "low": 0,
+        "high": 10,
+        "requested": 1700,
+        "table_byte": 255,
+        "percent": 100
+      },
+      "actual_r0": 42949655
+    },
+    {
+      "fields": {
+        "step": 0,
+        "residue": 0,
+        "captured": 10,
+        "minimum": 50,
+        "low": 20,
+        "high": 10,
+        "requested": 1700,
+        "table_byte": 100,
+        "percent": 100
+      },
+      "actual_r0": 0
+    },
+    {
+      "fields": {
+        "step": 0,
+        "residue": 0,
+        "captured": 10,
+        "minimum": 50,
+        "low": 10,
+        "high": 10,
+        "requested": 1700,
+        "table_byte": 100,
+        "percent": 100
+      },
+      "actual_r0": 1700
+    },
+    {
+      "fields": {
+        "step": 30,
+        "residue": 10,
+        "captured": 10,
+        "minimum": 50,
+        "low": 0,
+        "high": 10,
+        "requested": 1700,
+        "table_byte": 100,
+        "percent": 100
+      },
+      "actual_r0": 0
+    },
+    {
+      "fields": {
+        "step": 0,
+        "residue": 0,
+        "captured": 99,
+        "minimum": 0,
+        "low": 0,
+        "high": 100,
+        "requested": 1019,
+        "table_byte": 1,
+        "percent": 100
+      },
+      "actual_r0": 9
+    }
+  ],
+  "visited_addresses": [
+    "0x4a94",
+    "0x4a96",
+    "0x4a98",
+    "0x4a9a",
+    "0x4a9c",
+    "0x4a9e",
+    "0x4aa0",
+    "0x4aa2",
+    "0x4aa4",
+    "0x4aa6",
+    "0x4aa8",
+    "0x4aaa",
+    "0x4aac",
+    "0x4aae",
+    "0x4ab0",
+    "0x4ab2",
+    "0x4ab4",
+    "0x4ab6",
+    "0x4ab8",
+    "0x4aba",
+    "0x4abc",
+    "0x4abe",
+    "0x4ac0",
+    "0x4ac2",
+    "0x4ac4",
+    "0x4ac6",
+    "0x4ac8",
+    "0x4acc",
+    "0x4ace",
+    "0x4ad0",
+    "0x4ad2",
+    "0x4ad4",
+    "0x4ad6",
+    "0x4ad8",
+    "0x4adc",
+    "0x4ade",
+    "0x4ae0",
+    "0x4ae2",
+    "0x4ae4",
+    "0x4ae6",
+    "0x4ae8",
+    "0x4aea",
+    "0x4aec",
+    "0x4aee",
+    "0x4af0",
+    "0x4af2",
+    "0x4af4",
+    "0x4af6",
+    "0x4af8",
+    "0x4afa",
+    "0x4afe",
+    "0x4b00",
+    "0x4b02",
+    "0x4b04",
+    "0x4b06",
+    "0x4b08",
+    "0x4b0a",
+    "0x4b0c",
+    "0x4b0e",
+    "0x4b12",
+    "0x4b14",
+    "0x4b16",
+    "0x4b18",
+    "0x4b1c",
+    "0x4b1e",
+    "0x4b20",
+    "0x4b22",
+    "0x4b24",
+    "0x8574",
+    "0x8578",
+    "0x857c",
+    "0x8580",
+    "0x85a0",
+    "0x85a4",
+    "0x85a8",
+    "0x85ac",
+    "0x85b0",
+    "0x85b4",
+    "0x85b8",
+    "0x85bc",
+    "0x85c0",
+    "0x85c4",
+    "0x85c8",
+    "0x85cc",
+    "0x85d0",
+    "0x85d4",
+    "0x85d8",
+    "0x85dc",
+    "0x85e0",
+    "0x85e4",
+    "0x85e8",
+    "0x85ec",
+    "0x85f0",
+    "0x85f4",
+    "0x85f8",
+    "0x85fc",
+    "0x8600",
+    "0x8604",
+    "0x8608",
+    "0x860c",
+    "0x8610",
+    "0x8614",
+    "0x8618",
+    "0x861c",
+    "0x8620",
+    "0x8624",
+    "0x8628",
+    "0x862c",
+    "0x8630",
+    "0x8634",
+    "0x8638",
+    "0x863c",
+    "0x8640",
+    "0x8644",
+    "0x8648",
+    "0x864c",
+    "0x8650",
+    "0x8654",
+    "0x8658",
+    "0x865c",
+    "0x8660",
+    "0x8664",
+    "0x8668",
+    "0x866c",
+    "0x8670",
+    "0x8674"
+  ],
+  "limits": [
+    "controlled SRAM, not validated vehicle states",
+    "row/column fixed at zero to isolate arithmetic",
+    "not exhaustive input or control-flow proof",
+    "no peripherals mapped, no hardware output",
+    "R4..R11 and SP preservation checked; instruction budget 8192 per call"
+  ]
+}

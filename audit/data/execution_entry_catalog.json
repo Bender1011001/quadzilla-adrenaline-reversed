@@ -4,8 +4,8 @@
   "unit": "execution_entries_including_vectors_thunks_and_alternate_entries",
   "summary": {
     "confirmed_entries": 145,
-    "documented_static_roles": 36,
-    "unlabeled_static_entries": 109,
+    "documented_static_roles": 42,
+    "unlabeled_static_entries": 103,
     "entries_with_ida_sram_references": 49,
     "entries_with_ida_peripheral_references": 21,
     "union_direct_call_edges": 180
@@ -15640,8 +15640,19 @@
           ]
         }
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x8564",
+          "label": "u8 division Thumb entry; R0 remainder, R1 quotient",
+          "assurance": "static_instruction_trace_and_bounded_emulation",
+          "evidence": [
+            "audit/data/integer_runtime_emulation.json:entry.0x8564",
+            "audit/data/integer_runtime_binaryninja.json",
+            "docs/INTEGER_ARITHMETIC_REVIEW.md"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [],
         "incoming": [
@@ -15668,8 +15679,19 @@
           ]
         }
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x8568",
+          "label": "u8 division ARM body; R0 remainder, R1 quotient",
+          "assurance": "static_instruction_trace_and_bounded_emulation",
+          "evidence": [
+            "audit/data/integer_runtime_emulation.json:entry.0x8568",
+            "audit/data/integer_runtime_binaryninja.json",
+            "docs/INTEGER_ARITHMETIC_REVIEW.md"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [],
         "incoming": []
@@ -15694,8 +15716,19 @@
           ]
         }
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x8574",
+          "label": "u32 division Thumb entry; R0 remainder, R1 quotient",
+          "assurance": "static_instruction_trace_and_bounded_emulation",
+          "evidence": [
+            "audit/data/integer_runtime_emulation.json:entry.0x8574",
+            "audit/data/integer_runtime_binaryninja.json",
+            "docs/INTEGER_ARITHMETIC_REVIEW.md"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [],
         "incoming": [
@@ -15729,8 +15762,19 @@
           ]
         }
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x8578",
+          "label": "u32 division ARM body; R0 remainder, R1 quotient",
+          "assurance": "static_instruction_trace_and_bounded_emulation",
+          "evidence": [
+            "audit/data/integer_runtime_emulation.json:entry.0x8578",
+            "audit/data/integer_runtime_binaryninja.json",
+            "docs/INTEGER_ARITHMETIC_REVIEW.md"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [],
         "incoming": []
@@ -15755,8 +15799,19 @@
           ]
         }
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x8584",
+          "label": "s32 division Thumb entry; R0 remainder, R1 quotient",
+          "assurance": "static_instruction_trace_and_bounded_emulation",
+          "evidence": [
+            "audit/data/integer_runtime_emulation.json:entry.0x8584",
+            "audit/data/integer_runtime_binaryninja.json",
+            "docs/INTEGER_ARITHMETIC_REVIEW.md"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [],
         "incoming": [
@@ -15790,8 +15845,19 @@
           ]
         }
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x8588",
+          "label": "s32 division ARM body; R0 remainder, R1 quotient",
+          "assurance": "static_instruction_trace_and_bounded_emulation",
+          "evidence": [
+            "audit/data/integer_runtime_emulation.json:entry.0x8588",
+            "audit/data/integer_runtime_binaryninja.json",
+            "docs/INTEGER_ARITHMETIC_REVIEW.md"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [],
         "incoming": []
@@ -16614,7 +16680,7 @@
     },
     "labels": {
       "path": "C:\\Users\\admin\\.codex\\worktrees\\verify-public-repo\\quadzilla_rev\\audit\\data\\semantic_labels.json",
-      "sha256": "c5288c4e7e72ac99047c377e7650af77e2ed2213d4b1737955d2195c1c4da35e"
+      "sha256": "28ec16752f4ed6cfb09e2d50534522926234d5234adb8010d23933adeb609cb6"
     }
   }
 }

@@ -1,0 +1,108 @@
+{
+  "format": "quadzilla-function-reviews-v1",
+  "raw_sha256": "1ae519ba6194e8f7bdaaa94333a83a9e6fda3b0563f87f7d48383b37288c1780",
+  "entries": [
+    {
+      "entry": "0x8564",
+      "role": "u8 division Thumb entry; R0 remainder, R1 quotient",
+      "inputs": "R0 numerator, R1 denominator; u8 entries mask both to 8 bits",
+      "outputs": "R0 remainder, R1 quotient; signed nonzero division truncates toward zero",
+      "side_effects": "Stack saves/restores R2/R3; R2..R11 and SP preserved in checked cases; R12/flags may change",
+      "evidence": [
+        "audit/data/integer_runtime_emulation.json:entry.0x8564",
+        "audit/data/integer_runtime_binaryninja.json",
+        "docs/INTEGER_ARITHMETIC_REVIEW.md"
+      ],
+      "limits": [
+        "ARM926 emulator surrogate, not ARM7TDMI hardware",
+        "Zero divisors use separately documented runtime policy",
+        "32-bit domains are sampled, not exhaustively proven"
+      ]
+    },
+    {
+      "entry": "0x8568",
+      "role": "u8 division ARM body; R0 remainder, R1 quotient",
+      "inputs": "R0 numerator, R1 denominator; u8 entries mask both to 8 bits",
+      "outputs": "R0 remainder, R1 quotient; signed nonzero division truncates toward zero",
+      "side_effects": "Stack saves/restores R2/R3; R2..R11 and SP preserved in checked cases; R12/flags may change",
+      "evidence": [
+        "audit/data/integer_runtime_emulation.json:entry.0x8568",
+        "audit/data/integer_runtime_binaryninja.json",
+        "docs/INTEGER_ARITHMETIC_REVIEW.md"
+      ],
+      "limits": [
+        "ARM926 emulator surrogate, not ARM7TDMI hardware",
+        "Zero divisors use separately documented runtime policy",
+        "32-bit domains are sampled, not exhaustively proven"
+      ]
+    },
+    {
+      "entry": "0x8574",
+      "role": "u32 division Thumb entry; R0 remainder, R1 quotient",
+      "inputs": "R0 numerator, R1 denominator; u8 entries mask both to 8 bits",
+      "outputs": "R0 remainder, R1 quotient; signed nonzero division truncates toward zero",
+      "side_effects": "Stack saves/restores R2/R3; R2..R11 and SP preserved in checked cases; R12/flags may change",
+      "evidence": [
+        "audit/data/integer_runtime_emulation.json:entry.0x8574",
+        "audit/data/integer_runtime_binaryninja.json",
+        "docs/INTEGER_ARITHMETIC_REVIEW.md"
+      ],
+      "limits": [
+        "ARM926 emulator surrogate, not ARM7TDMI hardware",
+        "Zero divisors use separately documented runtime policy",
+        "32-bit domains are sampled, not exhaustively proven"
+      ]
+    },
+    {
+      "entry": "0x8578",
+      "role": "u32 division ARM body; R0 remainder, R1 quotient",
+      "inputs": "R0 numerator, R1 denominator; u8 entries mask both to 8 bits",
+      "outputs": "R0 remainder, R1 quotient; signed nonzero division truncates toward zero",
+      "side_effects": "Stack saves/restores R2/R3; R2..R11 and SP preserved in checked cases; R12/flags may change",
+      "evidence": [
+        "audit/data/integer_runtime_emulation.json:entry.0x8578",
+        "audit/data/integer_runtime_binaryninja.json",
+        "docs/INTEGER_ARITHMETIC_REVIEW.md"
+      ],
+      "limits": [
+        "ARM926 emulator surrogate, not ARM7TDMI hardware",
+        "Zero divisors use separately documented runtime policy",
+        "32-bit domains are sampled, not exhaustively proven"
+      ]
+    },
+    {
+      "entry": "0x8584",
+      "role": "s32 division Thumb entry; R0 remainder, R1 quotient",
+      "inputs": "R0 numerator, R1 denominator; u8 entries mask both to 8 bits",
+      "outputs": "R0 remainder, R1 quotient; signed nonzero division truncates toward zero",
+      "side_effects": "Stack saves/restores R2/R3; R2..R11 and SP preserved in checked cases; R12/flags may change",
+      "evidence": [
+        "audit/data/integer_runtime_emulation.json:entry.0x8584",
+        "audit/data/integer_runtime_binaryninja.json",
+        "docs/INTEGER_ARITHMETIC_REVIEW.md"
+      ],
+      "limits": [
+        "ARM926 emulator surrogate, not ARM7TDMI hardware",
+        "Zero divisors use separately documented runtime policy",
+        "32-bit domains are sampled, not exhaustively proven"
+      ]
+    },
+    {
+      "entry": "0x8588",
+      "role": "s32 division ARM body; R0 remainder, R1 quotient",
+      "inputs": "R0 numerator, R1 denominator; u8 entries mask both to 8 bits",
+      "outputs": "R0 remainder, R1 quotient; signed nonzero division truncates toward zero",
+      "side_effects": "Stack saves/restores R2/R3; R2..R11 and SP preserved in checked cases; R12/flags may change",
+      "evidence": [
+        "audit/data/integer_runtime_emulation.json:entry.0x8588",
+        "audit/data/integer_runtime_binaryninja.json",
+        "docs/INTEGER_ARITHMETIC_REVIEW.md"
+      ],
+      "limits": [
+        "ARM926 emulator surrogate, not ARM7TDMI hardware",
+        "Zero divisors use separately documented runtime policy",
+        "32-bit domains are sampled, not exhaustively proven"
+      ]
+    }
+  ]
+}
