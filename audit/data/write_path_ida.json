@@ -1,0 +1,4551 @@
+{
+  "format": "quadzilla-ida-byte-verified-trace-v1",
+  "tool_version": "9.3",
+  "raw_sha256": "1ae519ba6194e8f7bdaaa94333a83a9e6fda3b0563f87f7d48383b37288c1780",
+  "database_bytes_match": true,
+  "literal_words": {
+    "0x67c0": 2201,
+    "0x67d8": 3701
+  },
+  "entries": [
+    {
+      "entry": "0x76cc",
+      "thumb": 1,
+      "instructions": [
+        {
+          "address": "0x76cc",
+          "text": "PUSH            {R4-R7,LR}",
+          "bytes": "f0b5"
+        },
+        {
+          "address": "0x76ce",
+          "text": "BL              sub_4214",
+          "bytes": "fcf7a1fd"
+        },
+        {
+          "address": "0x76d2",
+          "text": "LDR             R4, =0x200788",
+          "bytes": "354c"
+        },
+        {
+          "address": "0x76d4",
+          "text": "LDRB            R1, [R4,#7]",
+          "bytes": "e179"
+        },
+        {
+          "address": "0x76d6",
+          "text": "MOVS            R0, #0",
+          "bytes": "0020"
+        },
+        {
+          "address": "0x76d8",
+          "text": "BL              sub_59E8",
+          "bytes": "fef786f9"
+        },
+        {
+          "address": "0x76dc",
+          "text": "BL              sub_601C",
+          "bytes": "fef79efc"
+        },
+        {
+          "address": "0x76e0",
+          "text": "BL              sub_50F0",
+          "bytes": "fdf706fd"
+        },
+        {
+          "address": "0x76e4",
+          "text": "STRB            R0, [R4,#7]",
+          "bytes": "e071"
+        },
+        {
+          "address": "0x76e6",
+          "text": "MOVS            R1, R0",
+          "bytes": "0100"
+        },
+        {
+          "address": "0x76e8",
+          "text": "MOVS            R0, #0",
+          "bytes": "0020"
+        },
+        {
+          "address": "0x76ea",
+          "text": "BL              sub_5CF0",
+          "bytes": "fef701fb"
+        },
+        {
+          "address": "0x76ee",
+          "text": "LDR             R5, =0x200712",
+          "bytes": "2f4d"
+        },
+        {
+          "address": "0x76f0",
+          "text": "LDRB            R0, [R5]",
+          "bytes": "2878"
+        },
+        {
+          "address": "0x76f2",
+          "text": "CMP             R0, #0",
+          "bytes": "0028"
+        },
+        {
+          "address": "0x76f4",
+          "text": "BEQ             loc_7796",
+          "bytes": "4fd0"
+        },
+        {
+          "address": "0x76f6",
+          "text": "LDRB            R0, [R4,#0xB]",
+          "bytes": "e07a"
+        },
+        {
+          "address": "0x76f8",
+          "text": "LDR             R6, =0x200710",
+          "bytes": "2d4e"
+        },
+        {
+          "address": "0x76fa",
+          "text": "LDR             R7, =0x200711",
+          "bytes": "2e4f"
+        },
+        {
+          "address": "0x76fc",
+          "text": "CMP             R0, #0",
+          "bytes": "0028"
+        },
+        {
+          "address": "0x76fe",
+          "text": "BNE             loc_771A",
+          "bytes": "0cd1"
+        },
+        {
+          "address": "0x7700",
+          "text": "LDRB            R1, [R4,#2]",
+          "bytes": "a178"
+        },
+        {
+          "address": "0x7702",
+          "text": "MOVS            R0, R4",
+          "bytes": "2000"
+        },
+        {
+          "address": "0x7704",
+          "text": "ADDS            R0, #0x18",
+          "bytes": "1830"
+        },
+        {
+          "address": "0x7706",
+          "text": "BL              sub_7EFC",
+          "bytes": "00f0f9fb"
+        },
+        {
+          "address": "0x770a",
+          "text": "CMP             R0, #0",
+          "bytes": "0028"
+        },
+        {
+          "address": "0x770c",
+          "text": "BEQ             loc_7796",
+          "bytes": "43d0"
+        },
+        {
+          "address": "0x770e",
+          "text": "MOVS            R0, #0",
+          "bytes": "0020"
+        },
+        {
+          "address": "0x7710",
+          "text": "STRB            R0, [R5]",
+          "bytes": "2870"
+        },
+        {
+          "address": "0x7712",
+          "text": "MOVS            R0, #1",
+          "bytes": "0120"
+        },
+        {
+          "address": "0x7714",
+          "text": "STRB            R0, [R7]",
+          "bytes": "3870"
+        },
+        {
+          "address": "0x7716",
+          "text": "STRB            R0, [R6]",
+          "bytes": "3070"
+        },
+        {
+          "address": "0x7718",
+          "text": "B               loc_7794",
+          "bytes": "3ce0"
+        },
+        {
+          "address": "0x771a",
+          "text": "CMP             R0, #1",
+          "bytes": "0128"
+        },
+        {
+          "address": "0x771c",
+          "text": "BNE             loc_773A",
+          "bytes": "0dd1"
+        },
+        {
+          "address": "0x771e",
+          "text": "LDRB            R1, [R4,#3]",
+          "bytes": "e178"
+        },
+        {
+          "address": "0x7720",
+          "text": "MOVS            R0, R4",
+          "bytes": "2000"
+        },
+        {
+          "address": "0x7722",
+          "text": "ADDS            R0, #0x20 ; ' '",
+          "bytes": "2030"
+        },
+        {
+          "address": "0x7724",
+          "text": "BL              sub_7EFC",
+          "bytes": "00f0eafb"
+        },
+        {
+          "address": "0x7728",
+          "text": "CMP             R0, #0",
+          "bytes": "0028"
+        },
+        {
+          "address": "0x772a",
+          "text": "BEQ             loc_7796",
+          "bytes": "34d0"
+        },
+        {
+          "address": "0x772c",
+          "text": "MOVS            R0, #0",
+          "bytes": "0020"
+        },
+        {
+          "address": "0x772e",
+          "text": "STRB            R0, [R5]",
+          "bytes": "2870"
+        },
+        {
+          "address": "0x7730",
+          "text": "MOVS            R0, #1",
+          "bytes": "0120"
+        },
+        {
+          "address": "0x7732",
+          "text": "STRB            R0, [R7]",
+          "bytes": "3870"
+        },
+        {
+          "address": "0x7734",
+          "text": "STRB            R0, [R6]",
+          "bytes": "3070"
+        },
+        {
+          "address": "0x7736",
+          "text": "MOVS            R0, #2",
+          "bytes": "0220"
+        },
+        {
+          "address": "0x7738",
+          "text": "B               loc_7794",
+          "bytes": "2ce0"
+        },
+        {
+          "address": "0x773a",
+          "text": "CMP             R0, #2",
+          "bytes": "0228"
+        },
+        {
+          "address": "0x773c",
+          "text": "BNE             loc_775A",
+          "bytes": "0dd1"
+        },
+        {
+          "address": "0x773e",
+          "text": "LDRB            R1, [R4,#4]",
+          "bytes": "2179"
+        },
+        {
+          "address": "0x7740",
+          "text": "MOVS            R0, R4",
+          "bytes": "2000"
+        },
+        {
+          "address": "0x7742",
+          "text": "ADDS            R0, #0x28 ; '('",
+          "bytes": "2830"
+        },
+        {
+          "address": "0x7744",
+          "text": "BL              sub_7EFC",
+          "bytes": "00f0dafb"
+        },
+        {
+          "address": "0x7748",
+          "text": "CMP             R0, #0",
+          "bytes": "0028"
+        },
+        {
+          "address": "0x774a",
+          "text": "BEQ             loc_7796",
+          "bytes": "24d0"
+        },
+        {
+          "address": "0x774c",
+          "text": "MOVS            R0, #0",
+          "bytes": "0020"
+        },
+        {
+          "address": "0x774e",
+          "text": "STRB            R0, [R5]",
+          "bytes": "2870"
+        },
+        {
+          "address": "0x7750",
+          "text": "MOVS            R0, #1",
+          "bytes": "0120"
+        },
+        {
+          "address": "0x7752",
+          "text": "STRB            R0, [R7]",
+          "bytes": "3870"
+        },
+        {
+          "address": "0x7754",
+          "text": "STRB            R0, [R6]",
+          "bytes": "3070"
+        },
+        {
+          "address": "0x7756",
+          "text": "MOVS            R0, #3",
+          "bytes": "0320"
+        },
+        {
+          "address": "0x7758",
+          "text": "B               loc_7794",
+          "bytes": "1ce0"
+        },
+        {
+          "address": "0x775a",
+          "text": "CMP             R0, #3",
+          "bytes": "0328"
+        },
+        {
+          "address": "0x775c",
+          "text": "BNE             loc_777A",
+          "bytes": "0dd1"
+        },
+        {
+          "address": "0x775e",
+          "text": "LDRB            R1, [R4,#5]",
+          "bytes": "6179"
+        },
+        {
+          "address": "0x7760",
+          "text": "MOVS            R0, R4",
+          "bytes": "2000"
+        },
+        {
+          "address": "0x7762",
+          "text": "ADDS            R0, #0x30 ; '0'",
+          "bytes": "3030"
+        },
+        {
+          "address": "0x7764",
+          "text": "BL              sub_7EFC",
+          "bytes": "00f0cafb"
+        },
+        {
+          "address": "0x7768",
+          "text": "CMP             R0, #0",
+          "bytes": "0028"
+        },
+        {
+          "address": "0x776a",
+          "text": "BEQ             loc_7796",
+          "bytes": "14d0"
+        },
+        {
+          "address": "0x776c",
+          "text": "MOVS            R0, #0",
+          "bytes": "0020"
+        },
+        {
+          "address": "0x776e",
+          "text": "STRB            R0, [R5]",
+          "bytes": "2870"
+        },
+        {
+          "address": "0x7770",
+          "text": "MOVS            R0, #1",
+          "bytes": "0120"
+        },
+        {
+          "address": "0x7772",
+          "text": "STRB            R0, [R7]",
+          "bytes": "3870"
+        },
+        {
+          "address": "0x7774",
+          "text": "STRB            R0, [R6]",
+          "bytes": "3070"
+        },
+        {
+          "address": "0x7776",
+          "text": "MOVS            R0, #4",
+          "bytes": "0420"
+        },
+        {
+          "address": "0x7778",
+          "text": "B               loc_7794",
+          "bytes": "0ce0"
+        },
+        {
+          "address": "0x777a",
+          "text": "LDRB            R1, [R4,#6]",
+          "bytes": "a179"
+        },
+        {
+          "address": "0x777c",
+          "text": "MOVS            R0, R4",
+          "bytes": "2000"
+        },
+        {
+          "address": "0x777e",
+          "text": "ADDS            R0, #0x38 ; '8'",
+          "bytes": "3830"
+        },
+        {
+          "address": "0x7780",
+          "text": "BL              sub_7EFC",
+          "bytes": "00f0bcfb"
+        },
+        {
+          "address": "0x7784",
+          "text": "CMP             R0, #0",
+          "bytes": "0028"
+        },
+        {
+          "address": "0x7786",
+          "text": "BEQ             loc_7796",
+          "bytes": "06d0"
+        },
+        {
+          "address": "0x7788",
+          "text": "MOVS            R0, #0",
+          "bytes": "0020"
+        },
+        {
+          "address": "0x778a",
+          "text": "STRB            R0, [R5]",
+          "bytes": "2870"
+        },
+        {
+          "address": "0x778c",
+          "text": "MOVS            R0, #1",
+          "bytes": "0120"
+        },
+        {
+          "address": "0x778e",
+          "text": "STRB            R0, [R7]",
+          "bytes": "3870"
+        },
+        {
+          "address": "0x7790",
+          "text": "STRB            R0, [R6]",
+          "bytes": "3070"
+        },
+        {
+          "address": "0x7792",
+          "text": "MOVS            R0, #0",
+          "bytes": "0020"
+        },
+        {
+          "address": "0x7794",
+          "text": "STRB            R0, [R4,#0xB]",
+          "bytes": "e072"
+        },
+        {
+          "address": "0x7796",
+          "text": "LDRB            R0, [R4,#0xA]",
+          "bytes": "a07a"
+        },
+        {
+          "address": "0x7798",
+          "text": "CMP             R0, #0",
+          "bytes": "0028"
+        },
+        {
+          "address": "0x779a",
+          "text": "BEQ             loc_77A0",
+          "bytes": "01d0"
+        },
+        {
+          "address": "0x779c",
+          "text": "BL              sub_81A8",
+          "bytes": "00f004fd"
+        },
+        {
+          "address": "0x77a0",
+          "text": "POP             {R4-R7}",
+          "bytes": "f0bc"
+        },
+        {
+          "address": "0x77a2",
+          "text": "POP             {R0}",
+          "bytes": "01bc"
+        },
+        {
+          "address": "0x77a4",
+          "text": "BX              R0",
+          "bytes": "0047"
+        }
+      ]
+    },
+    {
+      "entry": "0x7b60",
+      "thumb": 1,
+      "instructions": [
+        {
+          "address": "0x7b60",
+          "text": "PUSH            {R1,R4-R7}",
+          "bytes": "f2b4"
+        },
+        {
+          "address": "0x7b62",
+          "text": "MOVS            R1, #0xFF",
+          "bytes": "ff21"
+        },
+        {
+          "address": "0x7b64",
+          "text": "MOVS            R2, #0",
+          "bytes": "0022"
+        },
+        {
+          "address": "0x7b66",
+          "text": "MOV             R3, SP",
+          "bytes": "6b46"
+        },
+        {
+          "address": "0x7b68",
+          "text": "LDRB            R3, [R3,#4+var_4]",
+          "bytes": "1b78"
+        },
+        {
+          "address": "0x7b6a",
+          "text": "CMP             R3, #0",
+          "bytes": "002b"
+        },
+        {
+          "address": "0x7b6c",
+          "text": "BNE             loc_7BA0",
+          "bytes": "18d1"
+        },
+        {
+          "address": "0x7b6e",
+          "text": "MVNS            R0, R1",
+          "bytes": "c843"
+        },
+        {
+          "address": "0x7b70",
+          "text": "LSLS            R0, R0, #0x18",
+          "bytes": "0006"
+        },
+        {
+          "address": "0x7b72",
+          "text": "LSRS            R0, R0, #0x18",
+          "bytes": "000e"
+        },
+        {
+          "address": "0x7b74",
+          "text": "ADD             SP, SP, #4",
+          "bytes": "01b0"
+        },
+        {
+          "address": "0x7b76",
+          "text": "POP             {R4-R7}",
+          "bytes": "f0bc"
+        },
+        {
+          "address": "0x7b78",
+          "text": "ADD             SP, SP, #0",
+          "bytes": "00b0"
+        },
+        {
+          "address": "0x7b7a",
+          "text": "BX              LR",
+          "bytes": "7047"
+        },
+        {
+          "address": "0x7b7c",
+          "text": "MOVS            R1, #0",
+          "bytes": "0021"
+        },
+        {
+          "address": "0x7b7e",
+          "text": "CMP             R6, #0",
+          "bytes": "002e"
+        },
+        {
+          "address": "0x7b80",
+          "text": "BEQ             loc_7B84",
+          "bytes": "00d0"
+        },
+        {
+          "address": "0x7b82",
+          "text": "MOVS            R1, #0x1D",
+          "bytes": "1d21"
+        },
+        {
+          "address": "0x7b84",
+          "text": "EORS            R1, R5",
+          "bytes": "6940"
+        },
+        {
+          "address": "0x7b86",
+          "text": "LSLS            R1, R1, #0x18",
+          "bytes": "0906"
+        },
+        {
+          "address": "0x7b88",
+          "text": "LSRS            R1, R1, #0x18",
+          "bytes": "090e"
+        },
+        {
+          "address": "0x7b8a",
+          "text": "ADDS            R4, R4, #1",
+          "bytes": "641c"
+        },
+        {
+          "address": "0x7b8c",
+          "text": "LSLS            R4, R4, #0x18",
+          "bytes": "2406"
+        },
+        {
+          "address": "0x7b8e",
+          "text": "LSRS            R4, R4, #0x18",
+          "bytes": "240e"
+        },
+        {
+          "address": "0x7b90",
+          "text": "LSLS            R3, R3, #0x17",
+          "bytes": "db05"
+        },
+        {
+          "address": "0x7b92",
+          "text": "LSRS            R3, R3, #0x18",
+          "bytes": "1b0e"
+        },
+        {
+          "address": "0x7b94",
+          "text": "CMP             R4, #8",
+          "bytes": "082c"
+        },
+        {
+          "address": "0x7b96",
+          "text": "BCC             loc_7BAC",
+          "bytes": "09d3"
+        },
+        {
+          "address": "0x7b98",
+          "text": "ADDS            R2, R2, #1",
+          "bytes": "521c"
+        },
+        {
+          "address": "0x7b9a",
+          "text": "LSLS            R2, R2, #0x18",
+          "bytes": "1206"
+        },
+        {
+          "address": "0x7b9c",
+          "text": "LSRS            R2, R2, #0x18",
+          "bytes": "120e"
+        },
+        {
+          "address": "0x7b9e",
+          "text": "ADDS            R0, R0, #1",
+          "bytes": "401c"
+        },
+        {
+          "address": "0x7ba0",
+          "text": "MOV             R4, SP",
+          "bytes": "6c46"
+        },
+        {
+          "address": "0x7ba2",
+          "text": "LDRB            R4, [R4,#4+var_4]",
+          "bytes": "2478"
+        },
+        {
+          "address": "0x7ba4",
+          "text": "CMP             R2, R4",
+          "bytes": "a242"
+        },
+        {
+          "address": "0x7ba6",
+          "text": "BCS             loc_7B6E",
+          "bytes": "e2d2"
+        },
+        {
+          "address": "0x7ba8",
+          "text": "MOVS            R4, #0",
+          "bytes": "0024"
+        },
+        {
+          "address": "0x7baa",
+          "text": "MOVS            R3, #0x80",
+          "bytes": "8023"
+        },
+        {
+          "address": "0x7bac",
+          "text": "LSLS            R5, R1, #1",
+          "bytes": "4d00"
+        },
+        {
+          "address": "0x7bae",
+          "text": "MOVS            R6, #0x80",
+          "bytes": "8026"
+        },
+        {
+          "address": "0x7bb0",
+          "text": "ANDS            R6, R1",
+          "bytes": "0e40"
+        },
+        {
+          "address": "0x7bb2",
+          "text": "LDRB            R7, [R0]",
+          "bytes": "0778"
+        },
+        {
+          "address": "0x7bb4",
+          "text": "TST             R3, R7",
+          "bytes": "3b42"
+        },
+        {
+          "address": "0x7bb6",
+          "text": "BEQ             loc_7B7C",
+          "bytes": "e1d0"
+        },
+        {
+          "address": "0x7bb8",
+          "text": "MOVS            R7, #1",
+          "bytes": "0127"
+        },
+        {
+          "address": "0x7bba",
+          "text": "CMP             R6, #0",
+          "bytes": "002e"
+        },
+        {
+          "address": "0x7bbc",
+          "text": "BEQ             loc_7BC2",
+          "bytes": "01d0"
+        },
+        {
+          "address": "0x7bbe",
+          "text": "MOVS            R1, #1",
+          "bytes": "0121"
+        },
+        {
+          "address": "0x7bc0",
+          "text": "B               loc_7BC4",
+          "bytes": "00e0"
+        },
+        {
+          "address": "0x7bc2",
+          "text": "MOVS            R1, #0x1C",
+          "bytes": "1c21"
+        },
+        {
+          "address": "0x7bc4",
+          "text": "ORRS            R7, R5",
+          "bytes": "2f43"
+        },
+        {
+          "address": "0x7bc6",
+          "text": "EORS            R1, R7",
+          "bytes": "7940"
+        },
+        {
+          "address": "0x7bc8",
+          "text": "B               loc_7B86",
+          "bytes": "dde7"
+        }
+      ]
+    },
+    {
+      "entry": "0x7bf8",
+      "thumb": 1,
+      "instructions": [
+        {
+          "address": "0x7bf8",
+          "text": "CMP             R1, #0x4B ; 'K'",
+          "bytes": "4b29"
+        },
+        {
+          "address": "0x7bfa",
+          "text": "BCS             loc_7C00",
+          "bytes": "01d2"
+        },
+        {
+          "address": "0x7bfc",
+          "text": "MOVS            R0, #1",
+          "bytes": "0120"
+        },
+        {
+          "address": "0x7bfe",
+          "text": "B               loc_7C16",
+          "bytes": "0ae0"
+        },
+        {
+          "address": "0x7c00",
+          "text": "CMP             R1, #0x96",
+          "bytes": "9629"
+        },
+        {
+          "address": "0x7c02",
+          "text": "BCS             loc_7C08",
+          "bytes": "01d2"
+        },
+        {
+          "address": "0x7c04",
+          "text": "MOVS            R0, #2",
+          "bytes": "0220"
+        },
+        {
+          "address": "0x7c06",
+          "text": "B               loc_7C16",
+          "bytes": "06e0"
+        },
+        {
+          "address": "0x7c08",
+          "text": "CMP             R1, #0xB9",
+          "bytes": "b929"
+        },
+        {
+          "address": "0x7c0a",
+          "text": "BCS             loc_7C10",
+          "bytes": "01d2"
+        },
+        {
+          "address": "0x7c0c",
+          "text": "MOVS            R0, #3",
+          "bytes": "0320"
+        },
+        {
+          "address": "0x7c0e",
+          "text": "B               loc_7C16",
+          "bytes": "02e0"
+        },
+        {
+          "address": "0x7c10",
+          "text": "CMP             R1, #0xDC",
+          "bytes": "dc29"
+        },
+        {
+          "address": "0x7c12",
+          "text": "BCS             loc_7C16",
+          "bytes": "00d2"
+        },
+        {
+          "address": "0x7c14",
+          "text": "MOVS            R0, #4",
+          "bytes": "0420"
+        },
+        {
+          "address": "0x7c16",
+          "text": "ADD             SP, SP, #0",
+          "bytes": "00b0"
+        },
+        {
+          "address": "0x7c18",
+          "text": "BX              LR",
+          "bytes": "7047"
+        }
+      ]
+    },
+    {
+      "entry": "0x7cc4",
+      "thumb": 1,
+      "instructions": [
+        {
+          "address": "0x7cc4",
+          "text": "PUSH            {R1,R2,R4-R7,LR}",
+          "bytes": "f6b5"
+        },
+        {
+          "address": "0x7cc6",
+          "text": "SUB             SP, SP, #0xC",
+          "bytes": "83b0"
+        },
+        {
+          "address": "0x7cc8",
+          "text": "MOVS            R5, R0",
+          "bytes": "0500"
+        },
+        {
+          "address": "0x7cca",
+          "text": "MOVS            R4, R3",
+          "bytes": "1c00"
+        },
+        {
+          "address": "0x7ccc",
+          "text": "MOVS            R1, #0",
+          "bytes": "0021"
+        },
+        {
+          "address": "0x7cce",
+          "text": "STR             R1, [SP,#0x14+var_14]",
+          "bytes": "0091"
+        },
+        {
+          "address": "0x7cd0",
+          "text": "MOVS            R1, #1",
+          "bytes": "0121"
+        },
+        {
+          "address": "0x7cd2",
+          "text": "MOV             R2, SP",
+          "bytes": "6a46"
+        },
+        {
+          "address": "0x7cd4",
+          "text": "LDRB            R2, [R2,#0x14+var_8]",
+          "bytes": "127b"
+        },
+        {
+          "address": "0x7cd6",
+          "text": "CMP             R2, #0xF",
+          "bytes": "0f2a"
+        },
+        {
+          "address": "0x7cd8",
+          "text": "BCC             loc_7CE0",
+          "bytes": "02d3"
+        },
+        {
+          "address": "0x7cda",
+          "text": "MOV             R2, SP",
+          "bytes": "6a46"
+        },
+        {
+          "address": "0x7cdc",
+          "text": "MOVS            R3, #0xE",
+          "bytes": "0e23"
+        },
+        {
+          "address": "0x7cde",
+          "text": "STRB            R3, [R2,#0x14+var_8]",
+          "bytes": "1373"
+        },
+        {
+          "address": "0x7ce0",
+          "text": "MOVS            R6, #0",
+          "bytes": "0026"
+        },
+        {
+          "address": "0x7ce2",
+          "text": "MOV             R2, SP",
+          "bytes": "6a46"
+        },
+        {
+          "address": "0x7ce4",
+          "text": "LDRB            R2, [R2,#0x14+var_8]",
+          "bytes": "127b"
+        },
+        {
+          "address": "0x7ce6",
+          "text": "CMP             R2, #0",
+          "bytes": "002a"
+        },
+        {
+          "address": "0x7ce8",
+          "text": "BNE             loc_7D06",
+          "bytes": "0dd1"
+        },
+        {
+          "address": "0x7cea",
+          "text": "LDR             R0, [SP,#0x14+arg_0]",
+          "bytes": "0a98"
+        },
+        {
+          "address": "0x7cec",
+          "text": "LDR             R1, [SP,#0x14+var_14]",
+          "bytes": "0099"
+        },
+        {
+          "address": "0x7cee",
+          "text": "STRB            R1, [R0]",
+          "bytes": "0170"
+        },
+        {
+          "address": "0x7cf0",
+          "text": "LSLS            R7, R7, #0x18",
+          "bytes": "3f06"
+        },
+        {
+          "address": "0x7cf2",
+          "text": "BEQ             loc_7D74",
+          "bytes": "3fd0"
+        },
+        {
+          "address": "0x7cf4",
+          "text": "MOVS            R0, #2",
+          "bytes": "0220"
+        },
+        {
+          "address": "0x7cf6",
+          "text": "B               loc_7D76",
+          "bytes": "3ee0"
+        },
+        {
+          "address": "0x7cf8",
+          "text": "ADDS            R5, R5, #1",
+          "bytes": "6d1c"
+        },
+        {
+          "address": "0x7cfa",
+          "text": "MOVS            R2, R7",
+          "bytes": "3a00"
+        },
+        {
+          "address": "0x7cfc",
+          "text": "BNE             loc_7D00",
+          "bytes": "00d1"
+        },
+        {
+          "address": "0x7cfe",
+          "text": "MOVS            R1, #1",
+          "bytes": "0121"
+        },
+        {
+          "address": "0x7d00",
+          "text": "ADDS            R6, R6, #1",
+          "bytes": "761c"
+        },
+        {
+          "address": "0x7d02",
+          "text": "LSLS            R6, R6, #0x18",
+          "bytes": "3606"
+        },
+        {
+          "address": "0x7d04",
+          "text": "LSRS            R6, R6, #0x18",
+          "bytes": "360e"
+        },
+        {
+          "address": "0x7d06",
+          "text": "MOV             R3, SP",
+          "bytes": "6b46"
+        },
+        {
+          "address": "0x7d08",
+          "text": "LDRB            R3, [R3,#0x14+var_8]",
+          "bytes": "1b7b"
+        },
+        {
+          "address": "0x7d0a",
+          "text": "CMP             R6, R3",
+          "bytes": "9e42"
+        },
+        {
+          "address": "0x7d0c",
+          "text": "BCS             loc_7CEA",
+          "bytes": "edd2"
+        },
+        {
+          "address": "0x7d0e",
+          "text": "LDR             R2, [SP,#0x14+var_14]",
+          "bytes": "009a"
+        },
+        {
+          "address": "0x7d10",
+          "text": "ADDS            R2, R2, #1",
+          "bytes": "521c"
+        },
+        {
+          "address": "0x7d12",
+          "text": "LSLS            R2, R2, #0x18",
+          "bytes": "1206"
+        },
+        {
+          "address": "0x7d14",
+          "text": "LSRS            R2, R2, #0x18",
+          "bytes": "120e"
+        },
+        {
+          "address": "0x7d16",
+          "text": "STR             R2, [SP,#0x14+var_C]",
+          "bytes": "0292"
+        },
+        {
+          "address": "0x7d18",
+          "text": "LDRB            R2, [R5]",
+          "bytes": "2a78"
+        },
+        {
+          "address": "0x7d1a",
+          "text": "MOV             R3, SP",
+          "bytes": "6b46"
+        },
+        {
+          "address": "0x7d1c",
+          "text": "LDRB            R3, [R3,#0x14+var_4]",
+          "bytes": "1b7c"
+        },
+        {
+          "address": "0x7d1e",
+          "text": "CMP             R3, #4",
+          "bytes": "042b"
+        },
+        {
+          "address": "0x7d20",
+          "text": "BEQ             loc_7D2A",
+          "bytes": "03d0"
+        },
+        {
+          "address": "0x7d22",
+          "text": "MOV             R3, SP",
+          "bytes": "6b46"
+        },
+        {
+          "address": "0x7d24",
+          "text": "LDRB            R3, [R3,#0x14+var_4]",
+          "bytes": "1b7c"
+        },
+        {
+          "address": "0x7d26",
+          "text": "CMP             R3, #2",
+          "bytes": "022b"
+        },
+        {
+          "address": "0x7d28",
+          "text": "BNE             loc_7D36",
+          "bytes": "05d1"
+        },
+        {
+          "address": "0x7d2a",
+          "text": "STRB            R2, [R4]",
+          "bytes": "2270"
+        },
+        {
+          "address": "0x7d2c",
+          "text": "ADDS            R5, R5, #1",
+          "bytes": "6d1c"
+        },
+        {
+          "address": "0x7d2e",
+          "text": "ADDS            R4, R4, #1",
+          "bytes": "641c"
+        },
+        {
+          "address": "0x7d30",
+          "text": "LDR             R2, [SP,#0x14+var_C]",
+          "bytes": "029a"
+        },
+        {
+          "address": "0x7d32",
+          "text": "STR             R2, [SP,#0x14+var_14]",
+          "bytes": "0092"
+        },
+        {
+          "address": "0x7d34",
+          "text": "B               loc_7D00",
+          "bytes": "e4e7"
+        },
+        {
+          "address": "0x7d36",
+          "text": "CMP             R1, #1",
+          "bytes": "0129"
+        },
+        {
+          "address": "0x7d38",
+          "text": "BNE             loc_7D62",
+          "bytes": "13d1"
+        },
+        {
+          "address": "0x7d3a",
+          "text": "STR             R2, [SP,#0x14+var_10]",
+          "bytes": "0192"
+        },
+        {
+          "address": "0x7d3c",
+          "text": "ADDS            R5, R5, #1",
+          "bytes": "6d1c"
+        },
+        {
+          "address": "0x7d3e",
+          "text": "MOVS            R1, R2",
+          "bytes": "1100"
+        },
+        {
+          "address": "0x7d40",
+          "text": "LDRB            R0, [R5]",
+          "bytes": "2878"
+        },
+        {
+          "address": "0x7d42",
+          "text": "BL              sub_7BF8",
+          "bytes": "fff759ff"
+        },
+        {
+          "address": "0x7d46",
+          "text": "MOVS            R7, R0",
+          "bytes": "0700"
+        },
+        {
+          "address": "0x7d48",
+          "text": "LDR             R0, [SP,#0x14+var_10]",
+          "bytes": "0198"
+        },
+        {
+          "address": "0x7d4a",
+          "text": "LSLS            R0, R0, #0x18",
+          "bytes": "0006"
+        },
+        {
+          "address": "0x7d4c",
+          "text": "LSRS            R0, R0, #0x18",
+          "bytes": "000e"
+        },
+        {
+          "address": "0x7d4e",
+          "text": "BL              sub_7C1C",
+          "bytes": "fff765ff"
+        },
+        {
+          "address": "0x7d52",
+          "text": "CMP             R0, #0",
+          "bytes": "0028"
+        },
+        {
+          "address": "0x7d54",
+          "text": "BEQ             loc_7D5E",
+          "bytes": "03d0"
+        },
+        {
+          "address": "0x7d56",
+          "text": "MOVS            R1, #2",
+          "bytes": "0221"
+        },
+        {
+          "address": "0x7d58",
+          "text": "LDR             R2, [SP,#0x14+var_10]",
+          "bytes": "019a"
+        },
+        {
+          "address": "0x7d5a",
+          "text": "STRB            R2, [R4]",
+          "bytes": "2270"
+        },
+        {
+          "address": "0x7d5c",
+          "text": "B               loc_7D2E",
+          "bytes": "e7e7"
+        },
+        {
+          "address": "0x7d5e",
+          "text": "MOVS            R1, #0",
+          "bytes": "0021"
+        },
+        {
+          "address": "0x7d60",
+          "text": "B               loc_7D00",
+          "bytes": "cee7"
+        },
+        {
+          "address": "0x7d62",
+          "text": "SUBS            R7, R7, #1",
+          "bytes": "7f1e"
+        },
+        {
+          "address": "0x7d64",
+          "text": "LSLS            R7, R7, #0x18",
+          "bytes": "3f06"
+        },
+        {
+          "address": "0x7d66",
+          "text": "LSRS            R7, R7, #0x18",
+          "bytes": "3f0e"
+        },
+        {
+          "address": "0x7d68",
+          "text": "CMP             R1, #2",
+          "bytes": "0229"
+        },
+        {
+          "address": "0x7d6a",
+          "text": "BNE             loc_7CF8",
+          "bytes": "c5d1"
+        },
+        {
+          "address": "0x7d6c",
+          "text": "STRB            R2, [R0]",
+          "bytes": "0270"
+        },
+        {
+          "address": "0x7d6e",
+          "text": "ADDS            R5, R5, #1",
+          "bytes": "6d1c"
+        },
+        {
+          "address": "0x7d70",
+          "text": "ADDS            R0, R0, #1",
+          "bytes": "401c"
+        },
+        {
+          "address": "0x7d72",
+          "text": "B               loc_7CFA",
+          "bytes": "c2e7"
+        },
+        {
+          "address": "0x7d74",
+          "text": "MOVS            R0, #1",
+          "bytes": "0120"
+        },
+        {
+          "address": "0x7d76",
+          "text": "ADD             SP, SP, #0x14",
+          "bytes": "05b0"
+        },
+        {
+          "address": "0x7d78",
+          "text": "POP             {R4-R7}",
+          "bytes": "f0bc"
+        },
+        {
+          "address": "0x7d7a",
+          "text": "POP             {R1}",
+          "bytes": "02bc"
+        },
+        {
+          "address": "0x7d7c",
+          "text": "BX              R1",
+          "bytes": "0847"
+        }
+      ]
+    },
+    {
+      "entry": "0x7e64",
+      "thumb": 1,
+      "instructions": [
+        {
+          "address": "0x7e64",
+          "text": "PUSH            {R2-R7,LR}",
+          "bytes": "fcb5"
+        },
+        {
+          "address": "0x7e66",
+          "text": "MOVS            R4, R0",
+          "bytes": "0400"
+        },
+        {
+          "address": "0x7e68",
+          "text": "MOVS            R5, R1",
+          "bytes": "0d00"
+        },
+        {
+          "address": "0x7e6a",
+          "text": "MOVS            R0, #6",
+          "bytes": "0620"
+        },
+        {
+          "address": "0x7e6c",
+          "text": "STRB            R0, [R5]",
+          "bytes": "2870"
+        },
+        {
+          "address": "0x7e6e",
+          "text": "LDR             R0, [SP,#8+var_4]",
+          "bytes": "0198"
+        },
+        {
+          "address": "0x7e70",
+          "text": "MOVS            R1, #0",
+          "bytes": "0021"
+        },
+        {
+          "address": "0x7e72",
+          "text": "STRB            R1, [R0]",
+          "bytes": "0170"
+        },
+        {
+          "address": "0x7e74",
+          "text": "LDRB            R6, [R4]",
+          "bytes": "2678"
+        },
+        {
+          "address": "0x7e76",
+          "text": "LSLS            R7, R6, #0x1C",
+          "bytes": "3707"
+        },
+        {
+          "address": "0x7e78",
+          "text": "LSRS            R7, R7, #0x1C",
+          "bytes": "3f0f"
+        },
+        {
+          "address": "0x7e7a",
+          "text": "BEQ             loc_7EAA",
+          "bytes": "16d0"
+        },
+        {
+          "address": "0x7e7c",
+          "text": "ADDS            R1, R7, #1",
+          "bytes": "791c"
+        },
+        {
+          "address": "0x7e7e",
+          "text": "LSLS            R1, R1, #0x18",
+          "bytes": "0906"
+        },
+        {
+          "address": "0x7e80",
+          "text": "LSRS            R1, R1, #0x18",
+          "bytes": "090e"
+        },
+        {
+          "address": "0x7e82",
+          "text": "MOVS            R0, R4",
+          "bytes": "2000"
+        },
+        {
+          "address": "0x7e84",
+          "text": "BL              sub_7B60",
+          "bytes": "fff76cfe"
+        },
+        {
+          "address": "0x7e88",
+          "text": "CMP             R0, #0x3B ; ';'",
+          "bytes": "3b28"
+        },
+        {
+          "address": "0x7e8a",
+          "text": "BEQ             loc_7E90",
+          "bytes": "01d0"
+        },
+        {
+          "address": "0x7e8c",
+          "text": "MOVS            R0, #4",
+          "bytes": "0420"
+        },
+        {
+          "address": "0x7e8e",
+          "text": "B               loc_7EAC",
+          "bytes": "0de0"
+        },
+        {
+          "address": "0x7e90",
+          "text": "LSRS            R2, R6, #4",
+          "bytes": "3209"
+        },
+        {
+          "address": "0x7e92",
+          "text": "STRB            R2, [R5]",
+          "bytes": "2a70"
+        },
+        {
+          "address": "0x7e94",
+          "text": "LDR             R0, [SP,#8+var_4]",
+          "bytes": "0198"
+        },
+        {
+          "address": "0x7e96",
+          "text": "PUSH            {R0}",
+          "bytes": "01b4"
+        },
+        {
+          "address": "0x7e98",
+          "text": "LDR             R3, [SP,#0xC+var_8]",
+          "bytes": "019b"
+        },
+        {
+          "address": "0x7e9a",
+          "text": "SUBS            R7, R7, #1",
+          "bytes": "7f1e"
+        },
+        {
+          "address": "0x7e9c",
+          "text": "LSLS            R1, R7, #0x18",
+          "bytes": "3906"
+        },
+        {
+          "address": "0x7e9e",
+          "text": "LSRS            R1, R1, #0x18",
+          "bytes": "090e"
+        },
+        {
+          "address": "0x7ea0",
+          "text": "ADDS            R0, R4, #1",
+          "bytes": "601c"
+        },
+        {
+          "address": "0x7ea2",
+          "text": "BL              sub_7CC4",
+          "bytes": "fff70fff"
+        },
+        {
+          "address": "0x7ea6",
+          "text": "ADD             SP, SP, #4",
+          "bytes": "01b0"
+        },
+        {
+          "address": "0x7ea8",
+          "text": "B               loc_7EAC",
+          "bytes": "00e0"
+        },
+        {
+          "address": "0x7eaa",
+          "text": "MOVS            R0, #5",
+          "bytes": "0520"
+        },
+        {
+          "address": "0x7eac",
+          "text": "ADD             SP, SP, #8",
+          "bytes": "02b0"
+        },
+        {
+          "address": "0x7eae",
+          "text": "POP             {R4-R7}",
+          "bytes": "f0bc"
+        },
+        {
+          "address": "0x7eb0",
+          "text": "POP             {R1}",
+          "bytes": "02bc"
+        },
+        {
+          "address": "0x7eb2",
+          "text": "BX              R1",
+          "bytes": "0847"
+        }
+      ]
+    },
+    {
+      "entry": "0x7eb4",
+      "thumb": 1,
+      "instructions": [
+        {
+          "address": "0x7eb4",
+          "text": "PUSH            {R4-R7,LR}",
+          "bytes": "f0b5"
+        },
+        {
+          "address": "0x7eb6",
+          "text": "MOVS            R4, R0",
+          "bytes": "0400"
+        },
+        {
+          "address": "0x7eb8",
+          "text": "MOVS            R5, R3",
+          "bytes": "1d00"
+        },
+        {
+          "address": "0x7eba",
+          "text": "MOVS            R6, #0xF",
+          "bytes": "0f26"
+        },
+        {
+          "address": "0x7ebc",
+          "text": "LDRB            R0, [R4]",
+          "bytes": "2078"
+        },
+        {
+          "address": "0x7ebe",
+          "text": "ANDS            R0, R6",
+          "bytes": "3040"
+        },
+        {
+          "address": "0x7ec0",
+          "text": "LSLS            R3, R1, #4",
+          "bytes": "0b01"
+        },
+        {
+          "address": "0x7ec2",
+          "text": "ORRS            R3, R0",
+          "bytes": "0343"
+        },
+        {
+          "address": "0x7ec4",
+          "text": "STRB            R3, [R4]",
+          "bytes": "2370"
+        },
+        {
+          "address": "0x7ec6",
+          "text": "MOVS            R3, R5",
+          "bytes": "2b00"
+        },
+        {
+          "address": "0x7ec8",
+          "text": "ADDS            R0, R4, #1",
+          "bytes": "601c"
+        },
+        {
+          "address": "0x7eca",
+          "text": "BL              sub_7D80",
+          "bytes": "fff759ff"
+        },
+        {
+          "address": "0x7ece",
+          "text": "ADDS            R7, R0, #1",
+          "bytes": "471c"
+        },
+        {
+          "address": "0x7ed0",
+          "text": "LSLS            R7, R7, #0x18",
+          "bytes": "3f06"
+        },
+        {
+          "address": "0x7ed2",
+          "text": "LSRS            R7, R7, #0x18",
+          "bytes": "3f0e"
+        },
+        {
+          "address": "0x7ed4",
+          "text": "LDRB            R0, [R4]",
+          "bytes": "2078"
+        },
+        {
+          "address": "0x7ed6",
+          "text": "MOVS            R1, #0xF0",
+          "bytes": "f021"
+        },
+        {
+          "address": "0x7ed8",
+          "text": "ANDS            R1, R0",
+          "bytes": "0140"
+        },
+        {
+          "address": "0x7eda",
+          "text": "ANDS            R6, R7",
+          "bytes": "3e40"
+        },
+        {
+          "address": "0x7edc",
+          "text": "ORRS            R6, R1",
+          "bytes": "0e43"
+        },
+        {
+          "address": "0x7ede",
+          "text": "STRB            R6, [R4]",
+          "bytes": "2670"
+        },
+        {
+          "address": "0x7ee0",
+          "text": "MOVS            R1, R7",
+          "bytes": "3900"
+        },
+        {
+          "address": "0x7ee2",
+          "text": "MOVS            R0, R4",
+          "bytes": "2000"
+        },
+        {
+          "address": "0x7ee4",
+          "text": "BL              sub_7B60",
+          "bytes": "fff73cfe"
+        },
+        {
+          "address": "0x7ee8",
+          "text": "STRB            R0, [R4,R7]",
+          "bytes": "e055"
+        },
+        {
+          "address": "0x7eea",
+          "text": "LDRB            R0, [R5]",
+          "bytes": "2878"
+        },
+        {
+          "address": "0x7eec",
+          "text": "CMP             R0, #0",
+          "bytes": "0028"
+        },
+        {
+          "address": "0x7eee",
+          "text": "BEQ             loc_7EF4",
+          "bytes": "01d0"
+        },
+        {
+          "address": "0x7ef0",
+          "text": "MOVS            R0, #2",
+          "bytes": "0220"
+        },
+        {
+          "address": "0x7ef2",
+          "text": "B               loc_7EF6",
+          "bytes": "00e0"
+        },
+        {
+          "address": "0x7ef4",
+          "text": "MOVS            R0, #1",
+          "bytes": "0120"
+        },
+        {
+          "address": "0x7ef6",
+          "text": "POP             {R4-R7}",
+          "bytes": "f0bc"
+        },
+        {
+          "address": "0x7ef8",
+          "text": "POP             {R1}",
+          "bytes": "02bc"
+        },
+        {
+          "address": "0x7efa",
+          "text": "BX              R1",
+          "bytes": "0847"
+        }
+      ]
+    },
+    {
+      "entry": "0x7efc",
+      "thumb": 1,
+      "instructions": [
+        {
+          "address": "0x7efc",
+          "text": "PUSH            {LR}",
+          "bytes": "00b5"
+        },
+        {
+          "address": "0x7efe",
+          "text": "MOVS            R2, R0",
+          "bytes": "0200"
+        },
+        {
+          "address": "0x7f00",
+          "text": "LDR             R0, =0x2007C8",
+          "bytes": "4c48"
+        },
+        {
+          "address": "0x7f02",
+          "text": "LDRB            R3, [R0,#0xE]",
+          "bytes": "837b"
+        },
+        {
+          "address": "0x7f04",
+          "text": "CMP             R3, #0",
+          "bytes": "002b"
+        },
+        {
+          "address": "0x7f06",
+          "text": "BNE             loc_7F22",
+          "bytes": "0cd1"
+        },
+        {
+          "address": "0x7f08",
+          "text": "LDRB            R3, [R0,#0xF]",
+          "bytes": "c37b"
+        },
+        {
+          "address": "0x7f0a",
+          "text": "CMP             R3, #0",
+          "bytes": "002b"
+        },
+        {
+          "address": "0x7f0c",
+          "text": "BNE             loc_7F22",
+          "bytes": "09d1"
+        },
+        {
+          "address": "0x7f0e",
+          "text": "MOVS            R3, #1",
+          "bytes": "0123"
+        },
+        {
+          "address": "0x7f10",
+          "text": "STRB            R3, [R0,#0xE]",
+          "bytes": "8373"
+        },
+        {
+          "address": "0x7f12",
+          "text": "MOVS            R3, R1",
+          "bytes": "0b00"
+        },
+        {
+          "address": "0x7f14",
+          "text": "MOVS            R1, R0",
+          "bytes": "0100"
+        },
+        {
+          "address": "0x7f16",
+          "text": "ADDS            R1, #0xD",
+          "bytes": "0d31"
+        },
+        {
+          "address": "0x7f18",
+          "text": "ADDS            R0, #0x78 ; 'x'",
+          "bytes": "7830"
+        },
+        {
+          "address": "0x7f1a",
+          "text": "BL              loc_7FD6+2",
+          "bytes": "00f05df8"
+        },
+        {
+          "address": "0x7f1e",
+          "text": "MOVS            R0, #1",
+          "bytes": "0120"
+        },
+        {
+          "address": "0x7f20",
+          "text": "B               loc_7F24",
+          "bytes": "00e0"
+        },
+        {
+          "address": "0x7f22",
+          "text": "MOVS            R0, #0",
+          "bytes": "0020"
+        },
+        {
+          "address": "0x7f24",
+          "text": "POP             {R1}",
+          "bytes": "02bc"
+        },
+        {
+          "address": "0x7f26",
+          "text": "BX              R1",
+          "bytes": "0847"
+        }
+      ]
+    },
+    {
+      "entry": "0x8038",
+      "thumb": 1,
+      "instructions": [
+        {
+          "address": "0x8038",
+          "text": "PUSH            {R4-R7,LR}",
+          "bytes": "f0b5"
+        },
+        {
+          "address": "0x803a",
+          "text": "SUB             SP, SP, #8",
+          "bytes": "82b0"
+        },
+        {
+          "address": "0x803c",
+          "text": "MOVS            R4, R0",
+          "bytes": "0400"
+        },
+        {
+          "address": "0x803e",
+          "text": "MOVS            R7, R1",
+          "bytes": "0f00"
+        },
+        {
+          "address": "0x8040",
+          "text": "MOVS            R5, #0",
+          "bytes": "0025"
+        },
+        {
+          "address": "0x8042",
+          "text": "BL              sub_7B10",
+          "bytes": "fff765fd"
+        },
+        {
+          "address": "0x8046",
+          "text": "CMP             R0, #0",
+          "bytes": "0028"
+        },
+        {
+          "address": "0x8048",
+          "text": "BNE             loc_804C",
+          "bytes": "00d1"
+        },
+        {
+          "address": "0x804a",
+          "text": "B               def_809A; jumptable 000000000000809A default case",
+          "bytes": "a5e0"
+        },
+        {
+          "address": "0x804c",
+          "text": "LDR             R6, =0x2007C8",
+          "bytes": "554e"
+        },
+        {
+          "address": "0x804e",
+          "text": "LDR             R0, [R6,#0x20]",
+          "bytes": "306a"
+        },
+        {
+          "address": "0x8050",
+          "text": "STR             R0, [SP,#8+var_8]",
+          "bytes": "0090"
+        },
+        {
+          "address": "0x8052",
+          "text": "MOVS            R1, R6",
+          "bytes": "3100"
+        },
+        {
+          "address": "0x8054",
+          "text": "ADDS            R1, #0x28 ; '('",
+          "bytes": "2831"
+        },
+        {
+          "address": "0x8056",
+          "text": "CMP             R0, R1",
+          "bytes": "8842"
+        },
+        {
+          "address": "0x8058",
+          "text": "BNE             loc_8060",
+          "bytes": "02d1"
+        },
+        {
+          "address": "0x805a",
+          "text": "MOVS            R0, R6",
+          "bytes": "3000"
+        },
+        {
+          "address": "0x805c",
+          "text": "ADDS            R0, #0x38 ; '8'",
+          "bytes": "3830"
+        },
+        {
+          "address": "0x805e",
+          "text": "B               loc_8064",
+          "bytes": "01e0"
+        },
+        {
+          "address": "0x8060",
+          "text": "MOVS            R0, R6",
+          "bytes": "3000"
+        },
+        {
+          "address": "0x8062",
+          "text": "ADDS            R0, #0x28 ; '('",
+          "bytes": "2830"
+        },
+        {
+          "address": "0x8064",
+          "text": "STR             R0, [R6,#0x20]",
+          "bytes": "3062"
+        },
+        {
+          "address": "0x8066",
+          "text": "BL              sub_7B1C",
+          "bytes": "fff759fd"
+        },
+        {
+          "address": "0x806a",
+          "text": "LDR             R0, [SP,#8+var_8]",
+          "bytes": "0098"
+        },
+        {
+          "address": "0x806c",
+          "text": "BL              loc_7BEE+2",
+          "bytes": "fff7c0fd"
+        },
+        {
+          "address": "0x8070",
+          "text": "MOVS            R1, R0",
+          "bytes": "0100"
+        },
+        {
+          "address": "0x8072",
+          "text": "LDR             R0, [SP,#8+var_8]",
+          "bytes": "0098"
+        },
+        {
+          "address": "0x8074",
+          "text": "BL              sub_7BCC",
+          "bytes": "fff7aafd"
+        },
+        {
+          "address": "0x8078",
+          "text": "MOVS            R5, R0",
+          "bytes": "0500"
+        },
+        {
+          "address": "0x807a",
+          "text": "CMP             R5, #3",
+          "bytes": "032d"
+        },
+        {
+          "address": "0x807c",
+          "text": "BEQ             loc_8080",
+          "bytes": "00d0"
+        },
+        {
+          "address": "0x807e",
+          "text": "B               def_809A; jumptable 000000000000809A default case",
+          "bytes": "8be0"
+        },
+        {
+          "address": "0x8080",
+          "text": "LDR             R0, [SP,#8+var_8]",
+          "bytes": "0098"
+        },
+        {
+          "address": "0x8082",
+          "text": "BL              loc_7BE6+2",
+          "bytes": "fff7b1fd"
+        },
+        {
+          "address": "0x8086",
+          "text": "MOV             R1, SP",
+          "bytes": "6946"
+        },
+        {
+          "address": "0x8088",
+          "text": "STRB            R0, [R1,#8+var_4]",
+          "bytes": "0871"
+        },
+        {
+          "address": "0x808a",
+          "text": "MOV             R0, SP",
+          "bytes": "6846"
+        },
+        {
+          "address": "0x808c",
+          "text": "LDRB            R0, [R0,#8+var_4]",
+          "bytes": "0079"
+        },
+        {
+          "address": "0x808e",
+          "text": "CMP             R0, #5; switch 6 cases",
+          "bytes": "0528"
+        },
+        {
+          "address": "0x8090",
+          "text": "BLS             loc_8094",
+          "bytes": "00d9"
+        },
+        {
+          "address": "0x8092",
+          "text": "B               def_809A; jumptable 000000000000809A default case",
+          "bytes": "81e0"
+        },
+        {
+          "address": "0x8094",
+          "text": "ADR             R1, jpt_809A",
+          "bytes": "01a1"
+        },
+        {
+          "address": "0x8096",
+          "text": "LDRB            R1, [R1,R0]",
+          "bytes": "095c"
+        },
+        {
+          "address": "0x8098",
+          "text": "LSLS            R1, R1, #1",
+          "bytes": "4900"
+        },
+        {
+          "address": "0x809a",
+          "text": "ADD             PC, R1; switch jump",
+          "bytes": "8f44"
+        },
+        {
+          "address": "0x80a2",
+          "text": "MOVS            R3, R7; jumptable 000000000000809A cases 1,3",
+          "bytes": "3b00"
+        },
+        {
+          "address": "0x80a4",
+          "text": "MOVS            R2, R4",
+          "bytes": "2200"
+        },
+        {
+          "address": "0x80a6",
+          "text": "ADD             R1, SP, #8+var_4",
+          "bytes": "01a9"
+        },
+        {
+          "address": "0x80a8",
+          "text": "LDR             R0, [SP,#8+var_8]",
+          "bytes": "0098"
+        },
+        {
+          "address": "0x80aa",
+          "text": "BL              sub_7E64",
+          "bytes": "fff7dbfe"
+        },
+        {
+          "address": "0x80ae",
+          "text": "MOVS            R5, R0",
+          "bytes": "0500"
+        },
+        {
+          "address": "0x80b0",
+          "text": "B               def_809A; jumptable 000000000000809A default case",
+          "bytes": "72e0"
+        },
+        {
+          "address": "0x80b2",
+          "text": "MOVS            R3, R7; jumptable 000000000000809A case 4",
+          "bytes": "3b00"
+        },
+        {
+          "address": "0x80b4",
+          "text": "MOVS            R2, R4",
+          "bytes": "2200"
+        },
+        {
+          "address": "0x80b6",
+          "text": "ADD             R1, SP, #8+var_4",
+          "bytes": "01a9"
+        },
+        {
+          "address": "0x80b8",
+          "text": "LDR             R0, [SP,#8+var_8]",
+          "bytes": "0098"
+        },
+        {
+          "address": "0x80ba",
+          "text": "BL              sub_7E64",
+          "bytes": "fff7d3fe"
+        },
+        {
+          "address": "0x80be",
+          "text": "MOVS            R5, R0",
+          "bytes": "0500"
+        },
+        {
+          "address": "0x80c0",
+          "text": "LDRB            R3, [R7]",
+          "bytes": "3b78"
+        },
+        {
+          "address": "0x80c2",
+          "text": "CMP             R3, #0",
+          "bytes": "002b"
+        },
+        {
+          "address": "0x80c4",
+          "text": "BEQ             def_809A; jumptable 000000000000809A default case",
+          "bytes": "68d0"
+        },
+        {
+          "address": "0x80c6",
+          "text": "MOVS            R2, R4",
+          "bytes": "2200"
+        },
+        {
+          "address": "0x80c8",
+          "text": "ADDS            R1, R6, #6",
+          "bytes": "b11d"
+        },
+        {
+          "address": "0x80ca",
+          "text": "MOVS            R0, R6",
+          "bytes": "3000"
+        },
+        {
+          "address": "0x80cc",
+          "text": "ADDS            R0, #0x48 ; 'H'",
+          "bytes": "4830"
+        },
+        {
+          "address": "0x80ce",
+          "text": "BL              loc_7FD6+2",
+          "bytes": "fff783ff"
+        },
+        {
+          "address": "0x80d2",
+          "text": "MOVS            R0, #1",
+          "bytes": "0120"
+        },
+        {
+          "address": "0x80d4",
+          "text": "STRB            R0, [R6,#7]",
+          "bytes": "f071"
+        },
+        {
+          "address": "0x80d6",
+          "text": "B               def_809A; jumptable 000000000000809A default case",
+          "bytes": "5fe0"
+        },
+        {
+          "address": "0x80d8",
+          "text": "MOVS            R3, R7; jumptable 000000000000809A case 0",
+          "bytes": "3b00"
+        },
+        {
+          "address": "0x80da",
+          "text": "MOVS            R2, R4",
+          "bytes": "2200"
+        },
+        {
+          "address": "0x80dc",
+          "text": "ADD             R1, SP, #8+var_4",
+          "bytes": "01a9"
+        },
+        {
+          "address": "0x80de",
+          "text": "LDR             R0, [SP,#8+var_8]",
+          "bytes": "0098"
+        },
+        {
+          "address": "0x80e0",
+          "text": "BL              sub_7E64",
+          "bytes": "fff7c0fe"
+        },
+        {
+          "address": "0x80e4",
+          "text": "MOVS            R5, R0",
+          "bytes": "0500"
+        },
+        {
+          "address": "0x80e6",
+          "text": "LDRB            R3, [R7]",
+          "bytes": "3b78"
+        },
+        {
+          "address": "0x80e8",
+          "text": "CMP             R3, #0",
+          "bytes": "002b"
+        },
+        {
+          "address": "0x80ea",
+          "text": "BEQ             def_809A; jumptable 000000000000809A default case",
+          "bytes": "55d0"
+        },
+        {
+          "address": "0x80ec",
+          "text": "MOVS            R2, R4",
+          "bytes": "2200"
+        },
+        {
+          "address": "0x80ee",
+          "text": "MOVS            R1, R6",
+          "bytes": "3100"
+        },
+        {
+          "address": "0x80f0",
+          "text": "ADDS            R1, #0x24 ; '$'",
+          "bytes": "2431"
+        },
+        {
+          "address": "0x80f2",
+          "text": "MOVS            R0, R6",
+          "bytes": "3000"
+        },
+        {
+          "address": "0x80f4",
+          "text": "ADDS            R0, #0x58 ; 'X'",
+          "bytes": "5830"
+        },
+        {
+          "address": "0x80f6",
+          "text": "BL              loc_7FD6+2",
+          "bytes": "fff76fff"
+        },
+        {
+          "address": "0x80fa",
+          "text": "MOVS            R0, #1",
+          "bytes": "0120"
+        },
+        {
+          "address": "0x80fc",
+          "text": "STRB            R0, [R6,#9]",
+          "bytes": "7072"
+        },
+        {
+          "address": "0x80fe",
+          "text": "B               def_809A; jumptable 000000000000809A default case",
+          "bytes": "4be0"
+        },
+        {
+          "address": "0x8100",
+          "text": "LDRB            R0, [R6,#0x11]; jumptable 000000000000809A case 2",
+          "bytes": "707c"
+        },
+        {
+          "address": "0x8102",
+          "text": "CMP             R0, #0",
+          "bytes": "0028"
+        },
+        {
+          "address": "0x8104",
+          "text": "BEQ             def_809A; jumptable 000000000000809A default case",
+          "bytes": "48d0"
+        },
+        {
+          "address": "0x8106",
+          "text": "LDRB            R0, [R6,#0x12]",
+          "bytes": "b07c"
+        },
+        {
+          "address": "0x8108",
+          "text": "CMP             R0, #0",
+          "bytes": "0028"
+        },
+        {
+          "address": "0x810a",
+          "text": "BEQ             def_809A; jumptable 000000000000809A default case",
+          "bytes": "45d0"
+        },
+        {
+          "address": "0x810c",
+          "text": "MOVS            R3, R7",
+          "bytes": "3b00"
+        },
+        {
+          "address": "0x810e",
+          "text": "MOVS            R2, R4",
+          "bytes": "2200"
+        },
+        {
+          "address": "0x8110",
+          "text": "ADD             R1, SP, #8+var_4",
+          "bytes": "01a9"
+        },
+        {
+          "address": "0x8112",
+          "text": "LDR             R0, [SP,#8+var_8]",
+          "bytes": "0098"
+        },
+        {
+          "address": "0x8114",
+          "text": "BL              sub_7E64",
+          "bytes": "fff7a6fe"
+        },
+        {
+          "address": "0x8118",
+          "text": "MOVS            R5, R0",
+          "bytes": "0500"
+        },
+        {
+          "address": "0x811a",
+          "text": "LDRB            R3, [R7]",
+          "bytes": "3b78"
+        },
+        {
+          "address": "0x811c",
+          "text": "MOVS            R2, R4",
+          "bytes": "2200"
+        },
+        {
+          "address": "0x811e",
+          "text": "MOVS            R1, R6",
+          "bytes": "3100"
+        },
+        {
+          "address": "0x8120",
+          "text": "ADDS            R1, #0x14",
+          "bytes": "1431"
+        },
+        {
+          "address": "0x8122",
+          "text": "MOVS            R0, R6",
+          "bytes": "3000"
+        },
+        {
+          "address": "0x8124",
+          "text": "ADDS            R0, #0x98",
+          "bytes": "9830"
+        },
+        {
+          "address": "0x8126",
+          "text": "BL              sub_7F58",
+          "bytes": "fff717ff"
+        },
+        {
+          "address": "0x812a",
+          "text": "LDRB            R0, [R6,#0x14]",
+          "bytes": "307d"
+        },
+        {
+          "address": "0x812c",
+          "text": "CMP             R0, #0",
+          "bytes": "0028"
+        },
+        {
+          "address": "0x812e",
+          "text": "BNE             def_809A; jumptable 000000000000809A default case",
+          "bytes": "33d1"
+        },
+        {
+          "address": "0x8130",
+          "text": "STRB            R0, [R6,#0x12]",
+          "bytes": "b074"
+        },
+        {
+          "address": "0x8132",
+          "text": "BL              sub_7B30",
+          "bytes": "fff7fdfc"
+        },
+        {
+          "address": "0x8136",
+          "text": "LDRB            R0, [R6,#4]",
+          "bytes": "3079"
+        },
+        {
+          "address": "0x8138",
+          "text": "CMP             R0, #0",
+          "bytes": "0028"
+        },
+        {
+          "address": "0x813a",
+          "text": "BEQ             def_809A; jumptable 000000000000809A default case",
+          "bytes": "2dd0"
+        },
+        {
+          "address": "0x813c",
+          "text": "MOVS            R0, #0",
+          "bytes": "0020"
+        },
+        {
+          "address": "0x813e",
+          "text": "STRB            R0, [R6,#0x11]",
+          "bytes": "7074"
+        },
+        {
+          "address": "0x8140",
+          "text": "LDRB            R0, [R6,#3]",
+          "bytes": "f078"
+        },
+        {
+          "address": "0x8142",
+          "text": "CMP             R0, #0",
+          "bytes": "0028"
+        },
+        {
+          "address": "0x8144",
+          "text": "BEQ             def_809A; jumptable 000000000000809A default case",
+          "bytes": "28d0"
+        },
+        {
+          "address": "0x8146",
+          "text": "MOVS            R0, #1",
+          "bytes": "0120"
+        },
+        {
+          "address": "0x8148",
+          "text": "STRB            R0, [R6,#1]",
+          "bytes": "7070"
+        },
+        {
+          "address": "0x814a",
+          "text": "B               def_809A; jumptable 000000000000809A default case",
+          "bytes": "25e0"
+        },
+        {
+          "address": "0x814c",
+          "text": "LDRB            R0, [R6,#0x16]; jumptable 000000000000809A case 5",
+          "bytes": "b07d"
+        },
+        {
+          "address": "0x814e",
+          "text": "CMP             R0, #0",
+          "bytes": "0028"
+        },
+        {
+          "address": "0x8150",
+          "text": "BEQ             def_809A; jumptable 000000000000809A default case",
+          "bytes": "22d0"
+        },
+        {
+          "address": "0x8152",
+          "text": "LDRB            R0, [R6,#0x17]",
+          "bytes": "f07d"
+        },
+        {
+          "address": "0x8154",
+          "text": "CMP             R0, #0",
+          "bytes": "0028"
+        },
+        {
+          "address": "0x8156",
+          "text": "BEQ             def_809A; jumptable 000000000000809A default case",
+          "bytes": "1fd0"
+        },
+        {
+          "address": "0x8158",
+          "text": "MOVS            R3, R7",
+          "bytes": "3b00"
+        },
+        {
+          "address": "0x815a",
+          "text": "MOVS            R2, R4",
+          "bytes": "2200"
+        },
+        {
+          "address": "0x815c",
+          "text": "ADD             R1, SP, #8+var_4",
+          "bytes": "01a9"
+        },
+        {
+          "address": "0x815e",
+          "text": "LDR             R0, [SP,#8+var_8]",
+          "bytes": "0098"
+        },
+        {
+          "address": "0x8160",
+          "text": "BL              sub_7E64",
+          "bytes": "fff780fe"
+        },
+        {
+          "address": "0x8164",
+          "text": "MOVS            R5, R0",
+          "bytes": "0500"
+        },
+        {
+          "address": "0x8166",
+          "text": "LDRB            R3, [R7]",
+          "bytes": "3b78"
+        },
+        {
+          "address": "0x8168",
+          "text": "MOVS            R2, R4",
+          "bytes": "2200"
+        },
+        {
+          "address": "0x816a",
+          "text": "MOVS            R1, R6",
+          "bytes": "3100"
+        },
+        {
+          "address": "0x816c",
+          "text": "ADDS            R1, #0x19",
+          "bytes": "1931"
+        },
+        {
+          "address": "0x816e",
+          "text": "MOVS            R0, R6",
+          "bytes": "3000"
+        },
+        {
+          "address": "0x8170",
+          "text": "ADDS            R0, #0xB8",
+          "bytes": "b830"
+        },
+        {
+          "address": "0x8172",
+          "text": "BL              sub_7F58",
+          "bytes": "fff7f1fe"
+        },
+        {
+          "address": "0x8176",
+          "text": "LDRB            R0, [R6,#0x19]",
+          "bytes": "707e"
+        },
+        {
+          "address": "0x8178",
+          "text": "CMP             R0, #0",
+          "bytes": "0028"
+        },
+        {
+          "address": "0x817a",
+          "text": "BNE             def_809A; jumptable 000000000000809A default case",
+          "bytes": "0dd1"
+        },
+        {
+          "address": "0x817c",
+          "text": "STRB            R0, [R6,#0x17]",
+          "bytes": "f075"
+        },
+        {
+          "address": "0x817e",
+          "text": "BL              sub_7B28",
+          "bytes": "fff7d3fc"
+        },
+        {
+          "address": "0x8182",
+          "text": "LDRB            R0, [R6,#5]",
+          "bytes": "7079"
+        },
+        {
+          "address": "0x8184",
+          "text": "CMP             R0, #0",
+          "bytes": "0028"
+        },
+        {
+          "address": "0x8186",
+          "text": "BEQ             def_809A; jumptable 000000000000809A default case",
+          "bytes": "07d0"
+        },
+        {
+          "address": "0x8188",
+          "text": "MOVS            R0, #0",
+          "bytes": "0020"
+        },
+        {
+          "address": "0x818a",
+          "text": "STRB            R0, [R6,#0x16]",
+          "bytes": "b075"
+        },
+        {
+          "address": "0x818c",
+          "text": "MOVS            R5, #6",
+          "bytes": "0625"
+        },
+        {
+          "address": "0x818e",
+          "text": "LDRB            R0, [R6,#2]",
+          "bytes": "b078"
+        },
+        {
+          "address": "0x8190",
+          "text": "CMP             R0, #0",
+          "bytes": "0028"
+        },
+        {
+          "address": "0x8192",
+          "text": "BEQ             def_809A; jumptable 000000000000809A default case",
+          "bytes": "01d0"
+        },
+        {
+          "address": "0x8194",
+          "text": "MOVS            R0, #1",
+          "bytes": "0120"
+        },
+        {
+          "address": "0x8196",
+          "text": "STRB            R0, [R6]",
+          "bytes": "3070"
+        },
+        {
+          "address": "0x8198",
+          "text": "MOVS            R0, R5; jumptable 000000000000809A default case",
+          "bytes": "2800"
+        },
+        {
+          "address": "0x819a",
+          "text": "ADD             SP, SP, #8",
+          "bytes": "02b0"
+        },
+        {
+          "address": "0x819c",
+          "text": "POP             {R4-R7}",
+          "bytes": "f0bc"
+        },
+        {
+          "address": "0x819e",
+          "text": "POP             {R1}",
+          "bytes": "02bc"
+        },
+        {
+          "address": "0x81a0",
+          "text": "BX              R1",
+          "bytes": "0847"
+        }
+      ]
+    },
+    {
+      "entry": "0x81a8",
+      "thumb": 1,
+      "instructions": [
+        {
+          "address": "0x81a8",
+          "text": "PUSH            {R4-R7,LR}",
+          "bytes": "f0b5"
+        },
+        {
+          "address": "0x81aa",
+          "text": "SUB             SP, SP, #8",
+          "bytes": "82b0"
+        },
+        {
+          "address": "0x81ac",
+          "text": "MOVS            R4, #7",
+          "bytes": "0724"
+        },
+        {
+          "address": "0x81ae",
+          "text": "BL              loc_7B02+2",
+          "bytes": "fff7a9fc"
+        },
+        {
+          "address": "0x81b2",
+          "text": "CMP             R0, #0",
+          "bytes": "0028"
+        },
+        {
+          "address": "0x81b4",
+          "text": "BNE             loc_81B8",
+          "bytes": "00d1"
+        },
+        {
+          "address": "0x81b6",
+          "text": "B               loc_84F4",
+          "bytes": "9de1"
+        },
+        {
+          "address": "0x81b8",
+          "text": "MOVS            R5, #0",
+          "bytes": "0025"
+        },
+        {
+          "address": "0x81ba",
+          "text": "MOVS            R4, #0",
+          "bytes": "0024"
+        },
+        {
+          "address": "0x81bc",
+          "text": "LDR             R6, =0x2007C8",
+          "bytes": "d04e"
+        },
+        {
+          "address": "0x81be",
+          "text": "MOVS            R7, R6",
+          "bytes": "3700"
+        },
+        {
+          "address": "0x81c0",
+          "text": "ADDS            R7, #0xC8",
+          "bytes": "c837"
+        },
+        {
+          "address": "0x81c2",
+          "text": "LDRB            R0, [R6,#9]",
+          "bytes": "707a"
+        },
+        {
+          "address": "0x81c4",
+          "text": "CMP             R0, #0",
+          "bytes": "0028"
+        },
+        {
+          "address": "0x81c6",
+          "text": "BEQ             loc_81F0",
+          "bytes": "13d0"
+        },
+        {
+          "address": "0x81c8",
+          "text": "MOVS            R3, R6",
+          "bytes": "3300"
+        },
+        {
+          "address": "0x81ca",
+          "text": "ADDS            R3, #0x24 ; '$'",
+          "bytes": "2433"
+        },
+        {
+          "address": "0x81cc",
+          "text": "MOVS            R2, R6",
+          "bytes": "3200"
+        },
+        {
+          "address": "0x81ce",
+          "text": "ADDS            R2, #0x58 ; 'X'",
+          "bytes": "5832"
+        },
+        {
+          "address": "0x81d0",
+          "text": "MOVS            R1, #2",
+          "bytes": "0221"
+        },
+        {
+          "address": "0x81d2",
+          "text": "MOVS            R0, R7",
+          "bytes": "3800"
+        },
+        {
+          "address": "0x81d4",
+          "text": "BL              sub_7EB4",
+          "bytes": "fff76efe"
+        },
+        {
+          "address": "0x81d8",
+          "text": "MOVS            R0, R7",
+          "bytes": "3800"
+        },
+        {
+          "address": "0x81da",
+          "text": "BL              loc_7BEE+2",
+          "bytes": "fff709fd"
+        },
+        {
+          "address": "0x81de",
+          "text": "ADDS            R0, R0, #1",
+          "bytes": "401c"
+        },
+        {
+          "address": "0x81e0",
+          "text": "LSLS            R1, R0, #0x18",
+          "bytes": "0106"
+        },
+        {
+          "address": "0x81e2",
+          "text": "LSRS            R1, R1, #0x18",
+          "bytes": "090e"
+        },
+        {
+          "address": "0x81e4",
+          "text": "MOVS            R0, R7",
+          "bytes": "3800"
+        },
+        {
+          "address": "0x81e6",
+          "text": "BL              sub_7AF8",
+          "bytes": "fff787fc"
+        },
+        {
+          "address": "0x81ea",
+          "text": "STRB            R5, [R6,#9]",
+          "bytes": "7572"
+        },
+        {
+          "address": "0x81ec",
+          "text": "MOVS            R4, #8",
+          "bytes": "0824"
+        },
+        {
+          "address": "0x81ee",
+          "text": "B               loc_84F4",
+          "bytes": "81e1"
+        },
+        {
+          "address": "0x81f0",
+          "text": "LDRB            R0, [R6,#8]",
+          "bytes": "307a"
+        },
+        {
+          "address": "0x81f2",
+          "text": "CMP             R0, #0",
+          "bytes": "0028"
+        },
+        {
+          "address": "0x81f4",
+          "text": "BEQ             loc_822E",
+          "bytes": "1bd0"
+        },
+        {
+          "address": "0x81f6",
+          "text": "ADDS            R3, R6, #6",
+          "bytes": "b31d"
+        },
+        {
+          "address": "0x81f8",
+          "text": "MOVS            R2, R6",
+          "bytes": "3200"
+        },
+        {
+          "address": "0x81fa",
+          "text": "ADDS            R2, #0x48 ; 'H'",
+          "bytes": "4832"
+        },
+        {
+          "address": "0x81fc",
+          "text": "MOVS            R1, #5",
+          "bytes": "0521"
+        },
+        {
+          "address": "0x81fe",
+          "text": "MOVS            R0, R7",
+          "bytes": "3800"
+        },
+        {
+          "address": "0x8200",
+          "text": "BL              sub_7EB4",
+          "bytes": "fff758fe"
+        },
+        {
+          "address": "0x8204",
+          "text": "MOVS            R0, R7",
+          "bytes": "3800"
+        },
+        {
+          "address": "0x8206",
+          "text": "BL              loc_7BEE+2",
+          "bytes": "fff7f3fc"
+        },
+        {
+          "address": "0x820a",
+          "text": "ADDS            R1, R0, #1",
+          "bytes": "411c"
+        },
+        {
+          "address": "0x820c",
+          "text": "LSLS            R1, R1, #0x18",
+          "bytes": "0906"
+        },
+        {
+          "address": "0x820e",
+          "text": "LSRS            R1, R1, #0x18",
+          "bytes": "090e"
+        },
+        {
+          "address": "0x8210",
+          "text": "MOVS            R0, R7",
+          "bytes": "3800"
+        },
+        {
+          "address": "0x8212",
+          "text": "BL              sub_7AF8",
+          "bytes": "fff771fc"
+        },
+        {
+          "address": "0x8216",
+          "text": "LDRB            R0, [R6,#6]",
+          "bytes": "b079"
+        },
+        {
+          "address": "0x8218",
+          "text": "CMP             R0, #0",
+          "bytes": "0028"
+        },
+        {
+          "address": "0x821a",
+          "text": "BEQ             loc_8222",
+          "bytes": "02d0"
+        },
+        {
+          "address": "0x821c",
+          "text": "LDRB            R1, [R6,#0x1A]",
+          "bytes": "b17e"
+        },
+        {
+          "address": "0x821e",
+          "text": "CMP             R0, R1",
+          "bytes": "8842"
+        },
+        {
+          "address": "0x8220",
+          "text": "BNE             loc_8228",
+          "bytes": "02d1"
+        },
+        {
+          "address": "0x8222",
+          "text": "STRB            R5, [R6,#8]",
+          "bytes": "3572"
+        },
+        {
+          "address": "0x8224",
+          "text": "MOVS            R4, #9",
+          "bytes": "0924"
+        },
+        {
+          "address": "0x8226",
+          "text": "B               loc_84F4",
+          "bytes": "65e1"
+        },
+        {
+          "address": "0x8228",
+          "text": "STRB            R0, [R6,#0x1A]",
+          "bytes": "b076"
+        },
+        {
+          "address": "0x822a",
+          "text": "MOVS            R4, #0xA",
+          "bytes": "0a24"
+        },
+        {
+          "address": "0x822c",
+          "text": "B               loc_84F4",
+          "bytes": "62e1"
+        },
+        {
+          "address": "0x822e",
+          "text": "LDRB            R0, [R6,#7]",
+          "bytes": "f079"
+        },
+        {
+          "address": "0x8230",
+          "text": "CMP             R0, #0",
+          "bytes": "0028"
+        },
+        {
+          "address": "0x8232",
+          "text": "BEQ             loc_8262",
+          "bytes": "16d0"
+        },
+        {
+          "address": "0x8234",
+          "text": "STRB            R5, [R6,#7]",
+          "bytes": "f571"
+        },
+        {
+          "address": "0x8236",
+          "text": "ADDS            R3, R6, #6",
+          "bytes": "b31d"
+        },
+        {
+          "address": "0x8238",
+          "text": "MOVS            R2, R6",
+          "bytes": "3200"
+        },
+        {
+          "address": "0x823a",
+          "text": "ADDS            R2, #0x48 ; 'H'",
+          "bytes": "4832"
+        },
+        {
+          "address": "0x823c",
+          "text": "MOVS            R1, #5",
+          "bytes": "0521"
+        },
+        {
+          "address": "0x823e",
+          "text": "MOVS            R0, R7",
+          "bytes": "3800"
+        },
+        {
+          "address": "0x8240",
+          "text": "BL              sub_7EB4",
+          "bytes": "fff738fe"
+        },
+        {
+          "address": "0x8244",
+          "text": "MOVS            R0, R7",
+          "bytes": "3800"
+        },
+        {
+          "address": "0x8246",
+          "text": "BL              loc_7BEE+2",
+          "bytes": "fff7d3fc"
+        },
+        {
+          "address": "0x824a",
+          "text": "ADDS            R0, R0, #1",
+          "bytes": "401c"
+        },
+        {
+          "address": "0x824c",
+          "text": "LSLS            R1, R0, #0x18",
+          "bytes": "0106"
+        },
+        {
+          "address": "0x824e",
+          "text": "LSRS            R1, R1, #0x18",
+          "bytes": "090e"
+        },
+        {
+          "address": "0x8250",
+          "text": "MOVS            R0, R7",
+          "bytes": "3800"
+        },
+        {
+          "address": "0x8252",
+          "text": "BL              sub_7AF8",
+          "bytes": "fff751fc"
+        },
+        {
+          "address": "0x8256",
+          "text": "LDRB            R0, [R6,#6]",
+          "bytes": "b079"
+        },
+        {
+          "address": "0x8258",
+          "text": "CMP             R0, #0",
+          "bytes": "0028"
+        },
+        {
+          "address": "0x825a",
+          "text": "BEQ             loc_8224",
+          "bytes": "e3d0"
+        },
+        {
+          "address": "0x825c",
+          "text": "MOVS            R1, #1",
+          "bytes": "0121"
+        },
+        {
+          "address": "0x825e",
+          "text": "STRB            R1, [R6,#8]",
+          "bytes": "3172"
+        },
+        {
+          "address": "0x8260",
+          "text": "B               loc_8228",
+          "bytes": "e2e7"
+        },
+        {
+          "address": "0x8262",
+          "text": "LDRB            R0, [R6,#0xC]",
+          "bytes": "307b"
+        },
+        {
+          "address": "0x8264",
+          "text": "CMP             R0, #0",
+          "bytes": "0028"
+        },
+        {
+          "address": "0x8266",
+          "text": "BEQ             loc_82A2",
+          "bytes": "1cd0"
+        },
+        {
+          "address": "0x8268",
+          "text": "MOVS            R3, R6",
+          "bytes": "3300"
+        },
+        {
+          "address": "0x826a",
+          "text": "ADDS            R3, #0xA",
+          "bytes": "0a33"
+        },
+        {
+          "address": "0x826c",
+          "text": "MOVS            R2, R6",
+          "bytes": "3200"
+        },
+        {
+          "address": "0x826e",
+          "text": "ADDS            R2, #0x68 ; 'h'",
+          "bytes": "6832"
+        },
+        {
+          "address": "0x8270",
+          "text": "MOVS            R1, #1",
+          "bytes": "0121"
+        },
+        {
+          "address": "0x8272",
+          "text": "MOVS            R0, R7",
+          "bytes": "3800"
+        },
+        {
+          "address": "0x8274",
+          "text": "BL              sub_7EB4",
+          "bytes": "fff71efe"
+        },
+        {
+          "address": "0x8278",
+          "text": "MOVS            R0, R7",
+          "bytes": "3800"
+        },
+        {
+          "address": "0x827a",
+          "text": "BL              loc_7BEE+2",
+          "bytes": "fff7b9fc"
+        },
+        {
+          "address": "0x827e",
+          "text": "ADDS            R0, R0, #1",
+          "bytes": "401c"
+        },
+        {
+          "address": "0x8280",
+          "text": "LSLS            R1, R0, #0x18",
+          "bytes": "0106"
+        },
+        {
+          "address": "0x8282",
+          "text": "LSRS            R1, R1, #0x18",
+          "bytes": "090e"
+        },
+        {
+          "address": "0x8284",
+          "text": "MOVS            R0, R7",
+          "bytes": "3800"
+        },
+        {
+          "address": "0x8286",
+          "text": "BL              sub_7AF8",
+          "bytes": "fff737fc"
+        },
+        {
+          "address": "0x828a",
+          "text": "LDRB            R0, [R6,#0xA]",
+          "bytes": "b07a"
+        },
+        {
+          "address": "0x828c",
+          "text": "CMP             R0, #0",
+          "bytes": "0028"
+        },
+        {
+          "address": "0x828e",
+          "text": "BEQ             loc_8296",
+          "bytes": "02d0"
+        },
+        {
+          "address": "0x8290",
+          "text": "LDRB            R1, [R6,#0x1B]",
+          "bytes": "f17e"
+        },
+        {
+          "address": "0x8292",
+          "text": "CMP             R0, R1",
+          "bytes": "8842"
+        },
+        {
+          "address": "0x8294",
+          "text": "BNE             loc_829C",
+          "bytes": "02d1"
+        },
+        {
+          "address": "0x8296",
+          "text": "STRB            R5, [R6,#0xC]",
+          "bytes": "3573"
+        },
+        {
+          "address": "0x8298",
+          "text": "MOVS            R4, #0xB",
+          "bytes": "0b24"
+        },
+        {
+          "address": "0x829a",
+          "text": "B               loc_84F4",
+          "bytes": "2be1"
+        },
+        {
+          "address": "0x829c",
+          "text": "STRB            R0, [R6,#0x1B]",
+          "bytes": "f076"
+        },
+        {
+          "address": "0x829e",
+          "text": "MOVS            R4, #0xC",
+          "bytes": "0c24"
+        },
+        {
+          "address": "0x82a0",
+          "text": "B               loc_84F4",
+          "bytes": "28e1"
+        },
+        {
+          "address": "0x82a2",
+          "text": "LDRB            R0, [R6,#0xB]",
+          "bytes": "f07a"
+        },
+        {
+          "address": "0x82a4",
+          "text": "CMP             R0, #0",
+          "bytes": "0028"
+        },
+        {
+          "address": "0x82a6",
+          "text": "BEQ             loc_82D8",
+          "bytes": "17d0"
+        },
+        {
+          "address": "0x82a8",
+          "text": "STRB            R5, [R6,#0xB]",
+          "bytes": "f572"
+        },
+        {
+          "address": "0x82aa",
+          "text": "MOVS            R3, R6",
+          "bytes": "3300"
+        },
+        {
+          "address": "0x82ac",
+          "text": "ADDS            R3, #0xA",
+          "bytes": "0a33"
+        },
+        {
+          "address": "0x82ae",
+          "text": "MOVS            R2, R6",
+          "bytes": "3200"
+        },
+        {
+          "address": "0x82b0",
+          "text": "ADDS            R2, #0x68 ; 'h'",
+          "bytes": "6832"
+        },
+        {
+          "address": "0x82b2",
+          "text": "MOVS            R1, #1",
+          "bytes": "0121"
+        },
+        {
+          "address": "0x82b4",
+          "text": "MOVS            R0, R7",
+          "bytes": "3800"
+        },
+        {
+          "address": "0x82b6",
+          "text": "BL              sub_7EB4",
+          "bytes": "fff7fdfd"
+        },
+        {
+          "address": "0x82ba",
+          "text": "MOVS            R0, R7",
+          "bytes": "3800"
+        },
+        {
+          "address": "0x82bc",
+          "text": "BL              loc_7BEE+2",
+          "bytes": "fff798fc"
+        },
+        {
+          "address": "0x82c0",
+          "text": "ADDS            R0, R0, #1",
+          "bytes": "401c"
+        },
+        {
+          "address": "0x82c2",
+          "text": "LSLS            R1, R0, #0x18",
+          "bytes": "0106"
+        },
+        {
+          "address": "0x82c4",
+          "text": "LSRS            R1, R1, #0x18",
+          "bytes": "090e"
+        },
+        {
+          "address": "0x82c6",
+          "text": "MOVS            R0, R7",
+          "bytes": "3800"
+        },
+        {
+          "address": "0x82c8",
+          "text": "BL              sub_7AF8",
+          "bytes": "fff716fc"
+        },
+        {
+          "address": "0x82cc",
+          "text": "LDRB            R0, [R6,#0xA]",
+          "bytes": "b07a"
+        },
+        {
+          "address": "0x82ce",
+          "text": "CMP             R0, #0",
+          "bytes": "0028"
+        },
+        {
+          "address": "0x82d0",
+          "text": "BEQ             loc_8298",
+          "bytes": "e2d0"
+        },
+        {
+          "address": "0x82d2",
+          "text": "MOVS            R1, #1",
+          "bytes": "0121"
+        },
+        {
+          "address": "0x82d4",
+          "text": "STRB            R1, [R6,#0xC]",
+          "bytes": "3173"
+        },
+        {
+          "address": "0x82d6",
+          "text": "B               loc_829C",
+          "bytes": "e1e7"
+        },
+        {
+          "address": "0x82d8",
+          "text": "LDRB            R0, [R6,#0xF]",
+          "bytes": "f07b"
+        },
+        {
+          "address": "0x82da",
+          "text": "CMP             R0, #0",
+          "bytes": "0028"
+        },
+        {
+          "address": "0x82dc",
+          "text": "BEQ             loc_8318",
+          "bytes": "1cd0"
+        },
+        {
+          "address": "0x82de",
+          "text": "MOVS            R3, R6",
+          "bytes": "3300"
+        },
+        {
+          "address": "0x82e0",
+          "text": "ADDS            R3, #0xD",
+          "bytes": "0d33"
+        },
+        {
+          "address": "0x82e2",
+          "text": "MOVS            R2, R6",
+          "bytes": "3200"
+        },
+        {
+          "address": "0x82e4",
+          "text": "ADDS            R2, #0x78 ; 'x'",
+          "bytes": "7832"
+        },
+        {
+          "address": "0x82e6",
+          "text": "MOVS            R1, #3",
+          "bytes": "0321"
+        },
+        {
+          "address": "0x82e8",
+          "text": "MOVS            R0, R7",
+          "bytes": "3800"
+        },
+        {
+          "address": "0x82ea",
+          "text": "BL              sub_7EB4",
+          "bytes": "fff7e3fd"
+        },
+        {
+          "address": "0x82ee",
+          "text": "MOVS            R0, R7",
+          "bytes": "3800"
+        },
+        {
+          "address": "0x82f0",
+          "text": "BL              loc_7BEE+2",
+          "bytes": "fff77efc"
+        },
+        {
+          "address": "0x82f4",
+          "text": "ADDS            R0, R0, #1",
+          "bytes": "401c"
+        },
+        {
+          "address": "0x82f6",
+          "text": "LSLS            R1, R0, #0x18",
+          "bytes": "0106"
+        },
+        {
+          "address": "0x82f8",
+          "text": "LSRS            R1, R1, #0x18",
+          "bytes": "090e"
+        },
+        {
+          "address": "0x82fa",
+          "text": "MOVS            R0, R7",
+          "bytes": "3800"
+        },
+        {
+          "address": "0x82fc",
+          "text": "BL              sub_7AF8",
+          "bytes": "fff7fcfb"
+        },
+        {
+          "address": "0x8300",
+          "text": "LDRB            R0, [R6,#0xD]",
+          "bytes": "707b"
+        },
+        {
+          "address": "0x8302",
+          "text": "CMP             R0, #0",
+          "bytes": "0028"
+        },
+        {
+          "address": "0x8304",
+          "text": "BEQ             loc_830C",
+          "bytes": "02d0"
+        },
+        {
+          "address": "0x8306",
+          "text": "LDRB            R1, [R6,#0x1C]",
+          "bytes": "317f"
+        },
+        {
+          "address": "0x8308",
+          "text": "CMP             R0, R1",
+          "bytes": "8842"
+        },
+        {
+          "address": "0x830a",
+          "text": "BNE             loc_8312",
+          "bytes": "02d1"
+        },
+        {
+          "address": "0x830c",
+          "text": "STRB            R5, [R6,#0xF]",
+          "bytes": "f573"
+        },
+        {
+          "address": "0x830e",
+          "text": "MOVS            R4, #0xD",
+          "bytes": "0d24"
+        },
+        {
+          "address": "0x8310",
+          "text": "B               loc_84F4",
+          "bytes": "f0e0"
+        },
+        {
+          "address": "0x8312",
+          "text": "STRB            R0, [R6,#0x1C]",
+          "bytes": "3077"
+        },
+        {
+          "address": "0x8314",
+          "text": "MOVS            R4, #0xE",
+          "bytes": "0e24"
+        },
+        {
+          "address": "0x8316",
+          "text": "B               loc_84F4",
+          "bytes": "ede0"
+        },
+        {
+          "address": "0x8318",
+          "text": "LDRB            R0, [R6,#0xE]",
+          "bytes": "b07b"
+        },
+        {
+          "address": "0x831a",
+          "text": "CMP             R0, #0",
+          "bytes": "0028"
+        },
+        {
+          "address": "0x831c",
+          "text": "BEQ             loc_834E",
+          "bytes": "17d0"
+        },
+        {
+          "address": "0x831e",
+          "text": "STRB            R5, [R6,#0xE]",
+          "bytes": "b573"
+        },
+        {
+          "address": "0x8320",
+          "text": "MOVS            R3, R6",
+          "bytes": "3300"
+        },
+        {
+          "address": "0x8322",
+          "text": "ADDS            R3, #0xD",
+          "bytes": "0d33"
+        },
+        {
+          "address": "0x8324",
+          "text": "MOVS            R2, R6",
+          "bytes": "3200"
+        },
+        {
+          "address": "0x8326",
+          "text": "ADDS            R2, #0x78 ; 'x'",
+          "bytes": "7832"
+        },
+        {
+          "address": "0x8328",
+          "text": "MOVS            R1, #3",
+          "bytes": "0321"
+        },
+        {
+          "address": "0x832a",
+          "text": "MOVS            R0, R7",
+          "bytes": "3800"
+        },
+        {
+          "address": "0x832c",
+          "text": "BL              sub_7EB4",
+          "bytes": "fff7c2fd"
+        },
+        {
+          "address": "0x8330",
+          "text": "MOVS            R0, R7",
+          "bytes": "3800"
+        },
+        {
+          "address": "0x8332",
+          "text": "BL              loc_7BEE+2",
+          "bytes": "fff75dfc"
+        },
+        {
+          "address": "0x8336",
+          "text": "ADDS            R0, R0, #1",
+          "bytes": "401c"
+        },
+        {
+          "address": "0x8338",
+          "text": "LSLS            R1, R0, #0x18",
+          "bytes": "0106"
+        },
+        {
+          "address": "0x833a",
+          "text": "LSRS            R1, R1, #0x18",
+          "bytes": "090e"
+        },
+        {
+          "address": "0x833c",
+          "text": "MOVS            R0, R7",
+          "bytes": "3800"
+        },
+        {
+          "address": "0x833e",
+          "text": "BL              sub_7AF8",
+          "bytes": "fff7dbfb"
+        },
+        {
+          "address": "0x8342",
+          "text": "LDRB            R0, [R6,#0xD]",
+          "bytes": "707b"
+        },
+        {
+          "address": "0x8344",
+          "text": "CMP             R0, #0",
+          "bytes": "0028"
+        },
+        {
+          "address": "0x8346",
+          "text": "BEQ             loc_830E",
+          "bytes": "e2d0"
+        },
+        {
+          "address": "0x8348",
+          "text": "MOVS            R1, #1",
+          "bytes": "0121"
+        },
+        {
+          "address": "0x834a",
+          "text": "STRB            R1, [R6,#0xF]",
+          "bytes": "f173"
+        },
+        {
+          "address": "0x834c",
+          "text": "B               loc_8312",
+          "bytes": "e1e7"
+        },
+        {
+          "address": "0x834e",
+          "text": "LDRB            R0, [R6,#0x12]",
+          "bytes": "b07c"
+        },
+        {
+          "address": "0x8350",
+          "text": "CMP             R0, #0",
+          "bytes": "0028"
+        },
+        {
+          "address": "0x8352",
+          "text": "BNE             loc_8358",
+          "bytes": "01d1"
+        },
+        {
+          "address": "0x8354",
+          "text": "MOVS            R0, #1",
+          "bytes": "0120"
+        },
+        {
+          "address": "0x8356",
+          "text": "B               loc_835A",
+          "bytes": "00e0"
+        },
+        {
+          "address": "0x8358",
+          "text": "MOVS            R0, #0",
+          "bytes": "0020"
+        },
+        {
+          "address": "0x835a",
+          "text": "LDRB            R3, [R6,#0x13]",
+          "bytes": "f37c"
+        },
+        {
+          "address": "0x835c",
+          "text": "MOVS            R1, R6",
+          "bytes": "3100"
+        },
+        {
+          "address": "0x835e",
+          "text": "ADDS            R1, #0x98",
+          "bytes": "9831"
+        },
+        {
+          "address": "0x8360",
+          "text": "STR             R1, [SP,#8+var_4]",
+          "bytes": "0191"
+        },
+        {
+          "address": "0x8362",
+          "text": "MOVS            R1, R6",
+          "bytes": "3100"
+        },
+        {
+          "address": "0x8364",
+          "text": "ADDS            R1, #0x88",
+          "bytes": "8831"
+        },
+        {
+          "address": "0x8366",
+          "text": "STR             R1, [SP,#8+var_8]",
+          "bytes": "0091"
+        },
+        {
+          "address": "0x8368",
+          "text": "LDRB            R1, [R6,#0x11]",
+          "bytes": "717c"
+        },
+        {
+          "address": "0x836a",
+          "text": "MOVS            R2, #1",
+          "bytes": "0122"
+        },
+        {
+          "address": "0x836c",
+          "text": "ANDS            R2, R1",
+          "bytes": "0a40"
+        },
+        {
+          "address": "0x836e",
+          "text": "TST             R2, R0",
+          "bytes": "0242"
+        },
+        {
+          "address": "0x8370",
+          "text": "BEQ             loc_83CE",
+          "bytes": "2dd0"
+        },
+        {
+          "address": "0x8372",
+          "text": "LDR             R2, [SP,#8+var_8]",
+          "bytes": "009a"
+        },
+        {
+          "address": "0x8374",
+          "text": "MOVS            R1, R6",
+          "bytes": "3100"
+        },
+        {
+          "address": "0x8376",
+          "text": "ADDS            R1, #0x14",
+          "bytes": "1431"
+        },
+        {
+          "address": "0x8378",
+          "text": "LDR             R0, [SP,#8+var_4]",
+          "bytes": "0198"
+        },
+        {
+          "address": "0x837a",
+          "text": "BL              loc_7FD6+2",
+          "bytes": "fff72dfe"
+        },
+        {
+          "address": "0x837e",
+          "text": "MOVS            R3, R6",
+          "bytes": "3300"
+        },
+        {
+          "address": "0x8380",
+          "text": "ADDS            R3, #0x13",
+          "bytes": "1333"
+        },
+        {
+          "address": "0x8382",
+          "text": "LDR             R2, [SP,#8+var_8]",
+          "bytes": "009a"
+        },
+        {
+          "address": "0x8384",
+          "text": "MOVS            R1, #0",
+          "bytes": "0021"
+        },
+        {
+          "address": "0x8386",
+          "text": "MOVS            R0, R7",
+          "bytes": "3800"
+        },
+        {
+          "address": "0x8388",
+          "text": "BL              sub_7EB4",
+          "bytes": "fff794fd"
+        },
+        {
+          "address": "0x838c",
+          "text": "MOVS            R0, R7",
+          "bytes": "3800"
+        },
+        {
+          "address": "0x838e",
+          "text": "BL              loc_7BEE+2",
+          "bytes": "fff72ffc"
+        },
+        {
+          "address": "0x8392",
+          "text": "ADDS            R0, R0, #1",
+          "bytes": "401c"
+        },
+        {
+          "address": "0x8394",
+          "text": "LSLS            R1, R0, #0x18",
+          "bytes": "0106"
+        },
+        {
+          "address": "0x8396",
+          "text": "LSRS            R1, R1, #0x18",
+          "bytes": "090e"
+        },
+        {
+          "address": "0x8398",
+          "text": "MOVS            R0, R7",
+          "bytes": "3800"
+        },
+        {
+          "address": "0x839a",
+          "text": "BL              sub_7AF8",
+          "bytes": "fff7adfb"
+        },
+        {
+          "address": "0x839e",
+          "text": "BL              sub_7B4C",
+          "bytes": "fff7d5fb"
+        },
+        {
+          "address": "0x83a2",
+          "text": "LDRB            R3, [R6,#0x13]",
+          "bytes": "f37c"
+        },
+        {
+          "address": "0x83a4",
+          "text": "CMP             R3, #0",
+          "bytes": "002b"
+        },
+        {
+          "address": "0x83a6",
+          "text": "BEQ             loc_83AE",
+          "bytes": "02d0"
+        },
+        {
+          "address": "0x83a8",
+          "text": "LDRB            R0, [R6,#0x1D]",
+          "bytes": "707f"
+        },
+        {
+          "address": "0x83aa",
+          "text": "CMP             R3, R0",
+          "bytes": "8342"
+        },
+        {
+          "address": "0x83ac",
+          "text": "BNE             loc_83B6",
+          "bytes": "03d1"
+        },
+        {
+          "address": "0x83ae",
+          "text": "MOVS            R0, #1",
+          "bytes": "0120"
+        },
+        {
+          "address": "0x83b0",
+          "text": "STRB            R0, [R6,#4]",
+          "bytes": "3071"
+        },
+        {
+          "address": "0x83b2",
+          "text": "MOVS            R4, #0xF",
+          "bytes": "0f24"
+        },
+        {
+          "address": "0x83b4",
+          "text": "B               loc_83B8",
+          "bytes": "00e0"
+        },
+        {
+          "address": "0x83b6",
+          "text": "MOVS            R4, #0x10",
+          "bytes": "1024"
+        },
+        {
+          "address": "0x83b8",
+          "text": "MOVS            R0, #1",
+          "bytes": "0120"
+        },
+        {
+          "address": "0x83ba",
+          "text": "STRB            R0, [R6,#0x12]",
+          "bytes": "b074"
+        },
+        {
+          "address": "0x83bc",
+          "text": "LDR             R2, [SP,#8+var_8]",
+          "bytes": "009a"
+        },
+        {
+          "address": "0x83be",
+          "text": "MOVS            R1, R6",
+          "bytes": "3100"
+        },
+        {
+          "address": "0x83c0",
+          "text": "ADDS            R1, #0x14",
+          "bytes": "1431"
+        },
+        {
+          "address": "0x83c2",
+          "text": "LDR             R0, [SP,#8+var_4]",
+          "bytes": "0198"
+        },
+        {
+          "address": "0x83c4",
+          "text": "BL              sub_7F58",
+          "bytes": "fff7c8fd"
+        },
+        {
+          "address": "0x83c8",
+          "text": "LDRB            R0, [R6,#0x13]",
+          "bytes": "f07c"
+        },
+        {
+          "address": "0x83ca",
+          "text": "STRB            R0, [R6,#0x1D]",
+          "bytes": "7077"
+        },
+        {
+          "address": "0x83cc",
+          "text": "B               loc_84F4",
+          "bytes": "92e0"
+        },
+        {
+          "address": "0x83ce",
+          "text": "LDRB            R0, [R6,#0x10]",
+          "bytes": "307c"
+        },
+        {
+          "address": "0x83d0",
+          "text": "CMP             R0, #0",
+          "bytes": "0028"
+        },
+        {
+          "address": "0x83d2",
+          "text": "BEQ             loc_8422",
+          "bytes": "26d0"
+        },
+        {
+          "address": "0x83d4",
+          "text": "STRB            R5, [R6,#0x10]",
+          "bytes": "3574"
+        },
+        {
+          "address": "0x83d6",
+          "text": "STRB            R5, [R6,#1]",
+          "bytes": "7570"
+        },
+        {
+          "address": "0x83d8",
+          "text": "STRB            R5, [R6,#3]",
+          "bytes": "f570"
+        },
+        {
+          "address": "0x83da",
+          "text": "STRB            R5, [R6,#4]",
+          "bytes": "3571"
+        },
+        {
+          "address": "0x83dc",
+          "text": "LDR             R2, [SP,#8+var_8]",
+          "bytes": "009a"
+        },
+        {
+          "address": "0x83de",
+          "text": "MOVS            R1, R6",
+          "bytes": "3100"
+        },
+        {
+          "address": "0x83e0",
+          "text": "ADDS            R1, #0x14",
+          "bytes": "1431"
+        },
+        {
+          "address": "0x83e2",
+          "text": "LDR             R0, [SP,#8+var_4]",
+          "bytes": "0198"
+        },
+        {
+          "address": "0x83e4",
+          "text": "BL              loc_7FD6+2",
+          "bytes": "fff7f8fd"
+        },
+        {
+          "address": "0x83e8",
+          "text": "MOVS            R3, R6",
+          "bytes": "3300"
+        },
+        {
+          "address": "0x83ea",
+          "text": "ADDS            R3, #0x13",
+          "bytes": "1333"
+        },
+        {
+          "address": "0x83ec",
+          "text": "LDR             R2, [SP,#8+var_8]",
+          "bytes": "009a"
+        },
+        {
+          "address": "0x83ee",
+          "text": "MOVS            R1, #0",
+          "bytes": "0021"
+        },
+        {
+          "address": "0x83f0",
+          "text": "MOVS            R0, R7",
+          "bytes": "3800"
+        },
+        {
+          "address": "0x83f2",
+          "text": "BL              sub_7EB4",
+          "bytes": "fff75ffd"
+        },
+        {
+          "address": "0x83f6",
+          "text": "MOVS            R0, R7",
+          "bytes": "3800"
+        },
+        {
+          "address": "0x83f8",
+          "text": "BL              loc_7BEE+2",
+          "bytes": "fff7fafb"
+        },
+        {
+          "address": "0x83fc",
+          "text": "ADDS            R0, R0, #1",
+          "bytes": "401c"
+        },
+        {
+          "address": "0x83fe",
+          "text": "LSLS            R1, R0, #0x18",
+          "bytes": "0106"
+        },
+        {
+          "address": "0x8400",
+          "text": "LSRS            R1, R1, #0x18",
+          "bytes": "090e"
+        },
+        {
+          "address": "0x8402",
+          "text": "MOVS            R0, R7",
+          "bytes": "3800"
+        },
+        {
+          "address": "0x8404",
+          "text": "BL              sub_7AF8",
+          "bytes": "fff778fb"
+        },
+        {
+          "address": "0x8408",
+          "text": "BL              sub_7B4C",
+          "bytes": "fff7a0fb"
+        },
+        {
+          "address": "0x840c",
+          "text": "LDRB            R3, [R6,#0x13]",
+          "bytes": "f37c"
+        },
+        {
+          "address": "0x840e",
+          "text": "CMP             R3, #0",
+          "bytes": "002b"
+        },
+        {
+          "address": "0x8410",
+          "text": "BNE             loc_841A",
+          "bytes": "03d1"
+        },
+        {
+          "address": "0x8412",
+          "text": "MOVS            R0, #1",
+          "bytes": "0120"
+        },
+        {
+          "address": "0x8414",
+          "text": "STRB            R0, [R6,#4]",
+          "bytes": "3071"
+        },
+        {
+          "address": "0x8416",
+          "text": "MOVS            R4, #0xF",
+          "bytes": "0f24"
+        },
+        {
+          "address": "0x8418",
+          "text": "B               loc_841C",
+          "bytes": "00e0"
+        },
+        {
+          "address": "0x841a",
+          "text": "MOVS            R4, #0x10",
+          "bytes": "1024"
+        },
+        {
+          "address": "0x841c",
+          "text": "MOVS            R0, #1",
+          "bytes": "0120"
+        },
+        {
+          "address": "0x841e",
+          "text": "STRB            R0, [R6,#0x11]",
+          "bytes": "7074"
+        },
+        {
+          "address": "0x8420",
+          "text": "B               loc_83BA",
+          "bytes": "cbe7"
+        },
+        {
+          "address": "0x8422",
+          "text": "LDRB            R0, [R6,#0x17]",
+          "bytes": "f07d"
+        },
+        {
+          "address": "0x8424",
+          "text": "CMP             R0, #0",
+          "bytes": "0028"
+        },
+        {
+          "address": "0x8426",
+          "text": "BNE             loc_842C",
+          "bytes": "01d1"
+        },
+        {
+          "address": "0x8428",
+          "text": "MOVS            R0, #1",
+          "bytes": "0120"
+        },
+        {
+          "address": "0x842a",
+          "text": "B               loc_842E",
+          "bytes": "00e0"
+        },
+        {
+          "address": "0x842c",
+          "text": "MOVS            R0, #0",
+          "bytes": "0020"
+        },
+        {
+          "address": "0x842e",
+          "text": "LDRB            R3, [R6,#0x18]",
+          "bytes": "337e"
+        },
+        {
+          "address": "0x8430",
+          "text": "MOVS            R1, R6",
+          "bytes": "3100"
+        },
+        {
+          "address": "0x8432",
+          "text": "ADDS            R1, #0xB8",
+          "bytes": "b831"
+        },
+        {
+          "address": "0x8434",
+          "text": "STR             R1, [SP,#8+var_8]",
+          "bytes": "0091"
+        },
+        {
+          "address": "0x8436",
+          "text": "MOVS            R1, R6",
+          "bytes": "3100"
+        },
+        {
+          "address": "0x8438",
+          "text": "ADDS            R1, #0xA8",
+          "bytes": "a831"
+        },
+        {
+          "address": "0x843a",
+          "text": "STR             R1, [SP,#8+var_4]",
+          "bytes": "0191"
+        },
+        {
+          "address": "0x843c",
+          "text": "LDRB            R1, [R6,#0x16]",
+          "bytes": "b17d"
+        },
+        {
+          "address": "0x843e",
+          "text": "MOVS            R2, #1",
+          "bytes": "0122"
+        },
+        {
+          "address": "0x8440",
+          "text": "ANDS            R2, R1",
+          "bytes": "0a40"
+        },
+        {
+          "address": "0x8442",
+          "text": "TST             R2, R0",
+          "bytes": "0242"
+        },
+        {
+          "address": "0x8444",
+          "text": "BEQ             loc_8490",
+          "bytes": "24d0"
+        },
+        {
+          "address": "0x8446",
+          "text": "LDR             R2, [SP,#8+var_4]",
+          "bytes": "019a"
+        },
+        {
+          "address": "0x8448",
+          "text": "MOVS            R1, R6",
+          "bytes": "3100"
+        },
+        {
+          "address": "0x844a",
+          "text": "ADDS            R1, #0x19",
+          "bytes": "1931"
+        },
+        {
+          "address": "0x844c",
+          "text": "LDR             R0, [SP,#8+var_8]",
+          "bytes": "0098"
+        },
+        {
+          "address": "0x844e",
+          "text": "BL              loc_7FD6+2",
+          "bytes": "fff7c3fd"
+        },
+        {
+          "address": "0x8452",
+          "text": "MOVS            R3, R6",
+          "bytes": "3300"
+        },
+        {
+          "address": "0x8454",
+          "text": "ADDS            R3, #0x18",
+          "bytes": "1833"
+        },
+        {
+          "address": "0x8456",
+          "text": "LDR             R2, [SP,#8+var_4]",
+          "bytes": "019a"
+        },
+        {
+          "address": "0x8458",
+          "text": "MOVS            R1, #4",
+          "bytes": "0421"
+        },
+        {
+          "address": "0x845a",
+          "text": "MOVS            R0, R7",
+          "bytes": "3800"
+        },
+        {
+          "address": "0x845c",
+          "text": "BL              sub_7EB4",
+          "bytes": "fff72afd"
+        },
+        {
+          "address": "0x8460",
+          "text": "MOVS            R0, R7",
+          "bytes": "3800"
+        },
+        {
+          "address": "0x8462",
+          "text": "BL              loc_7BEE+2",
+          "bytes": "fff7c5fb"
+        },
+        {
+          "address": "0x8466",
+          "text": "ADDS            R0, R0, #1",
+          "bytes": "401c"
+        },
+        {
+          "address": "0x8468",
+          "text": "LSLS            R1, R0, #0x18",
+          "bytes": "0106"
+        },
+        {
+          "address": "0x846a",
+          "text": "LSRS            R1, R1, #0x18",
+          "bytes": "090e"
+        },
+        {
+          "address": "0x846c",
+          "text": "MOVS            R0, R7",
+          "bytes": "3800"
+        },
+        {
+          "address": "0x846e",
+          "text": "BL              sub_7AF8",
+          "bytes": "fff743fb"
+        },
+        {
+          "address": "0x8472",
+          "text": "BL              sub_7B38",
+          "bytes": "fff761fb"
+        },
+        {
+          "address": "0x8476",
+          "text": "LDRB            R3, [R6,#0x18]",
+          "bytes": "337e"
+        },
+        {
+          "address": "0x8478",
+          "text": "CMP             R3, #0",
+          "bytes": "002b"
+        },
+        {
+          "address": "0x847a",
+          "text": "BEQ             loc_8482",
+          "bytes": "02d0"
+        },
+        {
+          "address": "0x847c",
+          "text": "LDRB            R0, [R6,#0x1E]",
+          "bytes": "b07f"
+        },
+        {
+          "address": "0x847e",
+          "text": "CMP             R3, R0",
+          "bytes": "8342"
+        },
+        {
+          "address": "0x8480",
+          "text": "BNE             loc_848A",
+          "bytes": "03d1"
+        },
+        {
+          "address": "0x8482",
+          "text": "MOVS            R0, #1",
+          "bytes": "0120"
+        },
+        {
+          "address": "0x8484",
+          "text": "STRB            R0, [R6,#5]",
+          "bytes": "7071"
+        },
+        {
+          "address": "0x8486",
+          "text": "MOVS            R4, #0x11",
+          "bytes": "1124"
+        },
+        {
+          "address": "0x8488",
+          "text": "B               loc_848C",
+          "bytes": "00e0"
+        },
+        {
+          "address": "0x848a",
+          "text": "MOVS            R4, #0x12",
+          "bytes": "1224"
+        },
+        {
+          "address": "0x848c",
+          "text": "MOVS            R0, #1",
+          "bytes": "0120"
+        },
+        {
+          "address": "0x848e",
+          "text": "B               loc_84E2",
+          "bytes": "28e0"
+        },
+        {
+          "address": "0x8490",
+          "text": "LDRB            R0, [R6,#0x15]",
+          "bytes": "707d"
+        },
+        {
+          "address": "0x8492",
+          "text": "CMP             R0, #0",
+          "bytes": "0028"
+        },
+        {
+          "address": "0x8494",
+          "text": "BEQ             loc_84F4",
+          "bytes": "2ed0"
+        },
+        {
+          "address": "0x8496",
+          "text": "STRB            R5, [R6,#0x15]",
+          "bytes": "7575"
+        },
+        {
+          "address": "0x8498",
+          "text": "STRB            R5, [R6]",
+          "bytes": "3570"
+        },
+        {
+          "address": "0x849a",
+          "text": "STRB            R5, [R6,#2]",
+          "bytes": "b570"
+        },
+        {
+          "address": "0x849c",
+          "text": "STRB            R5, [R6,#5]",
+          "bytes": "7571"
+        },
+        {
+          "address": "0x849e",
+          "text": "LDR             R2, [SP,#8+var_4]",
+          "bytes": "019a"
+        },
+        {
+          "address": "0x84a0",
+          "text": "MOVS            R1, R6",
+          "bytes": "3100"
+        },
+        {
+          "address": "0x84a2",
+          "text": "ADDS            R1, #0x19",
+          "bytes": "1931"
+        },
+        {
+          "address": "0x84a4",
+          "text": "LDR             R0, [SP,#8+var_8]",
+          "bytes": "0098"
+        },
+        {
+          "address": "0x84a6",
+          "text": "BL              loc_7FD6+2",
+          "bytes": "fff797fd"
+        },
+        {
+          "address": "0x84aa",
+          "text": "MOVS            R3, R6",
+          "bytes": "3300"
+        },
+        {
+          "address": "0x84ac",
+          "text": "ADDS            R3, #0x18",
+          "bytes": "1833"
+        },
+        {
+          "address": "0x84ae",
+          "text": "LDR             R2, [SP,#8+var_4]",
+          "bytes": "019a"
+        },
+        {
+          "address": "0x84b0",
+          "text": "MOVS            R1, #4",
+          "bytes": "0421"
+        },
+        {
+          "address": "0x84b2",
+          "text": "MOVS            R0, R7",
+          "bytes": "3800"
+        },
+        {
+          "address": "0x84b4",
+          "text": "BL              sub_7EB4",
+          "bytes": "fff7fefc"
+        },
+        {
+          "address": "0x84b8",
+          "text": "MOVS            R0, R7",
+          "bytes": "3800"
+        },
+        {
+          "address": "0x84ba",
+          "text": "BL              loc_7BEE+2",
+          "bytes": "fff799fb"
+        },
+        {
+          "address": "0x84be",
+          "text": "ADDS            R0, R0, #1",
+          "bytes": "401c"
+        },
+        {
+          "address": "0x84c0",
+          "text": "LSLS            R1, R0, #0x18",
+          "bytes": "0106"
+        },
+        {
+          "address": "0x84c2",
+          "text": "LSRS            R1, R1, #0x18",
+          "bytes": "090e"
+        },
+        {
+          "address": "0x84c4",
+          "text": "MOVS            R0, R7",
+          "bytes": "3800"
+        },
+        {
+          "address": "0x84c6",
+          "text": "BL              sub_7AF8",
+          "bytes": "fff717fb"
+        },
+        {
+          "address": "0x84ca",
+          "text": "BL              sub_7B38",
+          "bytes": "fff735fb"
+        },
+        {
+          "address": "0x84ce",
+          "text": "LDRB            R3, [R6,#0x18]",
+          "bytes": "337e"
+        },
+        {
+          "address": "0x84d0",
+          "text": "CMP             R3, #0",
+          "bytes": "002b"
+        },
+        {
+          "address": "0x84d2",
+          "text": "BNE             loc_84DC",
+          "bytes": "03d1"
+        },
+        {
+          "address": "0x84d4",
+          "text": "MOVS            R0, #1",
+          "bytes": "0120"
+        },
+        {
+          "address": "0x84d6",
+          "text": "STRB            R0, [R6,#5]",
+          "bytes": "7071"
+        },
+        {
+          "address": "0x84d8",
+          "text": "MOVS            R4, #0x11",
+          "bytes": "1124"
+        },
+        {
+          "address": "0x84da",
+          "text": "B               loc_84DE",
+          "bytes": "00e0"
+        },
+        {
+          "address": "0x84dc",
+          "text": "MOVS            R4, #0x12",
+          "bytes": "1224"
+        },
+        {
+          "address": "0x84de",
+          "text": "MOVS            R0, #1",
+          "bytes": "0120"
+        },
+        {
+          "address": "0x84e0",
+          "text": "STRB            R0, [R6,#0x16]",
+          "bytes": "b075"
+        },
+        {
+          "address": "0x84e2",
+          "text": "STRB            R0, [R6,#0x17]",
+          "bytes": "f075"
+        },
+        {
+          "address": "0x84e4",
+          "text": "LDR             R2, [SP,#8+var_4]",
+          "bytes": "019a"
+        },
+        {
+          "address": "0x84e6",
+          "text": "MOVS            R1, R6",
+          "bytes": "3100"
+        },
+        {
+          "address": "0x84e8",
+          "text": "ADDS            R1, #0x19",
+          "bytes": "1931"
+        },
+        {
+          "address": "0x84ea",
+          "text": "LDR             R0, [SP,#8+var_8]",
+          "bytes": "0098"
+        },
+        {
+          "address": "0x84ec",
+          "text": "BL              sub_7F58",
+          "bytes": "fff734fd"
+        },
+        {
+          "address": "0x84f0",
+          "text": "LDRB            R0, [R6,#0x18]",
+          "bytes": "307e"
+        },
+        {
+          "address": "0x84f2",
+          "text": "STRB            R0, [R6,#0x1E]",
+          "bytes": "b077"
+        },
+        {
+          "address": "0x84f4",
+          "text": "MOVS            R0, R4",
+          "bytes": "2000"
+        },
+        {
+          "address": "0x84f6",
+          "text": "ADD             SP, SP, #8",
+          "bytes": "02b0"
+        },
+        {
+          "address": "0x84f8",
+          "text": "POP             {R4-R7}",
+          "bytes": "f0bc"
+        },
+        {
+          "address": "0x84fa",
+          "text": "POP             {R1}",
+          "bytes": "02bc"
+        },
+        {
+          "address": "0x84fc",
+          "text": "BX              R1",
+          "bytes": "0847"
+        }
+      ]
+    }
+  ]
+}

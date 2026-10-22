@@ -18,6 +18,7 @@ def main():
     parser.add_argument("image", type=Path)
     parser.add_argument("--catalog", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--entries", help="comma-separated known Thumb entry addresses")
     args = parser.parse_args()
     data = args.image.read_bytes()
     catalog = json.loads(args.catalog.read_text(encoding="utf-8"))
@@ -35,6 +36,10 @@ def main():
     entries = []
     critical = {0x4818, 0x499C, 0x4A94, 0x4B38, 0x4D38, 0x50F0, 0x59E8,
                 0x601C, 0x6FA0, 0x7BF8, 0x7C1C, 0x7C68, 0x7CC4, 0x7D80}
+    if args.entries:
+        critical = {int(value, 0) for value in args.entries.split(",")}
+    if not critical <= {int(row["entry"], 0) for row in catalog["entries"]}:
+        raise ValueError("requested entry is absent from the catalog")
     for row in catalog["entries"]:
         start = int(row["entry"], 0)
         # Limit this pass to entries whose Thumb state is checked by IDA traces.

@@ -51,6 +51,8 @@ python -m unittest tests.test_firmware_audit -v                        # audit n
 
 Latest review: [October 22 verification](docs/VERIFICATION_2026-10-22.md) covers strict firmware parsing, fresh IDA/Binary Ninja checks and remaining limits.
 
+The subsequent [offline write-path review](docs/OFFLINE_WRITE_PATH_REVIEW.md) traces receive → staging → validation → control, corrects the 14-byte frame budget, and expands semantic coverage to 21 of 145 entries. It includes a bounded ingest model and the complete remaining review queue.
+
 ## Layout
 
 ```

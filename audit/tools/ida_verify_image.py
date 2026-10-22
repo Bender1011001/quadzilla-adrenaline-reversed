@@ -21,8 +21,11 @@ def main():
     if mapped != raw:
         raise RuntimeError("database bytes differ from supplied firmware")
     rows = []
-    for start in (0x4818, 0x499C, 0x4A94, 0x4B38, 0x4D38, 0x50F0, 0x59E8,
-                  0x601C, 0x6FA0, 0x7BF8, 0x7C1C, 0x7C68, 0x7CC4, 0x7D80):
+    targets = (0x4818, 0x499C, 0x4A94, 0x4B38, 0x4D38, 0x50F0, 0x59E8,
+               0x601C, 0x6FA0, 0x7BF8, 0x7C1C, 0x7C68, 0x7CC4, 0x7D80)
+    if len(idc.ARGV) > 3:
+        targets = tuple(int(value, 0) for value in idc.ARGV[3].split(","))
+    for start in targets:
         fn = ida_funcs.get_func(start)
         if fn is None or fn.start_ea != start:
             raise RuntimeError(f"missing entry {start:#x}")

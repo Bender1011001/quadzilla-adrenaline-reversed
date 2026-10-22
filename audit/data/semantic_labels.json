@@ -6,85 +6,191 @@
       "entry": "0x4818",
       "label": "TPS/input gate that reads SRAM byte 0x2005D7",
       "assurance": "static_instruction_trace",
-      "evidence": ["quadzilla_mcu_map.json:functions.sub_4818"]
+      "evidence": [
+        "quadzilla_mcu_map.json:functions.sub_4818"
+      ]
     },
     {
       "entry": "0x499c",
       "label": "Backdown-percentage threshold walk used to update AID 13",
       "assurance": "static_closed_chain",
-      "evidence": ["quadzilla_vp44_chain.json:roles.backdown_percent"]
+      "evidence": [
+        "quadzilla_vp44_chain.json:roles.backdown_percent"
+      ]
     },
     {
       "entry": "0x4a94",
       "label": "Applied-stretch percentage arithmetic using the AID 85 working copy",
       "assurance": "static_closed_chain",
-      "evidence": ["quadzilla_mcu_map.json:functions.sub_4A94", "quadzilla_vp44_chain.json:roles.internal_limited_stretch"]
+      "evidence": [
+        "quadzilla_mcu_map.json:functions.sub_4A94",
+        "quadzilla_vp44_chain.json:roles.internal_limited_stretch"
+      ]
     },
     {
       "entry": "0x4b38",
       "label": "Capture/fuel path that copies 0x2005E8 to telemetry word 0x200604",
       "assurance": "static_instruction_trace",
-      "evidence": ["quadzilla_mcu_map.json:functions.sub_4B38"]
+      "evidence": [
+        "quadzilla_mcu_map.json:functions.sub_4B38"
+      ]
     },
     {
       "entry": "0x4d38",
       "label": "Percentage/scalar arithmetic feeding the 0x200604 telemetry path",
       "assurance": "static_instruction_trace",
-      "evidence": ["quadzilla_mcu_map.json:functions.sub_4D38"]
+      "evidence": [
+        "quadzilla_mcu_map.json:functions.sub_4D38"
+      ]
     },
     {
       "entry": "0x50f0",
       "label": "Main control loop that applies AID 13 derate and drives the TC0 path",
       "assurance": "static_closed_chain",
-      "evidence": ["quadzilla_mcu_map.json:functions.sub_50F0", "quadzilla_vp44_chain.json:hardware_output"]
+      "evidence": [
+        "quadzilla_mcu_map.json:functions.sub_50F0",
+        "quadzilla_vp44_chain.json:hardware_output"
+      ]
     },
     {
       "entry": "0x59e8",
       "label": "Incoming capture unpacker and writer for the 0x2005C4 SRAM structure",
       "assurance": "static_instruction_trace",
-      "evidence": ["quadzilla_mcu_map.json:functions.sub_59E8"]
+      "evidence": [
+        "quadzilla_mcu_map.json:functions.sub_59E8"
+      ]
     },
     {
       "entry": "0x5f34",
       "label": "Writer of SRAM byte 0x200BE7; live AID meaning remains unproven",
       "assurance": "static_instruction_trace",
-      "evidence": ["quadzilla_mcu_map.json:functions.sub_5F34"]
+      "evidence": [
+        "quadzilla_mcu_map.json:functions.sub_5F34"
+      ]
     },
     {
       "entry": "0x601c",
       "label": "AID ingest and validation dispatcher, including AID 85 clamp/echo",
       "assurance": "static_instruction_trace",
-      "evidence": ["quadzilla_mcu_map.json:functions.sub_601C", "quadzilla_vp44_chain.json:roles.requested_stretch_setting"]
+      "evidence": [
+        "quadzilla_mcu_map.json:functions.sub_601C",
+        "quadzilla_vp44_chain.json:roles.requested_stretch_setting"
+      ]
     },
     {
       "entry": "0x6fa0",
       "label": "AT91 TC channel write helper used for the TC0_RC output",
       "assurance": "static_closed_chain",
-      "evidence": ["quadzilla_mcu_map.json:functions.sub_6FA0", "quadzilla_vp44_chain.json:hardware_output"]
+      "evidence": [
+        "quadzilla_mcu_map.json:functions.sub_6FA0",
+        "quadzilla_vp44_chain.json:hardware_output"
+      ]
     },
     {
       "entry": "0x7bf8",
       "label": "AID payload-width selector using the 75/150/185/220 brackets",
       "assurance": "static_instruction_trace",
-      "evidence": ["CONTEXT.md:Architecture Quirks", "quadzilla_x2com.md"]
+      "evidence": [
+        "CONTEXT.md:Architecture Quirks",
+        "quadzilla_x2com.md"
+      ]
     },
     {
       "entry": "0x7c1c",
       "label": "AID-to-SRAM resolver for pointer table 1",
       "assurance": "static_instruction_trace",
-      "evidence": ["CONTEXT.md:Architecture Quirks", "quadzilla_aid_map.json"]
+      "evidence": [
+        "CONTEXT.md:Architecture Quirks",
+        "quadzilla_aid_map.json"
+      ]
     },
     {
       "entry": "0x7c68",
       "label": "AID-to-SRAM resolver for pointer table 2",
       "assurance": "static_instruction_trace",
-      "evidence": ["CONTEXT.md:Architecture Quirks", "quadzilla_aid_map.json"]
+      "evidence": [
+        "CONTEXT.md:Architecture Quirks",
+        "quadzilla_aid_map.json"
+      ]
     },
     {
       "entry": "0x7d80",
       "label": "AID data reader that consumes the pointer returned by the table-2 resolver",
       "assurance": "static_instruction_trace",
-      "evidence": ["CONTEXT.md:Architecture Quirks", "firmware_v2.8.4HF.bin.asm"]
+      "evidence": [
+        "CONTEXT.md:Architecture Quirks",
+        "firmware_v2.8.4HF.bin.asm"
+      ]
+    },
+    {
+      "entry": "0x76cc",
+      "label": "Control-cycle orchestrator: capture unpack, AID validation, main control, and conditional communications",
+      "assurance": "static_instruction_trace",
+      "evidence": [
+        "audit/data/write_path_ida.json:entries.0x76cc",
+        "audit/data/write_path_binaryninja.json:entries.0x76cc",
+        "docs/OFFLINE_WRITE_PATH_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x7b60",
+      "label": "CRC-8/SAE-J1850 computation used by the MCU frame parser and builder",
+      "assurance": "static_instruction_trace",
+      "evidence": [
+        "audit/data/write_path_ida.json:entries.0x7b60",
+        "audit/data/write_path_binaryninja.json:entries.0x7b60",
+        "docs/OFFLINE_WRITE_PATH_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x7cc4",
+      "label": "Payload-byte walker that resolves AIDs and writes table-1 staging SRAM before validation",
+      "assurance": "static_instruction_trace",
+      "evidence": [
+        "audit/data/write_path_ida.json:entries.0x7cc4",
+        "audit/data/write_path_binaryninja.json:entries.0x7cc4",
+        "docs/OFFLINE_WRITE_PATH_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x7e64",
+      "label": "Frame payload parser that checks CRC residue and delegates to the AID byte walker",
+      "assurance": "static_instruction_trace",
+      "evidence": [
+        "audit/data/write_path_ida.json:entries.0x7e64",
+        "audit/data/write_path_binaryninja.json:entries.0x7e64",
+        "docs/OFFLINE_WRITE_PATH_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x7eb4",
+      "label": "Frame builder combining message-type header, table-2 data reader, and CRC",
+      "assurance": "static_instruction_trace",
+      "evidence": [
+        "audit/data/write_path_ida.json:entries.0x7eb4",
+        "audit/data/write_path_binaryninja.json:entries.0x7eb4",
+        "docs/OFFLINE_WRITE_PATH_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x7efc",
+      "label": "Conditional outgoing-data queue setup with busy-flag guards",
+      "assurance": "static_instruction_trace",
+      "evidence": [
+        "audit/data/write_path_ida.json:entries.0x7efc",
+        "audit/data/write_path_binaryninja.json:entries.0x7efc",
+        "docs/OFFLINE_WRITE_PATH_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x8038",
+      "label": "Receive-buffer and message-type dispatcher returning parsed AID lists to the validator",
+      "assurance": "static_instruction_trace",
+      "evidence": [
+        "audit/data/write_path_ida.json:entries.0x8038",
+        "audit/data/write_path_binaryninja.json:entries.0x8038",
+        "docs/OFFLINE_WRITE_PATH_REVIEW.md"
+      ]
     }
   ],
   "limitations": [

@@ -1,0 +1,1346 @@
+{
+  "format": "quadzilla-offline-review-queue-v1",
+  "raw_sha256": "1ae519ba6194e8f7bdaaa94333a83a9e6fda3b0563f87f7d48383b37288c1780",
+  "method": "undirected call proximity; not execution reachability, semantic proof, or severity",
+  "anchors": [
+    "0x601c",
+    "0x50f0",
+    "0x6fa0",
+    "0x8038",
+    "0x7cc4"
+  ],
+  "remaining_entries": 124,
+  "queue": [
+    {
+      "entry": "0x4384",
+      "undirected_call_distance": 1,
+      "anchor_path": [
+        "0x601c",
+        "0x4384"
+      ],
+      "reference_regions": {
+        "image": 46,
+        "sram": 80
+      }
+    },
+    {
+      "entry": "0x4650",
+      "undirected_call_distance": 1,
+      "anchor_path": [
+        "0x50f0",
+        "0x4650"
+      ],
+      "reference_regions": {}
+    },
+    {
+      "entry": "0x4674",
+      "undirected_call_distance": 1,
+      "anchor_path": [
+        "0x50f0",
+        "0x4674"
+      ],
+      "reference_regions": {}
+    },
+    {
+      "entry": "0x4698",
+      "undirected_call_distance": 1,
+      "anchor_path": [
+        "0x50f0",
+        "0x4698"
+      ],
+      "reference_regions": {
+        "image": 3,
+        "sram": 3
+      }
+    },
+    {
+      "entry": "0x46d0",
+      "undirected_call_distance": 1,
+      "anchor_path": [
+        "0x50f0",
+        "0x46d0"
+      ],
+      "reference_regions": {
+        "image": 11,
+        "sram": 5
+      }
+    },
+    {
+      "entry": "0x47b0",
+      "undirected_call_distance": 1,
+      "anchor_path": [
+        "0x601c",
+        "0x47b0"
+      ],
+      "reference_regions": {
+        "image": 3,
+        "sram": 20
+      }
+    },
+    {
+      "entry": "0x48e8",
+      "undirected_call_distance": 1,
+      "anchor_path": [
+        "0x50f0",
+        "0x48e8"
+      ],
+      "reference_regions": {
+        "image": 6,
+        "sram": 7
+      }
+    },
+    {
+      "entry": "0x495c",
+      "undirected_call_distance": 1,
+      "anchor_path": [
+        "0x50f0",
+        "0x495c"
+      ],
+      "reference_regions": {
+        "image": 1
+      }
+    },
+    {
+      "entry": "0x497c",
+      "undirected_call_distance": 1,
+      "anchor_path": [
+        "0x50f0",
+        "0x497c"
+      ],
+      "reference_regions": {}
+    },
+    {
+      "entry": "0x506c",
+      "undirected_call_distance": 1,
+      "anchor_path": [
+        "0x50f0",
+        "0x506c"
+      ],
+      "reference_regions": {
+        "image": 5,
+        "sram": 7
+      }
+    },
+    {
+      "entry": "0x56fc",
+      "undirected_call_distance": 1,
+      "anchor_path": [
+        "0x50f0",
+        "0x56fc"
+      ],
+      "reference_regions": {
+        "image": 2
+      }
+    },
+    {
+      "entry": "0x5704",
+      "undirected_call_distance": 1,
+      "anchor_path": [
+        "0x50f0",
+        "0x5704"
+      ],
+      "reference_regions": {
+        "image": 2
+      }
+    },
+    {
+      "entry": "0x5714",
+      "undirected_call_distance": 1,
+      "anchor_path": [
+        "0x50f0",
+        "0x5714"
+      ],
+      "reference_regions": {
+        "image": 2
+      }
+    },
+    {
+      "entry": "0x5f04",
+      "undirected_call_distance": 1,
+      "anchor_path": [
+        "0x50f0",
+        "0x5f04"
+      ],
+      "reference_regions": {
+        "image": 2
+      }
+    },
+    {
+      "entry": "0x6042",
+      "undirected_call_distance": 1,
+      "anchor_path": [
+        "0x601c",
+        "0x6042"
+      ],
+      "reference_regions": {}
+    },
+    {
+      "entry": "0x6048",
+      "undirected_call_distance": 1,
+      "anchor_path": [
+        "0x601c",
+        "0x6048"
+      ],
+      "reference_regions": {
+        "image": 1
+      }
+    },
+    {
+      "entry": "0x604c",
+      "undirected_call_distance": 1,
+      "anchor_path": [
+        "0x601c",
+        "0x604c"
+      ],
+      "reference_regions": {}
+    },
+    {
+      "entry": "0x6b08",
+      "undirected_call_distance": 1,
+      "anchor_path": [
+        "0x601c",
+        "0x6b08"
+      ],
+      "reference_regions": {
+        "image": 2
+      }
+    },
+    {
+      "entry": "0x6b10",
+      "undirected_call_distance": 1,
+      "anchor_path": [
+        "0x601c",
+        "0x6b10"
+      ],
+      "reference_regions": {
+        "image": 2
+      }
+    },
+    {
+      "entry": "0x7120",
+      "undirected_call_distance": 1,
+      "anchor_path": [
+        "0x50f0",
+        "0x7120"
+      ],
+      "reference_regions": {
+        "image": 2
+      }
+    },
+    {
+      "entry": "0x7128",
+      "undirected_call_distance": 1,
+      "anchor_path": [
+        "0x601c",
+        "0x7128"
+      ],
+      "reference_regions": {
+        "image": 2
+      }
+    },
+    {
+      "entry": "0x7138",
+      "undirected_call_distance": 1,
+      "anchor_path": [
+        "0x601c",
+        "0x7138"
+      ],
+      "reference_regions": {
+        "image": 2
+      }
+    },
+    {
+      "entry": "0x7150",
+      "undirected_call_distance": 1,
+      "anchor_path": [
+        "0x50f0",
+        "0x7150"
+      ],
+      "reference_regions": {
+        "image": 2
+      }
+    },
+    {
+      "entry": "0x7160",
+      "undirected_call_distance": 1,
+      "anchor_path": [
+        "0x601c",
+        "0x7160"
+      ],
+      "reference_regions": {
+        "image": 2
+      }
+    },
+    {
+      "entry": "0x74e8",
+      "undirected_call_distance": 1,
+      "anchor_path": [
+        "0x50f0",
+        "0x74e8"
+      ],
+      "reference_regions": {
+        "image": 32,
+        "peripheral": 22,
+        "sram": 3
+      }
+    },
+    {
+      "entry": "0x7b10",
+      "undirected_call_distance": 1,
+      "anchor_path": [
+        "0x8038",
+        "0x7b10"
+      ],
+      "reference_regions": {
+        "image": 1,
+        "sram": 1
+      }
+    },
+    {
+      "entry": "0x7b1c",
+      "undirected_call_distance": 1,
+      "anchor_path": [
+        "0x8038",
+        "0x7b1c"
+      ],
+      "reference_regions": {}
+    },
+    {
+      "entry": "0x7b28",
+      "undirected_call_distance": 1,
+      "anchor_path": [
+        "0x8038",
+        "0x7b28"
+      ],
+      "reference_regions": {
+        "image": 1,
+        "sram": 1
+      }
+    },
+    {
+      "entry": "0x7b30",
+      "undirected_call_distance": 1,
+      "anchor_path": [
+        "0x8038",
+        "0x7b30"
+      ],
+      "reference_regions": {
+        "image": 1,
+        "sram": 1
+      }
+    },
+    {
+      "entry": "0x7bcc",
+      "undirected_call_distance": 1,
+      "anchor_path": [
+        "0x8038",
+        "0x7bcc"
+      ],
+      "reference_regions": {}
+    },
+    {
+      "entry": "0x7be8",
+      "undirected_call_distance": 1,
+      "anchor_path": [
+        "0x8038",
+        "0x7be8"
+      ],
+      "reference_regions": {}
+    },
+    {
+      "entry": "0x7bf0",
+      "undirected_call_distance": 1,
+      "anchor_path": [
+        "0x8038",
+        "0x7bf0"
+      ],
+      "reference_regions": {}
+    },
+    {
+      "entry": "0x7f58",
+      "undirected_call_distance": 1,
+      "anchor_path": [
+        "0x8038",
+        "0x7f58"
+      ],
+      "reference_regions": {}
+    },
+    {
+      "entry": "0x7fd8",
+      "undirected_call_distance": 1,
+      "anchor_path": [
+        "0x8038",
+        "0x7fd8"
+      ],
+      "reference_regions": {}
+    },
+    {
+      "entry": "0x8574",
+      "undirected_call_distance": 1,
+      "anchor_path": [
+        "0x50f0",
+        "0x8574"
+      ],
+      "reference_regions": {}
+    },
+    {
+      "entry": "0x8584",
+      "undirected_call_distance": 1,
+      "anchor_path": [
+        "0x50f0",
+        "0x8584"
+      ],
+      "reference_regions": {}
+    },
+    {
+      "entry": "0x4214",
+      "undirected_call_distance": 2,
+      "anchor_path": [
+        "0x601c",
+        "0x76cc",
+        "0x4214"
+      ],
+      "reference_regions": {
+        "image": 13,
+        "peripheral": 7,
+        "sram": 12
+      }
+    },
+    {
+      "entry": "0x4330",
+      "undirected_call_distance": 2,
+      "anchor_path": [
+        "0x50f0",
+        "0x74e8",
+        "0x4330"
+      ],
+      "reference_regions": {
+        "image": 9,
+        "peripheral": 5,
+        "sram": 3
+      }
+    },
+    {
+      "entry": "0x575c",
+      "undirected_call_distance": 2,
+      "anchor_path": [
+        "0x50f0",
+        "0x74e8",
+        "0x575c"
+      ],
+      "reference_regions": {
+        "image": 7,
+        "peripheral": 1,
+        "sram": 29
+      }
+    },
+    {
+      "entry": "0x5cf0",
+      "undirected_call_distance": 2,
+      "anchor_path": [
+        "0x601c",
+        "0x76cc",
+        "0x5cf0"
+      ],
+      "reference_regions": {
+        "image": 7,
+        "peripheral": 2,
+        "sram": 34
+      }
+    },
+    {
+      "entry": "0x5f0c",
+      "undirected_call_distance": 2,
+      "anchor_path": [
+        "0x50f0",
+        "0x46d0",
+        "0x5f0c"
+      ],
+      "reference_regions": {
+        "image": 2
+      }
+    },
+    {
+      "entry": "0x604e",
+      "undirected_call_distance": 2,
+      "anchor_path": [
+        "0x601c",
+        "0x4384",
+        "0x604e"
+      ],
+      "reference_regions": {}
+    },
+    {
+      "entry": "0x6bd8",
+      "undirected_call_distance": 2,
+      "anchor_path": [
+        "0x50f0",
+        "0x74e8",
+        "0x6bd8"
+      ],
+      "reference_regions": {
+        "image": 14,
+        "peripheral": 11
+      }
+    },
+    {
+      "entry": "0x6c94",
+      "undirected_call_distance": 2,
+      "anchor_path": [
+        "0x601c",
+        "0x7128",
+        "0x6c94"
+      ],
+      "reference_regions": {
+        "image": 18,
+        "peripheral": 2,
+        "sram": 146
+      }
+    },
+    {
+      "entry": "0x6fb4",
+      "undirected_call_distance": 2,
+      "anchor_path": [
+        "0x50f0",
+        "0x74e8",
+        "0x6fb4"
+      ],
+      "reference_regions": {
+        "image": 25,
+        "peripheral": 14,
+        "sram": 25
+      }
+    },
+    {
+      "entry": "0x7140",
+      "undirected_call_distance": 2,
+      "anchor_path": [
+        "0x50f0",
+        "0x46d0",
+        "0x7140"
+      ],
+      "reference_regions": {
+        "image": 2
+      }
+    },
+    {
+      "entry": "0x7148",
+      "undirected_call_distance": 2,
+      "anchor_path": [
+        "0x50f0",
+        "0x46d0",
+        "0x7148"
+      ],
+      "reference_regions": {
+        "image": 2
+      }
+    },
+    {
+      "entry": "0x720c",
+      "undirected_call_distance": 2,
+      "anchor_path": [
+        "0x8038",
+        "0x7b1c",
+        "0x720c"
+      ],
+      "reference_regions": {
+        "image": 8,
+        "peripheral": 7,
+        "sram": 1
+      }
+    },
+    {
+      "entry": "0x725c",
+      "undirected_call_distance": 2,
+      "anchor_path": [
+        "0x50f0",
+        "0x74e8",
+        "0x725c"
+      ],
+      "reference_regions": {
+        "image": 27,
+        "peripheral": 23,
+        "sram": 1
+      }
+    },
+    {
+      "entry": "0x77b8",
+      "undirected_call_distance": 2,
+      "anchor_path": [
+        "0x601c",
+        "0x4384",
+        "0x77b8"
+      ],
+      "reference_regions": {
+        "image": 87,
+        "peripheral": 15,
+        "sram": 84
+      }
+    },
+    {
+      "entry": "0x800c",
+      "undirected_call_distance": 2,
+      "anchor_path": [
+        "0x50f0",
+        "0x74e8",
+        "0x800c"
+      ],
+      "reference_regions": {
+        "image": 1,
+        "sram": 14
+      }
+    },
+    {
+      "entry": "0x81a8",
+      "undirected_call_distance": 2,
+      "anchor_path": [
+        "0x601c",
+        "0x76cc",
+        "0x81a8"
+      ],
+      "reference_regions": {
+        "image": 1,
+        "sram": 63
+      }
+    },
+    {
+      "entry": "0x8678",
+      "undirected_call_distance": 2,
+      "anchor_path": [
+        "0x601c",
+        "0x7128",
+        "0x8678"
+      ],
+      "reference_regions": {}
+    },
+    {
+      "entry": "0x86a8",
+      "undirected_call_distance": 2,
+      "anchor_path": [
+        "0x601c",
+        "0x7128",
+        "0x86a8"
+      ],
+      "reference_regions": {}
+    },
+    {
+      "entry": "0x41f0",
+      "undirected_call_distance": 3,
+      "anchor_path": [
+        "0x601c",
+        "0x76cc",
+        "0x4214",
+        "0x41f0"
+      ],
+      "reference_regions": {}
+    },
+    {
+      "entry": "0x571c",
+      "undirected_call_distance": 3,
+      "anchor_path": [
+        "0x601c",
+        "0x76cc",
+        "0x5cf0",
+        "0x571c"
+      ],
+      "reference_regions": {
+        "image": 1,
+        "peripheral": 1
+      }
+    },
+    {
+      "entry": "0x573c",
+      "undirected_call_distance": 3,
+      "anchor_path": [
+        "0x601c",
+        "0x7128",
+        "0x59e8",
+        "0x573c"
+      ],
+      "reference_regions": {
+        "image": 1,
+        "peripheral": 1
+      }
+    },
+    {
+      "entry": "0x5ebc",
+      "undirected_call_distance": 3,
+      "anchor_path": [
+        "0x601c",
+        "0x7128",
+        "0x59e8",
+        "0x5ebc"
+      ],
+      "reference_regions": {
+        "image": 4,
+        "sram": 4
+      }
+    },
+    {
+      "entry": "0x5f14",
+      "undirected_call_distance": 3,
+      "anchor_path": [
+        "0x601c",
+        "0x4384",
+        "0x77b8",
+        "0x5f14"
+      ],
+      "reference_regions": {
+        "external_or_literal": 1,
+        "image": 2
+      }
+    },
+    {
+      "entry": "0x6b48",
+      "undirected_call_distance": 3,
+      "anchor_path": [
+        "0x601c",
+        "0x76cc",
+        "0x5cf0",
+        "0x6b48"
+      ],
+      "reference_regions": {}
+    },
+    {
+      "entry": "0x6b64",
+      "undirected_call_distance": 3,
+      "anchor_path": [
+        "0x601c",
+        "0x7128",
+        "0x59e8",
+        "0x6b64"
+      ],
+      "reference_regions": {}
+    },
+    {
+      "entry": "0x6b8c",
+      "undirected_call_distance": 3,
+      "anchor_path": [
+        "0x601c",
+        "0x7128",
+        "0x59e8",
+        "0x6b8c"
+      ],
+      "reference_regions": {}
+    },
+    {
+      "entry": "0x6b9c",
+      "undirected_call_distance": 3,
+      "anchor_path": [
+        "0x601c",
+        "0x7128",
+        "0x59e8",
+        "0x6b9c"
+      ],
+      "reference_regions": {
+        "image": 1,
+        "peripheral": 1
+      }
+    },
+    {
+      "entry": "0x7158",
+      "undirected_call_distance": 3,
+      "anchor_path": [
+        "0x601c",
+        "0x7128",
+        "0x6c94",
+        "0x7158"
+      ],
+      "reference_regions": {
+        "image": 2
+      }
+    },
+    {
+      "entry": "0x7168",
+      "undirected_call_distance": 3,
+      "anchor_path": [
+        "0x601c",
+        "0x7128",
+        "0x6c94",
+        "0x7168"
+      ],
+      "reference_regions": {
+        "image": 2
+      }
+    },
+    {
+      "entry": "0x7364",
+      "undirected_call_distance": 3,
+      "anchor_path": [
+        "0x601c",
+        "0x76cc",
+        "0x4214",
+        "0x7364"
+      ],
+      "reference_regions": {
+        "image": 1
+      }
+    },
+    {
+      "entry": "0x7380",
+      "undirected_call_distance": 3,
+      "anchor_path": [
+        "0x601c",
+        "0x76cc",
+        "0x4214",
+        "0x7380"
+      ],
+      "reference_regions": {
+        "image": 2,
+        "sram": 1
+      }
+    },
+    {
+      "entry": "0x7398",
+      "undirected_call_distance": 3,
+      "anchor_path": [
+        "0x601c",
+        "0x76cc",
+        "0x4214",
+        "0x7398"
+      ],
+      "reference_regions": {
+        "image": 3,
+        "sram": 1
+      }
+    },
+    {
+      "entry": "0x73bc",
+      "undirected_call_distance": 3,
+      "anchor_path": [
+        "0x601c",
+        "0x76cc",
+        "0x4214",
+        "0x73bc"
+      ],
+      "reference_regions": {
+        "image": 1
+      }
+    },
+    {
+      "entry": "0x73cc",
+      "undirected_call_distance": 3,
+      "anchor_path": [
+        "0x601c",
+        "0x4384",
+        "0x77b8",
+        "0x73cc"
+      ],
+      "reference_regions": {
+        "image": 1
+      }
+    },
+    {
+      "entry": "0x73d4",
+      "undirected_call_distance": 3,
+      "anchor_path": [
+        "0x601c",
+        "0x4384",
+        "0x77b8",
+        "0x73d4"
+      ],
+      "reference_regions": {
+        "image": 1
+      }
+    },
+    {
+      "entry": "0x73dc",
+      "undirected_call_distance": 3,
+      "anchor_path": [
+        "0x601c",
+        "0x4384",
+        "0x77b8",
+        "0x73dc"
+      ],
+      "reference_regions": {
+        "image": 1
+      }
+    },
+    {
+      "entry": "0x73e4",
+      "undirected_call_distance": 3,
+      "anchor_path": [
+        "0x601c",
+        "0x4384",
+        "0x77b8",
+        "0x73e4"
+      ],
+      "reference_regions": {
+        "external_or_literal": 1,
+        "image": 1
+      }
+    },
+    {
+      "entry": "0x760c",
+      "undirected_call_distance": 3,
+      "anchor_path": [
+        "0x601c",
+        "0x4384",
+        "0x77b8",
+        "0x760c"
+      ],
+      "reference_regions": {
+        "image": 14,
+        "peripheral": 1,
+        "sram": 13
+      }
+    },
+    {
+      "entry": "0x7af8",
+      "undirected_call_distance": 3,
+      "anchor_path": [
+        "0x601c",
+        "0x76cc",
+        "0x81a8",
+        "0x7af8"
+      ],
+      "reference_regions": {}
+    },
+    {
+      "entry": "0x7b04",
+      "undirected_call_distance": 3,
+      "anchor_path": [
+        "0x601c",
+        "0x76cc",
+        "0x81a8",
+        "0x7b04"
+      ],
+      "reference_regions": {}
+    },
+    {
+      "entry": "0x7b38",
+      "undirected_call_distance": 3,
+      "anchor_path": [
+        "0x601c",
+        "0x76cc",
+        "0x81a8",
+        "0x7b38"
+      ],
+      "reference_regions": {
+        "image": 2,
+        "sram": 2
+      }
+    },
+    {
+      "entry": "0x7b4c",
+      "undirected_call_distance": 3,
+      "anchor_path": [
+        "0x601c",
+        "0x76cc",
+        "0x81a8",
+        "0x7b4c"
+      ],
+      "reference_regions": {
+        "image": 2,
+        "sram": 2
+      }
+    },
+    {
+      "entry": "0x7f28",
+      "undirected_call_distance": 3,
+      "anchor_path": [
+        "0x601c",
+        "0x7128",
+        "0x6c94",
+        "0x7f28"
+      ],
+      "reference_regions": {
+        "image": 1,
+        "sram": 5
+      }
+    },
+    {
+      "entry": "0x7f40",
+      "undirected_call_distance": 3,
+      "anchor_path": [
+        "0x601c",
+        "0x7128",
+        "0x6c94",
+        "0x7f40"
+      ],
+      "reference_regions": {
+        "image": 1,
+        "sram": 6
+      }
+    },
+    {
+      "entry": "0x8504",
+      "undirected_call_distance": 3,
+      "anchor_path": [
+        "0x601c",
+        "0x7128",
+        "0x59e8",
+        "0x8504"
+      ],
+      "reference_regions": {}
+    },
+    {
+      "entry": "0x8564",
+      "undirected_call_distance": 3,
+      "anchor_path": [
+        "0x601c",
+        "0x7128",
+        "0x59e8",
+        "0x8564"
+      ],
+      "reference_regions": {}
+    },
+    {
+      "entry": "0x5e04",
+      "undirected_call_distance": 4,
+      "anchor_path": [
+        "0x601c",
+        "0x7128",
+        "0x59e8",
+        "0x5ebc",
+        "0x5e04"
+      ],
+      "reference_regions": {
+        "image": 7,
+        "peripheral": 1,
+        "sram": 8
+      }
+    },
+    {
+      "entry": "0x6b20",
+      "undirected_call_distance": 4,
+      "anchor_path": [
+        "0x601c",
+        "0x4384",
+        "0x77b8",
+        "0x73e4",
+        "0x6b20"
+      ],
+      "reference_regions": {}
+    },
+    {
+      "entry": "0x71d0",
+      "undirected_call_distance": 4,
+      "anchor_path": [
+        "0x601c",
+        "0x76cc",
+        "0x81a8",
+        "0x7af8",
+        "0x71d0"
+      ],
+      "reference_regions": {
+        "image": 7,
+        "peripheral": 6,
+        "sram": 1
+      }
+    },
+    {
+      "entry": "0x8530",
+      "undirected_call_distance": 4,
+      "anchor_path": [
+        "0x601c",
+        "0x4384",
+        "0x77b8",
+        "0x5f14",
+        "0x8530"
+      ],
+      "reference_regions": {}
+    },
+    {
+      "entry": "0x4114",
+      "undirected_call_distance": 5,
+      "anchor_path": [
+        "0x601c",
+        "0x4384",
+        "0x77b8",
+        "0x5f14",
+        "0x8530",
+        "0x4114"
+      ],
+      "reference_regions": {
+        "image": 2
+      }
+    },
+    {
+      "entry": "0x7498",
+      "undirected_call_distance": 5,
+      "anchor_path": [
+        "0x601c",
+        "0x4384",
+        "0x77b8",
+        "0x73e4",
+        "0x6b20",
+        "0x7498"
+      ],
+      "reference_regions": {
+        "image": 1,
+        "sram": 4
+      }
+    },
+    {
+      "entry": "0x74b4",
+      "undirected_call_distance": 5,
+      "anchor_path": [
+        "0x601c",
+        "0x4384",
+        "0x77b8",
+        "0x73e4",
+        "0x6b20",
+        "0x74b4"
+      ],
+      "reference_regions": {
+        "image": 1,
+        "sram": 3
+      }
+    },
+    {
+      "entry": "0x4044",
+      "undirected_call_distance": 6,
+      "anchor_path": [
+        "0x601c",
+        "0x4384",
+        "0x77b8",
+        "0x5f14",
+        "0x8530",
+        "0x4114",
+        "0x4044"
+      ],
+      "reference_regions": {}
+    },
+    {
+      "entry": "0x854c",
+      "undirected_call_distance": 6,
+      "anchor_path": [
+        "0x601c",
+        "0x4384",
+        "0x77b8",
+        "0x5f14",
+        "0x8530",
+        "0x4114",
+        "0x854c"
+      ],
+      "reference_regions": {}
+    },
+    {
+      "entry": "0x414c",
+      "undirected_call_distance": 7,
+      "anchor_path": [
+        "0x601c",
+        "0x4384",
+        "0x77b8",
+        "0x5f14",
+        "0x8530",
+        "0x4114",
+        "0x4044",
+        "0x414c"
+      ],
+      "reference_regions": {}
+    },
+    {
+      "entry": "0x4000",
+      "undirected_call_distance": null,
+      "anchor_path": null,
+      "reference_regions": {}
+    },
+    {
+      "entry": "0x408c",
+      "undirected_call_distance": null,
+      "anchor_path": null,
+      "reference_regions": {}
+    },
+    {
+      "entry": "0x40e0",
+      "undirected_call_distance": null,
+      "anchor_path": null,
+      "reference_regions": {}
+    },
+    {
+      "entry": "0x40e4",
+      "undirected_call_distance": null,
+      "anchor_path": null,
+      "reference_regions": {}
+    },
+    {
+      "entry": "0x40e8",
+      "undirected_call_distance": null,
+      "anchor_path": null,
+      "reference_regions": {}
+    },
+    {
+      "entry": "0x6b44",
+      "undirected_call_distance": null,
+      "anchor_path": null,
+      "reference_regions": {}
+    },
+    {
+      "entry": "0x6c48",
+      "undirected_call_distance": null,
+      "anchor_path": null,
+      "reference_regions": {
+        "image": 2,
+        "sram": 5
+      }
+    },
+    {
+      "entry": "0x6c68",
+      "undirected_call_distance": null,
+      "anchor_path": null,
+      "reference_regions": {
+        "image": 4,
+        "peripheral": 2,
+        "sram": 1
+      }
+    },
+    {
+      "entry": "0x7178",
+      "undirected_call_distance": null,
+      "anchor_path": null,
+      "reference_regions": {
+        "image": 8,
+        "peripheral": 5,
+        "sram": 3
+      }
+    },
+    {
+      "entry": "0x7444",
+      "undirected_call_distance": null,
+      "anchor_path": null,
+      "reference_regions": {}
+    },
+    {
+      "entry": "0x7448",
+      "undirected_call_distance": null,
+      "anchor_path": null,
+      "reference_regions": {
+        "image": 7,
+        "peripheral": 4,
+        "sram": 2
+      }
+    },
+    {
+      "entry": "0x74c4",
+      "undirected_call_distance": null,
+      "anchor_path": null,
+      "reference_regions": {}
+    },
+    {
+      "entry": "0x8568",
+      "undirected_call_distance": null,
+      "anchor_path": null,
+      "reference_regions": {}
+    },
+    {
+      "entry": "0x8578",
+      "undirected_call_distance": null,
+      "anchor_path": null,
+      "reference_regions": {}
+    },
+    {
+      "entry": "0x8588",
+      "undirected_call_distance": null,
+      "anchor_path": null,
+      "reference_regions": {}
+    },
+    {
+      "entry": "0x86d8",
+      "undirected_call_distance": null,
+      "anchor_path": null,
+      "reference_regions": {}
+    },
+    {
+      "entry": "0x86f0",
+      "undirected_call_distance": null,
+      "anchor_path": null,
+      "reference_regions": {
+        "external_or_literal": 1,
+        "image": 5
+      }
+    },
+    {
+      "entry": "0x874c",
+      "undirected_call_distance": null,
+      "anchor_path": null,
+      "reference_regions": {}
+    },
+    {
+      "entry": "0x8788",
+      "undirected_call_distance": null,
+      "anchor_path": null,
+      "reference_regions": {}
+    },
+    {
+      "entry": "0x87e8",
+      "undirected_call_distance": null,
+      "anchor_path": null,
+      "reference_regions": {}
+    },
+    {
+      "entry": "0x88a4",
+      "undirected_call_distance": null,
+      "anchor_path": null,
+      "reference_regions": {}
+    },
+    {
+      "entry": "0x8908",
+      "undirected_call_distance": null,
+      "anchor_path": null,
+      "reference_regions": {}
+    },
+    {
+      "entry": "0x893c",
+      "undirected_call_distance": null,
+      "anchor_path": null,
+      "reference_regions": {}
+    },
+    {
+      "entry": "0x8970",
+      "undirected_call_distance": null,
+      "anchor_path": null,
+      "reference_regions": {}
+    },
+    {
+      "entry": "0x89b0",
+      "undirected_call_distance": null,
+      "anchor_path": null,
+      "reference_regions": {}
+    },
+    {
+      "entry": "0x9038",
+      "undirected_call_distance": null,
+      "anchor_path": null,
+      "reference_regions": {}
+    },
+    {
+      "entry": "0x90b0",
+      "undirected_call_distance": null,
+      "anchor_path": null,
+      "reference_regions": {}
+    },
+    {
+      "entry": "0x90e4",
+      "undirected_call_distance": null,
+      "anchor_path": null,
+      "reference_regions": {}
+    },
+    {
+      "entry": "0x913c",
+      "undirected_call_distance": null,
+      "anchor_path": null,
+      "reference_regions": {}
+    },
+    {
+      "entry": "0x92cc",
+      "undirected_call_distance": null,
+      "anchor_path": null,
+      "reference_regions": {}
+    },
+    {
+      "entry": "0x95f4",
+      "undirected_call_distance": null,
+      "anchor_path": null,
+      "reference_regions": {}
+    },
+    {
+      "entry": "0xb114",
+      "undirected_call_distance": null,
+      "anchor_path": null,
+      "reference_regions": {}
+    }
+  ],
+  "catalog_lf_text_sha256": "d2a90b490e3a6701f6eeaa82aec6434a3c9ce8ff77b0f13149db20e6b582d5bd"
+}

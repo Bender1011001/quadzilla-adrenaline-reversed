@@ -1,5 +1,9 @@
 # Verification review — October 22, 2026
 
+This records the first verification pass. The subsequent
+[write-path review](OFFLINE_WRITE_PATH_REVIEW.md) expands the initial 14 semantic
+roles to 21 and reduces the remaining queue from 131 to 124 entries.
+
 This review checks the published research and tooling against the owner's local
 V2.8.4HF application image. It does not establish complete reverse engineering,
 live device behavior, or correctness of every decompiler inference.
