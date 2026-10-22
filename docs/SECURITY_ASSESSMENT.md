@@ -21,7 +21,7 @@ engine. This assessment asks who can change what, and what stops them.
 | F5 | The device clamps most values, but its limits differ from the app's (AID 85 floor 800 vs 1200 us; timing points 137-138 up to 30 deg vs 20/26) | 602 | Low | **Verified** statically; run-time behaviour untested |
 
 Severity is a qualitative judgement of realistic impact. Every attack needs proximity or
-physical access to a 20-year-old aftermarket part, and the asset is engine health, not
+physical access to an aftermarket tuner for an older vehicle, and the asset is engine health, not
 personal data. "Medium" reflects that the consequence of an unauthorised write is physical.
 
 ## Scope, method and limits
@@ -80,7 +80,7 @@ integrity mechanism is the per-record Intel HEX checksum, which detects accident
 which anyone can recompute. The cipher is also malleable: flipping one ciphertext bit changes exactly two
 plaintext bytes (`test_chain_propagates_errors`).
 
-Anyone who can build a valid `.qz` (F1 makes that easy) produces a package the updater treats as genuine.
+F1 permits construction of altered packages with valid line checksums. Updater and bootloader acceptance of an altered package has not been tested.
 The recovered opcode table also shows the updater sending the key to the device (`KEY_TRANSFER`, `0x06`),
 so the device decrypts with a value the public already has.
 
@@ -114,13 +114,13 @@ implemented and tested in `tools/x2com_crc.py`.
 
 - A CRC detects noise. It is not a MAC: anyone can compute it.
 - There is no nonce, counter, session or encryption field. Commands (`CMD`, `CWA`) write values
-  directly, so a captured frame replays (CWE-294).
+  directly, so the frame format itself supplies no replay defense (CWE-294); device replay acceptance remains untested.
 - A keyword search of the full decompile (`decompiled_x2com.c`) finds no occurrence of
   `auth`, `hmac`, `nonce`, `encrypt`, `decrypt`, `aes`, `cipher`, `challenge`, `secret`, `password` or `signature`.
 - On the device, the audited AID ingest dispatcher (`0x601C`) validates incoming values (it includes an AID 85 clamp) and
-  the audited resolver `0x7C1C` maps an AID to its SRAM location. No audited entry and no label describes an authentication,
-  session or key check. The first-pass multi-AID write routine (`0x7CC4`, not among the 14 audited entries) copies received
-  value bytes to the address `0x7C1C` returns; its only conditions are "the AID exists" and "at most 14 AIDs per frame".
+  the audited resolver `0x7C1C` maps an AID to its SRAM location. The reviewed entries do not establish an authentication,
+  session or key check. Fresh IDA and Binary Ninja traces of the multi-AID write routine (`0x7CC4`) show it copying received
+  value bytes to the address `0x7C1C` returns; it also checks message type and byte-parser state, and caps the processed payload count at 14.
   Callers were not audited, so this is absence of evidence, not proof of absence.
 
 Per the vendor profiles, the writable AIDs include a 24-point fueling-versus-boost curve (AIDs 113-136,
@@ -135,24 +135,24 @@ enforce limits on the device (F5); rate-limit and log writes.
 ### F5. The device clamps most values, but its limits differ from the app's (Low, verified statically)
 
 The app's limits are fields of the vendor's JSON profiles (`QuadAttribute`: `minValue`, `maxValue`, `multiplyFactor`). The firmware does
-not rely on them: the audited ingest dispatcher (`0x601C`) is one `switch` over 57 AID numbers and range-checks the value each case stores.
+not rely on them: the ingest dispatcher (`0x601C`) has 57 AID case labels, including range checks and shared branch targets.
 `python tools/aid_clamps.py` extracts the clamp literals and sets them beside the profile (asserted by `tests/test_aid_clamps.py`).
 
 | AIDs | App limit | Device clamp (raw) | Relation |
 |---|---|---|---|
-| 113-121 (fueling curve; 122-136 share one 50-150 path) | 50-150 % | 50-150 | equal |
+| 113-121 (fueling curve; later cases branch into shared code) | 50-150 % | 50-150 | equal |
 | 139-141 (timing, 2500 RPM and up) | 0-30 deg | 0-300 at x0.1 = 30.0 deg | equal |
 | 17, 22, 59, 61, 62, 110, 112 | per profile | equal in the extracted literals | equal |
 | **85** (max fuel stretch) | **1200-2200 us** | **800-2200** (upper bound operand 2201 read from the image at `0x67C0`) | **device allows 400 us lower** |
 | **137, 138** (timing at 1500 and 2000 RPM) | **0-20 and 0-26 deg** | 0-30.0 deg | **device allows more advance** |
 | 15 | 6-15 | 5-14 | off by one |
-| 104 (RPM limit) | 3200-3700 | floor 3200, upper bound not determined | partial |
+| 104 (RPM limit) | 3200-3700 | 3200-3700 (literal 3701 at `0x67D8`, upper branch subtracts one) | equal statically |
 | 146, 150-154, 226 | per profile | no range-check literals found in this function | unknown |
 
 So the vendor UI is not the only barrier, which limits the impact of F4, but a peer that speaks X2com directly can set AID 85 to 800-1199 us
 and the lowest two timing points to 30 deg, values the app never offers. The scaling (raw = display / `multiplyFactor`) is inferred; it is
 corroborated by five AIDs (17, 59, 139-141) whose device clamp equals the profile maximum divided by 0.1. Where a case shows no literals it may
-validate elsewhere, so "unknown" means not established. **Needs a device test to confirm behaviour at run time.**
+branch to shared validation code or validate elsewhere, so "unknown" means not established. **Needs a device test to confirm behaviour at run time.**
 
 ```bash
 python tools/aid_clamps.py

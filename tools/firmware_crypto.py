@@ -148,25 +148,52 @@ def recover_key_known_plaintext(ciphertext: bytes, known: bytes = b":1040000") -
 # --- Intel HEX ------------------------------------------------------------
 
 def parse_ihex(text: str) -> tuple[dict[int, int], int, int]:
-    """Parse Intel HEX. Returns ``(address -> byte, record_count, checksum_errors)``."""
+    """Parse records strictly; bad-checksum records never enter memory.
+
+    EOF is optional for this vendor's package. When supplied it must be last.
+    Structural errors raise ValueError; checksum errors are counted for reporting.
+    """
     memory: dict[int, int] = {}
     records = bad = 0
     base = 0
-    for line in text.replace("\r", "").split("\n"):
+    eof = False
+    for lineno, line in enumerate(text.splitlines(), 1):
         line = line.strip()
-        if not line.startswith(":"):
+        if not line:
             continue
-        raw = bytes.fromhex(line[1:])
+        if eof:
+            raise ValueError(f"line {lineno}: record after EOF")
+        if not line.startswith(":"):
+            raise ValueError(f"line {lineno}: expected Intel HEX record")
+        encoded = line[1:]
+        if len(encoded) % 2 or any(c not in "0123456789abcdefABCDEF" for c in encoded):
+            raise ValueError(f"line {lineno}: invalid hex encoding")
+        raw = bytes.fromhex(encoded)
+        if len(raw) < 5 or len(raw) != raw[0] + 5:
+            raise ValueError(f"line {lineno}: record length does not match byte count")
         records += 1
-        if sum(raw) & 0xFF:
-            bad += 1
         count, addr, rtype = raw[0], (raw[1] << 8) | raw[2], raw[3]
         data = raw[4:4 + count]
+        lengths = {1: 0, 2: 2, 3: 4, 4: 2, 5: 4}
+        if rtype not in range(6) or (rtype and (addr != 0 or count != lengths[rtype])):
+            raise ValueError(f"line {lineno}: invalid record type, address or length")
+        if rtype == 0 and addr + count > 0x10000:
+            raise ValueError(f"line {lineno}: data crosses a 16-bit address boundary")
+        if sum(raw) & 0xFF:
+            bad += 1
+            continue
         if rtype == 0x00:
             for offset, byte in enumerate(data):
-                memory[base + addr + offset] = byte
+                target = base + addr + offset
+                if target > 0xFFFFFFFF or target in memory:
+                    raise ValueError(f"line {lineno}: overlapping or out-of-range data")
+                memory[target] = byte
+        elif rtype == 0x01:
+            eof = True
+        elif rtype == 0x02:
+            base = int.from_bytes(data, "big") << 4
         elif rtype == 0x04:
-            base = ((data[0] << 8) | data[1]) << 16
+            base = int.from_bytes(data, "big") << 16
     return memory, records, bad
 
 
@@ -174,7 +201,17 @@ def ihex_to_image(memory: dict[int, int], fill: int = 0xFF) -> tuple[int, bytes]
     if not memory:
         raise ValueError("no data records")
     lo, hi = min(memory), max(memory)
+    if hi - lo + 1 > 16 * 1024 * 1024:
+        raise ValueError("flat image exceeds 16 MiB; preserve sparse addressed records instead")
     return lo, bytes(memory.get(a, fill) for a in range(lo, hi + 1))
+
+
+def validated_ihex(data: bytes) -> dict[int, int]:
+    """Validate plaintext before exporting or encrypting it."""
+    memory, _, bad = parse_ihex(data.decode("ascii"))
+    if not memory or bad:
+        raise ValueError(f"invalid firmware HEX: {bad} checksum errors; data present={bool(memory)}")
+    return memory
 
 
 # --- reporting ------------------------------------------------------------
@@ -216,13 +253,14 @@ def cmd_decrypt(args: argparse.Namespace) -> None:
     data = _read(args.input)
     key = _key_from_args(args)
     plain = decrypt_chain(data, key)
+    memory = validated_ihex(plain)
+    image_info = ihex_to_image(memory) if args.bin else None
     with open(args.output, "wb") as fh:
         fh.write(plain)
     print(f"[+] {args.input} ({len(data)} bytes) -> {args.output}")
     describe(plain, "plaintext")
     if args.bin:
-        memory, _, _ = parse_ihex(plain.decode("ascii", "replace"))
-        base, image = ihex_to_image(memory)
+        base, image = image_info
         with open(args.bin, "wb") as fh:
             fh.write(image)
         print(f"[+] binary image: {args.bin} (load address 0x{base:X}, {len(image)} bytes)")
@@ -231,6 +269,7 @@ def cmd_decrypt(args: argparse.Namespace) -> None:
 def cmd_encrypt(args: argparse.Namespace) -> None:
     plain = _read(args.input)
     key = _key_from_args(args)
+    validated_ihex(plain)
     encrypted = encrypt_chain(plain, key)
     if decrypt_chain(encrypted, key) != plain:
         sys.exit("roundtrip check failed")
@@ -254,7 +293,8 @@ def cmd_verify(args: argparse.Namespace) -> None:
 def cmd_recover_key(args: argparse.Namespace) -> None:
     key = recover_key_known_plaintext(_read(args.input))
     plain = decrypt_chain(_read(args.input), key)
-    _, records, bad = parse_ihex(plain.decode("ascii", "replace"))
+    validated_ihex(plain)
+    _, records, bad = parse_ihex(plain.decode("ascii"))
     print(f"key (from known plaintext): {key.hex()}")
     print(f"validation: {records} Intel HEX records, {bad} checksum errors")
 
@@ -268,6 +308,7 @@ def main(argv: list[str] | None = None) -> None:
     sub = parser.add_subparsers(dest="command", required=True)
 
     def add_key_args(p: argparse.ArgumentParser) -> None:
+        p = p.add_mutually_exclusive_group(required=True)
         p.add_argument("--key", help="8-byte key as 16 hex characters")
         p.add_argument("--pwk-file", help="8-byte derived key file (.pwk)")
         p.add_argument("--pwd-file", help="8-byte password file (.pwd); key is derived")

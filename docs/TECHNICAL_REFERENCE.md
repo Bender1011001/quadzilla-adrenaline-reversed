@@ -12,7 +12,7 @@ says where the fact comes from. For conclusions see [SECURITY_ASSESSMENT.md](SEC
 | Image | 32,000 bytes at `0x4000`-`0xBCFF`, SHA-256 `1ae519ba6194e8f7bdaaa94333a83a9e6fda3b0563f87f7d48383b37288c1780` |
 | USB | CDC ACM, VID `0x1A18` PID `0x0002`, 921600 baud 8N1 |
 | Phone link | Bluetooth Classic RFCOMM (not BLE), carrying X2com frames |
-| Bus | CAN to the ECM/VP44 |
+| Pump output | Static chain reaches AT91 TC0_RC; electrical bus topology is not established by this image alone |
 
 ## Update package (`.qz`)
 
@@ -23,10 +23,12 @@ Details and reproduction: [SECURITY_ASSESSMENT.md F1/F2](SECURITY_ASSESSMENT.md)
 ## Memory map (application image)
 
 ```
-0x4000-0x403F  ARM exception vectors (8 x branch)
-0x4040-0x40FF  ARM startup: reset handler, stacks, switch to Thumb
-0x4100-0x96FF  Thumb application code and literal pools
-0x9700-0xB1B7  tables: AID pointer table 1 at 0xA91C, pointer table 2 at 0xAD18-0xB113, other data
+0x4000-0x401B  seven ARM branch-vector words; 0x401C is MOV R9,R0
+0x4044        reset-vector target; ARM startup and Thumb transition nearby
+0x4100-0xA91B  application code, literal pools, data and ARM/Thumb interworking
+0xA91C-0xAD17  AID pointer table 1
+0xAD18-0xB113  AID pointer table 2
+0xB114-0xB1B7  executable helpers and literal data
 0xB1B8-0xBCFF  erased (0xFF), 2,888 bytes
 ```
 
@@ -75,7 +77,7 @@ Known SRAM locations: the TPS-gate input byte `0x2005D7`, the capture structure 
 
 ### Disassembly caveat
 
-The firmware mixes ARM (first 256 bytes) and Thumb (the rest) with literal pools between instructions. Ghidra's
+The firmware mixes ARM startup, Thumb application code, ARM interworking bodies and literal pools. A single ISA split at byte 256 is an approximation, not a complete map. Ghidra's
 auto-analysis marked about 96 % of it as data. The working approach: clear all code units, set Thumb mode, then disassemble each
 known entry with an address range capped at the next entry to stop cascading (`ghidra/scripts/ghidra_nuclear.py`).
 The two-tool audit then replaced hand-seeded entry lists with reconciled ones.
