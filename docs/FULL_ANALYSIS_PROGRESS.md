@@ -5,6 +5,12 @@ the bounded reviews; it must not be read as a completed firmware reconstruction.
 The existing 145-entry catalog is a supported starting inventory, not an
 exhaustive count of execution entries or runtime addresses.
 
+Update: the [startup/persistence review](STARTUP_PERSISTENCE_REVIEW.md) now
+adjudicates six additional source entries, for at least 151 supported starts.
+The original 145-entry catalog and its 124-entry review queue are retained as
+the historical baseline; the new entries and aliases are recorded separately in
+`audit/data/entry_adjudications.json`. Neither inventory is claimed exhaustive.
+
 ## Full-image baseline
 
 The byte-verified IDA export now records 13,201 items over the entire 32,000-byte
