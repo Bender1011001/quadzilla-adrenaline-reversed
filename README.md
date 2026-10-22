@@ -53,6 +53,8 @@ Latest review: [October 22 verification](docs/VERIFICATION_2026-10-22.md) covers
 
 The subsequent [offline write-path review](docs/OFFLINE_WRITE_PATH_REVIEW.md) traces receive → staging → validation → control, corrects the 14-byte frame budget, and expands semantic coverage to 21 of 145 entries. It includes a bounded ingest model and the complete remaining review queue.
 
+**Full firmware analysis is ongoing.** The [coverage ledger and progress report](docs/FULL_ANALYSIS_PROGRESS.md) identify relocated SRAM code and additional entry candidates beyond the original catalog. The 145-entry figure is a starting inventory, not an exhaustive count of execution entries or runtime addresses.
+
 ## Layout
 
 ```
