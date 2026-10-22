@@ -1,0 +1,113 @@
+{
+  "format": "quadzilla-entry-adjudications-v1",
+  "raw_sha256": "1ae519ba6194e8f7bdaaa94333a83a9e6fda3b0563f87f7d48383b37288c1780",
+  "baseline_entry_count": 145,
+  "additional_supported_entries": 6,
+  "combined_supported_starts": 151,
+  "count_rule": "ROM/template source starts; runtime aliases are not counted twice",
+  "baseline_lf_text_sha256": "d2a90b490e3a6701f6eeaa82aec6434a3c9ce8ff77b0f13149db20e6b582d5bd",
+  "evidence": [
+    "audit/data/ida_image_items.json",
+    "audit/data/startup_persistence_binaryninja.json",
+    "audit/data/image_coverage_ledger.json"
+  ],
+  "entries": [
+    {
+      "start": "0x401c",
+      "isa": "arm",
+      "instruction_end": "0x4044",
+      "role": "FIQ vector inline dispatch wrapper",
+      "runtime_alias": null,
+      "status": "supported_static_execution_entry",
+      "evidence_chain": [
+        "vector slot 7",
+        "loads handler from [R8+0x104]",
+        "saves R1-R3/R12/LR, changes processor mode, BX handler, exception return"
+      ],
+      "limits": [
+        "R8 must point to AIC; startup sets it to 0xFFFFF000",
+        "FIQ nesting and handler ABI need interrupt-level review"
+      ]
+    },
+    {
+      "start": "0x4090",
+      "isa": "arm",
+      "instruction_end": "0x40e0",
+      "role": "IRQ dispatch wrapper",
+      "runtime_alias": null,
+      "status": "supported_static_execution_entry",
+      "evidence_chain": [
+        "IRQ vector at 0x4018 branches here",
+        "loads AIC vector from 0xFFFFF100",
+        "writes 0xFFFFF130 and restores saved status on return"
+      ],
+      "limits": [
+        "exact interrupt priority/nesting behavior not yet modeled"
+      ]
+    },
+    {
+      "start": "0x40ec",
+      "isa": "arm",
+      "instruction_end": "0x40f8",
+      "role": "Exception fallback requesting reset via Thumb helper",
+      "runtime_alias": null,
+      "status": "supported_static_execution_entry",
+      "evidence_chain": [
+        "vectors at 0x4004..0x4014 branch here",
+        "loads Thumb pointer 0x7435 then BX"
+      ],
+      "limits": [
+        "behavior if reset request does not take effect is not established"
+      ]
+    },
+    {
+      "start": "0x7434",
+      "isa": "thumb",
+      "instruction_end": "0x743c",
+      "role": "Reset-controller keyed request helper",
+      "runtime_alias": null,
+      "status": "supported_static_execution_entry",
+      "evidence_chain": [
+        "writes 0xA500000D to 0xFFFFFD00",
+        "returns through LR"
+      ],
+      "limits": [
+        "electrical reset behavior not measured"
+      ]
+    },
+    {
+      "start": "0xb124",
+      "isa": "thumb",
+      "instruction_end": "0xb17c",
+      "role": "RAM-relocated flash page-write helper",
+      "runtime_alias": "0x200c94",
+      "status": "supported_static_execution_entry",
+      "evidence_chain": [
+        "startup copy descriptor at 0x96DC",
+        "direct call from 0x6B36 targets runtime alias",
+        "word-copy loop, page selector arithmetic, keyed MC_FCR command 1"
+      ],
+      "limits": [
+        "caller must provide aligned address/source and suitable length",
+        "copy loop caps at 128 words; page-size compatibility needs per-caller review"
+      ]
+    },
+    {
+      "start": "0xb18c",
+      "isa": "thumb",
+      "instruction_end": "0xb1b0",
+      "role": "RAM-relocated set-security-bit helper",
+      "runtime_alias": "0x200cfc",
+      "status": "supported_static_execution_entry",
+      "evidence_chain": [
+        "startup copy descriptor at 0x96DC",
+        "direct call from 0x77E4 targets runtime alias",
+        "writes 0x5A00000F to MC_FCR then polls ready"
+      ],
+      "limits": [
+        "attempted command is proven statically; current physical security state is unmeasured"
+      ]
+    }
+  ],
+  "remaining": "Other missing entries, bad mode spans and shared/alternate entries still require adjudication. This is not an exhaustive inventory."
+}
