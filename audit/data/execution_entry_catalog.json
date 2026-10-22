@@ -4,8 +4,8 @@
   "unit": "execution_entries_including_vectors_thunks_and_alternate_entries",
   "summary": {
     "confirmed_entries": 145,
-    "documented_static_roles": 21,
-    "unlabeled_static_entries": 124,
+    "documented_static_roles": 36,
+    "unlabeled_static_entries": 109,
     "entries_with_ida_sram_references": 49,
     "entries_with_ida_peripheral_references": 21,
     "union_direct_call_edges": 180
@@ -10452,8 +10452,19 @@
         },
         "ghidra": null
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x7178",
+          "label": "USART0 interrupt handler for receive timeout and enabled end-of-transmit event",
+          "assurance": "static_instruction_trace",
+          "evidence": [
+            "audit/data/ida_image_items.json:items.0x7178",
+            "audit/data/uart_buffer_binaryninja.json",
+            "docs/USART0_BUFFER_REVIEW.md"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [],
         "incoming": []
@@ -10573,8 +10584,19 @@
           ]
         }
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x71d0",
+          "label": "USART0 PDC current/next transmit-buffer staging helper",
+          "assurance": "static_instruction_trace",
+          "evidence": [
+            "audit/data/ida_image_items.json:items.0x71d0",
+            "audit/data/uart_buffer_binaryninja.json",
+            "docs/USART0_BUFFER_REVIEW.md"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [],
         "incoming": [
@@ -10686,8 +10708,19 @@
           ]
         }
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x720c",
+          "label": "USART0 PDC current/next receive-buffer staging helper",
+          "assurance": "static_instruction_trace",
+          "evidence": [
+            "audit/data/ida_image_items.json:items.0x720c",
+            "audit/data/uart_buffer_binaryninja.json",
+            "docs/USART0_BUFFER_REVIEW.md"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [],
         "incoming": [
@@ -10809,8 +10842,19 @@
           ]
         }
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x725c",
+          "label": "USART0 and PDC initialization with AIC handler installation",
+          "assurance": "static_instruction_trace",
+          "evidence": [
+            "audit/data/ida_image_items.json:items.0x725c",
+            "audit/data/uart_buffer_binaryninja.json",
+            "docs/USART0_BUFFER_REVIEW.md"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [],
         "incoming": [
@@ -13429,8 +13473,19 @@
           ]
         }
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x7af8",
+          "label": "Transmit staging call wrapper",
+          "assurance": "static_instruction_trace",
+          "evidence": [
+            "audit/data/ida_image_items.json:items.0x7af8",
+            "audit/data/uart_buffer_binaryninja.json",
+            "docs/USART0_BUFFER_REVIEW.md"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [
           "0x71d0"
@@ -13459,8 +13514,19 @@
           ]
         }
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x7b04",
+          "label": "Getter for SRAM flag at 0x20070B",
+          "assurance": "static_instruction_trace",
+          "evidence": [
+            "audit/data/ida_image_items.json:items.0x7b04",
+            "audit/data/uart_buffer_binaryninja.json",
+            "docs/USART0_BUFFER_REVIEW.md"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [],
         "incoming": [
@@ -13497,8 +13563,19 @@
           ]
         }
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x7b10",
+          "label": "Getter for USART0 receive-timeout completion flag",
+          "assurance": "static_instruction_trace",
+          "evidence": [
+            "audit/data/ida_image_items.json:items.0x7b10",
+            "audit/data/uart_buffer_binaryninja.json",
+            "docs/USART0_BUFFER_REVIEW.md"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [],
         "incoming": [
@@ -13549,8 +13626,19 @@
           ]
         }
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x7b1c",
+          "label": "Fixed 16-transfer receive rearm wrapper",
+          "assurance": "static_instruction_trace",
+          "evidence": [
+            "audit/data/ida_image_items.json:items.0x7b1c",
+            "audit/data/uart_buffer_binaryninja.json",
+            "docs/USART0_BUFFER_REVIEW.md"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [
           "0x720c"
@@ -13590,8 +13678,19 @@
           ]
         }
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x7b28",
+          "label": "Clear SRAM flag at 0x20070E",
+          "assurance": "static_instruction_trace",
+          "evidence": [
+            "audit/data/ida_image_items.json:items.0x7b28",
+            "audit/data/uart_buffer_binaryninja.json",
+            "docs/USART0_BUFFER_REVIEW.md"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [],
         "incoming": [
@@ -13642,8 +13741,19 @@
           ]
         }
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x7b30",
+          "label": "Clear SRAM flag at 0x20070C",
+          "assurance": "static_instruction_trace",
+          "evidence": [
+            "audit/data/ida_image_items.json:items.0x7b30",
+            "audit/data/uart_buffer_binaryninja.json",
+            "docs/USART0_BUFFER_REVIEW.md"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [],
         "incoming": [
@@ -13694,8 +13804,19 @@
           ]
         }
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x7b38",
+          "label": "Set SRAM flag pair at 0x20070F/0x20070E",
+          "assurance": "static_instruction_trace",
+          "evidence": [
+            "audit/data/ida_image_items.json:items.0x7b38",
+            "audit/data/uart_buffer_binaryninja.json",
+            "docs/USART0_BUFFER_REVIEW.md"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [],
         "incoming": [
@@ -13756,8 +13877,19 @@
           ]
         }
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x7b4c",
+          "label": "Set SRAM flag pair at 0x20070D/0x20070C",
+          "assurance": "static_instruction_trace",
+          "evidence": [
+            "audit/data/ida_image_items.json:items.0x7b4c",
+            "audit/data/uart_buffer_binaryninja.json",
+            "docs/USART0_BUFFER_REVIEW.md"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [],
         "incoming": [
@@ -13869,8 +14001,19 @@
           ]
         }
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x7bcc",
+          "label": "Header-length CRC checker returning status 3 or 4",
+          "assurance": "static_instruction_trace",
+          "evidence": [
+            "audit/data/ida_image_items.json:items.0x7bcc",
+            "audit/data/uart_buffer_binaryninja.json",
+            "docs/USART0_BUFFER_REVIEW.md"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [
           "0x7b60"
@@ -13899,8 +14042,19 @@
           ]
         }
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x7be8",
+          "label": "Frame message-type nibble getter",
+          "assurance": "static_instruction_trace",
+          "evidence": [
+            "audit/data/ida_image_items.json:items.0x7be8",
+            "audit/data/uart_buffer_binaryninja.json",
+            "docs/USART0_BUFFER_REVIEW.md"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [],
         "incoming": [
@@ -13927,8 +14081,19 @@
           ]
         }
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x7bf0",
+          "label": "Frame CRC-index low-nibble getter",
+          "assurance": "static_instruction_trace",
+          "evidence": [
+            "audit/data/ida_image_items.json:items.0x7bf0",
+            "audit/data/uart_buffer_binaryninja.json",
+            "docs/USART0_BUFFER_REVIEW.md"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [],
         "incoming": [
@@ -16449,7 +16614,7 @@
     },
     "labels": {
       "path": "C:\\Users\\admin\\.codex\\worktrees\\verify-public-repo\\quadzilla_rev\\audit\\data\\semantic_labels.json",
-      "sha256": "a692939fb762bf1e7eb0989a26b441edd424b54b78d974a33bf7d0ac94089b81"
+      "sha256": "c5288c4e7e72ac99047c377e7650af77e2ed2213d4b1737955d2195c1c4da35e"
     }
   }
 }

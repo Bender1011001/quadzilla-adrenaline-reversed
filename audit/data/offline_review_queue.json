@@ -9,7 +9,7 @@
     "0x8038",
     "0x7cc4"
   ],
-  "remaining_entries": 124,
+  "remaining_entries": 109,
   "queue": [
     {
       "entry": "0x4384",
@@ -285,78 +285,6 @@
       }
     },
     {
-      "entry": "0x7b10",
-      "undirected_call_distance": 1,
-      "anchor_path": [
-        "0x8038",
-        "0x7b10"
-      ],
-      "reference_regions": {
-        "image": 1,
-        "sram": 1
-      }
-    },
-    {
-      "entry": "0x7b1c",
-      "undirected_call_distance": 1,
-      "anchor_path": [
-        "0x8038",
-        "0x7b1c"
-      ],
-      "reference_regions": {}
-    },
-    {
-      "entry": "0x7b28",
-      "undirected_call_distance": 1,
-      "anchor_path": [
-        "0x8038",
-        "0x7b28"
-      ],
-      "reference_regions": {
-        "image": 1,
-        "sram": 1
-      }
-    },
-    {
-      "entry": "0x7b30",
-      "undirected_call_distance": 1,
-      "anchor_path": [
-        "0x8038",
-        "0x7b30"
-      ],
-      "reference_regions": {
-        "image": 1,
-        "sram": 1
-      }
-    },
-    {
-      "entry": "0x7bcc",
-      "undirected_call_distance": 1,
-      "anchor_path": [
-        "0x8038",
-        "0x7bcc"
-      ],
-      "reference_regions": {}
-    },
-    {
-      "entry": "0x7be8",
-      "undirected_call_distance": 1,
-      "anchor_path": [
-        "0x8038",
-        "0x7be8"
-      ],
-      "reference_regions": {}
-    },
-    {
-      "entry": "0x7bf0",
-      "undirected_call_distance": 1,
-      "anchor_path": [
-        "0x8038",
-        "0x7bf0"
-      ],
-      "reference_regions": {}
-    },
-    {
       "entry": "0x7f58",
       "undirected_call_distance": 1,
       "anchor_path": [
@@ -533,34 +461,6 @@
       ],
       "reference_regions": {
         "image": 2
-      }
-    },
-    {
-      "entry": "0x720c",
-      "undirected_call_distance": 2,
-      "anchor_path": [
-        "0x8038",
-        "0x7b1c",
-        "0x720c"
-      ],
-      "reference_regions": {
-        "image": 8,
-        "peripheral": 7,
-        "sram": 1
-      }
-    },
-    {
-      "entry": "0x725c",
-      "undirected_call_distance": 2,
-      "anchor_path": [
-        "0x50f0",
-        "0x74e8",
-        "0x725c"
-      ],
-      "reference_regions": {
-        "image": 27,
-        "peripheral": 23,
-        "sram": 1
       }
     },
     {
@@ -886,56 +786,6 @@
       }
     },
     {
-      "entry": "0x7af8",
-      "undirected_call_distance": 3,
-      "anchor_path": [
-        "0x601c",
-        "0x76cc",
-        "0x81a8",
-        "0x7af8"
-      ],
-      "reference_regions": {}
-    },
-    {
-      "entry": "0x7b04",
-      "undirected_call_distance": 3,
-      "anchor_path": [
-        "0x601c",
-        "0x76cc",
-        "0x81a8",
-        "0x7b04"
-      ],
-      "reference_regions": {}
-    },
-    {
-      "entry": "0x7b38",
-      "undirected_call_distance": 3,
-      "anchor_path": [
-        "0x601c",
-        "0x76cc",
-        "0x81a8",
-        "0x7b38"
-      ],
-      "reference_regions": {
-        "image": 2,
-        "sram": 2
-      }
-    },
-    {
-      "entry": "0x7b4c",
-      "undirected_call_distance": 3,
-      "anchor_path": [
-        "0x601c",
-        "0x76cc",
-        "0x81a8",
-        "0x7b4c"
-      ],
-      "reference_regions": {
-        "image": 2,
-        "sram": 2
-      }
-    },
-    {
       "entry": "0x7f28",
       "undirected_call_distance": 3,
       "anchor_path": [
@@ -1012,22 +862,6 @@
         "0x6b20"
       ],
       "reference_regions": {}
-    },
-    {
-      "entry": "0x71d0",
-      "undirected_call_distance": 4,
-      "anchor_path": [
-        "0x601c",
-        "0x76cc",
-        "0x81a8",
-        "0x7af8",
-        "0x71d0"
-      ],
-      "reference_regions": {
-        "image": 7,
-        "peripheral": 6,
-        "sram": 1
-      }
     },
     {
       "entry": "0x8530",
@@ -1187,16 +1021,6 @@
       }
     },
     {
-      "entry": "0x7178",
-      "undirected_call_distance": null,
-      "anchor_path": null,
-      "reference_regions": {
-        "image": 8,
-        "peripheral": 5,
-        "sram": 3
-      }
-    },
-    {
       "entry": "0x7444",
       "undirected_call_distance": null,
       "anchor_path": null,
@@ -1342,5 +1166,5 @@
       "reference_regions": {}
     }
   ],
-  "catalog_lf_text_sha256": "d2a90b490e3a6701f6eeaa82aec6434a3c9ce8ff77b0f13149db20e6b582d5bd"
+  "catalog_lf_text_sha256": "870c305d60990d7ae66c65568b3f7626403d1bb86fce805e9ed9ac196eac239c"
 }

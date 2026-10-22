@@ -7,8 +7,9 @@ exhaustive count of execution entries or runtime addresses.
 
 Update: the [startup/persistence review](STARTUP_PERSISTENCE_REVIEW.md) now
 adjudicates six additional source entries, for at least 151 supported starts.
-The original 145-entry catalog and its 124-entry review queue are retained as
-the historical baseline; the new entries and aliases are recorded separately in
+The original 145-start catalog is retained as the baseline; its semantic coverage
+now stands at 36 roles with 109 entries left after the
+[USART0 review](USART0_BUFFER_REVIEW.md). The new entries and aliases are recorded separately in
 `audit/data/entry_adjudications.json`. Neither inventory is claimed exhaustive.
 
 ## Full-image baseline

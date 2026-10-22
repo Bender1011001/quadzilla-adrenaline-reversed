@@ -57,6 +57,8 @@ The subsequent [offline write-path review](docs/OFFLINE_WRITE_PATH_REVIEW.md) tr
 
 The [startup and persistence review](docs/STARTUP_PERSISTENCE_REVIEW.md) supports six additional source entries (at least 151 total), reconstructs exception dispatch and SRAM helpers, and identifies the startup attempt to set the MCU security bit. Installed hardware state remains unmeasured.
 
+The [USART0 buffer review](docs/USART0_BUFFER_REVIEW.md) expands the baseline to 36 semantic roles, leaving 109 baseline entries unlabeled. It traces DMA and frame parsing, identifies queue-full behavior, and models the conditions under which a reused short-receive buffer can retain a CRC-valid suffix.
+
 ## Layout
 
 ```

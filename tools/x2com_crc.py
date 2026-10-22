@@ -8,7 +8,7 @@ Those parameters match the catalogued CRC-8/SAE-J1850 (check value 0x4B for
 
 Frame layout (``x2com_build_msg`` / ``x2com_parse_msg``)::
 
-    byte 0      [ message type : 4 | index of last data byte : 4 ]
+    byte 0      [ message type : 4 | index of CRC byte : 4 ]
     bytes 1..N  AID list and values
     byte N+1    CRC-8 over bytes 0..N
 
@@ -49,7 +49,7 @@ def check_frame(frame: bytes) -> bool:
 
 
 def parse_header(byte0: int) -> tuple[str, int]:
-    """Return ``(message type name, index of last data byte)``."""
+    """Return ``(message type name, index of CRC byte / last frame byte)``."""
     return MSG_TYPES.get(byte0 >> 4, f"UNKNOWN({byte0 >> 4})"), byte0 & 0x0F
 
 
