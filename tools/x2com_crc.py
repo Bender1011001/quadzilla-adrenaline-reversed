@@ -26,7 +26,9 @@ XOROUT = 0xFF
 CHECK_VALUE = 0x3B  # crc8(frame_with_crc) for any valid frame
 
 MSG_TYPES = {0: "CWA", 1: "CMD", 2: "ACK", 3: "NOTIFY", 4: "REQ", 5: "RESP"}
-MAX_AIDS_PER_FRAME = 14
+MAX_PAYLOAD_BYTES = 14
+# AID-only read lists can use one byte per entry; value-bearing frames cannot.
+MAX_AIDS_PER_FRAME = MAX_PAYLOAD_BYTES  # legacy alias: upper bound for AID-only lists
 
 
 def crc8(data: bytes) -> int:

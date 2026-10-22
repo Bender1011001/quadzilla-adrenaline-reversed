@@ -37,7 +37,7 @@ device-ID strings at `0xFD00`/`0xFE00`, and a second table at `0xAE80`; none of 
 
 ## Functions
 
-The authoritative inventory is the two-tool audit: 145 confirmed execution entries, 14 with an evidence-backed role. These are the 14, verbatim
+The authoritative inventory is the two-tool audit: 145 confirmed execution entries, 21 with an evidence-backed role. The initial 14 roles are listed below
 from `audit/data/semantic_labels.json`. `trace` means a static instruction trace; `chain` means part of the closed static chain below. The labels describe
 static roles and do not prove live engine behaviour.
 
@@ -60,6 +60,11 @@ static roles and do not prove live engine behaviour.
 
 Earlier first-pass labels (for example "fueling calculator" for `0x4D38`, "analog sensor processor" for `0x59E8`, "CAN handler" for `0x6C94`) are **not**
 carried forward; the audit replaced or did not confirm them.
+
+Seven additional roles (`0x76CC`, `0x7B60`, `0x7CC4`, `0x7E64`, `0x7EB4`,
+`0x7EFC`, `0x8038`) and their instruction anchors are documented in the
+[offline write-path review](OFFLINE_WRITE_PATH_REVIEW.md). Together these make
+the current 21-role catalog.
 
 ### The static pulse-stretch chain
 
@@ -96,7 +101,7 @@ Source: decompile of `libx2com-jni.so` (x86_64, 62 functions). CRC-8/SAE-J1850, 
 | 4 | REQ | app to tuner | read AIDs, triggers RESP |
 | 5 | RESP | tuner to app | values |
 
-Up to 14 AIDs per frame; CWA/REQ split across frames above that; ACK and RESP timers retransmit. Value width is fixed by
+The MCU walker processes up to **14 payload bytes** per frame. A read list can fit 14 one-byte AIDs; a value-bearing frame fits fewer because each AID also carries value bytes. ACK/RESP state handling is visible statically. See [the write-path review](OFFLINE_WRITE_PATH_REVIEW.md). Value width is fixed by
 AID range:
 
 | AID range | Width |

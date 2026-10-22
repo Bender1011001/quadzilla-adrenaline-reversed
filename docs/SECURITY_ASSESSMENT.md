@@ -121,7 +121,8 @@ implemented and tested in `tools/x2com_crc.py`.
   the audited resolver `0x7C1C` maps an AID to its SRAM location. The reviewed entries do not establish an authentication,
   session or key check. Fresh IDA and Binary Ninja traces of the multi-AID write routine (`0x7CC4`) show it copying received
   value bytes to the address `0x7C1C` returns; it also checks message type and byte-parser state, and caps the processed payload count at 14.
-  Callers were not audited, so this is absence of evidence, not proof of absence.
+  The [write-path review](OFFLINE_WRITE_PATH_REVIEW.md) subsequently traces the receive dispatcher and ordinary validation caller.
+  Physical transport checks, interrupts and every indirect handler remain outside that bounded review; this is not proof of universal absence.
 
 Per the vendor profiles, the writable AIDs include a 24-point fueling-versus-boost curve (AIDs 113-136,
 50-150 %) and RPM timing limits (AIDs 137-143). Reproduce with `python tools/diff_profiles.py`.

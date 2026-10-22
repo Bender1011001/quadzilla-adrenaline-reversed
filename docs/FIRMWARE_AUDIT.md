@@ -41,11 +41,14 @@ It is not a count of original C functions, and the two tools still disagree on w
 
 | | |
 |---|---|
-| Entries with an evidence-backed static role | 14 |
-| Entries still unlabelled | 131 |
+| Entries with an evidence-backed static role | 21 |
+| Entries still unlabelled | 124 |
 
-The 131 unlabelled entries are a work queue, not findings. Labels from the first-pass notes are treated as hypotheses
+The 124 unlabelled entries are a work queue, not findings. Labels from the first-pass notes are treated as hypotheses
 unless they appear in `audit/data/semantic_labels.json`.
+
+The initial audit assigned 14 roles; the [offline write-path review](OFFLINE_WRITE_PATH_REVIEW.md)
+adds seven from fresh IDA/Binary Ninja traces. The 145-entry inventory itself is unchanged.
 
 ### Peripheral map
 
