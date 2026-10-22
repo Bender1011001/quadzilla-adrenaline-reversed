@@ -37,7 +37,7 @@ device-ID strings at `0xFD00`/`0xFE00`, and a second table at `0xAE80`; none of 
 
 ## Functions
 
-The authoritative inventory is the two-tool audit: 145 confirmed execution entries, 21 with an evidence-backed role. The initial 14 roles are listed below
+The authoritative inventory is the two-tool audit: 145 confirmed execution entries, 36 with an evidence-backed role. The initial 14 roles are listed below
 from `audit/data/semantic_labels.json`. `trace` means a static instruction trace; `chain` means part of the closed static chain below. The labels describe
 static roles and do not prove live engine behaviour.
 
@@ -64,7 +64,12 @@ carried forward; the audit replaced or did not confirm them.
 Seven additional roles (`0x76CC`, `0x7B60`, `0x7CC4`, `0x7E64`, `0x7EB4`,
 `0x7EFC`, `0x8038`) and their instruction anchors are documented in the
 [offline write-path review](OFFLINE_WRITE_PATH_REVIEW.md). Together these make
-the current 21-role catalog.
+the earlier 21-role catalog.
+
+Fifteen USART0, buffer, flag and header/CRC roles are detailed in the
+[USART0 review](USART0_BUFFER_REVIEW.md), yielding 36 roles in that baseline.
+The separate [entry adjudications](../audit/data/entry_adjudications.json) extend
+the known source-entry minimum to 151; they are not counted twice for RAM aliases.
 
 ### The static pulse-stretch chain
 

@@ -542,8 +542,19 @@
     },
     {
       "entry": "0x7178",
-      "semantic_status": "unlabeled_static_entry",
-      "semantics": [],
+      "semantic_status": "documented_static_role",
+      "semantics": [
+        {
+          "entry": "0x7178",
+          "label": "USART0 interrupt handler for receive timeout and enabled end-of-transmit event",
+          "assurance": "static_instruction_trace",
+          "evidence": [
+            "audit/data/ida_image_items.json:items.0x7178",
+            "audit/data/uart_buffer_binaryninja.json",
+            "docs/USART0_BUFFER_REVIEW.md"
+          ]
+        }
+      ],
       "blocks": {
         "USART0": 5
       },
@@ -587,8 +598,19 @@
     },
     {
       "entry": "0x71d0",
-      "semantic_status": "unlabeled_static_entry",
-      "semantics": [],
+      "semantic_status": "documented_static_role",
+      "semantics": [
+        {
+          "entry": "0x71d0",
+          "label": "USART0 PDC current/next transmit-buffer staging helper",
+          "assurance": "static_instruction_trace",
+          "evidence": [
+            "audit/data/ida_image_items.json:items.0x71d0",
+            "audit/data/uart_buffer_binaryninja.json",
+            "docs/USART0_BUFFER_REVIEW.md"
+          ]
+        }
+      ],
       "blocks": {
         "USART0": 6
       },
@@ -639,8 +661,19 @@
     },
     {
       "entry": "0x720c",
-      "semantic_status": "unlabeled_static_entry",
-      "semantics": [],
+      "semantic_status": "documented_static_role",
+      "semantics": [
+        {
+          "entry": "0x720c",
+          "label": "USART0 PDC current/next receive-buffer staging helper",
+          "assurance": "static_instruction_trace",
+          "evidence": [
+            "audit/data/ida_image_items.json:items.0x720c",
+            "audit/data/uart_buffer_binaryninja.json",
+            "docs/USART0_BUFFER_REVIEW.md"
+          ]
+        }
+      ],
       "blocks": {
         "USART0": 7
       },
@@ -698,8 +731,19 @@
     },
     {
       "entry": "0x725c",
-      "semantic_status": "unlabeled_static_entry",
-      "semantics": [],
+      "semantic_status": "documented_static_role",
+      "semantics": [
+        {
+          "entry": "0x725c",
+          "label": "USART0 and PDC initialization with AIC handler installation",
+          "assurance": "static_instruction_trace",
+          "evidence": [
+            "audit/data/ida_image_items.json:items.0x725c",
+            "audit/data/uart_buffer_binaryninja.json",
+            "docs/USART0_BUFFER_REVIEW.md"
+          ]
+        }
+      ],
       "blocks": {
         "AIC": 5,
         "PMC": 1,
@@ -1214,7 +1258,7 @@
   "inputs": {
     "catalog": {
       "path": "C:\\Users\\admin\\.codex\\worktrees\\verify-public-repo\\quadzilla_rev\\audit\\data\\execution_entry_catalog.json",
-      "sha256": "235df635daff220e811aebb058be931e613d0fef7bb762f8ec1b5cc25c306cc9"
+      "sha256": "4b66b679a9dd520369cbce14044181be1fa0c5ed921113a4b91a707b7eea84d3"
     },
     "peripheral_map": {
       "path": "C:\\Users\\admin\\.codex\\worktrees\\verify-public-repo\\quadzilla_rev\\audit\\data\\sam7s_peripheral_map.json",

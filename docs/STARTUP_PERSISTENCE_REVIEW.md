@@ -1,5 +1,8 @@
 # Startup, exception entries and persistence helpers
 
+The counts below describe this pass. The subsequent [USART0 review](USART0_BUFFER_REVIEW.md)
+raises baseline semantic coverage to 36 roles and reduces its pending queue to 109.
+
 This continues the active full-image analysis. It establishes six additional
 source execution entries, giving **at least 151 supported source starts** when
 combined with the historical 145-entry catalog. Runtime copies are aliases, not

@@ -12,7 +12,7 @@ class ReviewQueue(unittest.TestCase):
         queue = json.loads((ROOT / "audit/data/offline_review_queue.json").read_text())
         self.assertEqual(queue["catalog_lf_text_sha256"], hashlib.sha256(path.read_text(encoding="utf-8").encode("utf-8")).hexdigest())
         entries = {row["entry"]: row for row in catalog["entries"]}
-        self.assertEqual(len(queue["queue"]), 124)
+        self.assertEqual(len(queue["queue"]), 109)
         self.assertEqual({row["entry"] for row in queue["queue"]},
                          {ea for ea, row in entries.items() if not row["semantics"]})
         for row in queue["queue"]:
