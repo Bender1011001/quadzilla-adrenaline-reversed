@@ -4,6 +4,11 @@
 *Names, units and min/max come from the profile JSON. They describe what the iQuad app exposes; device-side support for each AID and any device-side range checks are not verified.*
 *110 AID numbers in 0-226 appear in no profile and are unexplored.*
 
+The [firmware table audit](AID_TABLE_BOUNDARY_REVIEW.md) separately maps all 256
+possible AID bytes. AID 255 indexes beyond both 255-slot pointer tables; all other
+slots still require individual semantics and support checks. Profile declarations
+below should not be treated as the complete firmware-supported parameter set.
+
 ---
 
 ## AID Data Size Rules (from firmware + libx2com-jni.so)

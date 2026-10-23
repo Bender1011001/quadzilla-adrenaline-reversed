@@ -40,6 +40,12 @@ note-taking; every number below is backed by a test or a command in this reposit
 
 ## Findings
 
+A subsequent [AID table boundary review](AID_TABLE_BOUNDARY_REVIEW.md) confirms
+that AID 255 indexes beyond both firmware pointer tables. Offline execution of
+the original helpers reproduces an unintended SRAM alias write and a read from
+`0x43C02097`. This additional bounds defect has no assigned live-impact severity:
+complete transport reachability and hardware consequences remain untested.
+
 ### F1. Firmware container is obfuscated, not encrypted (Low, verified)
 
 The `.qz` update file is an Intel HEX file passed through a ciphertext-feedback XOR chain:
