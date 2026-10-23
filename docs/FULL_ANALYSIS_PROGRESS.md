@@ -8,8 +8,8 @@ exhaustive count of execution entries or runtime addresses.
 Update: the [startup/persistence review](STARTUP_PERSISTENCE_REVIEW.md) now
 adjudicates six additional source entries, for at least 151 supported starts.
 The original 145-start catalog is retained as the baseline; its semantic coverage
-now stands at 42 roles with 103 entries left after the
-[integer arithmetic execution review](INTEGER_ARITHMETIC_REVIEW.md). The new entries and aliases are recorded separately in
+now stands at 50 roles with 95 entries left after the
+[control helper review](CONTROL_HELPER_REVIEW.md). The new entries and aliases are recorded separately in
 `audit/data/entry_adjudications.json`. Neither inventory is claimed exhaustive.
 
 ## Full-image baseline
@@ -24,7 +24,8 @@ address without hiding pending review:
 
 | Classification | Bytes |
 |---|---:|
-| IDA code candidates awaiting review | 21,356 |
+| IDA code candidates awaiting review | 20,468 |
+| Explicitly reviewed Thumb instruction ranges | 888 |
 | IDA data candidates awaiting review | 3,304 |
 | IDA unknown bytes awaiting review | 4 |
 | Startup descriptors | 36 |
@@ -34,6 +35,10 @@ address without hiding pending review:
 | Erased trailing `FF` | 2,888 |
 
 Coverage of an address is not proof that its meaning or ISA has been reviewed.
+The first explicit instruction-range manifest now accepts 888 bytes from the
+[control helper review](CONTROL_HELPER_REVIEW.md). It excludes adjacent literal
+pools and alignment. Earlier semantic labels are not automatically promoted to
+byte-level classification; their exact ranges still need to be adjudicated.
 The ledger explicitly preserves 2,119 item/layout conflicts. These are tool item
 spans, not 2,119 bugs or distinct functions. Many arise because initialized data
 or erased space was interpreted as instructions.

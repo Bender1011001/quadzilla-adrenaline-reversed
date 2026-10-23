@@ -401,6 +401,94 @@
         "audit/data/integer_runtime_binaryninja.json",
         "docs/INTEGER_ARITHMETIC_REVIEW.md"
       ]
+    },
+    {
+      "entry": "0x4384",
+      "label": "Default working/echo initializer and derived scalar setup",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/control_helper_emulation.json:entry.0x4384",
+        "audit/data/control_helper_binaryninja.json",
+        "audit/data/control_helper_callers.json",
+        "docs/CONTROL_HELPER_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x4650",
+      "label": "32-word shift filter with wrapping sum and logical divide by 32",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/control_helper_emulation.json:entry.0x4650",
+        "audit/data/control_helper_binaryninja.json",
+        "audit/data/control_helper_callers.json",
+        "docs/CONTROL_HELPER_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x4674",
+      "label": "Second 32-word shift filter with wrapping sum and logical divide by 32",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/control_helper_emulation.json:entry.0x4674",
+        "audit/data/control_helper_binaryninja.json",
+        "audit/data/control_helper_callers.json",
+        "docs/CONTROL_HELPER_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x4698",
+      "label": "Threshold-six state updater at 0x200AD6..AD8",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/control_helper_emulation.json:entry.0x4698",
+        "audit/data/control_helper_binaryninja.json",
+        "audit/data/control_helper_callers.json",
+        "docs/CONTROL_HELPER_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x47b0",
+      "label": "Resettable threshold/ready latch at 0x20042F..432",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/control_helper_emulation.json:entry.0x47b0",
+        "audit/data/control_helper_binaryninja.json",
+        "audit/data/control_helper_callers.json",
+        "docs/CONTROL_HELPER_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x48e8",
+      "label": "Fresh-sample gated accumulator with delta memory and 0..650 fresh-result clamp",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/control_helper_emulation.json:entry.0x48e8",
+        "audit/data/control_helper_binaryninja.json",
+        "audit/data/control_helper_callers.json",
+        "docs/CONTROL_HELPER_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x495c",
+      "label": "Unsigned 0..4095 input clamp and integer percentage normalization",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/control_helper_emulation.json:entry.0x495c",
+        "audit/data/control_helper_binaryninja.json",
+        "audit/data/control_helper_callers.json",
+        "docs/CONTROL_HELPER_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x497c",
+      "label": "Two-stage normalized input to 0..19 index conversion",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/control_helper_emulation.json:entry.0x497c",
+        "audit/data/control_helper_binaryninja.json",
+        "audit/data/control_helper_callers.json",
+        "docs/CONTROL_HELPER_REVIEW.md"
+      ]
     }
   ],
   "limitations": [

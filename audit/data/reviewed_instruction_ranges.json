@@ -1,0 +1,111 @@
+{
+  "format": "quadzilla-instruction-range-reviews-v1",
+  "raw_sha256": "1ae519ba6194e8f7bdaaa94333a83a9e6fda3b0563f87f7d48383b37288c1780",
+  "limitation": "Explicit reviewed instruction ranges only; semantic role labels alone do not classify byte ranges",
+  "ranges": [
+    {
+      "start": "0x4384",
+      "end": "0x4596",
+      "entry": "0x4384",
+      "isa": "thumb",
+      "account": "Reviewed control helper instructions through the returning epilogue; excludes subsequent literal pools and alignment",
+      "evidence": [
+        "audit/data/control_function_reviews.json:entry.0x4384",
+        "audit/data/control_helper_binaryninja.json",
+        "audit/data/control_helper_emulation.json:entry.0x4384",
+        "docs/CONTROL_HELPER_REVIEW.md"
+      ]
+    },
+    {
+      "start": "0x4650",
+      "end": "0x4674",
+      "entry": "0x4650",
+      "isa": "thumb",
+      "account": "Reviewed control helper instructions through the returning epilogue; excludes subsequent literal pools and alignment",
+      "evidence": [
+        "audit/data/control_function_reviews.json:entry.0x4650",
+        "audit/data/control_helper_binaryninja.json",
+        "audit/data/control_helper_emulation.json:entry.0x4650",
+        "docs/CONTROL_HELPER_REVIEW.md"
+      ]
+    },
+    {
+      "start": "0x4674",
+      "end": "0x4698",
+      "entry": "0x4674",
+      "isa": "thumb",
+      "account": "Reviewed control helper instructions through the returning epilogue; excludes subsequent literal pools and alignment",
+      "evidence": [
+        "audit/data/control_function_reviews.json:entry.0x4674",
+        "audit/data/control_helper_binaryninja.json",
+        "audit/data/control_helper_emulation.json:entry.0x4674",
+        "docs/CONTROL_HELPER_REVIEW.md"
+      ]
+    },
+    {
+      "start": "0x4698",
+      "end": "0x46c2",
+      "entry": "0x4698",
+      "isa": "thumb",
+      "account": "Reviewed control helper instructions through the returning epilogue; excludes subsequent literal pools and alignment",
+      "evidence": [
+        "audit/data/control_function_reviews.json:entry.0x4698",
+        "audit/data/control_helper_binaryninja.json",
+        "audit/data/control_helper_emulation.json:entry.0x4698",
+        "docs/CONTROL_HELPER_REVIEW.md"
+      ]
+    },
+    {
+      "start": "0x47b0",
+      "end": "0x4810",
+      "entry": "0x47b0",
+      "isa": "thumb",
+      "account": "Reviewed control helper instructions through the returning epilogue; excludes subsequent literal pools and alignment",
+      "evidence": [
+        "audit/data/control_function_reviews.json:entry.0x47b0",
+        "audit/data/control_helper_binaryninja.json",
+        "audit/data/control_helper_emulation.json:entry.0x47b0",
+        "docs/CONTROL_HELPER_REVIEW.md"
+      ]
+    },
+    {
+      "start": "0x48e8",
+      "end": "0x4942",
+      "entry": "0x48e8",
+      "isa": "thumb",
+      "account": "Reviewed control helper instructions through the returning epilogue; excludes subsequent literal pools and alignment",
+      "evidence": [
+        "audit/data/control_function_reviews.json:entry.0x48e8",
+        "audit/data/control_helper_binaryninja.json",
+        "audit/data/control_helper_emulation.json:entry.0x48e8",
+        "docs/CONTROL_HELPER_REVIEW.md"
+      ]
+    },
+    {
+      "start": "0x495c",
+      "end": "0x4978",
+      "entry": "0x495c",
+      "isa": "thumb",
+      "account": "Reviewed control helper instructions through the returning epilogue; excludes subsequent literal pools and alignment",
+      "evidence": [
+        "audit/data/control_function_reviews.json:entry.0x495c",
+        "audit/data/control_helper_binaryninja.json",
+        "audit/data/control_helper_emulation.json:entry.0x495c",
+        "docs/CONTROL_HELPER_REVIEW.md"
+      ]
+    },
+    {
+      "start": "0x497c",
+      "end": "0x499a",
+      "entry": "0x497c",
+      "isa": "thumb",
+      "account": "Reviewed control helper instructions through the returning epilogue; excludes subsequent literal pools and alignment",
+      "evidence": [
+        "audit/data/control_function_reviews.json:entry.0x497c",
+        "audit/data/control_helper_binaryninja.json",
+        "audit/data/control_helper_emulation.json:entry.0x497c",
+        "docs/CONTROL_HELPER_REVIEW.md"
+      ]
+    }
+  ]
+}

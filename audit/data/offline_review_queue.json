@@ -9,50 +9,8 @@
     "0x8038",
     "0x7cc4"
   ],
-  "remaining_entries": 103,
+  "remaining_entries": 95,
   "queue": [
-    {
-      "entry": "0x4384",
-      "undirected_call_distance": 1,
-      "anchor_path": [
-        "0x601c",
-        "0x4384"
-      ],
-      "reference_regions": {
-        "image": 46,
-        "sram": 80
-      }
-    },
-    {
-      "entry": "0x4650",
-      "undirected_call_distance": 1,
-      "anchor_path": [
-        "0x50f0",
-        "0x4650"
-      ],
-      "reference_regions": {}
-    },
-    {
-      "entry": "0x4674",
-      "undirected_call_distance": 1,
-      "anchor_path": [
-        "0x50f0",
-        "0x4674"
-      ],
-      "reference_regions": {}
-    },
-    {
-      "entry": "0x4698",
-      "undirected_call_distance": 1,
-      "anchor_path": [
-        "0x50f0",
-        "0x4698"
-      ],
-      "reference_regions": {
-        "image": 3,
-        "sram": 3
-      }
-    },
     {
       "entry": "0x46d0",
       "undirected_call_distance": 1,
@@ -64,50 +22,6 @@
         "image": 11,
         "sram": 5
       }
-    },
-    {
-      "entry": "0x47b0",
-      "undirected_call_distance": 1,
-      "anchor_path": [
-        "0x601c",
-        "0x47b0"
-      ],
-      "reference_regions": {
-        "image": 3,
-        "sram": 20
-      }
-    },
-    {
-      "entry": "0x48e8",
-      "undirected_call_distance": 1,
-      "anchor_path": [
-        "0x50f0",
-        "0x48e8"
-      ],
-      "reference_regions": {
-        "image": 6,
-        "sram": 7
-      }
-    },
-    {
-      "entry": "0x495c",
-      "undirected_call_distance": 1,
-      "anchor_path": [
-        "0x50f0",
-        "0x495c"
-      ],
-      "reference_regions": {
-        "image": 1
-      }
-    },
-    {
-      "entry": "0x497c",
-      "undirected_call_distance": 1,
-      "anchor_path": [
-        "0x50f0",
-        "0x497c"
-      ],
-      "reference_regions": {}
     },
     {
       "entry": "0x506c",
@@ -1119,5 +1033,5 @@
       "reference_regions": {}
     }
   ],
-  "catalog_lf_text_sha256": "5df1302646789afb04a5349bac022ed9c44f9e3c90939f8bcddebc5b3758925a"
+  "catalog_lf_text_sha256": "d880eb91ced2cbb21e32d3e04e6815ff6fbdaee079315eed438f4dbbe7eb4298"
 }

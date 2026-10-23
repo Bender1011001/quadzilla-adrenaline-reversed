@@ -1,0 +1,248 @@
+{
+  "format": "quadzilla-function-reviews-v1",
+  "raw_sha256": "1ae519ba6194e8f7bdaaa94333a83a9e6fda3b0563f87f7d48383b37288c1780",
+  "entries": [
+    {
+      "entry": "0x4384",
+      "role": "Default working/echo initializer and derived scalar setup",
+      "inputs": "No used scalar argument; fixed addresses and literal defaults",
+      "outputs": "Fixed working/echo values and derived words; no semantic R0 result",
+      "side_effects": "Writes 103 non-stack stores in working, curve, echo and derived-scalar regions; see PC/address/value trace. Does not write the 0x200190 stretch window. R4..R11 and SP preserved in checked calls; caller-saved registers/flags may change.",
+      "callers": [
+        {
+          "site": "0x66a6",
+          "caller_partition": "0x601c"
+        },
+        {
+          "site": "0x77f6",
+          "caller_partition": "0x77b8"
+        }
+      ],
+      "callees": [
+        "0x8574",
+        "0x8584"
+      ],
+      "confidence": "High for the stated instruction contract; bounded execution is corroboration, not exhaustive proof",
+      "evidence": [
+        "audit/data/control_helper_emulation.json:entry.0x4384",
+        "audit/data/control_helper_binaryninja.json",
+        "audit/data/control_helper_callers.json",
+        "docs/CONTROL_HELPER_REVIEW.md"
+      ],
+      "limits": [
+        "Synthetic helper calls do not prove main-loop input reachability",
+        "Physical units, complete global writer sets and interrupt scheduling remain unverified",
+        "ARM926 functional surrogate, not ARM7TDMI hardware or timing"
+      ]
+    },
+    {
+      "entry": "0x4650",
+      "role": "32-word shift filter with wrapping sum and logical divide by 32",
+      "inputs": "R0 points to 32 writable words; R1 new unsigned sample",
+      "outputs": "R0 = u32(sum(retained31 + new)) >> 5; buffer shifted and new sample appended",
+      "side_effects": "Updates 128 bytes at caller-supplied pointer. Caller 0x5574 uses 0x200500 and byte input. R4..R11 and SP preserved in checked calls; caller-saved registers/flags may change.",
+      "callers": [
+        {
+          "site": "0x5574",
+          "caller_partition": "0x50f0"
+        }
+      ],
+      "callees": [],
+      "confidence": "High for the stated instruction contract; bounded execution is corroboration, not exhaustive proof",
+      "evidence": [
+        "audit/data/control_helper_emulation.json:entry.0x4650",
+        "audit/data/control_helper_binaryninja.json",
+        "audit/data/control_helper_callers.json",
+        "docs/CONTROL_HELPER_REVIEW.md"
+      ],
+      "limits": [
+        "Synthetic helper calls do not prove main-loop input reachability",
+        "Physical units, complete global writer sets and interrupt scheduling remain unverified",
+        "ARM926 functional surrogate, not ARM7TDMI hardware or timing"
+      ]
+    },
+    {
+      "entry": "0x4674",
+      "role": "Second 32-word shift filter with wrapping sum and logical divide by 32",
+      "inputs": "R0 points to 32 writable words; R1 new unsigned sample",
+      "outputs": "R0 = u32(sum(retained31 + new)) >> 5; buffer shifted and new sample appended",
+      "side_effects": "Updates 128 bytes at caller-supplied pointer. Caller 0x54DA uses 0x200480 and new input capped to 9999. R4..R11 and SP preserved in checked calls; caller-saved registers/flags may change.",
+      "callers": [
+        {
+          "site": "0x54da",
+          "caller_partition": "0x50f0"
+        }
+      ],
+      "callees": [],
+      "confidence": "High for the stated instruction contract; bounded execution is corroboration, not exhaustive proof",
+      "evidence": [
+        "audit/data/control_helper_emulation.json:entry.0x4674",
+        "audit/data/control_helper_binaryninja.json",
+        "audit/data/control_helper_callers.json",
+        "docs/CONTROL_HELPER_REVIEW.md"
+      ],
+      "limits": [
+        "Synthetic helper calls do not prove main-loop input reachability",
+        "Physical units, complete global writer sets and interrupt scheduling remain unverified",
+        "ARM926 functional surrogate, not ARM7TDMI hardware or timing"
+      ]
+    },
+    {
+      "entry": "0x4698",
+      "role": "Threshold-six state updater at 0x200AD6..AD8",
+      "inputs": "R0 unsigned value; existing bytes 0x200AD7 and 0x200AD8",
+      "outputs": "R0 is original value below 6 with AD8 zero, 1 below 6 with AD8 nonzero, or 0 at/above 6",
+      "side_effects": "Below 6 sets AD6=1; otherwise clears AD6/AD8 and sets AD7=1. Untouched flag bytes persist. R4..R11 and SP preserved in checked calls; caller-saved registers/flags may change.",
+      "callers": [
+        {
+          "site": "0x55b2",
+          "caller_partition": "0x50f0"
+        }
+      ],
+      "callees": [],
+      "confidence": "High for the stated instruction contract; bounded execution is corroboration, not exhaustive proof",
+      "evidence": [
+        "audit/data/control_helper_emulation.json:entry.0x4698",
+        "audit/data/control_helper_binaryninja.json",
+        "audit/data/control_helper_callers.json",
+        "docs/CONTROL_HELPER_REVIEW.md"
+      ],
+      "limits": [
+        "Synthetic helper calls do not prove main-loop input reachability",
+        "Physical units, complete global writer sets and interrupt scheduling remain unverified",
+        "ARM926 functional surrogate, not ARM7TDMI hardware or timing"
+      ]
+    },
+    {
+      "entry": "0x47b0",
+      "role": "Resettable threshold/ready latch at 0x20042F..432",
+      "inputs": "R0 mode; signed source 0x2005F4; selector 0x2006CD; enable 0x2006CF; limit 0x2006D0; counter 0x20044C; existing state bytes",
+      "outputs": "R0 = ready byte; state transition described in CONTROL_HELPER_REVIEW.md and model_control_helpers.latch_state",
+      "side_effects": "Nonzero mode resets state and sets threshold; zero mode can set ready, latched and edge, retaining them otherwise. R4..R11 and SP preserved in checked calls; caller-saved registers/flags may change.",
+      "callers": [
+        {
+          "site": "0x4c90",
+          "caller_partition": "0x4b38"
+        },
+        {
+          "site": "0x5070",
+          "caller_partition": "0x506c"
+        },
+        {
+          "site": "0x6242",
+          "caller_partition": "0x601c"
+        },
+        {
+          "site": "0x784a",
+          "caller_partition": "0x77b8"
+        },
+        {
+          "site": "0x78da",
+          "caller_partition": "0x77b8"
+        }
+      ],
+      "callees": [],
+      "confidence": "High for the stated instruction contract; bounded execution is corroboration, not exhaustive proof",
+      "evidence": [
+        "audit/data/control_helper_emulation.json:entry.0x47b0",
+        "audit/data/control_helper_binaryninja.json",
+        "audit/data/control_helper_callers.json",
+        "docs/CONTROL_HELPER_REVIEW.md"
+      ],
+      "limits": [
+        "Synthetic helper calls do not prove main-loop input reachability",
+        "Physical units, complete global writer sets and interrupt scheduling remain unverified",
+        "ARM926 functional surrogate, not ARM7TDMI hardware or timing"
+      ]
+    },
+    {
+      "entry": "0x48e8",
+      "role": "Fresh-sample gated accumulator with delta memory and 0..650 fresh-result clamp",
+      "inputs": "R1 inhibit; word sample 0x2005EC; old/previous words 0x200478/47C; gate 0x20042D; fresh byte 0x20071E",
+      "outputs": "R0 = old accumulator if stale; otherwise gated/clamped wrapped arithmetic result",
+      "side_effects": "Writes accumulator; every fresh call stores u32(1200-sample), clears fresh, and sets 0x20071C/71D. Stale value is not clamped. R4..R11 and SP preserved in checked calls; caller-saved registers/flags may change.",
+      "callers": [
+        {
+          "site": "0x5302",
+          "caller_partition": "0x50f0"
+        }
+      ],
+      "callees": [
+        "0x8584"
+      ],
+      "confidence": "High for the stated instruction contract; bounded execution is corroboration, not exhaustive proof",
+      "evidence": [
+        "audit/data/control_helper_emulation.json:entry.0x48e8",
+        "audit/data/control_helper_binaryninja.json",
+        "audit/data/control_helper_callers.json",
+        "docs/CONTROL_HELPER_REVIEW.md"
+      ],
+      "limits": [
+        "Synthetic helper calls do not prove main-loop input reachability",
+        "Physical units, complete global writer sets and interrupt scheduling remain unverified",
+        "ARM926 functional surrogate, not ARM7TDMI hardware or timing"
+      ]
+    },
+    {
+      "entry": "0x495c",
+      "role": "Unsigned 0..4095 input clamp and integer percentage normalization",
+      "inputs": "R0 unsigned 32-bit input",
+      "outputs": "R0 = floor(100*min(R0,4095)/4095)",
+      "side_effects": "Stack only; calls unsigned division at 0x8574; R1 quotient consumed internally. R4..R11 and SP preserved in checked calls; caller-saved registers/flags may change.",
+      "callers": [
+        {
+          "site": "0x497e",
+          "caller_partition": "0x497c"
+        },
+        {
+          "site": "0x5422",
+          "caller_partition": "0x50f0"
+        }
+      ],
+      "callees": [
+        "0x8574"
+      ],
+      "confidence": "High for the stated instruction contract; bounded execution is corroboration, not exhaustive proof",
+      "evidence": [
+        "audit/data/control_helper_emulation.json:entry.0x495c",
+        "audit/data/control_helper_binaryninja.json",
+        "audit/data/control_helper_callers.json",
+        "docs/CONTROL_HELPER_REVIEW.md"
+      ],
+      "limits": [
+        "Synthetic helper calls do not prove main-loop input reachability",
+        "Physical units, complete global writer sets and interrupt scheduling remain unverified",
+        "ARM926 functional surrogate, not ARM7TDMI hardware or timing"
+      ]
+    },
+    {
+      "entry": "0x497c",
+      "role": "Two-stage normalized input to 0..19 index conversion",
+      "inputs": "R0 unsigned 32-bit input",
+      "outputs": "R0 = min(floor(19*normalize(R0)/100),19); first percentage truncates separately",
+      "side_effects": "Stack only; calls 0x495C then signed division at 0x8584. R4..R11 and SP preserved in checked calls; caller-saved registers/flags may change.",
+      "callers": [
+        {
+          "site": "0x5112",
+          "caller_partition": "0x50f0"
+        }
+      ],
+      "callees": [
+        "0x495c",
+        "0x8584"
+      ],
+      "confidence": "High for the stated instruction contract; bounded execution is corroboration, not exhaustive proof",
+      "evidence": [
+        "audit/data/control_helper_emulation.json:entry.0x497c",
+        "audit/data/control_helper_binaryninja.json",
+        "audit/data/control_helper_callers.json",
+        "docs/CONTROL_HELPER_REVIEW.md"
+      ],
+      "limits": [
+        "Synthetic helper calls do not prove main-loop input reachability",
+        "Physical units, complete global writer sets and interrupt scheduling remain unverified",
+        "ARM926 functional surrogate, not ARM7TDMI hardware or timing"
+      ]
+    }
+  ]
+}
