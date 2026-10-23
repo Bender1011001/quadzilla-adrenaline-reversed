@@ -35,6 +35,11 @@ Details and reproduction: [SECURITY_ASSESSMENT.md F1/F2](SECURITY_ASSESSMENT.md)
 Source: IDA Pro and Ghidra audit of the decrypted image. Earlier notes claimed a 48 KB part with ~19 KB free, build-date and
 device-ID strings at `0xFD00`/`0xFE00`, and a second table at `0xAE80`; none of that holds for this image.
 
+Each AID table has 255 slots (0..254). The resolvers also accept AID 255 and
+read into the next region. See the [boundary review](AID_TABLE_BOUNDARY_REVIEW.md)
+for the complete pointer map and original-helper emulator evidence; this is not
+evidence that every in-range slot is supported or that a hardware fault occurred.
+
 ## Functions
 
 The authoritative inventory is the two-tool audit: 145 confirmed execution entries, 42 with an evidence-backed role. The initial 14 roles are listed below

@@ -98,6 +98,12 @@ be revised only with explicit entry and runtime-alias adjudication.
 
 ## Outstanding requirements
 
+The [AID table boundary review](AID_TABLE_BOUNDARY_REVIEW.md) now covers 512
+resolver calls and 256 controlled single-AID reader calls. AID 255 crosses both
+table boundaries, with a reproduced SRAM write alias and an unmapped response
+read in emulation. The complete pointer map is available; individual parameter
+semantics, all writer constraints and hardware consequences remain open.
+
 1. Correct mode/item boundaries, map relocated executable aliases, and adjudicate
    every additional entry candidate (including interrupt/vector alternate entries).
 2. Give every cataloged and newly accepted entry a reviewed account of inputs,

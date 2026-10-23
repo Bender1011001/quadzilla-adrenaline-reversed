@@ -61,6 +61,8 @@ The [USART0 buffer review](docs/USART0_BUFFER_REVIEW.md) expands the baseline to
 
 The [integer execution review](docs/INTEGER_ARITHMETIC_REVIEW.md) brings baseline coverage to 42 roles, with 103 pending. It executes the real division and stretch-arithmetic bytes in an offline ARM emulator, establishes remainder/quotient register conventions, and checks exceptional values, staged rounding and signed-cell assumptions.
 
+The [AID table boundary review](docs/AID_TABLE_BOUNDARY_REVIEW.md) maps both resolvers over all 256 AID bytes. AID 255 indexes past each 255-slot table: original-helper execution reproduces a write alias and an invalid response read. Hardware effects and complete transport reachability remain untested.
+
 ## Layout
 
 ```
