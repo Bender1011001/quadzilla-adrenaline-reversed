@@ -42,7 +42,7 @@ evidence that every in-range slot is supported or that a hardware fault occurred
 
 ## Functions
 
-The authoritative inventory is the two-tool audit: 145 confirmed execution entries, 42 with an evidence-backed role. The initial 14 roles are listed below
+The authoritative inventory is the two-tool audit: 145 confirmed execution entries, 50 with an evidence-backed role. The initial 14 roles are listed below
 from `audit/data/semantic_labels.json`. `trace` means a static instruction trace; `chain` means part of the closed static chain below. The labels describe
 static roles and do not prove live engine behaviour.
 
@@ -78,8 +78,10 @@ the known source-entry minimum to 151; they are not counted twice for RAM aliase
 
 The [integer execution review](INTEGER_ARITHMETIC_REVIEW.md) adds six baseline
 runtime roles and establishes the helpers' R0-remainder/R1-quotient convention.
-This brings baseline semantic coverage to 42; the software-floating-point and
-conversion routines remain under review.
+That pass brought baseline semantic coverage to 42. The
+[control helper review](CONTROL_HELPER_REVIEW.md) adds eight entries, bringing
+the current total to 50 with 95 pending. Software floating-point and conversion
+routines remain under review.
 
 ### The static pulse-stretch chain
 

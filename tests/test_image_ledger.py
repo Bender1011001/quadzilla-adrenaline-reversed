@@ -1,5 +1,6 @@
 """Test byte-accounting invariants and pin the discovered relocation evidence."""
 import importlib.util
+import copy
 import json
 import unittest
 
@@ -11,6 +12,46 @@ spec.loader.exec_module(ledger)
 
 
 class ImageLedger(unittest.TestCase):
+    def test_review_manifest_rejects_false_coverage(self):
+        doc = json.loads((ROOT / "audit/data/reviewed_instruction_ranges.json").read_text())
+        self.assertEqual(sum(b-a for a, b, _ in ledger.validate_instruction_reviews(doc)), 888)
+        for change in ("hash", "overlap", "layout", "odd", "account"):
+            malformed = copy.deepcopy(doc)
+            if change == "hash":
+                malformed["raw_sha256"] = "0"*64
+            elif change == "overlap":
+                malformed["ranges"].append(malformed["ranges"][0].copy())
+            elif change == "layout":
+                malformed["ranges"][0].update(start="0xa91c", end="0xa920")
+            elif change == "odd":
+                malformed["ranges"][0]["end"] = "0x4595"
+            else:
+                malformed["ranges"][0]["account"] = ""
+            with self.subTest(change=change), self.assertRaises(ValueError):
+                ledger.validate_instruction_reviews(malformed)
+
+    def test_accepted_instruction_bytes_have_exact_manifest_and_decoder_bounds(self):
+        manifest = json.loads((ROOT / "audit/data/reviewed_instruction_ranges.json").read_text())
+        doc = json.loads((ROOT / "audit/data/image_coverage_ledger.json").read_text())
+        decode = json.loads((ROOT / "audit/data/control_helper_binaryninja.json").read_text())
+        ranges = {r["entry"]: (int(r["start"], 0), int(r["end"], 0)) for r in manifest["ranges"]}
+        decoded = {r["start"]: r for r in decode["ranges"]}
+        self.assertEqual(set(decoded), set(ranges))
+        for entry, (start, end) in ranges.items():
+            block = decoded[entry]
+            self.assertNotIn("decode_stopped_at", block)
+            cursor = start
+            for instruction in block["instructions"]:
+                self.assertEqual(int(instruction["address"], 0), cursor)
+                self.assertNotIn("undefined", instruction["text"])
+                cursor += instruction["length"]
+            self.assertEqual(cursor, end)
+        accepted = [r for r in doc["ranges"] if r["classification"] == "reviewed_thumb_instructions"]
+        self.assertEqual(sum(int(r["end"], 0)-int(r["start"], 0) for r in accepted), 888)
+        for r in accepted:
+            start, end = ranges[r["review_entry"]]
+            self.assertTrue(start <= int(r["start"], 0) < int(r["end"], 0) <= end)
+
     def test_coverage_rejects_gaps_overlaps_and_truncation(self):
         def row(a, b):
             return {"start": hex(a), "end": hex(b)}

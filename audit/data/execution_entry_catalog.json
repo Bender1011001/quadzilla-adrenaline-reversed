@@ -4,8 +4,8 @@
   "unit": "execution_entries_including_vectors_thunks_and_alternate_entries",
   "summary": {
     "confirmed_entries": 145,
-    "documented_static_roles": 42,
-    "unlabeled_static_entries": 103,
+    "documented_static_roles": 50,
+    "unlabeled_static_entries": 95,
     "entries_with_ida_sram_references": 49,
     "entries_with_ida_peripheral_references": 21,
     "union_direct_call_edges": 180
@@ -654,8 +654,20 @@
           ]
         }
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x4384",
+          "label": "Default working/echo initializer and derived scalar setup",
+          "assurance": "static_instruction_trace_and_bounded_emulation",
+          "evidence": [
+            "audit/data/control_helper_emulation.json:entry.0x4384",
+            "audit/data/control_helper_binaryninja.json",
+            "audit/data/control_helper_callers.json",
+            "docs/CONTROL_HELPER_REVIEW.md"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [
           "0x8574",
@@ -1331,8 +1343,20 @@
           ]
         }
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x4650",
+          "label": "32-word shift filter with wrapping sum and logical divide by 32",
+          "assurance": "static_instruction_trace_and_bounded_emulation",
+          "evidence": [
+            "audit/data/control_helper_emulation.json:entry.0x4650",
+            "audit/data/control_helper_binaryninja.json",
+            "audit/data/control_helper_callers.json",
+            "docs/CONTROL_HELPER_REVIEW.md"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [],
         "incoming": [
@@ -1369,8 +1393,20 @@
           ]
         }
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x4674",
+          "label": "Second 32-word shift filter with wrapping sum and logical divide by 32",
+          "assurance": "static_instruction_trace_and_bounded_emulation",
+          "evidence": [
+            "audit/data/control_helper_emulation.json:entry.0x4674",
+            "audit/data/control_helper_binaryninja.json",
+            "audit/data/control_helper_callers.json",
+            "docs/CONTROL_HELPER_REVIEW.md"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [],
         "incoming": [
@@ -1407,8 +1443,20 @@
           ]
         }
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x4698",
+          "label": "Threshold-six state updater at 0x200AD6..AD8",
+          "assurance": "static_instruction_trace_and_bounded_emulation",
+          "evidence": [
+            "audit/data/control_helper_emulation.json:entry.0x4698",
+            "audit/data/control_helper_binaryninja.json",
+            "audit/data/control_helper_callers.json",
+            "docs/CONTROL_HELPER_REVIEW.md"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [],
         "incoming": [
@@ -1608,8 +1656,20 @@
           ]
         }
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x47b0",
+          "label": "Resettable threshold/ready latch at 0x20042F..432",
+          "assurance": "static_instruction_trace_and_bounded_emulation",
+          "evidence": [
+            "audit/data/control_helper_emulation.json:entry.0x47b0",
+            "audit/data/control_helper_binaryninja.json",
+            "audit/data/control_helper_callers.json",
+            "docs/CONTROL_HELPER_REVIEW.md"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [],
         "incoming": [
@@ -1960,8 +2020,20 @@
           ]
         }
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x48e8",
+          "label": "Fresh-sample gated accumulator with delta memory and 0..650 fresh-result clamp",
+          "assurance": "static_instruction_trace_and_bounded_emulation",
+          "evidence": [
+            "audit/data/control_helper_emulation.json:entry.0x48e8",
+            "audit/data/control_helper_binaryninja.json",
+            "audit/data/control_helper_callers.json",
+            "docs/CONTROL_HELPER_REVIEW.md"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [
           "0x8584"
@@ -2069,8 +2141,20 @@
           ]
         }
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x495c",
+          "label": "Unsigned 0..4095 input clamp and integer percentage normalization",
+          "assurance": "static_instruction_trace_and_bounded_emulation",
+          "evidence": [
+            "audit/data/control_helper_emulation.json:entry.0x495c",
+            "audit/data/control_helper_binaryninja.json",
+            "audit/data/control_helper_callers.json",
+            "docs/CONTROL_HELPER_REVIEW.md"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [
           "0x8574"
@@ -2118,8 +2202,20 @@
           ]
         }
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x497c",
+          "label": "Two-stage normalized input to 0..19 index conversion",
+          "assurance": "static_instruction_trace_and_bounded_emulation",
+          "evidence": [
+            "audit/data/control_helper_emulation.json:entry.0x497c",
+            "audit/data/control_helper_binaryninja.json",
+            "audit/data/control_helper_callers.json",
+            "docs/CONTROL_HELPER_REVIEW.md"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [
           "0x495c",
@@ -16680,7 +16776,7 @@
     },
     "labels": {
       "path": "C:\\Users\\admin\\.codex\\worktrees\\verify-public-repo\\quadzilla_rev\\audit\\data\\semantic_labels.json",
-      "sha256": "28ec16752f4ed6cfb09e2d50534522926234d5234adb8010d23933adeb609cb6"
+      "sha256": "3a78c100d467bb51edcef49253fcedc2f6de03e89e0e477ea1eafe8a5f757c80"
     }
   }
 }

@@ -63,6 +63,8 @@ The [integer execution review](docs/INTEGER_ARITHMETIC_REVIEW.md) brings baselin
 
 The [AID table boundary review](docs/AID_TABLE_BOUNDARY_REVIEW.md) maps both resolvers over all 256 AID bytes. AID 255 indexes past each 255-slot table: original-helper execution reproduces a write alias and an invalid response read. Hardware effects and complete transport reachability remain untested.
 
+The [control helper review](docs/CONTROL_HELPER_REVIEW.md) expands baseline coverage to 50 roles, leaving 95 pending. It checks filtering, normalization, defaults, persistent latches and a fresh-sample accumulator with 12,921 offline calls of the original helpers.
+
 ## Layout
 
 ```
