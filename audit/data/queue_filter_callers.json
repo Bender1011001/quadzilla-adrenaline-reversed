@@ -1,0 +1,817 @@
+{
+  "format": "quadzilla-queue-filter-callers-v1",
+  "raw_sha256": "1ae519ba6194e8f7bdaaa94333a83a9e6fda3b0563f87f7d48383b37288c1780",
+  "calls": [
+    {
+      "call": "0x8126",
+      "context": "incoming_type2",
+      "window": [
+        "0x811a",
+        "0x812a"
+      ],
+      "items": [
+        {
+          "address": "0x811a",
+          "text": "LDRB            R3, [R7]",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x811c",
+          "text": "MOVS            R2, R4",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x811e",
+          "text": "MOVS            R1, R6",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x8120",
+          "text": "ADDS            R1, #0x14",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x8122",
+          "text": "MOVS            R0, R6",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x8124",
+          "text": "ADDS            R0, #0x98",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x8126",
+          "text": "BL              sub_7F58",
+          "decoded_direct_target": "0x7f58"
+        }
+      ],
+      "source_bytes_sha256": "8e4eb35e4823a8ca8d88048cb15fc537ab9ff1dc45d8a43d5ed33e046d39a87f"
+    },
+    {
+      "call": "0x8172",
+      "context": "incoming_type5",
+      "window": [
+        "0x8166",
+        "0x8176"
+      ],
+      "items": [
+        {
+          "address": "0x8166",
+          "text": "LDRB            R3, [R7]",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x8168",
+          "text": "MOVS            R2, R4",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x816a",
+          "text": "MOVS            R1, R6",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x816c",
+          "text": "ADDS            R1, #0x19",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x816e",
+          "text": "MOVS            R0, R6",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x8170",
+          "text": "ADDS            R0, #0xB8",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x8172",
+          "text": "BL              sub_7F58",
+          "decoded_direct_target": "0x7f58"
+        }
+      ],
+      "source_bytes_sha256": "bcba9fa7fb7fb1e3e075ba432eeb263c8e5e1fac398255f094ad2351f3102c98"
+    },
+    {
+      "call": "0x83c4",
+      "context": "outgoing_group_a",
+      "window": [
+        "0x835a",
+        "0x83c8"
+      ],
+      "items": [
+        {
+          "address": "0x835a",
+          "text": "LDRB            R3, [R6,#0x13]",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x835c",
+          "text": "MOVS            R1, R6",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x835e",
+          "text": "ADDS            R1, #0x98",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x8360",
+          "text": "STR             R1, [SP,#8+var_4]",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x8362",
+          "text": "MOVS            R1, R6",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x8364",
+          "text": "ADDS            R1, #0x88",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x8366",
+          "text": "STR             R1, [SP,#8+var_8]",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x8368",
+          "text": "LDRB            R1, [R6,#0x11]",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x836a",
+          "text": "MOVS            R2, #1",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x836c",
+          "text": "ANDS            R2, R1",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x836e",
+          "text": "TST             R2, R0",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x8370",
+          "text": "BEQ             loc_83CE",
+          "decoded_direct_target": "0x83ce"
+        },
+        {
+          "address": "0x8372",
+          "text": "LDR             R2, [SP,#8+var_8]",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x8374",
+          "text": "MOVS            R1, R6",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x8376",
+          "text": "ADDS            R1, #0x14",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x8378",
+          "text": "LDR             R0, [SP,#8+var_4]",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x837a",
+          "text": "BL              loc_7FD6+2",
+          "decoded_direct_target": "0x7fd8"
+        },
+        {
+          "address": "0x837e",
+          "text": "MOVS            R3, R6",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x8380",
+          "text": "ADDS            R3, #0x13",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x8382",
+          "text": "LDR             R2, [SP,#8+var_8]",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x8384",
+          "text": "MOVS            R1, #0",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x8386",
+          "text": "MOVS            R0, R7",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x8388",
+          "text": "BL              sub_7EB4",
+          "decoded_direct_target": "0x7eb4"
+        },
+        {
+          "address": "0x838c",
+          "text": "MOVS            R0, R7",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x838e",
+          "text": "BL              loc_7BEE+2",
+          "decoded_direct_target": "0x7bf0"
+        },
+        {
+          "address": "0x8392",
+          "text": "ADDS            R0, R0, #1",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x8394",
+          "text": "LSLS            R1, R0, #0x18",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x8396",
+          "text": "LSRS            R1, R1, #0x18",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x8398",
+          "text": "MOVS            R0, R7",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x839a",
+          "text": "BL              sub_7AF8",
+          "decoded_direct_target": "0x7af8"
+        },
+        {
+          "address": "0x839e",
+          "text": "BL              sub_7B4C",
+          "decoded_direct_target": "0x7b4c"
+        },
+        {
+          "address": "0x83a2",
+          "text": "LDRB            R3, [R6,#0x13]",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x83a4",
+          "text": "CMP             R3, #0",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x83a6",
+          "text": "BEQ             loc_83AE",
+          "decoded_direct_target": "0x83ae"
+        },
+        {
+          "address": "0x83a8",
+          "text": "LDRB            R0, [R6,#0x1D]",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x83aa",
+          "text": "CMP             R3, R0",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x83ac",
+          "text": "BNE             loc_83B6",
+          "decoded_direct_target": "0x83b6"
+        },
+        {
+          "address": "0x83ae",
+          "text": "MOVS            R0, #1",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x83b0",
+          "text": "STRB            R0, [R6,#4]",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x83b2",
+          "text": "MOVS            R4, #0xF",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x83b4",
+          "text": "B               loc_83B8",
+          "decoded_direct_target": "0x83b8"
+        },
+        {
+          "address": "0x83b6",
+          "text": "MOVS            R4, #0x10",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x83b8",
+          "text": "MOVS            R0, #1",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x83ba",
+          "text": "STRB            R0, [R6,#0x12]",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x83bc",
+          "text": "LDR             R2, [SP,#8+var_8]",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x83be",
+          "text": "MOVS            R1, R6",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x83c0",
+          "text": "ADDS            R1, #0x14",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x83c2",
+          "text": "LDR             R0, [SP,#8+var_4]",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x83c4",
+          "text": "BL              sub_7F58",
+          "decoded_direct_target": "0x7f58"
+        }
+      ],
+      "source_bytes_sha256": "a7ed1780eff20fea927869ad14ecfafd0be32f8f85c429bf16a8b5d5f01f2f46"
+    },
+    {
+      "call": "0x84ec",
+      "context": "outgoing_group_b",
+      "window": [
+        "0x842e",
+        "0x84f0"
+      ],
+      "items": [
+        {
+          "address": "0x842e",
+          "text": "LDRB            R3, [R6,#0x18]",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x8430",
+          "text": "MOVS            R1, R6",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x8432",
+          "text": "ADDS            R1, #0xB8",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x8434",
+          "text": "STR             R1, [SP,#8+var_8]",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x8436",
+          "text": "MOVS            R1, R6",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x8438",
+          "text": "ADDS            R1, #0xA8",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x843a",
+          "text": "STR             R1, [SP,#8+var_4]",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x843c",
+          "text": "LDRB            R1, [R6,#0x16]",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x843e",
+          "text": "MOVS            R2, #1",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x8440",
+          "text": "ANDS            R2, R1",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x8442",
+          "text": "TST             R2, R0",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x8444",
+          "text": "BEQ             loc_8490",
+          "decoded_direct_target": "0x8490"
+        },
+        {
+          "address": "0x8446",
+          "text": "LDR             R2, [SP,#8+var_4]",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x8448",
+          "text": "MOVS            R1, R6",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x844a",
+          "text": "ADDS            R1, #0x19",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x844c",
+          "text": "LDR             R0, [SP,#8+var_8]",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x844e",
+          "text": "BL              loc_7FD6+2",
+          "decoded_direct_target": "0x7fd8"
+        },
+        {
+          "address": "0x8452",
+          "text": "MOVS            R3, R6",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x8454",
+          "text": "ADDS            R3, #0x18",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x8456",
+          "text": "LDR             R2, [SP,#8+var_4]",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x8458",
+          "text": "MOVS            R1, #4",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x845a",
+          "text": "MOVS            R0, R7",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x845c",
+          "text": "BL              sub_7EB4",
+          "decoded_direct_target": "0x7eb4"
+        },
+        {
+          "address": "0x8460",
+          "text": "MOVS            R0, R7",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x8462",
+          "text": "BL              loc_7BEE+2",
+          "decoded_direct_target": "0x7bf0"
+        },
+        {
+          "address": "0x8466",
+          "text": "ADDS            R0, R0, #1",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x8468",
+          "text": "LSLS            R1, R0, #0x18",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x846a",
+          "text": "LSRS            R1, R1, #0x18",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x846c",
+          "text": "MOVS            R0, R7",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x846e",
+          "text": "BL              sub_7AF8",
+          "decoded_direct_target": "0x7af8"
+        },
+        {
+          "address": "0x8472",
+          "text": "BL              sub_7B38",
+          "decoded_direct_target": "0x7b38"
+        },
+        {
+          "address": "0x8476",
+          "text": "LDRB            R3, [R6,#0x18]",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x8478",
+          "text": "CMP             R3, #0",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x847a",
+          "text": "BEQ             loc_8482",
+          "decoded_direct_target": "0x8482"
+        },
+        {
+          "address": "0x847c",
+          "text": "LDRB            R0, [R6,#0x1E]",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x847e",
+          "text": "CMP             R3, R0",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x8480",
+          "text": "BNE             loc_848A",
+          "decoded_direct_target": "0x848a"
+        },
+        {
+          "address": "0x8482",
+          "text": "MOVS            R0, #1",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x8484",
+          "text": "STRB            R0, [R6,#5]",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x8486",
+          "text": "MOVS            R4, #0x11",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x8488",
+          "text": "B               loc_848C",
+          "decoded_direct_target": "0x848c"
+        },
+        {
+          "address": "0x848a",
+          "text": "MOVS            R4, #0x12",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x848c",
+          "text": "MOVS            R0, #1",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x848e",
+          "text": "B               loc_84E2",
+          "decoded_direct_target": "0x84e2"
+        },
+        {
+          "address": "0x8490",
+          "text": "LDRB            R0, [R6,#0x15]",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x8492",
+          "text": "CMP             R0, #0",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x8494",
+          "text": "BEQ             loc_84F4",
+          "decoded_direct_target": "0x84f4"
+        },
+        {
+          "address": "0x8496",
+          "text": "STRB            R5, [R6,#0x15]",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x8498",
+          "text": "STRB            R5, [R6]",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x849a",
+          "text": "STRB            R5, [R6,#2]",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x849c",
+          "text": "STRB            R5, [R6,#5]",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x849e",
+          "text": "LDR             R2, [SP,#8+var_4]",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x84a0",
+          "text": "MOVS            R1, R6",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x84a2",
+          "text": "ADDS            R1, #0x19",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x84a4",
+          "text": "LDR             R0, [SP,#8+var_8]",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x84a6",
+          "text": "BL              loc_7FD6+2",
+          "decoded_direct_target": "0x7fd8"
+        },
+        {
+          "address": "0x84aa",
+          "text": "MOVS            R3, R6",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x84ac",
+          "text": "ADDS            R3, #0x18",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x84ae",
+          "text": "LDR             R2, [SP,#8+var_4]",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x84b0",
+          "text": "MOVS            R1, #4",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x84b2",
+          "text": "MOVS            R0, R7",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x84b4",
+          "text": "BL              sub_7EB4",
+          "decoded_direct_target": "0x7eb4"
+        },
+        {
+          "address": "0x84b8",
+          "text": "MOVS            R0, R7",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x84ba",
+          "text": "BL              loc_7BEE+2",
+          "decoded_direct_target": "0x7bf0"
+        },
+        {
+          "address": "0x84be",
+          "text": "ADDS            R0, R0, #1",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x84c0",
+          "text": "LSLS            R1, R0, #0x18",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x84c2",
+          "text": "LSRS            R1, R1, #0x18",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x84c4",
+          "text": "MOVS            R0, R7",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x84c6",
+          "text": "BL              sub_7AF8",
+          "decoded_direct_target": "0x7af8"
+        },
+        {
+          "address": "0x84ca",
+          "text": "BL              sub_7B38",
+          "decoded_direct_target": "0x7b38"
+        },
+        {
+          "address": "0x84ce",
+          "text": "LDRB            R3, [R6,#0x18]",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x84d0",
+          "text": "CMP             R3, #0",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x84d2",
+          "text": "BNE             loc_84DC",
+          "decoded_direct_target": "0x84dc"
+        },
+        {
+          "address": "0x84d4",
+          "text": "MOVS            R0, #1",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x84d6",
+          "text": "STRB            R0, [R6,#5]",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x84d8",
+          "text": "MOVS            R4, #0x11",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x84da",
+          "text": "B               loc_84DE",
+          "decoded_direct_target": "0x84de"
+        },
+        {
+          "address": "0x84dc",
+          "text": "MOVS            R4, #0x12",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x84de",
+          "text": "MOVS            R0, #1",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x84e0",
+          "text": "STRB            R0, [R6,#0x16]",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x84e2",
+          "text": "STRB            R0, [R6,#0x17]",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x84e4",
+          "text": "LDR             R2, [SP,#8+var_4]",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x84e6",
+          "text": "MOVS            R1, R6",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x84e8",
+          "text": "ADDS            R1, #0x19",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x84ea",
+          "text": "LDR             R0, [SP,#8+var_8]",
+          "decoded_direct_target": null
+        },
+        {
+          "address": "0x84ec",
+          "text": "BL              sub_7F58",
+          "decoded_direct_target": "0x7f58"
+        }
+      ],
+      "source_bytes_sha256": "c62936c49318df71d6d1f868870109e6b8e7ecd04002e03373e4ea1a75d8d7fa"
+    }
+  ],
+  "initialized_count_fields": [
+    {
+      "address": "0x2007db",
+      "byte": 0
+    },
+    {
+      "address": "0x2007dc",
+      "byte": 0
+    },
+    {
+      "address": "0x2007e0",
+      "byte": 0
+    },
+    {
+      "address": "0x2007e1",
+      "byte": 0
+    }
+  ],
+  "limits": [
+    "context windows support local register setup only; full state-count provenance requires whole-caller review",
+    "IDA text is treated as evidence data and checked against the source image identity"
+  ]
+}

@@ -997,6 +997,20 @@
       ]
     },
     {
+      "start": "0x7f58",
+      "end": "0x7fd6",
+      "entry": "0x7f58",
+      "isa": "thumb",
+      "account": "Complete queue-filter body with 63 source-matched decoded starts, bounded original-byte execution, and direct-call context; adjacent bytes excluded",
+      "evidence": [
+        "audit/data/queue_filter_binaryninja.json",
+        "audit/data/queue_filter_emulation.json",
+        "audit/data/queue_filter_callers.json",
+        "docs/OUTGOING_QUEUE_FILTER_REVIEW.md"
+      ],
+      "decoder_artifact": "audit/data/queue_filter_binaryninja.json"
+    },
+    {
       "start": "0x7fd8",
       "end": "0x800a",
       "entry": "0x7fd8",

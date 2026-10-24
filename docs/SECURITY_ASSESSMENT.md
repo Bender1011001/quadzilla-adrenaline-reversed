@@ -184,6 +184,13 @@ caps its output to 14 bytes, and the complete state-count provenance into
 with no assigned remote exploitability or device severity. The fault is
 an offline emulator observation; hardware effects were not measured.
 
+The neighboring [outgoing queue filter](OUTGOING_QUEUE_FILTER_REVIEW.md)
+also uses a 16-byte stack scratch list without bounding its initial
+current-list count. A direct call with 17 unmatched AIDs reaches saved
+register storage. Its four direct call sites, zero-initialized queue
+fields and the inspected 14-byte copy caps narrow the normal-path risk;
+the complete writer provenance for those fields is still under review.
+
 ## Also checked, no issue found
 
 - Secure RFCOMM variant used; no insecure-socket call.

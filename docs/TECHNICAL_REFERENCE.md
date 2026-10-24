@@ -67,6 +67,7 @@ static roles and do not prove live engine behaviour.
 | `0x7C1C` | AID-to-SRAM resolver for pointer table 1 | trace |
 | `0x7C68` | AID-to-SRAM resolver for pointer table 2 | trace |
 | `0x7D80` | Bounded table-2 response reader that rewrites deferred AIDs into the request list | trace and bounded execution |
+| `0x7F58` | Outgoing AID-list filter retaining entries absent from a capped comparison list | trace and bounded execution |
 | `0x7FD8` | Outgoing-list copy helper that caps nonzero requests at 14 bytes | trace and bounded execution |
 
 Earlier first-pass labels (for example "fueling calculator" for `0x4D38`, "analog sensor processor" for `0x59E8`, "CAN handler" for `0x6C94`) are **not**

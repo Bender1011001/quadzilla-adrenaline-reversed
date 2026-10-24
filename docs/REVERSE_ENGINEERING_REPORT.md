@@ -16,6 +16,8 @@ The [remaining-handler account](REMAINING_AID_UPDATE_REVIEW.md) closes the bound
 
 The [frame reader review](FRAME_READER_REVIEW.md) executes 4,328 bounded response-reading and framing calls, plus a full 0..255 count sweep of the queue copier. A direct call with 17 rejected AIDs writes into saved stack storage; ordinary caller-count provenance is still under review. It also classifies a 36-byte resolver literal pool and records the AID 255 aliased-pointer fault in the synthetic memory map.
 
+The [outgoing queue filter review](OUTGOING_QUEUE_FILTER_REVIEW.md) checks 4,549 bounded calls and four direct call sites. It retains current AIDs absent from a capped comparison list. A direct call with 17 retained AIDs also writes past a 16-byte stack scratch area; initialized queue counts and inspected copier paths are bounded, while the whole-image writer audit remains open.
+
 ## 1. Scope and approach
 
 Four independent surfaces were attacked, each giving a cross-check on the others:
