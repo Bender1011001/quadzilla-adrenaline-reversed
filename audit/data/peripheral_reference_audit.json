@@ -132,8 +132,19 @@
     },
     {
       "entry": "0x571c",
-      "semantic_status": "unlabeled_static_entry",
-      "semantics": [],
+      "semantic_status": "documented_static_role",
+      "semantics": [
+        {
+          "entry": "0x571c",
+          "label": "PIOA output-clear selector for masks 0x100 and 0x200",
+          "assurance": "static_instruction_trace_and_synthetic_mmio_emulation",
+          "evidence": [
+            "audit/data/spi_transfer_binaryninja.json",
+            "audit/data/spi_transfer_emulation.json",
+            "docs/SPI_TRANSFER_REVIEW.md"
+          ]
+        }
+      ],
       "blocks": {
         "PIOA": 1
       },
@@ -149,8 +160,19 @@
     },
     {
       "entry": "0x573c",
-      "semantic_status": "unlabeled_static_entry",
-      "semantics": [],
+      "semantic_status": "documented_static_role",
+      "semantics": [
+        {
+          "entry": "0x573c",
+          "label": "PIOA output-set selector for masks 0x100 and 0x200",
+          "assurance": "static_instruction_trace_and_synthetic_mmio_emulation",
+          "evidence": [
+            "audit/data/spi_transfer_binaryninja.json",
+            "audit/data/spi_transfer_emulation.json",
+            "docs/SPI_TRANSFER_REVIEW.md"
+          ]
+        }
+      ],
       "blocks": {
         "PIOA": 1
       },
@@ -278,8 +300,19 @@
     },
     {
       "entry": "0x6b9c",
-      "semantic_status": "unlabeled_static_entry",
-      "semantics": [],
+      "semantic_status": "documented_static_role",
+      "semantics": [
+        {
+          "entry": "0x6b9c",
+          "label": "Gate and program paired PDC receive/transmit buffers",
+          "assurance": "static_instruction_trace_and_synthetic_mmio_emulation",
+          "evidence": [
+            "audit/data/spi_transfer_binaryninja.json",
+            "audit/data/spi_transfer_emulation.json",
+            "docs/SPI_TRANSFER_REVIEW.md"
+          ]
+        }
+      ],
       "blocks": {
         "SPI": 1
       },
@@ -1324,7 +1357,7 @@
   "inputs": {
     "catalog": {
       "path": "audit/data/execution_entry_catalog.json",
-      "sha256": "d353e8d844a08c62766a33dfffcb27e44400a0f8e97f51a2f8ee4c85bbbaa4d1"
+      "sha256": "32c30e965fb30af3c3ccb1d2ed3af7f7b19aadb343ac96bf360d2630f96636b6"
     },
     "peripheral_map": {
       "path": "audit/data/sam7s_peripheral_map.json",
