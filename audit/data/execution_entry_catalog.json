@@ -4,8 +4,8 @@
   "unit": "execution_entries_including_vectors_thunks_and_alternate_entries",
   "summary": {
     "confirmed_entries": 145,
-    "documented_static_roles": 105,
-    "unlabeled_static_entries": 40,
+    "documented_static_roles": 108,
+    "unlabeled_static_entries": 37,
     "entries_with_ida_sram_references": 49,
     "entries_with_ida_peripheral_references": 21,
     "union_direct_call_edges": 180
@@ -5845,8 +5845,19 @@
           ]
         }
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x5e04",
+          "label": "Bounded SPI request-table selector and secondary mode/option command sender",
+          "assurance": "static_instruction_trace_and_bounded_emulation",
+          "evidence": [
+            "audit/data/capture_helper_binaryninja.json",
+            "audit/data/capture_helper_emulation.json",
+            "docs/CAPTURE_HELPER_REVIEW.md"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [
           "0x6b64"
@@ -5970,8 +5981,19 @@
           ]
         }
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x5ebc",
+          "label": "TC2-flag-driven seven-slot SPI request rotation",
+          "assurance": "static_instruction_trace_and_bounded_emulation",
+          "evidence": [
+            "audit/data/capture_helper_binaryninja.json",
+            "audit/data/capture_helper_emulation.json",
+            "docs/CAPTURE_HELPER_REVIEW.md"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [
           "0x5e04"
@@ -16064,8 +16086,19 @@
           ]
         }
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x8504",
+          "label": "Unsigned bytewise lexicographic comparator returning -1, 0 or 1",
+          "assurance": "static_instruction_trace_and_bounded_emulation",
+          "evidence": [
+            "audit/data/capture_helper_binaryninja.json",
+            "audit/data/capture_helper_emulation.json",
+            "docs/CAPTURE_HELPER_REVIEW.md"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [],
         "incoming": [
@@ -17415,7 +17448,7 @@
     },
     "labels": {
       "path": "audit/data/semantic_labels.json",
-      "sha256": "e9236df8b45856170515883cef053fecadbdc2b122fb26d33e0c07e4c039584a"
+      "sha256": "bb9565e9ca45be959f378562e06f0331446c63ba58a5711c0f1d87ae7dfdb444"
     }
   },
   "input_hash_policy": "SHA-256 of JSON text with CRLF normalized to LF"

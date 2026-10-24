@@ -232,6 +232,26 @@
       ]
     },
     {
+      "entry": "0x5e04",
+      "label": "Bounded SPI request-table selector and secondary mode/option command sender",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/capture_helper_binaryninja.json",
+        "audit/data/capture_helper_emulation.json",
+        "docs/CAPTURE_HELPER_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x5ebc",
+      "label": "TC2-flag-driven seven-slot SPI request rotation",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/capture_helper_binaryninja.json",
+        "audit/data/capture_helper_emulation.json",
+        "docs/CAPTURE_HELPER_REVIEW.md"
+      ]
+    },
+    {
       "entry": "0x5f04",
       "label": "Thumb-to-ARM wrapper: Software binary32 multiplication",
       "assurance": "static_instruction_trace_and_bounded_emulation",
@@ -814,6 +834,16 @@
         "audit/data/write_path_ida.json:entries.0x8038",
         "audit/data/write_path_binaryninja.json:entries.0x8038",
         "docs/OFFLINE_WRITE_PATH_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x8504",
+      "label": "Unsigned bytewise lexicographic comparator returning -1, 0 or 1",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/capture_helper_binaryninja.json",
+        "audit/data/capture_helper_emulation.json",
+        "docs/CAPTURE_HELPER_REVIEW.md"
       ]
     },
     {
