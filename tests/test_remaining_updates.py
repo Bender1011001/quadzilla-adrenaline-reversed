@@ -46,9 +46,9 @@ class RemainingUpdates(unittest.TestCase):
         self.assertEqual(self.emu['reference_mismatches'],0)
         self.assertEqual(sum(self.emu['call_totals'].values()),22703)
 
-    def test_full_parent_body_and_three_fragment_ranges(self):
+    def test_full_parent_body_and_four_continuation_roles(self):
         rows=[r for r in load('reviewed_instruction_ranges.json')['ranges']
-              if r['entry'] in ('0x601c','0x6042','0x6048','0x604c')]
+              if r['entry'] in ('0x601c','0x6042','0x6048','0x604c','0x604e')]
         ranges=sorted((int(r['start'],0),int(r['end'],0)) for r in rows)
         self.assertEqual(sum(b-a for a,b in ranges),1882)
         merged=[]
@@ -59,7 +59,7 @@ class RemainingUpdates(unittest.TestCase):
                 merged.append((a,b))
         self.assertEqual(merged,[(0x601C,0x608C),(0x6240,0x63AC),(0x63F0,0x6702),(0x67DC,0x6A48)])
         labels={r['entry']:r for r in load('semantic_labels.json')['labels']}
-        for at in ('0x6042','0x6048','0x604c'):
+        for at in ('0x6042','0x6048','0x604c','0x604e'):
             self.assertIn('docs/REMAINING_AID_UPDATE_REVIEW.md',labels[at]['evidence'])
 
     def test_scalar_source_and_echo_bindings(self):

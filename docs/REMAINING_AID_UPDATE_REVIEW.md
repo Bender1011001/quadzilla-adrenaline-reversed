@@ -3,7 +3,7 @@
 This review completes the bounded local accounts of all **57 non-default
 handlers selected by `0x601C`**, for the exact V2.8.4HF image, SHA-256
 `1ae519ba6194e8f7bdaaa94333a83a9e6fda3b0563f87f7d48383b37288c1780`.
-It adds 44 handler accounts and three baseline alternate-entry roles. It
+It adds 44 handler accounts and four baseline alternate-entry roles. It
 does not complete the receive protocol, all parameter writers/consumers or
 the full firmware analysis.
 
@@ -18,9 +18,9 @@ source extents and constructed register values are separately adjudicated.
 The intervening literal pools remain excluded. The decoder is a superset
 of ARMv4T and the emulator is an ARM926 functional surrogate, not hardware.
 
-Together with the earlier reviews, the dispatcher and its three shared
+Together with the earlier reviews, the dispatcher and its four shared
 continuations account for 1,882 instruction bytes. Baseline role coverage
-becomes **112 reviewed / 33 pending**, and total reviewed instruction coverage
+becomes **113 reviewed / 32 pending**, and total reviewed instruction coverage
 becomes **10,782 bytes**. The historical 145-entry inventory is still not
 claimed exhaustive.
 
@@ -49,7 +49,7 @@ The main loop calls `0x601C` at `0x76DC`. It enters validation only when
 receive/type dispatcher `0x8038` returns exactly 1, then processes the reported
 AID list in order. The [earlier gate/loop account](AID_DISPATCH_SELECTOR_UPDATES.md)
 and [compound account](COMPOUND_AID_UPDATE_REVIEW.md) describe those paths.
-All three executions use an explicit scripted receive-result contract;
+All handler campaigns use an explicit scripted receive-result contract;
 the `0x8038` instructions do not execute in these handler campaigns.
 
 The catalog's entries below are non-returning continuations inside this
@@ -60,6 +60,7 @@ parent frame, not ordinary independently callable functions:
 | `0x6042` | With curve candidate in R3 and curve base in R0, raise R3 to 50 if below 50; continue into `0x6048`. | AID 136 path at `0x6A3E`. |
 | `0x6048` | Store low R3 byte to `[R0+0xF]`, load echo pointer `0x200C35` into R0, continue into `0x604C`. | AID 136 upper path at `0x6A44`, plus fall-through from `0x6042`. |
 | `0x604C` | Store low R3 byte to `[R0]`, then continue into loop increment `0x604E`. | Fifteen curve paths for AIDs 121–135, plus fall-through from `0x6048`. |
+| `0x604E` | Increment the parent-frame loop index modulo 256, then check count and dispatch the next AID or return through the parent epilogue. Incoming scalar registers are not arguments. | Shared `BL` at `0x684C` used by AID 116 and the AID 120 echo-store path, plus ordinary handler branches. |
 
 These continuations require the active `0x601C` stack layout: pointer at
 SP+0, loop index at SP+4, reported count at SP+8, AID list at SP+12, and the
@@ -68,6 +69,12 @@ eventually returns through that original frame. `BL` instructions at these
 sites overwrite LR, but the continuation does not return to that LR. AID
 116/120 also use `BL 0x604E` as a loop continuation. Reading these as normal
 C calls would incorrectly infer fall-through into the next AID case.
+
+The `0x604E` instructions were already classified under the parent loop in
+the earlier selector/count review. This pass assigns its separate catalog
+role without adding those bytes again. A partition-based call graph can show
+this label calling itself; the original control flow is a parent-frame loop
+continuation, not evidence of recursive C calls.
 
 Complete checked ingest calls preserve R4–R11 and SP. No scalar R0 result
 is specified. The immediate continuation stores and the subsequent loop

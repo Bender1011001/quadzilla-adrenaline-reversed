@@ -12,7 +12,7 @@ The [validation dispatch review](AID_DISPATCH_SELECTOR_UPDATES.md) adds 206 revi
 
 The [compound update review](COMPOUND_AID_UPDATE_REVIEW.md) adds 458 instruction bytes with all 227 starts matched and visited, bringing instruction coverage to 9,564 bytes. It reviews eleven more handlers and records specific cross-AID staging and width-loss paths. Baseline entry-role counts remain 109/36; 44 of 57 non-default handler accounts remain incomplete.
 
-The [remaining-handler review](REMAINING_AID_UPDATE_REVIEW.md) adds 1,218 instruction bytes and three parent-frame continuation roles, bringing coverage to 10,782 instruction bytes and 112/33 baseline roles. All 57 selected local update handlers now have bounded accounts; the dispatcher plus continuations total 1,882 reviewed instruction bytes. Full protocol and downstream behavior remain incomplete.
+The [remaining-handler review](REMAINING_AID_UPDATE_REVIEW.md) adds 1,218 instruction bytes and four parent-frame continuation roles, bringing coverage to 10,782 instruction bytes and 113/32 baseline roles. All 57 selected local update handlers now have bounded accounts; the dispatcher plus continuations total 1,882 reviewed instruction bytes. Full protocol and downstream behavior remain incomplete.
 
 ## Why
 
@@ -49,10 +49,10 @@ It is not a count of original C functions, and the two tools still disagree on w
 
 | | |
 |---|---|
-| Entries with an evidence-backed static role | 112 |
-| Entries still unlabelled | 33 |
+| Entries with an evidence-backed static role | 113 |
+| Entries still unlabelled | 32 |
 
-The 33 unlabelled entries are a work queue, not findings. Labels from the first-pass notes are treated as hypotheses
+The 32 unlabelled entries are a work queue, not findings. Labels from the first-pass notes are treated as hypotheses
 unless they appear in `audit/data/semantic_labels.json`.
 
 The initial audit assigned 14 roles; the [offline write-path review](OFFLINE_WRITE_PATH_REVIEW.md)

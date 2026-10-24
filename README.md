@@ -37,7 +37,7 @@ The [AID dispatch and selector-update review](docs/AID_DISPATCH_SELECTOR_UPDATES
 
 The [compound AID review](docs/COMPOUND_AID_UPDATE_REVIEW.md) adds eleven handler accounts, including five AIDs absent from the profiles. Original-byte evidence reproduces AID 154 consuming AID 146 staging after an earlier partial write, and a repeated 16-bit comparison/eight-bit store. Thirteen of 57 non-default handlers are reviewed, 44 remain pending, and instruction coverage is 9,564 bytes. Receive results are scripted; live transport and downstream effects remain unverified.
 
-The [remaining local handler review](docs/REMAINING_AID_UPDATE_REVIEW.md) gives all 57 selected handlers bounded accounts and identifies three shared parent-frame entries. Current baseline coverage is 112 roles with 33 pending, and 10,782 reviewed instruction bytes. Original-byte evidence distinguishes transport width from handler/echo width, documents coupled AID 22 limits and closes the local AID 226 configuration account. Full protocol, all writer/consumer paths and hardware acceptance remain incomplete.
+The [remaining local handler review](docs/REMAINING_AID_UPDATE_REVIEW.md) gives all 57 selected handlers bounded accounts and identifies four shared parent-frame entries. Current baseline coverage is 113 roles with 32 pending, and 10,782 reviewed instruction bytes. Original-byte evidence distinguishes transport width from handler/echo width, documents coupled AID 22 limits and closes the local AID 226 configuration account. Full protocol, all writer/consumer paths and hardware acceptance remain incomplete.
 
 ## Try it
 

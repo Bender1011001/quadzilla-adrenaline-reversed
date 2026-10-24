@@ -10,7 +10,7 @@ Update: the [startup/persistence review](STARTUP_PERSISTENCE_REVIEW.md) and
 entries, for at least 157 supported starts. Three callable numeric routines
 have no identified incoming image call and are not claimed reachable in service.
 The original 145-start catalog is retained as the baseline; its semantic coverage
-now stands at 112 roles with 33 entries left after the
+now stands at 113 roles with 32 entries left after the
 [remaining local AID handler review](REMAINING_AID_UPDATE_REVIEW.md). The
 new entries and aliases are recorded separately in
 `audit/data/entry_adjudications.json`. Neither inventory is claimed exhaustive.
@@ -146,8 +146,8 @@ impact remain unresolved. Entry-role counts stay at 109/36.
 
 The [remaining-handler review](REMAINING_AID_UPDATE_REVIEW.md) closes the
 57-handler local queue and classifies all 1,882 instruction bytes of the
-dispatcher and its three parent-frame continuations. It adds 1,218 reviewed
-bytes and three baseline roles. 22,703 ingest calls check clamp/curve paths,
+dispatcher and its four parent-frame continuations. It adds 1,218 reviewed
+bytes and four baseline roles. 22,703 ingest calls check clamp/curve paths,
 coupled limits, width distinctions, the default-initializer trigger and
 AID 226 floating configuration. A two-byte reader can return a retained upper
 echo byte after a one-byte handler store. Complete variable-width admission,

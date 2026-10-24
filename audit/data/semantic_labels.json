@@ -348,6 +348,17 @@
       ]
     },
     {
+      "entry": "0x604e",
+      "label": "Parent-frame validation loop continuation: increment byte index then dispatch or return",
+      "assurance": "static_instruction_trace_and_bounded_parent_execution",
+      "evidence": [
+        "audit/data/selector_update_binaryninja.json",
+        "audit/data/selector_update_emulation.json",
+        "audit/data/remaining_update_emulation.json",
+        "docs/REMAINING_AID_UPDATE_REVIEW.md"
+      ]
+    },
+    {
       "entry": "0x6b08",
       "label": "Thumb-to-ARM wrapper: Signed 32-bit integer to binary64 conversion",
       "assurance": "static_instruction_trace_and_bounded_emulation",

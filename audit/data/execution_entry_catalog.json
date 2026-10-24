@@ -4,8 +4,8 @@
   "unit": "execution_entries_including_vectors_thunks_and_alternate_entries",
   "summary": {
     "confirmed_entries": 145,
-    "documented_static_roles": 112,
-    "unlabeled_static_entries": 33,
+    "documented_static_roles": 113,
+    "unlabeled_static_entries": 32,
     "entries_with_ida_sram_references": 49,
     "entries_with_ida_peripheral_references": 21,
     "union_direct_call_edges": 180
@@ -8291,8 +8291,20 @@
           ]
         }
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x604e",
+          "label": "Parent-frame validation loop continuation: increment byte index then dispatch or return",
+          "assurance": "static_instruction_trace_and_bounded_parent_execution",
+          "evidence": [
+            "audit/data/selector_update_binaryninja.json",
+            "audit/data/selector_update_emulation.json",
+            "audit/data/remaining_update_emulation.json",
+            "docs/REMAINING_AID_UPDATE_REVIEW.md"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [
           "0x4384",
@@ -17509,7 +17521,7 @@
     },
     "labels": {
       "path": "audit/data/semantic_labels.json",
-      "sha256": "b98d4f1fb3378288ec2e42260c66a069488726aadca9c1d566f80b17248d1d23"
+      "sha256": "f4fbebae4446a784300fcb375a78487337a2ef23885fa8ab8e68b71dac21b2ce"
     }
   },
   "input_hash_policy": "SHA-256 of JSON text with CRLF normalized to LF"
