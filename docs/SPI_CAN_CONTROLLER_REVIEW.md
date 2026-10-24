@@ -3,8 +3,11 @@
 The exact V2.8.4HF image, SHA-256
 `1ae519ba6194e8f7bdaaa94333a83a9e6fda3b0563f87f7d48383b37288c1780`,
 contains a consistent MCP2515-compatible SPI command/register path. This is
-a firmware protocol interpretation. The installed component, board wiring,
-CAN traffic and successful command execution have not been measured.
+a firmware protocol interpretation. The owner's subsequent
+[V2.2 board inventory](BOARD_V2_2_COMPONENTS.md) reports U2 marked MCP2515,
+corroborating the interpretation. Board wiring, CAN traffic and successful
+command execution have not been measured; the marking has not been
+independently inspected by this project.
 
 The [command audit](../audit/data/spi_can_command_audit.json) binds each
 initialized SRAM buffer to its source-image address and decodes all 24
@@ -31,8 +34,9 @@ in a decompiler. The byte values and call order come from this firmware.
 | `05 2C 01 00`, `05 2C 10 00` | Clear selected CANINTF bits. |
 
 The breadth of matching opcodes, addresses and buffer formats supports the
-compatible-controller interpretation. Chip marking or a board trace would
-be needed to identify the actual part. CNF bytes are recorded without
+compatible-controller interpretation. The reported U2 marking supplies
+corroborating component identification; an independent marking inspection and
+board traces remain useful verification. CNF bytes are recorded without
 claiming a measured oscillator or bus rate.
 
 ## Seven request records
