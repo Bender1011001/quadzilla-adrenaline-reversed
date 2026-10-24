@@ -41,10 +41,10 @@ It is not a count of original C functions, and the two tools still disagree on w
 
 | | |
 |---|---|
-| Entries with an evidence-backed static role | 105 |
-| Entries still unlabelled | 40 |
+| Entries with an evidence-backed static role | 108 |
+| Entries still unlabelled | 37 |
 
-The 40 unlabelled entries are a work queue, not findings. Labels from the first-pass notes are treated as hypotheses
+The 37 unlabelled entries are a work queue, not findings. Labels from the first-pass notes are treated as hypotheses
 unless they appear in `audit/data/semantic_labels.json`.
 
 The initial audit assigned 14 roles; the [offline write-path review](OFFLINE_WRITE_PATH_REVIEW.md)
@@ -78,6 +78,8 @@ The [SPI output state review](SPI_STATE_MACHINE_REVIEW.md) adds one role,
 yielding 104 with 41 pending.
 The [SPI initialization review](SPI_INITIALIZATION_REVIEW.md) adds one role,
 yielding 105 with 40 pending; it does not claim the complete capture parser is reviewed.
+The [capture helper review](CAPTURE_HELPER_REVIEW.md) adds three roles,
+yielding 108 with 37 pending.
 
 ### Peripheral map
 

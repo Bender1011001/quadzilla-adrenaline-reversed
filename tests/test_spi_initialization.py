@@ -62,15 +62,14 @@ class SpiInitialization(unittest.TestCase):
         self.assertEqual({c["site"] for c in stalled["transfer_calls"]}, {"0x5790"})
         self.assertEqual(stalled["timeout_flag"], 0)
 
-    def test_image_transmit_data_has_exact_supported_extent(self):
+    def test_initial_transmit_is_first_record_of_supported_table(self):
         call = next(c for c in self.cases["ready"]["transfer_calls"] if c["site"] == "0x58fe")
         self.assertEqual(call["args"], ["0xfffe0000", "0x9ff0", "0x9"])
         ledger = load("image_coverage_ledger.json")
-        rows = [r for r in ledger["ranges"] if r["classification"] == "spi_initialization_tx_data"]
+        rows = [r for r in ledger["ranges"] if r["classification"] == "spi_request_tx_table"]
         self.assertEqual(min(int(r["start"], 0) for r in rows), 0x9FF0)
-        self.assertEqual(max(int(r["end"], 0) for r in rows), 0x9FF9)
-        self.assertEqual(sum(int(r["end"], 0)-int(r["start"], 0) for r in rows), 9)
-        self.assertEqual(ledger["classification_bytes"]["spi_initialization_tx_data"], 9)
+        self.assertTrue(any(int(r["start"], 0) < 0x9FF9 <= int(r["end"], 0) for r in rows))
+        self.assertEqual(ledger["classification_bytes"]["spi_request_tx_table"], 63)
 
 
 if __name__ == "__main__":

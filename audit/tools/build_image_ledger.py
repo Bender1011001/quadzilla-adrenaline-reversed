@@ -18,7 +18,7 @@ LAYOUT = (
     (0x896C, 0x8970, "soft_float_status_pointer"),
     (0x96C4, 0x96E8, "startup_region_descriptors"),
     (0x96E8, 0x9F88, "initialized_ram_data_source"),
-    (0x9FF0, 0x9FF9, "spi_initialization_tx_data"),
+    (0x9FF0, 0xA02F, "spi_request_tx_table"),
     (0xA91C, 0xAD18, "aid_pointer_table_1"),
     (0xAD18, 0xB114, "aid_pointer_table_2"),
     (0xB114, 0xB1B8, "ram_executable_template"),

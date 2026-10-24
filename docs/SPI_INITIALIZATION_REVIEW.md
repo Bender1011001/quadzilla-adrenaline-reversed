@@ -67,11 +67,12 @@ argument and retry attempt; no PDC data movement is modeled.
 | 23 | `0x5982` | TX | `0x200688` | 4 | |
 | 24 | `0x5998` | TX | `0x200626` | 3 | |
 
-The direct pointer/count at step 17 supports classifying `0x9FF0..0x9FF8`
-as referenced SPI initialization data. IDA had decoded that span as code,
-including an item extending to `0x9FFA`; the byte ledger splits the last
-item at the supported nine-byte data boundary. This does not classify the
-following byte or the rest of the surrounding region.
+The direct pointer/count at step 17 initially supported classifying
+`0x9FF0..0x9FF8` as referenced SPI initialization data. The subsequent
+[capture helper review](CAPTURE_HELPER_REVIEW.md) establishes this as record
+0 of a seven-record table, extending the supported data extent to `0xA02F`
+exclusive. IDA's overlapping code items remain explicit ledger conflicts;
+the rest of the surrounding region is not classified by these references.
 
 ## Timeout request and normal exit
 

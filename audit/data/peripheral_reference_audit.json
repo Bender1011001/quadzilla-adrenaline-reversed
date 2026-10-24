@@ -305,8 +305,19 @@
     },
     {
       "entry": "0x5e04",
-      "semantic_status": "unlabeled_static_entry",
-      "semantics": [],
+      "semantic_status": "documented_static_role",
+      "semantics": [
+        {
+          "entry": "0x5e04",
+          "label": "Bounded SPI request-table selector and secondary mode/option command sender",
+          "assurance": "static_instruction_trace_and_bounded_emulation",
+          "evidence": [
+            "audit/data/capture_helper_binaryninja.json",
+            "audit/data/capture_helper_emulation.json",
+            "docs/CAPTURE_HELPER_REVIEW.md"
+          ]
+        }
+      ],
       "blocks": {
         "RSTC": 1
       },
@@ -1379,7 +1390,7 @@
   "inputs": {
     "catalog": {
       "path": "audit/data/execution_entry_catalog.json",
-      "sha256": "bd28f3462b017c4f0c544b2ea63a9acc2cd05b7b98cceba7b59bae4e3843b1d7"
+      "sha256": "774600f64ed336aefce26a208319f96812ea9d2884cb7a77bfab6802f0ec05f0"
     },
     "peripheral_map": {
       "path": "audit/data/sam7s_peripheral_map.json",

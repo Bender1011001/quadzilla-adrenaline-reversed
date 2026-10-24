@@ -9,7 +9,7 @@
     "0x8038",
     "0x7cc4"
   ],
-  "remaining_entries": 40,
+  "remaining_entries": 37,
   "queue": [
     {
       "entry": "0x506c",
@@ -160,20 +160,6 @@
       "reference_regions": {}
     },
     {
-      "entry": "0x5ebc",
-      "undirected_call_distance": 3,
-      "anchor_path": [
-        "0x601c",
-        "0x7128",
-        "0x59e8",
-        "0x5ebc"
-      ],
-      "reference_regions": {
-        "image": 4,
-        "sram": 4
-      }
-    },
-    {
       "entry": "0x5f14",
       "undirected_call_distance": 3,
       "anchor_path": [
@@ -310,33 +296,6 @@
       }
     },
     {
-      "entry": "0x8504",
-      "undirected_call_distance": 3,
-      "anchor_path": [
-        "0x601c",
-        "0x7128",
-        "0x59e8",
-        "0x8504"
-      ],
-      "reference_regions": {}
-    },
-    {
-      "entry": "0x5e04",
-      "undirected_call_distance": 4,
-      "anchor_path": [
-        "0x601c",
-        "0x7128",
-        "0x59e8",
-        "0x5ebc",
-        "0x5e04"
-      ],
-      "reference_regions": {
-        "image": 7,
-        "peripheral": 1,
-        "sram": 8
-      }
-    },
-    {
       "entry": "0x6b20",
       "undirected_call_distance": 4,
       "anchor_path": [
@@ -467,5 +426,5 @@
       "reference_regions": {}
     }
   ],
-  "catalog_lf_text_sha256": "bd28f3462b017c4f0c544b2ea63a9acc2cd05b7b98cceba7b59bae4e3843b1d7"
+  "catalog_lf_text_sha256": "774600f64ed336aefce26a208319f96812ea9d2884cb7a77bfab6802f0ec05f0"
 }

@@ -85,6 +85,8 @@ The [SPI output state review](docs/SPI_STATE_MACHINE_REVIEW.md) adds the four-st
 
 The [SPI initialization review](docs/SPI_INITIALIZATION_REVIEW.md) adds the 24-step setup sequence and its shared timeout/reset path, bringing baseline coverage to 105 roles with 40 pending. It also records the reset-only capture-entry path and identifies nine directly referenced image bytes as transmit data.
 
+The [capture helper review](docs/CAPTURE_HELPER_REVIEW.md) adds request selection, seven-slot rotation and unsigned byte comparison, bringing baseline coverage to 108 roles with 37 pending. Indexed request evidence extends the shared transmit-data table to 63 bytes; full capture parsing remains under review.
+
 ## Layout
 
 ```
