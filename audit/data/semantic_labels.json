@@ -296,8 +296,8 @@
     },
     {
       "entry": "0x601c",
-      "label": "Received-AID validation dispatcher; loop and thirteen handlers reviewed, remaining handlers pending",
-      "assurance": "static_instruction_trace",
+      "label": "Received-AID validation dispatcher with complete bounded local handler accounts; transport and downstream paths separate",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
       "evidence": [
         "quadzilla_mcu_map.json:functions.sub_601C",
         "quadzilla_vp44_chain.json:roles.requested_stretch_setting",
@@ -307,7 +307,44 @@
         "docs/AID_DISPATCH_SELECTOR_UPDATES.md",
         "audit/data/compound_update_emulation.json",
         "audit/data/compound_update_binaryninja.json",
-        "docs/COMPOUND_AID_UPDATE_REVIEW.md"
+        "docs/COMPOUND_AID_UPDATE_REVIEW.md",
+        "audit/data/remaining_update_binaryninja.json",
+        "audit/data/remaining_update_emulation.json",
+        "docs/REMAINING_AID_UPDATE_REVIEW.md",
+        "audit/data/remaining_update_ida_macros.json"
+      ]
+    },
+    {
+      "entry": "0x6042",
+      "label": "Parent-frame curve continuation: lower clamp then final-slot and echo stores",
+      "assurance": "static_instruction_trace_and_bounded_parent_execution",
+      "evidence": [
+        "audit/data/remaining_update_binaryninja.json",
+        "audit/data/remaining_update_emulation.json",
+        "docs/REMAINING_AID_UPDATE_REVIEW.md",
+        "audit/data/remaining_update_ida_macros.json"
+      ]
+    },
+    {
+      "entry": "0x6048",
+      "label": "Parent-frame curve continuation: final-slot store and fixed echo selection",
+      "assurance": "static_instruction_trace_and_bounded_parent_execution",
+      "evidence": [
+        "audit/data/remaining_update_binaryninja.json",
+        "audit/data/remaining_update_emulation.json",
+        "docs/REMAINING_AID_UPDATE_REVIEW.md",
+        "audit/data/remaining_update_ida_macros.json"
+      ]
+    },
+    {
+      "entry": "0x604c",
+      "label": "Parent-frame echo-store continuation into validation loop",
+      "assurance": "static_instruction_trace_and_bounded_parent_execution",
+      "evidence": [
+        "audit/data/remaining_update_binaryninja.json",
+        "audit/data/remaining_update_emulation.json",
+        "docs/REMAINING_AID_UPDATE_REVIEW.md",
+        "audit/data/remaining_update_ida_macros.json"
       ]
     },
     {

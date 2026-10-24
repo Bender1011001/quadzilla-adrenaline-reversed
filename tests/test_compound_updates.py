@@ -29,7 +29,7 @@ class CompoundUpdates(unittest.TestCase):
         self.assertEqual(self.emu['extra_ingest_calls'],39)
         self.assertEqual(self.emu['reference_mismatches'],0)
         dispatch=load('aid_validation_dispatch.json')
-        self.assertEqual((dispatch['reviewed_nondefault_handlers'],dispatch['pending_nondefault_handlers']),(13,44))
+        self.assertEqual((dispatch['reviewed_nondefault_handlers'],dispatch['pending_nondefault_handlers']),(57,0))
         self.assertEqual({r['aid'] for r in dispatch['rows'] if
             r['handler_review']=='docs/COMPOUND_AID_UPDATE_REVIEW.md'},set(HANDLERS))
 

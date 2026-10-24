@@ -139,27 +139,33 @@ and engine damage, not data loss.
 **Fix:** require authenticated, encrypted pairing; add an application-level challenge-response with a MAC;
 enforce limits on the device (F5); rate-limit and log writes.
 
-### F5. The device clamps most values, but its limits differ from the app's (Low, verified statically)
+### F5. Selected device-side limits differ from the app's (Low, static and bounded execution evidence)
 
 The app's limits are fields of the vendor's JSON profiles (`QuadAttribute`: `minValue`, `maxValue`, `multiplyFactor`). The firmware does
-not rely on them: the ingest dispatcher (`0x601C`) has 57 AID case labels, including range checks and shared branch targets.
-`python tools/aid_clamps.py` extracts the clamp literals and sets them beside the profile (asserted by `tests/test_aid_clamps.py`).
+not rely only on them: the ingest dispatcher (`0x601C`) selects 57 non-default handlers, including copies, masks, range checks and shared continuations.
+The [local handler accounts](REMAINING_AID_UPDATE_REVIEW.md), [selector/count review](AID_DISPATCH_SELECTOR_UPDATES.md)
+and [compound review](COMPOUND_AID_UPDATE_REVIEW.md) now trace all those local paths with bounded original-byte execution.
+`python tools/aid_clamps.py` remains a lexical clamp-literal listing, not a control-flow or transport-width evaluator.
 
 | AIDs | App limit | Device clamp (raw) | Relation |
 |---|---|---|---|
-| 113-121 (fueling curve; later cases branch into shared code) | 50-150 % | 50-150 | equal |
+| 113-136 (curve, low staged byte) | 50-150 % | 50-150 on the low byte; upper staged byte ignored by these handlers | low-byte range agrees; transport width is separately documented |
 | 139-141 (timing, 2500 RPM and up) | 0-30 deg | 0-300 at x0.1 = 30.0 deg | equal |
-| 17, 22, 59, 61, 62, 110, 112 | per profile | equal in the extracted literals | equal |
+| 17, 59, 61, 62, 110, 112 | per profile | source-bound local limits documented in the handler account | raw extents agree with the earlier profile comparison; widths remain distinct |
+| 22 | per profile | conditional rule using working AID 112 value; not a universal 20-40 clamp | coupled behavior established; intended relationship unverified |
 | **85** (max fuel stretch) | **1200-2200 us** | **800-2200** (upper bound operand 2201 read from the image at `0x67C0`) | **device allows 400 us lower** |
 | **137, 138** (timing at 1500 and 2000 RPM) | **0-20 and 0-26 deg** | 0-30.0 deg | **device allows more advance** |
-| 15 | 6-15 | 5-14 | off by one |
+| 15 | 6-15 | 5-14, then quotient/remainder mapping derivation | different raw range; app count encoding needs review before calling it an off-by-one defect |
 | 104 (RPM limit) | 3200-3700 | 3200-3700 (literal 3701 at `0x67D8`, upper branch subtracts one) | equal statically |
-| 146, 150-154, 226 | per profile | no range-check literals found in this function | unknown |
+| 146, 150-154 | per profile | local copies/masks; AID 154 narrows a 16-bit comparison/store and continues into AID 146 | local contracts established; intended ranges and downstream impact remain unresolved |
+| 226 | compound profile value | independent selector bounds and positive floating-coefficient guard | local guards established; variable-width transport remains separate |
 
-So the vendor UI is not the only barrier, which limits the impact of F4, but a peer that speaks X2com directly can set AID 85 to 800-1199 us
-and the lowest two timing points to 30 deg, values the app never offers. The scaling (raw = display / `multiplyFactor`) is inferred; it is
-corroborated by five AIDs (17, 59, 139-141) whose device clamp equals the profile maximum divided by 0.1. Where a case shows no literals it may
-branch to shared validation code or validate elsewhere, so "unknown" means not established. **Needs a device test to confirm behaviour at run time.**
+These local bounds constrain selected successful ingest paths, but do not prove every raw-staging consumer enforces them.
+The AID 85 handler accepts raw values 800-1199, and the two lower timing-point handlers accept raw 300, outside the corresponding profile limits.
+The scaling (raw = display / `multiplyFactor`) is inferred; five AIDs (17, 59, 139-141) corroborate that interpretation through their declared scales and limits.
+This is firmware-path evidence, not measured acceptance by a physical device. The [compound review](COMPOUND_AID_UPDATE_REVIEW.md)
+also reproduces partial staging later applied through a different AID under an explicit receive-result contract.
+Complete framing/transport reachability, app encoding and live effects remain unverified. Passing the local bounds does not establish safe operation.
 
 ```bash
 python tools/aid_clamps.py

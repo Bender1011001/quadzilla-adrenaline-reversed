@@ -10,8 +10,8 @@ Update: the [startup/persistence review](STARTUP_PERSISTENCE_REVIEW.md) and
 entries, for at least 157 supported starts. Three callable numeric routines
 have no identified incoming image call and are not claimed reachable in service.
 The original 145-start catalog is retained as the baseline; its semantic coverage
-now stands at 109 roles with 36 entries left after the
-[control selector review](CONTROL_SELECTOR_REVIEW.md). The
+now stands at 112 roles with 33 entries left after the
+[remaining local AID handler review](REMAINING_AID_UPDATE_REVIEW.md). The
 new entries and aliases are recorded separately in
 `audit/data/entry_adjudications.json`. Neither inventory is claimed exhaustive.
 
@@ -27,8 +27,8 @@ address without hiding pending review:
 
 | Classification | Bytes |
 |---|---:|
-| IDA code candidates awaiting review | 11,889 |
-| Explicitly reviewed Thumb instruction ranges | 5,396 |
+| IDA code candidates awaiting review | 10,671 |
+| Explicitly reviewed Thumb instruction ranges | 6,614 |
 | Explicitly reviewed ARM instruction ranges | 4,168 |
 | IDA data candidates awaiting review | 2,708 |
 | Soft float status pointer literal | 4 |
@@ -41,8 +41,8 @@ address without hiding pending review:
 | Erased trailing `FF` | 2,888 |
 
 Coverage of an address is not proof that its meaning or ISA has been reviewed.
-The explicit instruction-range manifest now accepts 9,564 bytes through the
-[compound AID update review](COMPOUND_AID_UPDATE_REVIEW.md). It excludes adjacent literal
+The explicit instruction-range manifest now accepts 10,782 bytes through the
+[remaining local AID handler review](REMAINING_AID_UPDATE_REVIEW.md). It excludes adjacent literal
 pools and alignment. Earlier semantic labels are not automatically promoted to
 byte-level classification; their exact ranges still need to be adjudicated.
 The ledger explicitly preserves 2,144 item/layout conflicts. These are tool item
@@ -141,6 +141,18 @@ later reaching working state through AID 154 fall-through. A separate repeated
 16-bit-compare/eight-bit-store case sets the update flag without changing
 the final byte. Full transport reachability, intended ranges and downstream
 impact remain unresolved. Entry-role counts stay at 109/36.
+
+## Complete bounded local handler accounts
+
+The [remaining-handler review](REMAINING_AID_UPDATE_REVIEW.md) closes the
+57-handler local queue and classifies all 1,882 instruction bytes of the
+dispatcher and its three parent-frame continuations. It adds 1,218 reviewed
+bytes and three baseline roles. 22,703 ingest calls check clamp/curve paths,
+coupled limits, width distinctions, the default-initializer trigger and
+AID 226 floating configuration. A two-byte reader can return a retained upper
+echo byte after a one-byte handler store. Complete variable-width admission,
+all staging/echo writers, persistence and downstream control remain open;
+closing this local queue is not completion of the full parameter goal.
 
 ## Outstanding requirements
 

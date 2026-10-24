@@ -12,6 +12,8 @@ The [validation dispatch and update review](AID_DISPATCH_SELECTOR_UPDATES.md) di
 
 The [compound-handler account](COMPOUND_AID_UPDATE_REVIEW.md) traces eleven update paths, including five unprofiled AIDs. The original payload walker and scripted receive-result sequence establish partial staging later consumed by a different AID; repeated narrowing is recorded separately. Complete frame acceptance, intended parameter ranges and physical consequences remain unresolved.
 
+The [remaining-handler account](REMAINING_AID_UPDATE_REVIEW.md) closes the bounded local accounts for all 57 selected handlers. It records 22,703 original-byte calls, ignored upper staging/retained upper echo bytes, coupled limits, reset-trigger propagation and AID 226 floating configuration. Three catalog entries are parent-frame continuations rather than ordinary returning functions. This milestone does not complete transport, all writers/consumers or the full firmware goal.
+
 ## 1. Scope and approach
 
 Four independent surfaces were attacked, each giving a cross-check on the others:
@@ -52,7 +54,7 @@ slate, then disassemble from each known entry with an address range capped at th
 That produced the first-pass 57 decompiled functions. A later two-tool audit (IDA Pro 9.3 and Ghidra 11.3.2, independently) reconciled the union to
 **145 execution entries** ([FIRMWARE_AUDIT.md](FIRMWARE_AUDIT.md)), so 57 was a hand-seeded subset.
 
-**What the image contains** (audited roles only, 109 of 145 baseline entries): AID ingest and validation (`0x601C`), AID width and SRAM resolvers (`0x7BF8`-`0x7D80`), a
+**What the image contains** (audited roles only, 112 of 145 baseline entries): AID ingest and validation (`0x601C`), AID width and SRAM resolvers (`0x7BF8`-`0x7D80`), a
 TPS/input gate (`0x4818`), the stretch arithmetic and AID 13 backdown logic (`0x4A94`, `0x499C`, `0x50F0`), and the timer write that drives the output (`0x6FA0`). Together
 they form a closed static chain from the requested-stretch setting (AID 85) to the AT91 TC0_RC output ([TECHNICAL_REFERENCE.md](TECHNICAL_REFERENCE.md)). Two
 labels from the first pass did not survive the audit: `0x4D38` is scalar arithmetic feeding a telemetry word, not a fueling calculator, and `0x59E8` unpacks incoming
@@ -86,7 +88,7 @@ Nothing below has been built, flashed or tested on a device.
 |---|---|
 | Edit AID values over the phone link | a Bluetooth client speaking X2com; pairing behaviour unknown |
 | Edit calibration tables in the image | a known-good update path; bootloader acceptance rules unknown |
-| Add a small routine in the 2,888 free bytes | confirmed hook points; the audit labels 109 of 145 baseline entries |
+| Add a small routine in the 2,888 free bytes | confirmed hook points; the audit labels 112 of 145 baseline entries |
 
 Ideas from earlier notes that do not fit (a data logger, adaptive fuel learning, an OBD-II emulator) were based on a mistaken 19 KB free-flash figure.
 
@@ -95,7 +97,7 @@ Ideas from earlier notes that do not fit (a data logger, adaptive fuel learning,
 1. Does the on-device bootloader verify anything beyond the Intel HEX line checksums?
 2. What pairing mode and PIN does the Bluetooth module use?
 3. Do the statically identified clamps cover every incoming-write path, and how do they behave on hardware?
-4. Roles of the 36 unlabelled baseline execution entries. See the [full analysis ledger](FULL_ANALYSIS_PROGRESS.md) and linked per-entry reviews for bounded evidence. The [SPI output state review](SPI_STATE_MACHINE_REVIEW.md) also identifies specific signed-packing and progress-after-failure questions requiring further caller and scheduling evidence.
+4. Roles of the 33 unlabelled baseline execution entries. See the [full analysis ledger](FULL_ANALYSIS_PROGRESS.md) and linked per-entry reviews for bounded evidence. The [SPI output state review](SPI_STATE_MACHINE_REVIEW.md) also identifies specific signed-packing and progress-after-failure questions requiring further caller and scheduling evidence.
 5. The X2com-over-USB framing needed to probe AIDs (`quadzilla_tool.py scan` is deliberately unimplemented).
 
 ## 8. Reproducing
