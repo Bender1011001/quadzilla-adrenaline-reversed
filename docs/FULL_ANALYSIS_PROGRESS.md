@@ -10,8 +10,8 @@ Update: the [startup/persistence review](STARTUP_PERSISTENCE_REVIEW.md) and
 entries, for at least 157 supported starts. Three callable numeric routines
 have no identified incoming image call and are not claimed reachable in service.
 The original 145-start catalog is retained as the baseline; its semantic coverage
-now stands at 104 roles with 41 entries left after the
-[SPI output state review](SPI_STATE_MACHINE_REVIEW.md). The
+now stands at 105 roles with 40 entries left after the
+[SPI initialization review](SPI_INITIALIZATION_REVIEW.md). The
 new entries and aliases are recorded separately in
 `audit/data/entry_adjudications.json`. Neither inventory is claimed exhaustive.
 
@@ -27,24 +27,25 @@ address without hiding pending review:
 
 | Classification | Bytes |
 |---|---:|
-| IDA code candidates awaiting review | 14,324 |
-| Explicitly reviewed Thumb instruction ranges | 3,024 |
+| IDA code candidates awaiting review | 13,663 |
+| Explicitly reviewed Thumb instruction ranges | 3,676 |
 | Explicitly reviewed ARM instruction ranges | 4,168 |
 | IDA data candidates awaiting review | 3,144 |
 | Soft float status pointer literal | 4 |
 | Startup descriptors | 36 |
 | Initialized RAM data source | 2,208 |
+| Directly referenced SPI initialization transmit data | 9 |
 | Two AID pointer tables | 2,040 |
 | RAM executable source template | 164 |
 | Erased trailing `FF` | 2,888 |
 
 Coverage of an address is not proof that its meaning or ISA has been reviewed.
-The explicit instruction-range manifest now accepts 7,192 bytes through the
-[SPI output state review](SPI_STATE_MACHINE_REVIEW.md). It excludes adjacent literal
+The explicit instruction-range manifest now accepts 7,844 bytes through the
+[SPI initialization review](SPI_INITIALIZATION_REVIEW.md). It excludes adjacent literal
 pools and alignment. Earlier semantic labels are not automatically promoted to
 byte-level classification; their exact ranges still need to be adjudicated.
-The ledger explicitly preserves 2,119 item/layout conflicts. These are tool item
-spans, not 2,119 bugs or distinct functions. Many arise because initialized data
+The ledger explicitly preserves 2,123 item/layout conflicts. These are tool item
+spans, not 2,123 bugs or distinct functions. Many arise because initialized data
 or erased space was interpreted as instructions.
 
 ## New finding: startup relocates executable helpers into SRAM

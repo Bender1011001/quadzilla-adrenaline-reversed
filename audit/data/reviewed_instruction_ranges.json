@@ -197,6 +197,45 @@
       ]
     },
     {
+      "start": "0x575c",
+      "end": "0x59ca",
+      "entry": "0x575c",
+      "isa": "thumb",
+      "decoder_artifact": "audit/data/spi_initialization_binaryninja.json",
+      "account": "Complete initializer instruction body; adjacent literals excluded",
+      "evidence": [
+        "audit/data/spi_initialization_binaryninja.json",
+        "audit/data/spi_initialization_emulation.json",
+        "docs/SPI_INITIALIZATION_REVIEW.md"
+      ]
+    },
+    {
+      "start": "0x59e8",
+      "end": "0x59fe",
+      "entry": "0x59e8",
+      "isa": "thumb",
+      "decoder_artifact": "audit/data/spi_initialization_binaryninja.json",
+      "account": "Only the R0-nonzero reset prefix; parser branch at 0x59fe remains separate work",
+      "evidence": [
+        "audit/data/spi_initialization_binaryninja.json",
+        "audit/data/spi_initialization_emulation.json",
+        "docs/SPI_INITIALIZATION_REVIEW.md"
+      ]
+    },
+    {
+      "start": "0x5cb2",
+      "end": "0x5cba",
+      "entry": "0x59e8",
+      "isa": "thumb",
+      "decoder_artifact": "audit/data/spi_initialization_binaryninja.json",
+      "account": "Shared return epilogue executed by the reviewed reset path; not a full parser review",
+      "evidence": [
+        "audit/data/spi_initialization_binaryninja.json",
+        "audit/data/spi_initialization_emulation.json",
+        "docs/SPI_INITIALIZATION_REVIEW.md"
+      ]
+    },
+    {
       "start": "0x5cf0",
       "end": "0x5dea",
       "entry": "0x5cf0",

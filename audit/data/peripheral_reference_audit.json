@@ -188,8 +188,19 @@
     },
     {
       "entry": "0x575c",
-      "semantic_status": "unlabeled_static_entry",
-      "semantics": [],
+      "semantic_status": "documented_static_role",
+      "semantics": [
+        {
+          "entry": "0x575c",
+          "label": "SPI initialization transfer sequence with shared timeout and keyed reset request",
+          "assurance": "static_instruction_trace_and_synthetic_mmio_emulation",
+          "evidence": [
+            "audit/data/spi_initialization_binaryninja.json",
+            "audit/data/spi_initialization_emulation.json",
+            "docs/SPI_INITIALIZATION_REVIEW.md"
+          ]
+        }
+      ],
       "blocks": {
         "RSTC": 1
       },
@@ -1368,7 +1379,7 @@
   "inputs": {
     "catalog": {
       "path": "audit/data/execution_entry_catalog.json",
-      "sha256": "27e086cebc30c0727326a271f81b5f6026dc81ba312f59bff3c1c07e770905a4"
+      "sha256": "bd28f3462b017c4f0c544b2ea63a9acc2cd05b7b98cceba7b59bae4e3843b1d7"
     },
     "peripheral_map": {
       "path": "audit/data/sam7s_peripheral_map.json",

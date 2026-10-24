@@ -1,0 +1,4969 @@
+{
+  "format": "quadzilla-spi-initialization-emulation-v1",
+  "raw_sha256": "1ae519ba6194e8f7bdaaa94333a83a9e6fda3b0563f87f7d48383b37288c1780",
+  "cpu": "ARM926 functional surrogate",
+  "entry": "0x575c",
+  "literal_words": {
+    "0x59cc": "0x200ad4",
+    "0x59d0": "0x200ad5",
+    "0x59d4": "0x200ad3",
+    "0x59d8": "0x2005c4",
+    "0x59dc": "0x9ff0",
+    "0x59e0": "0xfffffd00",
+    "0x59e4": "0xa500000d"
+  },
+  "cases": [
+    {
+      "mode": "ready",
+      "outcome": "returned",
+      "stop_pc": "0x3f00",
+      "transfer_calls": [
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 1,
+          "scripted_ready": true,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x57b2",
+          "helper": "0x6b64",
+          "attempt": 1,
+          "scripted_ready": true,
+          "args": [
+            "0xfffe0000",
+            "0x200623",
+            "0x3"
+          ]
+        },
+        {
+          "site": "0x57cc",
+          "helper": "0x6b9c",
+          "attempt": 1,
+          "scripted_ready": true,
+          "args": [
+            "0xfffe0000",
+            "0x2006b0",
+            "0x200629",
+            "0x3"
+          ]
+        },
+        {
+          "site": "0x57e2",
+          "helper": "0x6b64",
+          "attempt": 1,
+          "scripted_ready": true,
+          "args": [
+            "0xfffe0000",
+            "0x200680",
+            "0x5"
+          ]
+        },
+        {
+          "site": "0x57f8",
+          "helper": "0x6b64",
+          "attempt": 1,
+          "scripted_ready": true,
+          "args": [
+            "0xfffe0000",
+            "0x200614",
+            "0x3"
+          ]
+        },
+        {
+          "site": "0x580e",
+          "helper": "0x6b64",
+          "attempt": 1,
+          "scripted_ready": true,
+          "args": [
+            "0xfffe0000",
+            "0x200617",
+            "0x3"
+          ]
+        },
+        {
+          "site": "0x5824",
+          "helper": "0x6b64",
+          "attempt": 1,
+          "scripted_ready": true,
+          "args": [
+            "0xfffe0000",
+            "0x200670",
+            "0x6"
+          ]
+        },
+        {
+          "site": "0x583a",
+          "helper": "0x6b64",
+          "attempt": 1,
+          "scripted_ready": true,
+          "args": [
+            "0xfffe0000",
+            "0x200678",
+            "0x6"
+          ]
+        },
+        {
+          "site": "0x5850",
+          "helper": "0x6b64",
+          "attempt": 1,
+          "scripted_ready": true,
+          "args": [
+            "0xfffe0000",
+            "0x20064c",
+            "0x4"
+          ]
+        },
+        {
+          "site": "0x5866",
+          "helper": "0x6b64",
+          "attempt": 1,
+          "scripted_ready": true,
+          "args": [
+            "0xfffe0000",
+            "0x200650",
+            "0x4"
+          ]
+        },
+        {
+          "site": "0x587c",
+          "helper": "0x6b64",
+          "attempt": 1,
+          "scripted_ready": true,
+          "args": [
+            "0xfffe0000",
+            "0x200658",
+            "0x6"
+          ]
+        },
+        {
+          "site": "0x5892",
+          "helper": "0x6b64",
+          "attempt": 1,
+          "scripted_ready": true,
+          "args": [
+            "0xfffe0000",
+            "0x200660",
+            "0x6"
+          ]
+        },
+        {
+          "site": "0x58a8",
+          "helper": "0x6b64",
+          "attempt": 1,
+          "scripted_ready": true,
+          "args": [
+            "0xfffe0000",
+            "0x200668",
+            "0x6"
+          ]
+        },
+        {
+          "site": "0x58be",
+          "helper": "0x6b64",
+          "attempt": 1,
+          "scripted_ready": true,
+          "args": [
+            "0xfffe0000",
+            "0x200654",
+            "0x4"
+          ]
+        },
+        {
+          "site": "0x58d4",
+          "helper": "0x6b64",
+          "attempt": 1,
+          "scripted_ready": true,
+          "args": [
+            "0xfffe0000",
+            "0x20061a",
+            "0x3"
+          ]
+        },
+        {
+          "site": "0x58ea",
+          "helper": "0x6b64",
+          "attempt": 1,
+          "scripted_ready": true,
+          "args": [
+            "0xfffe0000",
+            "0x20060b",
+            "0x3"
+          ]
+        },
+        {
+          "site": "0x58fe",
+          "helper": "0x6b64",
+          "attempt": 1,
+          "scripted_ready": true,
+          "args": [
+            "0xfffe0000",
+            "0x9ff0",
+            "0x9"
+          ]
+        },
+        {
+          "site": "0x5914",
+          "helper": "0x6b64",
+          "attempt": 1,
+          "scripted_ready": true,
+          "args": [
+            "0xfffe0000",
+            "0x20061d",
+            "0x3"
+          ]
+        },
+        {
+          "site": "0x592a",
+          "helper": "0x6b64",
+          "attempt": 1,
+          "scripted_ready": true,
+          "args": [
+            "0xfffe0000",
+            "0x20060e",
+            "0x3"
+          ]
+        },
+        {
+          "site": "0x5940",
+          "helper": "0x6b64",
+          "attempt": 1,
+          "scripted_ready": true,
+          "args": [
+            "0xfffe0000",
+            "0x200611",
+            "0x3"
+          ]
+        },
+        {
+          "site": "0x5956",
+          "helper": "0x6b64",
+          "attempt": 1,
+          "scripted_ready": true,
+          "args": [
+            "0xfffe0000",
+            "0x200620",
+            "0x3"
+          ]
+        },
+        {
+          "site": "0x596c",
+          "helper": "0x6b64",
+          "attempt": 1,
+          "scripted_ready": true,
+          "args": [
+            "0xfffe0000",
+            "0x20068c",
+            "0x4"
+          ]
+        },
+        {
+          "site": "0x5982",
+          "helper": "0x6b64",
+          "attempt": 1,
+          "scripted_ready": true,
+          "args": [
+            "0xfffe0000",
+            "0x200688",
+            "0x4"
+          ]
+        },
+        {
+          "site": "0x5998",
+          "helper": "0x6b64",
+          "attempt": 1,
+          "scripted_ready": true,
+          "args": [
+            "0xfffe0000",
+            "0x200626",
+            "0x3"
+          ]
+        }
+      ],
+      "external_flag_injections": [],
+      "writes": [
+        {
+          "site": "0x5750",
+          "address": "0xfffff430",
+          "size": 4,
+          "value": "0x100"
+        },
+        {
+          "site": "0x5750",
+          "address": "0xfffff430",
+          "size": 4,
+          "value": "0x200"
+        },
+        {
+          "site": "0x6b7e",
+          "address": "0xfffe0120",
+          "size": 4,
+          "value": "0x100"
+        },
+        {
+          "site": "0x6b80",
+          "address": "0xfffe0108",
+          "size": 4,
+          "value": "0x20060a"
+        },
+        {
+          "site": "0x6b82",
+          "address": "0xfffe010c",
+          "size": 4,
+          "value": "0x1"
+        },
+        {
+          "site": "0x6b7e",
+          "address": "0xfffe0120",
+          "size": 4,
+          "value": "0x100"
+        },
+        {
+          "site": "0x6b80",
+          "address": "0xfffe0108",
+          "size": 4,
+          "value": "0x200623"
+        },
+        {
+          "site": "0x6b82",
+          "address": "0xfffe010c",
+          "size": 4,
+          "value": "0x3"
+        },
+        {
+          "site": "0x6bba",
+          "address": "0xfffe0120",
+          "size": 4,
+          "value": "0x0"
+        },
+        {
+          "site": "0x6bbc",
+          "address": "0xfffe0108",
+          "size": 4,
+          "value": "0x200629"
+        },
+        {
+          "site": "0x6bbe",
+          "address": "0xfffe010c",
+          "size": 4,
+          "value": "0x3"
+        },
+        {
+          "site": "0x6bc0",
+          "address": "0xfffe0100",
+          "size": 4,
+          "value": "0x2006b0"
+        },
+        {
+          "site": "0x6bc2",
+          "address": "0xfffe0104",
+          "size": 4,
+          "value": "0x3"
+        },
+        {
+          "site": "0x6bc8",
+          "address": "0xfffe0120",
+          "size": 4,
+          "value": "0x101"
+        },
+        {
+          "site": "0x6b7e",
+          "address": "0xfffe0120",
+          "size": 4,
+          "value": "0x100"
+        },
+        {
+          "site": "0x6b80",
+          "address": "0xfffe0108",
+          "size": 4,
+          "value": "0x200680"
+        },
+        {
+          "site": "0x6b82",
+          "address": "0xfffe010c",
+          "size": 4,
+          "value": "0x5"
+        },
+        {
+          "site": "0x6b7e",
+          "address": "0xfffe0120",
+          "size": 4,
+          "value": "0x100"
+        },
+        {
+          "site": "0x6b80",
+          "address": "0xfffe0108",
+          "size": 4,
+          "value": "0x200614"
+        },
+        {
+          "site": "0x6b82",
+          "address": "0xfffe010c",
+          "size": 4,
+          "value": "0x3"
+        },
+        {
+          "site": "0x6b7e",
+          "address": "0xfffe0120",
+          "size": 4,
+          "value": "0x100"
+        },
+        {
+          "site": "0x6b80",
+          "address": "0xfffe0108",
+          "size": 4,
+          "value": "0x200617"
+        },
+        {
+          "site": "0x6b82",
+          "address": "0xfffe010c",
+          "size": 4,
+          "value": "0x3"
+        },
+        {
+          "site": "0x6b7e",
+          "address": "0xfffe0120",
+          "size": 4,
+          "value": "0x100"
+        },
+        {
+          "site": "0x6b80",
+          "address": "0xfffe0108",
+          "size": 4,
+          "value": "0x200670"
+        },
+        {
+          "site": "0x6b82",
+          "address": "0xfffe010c",
+          "size": 4,
+          "value": "0x6"
+        },
+        {
+          "site": "0x6b7e",
+          "address": "0xfffe0120",
+          "size": 4,
+          "value": "0x100"
+        },
+        {
+          "site": "0x6b80",
+          "address": "0xfffe0108",
+          "size": 4,
+          "value": "0x200678"
+        },
+        {
+          "site": "0x6b82",
+          "address": "0xfffe010c",
+          "size": 4,
+          "value": "0x6"
+        },
+        {
+          "site": "0x6b7e",
+          "address": "0xfffe0120",
+          "size": 4,
+          "value": "0x100"
+        },
+        {
+          "site": "0x6b80",
+          "address": "0xfffe0108",
+          "size": 4,
+          "value": "0x20064c"
+        },
+        {
+          "site": "0x6b82",
+          "address": "0xfffe010c",
+          "size": 4,
+          "value": "0x4"
+        },
+        {
+          "site": "0x6b7e",
+          "address": "0xfffe0120",
+          "size": 4,
+          "value": "0x100"
+        },
+        {
+          "site": "0x6b80",
+          "address": "0xfffe0108",
+          "size": 4,
+          "value": "0x200650"
+        },
+        {
+          "site": "0x6b82",
+          "address": "0xfffe010c",
+          "size": 4,
+          "value": "0x4"
+        },
+        {
+          "site": "0x6b7e",
+          "address": "0xfffe0120",
+          "size": 4,
+          "value": "0x100"
+        },
+        {
+          "site": "0x6b80",
+          "address": "0xfffe0108",
+          "size": 4,
+          "value": "0x200658"
+        },
+        {
+          "site": "0x6b82",
+          "address": "0xfffe010c",
+          "size": 4,
+          "value": "0x6"
+        },
+        {
+          "site": "0x6b7e",
+          "address": "0xfffe0120",
+          "size": 4,
+          "value": "0x100"
+        },
+        {
+          "site": "0x6b80",
+          "address": "0xfffe0108",
+          "size": 4,
+          "value": "0x200660"
+        },
+        {
+          "site": "0x6b82",
+          "address": "0xfffe010c",
+          "size": 4,
+          "value": "0x6"
+        },
+        {
+          "site": "0x6b7e",
+          "address": "0xfffe0120",
+          "size": 4,
+          "value": "0x100"
+        },
+        {
+          "site": "0x6b80",
+          "address": "0xfffe0108",
+          "size": 4,
+          "value": "0x200668"
+        },
+        {
+          "site": "0x6b82",
+          "address": "0xfffe010c",
+          "size": 4,
+          "value": "0x6"
+        },
+        {
+          "site": "0x6b7e",
+          "address": "0xfffe0120",
+          "size": 4,
+          "value": "0x100"
+        },
+        {
+          "site": "0x6b80",
+          "address": "0xfffe0108",
+          "size": 4,
+          "value": "0x200654"
+        },
+        {
+          "site": "0x6b82",
+          "address": "0xfffe010c",
+          "size": 4,
+          "value": "0x4"
+        },
+        {
+          "site": "0x6b7e",
+          "address": "0xfffe0120",
+          "size": 4,
+          "value": "0x100"
+        },
+        {
+          "site": "0x6b80",
+          "address": "0xfffe0108",
+          "size": 4,
+          "value": "0x20061a"
+        },
+        {
+          "site": "0x6b82",
+          "address": "0xfffe010c",
+          "size": 4,
+          "value": "0x3"
+        },
+        {
+          "site": "0x6b7e",
+          "address": "0xfffe0120",
+          "size": 4,
+          "value": "0x100"
+        },
+        {
+          "site": "0x6b80",
+          "address": "0xfffe0108",
+          "size": 4,
+          "value": "0x20060b"
+        },
+        {
+          "site": "0x6b82",
+          "address": "0xfffe010c",
+          "size": 4,
+          "value": "0x3"
+        },
+        {
+          "site": "0x6b7e",
+          "address": "0xfffe0120",
+          "size": 4,
+          "value": "0x100"
+        },
+        {
+          "site": "0x6b80",
+          "address": "0xfffe0108",
+          "size": 4,
+          "value": "0x9ff0"
+        },
+        {
+          "site": "0x6b82",
+          "address": "0xfffe010c",
+          "size": 4,
+          "value": "0x9"
+        },
+        {
+          "site": "0x6b7e",
+          "address": "0xfffe0120",
+          "size": 4,
+          "value": "0x100"
+        },
+        {
+          "site": "0x6b80",
+          "address": "0xfffe0108",
+          "size": 4,
+          "value": "0x20061d"
+        },
+        {
+          "site": "0x6b82",
+          "address": "0xfffe010c",
+          "size": 4,
+          "value": "0x3"
+        },
+        {
+          "site": "0x6b7e",
+          "address": "0xfffe0120",
+          "size": 4,
+          "value": "0x100"
+        },
+        {
+          "site": "0x6b80",
+          "address": "0xfffe0108",
+          "size": 4,
+          "value": "0x20060e"
+        },
+        {
+          "site": "0x6b82",
+          "address": "0xfffe010c",
+          "size": 4,
+          "value": "0x3"
+        },
+        {
+          "site": "0x6b7e",
+          "address": "0xfffe0120",
+          "size": 4,
+          "value": "0x100"
+        },
+        {
+          "site": "0x6b80",
+          "address": "0xfffe0108",
+          "size": 4,
+          "value": "0x200611"
+        },
+        {
+          "site": "0x6b82",
+          "address": "0xfffe010c",
+          "size": 4,
+          "value": "0x3"
+        },
+        {
+          "site": "0x6b7e",
+          "address": "0xfffe0120",
+          "size": 4,
+          "value": "0x100"
+        },
+        {
+          "site": "0x6b80",
+          "address": "0xfffe0108",
+          "size": 4,
+          "value": "0x200620"
+        },
+        {
+          "site": "0x6b82",
+          "address": "0xfffe010c",
+          "size": 4,
+          "value": "0x3"
+        },
+        {
+          "site": "0x6b7e",
+          "address": "0xfffe0120",
+          "size": 4,
+          "value": "0x100"
+        },
+        {
+          "site": "0x6b80",
+          "address": "0xfffe0108",
+          "size": 4,
+          "value": "0x20068c"
+        },
+        {
+          "site": "0x6b82",
+          "address": "0xfffe010c",
+          "size": 4,
+          "value": "0x4"
+        },
+        {
+          "site": "0x6b7e",
+          "address": "0xfffe0120",
+          "size": 4,
+          "value": "0x100"
+        },
+        {
+          "site": "0x6b80",
+          "address": "0xfffe0108",
+          "size": 4,
+          "value": "0x200688"
+        },
+        {
+          "site": "0x6b82",
+          "address": "0xfffe010c",
+          "size": 4,
+          "value": "0x4"
+        },
+        {
+          "site": "0x6b7e",
+          "address": "0xfffe0120",
+          "size": 4,
+          "value": "0x100"
+        },
+        {
+          "site": "0x6b80",
+          "address": "0xfffe0108",
+          "size": 4,
+          "value": "0x200626"
+        },
+        {
+          "site": "0x6b82",
+          "address": "0xfffe010c",
+          "size": 4,
+          "value": "0x3"
+        },
+        {
+          "site": "0x5750",
+          "address": "0xfffff430",
+          "size": 4,
+          "value": "0x200"
+        }
+      ],
+      "state_writes": [
+        {
+          "site": "0x577c",
+          "address": "0x200ad4",
+          "size": 1,
+          "value": "0x1"
+        },
+        {
+          "site": "0x5780",
+          "address": "0x200ad5",
+          "size": 1,
+          "value": "0x0"
+        },
+        {
+          "site": "0x5784",
+          "address": "0x200ad3",
+          "size": 1,
+          "value": "0x1"
+        },
+        {
+          "site": "0x59b2",
+          "address": "0x2005d5",
+          "size": 1,
+          "value": "0x0"
+        },
+        {
+          "site": "0x59f4",
+          "address": "0x2005de",
+          "size": 1,
+          "value": "0x0"
+        },
+        {
+          "site": "0x5cfe",
+          "address": "0x2005df",
+          "size": 1,
+          "value": "0x0"
+        },
+        {
+          "site": "0x5d00",
+          "address": "0x2005d4",
+          "size": 1,
+          "value": "0x1"
+        }
+      ],
+      "timeout_flag": 0,
+      "reset_state_2005de": 0,
+      "output_state_2005df": 0,
+      "request_2005d4": 1,
+      "pending_2005d5": 0,
+      "initializer_visited": [
+        "0x575c",
+        "0x575e",
+        "0x5760",
+        "0x5764",
+        "0x5766",
+        "0x576a",
+        "0x576c",
+        "0x576e",
+        "0x5770",
+        "0x5772",
+        "0x5774",
+        "0x5776",
+        "0x5778",
+        "0x577a",
+        "0x577c",
+        "0x577e",
+        "0x5780",
+        "0x5782",
+        "0x5784",
+        "0x5786",
+        "0x5788",
+        "0x578a",
+        "0x578c",
+        "0x578e",
+        "0x5790",
+        "0x5794",
+        "0x5796",
+        "0x579e",
+        "0x57a0",
+        "0x57a2",
+        "0x57a4",
+        "0x57a6",
+        "0x57a8",
+        "0x57aa",
+        "0x57ac",
+        "0x57ae",
+        "0x57b0",
+        "0x57b2",
+        "0x57b6",
+        "0x57b8",
+        "0x57c0",
+        "0x57c2",
+        "0x57c4",
+        "0x57c6",
+        "0x57c8",
+        "0x57ca",
+        "0x57cc",
+        "0x57d0",
+        "0x57d2",
+        "0x57da",
+        "0x57dc",
+        "0x57de",
+        "0x57e0",
+        "0x57e2",
+        "0x57e6",
+        "0x57e8",
+        "0x57f0",
+        "0x57f2",
+        "0x57f4",
+        "0x57f6",
+        "0x57f8",
+        "0x57fc",
+        "0x57fe",
+        "0x5806",
+        "0x5808",
+        "0x580a",
+        "0x580c",
+        "0x580e",
+        "0x5812",
+        "0x5814",
+        "0x581c",
+        "0x581e",
+        "0x5820",
+        "0x5822",
+        "0x5824",
+        "0x5828",
+        "0x582a",
+        "0x5832",
+        "0x5834",
+        "0x5836",
+        "0x5838",
+        "0x583a",
+        "0x583e",
+        "0x5840",
+        "0x5848",
+        "0x584a",
+        "0x584c",
+        "0x584e",
+        "0x5850",
+        "0x5854",
+        "0x5856",
+        "0x585e",
+        "0x5860",
+        "0x5862",
+        "0x5864",
+        "0x5866",
+        "0x586a",
+        "0x586c",
+        "0x5874",
+        "0x5876",
+        "0x5878",
+        "0x587a",
+        "0x587c",
+        "0x5880",
+        "0x5882",
+        "0x588a",
+        "0x588c",
+        "0x588e",
+        "0x5890",
+        "0x5892",
+        "0x5896",
+        "0x5898",
+        "0x58a0",
+        "0x58a2",
+        "0x58a4",
+        "0x58a6",
+        "0x58a8",
+        "0x58ac",
+        "0x58ae",
+        "0x58b6",
+        "0x58b8",
+        "0x58ba",
+        "0x58bc",
+        "0x58be",
+        "0x58c2",
+        "0x58c4",
+        "0x58cc",
+        "0x58ce",
+        "0x58d0",
+        "0x58d2",
+        "0x58d4",
+        "0x58d8",
+        "0x58da",
+        "0x58e2",
+        "0x58e4",
+        "0x58e6",
+        "0x58e8",
+        "0x58ea",
+        "0x58ee",
+        "0x58f0",
+        "0x58f8",
+        "0x58fa",
+        "0x58fc",
+        "0x58fe",
+        "0x5902",
+        "0x5904",
+        "0x590c",
+        "0x590e",
+        "0x5910",
+        "0x5912",
+        "0x5914",
+        "0x5918",
+        "0x591a",
+        "0x5922",
+        "0x5924",
+        "0x5926",
+        "0x5928",
+        "0x592a",
+        "0x592e",
+        "0x5930",
+        "0x5938",
+        "0x593a",
+        "0x593c",
+        "0x593e",
+        "0x5940",
+        "0x5944",
+        "0x5946",
+        "0x594e",
+        "0x5950",
+        "0x5952",
+        "0x5954",
+        "0x5956",
+        "0x595a",
+        "0x595c",
+        "0x5964",
+        "0x5966",
+        "0x5968",
+        "0x596a",
+        "0x596c",
+        "0x5970",
+        "0x5972",
+        "0x597a",
+        "0x597c",
+        "0x597e",
+        "0x5980",
+        "0x5982",
+        "0x5986",
+        "0x5988",
+        "0x5990",
+        "0x5992",
+        "0x5994",
+        "0x5996",
+        "0x5998",
+        "0x599c",
+        "0x599e",
+        "0x59a6",
+        "0x59a8",
+        "0x59aa",
+        "0x59b2",
+        "0x59b4",
+        "0x59b6",
+        "0x59b8",
+        "0x59bc",
+        "0x59be",
+        "0x59c0",
+        "0x59c4",
+        "0x59c6",
+        "0x59c8"
+      ],
+      "capture_reset_path_visited": [
+        "0x59e8",
+        "0x59ea",
+        "0x59ec",
+        "0x59ee",
+        "0x59f0",
+        "0x59f2",
+        "0x59f4",
+        "0x59f6",
+        "0x59f8",
+        "0x59fc",
+        "0x5cb2",
+        "0x5cb4",
+        "0x5cb6",
+        "0x5cb8"
+      ]
+    },
+    {
+      "mode": "retry_once_each",
+      "outcome": "returned",
+      "stop_pc": "0x3f00",
+      "transfer_calls": [
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 1,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 2,
+          "scripted_ready": true,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x57b2",
+          "helper": "0x6b64",
+          "attempt": 1,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x200623",
+            "0x3"
+          ]
+        },
+        {
+          "site": "0x57b2",
+          "helper": "0x6b64",
+          "attempt": 2,
+          "scripted_ready": true,
+          "args": [
+            "0xfffe0000",
+            "0x200623",
+            "0x3"
+          ]
+        },
+        {
+          "site": "0x57cc",
+          "helper": "0x6b9c",
+          "attempt": 1,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x2006b0",
+            "0x200629",
+            "0x3"
+          ]
+        },
+        {
+          "site": "0x57cc",
+          "helper": "0x6b9c",
+          "attempt": 2,
+          "scripted_ready": true,
+          "args": [
+            "0xfffe0000",
+            "0x2006b0",
+            "0x200629",
+            "0x3"
+          ]
+        },
+        {
+          "site": "0x57e2",
+          "helper": "0x6b64",
+          "attempt": 1,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x200680",
+            "0x5"
+          ]
+        },
+        {
+          "site": "0x57e2",
+          "helper": "0x6b64",
+          "attempt": 2,
+          "scripted_ready": true,
+          "args": [
+            "0xfffe0000",
+            "0x200680",
+            "0x5"
+          ]
+        },
+        {
+          "site": "0x57f8",
+          "helper": "0x6b64",
+          "attempt": 1,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x200614",
+            "0x3"
+          ]
+        },
+        {
+          "site": "0x57f8",
+          "helper": "0x6b64",
+          "attempt": 2,
+          "scripted_ready": true,
+          "args": [
+            "0xfffe0000",
+            "0x200614",
+            "0x3"
+          ]
+        },
+        {
+          "site": "0x580e",
+          "helper": "0x6b64",
+          "attempt": 1,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x200617",
+            "0x3"
+          ]
+        },
+        {
+          "site": "0x580e",
+          "helper": "0x6b64",
+          "attempt": 2,
+          "scripted_ready": true,
+          "args": [
+            "0xfffe0000",
+            "0x200617",
+            "0x3"
+          ]
+        },
+        {
+          "site": "0x5824",
+          "helper": "0x6b64",
+          "attempt": 1,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x200670",
+            "0x6"
+          ]
+        },
+        {
+          "site": "0x5824",
+          "helper": "0x6b64",
+          "attempt": 2,
+          "scripted_ready": true,
+          "args": [
+            "0xfffe0000",
+            "0x200670",
+            "0x6"
+          ]
+        },
+        {
+          "site": "0x583a",
+          "helper": "0x6b64",
+          "attempt": 1,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x200678",
+            "0x6"
+          ]
+        },
+        {
+          "site": "0x583a",
+          "helper": "0x6b64",
+          "attempt": 2,
+          "scripted_ready": true,
+          "args": [
+            "0xfffe0000",
+            "0x200678",
+            "0x6"
+          ]
+        },
+        {
+          "site": "0x5850",
+          "helper": "0x6b64",
+          "attempt": 1,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20064c",
+            "0x4"
+          ]
+        },
+        {
+          "site": "0x5850",
+          "helper": "0x6b64",
+          "attempt": 2,
+          "scripted_ready": true,
+          "args": [
+            "0xfffe0000",
+            "0x20064c",
+            "0x4"
+          ]
+        },
+        {
+          "site": "0x5866",
+          "helper": "0x6b64",
+          "attempt": 1,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x200650",
+            "0x4"
+          ]
+        },
+        {
+          "site": "0x5866",
+          "helper": "0x6b64",
+          "attempt": 2,
+          "scripted_ready": true,
+          "args": [
+            "0xfffe0000",
+            "0x200650",
+            "0x4"
+          ]
+        },
+        {
+          "site": "0x587c",
+          "helper": "0x6b64",
+          "attempt": 1,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x200658",
+            "0x6"
+          ]
+        },
+        {
+          "site": "0x587c",
+          "helper": "0x6b64",
+          "attempt": 2,
+          "scripted_ready": true,
+          "args": [
+            "0xfffe0000",
+            "0x200658",
+            "0x6"
+          ]
+        },
+        {
+          "site": "0x5892",
+          "helper": "0x6b64",
+          "attempt": 1,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x200660",
+            "0x6"
+          ]
+        },
+        {
+          "site": "0x5892",
+          "helper": "0x6b64",
+          "attempt": 2,
+          "scripted_ready": true,
+          "args": [
+            "0xfffe0000",
+            "0x200660",
+            "0x6"
+          ]
+        },
+        {
+          "site": "0x58a8",
+          "helper": "0x6b64",
+          "attempt": 1,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x200668",
+            "0x6"
+          ]
+        },
+        {
+          "site": "0x58a8",
+          "helper": "0x6b64",
+          "attempt": 2,
+          "scripted_ready": true,
+          "args": [
+            "0xfffe0000",
+            "0x200668",
+            "0x6"
+          ]
+        },
+        {
+          "site": "0x58be",
+          "helper": "0x6b64",
+          "attempt": 1,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x200654",
+            "0x4"
+          ]
+        },
+        {
+          "site": "0x58be",
+          "helper": "0x6b64",
+          "attempt": 2,
+          "scripted_ready": true,
+          "args": [
+            "0xfffe0000",
+            "0x200654",
+            "0x4"
+          ]
+        },
+        {
+          "site": "0x58d4",
+          "helper": "0x6b64",
+          "attempt": 1,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20061a",
+            "0x3"
+          ]
+        },
+        {
+          "site": "0x58d4",
+          "helper": "0x6b64",
+          "attempt": 2,
+          "scripted_ready": true,
+          "args": [
+            "0xfffe0000",
+            "0x20061a",
+            "0x3"
+          ]
+        },
+        {
+          "site": "0x58ea",
+          "helper": "0x6b64",
+          "attempt": 1,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060b",
+            "0x3"
+          ]
+        },
+        {
+          "site": "0x58ea",
+          "helper": "0x6b64",
+          "attempt": 2,
+          "scripted_ready": true,
+          "args": [
+            "0xfffe0000",
+            "0x20060b",
+            "0x3"
+          ]
+        },
+        {
+          "site": "0x58fe",
+          "helper": "0x6b64",
+          "attempt": 1,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x9ff0",
+            "0x9"
+          ]
+        },
+        {
+          "site": "0x58fe",
+          "helper": "0x6b64",
+          "attempt": 2,
+          "scripted_ready": true,
+          "args": [
+            "0xfffe0000",
+            "0x9ff0",
+            "0x9"
+          ]
+        },
+        {
+          "site": "0x5914",
+          "helper": "0x6b64",
+          "attempt": 1,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20061d",
+            "0x3"
+          ]
+        },
+        {
+          "site": "0x5914",
+          "helper": "0x6b64",
+          "attempt": 2,
+          "scripted_ready": true,
+          "args": [
+            "0xfffe0000",
+            "0x20061d",
+            "0x3"
+          ]
+        },
+        {
+          "site": "0x592a",
+          "helper": "0x6b64",
+          "attempt": 1,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060e",
+            "0x3"
+          ]
+        },
+        {
+          "site": "0x592a",
+          "helper": "0x6b64",
+          "attempt": 2,
+          "scripted_ready": true,
+          "args": [
+            "0xfffe0000",
+            "0x20060e",
+            "0x3"
+          ]
+        },
+        {
+          "site": "0x5940",
+          "helper": "0x6b64",
+          "attempt": 1,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x200611",
+            "0x3"
+          ]
+        },
+        {
+          "site": "0x5940",
+          "helper": "0x6b64",
+          "attempt": 2,
+          "scripted_ready": true,
+          "args": [
+            "0xfffe0000",
+            "0x200611",
+            "0x3"
+          ]
+        },
+        {
+          "site": "0x5956",
+          "helper": "0x6b64",
+          "attempt": 1,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x200620",
+            "0x3"
+          ]
+        },
+        {
+          "site": "0x5956",
+          "helper": "0x6b64",
+          "attempt": 2,
+          "scripted_ready": true,
+          "args": [
+            "0xfffe0000",
+            "0x200620",
+            "0x3"
+          ]
+        },
+        {
+          "site": "0x596c",
+          "helper": "0x6b64",
+          "attempt": 1,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20068c",
+            "0x4"
+          ]
+        },
+        {
+          "site": "0x596c",
+          "helper": "0x6b64",
+          "attempt": 2,
+          "scripted_ready": true,
+          "args": [
+            "0xfffe0000",
+            "0x20068c",
+            "0x4"
+          ]
+        },
+        {
+          "site": "0x5982",
+          "helper": "0x6b64",
+          "attempt": 1,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x200688",
+            "0x4"
+          ]
+        },
+        {
+          "site": "0x5982",
+          "helper": "0x6b64",
+          "attempt": 2,
+          "scripted_ready": true,
+          "args": [
+            "0xfffe0000",
+            "0x200688",
+            "0x4"
+          ]
+        },
+        {
+          "site": "0x5998",
+          "helper": "0x6b64",
+          "attempt": 1,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x200626",
+            "0x3"
+          ]
+        },
+        {
+          "site": "0x5998",
+          "helper": "0x6b64",
+          "attempt": 2,
+          "scripted_ready": true,
+          "args": [
+            "0xfffe0000",
+            "0x200626",
+            "0x3"
+          ]
+        }
+      ],
+      "external_flag_injections": [],
+      "writes": [
+        {
+          "site": "0x5750",
+          "address": "0xfffff430",
+          "size": 4,
+          "value": "0x100"
+        },
+        {
+          "site": "0x5750",
+          "address": "0xfffff430",
+          "size": 4,
+          "value": "0x200"
+        },
+        {
+          "site": "0x6b7e",
+          "address": "0xfffe0120",
+          "size": 4,
+          "value": "0x100"
+        },
+        {
+          "site": "0x6b80",
+          "address": "0xfffe0108",
+          "size": 4,
+          "value": "0x20060a"
+        },
+        {
+          "site": "0x6b82",
+          "address": "0xfffe010c",
+          "size": 4,
+          "value": "0x1"
+        },
+        {
+          "site": "0x6b7e",
+          "address": "0xfffe0120",
+          "size": 4,
+          "value": "0x100"
+        },
+        {
+          "site": "0x6b80",
+          "address": "0xfffe0108",
+          "size": 4,
+          "value": "0x200623"
+        },
+        {
+          "site": "0x6b82",
+          "address": "0xfffe010c",
+          "size": 4,
+          "value": "0x3"
+        },
+        {
+          "site": "0x6bba",
+          "address": "0xfffe0120",
+          "size": 4,
+          "value": "0x0"
+        },
+        {
+          "site": "0x6bbc",
+          "address": "0xfffe0108",
+          "size": 4,
+          "value": "0x200629"
+        },
+        {
+          "site": "0x6bbe",
+          "address": "0xfffe010c",
+          "size": 4,
+          "value": "0x3"
+        },
+        {
+          "site": "0x6bc0",
+          "address": "0xfffe0100",
+          "size": 4,
+          "value": "0x2006b0"
+        },
+        {
+          "site": "0x6bc2",
+          "address": "0xfffe0104",
+          "size": 4,
+          "value": "0x3"
+        },
+        {
+          "site": "0x6bc8",
+          "address": "0xfffe0120",
+          "size": 4,
+          "value": "0x101"
+        },
+        {
+          "site": "0x6b7e",
+          "address": "0xfffe0120",
+          "size": 4,
+          "value": "0x100"
+        },
+        {
+          "site": "0x6b80",
+          "address": "0xfffe0108",
+          "size": 4,
+          "value": "0x200680"
+        },
+        {
+          "site": "0x6b82",
+          "address": "0xfffe010c",
+          "size": 4,
+          "value": "0x5"
+        },
+        {
+          "site": "0x6b7e",
+          "address": "0xfffe0120",
+          "size": 4,
+          "value": "0x100"
+        },
+        {
+          "site": "0x6b80",
+          "address": "0xfffe0108",
+          "size": 4,
+          "value": "0x200614"
+        },
+        {
+          "site": "0x6b82",
+          "address": "0xfffe010c",
+          "size": 4,
+          "value": "0x3"
+        },
+        {
+          "site": "0x6b7e",
+          "address": "0xfffe0120",
+          "size": 4,
+          "value": "0x100"
+        },
+        {
+          "site": "0x6b80",
+          "address": "0xfffe0108",
+          "size": 4,
+          "value": "0x200617"
+        },
+        {
+          "site": "0x6b82",
+          "address": "0xfffe010c",
+          "size": 4,
+          "value": "0x3"
+        },
+        {
+          "site": "0x6b7e",
+          "address": "0xfffe0120",
+          "size": 4,
+          "value": "0x100"
+        },
+        {
+          "site": "0x6b80",
+          "address": "0xfffe0108",
+          "size": 4,
+          "value": "0x200670"
+        },
+        {
+          "site": "0x6b82",
+          "address": "0xfffe010c",
+          "size": 4,
+          "value": "0x6"
+        },
+        {
+          "site": "0x6b7e",
+          "address": "0xfffe0120",
+          "size": 4,
+          "value": "0x100"
+        },
+        {
+          "site": "0x6b80",
+          "address": "0xfffe0108",
+          "size": 4,
+          "value": "0x200678"
+        },
+        {
+          "site": "0x6b82",
+          "address": "0xfffe010c",
+          "size": 4,
+          "value": "0x6"
+        },
+        {
+          "site": "0x6b7e",
+          "address": "0xfffe0120",
+          "size": 4,
+          "value": "0x100"
+        },
+        {
+          "site": "0x6b80",
+          "address": "0xfffe0108",
+          "size": 4,
+          "value": "0x20064c"
+        },
+        {
+          "site": "0x6b82",
+          "address": "0xfffe010c",
+          "size": 4,
+          "value": "0x4"
+        },
+        {
+          "site": "0x6b7e",
+          "address": "0xfffe0120",
+          "size": 4,
+          "value": "0x100"
+        },
+        {
+          "site": "0x6b80",
+          "address": "0xfffe0108",
+          "size": 4,
+          "value": "0x200650"
+        },
+        {
+          "site": "0x6b82",
+          "address": "0xfffe010c",
+          "size": 4,
+          "value": "0x4"
+        },
+        {
+          "site": "0x6b7e",
+          "address": "0xfffe0120",
+          "size": 4,
+          "value": "0x100"
+        },
+        {
+          "site": "0x6b80",
+          "address": "0xfffe0108",
+          "size": 4,
+          "value": "0x200658"
+        },
+        {
+          "site": "0x6b82",
+          "address": "0xfffe010c",
+          "size": 4,
+          "value": "0x6"
+        },
+        {
+          "site": "0x6b7e",
+          "address": "0xfffe0120",
+          "size": 4,
+          "value": "0x100"
+        },
+        {
+          "site": "0x6b80",
+          "address": "0xfffe0108",
+          "size": 4,
+          "value": "0x200660"
+        },
+        {
+          "site": "0x6b82",
+          "address": "0xfffe010c",
+          "size": 4,
+          "value": "0x6"
+        },
+        {
+          "site": "0x6b7e",
+          "address": "0xfffe0120",
+          "size": 4,
+          "value": "0x100"
+        },
+        {
+          "site": "0x6b80",
+          "address": "0xfffe0108",
+          "size": 4,
+          "value": "0x200668"
+        },
+        {
+          "site": "0x6b82",
+          "address": "0xfffe010c",
+          "size": 4,
+          "value": "0x6"
+        },
+        {
+          "site": "0x6b7e",
+          "address": "0xfffe0120",
+          "size": 4,
+          "value": "0x100"
+        },
+        {
+          "site": "0x6b80",
+          "address": "0xfffe0108",
+          "size": 4,
+          "value": "0x200654"
+        },
+        {
+          "site": "0x6b82",
+          "address": "0xfffe010c",
+          "size": 4,
+          "value": "0x4"
+        },
+        {
+          "site": "0x6b7e",
+          "address": "0xfffe0120",
+          "size": 4,
+          "value": "0x100"
+        },
+        {
+          "site": "0x6b80",
+          "address": "0xfffe0108",
+          "size": 4,
+          "value": "0x20061a"
+        },
+        {
+          "site": "0x6b82",
+          "address": "0xfffe010c",
+          "size": 4,
+          "value": "0x3"
+        },
+        {
+          "site": "0x6b7e",
+          "address": "0xfffe0120",
+          "size": 4,
+          "value": "0x100"
+        },
+        {
+          "site": "0x6b80",
+          "address": "0xfffe0108",
+          "size": 4,
+          "value": "0x20060b"
+        },
+        {
+          "site": "0x6b82",
+          "address": "0xfffe010c",
+          "size": 4,
+          "value": "0x3"
+        },
+        {
+          "site": "0x6b7e",
+          "address": "0xfffe0120",
+          "size": 4,
+          "value": "0x100"
+        },
+        {
+          "site": "0x6b80",
+          "address": "0xfffe0108",
+          "size": 4,
+          "value": "0x9ff0"
+        },
+        {
+          "site": "0x6b82",
+          "address": "0xfffe010c",
+          "size": 4,
+          "value": "0x9"
+        },
+        {
+          "site": "0x6b7e",
+          "address": "0xfffe0120",
+          "size": 4,
+          "value": "0x100"
+        },
+        {
+          "site": "0x6b80",
+          "address": "0xfffe0108",
+          "size": 4,
+          "value": "0x20061d"
+        },
+        {
+          "site": "0x6b82",
+          "address": "0xfffe010c",
+          "size": 4,
+          "value": "0x3"
+        },
+        {
+          "site": "0x6b7e",
+          "address": "0xfffe0120",
+          "size": 4,
+          "value": "0x100"
+        },
+        {
+          "site": "0x6b80",
+          "address": "0xfffe0108",
+          "size": 4,
+          "value": "0x20060e"
+        },
+        {
+          "site": "0x6b82",
+          "address": "0xfffe010c",
+          "size": 4,
+          "value": "0x3"
+        },
+        {
+          "site": "0x6b7e",
+          "address": "0xfffe0120",
+          "size": 4,
+          "value": "0x100"
+        },
+        {
+          "site": "0x6b80",
+          "address": "0xfffe0108",
+          "size": 4,
+          "value": "0x200611"
+        },
+        {
+          "site": "0x6b82",
+          "address": "0xfffe010c",
+          "size": 4,
+          "value": "0x3"
+        },
+        {
+          "site": "0x6b7e",
+          "address": "0xfffe0120",
+          "size": 4,
+          "value": "0x100"
+        },
+        {
+          "site": "0x6b80",
+          "address": "0xfffe0108",
+          "size": 4,
+          "value": "0x200620"
+        },
+        {
+          "site": "0x6b82",
+          "address": "0xfffe010c",
+          "size": 4,
+          "value": "0x3"
+        },
+        {
+          "site": "0x6b7e",
+          "address": "0xfffe0120",
+          "size": 4,
+          "value": "0x100"
+        },
+        {
+          "site": "0x6b80",
+          "address": "0xfffe0108",
+          "size": 4,
+          "value": "0x20068c"
+        },
+        {
+          "site": "0x6b82",
+          "address": "0xfffe010c",
+          "size": 4,
+          "value": "0x4"
+        },
+        {
+          "site": "0x6b7e",
+          "address": "0xfffe0120",
+          "size": 4,
+          "value": "0x100"
+        },
+        {
+          "site": "0x6b80",
+          "address": "0xfffe0108",
+          "size": 4,
+          "value": "0x200688"
+        },
+        {
+          "site": "0x6b82",
+          "address": "0xfffe010c",
+          "size": 4,
+          "value": "0x4"
+        },
+        {
+          "site": "0x6b7e",
+          "address": "0xfffe0120",
+          "size": 4,
+          "value": "0x100"
+        },
+        {
+          "site": "0x6b80",
+          "address": "0xfffe0108",
+          "size": 4,
+          "value": "0x200626"
+        },
+        {
+          "site": "0x6b82",
+          "address": "0xfffe010c",
+          "size": 4,
+          "value": "0x3"
+        },
+        {
+          "site": "0x5750",
+          "address": "0xfffff430",
+          "size": 4,
+          "value": "0x200"
+        }
+      ],
+      "state_writes": [
+        {
+          "site": "0x577c",
+          "address": "0x200ad4",
+          "size": 1,
+          "value": "0x1"
+        },
+        {
+          "site": "0x5780",
+          "address": "0x200ad5",
+          "size": 1,
+          "value": "0x0"
+        },
+        {
+          "site": "0x5784",
+          "address": "0x200ad3",
+          "size": 1,
+          "value": "0x1"
+        },
+        {
+          "site": "0x59b2",
+          "address": "0x2005d5",
+          "size": 1,
+          "value": "0x0"
+        },
+        {
+          "site": "0x59f4",
+          "address": "0x2005de",
+          "size": 1,
+          "value": "0x0"
+        },
+        {
+          "site": "0x5cfe",
+          "address": "0x2005df",
+          "size": 1,
+          "value": "0x0"
+        },
+        {
+          "site": "0x5d00",
+          "address": "0x2005d4",
+          "size": 1,
+          "value": "0x1"
+        }
+      ],
+      "timeout_flag": 0,
+      "reset_state_2005de": 0,
+      "output_state_2005df": 0,
+      "request_2005d4": 1,
+      "pending_2005d5": 0,
+      "initializer_visited": [
+        "0x575c",
+        "0x575e",
+        "0x5760",
+        "0x5764",
+        "0x5766",
+        "0x576a",
+        "0x576c",
+        "0x576e",
+        "0x5770",
+        "0x5772",
+        "0x5774",
+        "0x5776",
+        "0x5778",
+        "0x577a",
+        "0x577c",
+        "0x577e",
+        "0x5780",
+        "0x5782",
+        "0x5784",
+        "0x5786",
+        "0x5788",
+        "0x578a",
+        "0x578c",
+        "0x578e",
+        "0x5790",
+        "0x5794",
+        "0x5796",
+        "0x5798",
+        "0x579a",
+        "0x579c",
+        "0x579e",
+        "0x57a0",
+        "0x57a2",
+        "0x57a4",
+        "0x57a6",
+        "0x57a8",
+        "0x57aa",
+        "0x57ac",
+        "0x57ae",
+        "0x57b0",
+        "0x57b2",
+        "0x57b6",
+        "0x57b8",
+        "0x57ba",
+        "0x57bc",
+        "0x57be",
+        "0x57c0",
+        "0x57c2",
+        "0x57c4",
+        "0x57c6",
+        "0x57c8",
+        "0x57ca",
+        "0x57cc",
+        "0x57d0",
+        "0x57d2",
+        "0x57d4",
+        "0x57d6",
+        "0x57d8",
+        "0x57da",
+        "0x57dc",
+        "0x57de",
+        "0x57e0",
+        "0x57e2",
+        "0x57e6",
+        "0x57e8",
+        "0x57ea",
+        "0x57ec",
+        "0x57ee",
+        "0x57f0",
+        "0x57f2",
+        "0x57f4",
+        "0x57f6",
+        "0x57f8",
+        "0x57fc",
+        "0x57fe",
+        "0x5800",
+        "0x5802",
+        "0x5804",
+        "0x5806",
+        "0x5808",
+        "0x580a",
+        "0x580c",
+        "0x580e",
+        "0x5812",
+        "0x5814",
+        "0x5816",
+        "0x5818",
+        "0x581a",
+        "0x581c",
+        "0x581e",
+        "0x5820",
+        "0x5822",
+        "0x5824",
+        "0x5828",
+        "0x582a",
+        "0x582c",
+        "0x582e",
+        "0x5830",
+        "0x5832",
+        "0x5834",
+        "0x5836",
+        "0x5838",
+        "0x583a",
+        "0x583e",
+        "0x5840",
+        "0x5842",
+        "0x5844",
+        "0x5846",
+        "0x5848",
+        "0x584a",
+        "0x584c",
+        "0x584e",
+        "0x5850",
+        "0x5854",
+        "0x5856",
+        "0x5858",
+        "0x585a",
+        "0x585c",
+        "0x585e",
+        "0x5860",
+        "0x5862",
+        "0x5864",
+        "0x5866",
+        "0x586a",
+        "0x586c",
+        "0x586e",
+        "0x5870",
+        "0x5872",
+        "0x5874",
+        "0x5876",
+        "0x5878",
+        "0x587a",
+        "0x587c",
+        "0x5880",
+        "0x5882",
+        "0x5884",
+        "0x5886",
+        "0x5888",
+        "0x588a",
+        "0x588c",
+        "0x588e",
+        "0x5890",
+        "0x5892",
+        "0x5896",
+        "0x5898",
+        "0x589a",
+        "0x589c",
+        "0x589e",
+        "0x58a0",
+        "0x58a2",
+        "0x58a4",
+        "0x58a6",
+        "0x58a8",
+        "0x58ac",
+        "0x58ae",
+        "0x58b0",
+        "0x58b2",
+        "0x58b4",
+        "0x58b6",
+        "0x58b8",
+        "0x58ba",
+        "0x58bc",
+        "0x58be",
+        "0x58c2",
+        "0x58c4",
+        "0x58c6",
+        "0x58c8",
+        "0x58ca",
+        "0x58cc",
+        "0x58ce",
+        "0x58d0",
+        "0x58d2",
+        "0x58d4",
+        "0x58d8",
+        "0x58da",
+        "0x58dc",
+        "0x58de",
+        "0x58e0",
+        "0x58e2",
+        "0x58e4",
+        "0x58e6",
+        "0x58e8",
+        "0x58ea",
+        "0x58ee",
+        "0x58f0",
+        "0x58f2",
+        "0x58f4",
+        "0x58f6",
+        "0x58f8",
+        "0x58fa",
+        "0x58fc",
+        "0x58fe",
+        "0x5902",
+        "0x5904",
+        "0x5906",
+        "0x5908",
+        "0x590a",
+        "0x590c",
+        "0x590e",
+        "0x5910",
+        "0x5912",
+        "0x5914",
+        "0x5918",
+        "0x591a",
+        "0x591c",
+        "0x591e",
+        "0x5920",
+        "0x5922",
+        "0x5924",
+        "0x5926",
+        "0x5928",
+        "0x592a",
+        "0x592e",
+        "0x5930",
+        "0x5932",
+        "0x5934",
+        "0x5936",
+        "0x5938",
+        "0x593a",
+        "0x593c",
+        "0x593e",
+        "0x5940",
+        "0x5944",
+        "0x5946",
+        "0x5948",
+        "0x594a",
+        "0x594c",
+        "0x594e",
+        "0x5950",
+        "0x5952",
+        "0x5954",
+        "0x5956",
+        "0x595a",
+        "0x595c",
+        "0x595e",
+        "0x5960",
+        "0x5962",
+        "0x5964",
+        "0x5966",
+        "0x5968",
+        "0x596a",
+        "0x596c",
+        "0x5970",
+        "0x5972",
+        "0x5974",
+        "0x5976",
+        "0x5978",
+        "0x597a",
+        "0x597c",
+        "0x597e",
+        "0x5980",
+        "0x5982",
+        "0x5986",
+        "0x5988",
+        "0x598a",
+        "0x598c",
+        "0x598e",
+        "0x5990",
+        "0x5992",
+        "0x5994",
+        "0x5996",
+        "0x5998",
+        "0x599c",
+        "0x599e",
+        "0x59a0",
+        "0x59a2",
+        "0x59a4",
+        "0x59a6",
+        "0x59a8",
+        "0x59aa",
+        "0x59b2",
+        "0x59b4",
+        "0x59b6",
+        "0x59b8",
+        "0x59bc",
+        "0x59be",
+        "0x59c0",
+        "0x59c4",
+        "0x59c6",
+        "0x59c8"
+      ],
+      "capture_reset_path_visited": [
+        "0x59e8",
+        "0x59ea",
+        "0x59ec",
+        "0x59ee",
+        "0x59f0",
+        "0x59f2",
+        "0x59f4",
+        "0x59f6",
+        "0x59f8",
+        "0x59fc",
+        "0x5cb2",
+        "0x5cb4",
+        "0x5cb6",
+        "0x5cb8"
+      ]
+    },
+    {
+      "mode": "timeout",
+      "outcome": "reset_request_stop",
+      "stop_pc": "0x59b0",
+      "transfer_calls": [
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 1,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x57b2",
+          "helper": "0x6b64",
+          "attempt": 1,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x200623",
+            "0x3"
+          ]
+        },
+        {
+          "site": "0x57cc",
+          "helper": "0x6b9c",
+          "attempt": 1,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x2006b0",
+            "0x200629",
+            "0x3"
+          ]
+        },
+        {
+          "site": "0x57e2",
+          "helper": "0x6b64",
+          "attempt": 1,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x200680",
+            "0x5"
+          ]
+        },
+        {
+          "site": "0x57f8",
+          "helper": "0x6b64",
+          "attempt": 1,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x200614",
+            "0x3"
+          ]
+        },
+        {
+          "site": "0x580e",
+          "helper": "0x6b64",
+          "attempt": 1,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x200617",
+            "0x3"
+          ]
+        },
+        {
+          "site": "0x5824",
+          "helper": "0x6b64",
+          "attempt": 1,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x200670",
+            "0x6"
+          ]
+        },
+        {
+          "site": "0x583a",
+          "helper": "0x6b64",
+          "attempt": 1,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x200678",
+            "0x6"
+          ]
+        },
+        {
+          "site": "0x5850",
+          "helper": "0x6b64",
+          "attempt": 1,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20064c",
+            "0x4"
+          ]
+        },
+        {
+          "site": "0x5866",
+          "helper": "0x6b64",
+          "attempt": 1,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x200650",
+            "0x4"
+          ]
+        },
+        {
+          "site": "0x587c",
+          "helper": "0x6b64",
+          "attempt": 1,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x200658",
+            "0x6"
+          ]
+        },
+        {
+          "site": "0x5892",
+          "helper": "0x6b64",
+          "attempt": 1,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x200660",
+            "0x6"
+          ]
+        },
+        {
+          "site": "0x58a8",
+          "helper": "0x6b64",
+          "attempt": 1,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x200668",
+            "0x6"
+          ]
+        },
+        {
+          "site": "0x58be",
+          "helper": "0x6b64",
+          "attempt": 1,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x200654",
+            "0x4"
+          ]
+        },
+        {
+          "site": "0x58d4",
+          "helper": "0x6b64",
+          "attempt": 1,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20061a",
+            "0x3"
+          ]
+        },
+        {
+          "site": "0x58ea",
+          "helper": "0x6b64",
+          "attempt": 1,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060b",
+            "0x3"
+          ]
+        },
+        {
+          "site": "0x58fe",
+          "helper": "0x6b64",
+          "attempt": 1,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x9ff0",
+            "0x9"
+          ]
+        },
+        {
+          "site": "0x5914",
+          "helper": "0x6b64",
+          "attempt": 1,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20061d",
+            "0x3"
+          ]
+        },
+        {
+          "site": "0x592a",
+          "helper": "0x6b64",
+          "attempt": 1,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060e",
+            "0x3"
+          ]
+        },
+        {
+          "site": "0x5940",
+          "helper": "0x6b64",
+          "attempt": 1,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x200611",
+            "0x3"
+          ]
+        },
+        {
+          "site": "0x5956",
+          "helper": "0x6b64",
+          "attempt": 1,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x200620",
+            "0x3"
+          ]
+        },
+        {
+          "site": "0x596c",
+          "helper": "0x6b64",
+          "attempt": 1,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20068c",
+            "0x4"
+          ]
+        },
+        {
+          "site": "0x5982",
+          "helper": "0x6b64",
+          "attempt": 1,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x200688",
+            "0x4"
+          ]
+        },
+        {
+          "site": "0x5998",
+          "helper": "0x6b64",
+          "attempt": 1,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x200626",
+            "0x3"
+          ]
+        }
+      ],
+      "external_flag_injections": [
+        {
+          "site": "0x5798",
+          "address": "0x200ad5",
+          "value": 1
+        }
+      ],
+      "writes": [
+        {
+          "site": "0x5750",
+          "address": "0xfffff430",
+          "size": 4,
+          "value": "0x100"
+        },
+        {
+          "site": "0x5750",
+          "address": "0xfffff430",
+          "size": 4,
+          "value": "0x200"
+        },
+        {
+          "site": "0x59b0",
+          "address": "0xfffffd00",
+          "size": 4,
+          "value": "0xa500000d"
+        }
+      ],
+      "state_writes": [
+        {
+          "site": "0x577c",
+          "address": "0x200ad4",
+          "size": 1,
+          "value": "0x1"
+        },
+        {
+          "site": "0x5780",
+          "address": "0x200ad5",
+          "size": 1,
+          "value": "0x0"
+        },
+        {
+          "site": "0x5784",
+          "address": "0x200ad3",
+          "size": 1,
+          "value": "0x1"
+        }
+      ],
+      "timeout_flag": 1,
+      "reset_state_2005de": 0,
+      "output_state_2005df": 0,
+      "request_2005d4": 1,
+      "pending_2005d5": 0,
+      "initializer_visited": [
+        "0x575c",
+        "0x575e",
+        "0x5760",
+        "0x5764",
+        "0x5766",
+        "0x576a",
+        "0x576c",
+        "0x576e",
+        "0x5770",
+        "0x5772",
+        "0x5774",
+        "0x5776",
+        "0x5778",
+        "0x577a",
+        "0x577c",
+        "0x577e",
+        "0x5780",
+        "0x5782",
+        "0x5784",
+        "0x5786",
+        "0x5788",
+        "0x578a",
+        "0x578c",
+        "0x578e",
+        "0x5790",
+        "0x5794",
+        "0x5796",
+        "0x5798",
+        "0x579a",
+        "0x579c",
+        "0x579e",
+        "0x57a0",
+        "0x57a2",
+        "0x57a4",
+        "0x57a6",
+        "0x57a8",
+        "0x57aa",
+        "0x57ac",
+        "0x57ae",
+        "0x57b0",
+        "0x57b2",
+        "0x57b6",
+        "0x57b8",
+        "0x57ba",
+        "0x57bc",
+        "0x57be",
+        "0x57c0",
+        "0x57c2",
+        "0x57c4",
+        "0x57c6",
+        "0x57c8",
+        "0x57ca",
+        "0x57cc",
+        "0x57d0",
+        "0x57d2",
+        "0x57d4",
+        "0x57d6",
+        "0x57d8",
+        "0x57da",
+        "0x57dc",
+        "0x57de",
+        "0x57e0",
+        "0x57e2",
+        "0x57e6",
+        "0x57e8",
+        "0x57ea",
+        "0x57ec",
+        "0x57ee",
+        "0x57f0",
+        "0x57f2",
+        "0x57f4",
+        "0x57f6",
+        "0x57f8",
+        "0x57fc",
+        "0x57fe",
+        "0x5800",
+        "0x5802",
+        "0x5804",
+        "0x5806",
+        "0x5808",
+        "0x580a",
+        "0x580c",
+        "0x580e",
+        "0x5812",
+        "0x5814",
+        "0x5816",
+        "0x5818",
+        "0x581a",
+        "0x581c",
+        "0x581e",
+        "0x5820",
+        "0x5822",
+        "0x5824",
+        "0x5828",
+        "0x582a",
+        "0x582c",
+        "0x582e",
+        "0x5830",
+        "0x5832",
+        "0x5834",
+        "0x5836",
+        "0x5838",
+        "0x583a",
+        "0x583e",
+        "0x5840",
+        "0x5842",
+        "0x5844",
+        "0x5846",
+        "0x5848",
+        "0x584a",
+        "0x584c",
+        "0x584e",
+        "0x5850",
+        "0x5854",
+        "0x5856",
+        "0x5858",
+        "0x585a",
+        "0x585c",
+        "0x585e",
+        "0x5860",
+        "0x5862",
+        "0x5864",
+        "0x5866",
+        "0x586a",
+        "0x586c",
+        "0x586e",
+        "0x5870",
+        "0x5872",
+        "0x5874",
+        "0x5876",
+        "0x5878",
+        "0x587a",
+        "0x587c",
+        "0x5880",
+        "0x5882",
+        "0x5884",
+        "0x5886",
+        "0x5888",
+        "0x588a",
+        "0x588c",
+        "0x588e",
+        "0x5890",
+        "0x5892",
+        "0x5896",
+        "0x5898",
+        "0x589a",
+        "0x589c",
+        "0x589e",
+        "0x58a0",
+        "0x58a2",
+        "0x58a4",
+        "0x58a6",
+        "0x58a8",
+        "0x58ac",
+        "0x58ae",
+        "0x58b0",
+        "0x58b2",
+        "0x58b4",
+        "0x58b6",
+        "0x58b8",
+        "0x58ba",
+        "0x58bc",
+        "0x58be",
+        "0x58c2",
+        "0x58c4",
+        "0x58c6",
+        "0x58c8",
+        "0x58ca",
+        "0x58cc",
+        "0x58ce",
+        "0x58d0",
+        "0x58d2",
+        "0x58d4",
+        "0x58d8",
+        "0x58da",
+        "0x58dc",
+        "0x58de",
+        "0x58e0",
+        "0x58e2",
+        "0x58e4",
+        "0x58e6",
+        "0x58e8",
+        "0x58ea",
+        "0x58ee",
+        "0x58f0",
+        "0x58f2",
+        "0x58f4",
+        "0x58f6",
+        "0x58f8",
+        "0x58fa",
+        "0x58fc",
+        "0x58fe",
+        "0x5902",
+        "0x5904",
+        "0x5906",
+        "0x5908",
+        "0x590a",
+        "0x590c",
+        "0x590e",
+        "0x5910",
+        "0x5912",
+        "0x5914",
+        "0x5918",
+        "0x591a",
+        "0x591c",
+        "0x591e",
+        "0x5920",
+        "0x5922",
+        "0x5924",
+        "0x5926",
+        "0x5928",
+        "0x592a",
+        "0x592e",
+        "0x5930",
+        "0x5932",
+        "0x5934",
+        "0x5936",
+        "0x5938",
+        "0x593a",
+        "0x593c",
+        "0x593e",
+        "0x5940",
+        "0x5944",
+        "0x5946",
+        "0x5948",
+        "0x594a",
+        "0x594c",
+        "0x594e",
+        "0x5950",
+        "0x5952",
+        "0x5954",
+        "0x5956",
+        "0x595a",
+        "0x595c",
+        "0x595e",
+        "0x5960",
+        "0x5962",
+        "0x5964",
+        "0x5966",
+        "0x5968",
+        "0x596a",
+        "0x596c",
+        "0x5970",
+        "0x5972",
+        "0x5974",
+        "0x5976",
+        "0x5978",
+        "0x597a",
+        "0x597c",
+        "0x597e",
+        "0x5980",
+        "0x5982",
+        "0x5986",
+        "0x5988",
+        "0x598a",
+        "0x598c",
+        "0x598e",
+        "0x5990",
+        "0x5992",
+        "0x5994",
+        "0x5996",
+        "0x5998",
+        "0x599c",
+        "0x599e",
+        "0x59a0",
+        "0x59a2",
+        "0x59a4",
+        "0x59a6",
+        "0x59a8",
+        "0x59aa",
+        "0x59ac",
+        "0x59ae",
+        "0x59b0"
+      ],
+      "capture_reset_path_visited": []
+    },
+    {
+      "mode": "not_ready",
+      "outcome": "instruction_budget",
+      "stop_pc": "0x6b8a",
+      "transfer_calls": [
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 1,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 2,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 3,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 4,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 5,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 6,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 7,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 8,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 9,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 10,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 11,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 12,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 13,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 14,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 15,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 16,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 17,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 18,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 19,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 20,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 21,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 22,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 23,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 24,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 25,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 26,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 27,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 28,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 29,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 30,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 31,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 32,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 33,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 34,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 35,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 36,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 37,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 38,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 39,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 40,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 41,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 42,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 43,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 44,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 45,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 46,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 47,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 48,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 49,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 50,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 51,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 52,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 53,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 54,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 55,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 56,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 57,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 58,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 59,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 60,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 61,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 62,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 63,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 64,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 65,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 66,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 67,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 68,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 69,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 70,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 71,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 72,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 73,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 74,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 75,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 76,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 77,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 78,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 79,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 80,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 81,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 82,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 83,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 84,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 85,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 86,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 87,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 88,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 89,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 90,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 91,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 92,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 93,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 94,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 95,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 96,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 97,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 98,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 99,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 100,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 101,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 102,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 103,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 104,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 105,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 106,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 107,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 108,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 109,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 110,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 111,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 112,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 113,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 114,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 115,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 116,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 117,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 118,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 119,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 120,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 121,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 122,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 123,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 124,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 125,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 126,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 127,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 128,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 129,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 130,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 131,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 132,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 133,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 134,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 135,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 136,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 137,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 138,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 139,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 140,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 141,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 142,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 143,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 144,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 145,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 146,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 147,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 148,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 149,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 150,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 151,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 152,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 153,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 154,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 155,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 156,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 157,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 158,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 159,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 160,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 161,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 162,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 163,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 164,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 165,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 166,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 167,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 168,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 169,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 170,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 171,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        },
+        {
+          "site": "0x5790",
+          "helper": "0x6b64",
+          "attempt": 172,
+          "scripted_ready": false,
+          "args": [
+            "0xfffe0000",
+            "0x20060a",
+            "0x1"
+          ]
+        }
+      ],
+      "external_flag_injections": [],
+      "writes": [
+        {
+          "site": "0x5750",
+          "address": "0xfffff430",
+          "size": 4,
+          "value": "0x100"
+        },
+        {
+          "site": "0x5750",
+          "address": "0xfffff430",
+          "size": 4,
+          "value": "0x200"
+        }
+      ],
+      "state_writes": [
+        {
+          "site": "0x577c",
+          "address": "0x200ad4",
+          "size": 1,
+          "value": "0x1"
+        },
+        {
+          "site": "0x5780",
+          "address": "0x200ad5",
+          "size": 1,
+          "value": "0x0"
+        },
+        {
+          "site": "0x5784",
+          "address": "0x200ad3",
+          "size": 1,
+          "value": "0x1"
+        }
+      ],
+      "timeout_flag": 0,
+      "reset_state_2005de": 0,
+      "output_state_2005df": 0,
+      "request_2005d4": 1,
+      "pending_2005d5": 0,
+      "initializer_visited": [
+        "0x575c",
+        "0x575e",
+        "0x5760",
+        "0x5764",
+        "0x5766",
+        "0x576a",
+        "0x576c",
+        "0x576e",
+        "0x5770",
+        "0x5772",
+        "0x5774",
+        "0x5776",
+        "0x5778",
+        "0x577a",
+        "0x577c",
+        "0x577e",
+        "0x5780",
+        "0x5782",
+        "0x5784",
+        "0x5786",
+        "0x5788",
+        "0x578a",
+        "0x578c",
+        "0x578e",
+        "0x5790",
+        "0x5794",
+        "0x5796",
+        "0x5798",
+        "0x579a",
+        "0x579c"
+      ],
+      "capture_reset_path_visited": []
+    }
+  ],
+  "limits": [
+    "SPI/PDC/PIO/RSTC are synthetic memory; no physical transfer or reset occurs",
+    "readiness is scripted per transfer attempt, not produced by a PDC model",
+    "timeout is an explicitly injected SRAM flag, without simulated IRQ timing",
+    "execution stops at the reset request; physical reset acceptance is unverified",
+    "only the R0-nonzero reset path of 0x59e8 is included"
+  ]
+}
