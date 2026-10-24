@@ -13,6 +13,7 @@ says where the fact comes from. For conclusions see [SECURITY_ASSESSMENT.md](SEC
 | USB | CDC ACM, VID `0x1A18` PID `0x0002`, 921600 baud 8N1 |
 | Phone link | Bluetooth Classic RFCOMM (not BLE), carrying X2com frames |
 | Pump output | Static chain reaches AT91 TC0_RC; electrical bus topology is not established by this image alone |
+| SPI peer protocol | Initialized commands match an MCP2515-compatible CAN controller; physical part and wiring unverified. See [command audit](SPI_CAN_CONTROLLER_REVIEW.md). |
 
 ## Update package (`.qz`)
 
@@ -111,6 +112,13 @@ a keyed reset-controller request in the reproduced timeout path.
 The [capture helper review](CAPTURE_HELPER_REVIEW.md) adds three roles,
 bringing the total to 108 with 37 pending. It establishes seven indexed
 request records and a bytewise comparator without assigning external command meanings.
+
+The [SPI/CAN command audit](SPI_CAN_CONTROLLER_REVIEW.md) adds a source-bound
+MCP2515-compatible register interpretation. The initialized receive templates
+read RXB0 data and RXB1 identifier/data layouts; the output template loads
+TXB2 data with explicit standard-ID `0x100`, DLC 8 setup. Request records
+decode as extended-ID `0x0CEA00F8`, DLC 3 frames. These are firmware-intent
+decodes rather than observed bus transactions or physical chip identification.
 
 ### The static pulse-stretch chain
 

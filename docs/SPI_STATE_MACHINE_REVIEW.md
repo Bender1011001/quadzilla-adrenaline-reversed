@@ -82,7 +82,13 @@ low two bytes of a negative two's-complement word: for `n=-1`, offsets 5/6
 are `FF 00`; for `n=-257`, they are `FF FF`. Ten controlled signed-word
 probes, including both signed extremes, match an independent integer model
 of that sequence. The artifact uses a controlled byte-0 canary `A7`; that
-value is not claimed to be the live packet header.
+value is not claimed to be the live SPI opcode.
+
+The initialized prefix at `0x2006C0` is `45`. Under the subsequently
+established [MCP2515-compatible layout](SPI_CAN_CONTROLLER_REVIEW.md), it
+loads TXB2 data D0–D7. Thus offsets 5/6 above are CAN data bytes D4/D5;
+the identifier and DLC are configured separately. This interpretation
+assumes that the initialized opcode remains unchanged along the path.
 
 The word at `0x200604` is part of the previously identified capture/telemetry
 path. Its valid range and whether negative values reach this packing code

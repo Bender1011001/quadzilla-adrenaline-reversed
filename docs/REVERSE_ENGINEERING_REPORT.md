@@ -29,6 +29,12 @@ errors, image `0x4000`-`0xBCFF`. `tools/firmware_crypto.py` reproduces this end 
 
 Hardware: ARM7TDMI, SAM7S-class. The image mixes ARM startup, Thumb application code, ARM interworking bodies and interleaved literal pools.
 
+The [SPI command audit](SPI_CAN_CONTROLLER_REVIEW.md) also identifies an
+MCP2515-compatible CAN-controller command/register path from exact initialized
+buffer bytes, receive templates and transmit configuration. This supports a
+software CAN interpretation while the installed chip and physical topology
+remain unverified.
+
 **The disassembly problem.** Ghidra's auto-analysis classified about 96 % of the image as data because it read literal pools as data and then refused to
 disassemble around them. Approaches that failed, in order: setting Thumb mode before analysis (ignored by the analyzer); forcing Thumb on undefined
 regions (there were none left); clearing and re-disassembling in place (Thumb/ARM context conflicts). What worked: clear everything, set Thumb mode on the clean

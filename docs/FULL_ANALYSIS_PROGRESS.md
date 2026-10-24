@@ -111,6 +111,12 @@ be revised only with explicit entry and runtime-alias adjudication.
 
 ## Outstanding requirements
 
+The [SPI/CAN command audit](SPI_CAN_CONTROLLER_REVIEW.md) establishes an
+MCP2515-compatible interpretation of the initialized SPI buffers and register
+sequence. It clarifies the two receive layouts and TXB2 data-only output.
+It does not increase instruction coverage or retire the complete parser,
+hardware topology, timing and live-acceptance work.
+
 The [AID table boundary review](AID_TABLE_BOUNDARY_REVIEW.md) now covers 512
 resolver calls and 256 controlled single-AID reader calls. AID 255 crosses both
 table boundaries, with a reproduced SRAM write alias and an unmapped response
