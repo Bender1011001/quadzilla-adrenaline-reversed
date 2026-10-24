@@ -910,6 +910,17 @@
       ]
     },
     {
+      "entry": "0x7f58",
+      "label": "Outgoing AID-list filter retaining current entries absent from a capped comparison list",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/queue_filter_binaryninja.json",
+        "audit/data/queue_filter_emulation.json",
+        "audit/data/queue_filter_callers.json",
+        "docs/OUTGOING_QUEUE_FILTER_REVIEW.md"
+      ]
+    },
+    {
       "entry": "0x7fd8",
       "label": "Bounded outgoing-list copier that caps nonzero copy requests to 14 bytes",
       "assurance": "static_instruction_trace_and_bounded_emulation",
