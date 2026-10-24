@@ -71,11 +71,13 @@ The [configured ratio scorer review](docs/DRIVETRAIN_SCORE_REVIEW.md) raises bas
 
 The [PIOA and interrupt setup review](docs/PIO_INTERRUPT_REVIEW.md) documents four more entries, bringing baseline coverage to 89 roles with 56 pending. It records the exact PMC/PIO/AIC write sequence and bounded source-2 callback behavior using synthetic registers; subordinate setup routines and physical pin behavior remain open.
 
-The [three-channel timer setup review](docs/TIMER_SETUP_REVIEW.md) documents the timer coordinator and two short callbacks, bringing baseline coverage to 92 roles with 53 pending. It records conditional compare values, clock and interrupt setup writes, and the limits of synthetic register execution. The third timer callback and live timing remain open.
+The [three-channel timer setup review](docs/TIMER_SETUP_REVIEW.md) documents the timer coordinator and two short callbacks, bringing baseline coverage to 92 roles with 53 pending at that stage. It records conditional compare values, clock and interrupt setup writes, and the limits of synthetic register execution. The third callback is reviewed below; live timing remains open.
 
 The [SPI setup review](docs/SPI_SETUP_REVIEW.md) documents the following setup call and its no-op source-5 callback, bringing baseline coverage to 94 roles with 51 pending. It records the eleven ordered register writes and literal-pool provenance; live SPI transfers and IRQ handling remain open.
 
-The [TC2 flag helper review](docs/TC2_FLAG_HELPER_REVIEW.md) documents two small callbacks invoked from the larger TC2 routine, bringing baseline coverage to 96 roles with 49 pending. Their exact SRAM flag writes and trigger sites are recorded; the full TC2 callback remains under review.
+The [TC2 flag helper review](docs/TC2_FLAG_HELPER_REVIEW.md) documents two small callbacks invoked from the larger TC2 routine, bringing baseline coverage to 96 roles with 49 pending at that stage. Their exact SRAM flag writes and trigger sites support the full callback review below.
+
+The [TC2 callback review](docs/TC2_CALLBACK_REVIEW.md) now covers that larger vector routine itself, bringing baseline coverage to 97 roles with 48 pending. Fifty controlled cases visit all 333 decoded instruction starts and document its counter transitions and gated numeric updates; live timing and upstream value units remain unresolved.
 
 ## Layout
 

@@ -430,8 +430,19 @@
     },
     {
       "entry": "0x6c94",
-      "semantic_status": "unlabeled_static_entry",
-      "semantics": [],
+      "semantic_status": "documented_static_role",
+      "semantics": [
+        {
+          "entry": "0x6c94",
+          "label": "TC2 vector callback for SRAM counters, flags and gated numeric accumulators",
+          "assurance": "static_instruction_trace_and_synthetic_mmio_emulation",
+          "evidence": [
+            "audit/data/tc2_callback_binaryninja.json",
+            "audit/data/tc2_callback_emulation.json",
+            "docs/TC2_CALLBACK_REVIEW.md"
+          ]
+        }
+      ],
       "blocks": {
         "AIC": 2
       },
@@ -1313,7 +1324,7 @@
   "inputs": {
     "catalog": {
       "path": "audit/data/execution_entry_catalog.json",
-      "sha256": "87f7ea88d65a6ad38e662f78db37f3ea473b4d8d7332bd2c0d1fc6230ffa1dc7"
+      "sha256": "d353e8d844a08c62766a33dfffcb27e44400a0f8e97f51a2f8ee4c85bbbaa4d1"
     },
     "peripheral_map": {
       "path": "audit/data/sam7s_peripheral_map.json",

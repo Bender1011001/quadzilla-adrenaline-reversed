@@ -18,8 +18,8 @@ The installed chip suffix and board wiring have not been verified.
 | `0x6C68` | `0x6C68..0x6C81` (26 bytes) | TC1 vector callback: write `2` to TC1_CCR, read TC1_SR, and write `0x2583` to TC1_RC only when CLKSTA bit 16 reads clear. |
 
 The setup installs odd Thumb pointers `0x6C49`, `0x6C69` and `0x6C95` in
-AIC_SVR12/13/14. The third target begins at `0x6C94` and **is not reviewed in
-this pass**. Calling the first two callbacks as ordinary Thumb subroutines
+AIC_SVR12/13/14. The third target begins at `0x6C94` and is documented in the
+separate [TC2 callback review](TC2_CALLBACK_REVIEW.md). Calling the first two callbacks as ordinary Thumb subroutines
 proves their instruction paths under the supplied memory state, but does not
 reproduce IRQ entry, acknowledgement or return behavior.
 
@@ -68,7 +68,8 @@ registers have no device side effects, status bits are supplied, and no timer
 ticks. AIC source enable state, output pins, pulse width, clock rate, interrupt
 timing and engine behavior remain unverified. The mode register words are
 reported without claiming a board-level waveform. The current review also
-does not determine the role of the longer `0x6C94` callback.
+does not determine the role of the longer `0x6C94` callback; that entry has a
+separate [bounded account](TC2_CALLBACK_REVIEW.md).
 
 ## Reproduction
 
