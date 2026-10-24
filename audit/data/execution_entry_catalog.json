@@ -4,8 +4,8 @@
   "unit": "execution_entries_including_vectors_thunks_and_alternate_entries",
   "summary": {
     "confirmed_entries": 145,
-    "documented_static_roles": 108,
-    "unlabeled_static_entries": 37,
+    "documented_static_roles": 109,
+    "unlabeled_static_entries": 36,
     "entries_with_ida_sram_references": 49,
     "entries_with_ida_peripheral_references": 21,
     "union_direct_call_edges": 180
@@ -3307,8 +3307,19 @@
           ]
         }
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x506c",
+          "label": "Readiness-gated byte selector mapping and AID9 response encoding",
+          "assurance": "static_instruction_trace_and_bounded_emulation",
+          "evidence": [
+            "audit/data/control_selector_binaryninja.json",
+            "audit/data/control_selector_emulation.json",
+            "docs/CONTROL_SELECTOR_REVIEW.md"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [
           "0x47b0",
@@ -17451,7 +17462,7 @@
     },
     "labels": {
       "path": "audit/data/semantic_labels.json",
-      "sha256": "bfb40bcf7c8f5d5c3ed75072ab9951d74157846ff76513f6d7e470c6889f62a4"
+      "sha256": "88daee3da2d5d23088f4754d0c400a5b58e3909a3f1c4c1c0748ab3a77e297e1"
     }
   },
   "input_hash_policy": "SHA-256 of JSON text with CRLF normalized to LF"

@@ -9,6 +9,8 @@ possible AID bytes. AID 255 indexes beyond both 255-slot pointer tables; all oth
 slots still require individual semantics and support checks. Profile declarations
 below should not be treated as the complete firmware-supported parameter set.
 
+For AID 9 specifically, the [control selector review](CONTROL_SELECTOR_REVIEW.md) traces the response pointer to `0x200BC4` and executes the real reader after the producer. The response can contain a high-bit marker or `0xE4`; it is distinct from the mapped byte returned to control arithmetic. This does not establish every inbound write constraint or app-side decoding.
+
 ---
 
 ## AID Data Size Rules (from firmware + libx2com-jni.so)

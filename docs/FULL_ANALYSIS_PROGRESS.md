@@ -10,8 +10,8 @@ Update: the [startup/persistence review](STARTUP_PERSISTENCE_REVIEW.md) and
 entries, for at least 157 supported starts. Three callable numeric routines
 have no identified incoming image call and are not claimed reachable in service.
 The original 145-start catalog is retained as the baseline; its semantic coverage
-now stands at 108 roles with 37 entries left after the
-[capture helper review](CAPTURE_HELPER_REVIEW.md). The
+now stands at 109 roles with 36 entries left after the
+[control selector review](CONTROL_SELECTOR_REVIEW.md). The
 new entries and aliases are recorded separately in
 `audit/data/entry_adjudications.json`. Neither inventory is claimed exhaustive.
 
@@ -27,8 +27,8 @@ address without hiding pending review:
 
 | Classification | Bytes |
 |---|---:|
-| IDA code candidates awaiting review | 12,665 |
-| Explicitly reviewed Thumb instruction ranges | 4,620 |
+| IDA code candidates awaiting review | 12,553 |
+| Explicitly reviewed Thumb instruction ranges | 4,732 |
 | Explicitly reviewed ARM instruction ranges | 4,168 |
 | IDA data candidates awaiting review | 3,144 |
 | Soft float status pointer literal | 4 |
@@ -40,8 +40,8 @@ address without hiding pending review:
 | Erased trailing `FF` | 2,888 |
 
 Coverage of an address is not proof that its meaning or ISA has been reviewed.
-The explicit instruction-range manifest now accepts 8,788 bytes through the
-[capture parser review](CAPTURE_PARSER_REVIEW.md). It excludes adjacent literal
+The explicit instruction-range manifest now accepts 8,900 bytes through the
+[control selector review](CONTROL_SELECTOR_REVIEW.md). It excludes adjacent literal
 pools and alignment. Earlier semantic labels are not automatically promoted to
 byte-level classification; their exact ranges still need to be adjudicated.
 The ledger explicitly preserves 2,144 item/layout conflicts. These are tool item
@@ -108,6 +108,16 @@ be revised only with explicit entry and runtime-alias adjudication.
 - `audit/tools/build_image_ledger.py IMAGE`: regenerate address accounting.
 - `audit/tools/decode_image_ranges.py IMAGE --ranges START:END:ISA,... --output OUTPUT`:
   explicit-mode bounded decoder; available ISA decoders are a superset of ARMv4T.
+
+## Selector and response connection
+
+The [control selector review](CONTROL_SELECTOR_REVIEW.md) traces the captured
+signed source through the readiness latch into the `0x506C` mapping helper,
+then separates its returned control byte from its stored AID 9 response.
+It adds one role and 112 instruction bytes, including a supported disposition
+for two unreachable instruction starts. 70,672 original-byte calls agree with
+the bounded model. Parameter validation, later writers, application decoding
+and the full downstream control calculation remain incomplete.
 
 ## Outstanding requirements
 

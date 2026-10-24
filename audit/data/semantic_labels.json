@@ -142,6 +142,16 @@
       ]
     },
     {
+      "entry": "0x506c",
+      "label": "Readiness-gated byte selector mapping and AID9 response encoding",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/control_selector_binaryninja.json",
+        "audit/data/control_selector_emulation.json",
+        "docs/CONTROL_SELECTOR_REVIEW.md"
+      ]
+    },
+    {
       "entry": "0x50f0",
       "label": "Main control loop that applies AID 13 derate and drives the TC0 path",
       "assurance": "static_closed_chain",

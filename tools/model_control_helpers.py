@@ -61,3 +61,29 @@ def ramp_state(old, previous, sample, fresh, gate, inhibit, flag_c, flag_d):
         if not candidate & 0x80000000:
             result = min(candidate, 650)
     return result, result, delta, [1, 1, 0]
+
+
+def selector_state(selector, count, step, offset, marker, ready):
+    """Return (mapped byte, AID9 response byte) for the 0x506C local contract.
+
+    Inputs describe SRAM bytes after the separately modeled latch helper.
+    No claim is made that arbitrary byte combinations pass upstream validation.
+    """
+    selector, count, step, offset, marker = (x & 255 for x in
+                                             (selector, count, step, offset, marker))
+    if not ready:
+        return 0, 0xE4
+    if selector == 0:
+        return 0, 0
+    if selector >= count:
+        selector = (count-1) & 255
+    mapped = (selector*step+offset) & 255
+    reported = selector
+    if mapped >= 128:
+        numerator = mapped-offset
+        reported = (abs(numerator)//step if step else 0)
+        if numerator < 0:
+            reported = -reported
+    if marker >= 13:
+        reported |= 128
+    return mapped, reported & 255

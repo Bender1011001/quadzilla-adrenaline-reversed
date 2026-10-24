@@ -129,6 +129,19 @@
       "decoder_artifact": "audit/data/control_helper_binaryninja.json"
     },
     {
+      "start": "0x506c",
+      "end": "0x50dc",
+      "entry": "0x506c",
+      "isa": "thumb",
+      "account": "Complete selector mapping and response encoder; 52 visited starts and two statically unreachable starts at 0x50aa/0x50ac; excludes subsequent literals",
+      "evidence": [
+        "audit/data/control_selector_binaryninja.json",
+        "audit/data/control_selector_emulation.json",
+        "docs/CONTROL_SELECTOR_REVIEW.md"
+      ],
+      "decoder_artifact": "audit/data/control_selector_binaryninja.json"
+    },
+    {
       "start": "0x56fc",
       "end": "0x5700",
       "entry": "0x56fc",

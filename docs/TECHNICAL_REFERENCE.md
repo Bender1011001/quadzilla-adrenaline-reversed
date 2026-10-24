@@ -5,6 +5,8 @@ says where the fact comes from. For conclusions see [SECURITY_ASSESSMENT.md](SEC
 
 The [capture parser account](CAPTURE_PARSER_REVIEW.md) maps the nine RXB1 raw-header comparisons, RXB0/RXB1 field offsets and precise scalar arithmetic. It records ignored DLC, an eight-bit narrowing boundary and retained destinations. Signal units, downstream impact and live DMA ordering remain unresolved.
 
+The [control selector contract](CONTROL_SELECTOR_REVIEW.md) separates the returned arithmetic byte from the AID 9 response at `0x200BC4`. It establishes readiness gating, byte wrap, conditional signed division and a high-bit marker, with original-reader evidence for response encoding. Full staging-to-working validation and physical control meaning remain open.
+
 ## Hardware
 
 | | |
@@ -45,7 +47,7 @@ evidence that every in-range slot is supported or that a hardware fault occurred
 
 ## Functions
 
-The baseline inventory is the two-tool audit: 145 confirmed execution entries, 108 with an evidence-backed role. The initial 14 roles are listed below
+The baseline inventory is the two-tool audit: 145 confirmed execution entries, 109 with an evidence-backed role. The initial 14 roles are listed below
 from `audit/data/semantic_labels.json`. `trace` means a static instruction trace; `chain` means part of the closed static chain below. The labels describe
 static roles and do not prove live engine behaviour.
 

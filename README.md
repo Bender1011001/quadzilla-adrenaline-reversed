@@ -31,6 +31,8 @@ Supporting analysis:
 
 The [capture parser review](docs/CAPTURE_PARSER_REVIEW.md) completes the instruction account of `0x59E8`, adding 692 reviewed bytes without changing the 108/37 role count. Original-byte execution documents the receive state machine, nine header matches, exact scalar formulas, ignored DLC and an eight-bit narrowing discontinuity. DMA ordering, signal units and downstream consequences remain open.
 
+The [control selector review](docs/CONTROL_SELECTOR_REVIEW.md) raises baseline coverage to 109 roles with 36 pending. It separates the mapped arithmetic byte from the AID 9 response and checks 70,672 original-byte calls, including wrap, zero-count and marker cases. Total classified instruction coverage is 8,900 bytes; the full analysis remains incomplete.
+
 ## Try it
 
 Python 3.10+, standard library only (`pyserial` for the USB tool).
@@ -87,7 +89,7 @@ The [SPI output state review](docs/SPI_STATE_MACHINE_REVIEW.md) adds the four-st
 
 The [SPI initialization review](docs/SPI_INITIALIZATION_REVIEW.md) adds the 24-step setup sequence and its shared timeout/reset path, bringing baseline coverage to 105 roles with 40 pending. It also records the reset-only capture-entry path and identifies nine directly referenced image bytes as transmit data.
 
-The [capture helper review](docs/CAPTURE_HELPER_REVIEW.md) adds request selection, seven-slot rotation and unsigned byte comparison, bringing baseline coverage to 108 roles with 37 pending. Indexed request evidence extends the shared transmit-data table to 63 bytes; full capture parsing remains under review.
+The [capture helper review](docs/CAPTURE_HELPER_REVIEW.md) adds request selection, seven-slot rotation and unsigned byte comparison, bringing baseline coverage to 108 roles with 37 pending. Indexed request evidence extends the shared transmit-data table to 63 bytes; full capture parsing is covered by the subsequent parser review.
 
 The [SPI/CAN command audit](docs/SPI_CAN_CONTROLLER_REVIEW.md) identifies an MCP2515-compatible controller protocol in the initialized commands, including receive-buffer layouts, seven extended request frames and TXB2 configuration. The owner's [V2.2 board component inventory](docs/BOARD_V2_2_COMPONENTS.md) reports U2 marked MCP2515 and records the MCU, analog components and unresolved markings. These reported observations corroborate the software interpretation; wiring, live CAN behavior and the installed firmware version remain unverified.
 
