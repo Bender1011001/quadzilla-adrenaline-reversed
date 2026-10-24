@@ -83,6 +83,8 @@ The [SPI/PDC primitive review](docs/SPI_TRANSFER_REVIEW.md) adds six GPIO, readi
 
 The [SPI output state review](docs/SPI_STATE_MACHINE_REVIEW.md) adds the four-state caller and payload packing, bringing baseline coverage to 104 roles with 41 pending. It records progress after ignored helper results and signed packing behavior as controlled findings requiring caller and hardware context.
 
+The [SPI initialization review](docs/SPI_INITIALIZATION_REVIEW.md) adds the 24-step setup sequence and its shared timeout/reset path, bringing baseline coverage to 105 roles with 40 pending. It also records the reset-only capture-entry path and identifies nine directly referenced image bytes as transmit data.
+
 ## Layout
 
 ```

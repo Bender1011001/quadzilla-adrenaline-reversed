@@ -204,6 +204,16 @@
       ]
     },
     {
+      "entry": "0x575c",
+      "label": "SPI initialization transfer sequence with shared timeout and keyed reset request",
+      "assurance": "static_instruction_trace_and_synthetic_mmio_emulation",
+      "evidence": [
+        "audit/data/spi_initialization_binaryninja.json",
+        "audit/data/spi_initialization_emulation.json",
+        "docs/SPI_INITIALIZATION_REVIEW.md"
+      ]
+    },
+    {
       "entry": "0x59e8",
       "label": "Incoming capture unpacker and writer for the 0x2005C4 SRAM structure",
       "assurance": "static_instruction_trace",

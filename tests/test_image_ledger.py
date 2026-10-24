@@ -14,7 +14,7 @@ spec.loader.exec_module(ledger)
 class ImageLedger(unittest.TestCase):
     def test_review_manifest_rejects_false_coverage(self):
         doc = json.loads((ROOT / "audit/data/reviewed_instruction_ranges.json").read_text())
-        self.assertEqual(sum(b-a for a, b, *_ in ledger.validate_instruction_reviews(doc)), 7192)
+        self.assertEqual(sum(b-a for a, b, *_ in ledger.validate_instruction_reviews(doc)), 7844)
         for change in ("hash", "overlap", "layout", "odd", "account"):
             malformed = copy.deepcopy(doc)
             if change == "hash":
@@ -33,14 +33,13 @@ class ImageLedger(unittest.TestCase):
     def test_accepted_instruction_bytes_have_exact_manifest_and_decoder_bounds(self):
         manifest = json.loads((ROOT / "audit/data/reviewed_instruction_ranges.json").read_text())
         doc = json.loads((ROOT / "audit/data/image_coverage_ledger.json").read_text())
-        ranges = {r["entry"]: (int(r["start"], 0), int(r["end"], 0)) for r in manifest["ranges"]}
-        decoded = {}
+        ranges = []
         for row in manifest["ranges"]:
+            start, end = int(row["start"], 0), int(row["end"], 0)
+            ranges.append((row["entry"], start, end))
             decode = json.loads((ROOT / row["decoder_artifact"]).read_text())
-            decoded[row["entry"]] = next(r for r in decode["ranges"] if r["start"] == row["start"])
-            self.assertEqual(decoded[row["entry"]]["architecture"], "armv7" if row["isa"] == "arm" else "thumb2")
-        for entry, (start, end) in ranges.items():
-            block = decoded[entry]
+            block = next(r for r in decode["ranges"] if r["start"] == row["start"])
+            self.assertEqual(block["architecture"], "armv7" if row["isa"] == "arm" else "thumb2")
             self.assertNotIn("decode_stopped_at", block)
             cursor = start
             for instruction in block["instructions"]:
@@ -49,10 +48,11 @@ class ImageLedger(unittest.TestCase):
                 cursor += instruction["length"]
             self.assertEqual(cursor, end)
         accepted = [r for r in doc["ranges"] if r["classification"] in ("reviewed_thumb_instructions", "reviewed_arm_instructions")]
-        self.assertEqual(sum(int(r["end"], 0)-int(r["start"], 0) for r in accepted), 7192)
+        self.assertEqual(sum(int(r["end"], 0)-int(r["start"], 0) for r in accepted), 7844)
         for r in accepted:
-            start, end = ranges[r["review_entry"]]
-            self.assertTrue(start <= int(r["start"], 0) < int(r["end"], 0) <= end)
+            self.assertTrue(any(entry == r["review_entry"] and
+                                start <= int(r["start"], 0) < int(r["end"], 0) <= end
+                                for entry, start, end in ranges))
 
     def test_coverage_rejects_gaps_overlaps_and_truncation(self):
         def row(a, b):
