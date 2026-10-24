@@ -4,8 +4,8 @@
   "unit": "execution_entries_including_vectors_thunks_and_alternate_entries",
   "summary": {
     "confirmed_entries": 145,
-    "documented_static_roles": 109,
-    "unlabeled_static_entries": 36,
+    "documented_static_roles": 113,
+    "unlabeled_static_entries": 32,
     "entries_with_ida_sram_references": 49,
     "entries_with_ida_peripheral_references": 21,
     "union_direct_call_edges": 180
@@ -6619,8 +6619,8 @@
       "semantics": [
         {
           "entry": "0x601c",
-          "label": "Received-AID validation dispatcher; loop and thirteen handlers reviewed, remaining handlers pending",
-          "assurance": "static_instruction_trace",
+          "label": "Received-AID validation dispatcher with complete bounded local handler accounts; transport and downstream paths separate",
+          "assurance": "static_instruction_trace_and_bounded_emulation",
           "evidence": [
             "quadzilla_mcu_map.json:functions.sub_601C",
             "quadzilla_vp44_chain.json:roles.requested_stretch_setting",
@@ -6630,7 +6630,11 @@
             "docs/AID_DISPATCH_SELECTOR_UPDATES.md",
             "audit/data/compound_update_emulation.json",
             "audit/data/compound_update_binaryninja.json",
-            "docs/COMPOUND_AID_UPDATE_REVIEW.md"
+            "docs/COMPOUND_AID_UPDATE_REVIEW.md",
+            "audit/data/remaining_update_binaryninja.json",
+            "audit/data/remaining_update_emulation.json",
+            "docs/REMAINING_AID_UPDATE_REVIEW.md",
+            "audit/data/remaining_update_ida_macros.json"
           ]
         }
       ],
@@ -8124,8 +8128,20 @@
           ]
         }
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x6042",
+          "label": "Parent-frame curve continuation: lower clamp then final-slot and echo stores",
+          "assurance": "static_instruction_trace_and_bounded_parent_execution",
+          "evidence": [
+            "audit/data/remaining_update_binaryninja.json",
+            "audit/data/remaining_update_emulation.json",
+            "docs/REMAINING_AID_UPDATE_REVIEW.md",
+            "audit/data/remaining_update_ida_macros.json"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [],
         "incoming": [
@@ -8163,8 +8179,20 @@
           ]
         }
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x6048",
+          "label": "Parent-frame curve continuation: final-slot store and fixed echo selection",
+          "assurance": "static_instruction_trace_and_bounded_parent_execution",
+          "evidence": [
+            "audit/data/remaining_update_binaryninja.json",
+            "audit/data/remaining_update_emulation.json",
+            "docs/REMAINING_AID_UPDATE_REVIEW.md",
+            "audit/data/remaining_update_ida_macros.json"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [],
         "incoming": [
@@ -8210,8 +8238,20 @@
           ]
         }
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x604c",
+          "label": "Parent-frame echo-store continuation into validation loop",
+          "assurance": "static_instruction_trace_and_bounded_parent_execution",
+          "evidence": [
+            "audit/data/remaining_update_binaryninja.json",
+            "audit/data/remaining_update_emulation.json",
+            "docs/REMAINING_AID_UPDATE_REVIEW.md",
+            "audit/data/remaining_update_ida_macros.json"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [],
         "incoming": [
@@ -8251,8 +8291,20 @@
           ]
         }
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x604e",
+          "label": "Parent-frame validation loop continuation: increment byte index then dispatch or return",
+          "assurance": "static_instruction_trace_and_bounded_parent_execution",
+          "evidence": [
+            "audit/data/selector_update_binaryninja.json",
+            "audit/data/selector_update_emulation.json",
+            "audit/data/remaining_update_emulation.json",
+            "docs/REMAINING_AID_UPDATE_REVIEW.md"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [
           "0x4384",
@@ -17469,7 +17521,7 @@
     },
     "labels": {
       "path": "audit/data/semantic_labels.json",
-      "sha256": "eb14b38637ffe72a94cbd997cd535dd9c71f362d3b0501f2d6404d21cc31ea6a"
+      "sha256": "f4fbebae4446a784300fcb375a78487337a2ef23885fa8ab8e68b71dac21b2ce"
     }
   },
   "input_hash_policy": "SHA-256 of JSON text with CRLF normalized to LF"

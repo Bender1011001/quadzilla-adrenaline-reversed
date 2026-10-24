@@ -18,7 +18,7 @@ repository are listed in the [errata](docs/SECURITY_ASSESSMENT.md#errata-correct
 | F2 | Update package has no signature, MAC or hash, only Intel HEX line checksums | Medium (potential) | verified for package; device check untested |
 | F3 | Phone link is Bluetooth **Classic** RFCOMM with no app-level pairing or crypto | Info | verified; pairing strength untested |
 | F4 | X2com control protocol has no authentication, nonce or encryption; CRC-8/SAE-J1850 only | Medium | verified statically |
-| F5 | The device clamps most values, but its limits differ from the app's (AID 85 floor 800 vs 1200 us; timing 137-138 up to 30 deg vs 20/26) | Low | verified statically |
+| F5 | Selected device-side limits differ from the app's (AID 85 floor 800 vs 1200 us; timing 137-138 up to 30 deg vs 20/26) | Low | verified statically |
 
 Full write-up with CWE mappings, reproduction commands, recommendations and what was *not* tested: **[docs/SECURITY_ASSESSMENT.md](docs/SECURITY_ASSESSMENT.md)**.
 
@@ -37,6 +37,8 @@ The [AID dispatch and selector-update review](docs/AID_DISPATCH_SELECTOR_UPDATES
 
 The [compound AID review](docs/COMPOUND_AID_UPDATE_REVIEW.md) adds eleven handler accounts, including five AIDs absent from the profiles. Original-byte evidence reproduces AID 154 consuming AID 146 staging after an earlier partial write, and a repeated 16-bit comparison/eight-bit store. Thirteen of 57 non-default handlers are reviewed, 44 remain pending, and instruction coverage is 9,564 bytes. Receive results are scripted; live transport and downstream effects remain unverified.
 
+The [remaining local handler review](docs/REMAINING_AID_UPDATE_REVIEW.md) gives all 57 selected handlers bounded accounts and identifies four shared parent-frame entries. Current baseline coverage is 113 roles with 32 pending, and 10,782 reviewed instruction bytes. Original-byte evidence distinguishes transport width from handler/echo width, documents coupled AID 22 limits and closes the local AID 226 configuration account. Full protocol, all writer/consumer paths and hardware acceptance remain incomplete.
+
 ## Try it
 
 Python 3.10+, standard library only (`pyserial` for the USB tool).
@@ -45,7 +47,7 @@ Python 3.10+, standard library only (`pyserial` for the USB tool).
 python -m unittest discover -s tests -t . -v     # offline tests, no vendor files needed
 python tools/diff_profiles.py                     # 14 vendor profiles, 117 unique AIDs, QZTEST-only {145, 181}
 python tools/x2com_crc.py                         # CRC-8/SAE-J1850 check value: 0x4B
-python tools/aid_clamps.py                        # device-side value clamps for 57 AIDs vs the app's limits
+python tools/aid_clamps.py                        # lexical clamp listing; use the linked handler reviews for exact behavior
 ```
 
 With your own copy of the vendor update package (not included):

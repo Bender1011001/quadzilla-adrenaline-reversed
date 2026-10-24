@@ -47,7 +47,7 @@ evidence that every in-range slot is supported or that a hardware fault occurred
 
 ## Functions
 
-The baseline inventory is the two-tool audit: 145 confirmed execution entries, 109 with an evidence-backed role. The initial 14 roles are listed below
+The baseline inventory is the two-tool audit: 145 confirmed execution entries, 113 with an evidence-backed role. The initial 14 roles are listed below
 from `audit/data/semantic_labels.json`. `trace` means a static instruction trace; `chain` means part of the closed static chain below. The labels describe
 static roles and do not prove live engine behaviour.
 
@@ -195,6 +195,8 @@ Flash sequence: LINK_CHECK, MODULE_INFO, BOOTLOAD_MODE, KEY_TRANSFER, DATA_TRANS
 The [validation switch map](AID_DISPATCH_SELECTOR_UPDATES.md) records all 256 byte-AID destinations, staging/response pointers and profile names. AID 9 masks/caps a staged selector after readiness and raw-equality gates; AID 15 clamps count to 5–14 and derives quotient/remainder mapping bytes. These paths have original-byte evidence; 55 other non-default handler accounts remain pending this review.
 
 The [compound AID contracts](COMPOUND_AID_UPDATE_REVIEW.md) map staging, working fields, masks, accumulator resets and conditional derived values for AIDs 10, 64, 80–82, 146 and 150–154. AID 154 always continues into AID 146 processing; its trailing 16-bit field is compared against and stored into a working byte. Response-pointer population remains distinct from these update paths.
+
+All 57 selected local handlers now have [bounded accounts](REMAINING_AID_UPDATE_REVIEW.md). The remaining-handler artifact maps 42 scalar/curve contracts with explicit source, store, echo and transport widths; AID 24 invokes the reviewed initializer only for byte `55`, and AID 226 writes the CAN-scaling coefficient after its finite numeric guard. Four alternate entries share the parent dispatcher frame. Read/write transport and global consumer analysis remain separate.
 
 ## AIDs
 

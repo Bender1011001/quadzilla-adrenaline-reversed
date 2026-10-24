@@ -1,12 +1,12 @@
-# Quadzilla Adrenaline — Complete AID Reference
+# Quadzilla Adrenaline — Profile AIDs and firmware handler reference
 
 *117 unique AIDs declared across the 14 vendor vehicle profiles in `vehicles/` (reproduce with `python tools/diff_profiles.py`).*
-*Names, units and min/max come from the profile JSON. They describe what the iQuad app exposes; device-side support for each AID and any device-side range checks are not verified.*
-*110 AID numbers in 0-226 appear in no profile and are unexplored.*
+*Names, units and min/max come from the profile JSON. They describe what the iQuad app exposes. Linked firmware reviews establish bounded local handler behavior; this profile table does not itself verify support or bounds.*
+*110 AID numbers in 0-226 have no profile declaration; implemented unprofiled handler paths are documented below.*
 
 The [firmware table audit](AID_TABLE_BOUNDARY_REVIEW.md) separately maps all 256
-possible AID bytes. AID 255 indexes beyond both 255-slot pointer tables; all other
-slots still require individual semantics and support checks. Profile declarations
+possible AID bytes. AID 255 indexes beyond both 255-slot pointer tables; pointer mappings and local handler accounts are linked below, while
+complete read/write semantics, other writers and downstream consumers still require review. Profile declarations
 below should not be treated as the complete firmware-supported parameter set.
 
 For AID 9 specifically, the [control selector review](CONTROL_SELECTOR_REVIEW.md) traces the response pointer to `0x200BC4` and executes the real reader after the producer. The response can contain a high-bit marker or `0xE4`; it is distinct from the mapped byte returned to control arithmetic. This does not establish every inbound write constraint or app-side decoding.
@@ -16,6 +16,8 @@ For AID 9 specifically, the [control selector review](CONTROL_SELECTOR_REVIEW.md
 The [AID 9/15 update account](AID_DISPATCH_SELECTOR_UPDATES.md) now establishes their local staging-to-working rules and ordered-loop behavior. Its machine-readable dispatch map includes all 256 destination selections and 57 non-default handlers, with unreviewed handler semantics explicitly marked. A default validation branch does not imply no staging or response support.
 
 The [compound handler review](COMPOUND_AID_UPDATE_REVIEW.md) adds eleven local update accounts, including unprofiled AIDs 10, 64, 80, 82 and 151. It records the AID 154-to-146 staging dependency and distinguishes variable storage widths from profile labels. Current bounded handler coverage is 13 of 57, with 44 pending; this does not claim complete read/write semantics for all parameters.
+
+The [complete local handler account](REMAINING_AID_UPDATE_REVIEW.md) now covers all 57 selected update handlers. AIDs 110–136 have two-byte transport/read width, while these handlers consume only the low staged byte and write one echo byte. The original reader returns the retained upper echo byte in controlled probes. AID 226 has a local configuration account; variable-width transport admission and full parameter semantics remain incomplete.
 
 ## AID Data Size Rules (from firmware + libx2com-jni.so)
 

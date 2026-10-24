@@ -1,0 +1,196 @@
+{
+  "format": "quadzilla-ida-constant-macro-adjudication-v1",
+  "raw_sha256": "1ae519ba6194e8f7bdaaa94333a83a9e6fda3b0563f87f7d48383b37288c1780",
+  "macro_items": [
+    {
+      "start": "0x6534",
+      "end": "0x6538",
+      "ida_text": "MOVS            R2, #0x12D",
+      "halfwords": [
+        "0x22ff",
+        "0x322e"
+      ],
+      "register": 2,
+      "operation": "add_immediate",
+      "constructed_value": "0x12d",
+      "explicit_instructions": [
+        {
+          "address": "0x6534",
+          "length": 2,
+          "text": "movs    r2, #0xff"
+        },
+        {
+          "address": "0x6536",
+          "length": 2,
+          "text": "adds    r2, #0x2e"
+        }
+      ]
+    },
+    {
+      "start": "0x6562",
+      "end": "0x6566",
+      "ida_text": "MOVS            R2, #0x12D",
+      "halfwords": [
+        "0x22ff",
+        "0x322e"
+      ],
+      "register": 2,
+      "operation": "add_immediate",
+      "constructed_value": "0x12d",
+      "explicit_instructions": [
+        {
+          "address": "0x6562",
+          "length": 2,
+          "text": "movs    r2, #0xff"
+        },
+        {
+          "address": "0x6564",
+          "length": 2,
+          "text": "adds    r2, #0x2e"
+        }
+      ]
+    },
+    {
+      "start": "0x6586",
+      "end": "0x658a",
+      "ida_text": "MOVS            R2, #0x12D",
+      "halfwords": [
+        "0x22ff",
+        "0x322e"
+      ],
+      "register": 2,
+      "operation": "add_immediate",
+      "constructed_value": "0x12d",
+      "explicit_instructions": [
+        {
+          "address": "0x6586",
+          "length": 2,
+          "text": "movs    r2, #0xff"
+        },
+        {
+          "address": "0x6588",
+          "length": 2,
+          "text": "adds    r2, #0x2e"
+        }
+      ]
+    },
+    {
+      "start": "0x65b4",
+      "end": "0x65b8",
+      "ida_text": "MOVS            R2, #0x12D",
+      "halfwords": [
+        "0x22ff",
+        "0x322e"
+      ],
+      "register": 2,
+      "operation": "add_immediate",
+      "constructed_value": "0x12d",
+      "explicit_instructions": [
+        {
+          "address": "0x65b4",
+          "length": 2,
+          "text": "movs    r2, #0xff"
+        },
+        {
+          "address": "0x65b6",
+          "length": 2,
+          "text": "adds    r2, #0x2e"
+        }
+      ]
+    },
+    {
+      "start": "0x65d8",
+      "end": "0x65dc",
+      "ida_text": "MOVS            R1, #0x12D",
+      "halfwords": [
+        "0x21ff",
+        "0x312e"
+      ],
+      "register": 1,
+      "operation": "add_immediate",
+      "constructed_value": "0x12d",
+      "explicit_instructions": [
+        {
+          "address": "0x65d8",
+          "length": 2,
+          "text": "movs    r1, #0xff"
+        },
+        {
+          "address": "0x65da",
+          "length": 2,
+          "text": "adds    r1, #0x2e"
+        }
+      ]
+    },
+    {
+      "start": "0x6686",
+      "end": "0x668a",
+      "ida_text": "MOVS            R1, #0x320",
+      "halfwords": [
+        "0x21c8",
+        "0x89"
+      ],
+      "register": 1,
+      "operation": "logical_shift_left",
+      "constructed_value": "0x320",
+      "explicit_instructions": [
+        {
+          "address": "0x6686",
+          "length": 2,
+          "text": "movs    r1, #0xc8"
+        },
+        {
+          "address": "0x6688",
+          "length": 2,
+          "text": "lsls    r1, r1, #2"
+        }
+      ]
+    },
+    {
+      "start": "0x67dc",
+      "end": "0x67e0",
+      "ida_text": "MOVS            R1, #0xC80",
+      "halfwords": [
+        "0x21c8",
+        "0x109"
+      ],
+      "register": 1,
+      "operation": "logical_shift_left",
+      "constructed_value": "0xc80",
+      "explicit_instructions": [
+        {
+          "address": "0x67dc",
+          "length": 2,
+          "text": "movs    r1, #0xc8"
+        },
+        {
+          "address": "0x67de",
+          "length": 2,
+          "text": "lsls    r1, r1, #4"
+        }
+      ]
+    }
+  ],
+  "explained_explicit_starts": [
+    "0x6534",
+    "0x6536",
+    "0x6562",
+    "0x6564",
+    "0x6586",
+    "0x6588",
+    "0x65b4",
+    "0x65b6",
+    "0x65d8",
+    "0x65da",
+    "0x6686",
+    "0x6688",
+    "0x67dc",
+    "0x67de"
+  ],
+  "ordinary_matching_starts": 568,
+  "unexplained_boundary_mismatches": [],
+  "limits": [
+    "constant result and aggregate source extent verified; IDA item is not an individual instruction",
+    "condition flags follow explicit MOVS/ADDS/LSLS, not an imagined single MOVS"
+  ]
+}

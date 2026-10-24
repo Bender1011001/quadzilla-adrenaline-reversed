@@ -140,8 +140,9 @@ low/high byte order with values 0, 1, 255, 256, `0x1234`, `0x8000`, `0xFFFF`.
 Four sequence ingests cover failed-partial/successful-cross-AID application
 and repeated narrowing. Ordered stores as well as final fields match the model.
 
-Thirteen of the 57 non-default handlers now have bounded update accounts:
-these eleven plus AIDs 9 and 15. **44 remain pending complete review.**
+At this review stage, thirteen of the 57 non-default handlers had bounded update accounts:
+these eleven plus AIDs 9 and 15. The subsequent [remaining-handler account](REMAINING_AID_UPDATE_REVIEW.md)
+closes the local handler queue at 57; full transport, writer and consumer analysis remains incomplete.
 Baseline entry-role counts remain 109 reviewed / 36 pending because these
 handlers belong to the already labeled dispatcher. Total reviewed instruction
 bytes are 9,564. Other handlers, alternate entries, transport state machines,

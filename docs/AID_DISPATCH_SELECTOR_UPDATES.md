@@ -30,8 +30,8 @@ Profile names are labels from vendor files, not proof of implemented behavior.
 
 At this review stage, the other 55 non-default handler accounts remained
 pending. The subsequent [compound review](COMPOUND_AID_UPDATE_REVIEW.md) adds
-eleven accounts, and the machine-readable rows now identify 13 reviewed
-handlers and 44 pending. Earlier lexical clamp listings are useful
+eleven accounts, and the subsequent [remaining-handler account](REMAINING_AID_UPDATE_REVIEW.md)
+closes the local handler queue at 57. The machine-readable rows link each handler to its account. Earlier lexical clamp listings are useful
 research aids but do not replace their complete instruction-level accounts.
 
 ## Loop and receive boundary
