@@ -67,6 +67,8 @@ The [control helper review](docs/CONTROL_HELPER_REVIEW.md) expands baseline cove
 
 The [software floating point review](docs/SOFT_FLOAT_REVIEW.md) expands the baseline to 84 labeled roles with 61 pending and supports at least 157 source starts. It records 30,627 original-byte offline calls, including reproducible subnormal division errors and a binary64 addition path that depends on incoming R4. Decoder gaps and unverified live reachability remain explicit.
 
+The [configured ratio scorer review](docs/DRIVETRAIN_SCORE_REVIEW.md) raises baseline coverage to 85 roles with 60 pending. An original-byte trace shows that candidate scores are narrowed to one byte before comparison: a computed score of 512 becomes zero. The caller's input units and any live effect remain unresolved.
+
 ## Layout
 
 ```

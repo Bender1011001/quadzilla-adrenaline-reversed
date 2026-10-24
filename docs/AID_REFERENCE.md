@@ -199,6 +199,11 @@ This is the money — a user-adjustable fueling curve indexed by boost pressure:
 |-----|------|------|-----|-----|----------|
 | 226 | Drive Train Info | INCHES | 95.7 | 120.9 | ALL |
 
+The [firmware AID 226 and ratio scorer review](DRIVETRAIN_SCORE_REVIEW.md)
+shows two bounded selector bytes and a binary32 value used with image-resident
+ratio tables. The profile's name and unit alone do not establish the live
+meaning of every field. The scorer narrows integer candidates to bytes.
+
 ---
 
 ## Undocumented AID Gaps (110 unknown)

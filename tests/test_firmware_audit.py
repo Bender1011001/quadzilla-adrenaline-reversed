@@ -1,5 +1,6 @@
 """Machine-check the headline numbers of docs/FIRMWARE_AUDIT.md against audit/data/."""
 import json
+import hashlib
 import unittest
 
 from tests._paths import ROOT
@@ -41,11 +42,15 @@ class FirmwareAudit(unittest.TestCase):
 
     def test_entry_catalog(self):
         s = self.catalog["summary"]
-        self.assertEqual((s["confirmed_entries"], s["documented_static_roles"], s["unlabeled_static_entries"]), (145, 84, 61))
+        self.assertEqual((s["confirmed_entries"], s["documented_static_roles"], s["unlabeled_static_entries"]), (145, 85, 60))
         entries = {e["entry"] for e in self.catalog["entries"]}
         self.assertEqual(len(entries), 145)
         # IDA proposed a function at 0xAE82 inside the AID pointer table (0xAD18-0xB113): rejected as data.
         self.assertNotIn("0xae82", entries)
+        for source in self.catalog["inputs"].values():
+            self.assertTrue(source["path"].startswith("audit/data/"))
+            path = ROOT / source["path"]
+            self.assertEqual(hashlib.sha256(path.read_bytes()).hexdigest(), source["sha256"])
 
     def test_peripheral_references_all_mapped(self):
         s = self.periph["summary"]

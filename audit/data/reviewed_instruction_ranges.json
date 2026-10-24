@@ -60,6 +60,19 @@
       "decoder_artifact": "audit/data/control_helper_binaryninja.json"
     },
     {
+      "start": "0x46d0",
+      "end": "0x4790",
+      "entry": "0x46d0",
+      "isa": "thumb",
+      "decoder_artifact": "audit/data/drivetrain_score_binaryninja.json",
+      "account": "Complete bounded Thumb body through return; literals begin at 0x4790",
+      "evidence": [
+        "audit/data/drivetrain_score_binaryninja.json",
+        "audit/data/drivetrain_score_emulation.json",
+        "docs/DRIVETRAIN_SCORE_REVIEW.md"
+      ]
+    },
+    {
       "start": "0x47b0",
       "end": "0x4810",
       "entry": "0x47b0",
@@ -114,34 +127,6 @@
         "docs/CONTROL_HELPER_REVIEW.md"
       ],
       "decoder_artifact": "audit/data/control_helper_binaryninja.json"
-    },
-    {
-      "start": "0x8678",
-      "end": "0x896c",
-      "entry": "0x8678",
-      "isa": "arm",
-      "decoder_artifact": "audit/data/soft_float_binaryninja.json",
-      "account": "Reviewed software floating-point runtime instruction group, including shared bodies and callable unreferenced routines; literal/status pointer and wrapper alignment excluded",
-      "evidence": [
-        "audit/data/soft_float_function_reviews.json",
-        "audit/data/soft_float_binaryninja.json",
-        "audit/data/soft_float_emulation.json",
-        "docs/SOFT_FLOAT_REVIEW.md"
-      ]
-    },
-    {
-      "start": "0x8970",
-      "end": "0x96c4",
-      "entry": "0x8970",
-      "isa": "arm",
-      "decoder_artifact": "audit/data/soft_float_binaryninja.json",
-      "account": "Reviewed software floating-point runtime instruction group, including shared bodies and callable unreferenced routines; literal/status pointer and wrapper alignment excluded",
-      "evidence": [
-        "audit/data/soft_float_function_reviews.json",
-        "audit/data/soft_float_binaryninja.json",
-        "audit/data/soft_float_emulation.json",
-        "docs/SOFT_FLOAT_REVIEW.md"
-      ]
     },
     {
       "start": "0x56fc",
@@ -360,6 +345,34 @@
       "isa": "thumb",
       "decoder_artifact": "audit/data/soft_float_binaryninja.json",
       "account": "Pointer-jump wrapper instructions only; adjacent pointer literal and alignment excluded",
+      "evidence": [
+        "audit/data/soft_float_function_reviews.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_emulation.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ]
+    },
+    {
+      "start": "0x8678",
+      "end": "0x896c",
+      "entry": "0x8678",
+      "isa": "arm",
+      "decoder_artifact": "audit/data/soft_float_binaryninja.json",
+      "account": "Reviewed software floating-point runtime instruction group, including shared bodies and callable unreferenced routines; literal/status pointer and wrapper alignment excluded",
+      "evidence": [
+        "audit/data/soft_float_function_reviews.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_emulation.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ]
+    },
+    {
+      "start": "0x8970",
+      "end": "0x96c4",
+      "entry": "0x8970",
+      "isa": "arm",
+      "decoder_artifact": "audit/data/soft_float_binaryninja.json",
+      "account": "Reviewed software floating-point runtime instruction group, including shared bodies and callable unreferenced routines; literal/status pointer and wrapper alignment excluded",
       "evidence": [
         "audit/data/soft_float_function_reviews.json",
         "audit/data/soft_float_binaryninja.json",

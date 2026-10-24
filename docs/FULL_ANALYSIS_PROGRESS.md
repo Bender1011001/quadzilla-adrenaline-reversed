@@ -10,7 +10,8 @@ Update: the [startup/persistence review](STARTUP_PERSISTENCE_REVIEW.md) and
 entries, for at least 157 supported starts. Three callable numeric routines
 have no identified incoming image call and are not claimed reachable in service.
 The original 145-start catalog is retained as the baseline; its semantic coverage
-now stands at 84 roles with 61 entries left after the soft float review. The
+now stands at 85 roles with 60 entries left after the
+[configured ratio scorer review](DRIVETRAIN_SCORE_REVIEW.md). The
 new entries and aliases are recorded separately in
 `audit/data/entry_adjudications.json`. Neither inventory is claimed exhaustive.
 
@@ -26,8 +27,8 @@ address without hiding pending review:
 
 | Classification | Bytes |
 |---|---:|
-| IDA code candidates awaiting review | 16,372 |
-| Explicitly reviewed Thumb instruction ranges | 976 |
+| IDA code candidates awaiting review | 16,180 |
+| Explicitly reviewed Thumb instruction ranges | 1,168 |
 | Explicitly reviewed ARM instruction ranges | 4,168 |
 | IDA data candidates awaiting review | 3,144 |
 | Soft float status pointer literal | 4 |
@@ -38,8 +39,8 @@ address without hiding pending review:
 | Erased trailing `FF` | 2,888 |
 
 Coverage of an address is not proof that its meaning or ISA has been reviewed.
-The explicit instruction-range manifest now accepts 5,144 bytes through the
-[soft float review](SOFT_FLOAT_REVIEW.md). It excludes adjacent literal
+The explicit instruction-range manifest now accepts 5,336 bytes through the
+[configured ratio scorer review](DRIVETRAIN_SCORE_REVIEW.md). It excludes adjacent literal
 pools and alignment. Earlier semantic labels are not automatically promoted to
 byte-level classification; their exact ranges still need to be adjudicated.
 The ledger explicitly preserves 2,119 item/layout conflicts. These are tool item

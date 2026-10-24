@@ -205,6 +205,10 @@ The [offline software floating point review](SOFT_FLOAT_REVIEW.md) identifies
 reproducible exceptional-input numeric differences and a binary64 add path
 dependent on the caller's R4 value. No connected-controller effect or security
 severity is established by these offline calls.
+The [configured ratio scorer review](DRIVETRAIN_SCORE_REVIEW.md) also records
+an original-byte case where integer score 512 narrows to byte zero and wins
+the candidate comparison. Its upstream input units and any live consequence
+remain unresolved; this is not assigned a security severity.
 
 The product is an old aftermarket part, but the pattern (static obfuscation key, unsigned updates, unauthenticated control
 channel) is common. If this is reported, send the vendor F2 and F4 first, with the recommendations above.

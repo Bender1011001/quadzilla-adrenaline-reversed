@@ -1,0 +1,288 @@
+{
+  "format": "quadzilla-drivetrain-score-v1",
+  "raw_sha256": "1ae519ba6194e8f7bdaaa94333a83a9e6fda3b0563f87f7d48383b37288c1780",
+  "entry": "0x46d0",
+  "cpu": "ARM926 functional surrogate",
+  "source_table": "0x9f88",
+  "transmission_rows": [
+    {
+      "selector": 0,
+      "count": 4,
+      "ratio_bits": [
+        "0x401ccccd",
+        "0x3fb9999a",
+        "0x3f800000",
+        "0x3f30a3d7"
+      ]
+    },
+    {
+      "selector": 1,
+      "count": 5,
+      "ratio_bits": [
+        "0x40b3851f",
+        "0x40428f5c",
+        "0x3fd5c28f",
+        "0x3f800000",
+        "0x3f400000"
+      ]
+    },
+    {
+      "selector": 2,
+      "count": 6,
+      "ratio_bits": [
+        "0x40b428f6",
+        "0x405851ec",
+        "0x40028f5c",
+        "0x3fb1eb85",
+        "0x3f800000",
+        "0x3f3ae148"
+      ]
+    }
+  ],
+  "axle_ratio_bits": [
+    "0x406eb852",
+    "0x40833333",
+    "0x3f800000",
+    "0x40628f5c",
+    "0x40633333"
+  ],
+  "startup_default": {
+    "at": "0x2006e6",
+    "source": "0x9dce",
+    "bytes": "00043333bf42"
+  },
+  "cases": [
+    {
+      "word_input": 1200,
+      "byte_input": 0,
+      "transmission": 0,
+      "axle": 4,
+      "circumference_bits": "0x42bf3333",
+      "return_score": 100,
+      "selection_byte_200bd0": 242,
+      "candidates": []
+    },
+    {
+      "word_input": 1200,
+      "byte_input": 5,
+      "transmission": 0,
+      "axle": 4,
+      "circumference_bits": "0x42bf3333",
+      "return_score": 0,
+      "selection_byte_200bd0": 3,
+      "candidates": [
+        {
+          "index": 0,
+          "converted_s32": 149,
+          "stored_byte": 149
+        },
+        {
+          "index": 1,
+          "converted_s32": 322,
+          "stored_byte": 66
+        },
+        {
+          "index": 2,
+          "converted_s32": 512,
+          "stored_byte": 0
+        },
+        {
+          "index": 3,
+          "converted_s32": 787,
+          "stored_byte": 19
+        }
+      ]
+    },
+    {
+      "word_input": 1200,
+      "byte_input": 60,
+      "transmission": 0,
+      "axle": 4,
+      "circumference_bits": "0x42bf3333",
+      "return_score": 26,
+      "selection_byte_200bd0": 4,
+      "candidates": [
+        {
+          "index": 0,
+          "converted_s32": 79,
+          "stored_byte": 79
+        },
+        {
+          "index": 1,
+          "converted_s32": 64,
+          "stored_byte": 64
+        },
+        {
+          "index": 2,
+          "converted_s32": 48,
+          "stored_byte": 48
+        },
+        {
+          "index": 3,
+          "converted_s32": 26,
+          "stored_byte": 26
+        }
+      ]
+    },
+    {
+      "word_input": 500,
+      "byte_input": 1,
+      "transmission": 0,
+      "axle": 4,
+      "circumference_bits": "0x42bf3333",
+      "return_score": 11,
+      "selection_byte_200bd0": 2,
+      "candidates": [
+        {
+          "index": 0,
+          "converted_s32": 420,
+          "stored_byte": 164
+        },
+        {
+          "index": 1,
+          "converted_s32": 779,
+          "stored_byte": 11
+        },
+        {
+          "index": 2,
+          "converted_s32": 1175,
+          "stored_byte": 151
+        },
+        {
+          "index": 3,
+          "converted_s32": 1747,
+          "stored_byte": 211
+        }
+      ]
+    },
+    {
+      "word_input": 1000,
+      "byte_input": 1,
+      "transmission": 0,
+      "axle": 4,
+      "circumference_bits": "0x42bf3333",
+      "return_score": 11,
+      "selection_byte_200bd0": 4,
+      "candidates": [
+        {
+          "index": 0,
+          "converted_s32": 940,
+          "stored_byte": 172
+        },
+        {
+          "index": 1,
+          "converted_s32": 1658,
+          "stored_byte": 122
+        },
+        {
+          "index": 2,
+          "converted_s32": 2450,
+          "stored_byte": 146
+        },
+        {
+          "index": 3,
+          "converted_s32": 3595,
+          "stored_byte": 11
+        }
+      ]
+    },
+    {
+      "word_input": 500,
+      "byte_input": 3,
+      "transmission": 0,
+      "axle": 4,
+      "circumference_bits": "0x42bf3333",
+      "return_score": 3,
+      "selection_byte_200bd0": 4,
+      "candidates": [
+        {
+          "index": 0,
+          "converted_s32": 73,
+          "stored_byte": 73
+        },
+        {
+          "index": 1,
+          "converted_s32": 193,
+          "stored_byte": 193
+        },
+        {
+          "index": 2,
+          "converted_s32": 325,
+          "stored_byte": 69
+        },
+        {
+          "index": 3,
+          "converted_s32": 515,
+          "stored_byte": 3
+        }
+      ]
+    },
+    {
+      "word_input": 3000,
+      "byte_input": 4,
+      "transmission": 0,
+      "axle": 4,
+      "circumference_bits": "0x42bf3333",
+      "return_score": 20,
+      "selection_byte_200bd0": 3,
+      "candidates": [
+        {
+          "index": 0,
+          "converted_s32": 680,
+          "stored_byte": 168
+        },
+        {
+          "index": 1,
+          "converted_s32": 1219,
+          "stored_byte": 195
+        },
+        {
+          "index": 2,
+          "converted_s32": 1812,
+          "stored_byte": 20
+        },
+        {
+          "index": 3,
+          "converted_s32": 2671,
+          "stored_byte": 111
+        }
+      ]
+    },
+    {
+      "word_input": 4000,
+      "byte_input": 3,
+      "transmission": 0,
+      "axle": 4,
+      "circumference_bits": "0x42bf3333",
+      "return_score": 7,
+      "selection_byte_200bd0": 1,
+      "candidates": [
+        {
+          "index": 0,
+          "converted_s32": 1287,
+          "stored_byte": 7
+        },
+        {
+          "index": 1,
+          "converted_s32": 2244,
+          "stored_byte": 196
+        },
+        {
+          "index": 2,
+          "converted_s32": 3300,
+          "stored_byte": 228
+        },
+        {
+          "index": 3,
+          "converted_s32": 4827,
+          "stored_byte": 219
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "The semantic units of the two caller inputs require upstream trace review.",
+    "AID 226 validates selector bytes in its write case; alternate RAM writers are not excluded.",
+    "No device, live input range, peripheral timing, or output consequence measured."
+  ]
+}
