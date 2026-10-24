@@ -107,8 +107,10 @@ injects the SRAM flag. TC2 interrupt timing, PDC register effects, pin
 voltage and the external device are absent. This routine does not inspect
 the received three-byte buffer in its own body, and its helper-success
 checks are acceptance/readiness checks rather than verified command/response
-semantics. Command meanings, external device identity, complete capture
-parsing, live timeout duration and reset behavior remain unresolved.
+semantics. A subsequent [command audit](SPI_CAN_CONTROLLER_REVIEW.md) matches
+the initialized commands to an MCP2515-compatible register layout. Physical
+device identity, application message meanings, complete capture parsing,
+live timeout duration and reset behavior remain unresolved.
 
 ```text
 PYTHONPATH=<Binary Ninja Python path> python audit/tools/decode_image_ranges.py firmware_v2.8.4HF.bin --ranges 0x575c:0x59ca:thumb2,0x59e8:0x59fe:thumb2,0x5cb2:0x5cba:thumb2 --output audit/data/spi_initialization_binaryninja.json

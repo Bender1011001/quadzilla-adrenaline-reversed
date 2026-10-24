@@ -33,8 +33,10 @@ is at least 4. R0 chooses the following behavior:
 The byte at `0x2005D0` is preserved. Each secondary attempt repeats until
 accepted or timed out. A nonzero timeout at the final check requests
 `0xA500000D` at reset-controller address `0xFFFFFD00`; the harness stops at
-that store. No physical reset or transfer is simulated. The mode and option
-bytes are established values; their external device meanings are unresolved.
+that store. No physical reset or transfer is simulated. The subsequent
+[command audit](SPI_CAN_CONTROLLER_REVIEW.md) interprets these bytes as
+MCP2515-compatible TX-buffer selection, TXREQ and priority controls; the
+installed component and application message meanings remain unresolved.
 
 The table base comes from image literal `0x5EAC`. The seven supported record
 starts are `0x9FF0`, `0x9FF9`, `0xA002`, `0xA00B`, `0xA014`, `0xA01D`,

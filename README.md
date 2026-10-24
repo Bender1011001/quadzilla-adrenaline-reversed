@@ -87,6 +87,8 @@ The [SPI initialization review](docs/SPI_INITIALIZATION_REVIEW.md) adds the 24-s
 
 The [capture helper review](docs/CAPTURE_HELPER_REVIEW.md) adds request selection, seven-slot rotation and unsigned byte comparison, bringing baseline coverage to 108 roles with 37 pending. Indexed request evidence extends the shared transmit-data table to 63 bytes; full capture parsing remains under review.
 
+The [SPI/CAN command audit](docs/SPI_CAN_CONTROLLER_REVIEW.md) identifies an MCP2515-compatible controller protocol in the initialized commands, including receive-buffer layouts, seven extended request frames and TXB2 configuration. This adds software protocol context; the installed chip, wiring and live CAN behavior remain unverified.
+
 ## Layout
 
 ```

@@ -87,6 +87,11 @@ All 136 peripheral references across 21 entries map to blocks of the official SA
 PIOA 40, AIC 29, ADC 11, SPI 6, timer/counter 6, PMC 6, reset controller 3. No reference is unmapped. Mapping a register
 block does not by itself establish a function's purpose or direction.
 
+The [SPI/CAN command audit](SPI_CAN_CONTROLLER_REVIEW.md) interprets initialized
+SPI buffers using an MCP2515-compatible register layout. Those external
+controller commands use the SPI block already counted above; physical part
+identification and live CAN acceptance remain unverified.
+
 ## What this does not show
 
 No live VP44 output, no working custom patch, no flash protocol and no bootloader behaviour. It is static evidence about

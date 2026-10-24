@@ -1,0 +1,617 @@
+{
+  "format": "quadzilla-spi-can-command-audit-v1",
+  "raw_sha256": "1ae519ba6194e8f7bdaaa94333a83a9e6fda3b0563f87f7d48383b37288c1780",
+  "protocol_interpretation": "MCP2515-compatible command/register layout",
+  "physical_part_verified": false,
+  "layout_source": "https://ww1.microchip.com/downloads/en/DeviceDoc/MCP2515-Family-Data-Sheet-DS20001801K.pdf",
+  "source_sections": [
+    "3",
+    "4",
+    "11",
+    "12"
+  ],
+  "initialization": [
+    {
+      "pointer": "0x20060a",
+      "image_source": "0x9cf2",
+      "command_hex": "c0",
+      "decoded": {
+        "opcode": "0xc0",
+        "length": 1,
+        "operation": "RESET"
+      },
+      "call_site": "0x5790",
+      "helper": "0x6b64"
+    },
+    {
+      "pointer": "0x200623",
+      "image_source": "0x9d0b",
+      "command_hex": "020f80",
+      "decoded": {
+        "opcode": "0x2",
+        "length": 3,
+        "operation": "WRITE",
+        "register_start": "0xf",
+        "register_count": 1,
+        "write_data": "80"
+      },
+      "call_site": "0x57b2",
+      "helper": "0x6b64"
+    },
+    {
+      "pointer": "0x200629",
+      "image_source": "0x9d11",
+      "command_hex": "030f00",
+      "decoded": {
+        "opcode": "0x3",
+        "length": 3,
+        "operation": "READ",
+        "register_start": "0xf",
+        "register_count": 1,
+        "write_data": null
+      },
+      "call_site": "0x57cc",
+      "helper": "0x6b9c",
+      "receive_pointer": "0x2006b0"
+    },
+    {
+      "pointer": "0x200680",
+      "image_source": "0x9d68",
+      "command_hex": "022805f101",
+      "decoded": {
+        "opcode": "0x2",
+        "length": 5,
+        "operation": "WRITE",
+        "register_start": "0x28",
+        "register_count": 3,
+        "write_data": "05f101"
+      },
+      "call_site": "0x57e2",
+      "helper": "0x6b64"
+    },
+    {
+      "pointer": "0x200614",
+      "image_source": "0x9cfc",
+      "command_hex": "026000",
+      "decoded": {
+        "opcode": "0x2",
+        "length": 3,
+        "operation": "WRITE",
+        "register_start": "0x60",
+        "register_count": 1,
+        "write_data": "00"
+      },
+      "call_site": "0x57f8",
+      "helper": "0x6b64"
+    },
+    {
+      "pointer": "0x200617",
+      "image_source": "0x9cff",
+      "command_hex": "027000",
+      "decoded": {
+        "opcode": "0x2",
+        "length": 3,
+        "operation": "WRITE",
+        "register_start": "0x70",
+        "register_count": 1,
+        "write_data": "00"
+      },
+      "call_site": "0x580e",
+      "helper": "0x6b64"
+    },
+    {
+      "pointer": "0x200670",
+      "image_source": "0x9d58",
+      "command_hex": "0220ffe00000",
+      "decoded": {
+        "opcode": "0x2",
+        "length": 6,
+        "operation": "WRITE",
+        "register_start": "0x20",
+        "register_count": 4,
+        "write_data": "ffe00000"
+      },
+      "call_site": "0x5824",
+      "helper": "0x6b64"
+    },
+    {
+      "pointer": "0x200678",
+      "image_source": "0x9d60",
+      "command_hex": "022400000000",
+      "decoded": {
+        "opcode": "0x2",
+        "length": 6,
+        "operation": "WRITE",
+        "register_start": "0x24",
+        "register_count": 4,
+        "write_data": "00000000"
+      },
+      "call_site": "0x583a",
+      "helper": "0x6b64"
+    },
+    {
+      "pointer": "0x20064c",
+      "image_source": "0x9d34",
+      "command_hex": "0200ffe0",
+      "decoded": {
+        "opcode": "0x2",
+        "length": 4,
+        "operation": "WRITE",
+        "register_start": "0x0",
+        "register_count": 2,
+        "write_data": "ffe0"
+      },
+      "call_site": "0x5850",
+      "helper": "0x6b64"
+    },
+    {
+      "pointer": "0x200650",
+      "image_source": "0x9d38",
+      "command_hex": "02042000",
+      "decoded": {
+        "opcode": "0x2",
+        "length": 4,
+        "operation": "WRITE",
+        "register_start": "0x4",
+        "register_count": 2,
+        "write_data": "2000"
+      },
+      "call_site": "0x5866",
+      "helper": "0x6b64"
+    },
+    {
+      "pointer": "0x200658",
+      "image_source": "0x9d40",
+      "command_hex": "020867880300",
+      "decoded": {
+        "opcode": "0x2",
+        "length": 6,
+        "operation": "WRITE",
+        "register_start": "0x8",
+        "register_count": 4,
+        "write_data": "67880300"
+      },
+      "call_site": "0x587c",
+      "helper": "0x6b64"
+    },
+    {
+      "pointer": "0x200660",
+      "image_source": "0x9d48",
+      "command_hex": "0210c7eaf100",
+      "decoded": {
+        "opcode": "0x2",
+        "length": 6,
+        "operation": "WRITE",
+        "register_start": "0x10",
+        "register_count": 4,
+        "write_data": "c7eaf100"
+      },
+      "call_site": "0x5892",
+      "helper": "0x6b64"
+    },
+    {
+      "pointer": "0x200668",
+      "image_source": "0x9d50",
+      "command_hex": "0214c7eaee00",
+      "decoded": {
+        "opcode": "0x2",
+        "length": 6,
+        "operation": "WRITE",
+        "register_start": "0x14",
+        "register_count": 4,
+        "write_data": "c7eaee00"
+      },
+      "call_site": "0x58a8",
+      "helper": "0x6b64"
+    },
+    {
+      "pointer": "0x200654",
+      "image_source": "0x9d3c",
+      "command_hex": "0218ffe0",
+      "decoded": {
+        "opcode": "0x2",
+        "length": 4,
+        "operation": "WRITE",
+        "register_start": "0x18",
+        "register_count": 2,
+        "write_data": "ffe0"
+      },
+      "call_site": "0x58be",
+      "helper": "0x6b64"
+    },
+    {
+      "pointer": "0x20061a",
+      "image_source": "0x9d02",
+      "command_hex": "020c0f",
+      "decoded": {
+        "opcode": "0x2",
+        "length": 3,
+        "operation": "WRITE",
+        "register_start": "0xc",
+        "register_count": 1,
+        "write_data": "0f"
+      },
+      "call_site": "0x58d4",
+      "helper": "0x6b64"
+    },
+    {
+      "pointer": "0x20060b",
+      "image_source": "0x9cf3",
+      "command_hex": "020d06",
+      "decoded": {
+        "opcode": "0x2",
+        "length": 3,
+        "operation": "WRITE",
+        "register_start": "0xd",
+        "register_count": 1,
+        "write_data": "06"
+      },
+      "call_site": "0x58ea",
+      "helper": "0x6b64"
+    },
+    {
+      "pointer": "0x9ff0",
+      "image_source": "0x9ff0",
+      "command_hex": "40674a00f803eefe00",
+      "decoded": {
+        "opcode": "0x40",
+        "length": 9,
+        "operation": "LOAD_TX_BUFFER",
+        "buffer": 0,
+        "start": "identifier",
+        "register_start": "0x31",
+        "payload": "674a00f803eefe00",
+        "frame": {
+          "extended": true,
+          "identifier": "0xcea00f8",
+          "dlc": 3,
+          "remote_request": false,
+          "data": "eefe00",
+          "complete_data": true
+        }
+      },
+      "call_site": "0x58fe",
+      "helper": "0x6b64"
+    },
+    {
+      "pointer": "0x20061d",
+      "image_source": "0x9d05",
+      "command_hex": "022b10",
+      "decoded": {
+        "opcode": "0x2",
+        "length": 3,
+        "operation": "WRITE",
+        "register_start": "0x2b",
+        "register_count": 1,
+        "write_data": "10"
+      },
+      "call_site": "0x5914",
+      "helper": "0x6b64"
+    },
+    {
+      "pointer": "0x20060e",
+      "image_source": "0x9cf6",
+      "command_hex": "442000",
+      "decoded": {
+        "opcode": "0x44",
+        "length": 3,
+        "operation": "LOAD_TX_BUFFER",
+        "buffer": 2,
+        "start": "identifier",
+        "register_start": "0x51",
+        "payload": "2000"
+      },
+      "call_site": "0x592a",
+      "helper": "0x6b64"
+    },
+    {
+      "pointer": "0x200611",
+      "image_source": "0x9cf9",
+      "command_hex": "025508",
+      "decoded": {
+        "opcode": "0x2",
+        "length": 3,
+        "operation": "WRITE",
+        "register_start": "0x55",
+        "register_count": 1,
+        "write_data": "08"
+      },
+      "call_site": "0x5940",
+      "helper": "0x6b64"
+    },
+    {
+      "pointer": "0x200620",
+      "image_source": "0x9d08",
+      "command_hex": "020f00",
+      "decoded": {
+        "opcode": "0x2",
+        "length": 3,
+        "operation": "WRITE",
+        "register_start": "0xf",
+        "register_count": 1,
+        "write_data": "00"
+      },
+      "call_site": "0x5956",
+      "helper": "0x6b64"
+    },
+    {
+      "pointer": "0x20068c",
+      "image_source": "0x9d74",
+      "command_hex": "052c0100",
+      "decoded": {
+        "opcode": "0x5",
+        "length": 4,
+        "operation": "BIT_MODIFY",
+        "register": "0x2c",
+        "mask": "0x1",
+        "data": "0x0"
+      },
+      "call_site": "0x596c",
+      "helper": "0x6b64"
+    },
+    {
+      "pointer": "0x200688",
+      "image_source": "0x9d70",
+      "command_hex": "052c1000",
+      "decoded": {
+        "opcode": "0x5",
+        "length": 4,
+        "operation": "BIT_MODIFY",
+        "register": "0x2c",
+        "mask": "0x10",
+        "data": "0x0"
+      },
+      "call_site": "0x5982",
+      "helper": "0x6b64"
+    },
+    {
+      "pointer": "0x200626",
+      "image_source": "0x9d0e",
+      "command_hex": "022c00",
+      "decoded": {
+        "opcode": "0x2",
+        "length": 3,
+        "operation": "WRITE",
+        "register_start": "0x2c",
+        "register_count": 1,
+        "write_data": "00"
+      },
+      "call_site": "0x5998",
+      "helper": "0x6b64"
+    }
+  ],
+  "request_records": [
+    {
+      "pointer": "0x9ff0",
+      "image_source": "0x9ff0",
+      "command_hex": "40674a00f803eefe00",
+      "decoded": {
+        "opcode": "0x40",
+        "length": 9,
+        "operation": "LOAD_TX_BUFFER",
+        "buffer": 0,
+        "start": "identifier",
+        "register_start": "0x31",
+        "payload": "674a00f803eefe00",
+        "frame": {
+          "extended": true,
+          "identifier": "0xcea00f8",
+          "dlc": 3,
+          "remote_request": false,
+          "data": "eefe00",
+          "complete_data": true
+        }
+      },
+      "index": 0
+    },
+    {
+      "pointer": "0x9ff9",
+      "image_source": "0x9ff9",
+      "command_hex": "40674a00f80303f000",
+      "decoded": {
+        "opcode": "0x40",
+        "length": 9,
+        "operation": "LOAD_TX_BUFFER",
+        "buffer": 0,
+        "start": "identifier",
+        "register_start": "0x31",
+        "payload": "674a00f80303f000",
+        "frame": {
+          "extended": true,
+          "identifier": "0xcea00f8",
+          "dlc": 3,
+          "remote_request": false,
+          "data": "03f000",
+          "complete_data": true
+        }
+      },
+      "index": 1
+    },
+    {
+      "pointer": "0xa002",
+      "image_source": "0xa002",
+      "command_hex": "40674a00f803f7fe00",
+      "decoded": {
+        "opcode": "0x40",
+        "length": 9,
+        "operation": "LOAD_TX_BUFFER",
+        "buffer": 0,
+        "start": "identifier",
+        "register_start": "0x31",
+        "payload": "674a00f803f7fe00",
+        "frame": {
+          "extended": true,
+          "identifier": "0xcea00f8",
+          "dlc": 3,
+          "remote_request": false,
+          "data": "f7fe00",
+          "complete_data": true
+        }
+      },
+      "index": 2
+    },
+    {
+      "pointer": "0xa00b",
+      "image_source": "0xa00b",
+      "command_hex": "40674a00f803effe00",
+      "decoded": {
+        "opcode": "0x40",
+        "length": 9,
+        "operation": "LOAD_TX_BUFFER",
+        "buffer": 0,
+        "start": "identifier",
+        "register_start": "0x31",
+        "payload": "674a00f803effe00",
+        "frame": {
+          "extended": true,
+          "identifier": "0xcea00f8",
+          "dlc": 3,
+          "remote_request": false,
+          "data": "effe00",
+          "complete_data": true
+        }
+      },
+      "index": 3
+    },
+    {
+      "pointer": "0xa014",
+      "image_source": "0xa014",
+      "command_hex": "40674a00f803f1fe00",
+      "decoded": {
+        "opcode": "0x40",
+        "length": 9,
+        "operation": "LOAD_TX_BUFFER",
+        "buffer": 0,
+        "start": "identifier",
+        "register_start": "0x31",
+        "payload": "674a00f803f1fe00",
+        "frame": {
+          "extended": true,
+          "identifier": "0xcea00f8",
+          "dlc": 3,
+          "remote_request": false,
+          "data": "f1fe00",
+          "complete_data": true
+        }
+      },
+      "index": 4
+    },
+    {
+      "pointer": "0xa01d",
+      "image_source": "0xa01d",
+      "command_hex": "40674a00f803f5fe00",
+      "decoded": {
+        "opcode": "0x40",
+        "length": 9,
+        "operation": "LOAD_TX_BUFFER",
+        "buffer": 0,
+        "start": "identifier",
+        "register_start": "0x31",
+        "payload": "674a00f803f5fe00",
+        "frame": {
+          "extended": true,
+          "identifier": "0xcea00f8",
+          "dlc": 3,
+          "remote_request": false,
+          "data": "f5fe00",
+          "complete_data": true
+        }
+      },
+      "index": 5
+    },
+    {
+      "pointer": "0xa026",
+      "image_source": "0xa026",
+      "command_hex": "40674a00f803f6fe00",
+      "decoded": {
+        "opcode": "0x40",
+        "length": 9,
+        "operation": "LOAD_TX_BUFFER",
+        "buffer": 0,
+        "start": "identifier",
+        "register_start": "0x31",
+        "payload": "674a00f803f6fe00",
+        "frame": {
+          "extended": true,
+          "identifier": "0xcea00f8",
+          "dlc": 3,
+          "remote_request": false,
+          "data": "f6fe00",
+          "complete_data": true
+        }
+      },
+      "index": 6
+    }
+  ],
+  "capture_output_templates": {
+    "capture_rx0": {
+      "pointer": "0x200694",
+      "image_source": "0x9d7c",
+      "command_hex": "920000000000000000",
+      "decoded": {
+        "opcode": "0x92",
+        "length": 9,
+        "operation": "READ_RX_BUFFER",
+        "buffer": 0,
+        "start": "data",
+        "register_start": "0x66",
+        "response_bytes_after_opcode": 8
+      }
+    },
+    "capture_rx1": {
+      "pointer": "0x2006a0",
+      "image_source": "0x9d88",
+      "command_hex": "9400000000000000000000000000",
+      "decoded": {
+        "opcode": "0x94",
+        "length": 14,
+        "operation": "READ_RX_BUFFER",
+        "buffer": 1,
+        "start": "identifier",
+        "register_start": "0x71",
+        "response_bytes_after_opcode": 13
+      }
+    },
+    "output_tx2": {
+      "pointer": "0x2006c0",
+      "image_source": "0x9da8",
+      "command_hex": "450000000000000000",
+      "decoded": {
+        "opcode": "0x45",
+        "length": 9,
+        "operation": "LOAD_TX_BUFFER",
+        "buffer": 2,
+        "start": "data",
+        "register_start": "0x56",
+        "payload": "0000000000000000"
+      }
+    },
+    "secondary_tx_control": {
+      "pointer": "0x2005d0",
+      "image_source": "0x9cb8",
+      "command_hex": "023000",
+      "decoded": {
+        "opcode": "0x2",
+        "length": 3,
+        "operation": "WRITE",
+        "register_start": "0x30",
+        "register_count": 1,
+        "write_data": "00"
+      }
+    }
+  },
+  "explicit_tx2_configuration": {
+    "extended": false,
+    "identifier": "0x100",
+    "sidh": "0x20",
+    "sidl": "0x0",
+    "dlc_register": "0x8",
+    "eid_fields": "not required for standard-ID interpretation"
+  },
+  "limits": [
+    "decodes initialized buffer bytes; later writers may change command data",
+    "datasheet compatibility is not a measured chip identification",
+    "no hardware, CAN bus, chip-select timing or transfer result modeled",
+    "CAN identifiers/data are decoded without assigning application/PGN meanings"
+  ]
+}
