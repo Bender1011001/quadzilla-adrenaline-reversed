@@ -27,8 +27,8 @@ address without hiding pending review:
 
 | Classification | Bytes |
 |---|---:|
-| IDA code candidates awaiting review | 10,671 |
-| Explicitly reviewed Thumb instruction ranges | 6,614 |
+| IDA code candidates awaiting review | 10,171 |
+| Explicitly reviewed Thumb instruction ranges | 7,114 |
 | Explicitly reviewed ARM instruction ranges | 4,168 |
 | IDA data candidates awaiting review | 2,708 |
 | Soft float status pointer literal | 4 |
@@ -41,8 +41,8 @@ address without hiding pending review:
 | Erased trailing `FF` | 2,888 |
 
 Coverage of an address is not proof that its meaning or ISA has been reviewed.
-The explicit instruction-range manifest now accepts 10,782 bytes through the
-[remaining local AID handler review](REMAINING_AID_UPDATE_REVIEW.md). It excludes adjacent literal
+The explicit instruction-range manifest now accepts 11,282 bytes through the
+[payload walker review](PAYLOAD_WALKER_REVIEW.md). It excludes adjacent literal
 pools and alignment. Earlier semantic labels are not automatically promoted to
 byte-level classification; their exact ranges still need to be adjudicated.
 The ledger explicitly preserves 2,144 item/layout conflicts. These are tool item
