@@ -69,17 +69,18 @@ The [artifact](../audit/data/frame_reader_emulation.json) records cases
 This proves a missing intrinsic bound for direct calls with oversized
 rejection lists. The examined `0x7FD8` helper caps each copy to 14,
 and a parsed incoming frame can carry at most 14 AIDs. The complete
-provenance of every state count passed by the larger `0x81A8` outgoing
-state machine remains to be reviewed. Therefore this is a conditional
+provenance of every source count passed by the now-reviewed `0x81A8`
+[outgoing state machine](OUTGOING_STATE_REVIEW.md) remains to be established
+across the whole image. Therefore this is a conditional
 local memory-safety defect; reachability through physical receive or
 ordinary state transitions is not established. The synthetic fault
 does not prove a target crash, code execution or engine effect.
 
 ## Remaining path work
 
-The outbound queue filter `0x7F58`, the whole `0x81A8` state machine,
-its count producers, transmit scheduling and USART/PDC effects still
-need instruction-level review. The full firmware-analysis goal remains
+The outbound queue filter `0x7F58` and whole `0x81A8` state machine now
+have bounded reviews. Their source-count producers, transmit completion
+and USART/PDC effects still need review. The full firmware-analysis goal remains
 incomplete. No device traffic was sent.
 
 ```text

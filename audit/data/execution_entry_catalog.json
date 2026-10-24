@@ -4,8 +4,8 @@
   "unit": "execution_entries_including_vectors_thunks_and_alternate_entries",
   "summary": {
     "confirmed_entries": 145,
-    "documented_static_roles": 115,
-    "unlabeled_static_entries": 30,
+    "documented_static_roles": 116,
+    "unlabeled_static_entries": 29,
     "entries_with_ida_sram_references": 49,
     "entries_with_ida_peripheral_references": 21,
     "union_direct_call_edges": 180
@@ -15827,8 +15827,19 @@
           ]
         }
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x81a8",
+          "label": "Priority-ordered outgoing frame scheduler with two AID-list queues and USART PDC submission",
+          "assurance": "static_instruction_trace_and_bounded_emulation",
+          "evidence": [
+            "audit/data/outgoing_state_binaryninja.json",
+            "audit/data/outgoing_state_emulation.json",
+            "docs/OUTGOING_STATE_REVIEW.md"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [
           "0x7af8",
@@ -17560,7 +17571,7 @@
     },
     "labels": {
       "path": "audit/data/semantic_labels.json",
-      "sha256": "e1e05a00738a394d87dd0f6183c2830c6fac732c8c128ca0ea038ba9866c404e"
+      "sha256": "5824e00841bd49506f777cb68edde1e3d92cabe457ad08992550d5829cabe3e1"
     }
   },
   "input_hash_policy": "SHA-256 of JSON text with CRLF normalized to LF"

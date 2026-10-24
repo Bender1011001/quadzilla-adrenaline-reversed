@@ -942,6 +942,16 @@
       ]
     },
     {
+      "entry": "0x81a8",
+      "label": "Priority-ordered outgoing frame scheduler with two AID-list queues and USART PDC submission",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/outgoing_state_binaryninja.json",
+        "audit/data/outgoing_state_emulation.json",
+        "docs/OUTGOING_STATE_REVIEW.md"
+      ]
+    },
+    {
       "entry": "0x8504",
       "label": "Unsigned bytewise lexicographic comparator returning -1, 0 or 1",
       "assurance": "static_instruction_trace_and_bounded_emulation",

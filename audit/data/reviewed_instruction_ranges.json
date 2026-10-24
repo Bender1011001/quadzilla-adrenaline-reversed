@@ -1025,6 +1025,19 @@
       "decoder_artifact": "audit/data/frame_reader_binaryninja.json"
     },
     {
+      "start": "0x81a8",
+      "end": "0x84fe",
+      "entry": "0x81a8",
+      "isa": "thumb",
+      "account": "Complete bounded outgoing state routine: 383 decoded starts match IDA item boundaries; 378 visited across controlled original-byte queue and status transitions; five count-dependent starts remain statically reviewed",
+      "evidence": [
+        "audit/data/outgoing_state_binaryninja.json",
+        "audit/data/outgoing_state_emulation.json",
+        "docs/OUTGOING_STATE_REVIEW.md"
+      ],
+      "decoder_artifact": "audit/data/outgoing_state_binaryninja.json"
+    },
+    {
       "start": "0x8504",
       "end": "0x852e",
       "entry": "0x8504",

@@ -14,7 +14,7 @@ spec.loader.exec_module(ledger)
 class ImageLedger(unittest.TestCase):
     def test_review_manifest_rejects_false_coverage(self):
         doc = json.loads((ROOT / "audit/data/reviewed_instruction_ranges.json").read_text())
-        self.assertEqual(sum(b-a for a, b, *_ in ledger.validate_instruction_reviews(doc)), 11812)
+        self.assertEqual(sum(b-a for a, b, *_ in ledger.validate_instruction_reviews(doc)), 12666)
         for change in ("hash", "overlap", "layout", "odd", "account"):
             malformed = copy.deepcopy(doc)
             if change == "hash":
@@ -48,7 +48,7 @@ class ImageLedger(unittest.TestCase):
                 cursor += instruction["length"]
             self.assertEqual(cursor, end)
         accepted = [r for r in doc["ranges"] if r["classification"] in ("reviewed_thumb_instructions", "reviewed_arm_instructions")]
-        self.assertEqual(sum(int(r["end"], 0)-int(r["start"], 0) for r in accepted), 11812)
+        self.assertEqual(sum(int(r["end"], 0)-int(r["start"], 0) for r in accepted), 12666)
         for r in accepted:
             self.assertTrue(any(entry == r["review_entry"] and
                                 start <= int(r["start"], 0) < int(r["end"], 0) <= end
@@ -69,6 +69,23 @@ class ImageLedger(unittest.TestCase):
         self.assertIn("incomplete", doc["completion"])
         self.assertGreater(doc["classification_bytes"]["ida_code_pending_review"], 0)
         self.assertGreater(len(doc["ida_layout_conflicts"]), 0)
+
+    def test_outgoing_state_evidence_and_count_write_order(self):
+        decoded = json.loads((ROOT / "audit/data/outgoing_state_binaryninja.json").read_text())
+        executed = json.loads((ROOT / "audit/data/outgoing_state_emulation.json").read_text())
+        instructions = decoded["ranges"][0]["instructions"]
+        starts = {int(row["address"], 0) for row in instructions}
+        visited = {int(address, 0) for address in executed["visited_outgoing_starts"]}
+        self.assertEqual((len(starts), sum(row["length"] for row in instructions)), (383, 854))
+        self.assertEqual(starts - visited, {0x847C, 0x847E, 0x8480, 0x848A, 0x84DC})
+        self.assertEqual(len(executed["cases"]), 28)
+        self.assertTrue(all(row["result"]["status"] == "returned" for row in executed["cases"]))
+        case = next(row for row in executed["cases"] if row["label"] == "list_a_14")
+        count_writes = [(row["pc"], row["address"], row["value"]) for row in case["writes"]
+                        if row["address"] in ("0x2007db", "0x2007dc")]
+        self.assertEqual(count_writes, [("0x8002", "0x2007dc", "0xe"),
+                                        ("0x7e56", "0x2007db", "0x1"),
+                                        ("0x7fcc", "0x2007dc", "0xd")])
 
     def test_ram_template_descriptor_and_call_targets(self):
         doc = json.loads((ROOT / "audit/data/image_coverage_ledger.json").read_text())

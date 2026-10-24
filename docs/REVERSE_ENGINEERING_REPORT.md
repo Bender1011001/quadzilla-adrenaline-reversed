@@ -18,6 +18,8 @@ The [frame reader review](FRAME_READER_REVIEW.md) executes 4,328 bounded respons
 
 The [outgoing queue filter review](OUTGOING_QUEUE_FILTER_REVIEW.md) checks 4,549 bounded calls and four direct call sites. It retains current AIDs absent from a capped comparison list. A direct call with 17 retained AIDs also writes past a 16-byte stack scratch area; initialized queue counts and inspected copier paths are bounded, while the whole-image writer audit remains open.
 
+The [outgoing state review](OUTGOING_STATE_REVIEW.md) traces the 854-byte priority scheduler and its two AID queues. Twenty-eight controlled original-byte cases visit 378 of 383 starts. The scheduler copies no more than 14 AIDs into each working queue, then the frame builder rewrites the original source count to the number deferred. Source-count provenance outside this routine and physical USART behavior remain open.
+
 ## 1. Scope and approach
 
 Four independent surfaces were attacked, each giving a cross-check on the others:
