@@ -3,6 +3,8 @@
 Facts about the Adrenaline update package, firmware image, USB/X2com protocol and parameter system. Each section
 says where the fact comes from. For conclusions see [SECURITY_ASSESSMENT.md](SECURITY_ASSESSMENT.md).
 
+The [capture parser account](CAPTURE_PARSER_REVIEW.md) maps the nine RXB1 raw-header comparisons, RXB0/RXB1 field offsets and precise scalar arithmetic. It records ignored DLC, an eight-bit narrowing boundary and retained destinations. Signal units, downstream impact and live DMA ordering remain unresolved.
+
 ## Hardware
 
 | | |

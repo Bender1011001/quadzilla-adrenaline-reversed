@@ -4,6 +4,8 @@ How the update package, firmware, protocol and parameter system were analysed, w
 open. Findings and severity are in [SECURITY_ASSESSMENT.md](SECURITY_ASSESSMENT.md); reference tables are in
 [TECHNICAL_REFERENCE.md](TECHNICAL_REFERENCE.md).
 
+The [complete capture-entry review](CAPTURE_PARSER_REVIEW.md) adds 692 instruction bytes and 5,120 numeric sweep calls, with 303 detailed case records including sweep representatives. It documents absent local DLC validation, retained values, byte narrowing and a header-derived output without asserting unmeasured vehicle effects.
+
 ## 1. Scope and approach
 
 Four independent surfaces were attacked, each giving a cross-check on the others:

@@ -5105,10 +5105,13 @@
       "semantics": [
         {
           "entry": "0x59e8",
-          "label": "Incoming capture unpacker and writer for the 0x2005C4 SRAM structure",
-          "assurance": "static_instruction_trace",
+          "label": "CAN receive selection/completion state machine and fixed-offset scalar parser",
+          "assurance": "static_instruction_trace_and_bounded_emulation",
           "evidence": [
-            "quadzilla_mcu_map.json:functions.sub_59E8"
+            "audit/data/capture_parser_binaryninja.json",
+            "audit/data/capture_parser_emulation.json",
+            "docs/CAPTURE_PARSER_REVIEW.md",
+            "audit/data/spi_initialization_binaryninja.json"
           ]
         }
       ],
@@ -17448,7 +17451,7 @@
     },
     "labels": {
       "path": "audit/data/semantic_labels.json",
-      "sha256": "bb9565e9ca45be959f378562e06f0331446c63ba58a5711c0f1d87ae7dfdb444"
+      "sha256": "bfb40bcf7c8f5d5c3ed75072ab9951d74157846ff76513f6d7e470c6889f62a4"
     }
   },
   "input_hash_policy": "SHA-256 of JSON text with CRLF normalized to LF"

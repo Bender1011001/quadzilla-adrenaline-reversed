@@ -27,8 +27,8 @@ address without hiding pending review:
 
 | Classification | Bytes |
 |---|---:|
-| IDA code candidates awaiting review | 13,357 |
-| Explicitly reviewed Thumb instruction ranges | 3,928 |
+| IDA code candidates awaiting review | 12,665 |
+| Explicitly reviewed Thumb instruction ranges | 4,620 |
 | Explicitly reviewed ARM instruction ranges | 4,168 |
 | IDA data candidates awaiting review | 3,144 |
 | Soft float status pointer literal | 4 |
@@ -40,8 +40,8 @@ address without hiding pending review:
 | Erased trailing `FF` | 2,888 |
 
 Coverage of an address is not proof that its meaning or ISA has been reviewed.
-The explicit instruction-range manifest now accepts 8,096 bytes through the
-[capture helper review](CAPTURE_HELPER_REVIEW.md). It excludes adjacent literal
+The explicit instruction-range manifest now accepts 8,788 bytes through the
+[capture parser review](CAPTURE_PARSER_REVIEW.md). It excludes adjacent literal
 pools and alignment. Earlier semantic labels are not automatically promoted to
 byte-level classification; their exact ranges still need to be adjudicated.
 The ledger explicitly preserves 2,144 item/layout conflicts. These are tool item
@@ -114,8 +114,15 @@ be revised only with explicit entry and runtime-alias adjudication.
 The [SPI/CAN command audit](SPI_CAN_CONTROLLER_REVIEW.md) establishes an
 MCP2515-compatible interpretation of the initialized SPI buffers and register
 sequence. It clarifies the two receive layouts and TXB2 data-only output.
-It does not increase instruction coverage or retire the complete parser,
-hardware topology, timing and live-acceptance work.
+It does not itself increase instruction coverage. The subsequent
+[capture parser review](CAPTURE_PARSER_REVIEW.md) adds 692 instruction bytes
+for the complete normal-service body, while retaining 108 labeled baseline
+roles and 37 pending entries. It documents nine header matches, scalar
+formulas, retained outputs, an absent local DLC guard and a byte-narrowing
+discontinuity. Coefficient writers, downstream consumers, DMA/IRQ ordering,
+hardware topology and live acceptance remain follow-up work. The owner's
+[V2.2 board report](BOARD_V2_2_COMPONENTS.md) is separate hardware context,
+including the provisional 16 MHz crystal and conditional 250 kbit/s calculation.
 
 The [AID table boundary review](AID_TABLE_BOUNDARY_REVIEW.md) now covers 512
 resolver calls and 256 controlled single-AID reader calls. AID 255 crosses both

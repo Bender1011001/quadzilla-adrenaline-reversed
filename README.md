@@ -29,6 +29,8 @@ Supporting analysis:
 - **Reverse engineering report:** method, dead ends and open questions ([docs/REVERSE_ENGINEERING_REPORT.md](docs/REVERSE_ENGINEERING_REPORT.md)).
 - **Technical reference:** memory map, X2com frames, USB opcodes, AIDs ([docs/TECHNICAL_REFERENCE.md](docs/TECHNICAL_REFERENCE.md)).
 
+The [capture parser review](docs/CAPTURE_PARSER_REVIEW.md) completes the instruction account of `0x59E8`, adding 692 reviewed bytes without changing the 108/37 role count. Original-byte execution documents the receive state machine, nine header matches, exact scalar formulas, ignored DLC and an eight-bit narrowing discontinuity. DMA ordering, signal units and downstream consequences remain open.
+
 ## Try it
 
 Python 3.10+, standard library only (`pyserial` for the USB tool).
