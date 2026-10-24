@@ -4,8 +4,8 @@
   "unit": "execution_entries_including_vectors_thunks_and_alternate_entries",
   "summary": {
     "confirmed_entries": 145,
-    "documented_static_roles": 84,
-    "unlabeled_static_entries": 61,
+    "documented_static_roles": 85,
+    "unlabeled_static_entries": 60,
     "entries_with_ida_sram_references": 49,
     "entries_with_ida_peripheral_references": 21,
     "union_direct_call_edges": 180
@@ -1527,8 +1527,19 @@
           ]
         }
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x46d0",
+          "label": "Configured ratio discrepancy scorer with byte-truncated candidate scores",
+          "assurance": "static_instruction_trace_and_bounded_emulation",
+          "evidence": [
+            "audit/data/drivetrain_score_binaryninja.json",
+            "audit/data/drivetrain_score_emulation.json",
+            "docs/DRIVETRAIN_SCORE_REVIEW.md"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [
           "0x56fc",
@@ -17171,20 +17182,21 @@
   "interpretation": "Documented roles are evidence-backed static labels. Unlabeled entries are an explicit review queue; they are not claimed to be functionally unknown to the original firmware.",
   "inputs": {
     "audit": {
-      "path": "C:\\Users\\admin\\.codex\\worktrees\\verify-public-repo\\quadzilla_rev\\audit\\data\\cross_disassembler_audit.json",
-      "sha256": "9d42194afb3117461e9fbc2edbbd3762ef60068088e9601f9d76e49baa022aad"
+      "path": "audit/data/cross_disassembler_audit.json",
+      "sha256": "5baed1662535584586d1d8d792e3cfa63dc0c9e817a5a39e4ce1231bf389d30c"
     },
     "ida": {
-      "path": "C:\\Users\\admin\\.codex\\worktrees\\verify-public-repo\\quadzilla_rev\\audit\\data\\ida_function_map.json",
-      "sha256": "d49b3511effa8e1aaf33984334a30484ad1dfe1d668bf0898a4b3e8b8451b049"
+      "path": "audit/data/ida_function_map.json",
+      "sha256": "52f0c6858ba1363f4dd8ad4d60836ed2d9ab898ddf7c770781d46159e134ce42"
     },
     "ghidra": {
-      "path": "C:\\Users\\admin\\.codex\\worktrees\\verify-public-repo\\quadzilla_rev\\audit\\data\\ghidra_function_map.json",
-      "sha256": "54d7119dabcd9088a473d63083e7312d38f265ab8e030f6910dc56b38d7dd213"
+      "path": "audit/data/ghidra_function_map.json",
+      "sha256": "807e82541c569321c39ba4797eedbb7b0c55e4ebad1f58e7aa9d28eb9466ae78"
     },
     "labels": {
-      "path": "C:\\Users\\admin\\.codex\\worktrees\\verify-public-repo\\quadzilla_rev\\audit\\data\\semantic_labels.json",
-      "sha256": "7045a76e41010844c62c6243a1363c37d9757b15ec54aa267a430a6a6c84599b"
+      "path": "audit/data/semantic_labels.json",
+      "sha256": "f6ccb1f891fedbcd5f03a232c0b34987a34a5ca7cd073f1ccc321eb6aabef326"
     }
-  }
+  },
+  "input_hash_policy": "SHA-256 of JSON text with CRLF normalized to LF"
 }

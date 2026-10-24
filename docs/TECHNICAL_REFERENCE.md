@@ -42,7 +42,7 @@ evidence that every in-range slot is supported or that a hardware fault occurred
 
 ## Functions
 
-The baseline inventory is the two-tool audit: 145 confirmed execution entries, 84 with an evidence-backed role. The initial 14 roles are listed below
+The baseline inventory is the two-tool audit: 145 confirmed execution entries, 85 with an evidence-backed role. The initial 14 roles are listed below
 from `audit/data/semantic_labels.json`. `trace` means a static instruction trace; `chain` means part of the closed static chain below. The labels describe
 static roles and do not prove live engine behaviour.
 
@@ -83,6 +83,9 @@ That pass brought baseline semantic coverage to 42. The
 that total to 50. The [software floating point review](SOFT_FLOAT_REVIEW.md)
 adds 34 baseline roles, bringing the current total to 84 with 61 pending.
 Unreviewed paths and exceptional-value behavior remain under review.
+The [configured ratio scorer review](DRIVETRAIN_SCORE_REVIEW.md) adds one
+baseline role, bringing the total to 85 with 60 pending. Its upstream input
+units and live effect require further review.
 
 ### The static pulse-stretch chain
 

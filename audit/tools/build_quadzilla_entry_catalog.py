@@ -11,6 +11,16 @@ from typing import Any
 
 
 FORMAT = "quadzilla-execution-entry-catalog-v1"
+ROOT = Path(__file__).resolve().parents[2]
+
+
+def source_path(path: Path) -> str:
+    """Keep committed input provenance stable across clones and hosts."""
+    resolved = path.resolve()
+    try:
+        return resolved.relative_to(ROOT).as_posix()
+    except ValueError:
+        return str(resolved)
 
 
 def load_json(path: Path) -> Any:
@@ -21,7 +31,7 @@ def load_json(path: Path) -> Any:
 
 
 def sha256_file(path: Path) -> str:
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    return hashlib.sha256(path.read_bytes().replace(b"\r\n", b"\n")).hexdigest()
 
 
 def address(value: Any) -> int:
@@ -209,9 +219,10 @@ def main(argv: list[str] | None = None) -> int:
         load_json(args.labels),
     )
     catalog["inputs"] = {
-        name: {"path": str(path.resolve()), "sha256": sha256_file(path)}
+        name: {"path": source_path(path), "sha256": sha256_file(path)}
         for name, path in inputs.items()
     }
+    catalog["input_hash_policy"] = "SHA-256 of JSON text with CRLF normalized to LF"
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(catalog, indent=2) + "\n", encoding="utf-8")
     summary = catalog["summary"]

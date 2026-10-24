@@ -41,10 +41,10 @@ It is not a count of original C functions, and the two tools still disagree on w
 
 | | |
 |---|---|
-| Entries with an evidence-backed static role | 84 |
-| Entries still unlabelled | 61 |
+| Entries with an evidence-backed static role | 85 |
+| Entries still unlabelled | 60 |
 
-The 61 unlabelled entries are a work queue, not findings. Labels from the first-pass notes are treated as hypotheses
+The 60 unlabelled entries are a work queue, not findings. Labels from the first-pass notes are treated as hypotheses
 unless they appear in `audit/data/semantic_labels.json`.
 
 The initial audit assigned 14 roles; the [offline write-path review](OFFLINE_WRITE_PATH_REVIEW.md)
@@ -60,6 +60,8 @@ Six division-runtime entry/body roles from the
 [control helper review](CONTROL_HELPER_REVIEW.md) bring that total to 50.
 The [software floating point review](SOFT_FLOAT_REVIEW.md) adds 34 baseline
 roles, yielding 84 with 61 pending.
+The [configured ratio scorer review](DRIVETRAIN_SCORE_REVIEW.md) adds one
+baseline role, yielding 85 with 60 pending.
 
 ### Peripheral map
 

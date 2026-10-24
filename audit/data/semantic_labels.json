@@ -3,11 +3,109 @@
   "raw_sha256": "1ae519ba6194e8f7bdaaa94333a83a9e6fda3b0563f87f7d48383b37288c1780",
   "labels": [
     {
+      "entry": "0x4384",
+      "label": "Default working/echo initializer and derived scalar setup",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/control_helper_emulation.json:entry.0x4384",
+        "audit/data/control_helper_binaryninja.json",
+        "audit/data/control_helper_callers.json",
+        "docs/CONTROL_HELPER_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x4650",
+      "label": "32-word shift filter with wrapping sum and logical divide by 32",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/control_helper_emulation.json:entry.0x4650",
+        "audit/data/control_helper_binaryninja.json",
+        "audit/data/control_helper_callers.json",
+        "docs/CONTROL_HELPER_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x4674",
+      "label": "Second 32-word shift filter with wrapping sum and logical divide by 32",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/control_helper_emulation.json:entry.0x4674",
+        "audit/data/control_helper_binaryninja.json",
+        "audit/data/control_helper_callers.json",
+        "docs/CONTROL_HELPER_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x4698",
+      "label": "Threshold-six state updater at 0x200AD6..AD8",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/control_helper_emulation.json:entry.0x4698",
+        "audit/data/control_helper_binaryninja.json",
+        "audit/data/control_helper_callers.json",
+        "docs/CONTROL_HELPER_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x46d0",
+      "label": "Configured ratio discrepancy scorer with byte-truncated candidate scores",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/drivetrain_score_binaryninja.json",
+        "audit/data/drivetrain_score_emulation.json",
+        "docs/DRIVETRAIN_SCORE_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x47b0",
+      "label": "Resettable threshold/ready latch at 0x20042F..432",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/control_helper_emulation.json:entry.0x47b0",
+        "audit/data/control_helper_binaryninja.json",
+        "audit/data/control_helper_callers.json",
+        "docs/CONTROL_HELPER_REVIEW.md"
+      ]
+    },
+    {
       "entry": "0x4818",
       "label": "TPS/input gate that reads SRAM byte 0x2005D7",
       "assurance": "static_instruction_trace",
       "evidence": [
         "quadzilla_mcu_map.json:functions.sub_4818"
+      ]
+    },
+    {
+      "entry": "0x48e8",
+      "label": "Fresh-sample gated accumulator with delta memory and 0..650 fresh-result clamp",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/control_helper_emulation.json:entry.0x48e8",
+        "audit/data/control_helper_binaryninja.json",
+        "audit/data/control_helper_callers.json",
+        "docs/CONTROL_HELPER_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x495c",
+      "label": "Unsigned 0..4095 input clamp and integer percentage normalization",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/control_helper_emulation.json:entry.0x495c",
+        "audit/data/control_helper_binaryninja.json",
+        "audit/data/control_helper_callers.json",
+        "docs/CONTROL_HELPER_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x497c",
+      "label": "Two-stage normalized input to 0..19 index conversion",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/control_helper_emulation.json:entry.0x497c",
+        "audit/data/control_helper_binaryninja.json",
+        "audit/data/control_helper_callers.json",
+        "docs/CONTROL_HELPER_REVIEW.md"
       ]
     },
     {
@@ -53,444 +151,6 @@
       ]
     },
     {
-      "entry": "0x59e8",
-      "label": "Incoming capture unpacker and writer for the 0x2005C4 SRAM structure",
-      "assurance": "static_instruction_trace",
-      "evidence": [
-        "quadzilla_mcu_map.json:functions.sub_59E8"
-      ]
-    },
-    {
-      "entry": "0x5f34",
-      "label": "Writer of SRAM byte 0x200BE7; live AID meaning remains unproven",
-      "assurance": "static_instruction_trace",
-      "evidence": [
-        "quadzilla_mcu_map.json:functions.sub_5F34"
-      ]
-    },
-    {
-      "entry": "0x601c",
-      "label": "AID ingest and validation dispatcher, including AID 85 clamp/echo",
-      "assurance": "static_instruction_trace",
-      "evidence": [
-        "quadzilla_mcu_map.json:functions.sub_601C",
-        "quadzilla_vp44_chain.json:roles.requested_stretch_setting"
-      ]
-    },
-    {
-      "entry": "0x6fa0",
-      "label": "AT91 TC channel write helper used for the TC0_RC output",
-      "assurance": "static_closed_chain",
-      "evidence": [
-        "quadzilla_mcu_map.json:functions.sub_6FA0",
-        "quadzilla_vp44_chain.json:hardware_output"
-      ]
-    },
-    {
-      "entry": "0x7bf8",
-      "label": "AID payload-width selector using the 75/150/185/220 brackets",
-      "assurance": "static_instruction_trace",
-      "evidence": [
-        "CONTEXT.md:Architecture Quirks",
-        "quadzilla_x2com.md"
-      ]
-    },
-    {
-      "entry": "0x7c1c",
-      "label": "AID-to-SRAM resolver for pointer table 1",
-      "assurance": "static_instruction_trace",
-      "evidence": [
-        "CONTEXT.md:Architecture Quirks",
-        "quadzilla_aid_map.json"
-      ]
-    },
-    {
-      "entry": "0x7c68",
-      "label": "AID-to-SRAM resolver for pointer table 2",
-      "assurance": "static_instruction_trace",
-      "evidence": [
-        "CONTEXT.md:Architecture Quirks",
-        "quadzilla_aid_map.json"
-      ]
-    },
-    {
-      "entry": "0x7d80",
-      "label": "AID data reader that consumes the pointer returned by the table-2 resolver",
-      "assurance": "static_instruction_trace",
-      "evidence": [
-        "CONTEXT.md:Architecture Quirks",
-        "firmware_v2.8.4HF.bin.asm"
-      ]
-    },
-    {
-      "entry": "0x76cc",
-      "label": "Control-cycle orchestrator: capture unpack, AID validation, main control, and conditional communications",
-      "assurance": "static_instruction_trace",
-      "evidence": [
-        "audit/data/write_path_ida.json:entries.0x76cc",
-        "audit/data/write_path_binaryninja.json:entries.0x76cc",
-        "docs/OFFLINE_WRITE_PATH_REVIEW.md"
-      ]
-    },
-    {
-      "entry": "0x7b60",
-      "label": "CRC-8/SAE-J1850 computation used by the MCU frame parser and builder",
-      "assurance": "static_instruction_trace",
-      "evidence": [
-        "audit/data/write_path_ida.json:entries.0x7b60",
-        "audit/data/write_path_binaryninja.json:entries.0x7b60",
-        "docs/OFFLINE_WRITE_PATH_REVIEW.md"
-      ]
-    },
-    {
-      "entry": "0x7cc4",
-      "label": "Payload-byte walker that resolves AIDs and writes table-1 staging SRAM before validation",
-      "assurance": "static_instruction_trace",
-      "evidence": [
-        "audit/data/write_path_ida.json:entries.0x7cc4",
-        "audit/data/write_path_binaryninja.json:entries.0x7cc4",
-        "docs/OFFLINE_WRITE_PATH_REVIEW.md"
-      ]
-    },
-    {
-      "entry": "0x7e64",
-      "label": "Frame payload parser that checks CRC residue and delegates to the AID byte walker",
-      "assurance": "static_instruction_trace",
-      "evidence": [
-        "audit/data/write_path_ida.json:entries.0x7e64",
-        "audit/data/write_path_binaryninja.json:entries.0x7e64",
-        "docs/OFFLINE_WRITE_PATH_REVIEW.md"
-      ]
-    },
-    {
-      "entry": "0x7eb4",
-      "label": "Frame builder combining message-type header, table-2 data reader, and CRC",
-      "assurance": "static_instruction_trace",
-      "evidence": [
-        "audit/data/write_path_ida.json:entries.0x7eb4",
-        "audit/data/write_path_binaryninja.json:entries.0x7eb4",
-        "docs/OFFLINE_WRITE_PATH_REVIEW.md"
-      ]
-    },
-    {
-      "entry": "0x7efc",
-      "label": "Conditional outgoing-data queue setup with busy-flag guards",
-      "assurance": "static_instruction_trace",
-      "evidence": [
-        "audit/data/write_path_ida.json:entries.0x7efc",
-        "audit/data/write_path_binaryninja.json:entries.0x7efc",
-        "docs/OFFLINE_WRITE_PATH_REVIEW.md"
-      ]
-    },
-    {
-      "entry": "0x8038",
-      "label": "Receive-buffer and message-type dispatcher returning parsed AID lists to the validator",
-      "assurance": "static_instruction_trace",
-      "evidence": [
-        "audit/data/write_path_ida.json:entries.0x8038",
-        "audit/data/write_path_binaryninja.json:entries.0x8038",
-        "docs/OFFLINE_WRITE_PATH_REVIEW.md"
-      ]
-    },
-    {
-      "entry": "0x7178",
-      "label": "USART0 interrupt handler for receive timeout and enabled end-of-transmit event",
-      "assurance": "static_instruction_trace",
-      "evidence": [
-        "audit/data/ida_image_items.json:items.0x7178",
-        "audit/data/uart_buffer_binaryninja.json",
-        "docs/USART0_BUFFER_REVIEW.md"
-      ]
-    },
-    {
-      "entry": "0x71d0",
-      "label": "USART0 PDC current/next transmit-buffer staging helper",
-      "assurance": "static_instruction_trace",
-      "evidence": [
-        "audit/data/ida_image_items.json:items.0x71d0",
-        "audit/data/uart_buffer_binaryninja.json",
-        "docs/USART0_BUFFER_REVIEW.md"
-      ]
-    },
-    {
-      "entry": "0x720c",
-      "label": "USART0 PDC current/next receive-buffer staging helper",
-      "assurance": "static_instruction_trace",
-      "evidence": [
-        "audit/data/ida_image_items.json:items.0x720c",
-        "audit/data/uart_buffer_binaryninja.json",
-        "docs/USART0_BUFFER_REVIEW.md"
-      ]
-    },
-    {
-      "entry": "0x725c",
-      "label": "USART0 and PDC initialization with AIC handler installation",
-      "assurance": "static_instruction_trace",
-      "evidence": [
-        "audit/data/ida_image_items.json:items.0x725c",
-        "audit/data/uart_buffer_binaryninja.json",
-        "docs/USART0_BUFFER_REVIEW.md"
-      ]
-    },
-    {
-      "entry": "0x7af8",
-      "label": "Transmit staging call wrapper",
-      "assurance": "static_instruction_trace",
-      "evidence": [
-        "audit/data/ida_image_items.json:items.0x7af8",
-        "audit/data/uart_buffer_binaryninja.json",
-        "docs/USART0_BUFFER_REVIEW.md"
-      ]
-    },
-    {
-      "entry": "0x7b04",
-      "label": "Getter for SRAM flag at 0x20070B",
-      "assurance": "static_instruction_trace",
-      "evidence": [
-        "audit/data/ida_image_items.json:items.0x7b04",
-        "audit/data/uart_buffer_binaryninja.json",
-        "docs/USART0_BUFFER_REVIEW.md"
-      ]
-    },
-    {
-      "entry": "0x7b10",
-      "label": "Getter for USART0 receive-timeout completion flag",
-      "assurance": "static_instruction_trace",
-      "evidence": [
-        "audit/data/ida_image_items.json:items.0x7b10",
-        "audit/data/uart_buffer_binaryninja.json",
-        "docs/USART0_BUFFER_REVIEW.md"
-      ]
-    },
-    {
-      "entry": "0x7b1c",
-      "label": "Fixed 16-transfer receive rearm wrapper",
-      "assurance": "static_instruction_trace",
-      "evidence": [
-        "audit/data/ida_image_items.json:items.0x7b1c",
-        "audit/data/uart_buffer_binaryninja.json",
-        "docs/USART0_BUFFER_REVIEW.md"
-      ]
-    },
-    {
-      "entry": "0x7b28",
-      "label": "Clear SRAM flag at 0x20070E",
-      "assurance": "static_instruction_trace",
-      "evidence": [
-        "audit/data/ida_image_items.json:items.0x7b28",
-        "audit/data/uart_buffer_binaryninja.json",
-        "docs/USART0_BUFFER_REVIEW.md"
-      ]
-    },
-    {
-      "entry": "0x7b30",
-      "label": "Clear SRAM flag at 0x20070C",
-      "assurance": "static_instruction_trace",
-      "evidence": [
-        "audit/data/ida_image_items.json:items.0x7b30",
-        "audit/data/uart_buffer_binaryninja.json",
-        "docs/USART0_BUFFER_REVIEW.md"
-      ]
-    },
-    {
-      "entry": "0x7b38",
-      "label": "Set SRAM flag pair at 0x20070F/0x20070E",
-      "assurance": "static_instruction_trace",
-      "evidence": [
-        "audit/data/ida_image_items.json:items.0x7b38",
-        "audit/data/uart_buffer_binaryninja.json",
-        "docs/USART0_BUFFER_REVIEW.md"
-      ]
-    },
-    {
-      "entry": "0x7b4c",
-      "label": "Set SRAM flag pair at 0x20070D/0x20070C",
-      "assurance": "static_instruction_trace",
-      "evidence": [
-        "audit/data/ida_image_items.json:items.0x7b4c",
-        "audit/data/uart_buffer_binaryninja.json",
-        "docs/USART0_BUFFER_REVIEW.md"
-      ]
-    },
-    {
-      "entry": "0x7bcc",
-      "label": "Header-length CRC checker returning status 3 or 4",
-      "assurance": "static_instruction_trace",
-      "evidence": [
-        "audit/data/ida_image_items.json:items.0x7bcc",
-        "audit/data/uart_buffer_binaryninja.json",
-        "docs/USART0_BUFFER_REVIEW.md"
-      ]
-    },
-    {
-      "entry": "0x7be8",
-      "label": "Frame message-type nibble getter",
-      "assurance": "static_instruction_trace",
-      "evidence": [
-        "audit/data/ida_image_items.json:items.0x7be8",
-        "audit/data/uart_buffer_binaryninja.json",
-        "docs/USART0_BUFFER_REVIEW.md"
-      ]
-    },
-    {
-      "entry": "0x7bf0",
-      "label": "Frame CRC-index low-nibble getter",
-      "assurance": "static_instruction_trace",
-      "evidence": [
-        "audit/data/ida_image_items.json:items.0x7bf0",
-        "audit/data/uart_buffer_binaryninja.json",
-        "docs/USART0_BUFFER_REVIEW.md"
-      ]
-    },
-    {
-      "entry": "0x8564",
-      "label": "u8 division Thumb entry; R0 remainder, R1 quotient",
-      "assurance": "static_instruction_trace_and_bounded_emulation",
-      "evidence": [
-        "audit/data/integer_runtime_emulation.json:entry.0x8564",
-        "audit/data/integer_runtime_binaryninja.json",
-        "docs/INTEGER_ARITHMETIC_REVIEW.md"
-      ]
-    },
-    {
-      "entry": "0x8568",
-      "label": "u8 division ARM body; R0 remainder, R1 quotient",
-      "assurance": "static_instruction_trace_and_bounded_emulation",
-      "evidence": [
-        "audit/data/integer_runtime_emulation.json:entry.0x8568",
-        "audit/data/integer_runtime_binaryninja.json",
-        "docs/INTEGER_ARITHMETIC_REVIEW.md"
-      ]
-    },
-    {
-      "entry": "0x8574",
-      "label": "u32 division Thumb entry; R0 remainder, R1 quotient",
-      "assurance": "static_instruction_trace_and_bounded_emulation",
-      "evidence": [
-        "audit/data/integer_runtime_emulation.json:entry.0x8574",
-        "audit/data/integer_runtime_binaryninja.json",
-        "docs/INTEGER_ARITHMETIC_REVIEW.md"
-      ]
-    },
-    {
-      "entry": "0x8578",
-      "label": "u32 division ARM body; R0 remainder, R1 quotient",
-      "assurance": "static_instruction_trace_and_bounded_emulation",
-      "evidence": [
-        "audit/data/integer_runtime_emulation.json:entry.0x8578",
-        "audit/data/integer_runtime_binaryninja.json",
-        "docs/INTEGER_ARITHMETIC_REVIEW.md"
-      ]
-    },
-    {
-      "entry": "0x8584",
-      "label": "s32 division Thumb entry; R0 remainder, R1 quotient",
-      "assurance": "static_instruction_trace_and_bounded_emulation",
-      "evidence": [
-        "audit/data/integer_runtime_emulation.json:entry.0x8584",
-        "audit/data/integer_runtime_binaryninja.json",
-        "docs/INTEGER_ARITHMETIC_REVIEW.md"
-      ]
-    },
-    {
-      "entry": "0x8588",
-      "label": "s32 division ARM body; R0 remainder, R1 quotient",
-      "assurance": "static_instruction_trace_and_bounded_emulation",
-      "evidence": [
-        "audit/data/integer_runtime_emulation.json:entry.0x8588",
-        "audit/data/integer_runtime_binaryninja.json",
-        "docs/INTEGER_ARITHMETIC_REVIEW.md"
-      ]
-    },
-    {
-      "entry": "0x4384",
-      "label": "Default working/echo initializer and derived scalar setup",
-      "assurance": "static_instruction_trace_and_bounded_emulation",
-      "evidence": [
-        "audit/data/control_helper_emulation.json:entry.0x4384",
-        "audit/data/control_helper_binaryninja.json",
-        "audit/data/control_helper_callers.json",
-        "docs/CONTROL_HELPER_REVIEW.md"
-      ]
-    },
-    {
-      "entry": "0x4650",
-      "label": "32-word shift filter with wrapping sum and logical divide by 32",
-      "assurance": "static_instruction_trace_and_bounded_emulation",
-      "evidence": [
-        "audit/data/control_helper_emulation.json:entry.0x4650",
-        "audit/data/control_helper_binaryninja.json",
-        "audit/data/control_helper_callers.json",
-        "docs/CONTROL_HELPER_REVIEW.md"
-      ]
-    },
-    {
-      "entry": "0x4674",
-      "label": "Second 32-word shift filter with wrapping sum and logical divide by 32",
-      "assurance": "static_instruction_trace_and_bounded_emulation",
-      "evidence": [
-        "audit/data/control_helper_emulation.json:entry.0x4674",
-        "audit/data/control_helper_binaryninja.json",
-        "audit/data/control_helper_callers.json",
-        "docs/CONTROL_HELPER_REVIEW.md"
-      ]
-    },
-    {
-      "entry": "0x4698",
-      "label": "Threshold-six state updater at 0x200AD6..AD8",
-      "assurance": "static_instruction_trace_and_bounded_emulation",
-      "evidence": [
-        "audit/data/control_helper_emulation.json:entry.0x4698",
-        "audit/data/control_helper_binaryninja.json",
-        "audit/data/control_helper_callers.json",
-        "docs/CONTROL_HELPER_REVIEW.md"
-      ]
-    },
-    {
-      "entry": "0x47b0",
-      "label": "Resettable threshold/ready latch at 0x20042F..432",
-      "assurance": "static_instruction_trace_and_bounded_emulation",
-      "evidence": [
-        "audit/data/control_helper_emulation.json:entry.0x47b0",
-        "audit/data/control_helper_binaryninja.json",
-        "audit/data/control_helper_callers.json",
-        "docs/CONTROL_HELPER_REVIEW.md"
-      ]
-    },
-    {
-      "entry": "0x48e8",
-      "label": "Fresh-sample gated accumulator with delta memory and 0..650 fresh-result clamp",
-      "assurance": "static_instruction_trace_and_bounded_emulation",
-      "evidence": [
-        "audit/data/control_helper_emulation.json:entry.0x48e8",
-        "audit/data/control_helper_binaryninja.json",
-        "audit/data/control_helper_callers.json",
-        "docs/CONTROL_HELPER_REVIEW.md"
-      ]
-    },
-    {
-      "entry": "0x495c",
-      "label": "Unsigned 0..4095 input clamp and integer percentage normalization",
-      "assurance": "static_instruction_trace_and_bounded_emulation",
-      "evidence": [
-        "audit/data/control_helper_emulation.json:entry.0x495c",
-        "audit/data/control_helper_binaryninja.json",
-        "audit/data/control_helper_callers.json",
-        "docs/CONTROL_HELPER_REVIEW.md"
-      ]
-    },
-    {
-      "entry": "0x497c",
-      "label": "Two-stage normalized input to 0..19 index conversion",
-      "assurance": "static_instruction_trace_and_bounded_emulation",
-      "evidence": [
-        "audit/data/control_helper_emulation.json:entry.0x497c",
-        "audit/data/control_helper_binaryninja.json",
-        "audit/data/control_helper_callers.json",
-        "docs/CONTROL_HELPER_REVIEW.md"
-      ]
-    },
-    {
       "entry": "0x56fc",
       "label": "Thumb-to-ARM wrapper: Software binary32 division with documented subnormal differences",
       "assurance": "static_instruction_trace_and_bounded_emulation",
@@ -524,6 +184,14 @@
       ]
     },
     {
+      "entry": "0x59e8",
+      "label": "Incoming capture unpacker and writer for the 0x2005C4 SRAM structure",
+      "assurance": "static_instruction_trace",
+      "evidence": [
+        "quadzilla_mcu_map.json:functions.sub_59E8"
+      ]
+    },
+    {
       "entry": "0x5f04",
       "label": "Thumb-to-ARM wrapper: Software binary32 multiplication",
       "assurance": "static_instruction_trace_and_bounded_emulation",
@@ -546,6 +214,23 @@
       ]
     },
     {
+      "entry": "0x5f34",
+      "label": "Writer of SRAM byte 0x200BE7; live AID meaning remains unproven",
+      "assurance": "static_instruction_trace",
+      "evidence": [
+        "quadzilla_mcu_map.json:functions.sub_5F34"
+      ]
+    },
+    {
+      "entry": "0x601c",
+      "label": "AID ingest and validation dispatcher, including AID 85 clamp/echo",
+      "assurance": "static_instruction_trace",
+      "evidence": [
+        "quadzilla_mcu_map.json:functions.sub_601C",
+        "quadzilla_vp44_chain.json:roles.requested_stretch_setting"
+      ]
+    },
+    {
       "entry": "0x6b08",
       "label": "Thumb-to-ARM wrapper: Signed 32-bit integer to binary64 conversion",
       "assurance": "static_instruction_trace_and_bounded_emulation",
@@ -565,6 +250,15 @@
         "audit/data/soft_float_binaryninja.json",
         "audit/data/soft_float_ida.json",
         "docs/SOFT_FLOAT_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x6fa0",
+      "label": "AT91 TC channel write helper used for the TC0_RC output",
+      "assurance": "static_closed_chain",
+      "evidence": [
+        "quadzilla_mcu_map.json:functions.sub_6FA0",
+        "quadzilla_vp44_chain.json:hardware_output"
       ]
     },
     {
@@ -664,6 +358,322 @@
         "audit/data/soft_float_binaryninja.json",
         "audit/data/soft_float_ida.json",
         "docs/SOFT_FLOAT_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x7178",
+      "label": "USART0 interrupt handler for receive timeout and enabled end-of-transmit event",
+      "assurance": "static_instruction_trace",
+      "evidence": [
+        "audit/data/ida_image_items.json:items.0x7178",
+        "audit/data/uart_buffer_binaryninja.json",
+        "docs/USART0_BUFFER_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x71d0",
+      "label": "USART0 PDC current/next transmit-buffer staging helper",
+      "assurance": "static_instruction_trace",
+      "evidence": [
+        "audit/data/ida_image_items.json:items.0x71d0",
+        "audit/data/uart_buffer_binaryninja.json",
+        "docs/USART0_BUFFER_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x720c",
+      "label": "USART0 PDC current/next receive-buffer staging helper",
+      "assurance": "static_instruction_trace",
+      "evidence": [
+        "audit/data/ida_image_items.json:items.0x720c",
+        "audit/data/uart_buffer_binaryninja.json",
+        "docs/USART0_BUFFER_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x725c",
+      "label": "USART0 and PDC initialization with AIC handler installation",
+      "assurance": "static_instruction_trace",
+      "evidence": [
+        "audit/data/ida_image_items.json:items.0x725c",
+        "audit/data/uart_buffer_binaryninja.json",
+        "docs/USART0_BUFFER_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x76cc",
+      "label": "Control-cycle orchestrator: capture unpack, AID validation, main control, and conditional communications",
+      "assurance": "static_instruction_trace",
+      "evidence": [
+        "audit/data/write_path_ida.json:entries.0x76cc",
+        "audit/data/write_path_binaryninja.json:entries.0x76cc",
+        "docs/OFFLINE_WRITE_PATH_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x7af8",
+      "label": "Transmit staging call wrapper",
+      "assurance": "static_instruction_trace",
+      "evidence": [
+        "audit/data/ida_image_items.json:items.0x7af8",
+        "audit/data/uart_buffer_binaryninja.json",
+        "docs/USART0_BUFFER_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x7b04",
+      "label": "Getter for SRAM flag at 0x20070B",
+      "assurance": "static_instruction_trace",
+      "evidence": [
+        "audit/data/ida_image_items.json:items.0x7b04",
+        "audit/data/uart_buffer_binaryninja.json",
+        "docs/USART0_BUFFER_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x7b10",
+      "label": "Getter for USART0 receive-timeout completion flag",
+      "assurance": "static_instruction_trace",
+      "evidence": [
+        "audit/data/ida_image_items.json:items.0x7b10",
+        "audit/data/uart_buffer_binaryninja.json",
+        "docs/USART0_BUFFER_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x7b1c",
+      "label": "Fixed 16-transfer receive rearm wrapper",
+      "assurance": "static_instruction_trace",
+      "evidence": [
+        "audit/data/ida_image_items.json:items.0x7b1c",
+        "audit/data/uart_buffer_binaryninja.json",
+        "docs/USART0_BUFFER_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x7b28",
+      "label": "Clear SRAM flag at 0x20070E",
+      "assurance": "static_instruction_trace",
+      "evidence": [
+        "audit/data/ida_image_items.json:items.0x7b28",
+        "audit/data/uart_buffer_binaryninja.json",
+        "docs/USART0_BUFFER_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x7b30",
+      "label": "Clear SRAM flag at 0x20070C",
+      "assurance": "static_instruction_trace",
+      "evidence": [
+        "audit/data/ida_image_items.json:items.0x7b30",
+        "audit/data/uart_buffer_binaryninja.json",
+        "docs/USART0_BUFFER_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x7b38",
+      "label": "Set SRAM flag pair at 0x20070F/0x20070E",
+      "assurance": "static_instruction_trace",
+      "evidence": [
+        "audit/data/ida_image_items.json:items.0x7b38",
+        "audit/data/uart_buffer_binaryninja.json",
+        "docs/USART0_BUFFER_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x7b4c",
+      "label": "Set SRAM flag pair at 0x20070D/0x20070C",
+      "assurance": "static_instruction_trace",
+      "evidence": [
+        "audit/data/ida_image_items.json:items.0x7b4c",
+        "audit/data/uart_buffer_binaryninja.json",
+        "docs/USART0_BUFFER_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x7b60",
+      "label": "CRC-8/SAE-J1850 computation used by the MCU frame parser and builder",
+      "assurance": "static_instruction_trace",
+      "evidence": [
+        "audit/data/write_path_ida.json:entries.0x7b60",
+        "audit/data/write_path_binaryninja.json:entries.0x7b60",
+        "docs/OFFLINE_WRITE_PATH_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x7bcc",
+      "label": "Header-length CRC checker returning status 3 or 4",
+      "assurance": "static_instruction_trace",
+      "evidence": [
+        "audit/data/ida_image_items.json:items.0x7bcc",
+        "audit/data/uart_buffer_binaryninja.json",
+        "docs/USART0_BUFFER_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x7be8",
+      "label": "Frame message-type nibble getter",
+      "assurance": "static_instruction_trace",
+      "evidence": [
+        "audit/data/ida_image_items.json:items.0x7be8",
+        "audit/data/uart_buffer_binaryninja.json",
+        "docs/USART0_BUFFER_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x7bf0",
+      "label": "Frame CRC-index low-nibble getter",
+      "assurance": "static_instruction_trace",
+      "evidence": [
+        "audit/data/ida_image_items.json:items.0x7bf0",
+        "audit/data/uart_buffer_binaryninja.json",
+        "docs/USART0_BUFFER_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x7bf8",
+      "label": "AID payload-width selector using the 75/150/185/220 brackets",
+      "assurance": "static_instruction_trace",
+      "evidence": [
+        "CONTEXT.md:Architecture Quirks",
+        "quadzilla_x2com.md"
+      ]
+    },
+    {
+      "entry": "0x7c1c",
+      "label": "AID-to-SRAM resolver for pointer table 1",
+      "assurance": "static_instruction_trace",
+      "evidence": [
+        "CONTEXT.md:Architecture Quirks",
+        "quadzilla_aid_map.json"
+      ]
+    },
+    {
+      "entry": "0x7c68",
+      "label": "AID-to-SRAM resolver for pointer table 2",
+      "assurance": "static_instruction_trace",
+      "evidence": [
+        "CONTEXT.md:Architecture Quirks",
+        "quadzilla_aid_map.json"
+      ]
+    },
+    {
+      "entry": "0x7cc4",
+      "label": "Payload-byte walker that resolves AIDs and writes table-1 staging SRAM before validation",
+      "assurance": "static_instruction_trace",
+      "evidence": [
+        "audit/data/write_path_ida.json:entries.0x7cc4",
+        "audit/data/write_path_binaryninja.json:entries.0x7cc4",
+        "docs/OFFLINE_WRITE_PATH_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x7d80",
+      "label": "AID data reader that consumes the pointer returned by the table-2 resolver",
+      "assurance": "static_instruction_trace",
+      "evidence": [
+        "CONTEXT.md:Architecture Quirks",
+        "firmware_v2.8.4HF.bin.asm"
+      ]
+    },
+    {
+      "entry": "0x7e64",
+      "label": "Frame payload parser that checks CRC residue and delegates to the AID byte walker",
+      "assurance": "static_instruction_trace",
+      "evidence": [
+        "audit/data/write_path_ida.json:entries.0x7e64",
+        "audit/data/write_path_binaryninja.json:entries.0x7e64",
+        "docs/OFFLINE_WRITE_PATH_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x7eb4",
+      "label": "Frame builder combining message-type header, table-2 data reader, and CRC",
+      "assurance": "static_instruction_trace",
+      "evidence": [
+        "audit/data/write_path_ida.json:entries.0x7eb4",
+        "audit/data/write_path_binaryninja.json:entries.0x7eb4",
+        "docs/OFFLINE_WRITE_PATH_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x7efc",
+      "label": "Conditional outgoing-data queue setup with busy-flag guards",
+      "assurance": "static_instruction_trace",
+      "evidence": [
+        "audit/data/write_path_ida.json:entries.0x7efc",
+        "audit/data/write_path_binaryninja.json:entries.0x7efc",
+        "docs/OFFLINE_WRITE_PATH_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x8038",
+      "label": "Receive-buffer and message-type dispatcher returning parsed AID lists to the validator",
+      "assurance": "static_instruction_trace",
+      "evidence": [
+        "audit/data/write_path_ida.json:entries.0x8038",
+        "audit/data/write_path_binaryninja.json:entries.0x8038",
+        "docs/OFFLINE_WRITE_PATH_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x8564",
+      "label": "u8 division Thumb entry; R0 remainder, R1 quotient",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/integer_runtime_emulation.json:entry.0x8564",
+        "audit/data/integer_runtime_binaryninja.json",
+        "docs/INTEGER_ARITHMETIC_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x8568",
+      "label": "u8 division ARM body; R0 remainder, R1 quotient",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/integer_runtime_emulation.json:entry.0x8568",
+        "audit/data/integer_runtime_binaryninja.json",
+        "docs/INTEGER_ARITHMETIC_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x8574",
+      "label": "u32 division Thumb entry; R0 remainder, R1 quotient",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/integer_runtime_emulation.json:entry.0x8574",
+        "audit/data/integer_runtime_binaryninja.json",
+        "docs/INTEGER_ARITHMETIC_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x8578",
+      "label": "u32 division ARM body; R0 remainder, R1 quotient",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/integer_runtime_emulation.json:entry.0x8578",
+        "audit/data/integer_runtime_binaryninja.json",
+        "docs/INTEGER_ARITHMETIC_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x8584",
+      "label": "s32 division Thumb entry; R0 remainder, R1 quotient",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/integer_runtime_emulation.json:entry.0x8584",
+        "audit/data/integer_runtime_binaryninja.json",
+        "docs/INTEGER_ARITHMETIC_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x8588",
+      "label": "s32 division ARM body; R0 remainder, R1 quotient",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/integer_runtime_emulation.json:entry.0x8588",
+        "audit/data/integer_runtime_binaryninja.json",
+        "docs/INTEGER_ARITHMETIC_REVIEW.md"
       ]
     },
     {
