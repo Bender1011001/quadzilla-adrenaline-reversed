@@ -761,59 +761,69 @@
     {
       "entry": "0x7b60",
       "label": "CRC-8/SAE-J1850 computation used by the MCU frame parser and builder",
-      "assurance": "static_instruction_trace",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
       "evidence": [
-        "audit/data/write_path_ida.json:entries.0x7b60",
-        "audit/data/write_path_binaryninja.json:entries.0x7b60",
-        "docs/OFFLINE_WRITE_PATH_REVIEW.md"
+        "audit/data/payload_walker_binaryninja.json",
+        "audit/data/payload_walker_emulation.json",
+        "audit/data/short_value_admission.json",
+        "docs/PAYLOAD_WALKER_REVIEW.md"
       ]
     },
     {
       "entry": "0x7bcc",
       "label": "Header-length CRC checker returning status 3 or 4",
-      "assurance": "static_instruction_trace",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
       "evidence": [
-        "audit/data/ida_image_items.json:items.0x7bcc",
-        "audit/data/uart_buffer_binaryninja.json",
-        "docs/USART0_BUFFER_REVIEW.md"
+        "audit/data/short_value_context_binaryninja.json",
+        "audit/data/payload_walker_emulation.json",
+        "audit/data/short_value_admission.json",
+        "docs/PAYLOAD_WALKER_REVIEW.md"
       ]
     },
     {
       "entry": "0x7be8",
       "label": "Frame message-type nibble getter",
-      "assurance": "static_instruction_trace",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
       "evidence": [
-        "audit/data/ida_image_items.json:items.0x7be8",
-        "audit/data/uart_buffer_binaryninja.json",
-        "docs/USART0_BUFFER_REVIEW.md"
+        "audit/data/short_value_context_binaryninja.json",
+        "audit/data/payload_header_boundaries.json",
+        "audit/data/payload_walker_emulation.json",
+        "audit/data/short_value_admission.json",
+        "docs/PAYLOAD_WALKER_REVIEW.md"
       ]
     },
     {
       "entry": "0x7bf0",
       "label": "Frame CRC-index low-nibble getter",
-      "assurance": "static_instruction_trace",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
       "evidence": [
-        "audit/data/ida_image_items.json:items.0x7bf0",
-        "audit/data/uart_buffer_binaryninja.json",
-        "docs/USART0_BUFFER_REVIEW.md"
+        "audit/data/short_value_context_binaryninja.json",
+        "audit/data/payload_header_boundaries.json",
+        "audit/data/payload_walker_emulation.json",
+        "audit/data/short_value_admission.json",
+        "docs/PAYLOAD_WALKER_REVIEW.md"
       ]
     },
     {
       "entry": "0x7bf8",
       "label": "AID payload-width selector using the 75/150/185/220 brackets",
-      "assurance": "static_instruction_trace",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
       "evidence": [
-        "CONTEXT.md:Architecture Quirks",
-        "quadzilla_x2com.md"
+        "audit/data/payload_walker_binaryninja.json",
+        "audit/data/payload_walker_emulation.json",
+        "audit/data/short_value_admission.json",
+        "docs/PAYLOAD_WALKER_REVIEW.md"
       ]
     },
     {
       "entry": "0x7c1c",
       "label": "AID-to-SRAM resolver for pointer table 1",
-      "assurance": "static_instruction_trace",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
       "evidence": [
-        "CONTEXT.md:Architecture Quirks",
-        "quadzilla_aid_map.json"
+        "audit/data/payload_walker_binaryninja.json",
+        "audit/data/payload_walker_emulation.json",
+        "audit/data/short_value_admission.json",
+        "docs/PAYLOAD_WALKER_REVIEW.md"
       ]
     },
     {
@@ -828,11 +838,12 @@
     {
       "entry": "0x7cc4",
       "label": "Payload-byte walker that resolves AIDs and writes table-1 staging SRAM before validation",
-      "assurance": "static_instruction_trace",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
       "evidence": [
-        "audit/data/write_path_ida.json:entries.0x7cc4",
-        "audit/data/write_path_binaryninja.json:entries.0x7cc4",
-        "docs/OFFLINE_WRITE_PATH_REVIEW.md"
+        "audit/data/payload_walker_binaryninja.json",
+        "audit/data/payload_walker_emulation.json",
+        "audit/data/short_value_admission.json",
+        "docs/PAYLOAD_WALKER_REVIEW.md"
       ]
     },
     {
@@ -847,11 +858,12 @@
     {
       "entry": "0x7e64",
       "label": "Frame payload parser that checks CRC residue and delegates to the AID byte walker",
-      "assurance": "static_instruction_trace",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
       "evidence": [
-        "audit/data/write_path_ida.json:entries.0x7e64",
-        "audit/data/write_path_binaryninja.json:entries.0x7e64",
-        "docs/OFFLINE_WRITE_PATH_REVIEW.md"
+        "audit/data/payload_walker_binaryninja.json",
+        "audit/data/payload_walker_emulation.json",
+        "audit/data/short_value_admission.json",
+        "docs/PAYLOAD_WALKER_REVIEW.md"
       ]
     },
     {

@@ -21,7 +21,7 @@ of ARMv4T and the emulator is an ARM926 functional surrogate, not hardware.
 Together with the earlier reviews, the dispatcher and its four shared
 continuations account for 1,882 instruction bytes. Baseline role coverage
 becomes **113 reviewed / 32 pending**, and total reviewed instruction coverage
-becomes **10,782 bytes**. The historical 145-entry inventory is still not
+became **10,782 bytes** at this review stage; the subsequent [payload walker review](PAYLOAD_WALKER_REVIEW.md) takes current instruction coverage to **11,282 bytes**. The historical 145-entry inventory is still not
 claimed exhaustive.
 
 ## IDA constant-macro adjudication

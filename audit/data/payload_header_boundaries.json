@@ -1,0 +1,74 @@
+{
+  "format": "quadzilla-header-getter-boundary-review-v1",
+  "raw_sha256": "1ae519ba6194e8f7bdaaa94333a83a9e6fda3b0563f87f7d48383b37288c1780",
+  "ordinary_matching_starts": 17,
+  "corrections": [
+    {
+      "entry": "0x7be8",
+      "explicit_instruction": {
+        "address": "0x7be8",
+        "length": 2,
+        "text": "ldrb    r0, [r0]"
+      },
+      "prefix_halfword": "0xffff",
+      "entry_halfword": "0x7800",
+      "overlapping_ida_item": {
+        "start": "0x7be6",
+        "end": "0x7bea",
+        "kind": "ida_code",
+        "thumb": 1,
+        "function": null,
+        "text": "VTBL.8          D23, {D15}, D0",
+        "mnemonic": "VTBL.8",
+        "code_refs": [],
+        "data_refs": []
+      },
+      "direct_call_sites": [
+        "0x8082"
+      ],
+      "disposition": "Thumb LDRB entry supported; preceding FFFF halfword remains outside this instruction review"
+    },
+    {
+      "entry": "0x7bf0",
+      "explicit_instruction": {
+        "address": "0x7bf0",
+        "length": 2,
+        "text": "ldrb    r0, [r0]"
+      },
+      "prefix_halfword": "0xffff",
+      "entry_halfword": "0x7800",
+      "overlapping_ida_item": {
+        "start": "0x7bee",
+        "end": "0x7bf2",
+        "kind": "ida_code",
+        "thumb": 1,
+        "function": null,
+        "text": "VTBL.8          D23, {D15}, D0",
+        "mnemonic": "VTBL.8",
+        "code_refs": [],
+        "data_refs": []
+      },
+      "direct_call_sites": [
+        "0x806c",
+        "0x81da",
+        "0x8206",
+        "0x8246",
+        "0x827a",
+        "0x82bc",
+        "0x82f0",
+        "0x8332",
+        "0x838e",
+        "0x83f8",
+        "0x8462",
+        "0x84ba"
+      ],
+      "disposition": "Thumb LDRB entry supported; preceding FFFF halfword remains outside this instruction review"
+    }
+  ],
+  "unexplained_boundary_mismatches": [],
+  "limits": [
+    "ARM7TDMI has no NEON; IDA VTBL.8 item is not accepted as target instructions",
+    "explicit Thumb decode, direct targets and original-byte execution support the getter entries",
+    "preceding FFFF halfwords are not promoted to reviewed padding here"
+  ]
+}

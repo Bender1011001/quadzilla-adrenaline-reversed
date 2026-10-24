@@ -817,6 +817,120 @@
       ]
     },
     {
+      "start": "0x7b60",
+      "end": "0x7bca",
+      "entry": "0x7b60",
+      "isa": "thumb",
+      "decoder_artifact": "audit/data/payload_walker_binaryninja.json",
+      "account": "Reviewed complete local helper instruction body and bounded original-byte calls; adjacent bytes excluded",
+      "evidence": [
+        "audit/data/payload_walker_binaryninja.json",
+        "audit/data/payload_walker_emulation.json",
+        "audit/data/short_value_admission.json",
+        "docs/PAYLOAD_WALKER_REVIEW.md"
+      ]
+    },
+    {
+      "start": "0x7bcc",
+      "end": "0x7be6",
+      "entry": "0x7bcc",
+      "isa": "thumb",
+      "decoder_artifact": "audit/data/short_value_context_binaryninja.json",
+      "account": "Reviewed complete local helper instruction body and bounded original-byte calls; adjacent bytes excluded",
+      "evidence": [
+        "audit/data/short_value_context_binaryninja.json",
+        "audit/data/payload_walker_emulation.json",
+        "audit/data/short_value_admission.json",
+        "docs/PAYLOAD_WALKER_REVIEW.md"
+      ]
+    },
+    {
+      "start": "0x7be8",
+      "end": "0x7bee",
+      "entry": "0x7be8",
+      "isa": "thumb",
+      "decoder_artifact": "audit/data/short_value_context_binaryninja.json",
+      "account": "Reviewed complete local helper instruction body and bounded original-byte calls; adjacent bytes excluded",
+      "evidence": [
+        "audit/data/short_value_context_binaryninja.json",
+        "audit/data/payload_header_boundaries.json",
+        "audit/data/payload_walker_emulation.json",
+        "audit/data/short_value_admission.json",
+        "docs/PAYLOAD_WALKER_REVIEW.md"
+      ]
+    },
+    {
+      "start": "0x7bf0",
+      "end": "0x7bf8",
+      "entry": "0x7bf0",
+      "isa": "thumb",
+      "decoder_artifact": "audit/data/short_value_context_binaryninja.json",
+      "account": "Reviewed complete local helper instruction body and bounded original-byte calls; adjacent bytes excluded",
+      "evidence": [
+        "audit/data/short_value_context_binaryninja.json",
+        "audit/data/payload_header_boundaries.json",
+        "audit/data/payload_walker_emulation.json",
+        "audit/data/short_value_admission.json",
+        "docs/PAYLOAD_WALKER_REVIEW.md"
+      ]
+    },
+    {
+      "start": "0x7bf8",
+      "end": "0x7c1a",
+      "entry": "0x7bf8",
+      "isa": "thumb",
+      "decoder_artifact": "audit/data/payload_walker_binaryninja.json",
+      "account": "Reviewed complete local helper instruction body and bounded original-byte calls; adjacent bytes excluded",
+      "evidence": [
+        "audit/data/payload_walker_binaryninja.json",
+        "audit/data/payload_walker_emulation.json",
+        "audit/data/short_value_admission.json",
+        "docs/PAYLOAD_WALKER_REVIEW.md"
+      ]
+    },
+    {
+      "start": "0x7c1c",
+      "end": "0x7c52",
+      "entry": "0x7c1c",
+      "isa": "thumb",
+      "decoder_artifact": "audit/data/payload_walker_binaryninja.json",
+      "account": "Reviewed complete local helper instruction body and bounded original-byte calls; adjacent bytes excluded",
+      "evidence": [
+        "audit/data/payload_walker_binaryninja.json",
+        "audit/data/payload_walker_emulation.json",
+        "audit/data/short_value_admission.json",
+        "docs/PAYLOAD_WALKER_REVIEW.md"
+      ]
+    },
+    {
+      "start": "0x7cc4",
+      "end": "0x7d7e",
+      "entry": "0x7cc4",
+      "isa": "thumb",
+      "decoder_artifact": "audit/data/payload_walker_binaryninja.json",
+      "account": "Reviewed complete local helper instruction body and bounded original-byte calls; adjacent bytes excluded",
+      "evidence": [
+        "audit/data/payload_walker_binaryninja.json",
+        "audit/data/payload_walker_emulation.json",
+        "audit/data/short_value_admission.json",
+        "docs/PAYLOAD_WALKER_REVIEW.md"
+      ]
+    },
+    {
+      "start": "0x7e64",
+      "end": "0x7eb4",
+      "entry": "0x7e64",
+      "isa": "thumb",
+      "decoder_artifact": "audit/data/payload_walker_binaryninja.json",
+      "account": "Reviewed complete local helper instruction body and bounded original-byte calls; adjacent bytes excluded",
+      "evidence": [
+        "audit/data/payload_walker_binaryninja.json",
+        "audit/data/payload_walker_emulation.json",
+        "audit/data/short_value_admission.json",
+        "docs/PAYLOAD_WALKER_REVIEW.md"
+      ]
+    },
+    {
       "start": "0x7f28",
       "end": "0x7f40",
       "entry": "0x7f28",
