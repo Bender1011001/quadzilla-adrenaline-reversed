@@ -14,6 +14,8 @@ The [compound-handler account](COMPOUND_AID_UPDATE_REVIEW.md) traces eleven upda
 
 The [remaining-handler account](REMAINING_AID_UPDATE_REVIEW.md) closes the bounded local accounts for all 57 selected handlers. It records 22,703 original-byte calls, ignored upper staging/retained upper echo bytes, coupled limits, reset-trigger propagation and AID 226 floating configuration. Four catalog entries are parent-frame continuations rather than ordinary returning functions. This milestone does not complete transport, all writers/consumers or the full firmware goal.
 
+The [frame reader review](FRAME_READER_REVIEW.md) executes 4,328 bounded response-reading and framing calls, plus a full 0..255 count sweep of the queue copier. A direct call with 17 rejected AIDs writes into saved stack storage; ordinary caller-count provenance is still under review. It also classifies a 36-byte resolver literal pool and records the AID 255 aliased-pointer fault in the synthetic memory map.
+
 ## 1. Scope and approach
 
 Four independent surfaces were attacked, each giving a cross-check on the others:

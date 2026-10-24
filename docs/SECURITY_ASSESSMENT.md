@@ -172,6 +172,18 @@ python tools/aid_clamps.py
 python -c "import struct;print(struct.unpack_from('<I', open('fw.bin','rb').read(), 0x67c0-0x4000)[0])"   # 2201
 ```
 
+## Unrated local memory-safety observation
+
+The [frame reader review](FRAME_READER_REVIEW.md) found that `0x7D80` appends
+rejected response AIDs into a 16-byte stack list without checking the list
+count. A direct original-byte call with 17 null AIDs writes into saved
+register storage; 22 cause an unmapped write in the emulator after the
+saved destination pointer changes. The examined queue copier at `0x7FD8`
+caps its output to 14 bytes, and the complete state-count provenance into
+`0x7D80` has not yet been established. This is a conditional local finding,
+with no assigned remote exploitability or device severity. The fault is
+an offline emulator observation; hardware effects were not measured.
+
 ## Also checked, no issue found
 
 - Secure RFCOMM variant used; no insecure-socket call.

@@ -1,0 +1,32 @@
+{
+  "format": "quadzilla-frame-reader-boundary-v1",
+  "raw_sha256": "1ae519ba6194e8f7bdaaa94333a83a9e6fda3b0563f87f7d48383b37288c1780",
+  "ordinary_matching_starts": 197,
+  "correction": {
+    "entry": "0x7fd8",
+    "prefix_halfword": "0xffff",
+    "entry_halfword": "0xb430",
+    "overlapping_ida_item": {
+      "start": "0x7fd6",
+      "end": "0x7fda",
+      "kind": "ida_code",
+      "thumb": 1,
+      "function": null,
+      "text": "VSRI.32         D27, D16, #1",
+      "mnemonic": "VSRI.32",
+      "code_refs": [],
+      "data_refs": []
+    },
+    "decoded_direct_call_sites": [
+      "0x7f1a",
+      "0x80ce",
+      "0x80f6",
+      "0x837a",
+      "0x83e4",
+      "0x844e",
+      "0x84a6"
+    ],
+    "disposition": "Thumb PUSH {R4,R5} entry supported; preceding FFFF remains unclassified"
+  },
+  "unexplained_boundary_mismatches": []
+}

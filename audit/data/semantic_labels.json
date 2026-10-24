@@ -829,10 +829,12 @@
     {
       "entry": "0x7c68",
       "label": "AID-to-SRAM resolver for pointer table 2",
-      "assurance": "static_instruction_trace",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
       "evidence": [
-        "CONTEXT.md:Architecture Quirks",
-        "quadzilla_aid_map.json"
+        "audit/data/frame_reader_binaryninja.json",
+        "audit/data/frame_reader_literals.json",
+        "audit/data/frame_reader_emulation.json",
+        "docs/FRAME_READER_REVIEW.md"
       ]
     },
     {
@@ -849,10 +851,11 @@
     {
       "entry": "0x7d80",
       "label": "AID data reader that consumes the pointer returned by the table-2 resolver",
-      "assurance": "static_instruction_trace",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
       "evidence": [
-        "CONTEXT.md:Architecture Quirks",
-        "firmware_v2.8.4HF.bin.asm"
+        "audit/data/frame_reader_binaryninja.json",
+        "audit/data/frame_reader_emulation.json",
+        "docs/FRAME_READER_REVIEW.md"
       ]
     },
     {
@@ -869,11 +872,11 @@
     {
       "entry": "0x7eb4",
       "label": "Frame builder combining message-type header, table-2 data reader, and CRC",
-      "assurance": "static_instruction_trace",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
       "evidence": [
-        "audit/data/write_path_ida.json:entries.0x7eb4",
-        "audit/data/write_path_binaryninja.json:entries.0x7eb4",
-        "docs/OFFLINE_WRITE_PATH_REVIEW.md"
+        "audit/data/frame_reader_binaryninja.json",
+        "audit/data/frame_reader_emulation.json",
+        "docs/FRAME_READER_REVIEW.md"
       ]
     },
     {
@@ -904,6 +907,17 @@
         "audit/data/tc2_flag_helper_binaryninja.json",
         "audit/data/tc2_flag_helper_emulation.json",
         "docs/TC2_FLAG_HELPER_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x7fd8",
+      "label": "Bounded outgoing-list copier that caps nonzero copy requests to 14 bytes",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/frame_reader_binaryninja.json",
+        "audit/data/frame_reader_boundary.json",
+        "audit/data/frame_reader_emulation.json",
+        "docs/FRAME_READER_REVIEW.md"
       ]
     },
     {
