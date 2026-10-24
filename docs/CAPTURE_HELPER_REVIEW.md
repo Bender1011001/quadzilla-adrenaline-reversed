@@ -93,10 +93,11 @@ and caller-selected arguments are preserved in the evidence.
 
 SPI/PDC/PIO/RSTC are plain synthetic memory, readiness is scripted, and the
 timeout flag is injected explicitly. There is no PDC data movement, IRQ
-cadence or external command/response model. The full parser state machine,
-format matching, field scaling and malformed/stale response behavior at
-`0x59E8` remain separate review work. These helpers establish its lower-level
-contracts without assigning external meanings to unreviewed data.
+cadence or external command/response model. The subsequent
+[parser review](CAPTURE_PARSER_REVIEW.md) covers the full state machine,
+header matching and field scaling at `0x59E8`, with controlled DLC and
+retained-value probes. Live malformed/stale response behavior and downstream
+effects remain unresolved. These helpers establish its lower-level contracts.
 
 ```text
 PYTHONPATH=<Binary Ninja Python path> python audit/tools/decode_image_ranges.py firmware_v2.8.4HF.bin --ranges 0x5e04:0x5ea0:thumb2,0x5ebc:0x5ef2:thumb2,0x8504:0x852e:thumb2 --output audit/data/capture_helper_binaryninja.json

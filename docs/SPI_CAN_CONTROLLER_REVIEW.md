@@ -105,8 +105,9 @@ message was accepted onto a live bus.
 
 The opcode-clock response occupies byte 0 of a receive buffer. This makes
 the capture routine's nine-byte and fourteen-byte paths structurally
-different. Its main parser, DLC handling, matching and scaling still require
-their complete entry review.
+different. The subsequent [complete parser entry review](CAPTURE_PARSER_REVIEW.md)
+documents its matching and scaling, absent local DLC guard and retained
+outputs. Live short-frame behavior remains unverified.
 
 The initializer explicitly writes TXB2 SIDH=`20`, SIDL=`00` and DLC=`08`,
 which decode as standard identifier `0x100` and eight data bytes. EID fields

@@ -6,6 +6,8 @@ Scope: the 32,000-byte application image `firmware_v2.8.4HF.bin`, loaded at `0x4
 `python tools/firmware_crypto.py decrypt ... --bin`, so every artifact below can be tied back to the
 vendor's `.qz` update file. The image itself is not redistributed here.
 
+The [capture parser review](CAPTURE_PARSER_REVIEW.md) completes entry `0x59E8`: all 315 added instruction boundaries match the IDA item export and explicit-mode Binary Ninja decode, and all are visited in original-byte controlled execution. Reviewed instruction bytes now total 8,788; baseline role coverage remains 108 with 37 pending.
+
 ## Why
 
 A single disassembler is not evidence. Ghidra's auto-analysis classified about 96 % of this firmware as data (Thumb

@@ -223,6 +223,19 @@
       ]
     },
     {
+      "start": "0x59fe",
+      "end": "0x5cb2",
+      "entry": "0x59e8",
+      "isa": "thumb",
+      "account": "Complete normal-service capture state machine and fixed-offset parser body; reset prefix/epilogue reviewed separately; literal pool excluded",
+      "evidence": [
+        "audit/data/capture_parser_binaryninja.json",
+        "audit/data/capture_parser_emulation.json",
+        "docs/CAPTURE_PARSER_REVIEW.md"
+      ],
+      "decoder_artifact": "audit/data/capture_parser_binaryninja.json"
+    },
+    {
       "start": "0x5cb2",
       "end": "0x5cba",
       "entry": "0x59e8",

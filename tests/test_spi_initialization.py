@@ -27,7 +27,8 @@ class SpiInitialization(unittest.TestCase):
                           ("initializer_visited", "capture_reset_path_visited") for a in c[key]})
         manifest = load("reviewed_instruction_ranges.json")
         capture = [(r["start"], r["end"]) for r in manifest["ranges"] if r["entry"] == "0x59e8"]
-        self.assertEqual(capture, [("0x59e8", "0x59fe"), ("0x5cb2", "0x5cba")])
+        self.assertIn(("0x59e8", "0x59fe"), capture)
+        self.assertIn(("0x5cb2", "0x5cba"), capture)
 
     def test_ready_order_and_retry_per_site(self):
         ready, retry = self.cases["ready"], self.cases["retry_once_each"]
