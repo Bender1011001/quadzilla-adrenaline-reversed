@@ -10,8 +10,8 @@ Update: the [startup/persistence review](STARTUP_PERSISTENCE_REVIEW.md) and
 entries, for at least 157 supported starts. Three callable numeric routines
 have no identified incoming image call and are not claimed reachable in service.
 The original 145-start catalog is retained as the baseline; its semantic coverage
-now stands at 103 roles with 42 entries left after the
-[SPI/PDC primitive review](SPI_TRANSFER_REVIEW.md). The
+now stands at 104 roles with 41 entries left after the
+[SPI output state review](SPI_STATE_MACHINE_REVIEW.md). The
 new entries and aliases are recorded separately in
 `audit/data/entry_adjudications.json`. Neither inventory is claimed exhaustive.
 
@@ -27,8 +27,8 @@ address without hiding pending review:
 
 | Classification | Bytes |
 |---|---:|
-| IDA code candidates awaiting review | 14,574 |
-| Explicitly reviewed Thumb instruction ranges | 2,774 |
+| IDA code candidates awaiting review | 14,324 |
+| Explicitly reviewed Thumb instruction ranges | 3,024 |
 | Explicitly reviewed ARM instruction ranges | 4,168 |
 | IDA data candidates awaiting review | 3,144 |
 | Soft float status pointer literal | 4 |
@@ -39,8 +39,8 @@ address without hiding pending review:
 | Erased trailing `FF` | 2,888 |
 
 Coverage of an address is not proof that its meaning or ISA has been reviewed.
-The explicit instruction-range manifest now accepts 6,942 bytes through the
-[SPI/PDC primitive review](SPI_TRANSFER_REVIEW.md). It excludes adjacent literal
+The explicit instruction-range manifest now accepts 7,192 bytes through the
+[SPI output state review](SPI_STATE_MACHINE_REVIEW.md). It excludes adjacent literal
 pools and alignment. Earlier semantic labels are not automatically promoted to
 byte-level classification; their exact ranges still need to be adjudicated.
 The ledger explicitly preserves 2,119 item/layout conflicts. These are tool item
@@ -115,6 +115,13 @@ resolver calls and 256 controlled single-AID reader calls. AID 255 crosses both
 table boundaries, with a reproduced SRAM write alias and an unmapped response
 read in emulation. The complete pointer map is available; individual parameter
 semantics, all writer constraints and hardware consequences remain open.
+
+The [SPI output state review](SPI_STATE_MACHINE_REVIEW.md) establishes
+state progress that discards transfer-helper results and signed remainder/quotient
+byte packing for controlled negative inputs. Outstanding questions include whether
+the scripted readiness change is possible on hardware, who owns the ENDRX
+status used by state 5, and whether negative `0x200604` values reach packing.
+These remain specific caller/scheduling follow-ups rather than asserted live defects.
 
 1. Correct mode/item boundaries, map relocated executable aliases, and adjudicate
    every additional entry candidate (including interrupt/vector alternate entries).

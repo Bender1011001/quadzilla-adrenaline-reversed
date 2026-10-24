@@ -259,8 +259,19 @@
     },
     {
       "entry": "0x5cf0",
-      "semantic_status": "unlabeled_static_entry",
-      "semantics": [],
+      "semantic_status": "documented_static_role",
+      "semantics": [
+        {
+          "entry": "0x5cf0",
+          "label": "Gated SPI output state machine with nine-byte payload packing",
+          "assurance": "static_instruction_trace_and_synthetic_mmio_emulation",
+          "evidence": [
+            "audit/data/spi_state_machine_binaryninja.json",
+            "audit/data/spi_state_machine_emulation.json",
+            "docs/SPI_STATE_MACHINE_REVIEW.md"
+          ]
+        }
+      ],
       "blocks": {
         "PIOA": 2
       },
@@ -1357,7 +1368,7 @@
   "inputs": {
     "catalog": {
       "path": "audit/data/execution_entry_catalog.json",
-      "sha256": "32c30e965fb30af3c3ccb1d2ed3af7f7b19aadb343ac96bf360d2630f96636b6"
+      "sha256": "27e086cebc30c0727326a271f81b5f6026dc81ba312f59bff3c1c07e770905a4"
     },
     "peripheral_map": {
       "path": "audit/data/sam7s_peripheral_map.json",

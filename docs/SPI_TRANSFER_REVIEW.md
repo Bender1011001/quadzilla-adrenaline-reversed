@@ -76,9 +76,10 @@ bounds and the executed paths are retained in the evidence.
 Selector cases 0/1/2/3 cover both output masks and no-write paths. All four
 ENDTX/pin-11 combinations exercise the readiness gate and both transfer
 helpers. ENDRX cases include clear, set and all-ones status. Every case
-returns with balanced stack and preserved R4–R7. The higher-level setup
-`0x575C`, caller `0x5CF0`, timeout interactions and complete
-capture parsing remain separate review work.
+returns with balanced stack and preserved R4–R7. Caller `0x5CF0` is documented
+in the [SPI output state review](SPI_STATE_MACHINE_REVIEW.md). Higher-level
+setup `0x575C`, timeout interactions and complete capture parsing remain
+separate review work.
 
 ## Reproduction
 
