@@ -73,6 +73,8 @@ The [PIOA and interrupt setup review](docs/PIO_INTERRUPT_REVIEW.md) documents fo
 
 The [three-channel timer setup review](docs/TIMER_SETUP_REVIEW.md) documents the timer coordinator and two short callbacks, bringing baseline coverage to 92 roles with 53 pending. It records conditional compare values, clock and interrupt setup writes, and the limits of synthetic register execution. The third timer callback and live timing remain open.
 
+The [SPI setup review](docs/SPI_SETUP_REVIEW.md) documents the following setup call and its no-op source-5 callback, bringing baseline coverage to 94 roles with 51 pending. It records the eleven ordered register writes and literal-pool provenance; live SPI transfers and IRQ handling remain open.
+
 ## Layout
 
 ```

@@ -295,8 +295,19 @@
     },
     {
       "entry": "0x6bd8",
-      "semantic_status": "unlabeled_static_entry",
-      "semantics": [],
+      "semantic_status": "documented_static_role",
+      "semantics": [
+        {
+          "entry": "0x6bd8",
+          "label": "SPI master and interrupt setup coordinator",
+          "assurance": "static_instruction_trace_and_synthetic_mmio_emulation",
+          "evidence": [
+            "audit/data/spi_setup_binaryninja.json",
+            "audit/data/spi_setup_emulation.json",
+            "docs/SPI_SETUP_REVIEW.md"
+          ]
+        }
+      ],
       "blocks": {
         "AIC": 5,
         "PMC": 1,
@@ -1302,7 +1313,7 @@
   "inputs": {
     "catalog": {
       "path": "audit/data/execution_entry_catalog.json",
-      "sha256": "67257502b339a4169f1ae6d1c5f3224b42a885d3e64394b25c7278ead169fd05"
+      "sha256": "8316b71cd2bb6e941b700e472312d80fbc21dfc6d7243a2d2fda34e26faa72bf"
     },
     "peripheral_map": {
       "path": "audit/data/sam7s_peripheral_map.json",

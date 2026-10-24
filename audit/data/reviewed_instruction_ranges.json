@@ -227,6 +227,32 @@
       ]
     },
     {
+      "start": "0x6b44",
+      "end": "0x6b46",
+      "entry": "0x6b44",
+      "isa": "thumb",
+      "decoder_artifact": "audit/data/spi_setup_binaryninja.json",
+      "account": "Bounded Thumb instructions through return; adjacent literals and alignment excluded",
+      "evidence": [
+        "audit/data/spi_setup_binaryninja.json",
+        "audit/data/spi_setup_emulation.json",
+        "docs/SPI_SETUP_REVIEW.md"
+      ]
+    },
+    {
+      "start": "0x6bd8",
+      "end": "0x6c14",
+      "entry": "0x6bd8",
+      "isa": "thumb",
+      "decoder_artifact": "audit/data/spi_setup_binaryninja.json",
+      "account": "Bounded Thumb instructions through return; adjacent literals and alignment excluded",
+      "evidence": [
+        "audit/data/spi_setup_binaryninja.json",
+        "audit/data/spi_setup_emulation.json",
+        "docs/SPI_SETUP_REVIEW.md"
+      ]
+    },
+    {
       "start": "0x6c48",
       "end": "0x6c5e",
       "entry": "0x6c48",
