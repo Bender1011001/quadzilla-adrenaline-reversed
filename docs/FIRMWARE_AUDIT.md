@@ -10,6 +10,8 @@ The [capture parser review](CAPTURE_PARSER_REVIEW.md) completes entry `0x59E8`: 
 
 The [validation dispatch review](AID_DISPATCH_SELECTOR_UPDATES.md) adds 206 reviewed instruction bytes and classifies the 436-byte signed-offset table, bringing instruction coverage to 9,106 bytes. All 256 selection destinations are checked; only the gate/loop and AID 9/15 handlers receive their update account here. Baseline role counts remain 109/36.
 
+The [compound update review](COMPOUND_AID_UPDATE_REVIEW.md) adds 458 instruction bytes with all 227 starts matched and visited, bringing instruction coverage to 9,564 bytes. It reviews eleven more handlers and records specific cross-AID staging and width-loss paths. Baseline entry-role counts remain 109/36; 44 of 57 non-default handler accounts remain incomplete.
+
 ## Why
 
 A single disassembler is not evidence. Ghidra's auto-analysis classified about 96 % of this firmware as data (Thumb

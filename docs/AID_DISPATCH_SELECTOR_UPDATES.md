@@ -28,8 +28,10 @@ response pointer, other writer or supported read operation. AID 255 still
 has the separately documented [pointer-table boundary issue](AID_TABLE_BOUNDARY_REVIEW.md).
 Profile names are labels from vendor files, not proof of implemented behavior.
 
-The machine-readable rows explicitly leave the other 55 non-default handler
-accounts pending this review. Earlier lexical clamp listings are useful
+At this review stage, the other 55 non-default handler accounts remained
+pending. The subsequent [compound review](COMPOUND_AID_UPDATE_REVIEW.md) adds
+eleven accounts, and the machine-readable rows now identify 13 reviewed
+handlers and 44 pending. Earlier lexical clamp listings are useful
 research aids but do not replace their complete instruction-level accounts.
 
 ## Loop and receive boundary

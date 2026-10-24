@@ -25,7 +25,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x200bba",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 1,
@@ -39,7 +40,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x200bbb",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 2,
@@ -51,7 +53,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 3,
@@ -65,7 +68,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x200bbe",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 4,
@@ -79,7 +83,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x200bbf",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 5,
@@ -93,7 +98,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x200bc0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 6,
@@ -107,7 +113,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x200bc1",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 7,
@@ -121,7 +128,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x200bc2",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 8,
@@ -135,7 +143,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x200bc3",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 9,
@@ -149,7 +158,8 @@
       "staging_pointer": "0x200b00",
       "response_pointer": "0x200bc4",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "bounded update handler reviewed"
+      "review_disposition": "bounded update handler reviewed",
+      "handler_review": "docs/AID_DISPATCH_SELECTOR_UPDATES.md"
     },
     {
       "aid": 10,
@@ -161,7 +171,8 @@
       "staging_pointer": "0x200b01",
       "response_pointer": "0x200bc5",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "target established; handler semantics pending"
+      "review_disposition": "bounded update handler reviewed",
+      "handler_review": "docs/COMPOUND_AID_UPDATE_REVIEW.md"
     },
     {
       "aid": 11,
@@ -173,7 +184,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 12,
@@ -187,7 +199,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x200bca",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 13,
@@ -201,7 +214,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x200bcd",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 14,
@@ -213,7 +227,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 15,
@@ -227,7 +242,8 @@
       "staging_pointer": "0x200b1d",
       "response_pointer": "0x200bea",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "bounded update handler reviewed"
+      "review_disposition": "bounded update handler reviewed",
+      "handler_review": "docs/AID_DISPATCH_SELECTOR_UPDATES.md"
     },
     {
       "aid": 16,
@@ -241,7 +257,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x200bd1",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 17,
@@ -257,7 +274,8 @@
       "staging_pointer": "0x200b20",
       "response_pointer": "0x200bed",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "target established; handler semantics pending"
+      "review_disposition": "target established; handler semantics pending",
+      "handler_review": null
     },
     {
       "aid": 18,
@@ -271,7 +289,8 @@
       "staging_pointer": "0x200b21",
       "response_pointer": "0x200bee",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "target established; handler semantics pending"
+      "review_disposition": "target established; handler semantics pending",
+      "handler_review": null
     },
     {
       "aid": 19,
@@ -285,7 +304,8 @@
       "staging_pointer": "0x200b22",
       "response_pointer": "0x200bef",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "target established; handler semantics pending"
+      "review_disposition": "target established; handler semantics pending",
+      "handler_review": null
     },
     {
       "aid": 20,
@@ -299,7 +319,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 21,
@@ -313,7 +334,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 22,
@@ -327,7 +349,8 @@
       "staging_pointer": "0x200b23",
       "response_pointer": "0x200bf0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "target established; handler semantics pending"
+      "review_disposition": "target established; handler semantics pending",
+      "handler_review": null
     },
     {
       "aid": 23,
@@ -339,7 +362,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 24,
@@ -353,7 +377,8 @@
       "staging_pointer": "0x200b34",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "target established; handler semantics pending"
+      "review_disposition": "target established; handler semantics pending",
+      "handler_review": null
     },
     {
       "aid": 25,
@@ -365,7 +390,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 26,
@@ -377,7 +403,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 27,
@@ -389,7 +416,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 28,
@@ -401,7 +429,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 29,
@@ -415,7 +444,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 30,
@@ -429,7 +459,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 31,
@@ -443,7 +474,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 32,
@@ -457,7 +489,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x200bd0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 33,
@@ -471,7 +504,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 34,
@@ -485,7 +519,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 35,
@@ -497,7 +532,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 36,
@@ -509,7 +545,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 37,
@@ -521,7 +558,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 38,
@@ -535,7 +573,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 39,
@@ -549,7 +588,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x200bcf",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 40,
@@ -563,7 +603,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x200bce",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 41,
@@ -577,7 +618,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 42,
@@ -591,7 +633,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 43,
@@ -603,7 +646,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 44,
@@ -615,7 +659,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 45,
@@ -627,7 +672,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 46,
@@ -639,7 +685,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 47,
@@ -653,7 +700,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 48,
@@ -667,7 +715,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 49,
@@ -681,7 +730,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 50,
@@ -695,7 +745,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 51,
@@ -709,7 +760,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 52,
@@ -723,7 +775,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 53,
@@ -737,7 +790,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 54,
@@ -751,7 +805,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 55,
@@ -763,7 +818,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 56,
@@ -775,7 +831,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 57,
@@ -787,7 +844,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 58,
@@ -799,7 +857,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 59,
@@ -813,7 +872,8 @@
       "staging_pointer": "0x200b24",
       "response_pointer": "0x200bf1",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "target established; handler semantics pending"
+      "review_disposition": "target established; handler semantics pending",
+      "handler_review": null
     },
     {
       "aid": 60,
@@ -827,7 +887,8 @@
       "staging_pointer": "0x200b25",
       "response_pointer": "0x200bf2",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "target established; handler semantics pending"
+      "review_disposition": "target established; handler semantics pending",
+      "handler_review": null
     },
     {
       "aid": 61,
@@ -842,7 +903,8 @@
       "staging_pointer": "0x200b26",
       "response_pointer": "0x200bf3",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "target established; handler semantics pending"
+      "review_disposition": "target established; handler semantics pending",
+      "handler_review": null
     },
     {
       "aid": 62,
@@ -857,7 +919,8 @@
       "staging_pointer": "0x200b27",
       "response_pointer": "0x200bf4",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "target established; handler semantics pending"
+      "review_disposition": "target established; handler semantics pending",
+      "handler_review": null
     },
     {
       "aid": 63,
@@ -869,7 +932,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 64,
@@ -881,7 +945,8 @@
       "staging_pointer": "0x200b1b",
       "response_pointer": "0x200b1c",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "target established; handler semantics pending"
+      "review_disposition": "bounded update handler reviewed",
+      "handler_review": "docs/COMPOUND_AID_UPDATE_REVIEW.md"
     },
     {
       "aid": 65,
@@ -893,7 +958,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 66,
@@ -905,7 +971,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 67,
@@ -917,7 +984,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 68,
@@ -929,7 +997,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 69,
@@ -941,7 +1010,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 70,
@@ -953,7 +1023,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 71,
@@ -965,7 +1036,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 72,
@@ -977,7 +1049,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 73,
@@ -989,7 +1062,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 74,
@@ -1001,7 +1075,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 75,
@@ -1015,7 +1090,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x200bc6",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 76,
@@ -1029,7 +1105,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x200bc8",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 77,
@@ -1043,7 +1120,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 78,
@@ -1057,7 +1135,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x200bcb",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 79,
@@ -1069,7 +1148,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x200bdc",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 80,
@@ -1081,7 +1161,8 @@
       "staging_pointer": "0x200b08",
       "response_pointer": "0x200bde",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "target established; handler semantics pending"
+      "review_disposition": "bounded update handler reviewed",
+      "handler_review": "docs/COMPOUND_AID_UPDATE_REVIEW.md"
     },
     {
       "aid": 81,
@@ -1095,7 +1176,8 @@
       "staging_pointer": "0x200b0a",
       "response_pointer": "0x200be0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "target established; handler semantics pending"
+      "review_disposition": "bounded update handler reviewed",
+      "handler_review": "docs/COMPOUND_AID_UPDATE_REVIEW.md"
     },
     {
       "aid": 82,
@@ -1107,7 +1189,8 @@
       "staging_pointer": "0x200b0c",
       "response_pointer": "0x200be2",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "target established; handler semantics pending"
+      "review_disposition": "bounded update handler reviewed",
+      "handler_review": "docs/COMPOUND_AID_UPDATE_REVIEW.md"
     },
     {
       "aid": 83,
@@ -1121,7 +1204,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 84,
@@ -1135,7 +1219,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x200bbc",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 85,
@@ -1149,7 +1234,8 @@
       "staging_pointer": "0x200b30",
       "response_pointer": "0x200bfd",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "target established; handler semantics pending"
+      "review_disposition": "target established; handler semantics pending",
+      "handler_review": null
     },
     {
       "aid": 86,
@@ -1163,7 +1249,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 87,
@@ -1177,7 +1264,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 88,
@@ -1191,7 +1279,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 89,
@@ -1205,7 +1294,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 90,
@@ -1219,7 +1309,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 91,
@@ -1233,7 +1324,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 92,
@@ -1247,7 +1339,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 93,
@@ -1262,7 +1355,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 94,
@@ -1276,7 +1370,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 95,
@@ -1288,7 +1383,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 96,
@@ -1302,7 +1398,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 97,
@@ -1316,7 +1413,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 98,
@@ -1330,7 +1428,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 99,
@@ -1342,7 +1441,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 100,
@@ -1356,7 +1456,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 101,
@@ -1370,7 +1471,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 102,
@@ -1384,7 +1486,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 103,
@@ -1398,7 +1501,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 104,
@@ -1412,7 +1516,8 @@
       "staging_pointer": "0x200b32",
       "response_pointer": "0x200bff",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "target established; handler semantics pending"
+      "review_disposition": "target established; handler semantics pending",
+      "handler_review": null
     },
     {
       "aid": 105,
@@ -1426,7 +1531,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x200bd4",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 106,
@@ -1438,7 +1544,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 107,
@@ -1450,7 +1557,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 108,
@@ -1462,7 +1570,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 109,
@@ -1474,7 +1583,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 110,
@@ -1488,7 +1598,8 @@
       "staging_pointer": "0x200b35",
       "response_pointer": "0x200c01",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "target established; handler semantics pending"
+      "review_disposition": "target established; handler semantics pending",
+      "handler_review": null
     },
     {
       "aid": 111,
@@ -1502,7 +1613,8 @@
       "staging_pointer": "0x200b37",
       "response_pointer": "0x200c03",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "target established; handler semantics pending"
+      "review_disposition": "target established; handler semantics pending",
+      "handler_review": null
     },
     {
       "aid": 112,
@@ -1516,7 +1628,8 @@
       "staging_pointer": "0x200b39",
       "response_pointer": "0x200c05",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "target established; handler semantics pending"
+      "review_disposition": "target established; handler semantics pending",
+      "handler_review": null
     },
     {
       "aid": 113,
@@ -1530,7 +1643,8 @@
       "staging_pointer": "0x200b3b",
       "response_pointer": "0x200c07",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "target established; handler semantics pending"
+      "review_disposition": "target established; handler semantics pending",
+      "handler_review": null
     },
     {
       "aid": 114,
@@ -1544,7 +1658,8 @@
       "staging_pointer": "0x200b3d",
       "response_pointer": "0x200c09",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "target established; handler semantics pending"
+      "review_disposition": "target established; handler semantics pending",
+      "handler_review": null
     },
     {
       "aid": 115,
@@ -1558,7 +1673,8 @@
       "staging_pointer": "0x200b3f",
       "response_pointer": "0x200c0b",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "target established; handler semantics pending"
+      "review_disposition": "target established; handler semantics pending",
+      "handler_review": null
     },
     {
       "aid": 116,
@@ -1572,7 +1688,8 @@
       "staging_pointer": "0x200b41",
       "response_pointer": "0x200c0d",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "target established; handler semantics pending"
+      "review_disposition": "target established; handler semantics pending",
+      "handler_review": null
     },
     {
       "aid": 117,
@@ -1586,7 +1703,8 @@
       "staging_pointer": "0x200b43",
       "response_pointer": "0x200c0f",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "target established; handler semantics pending"
+      "review_disposition": "target established; handler semantics pending",
+      "handler_review": null
     },
     {
       "aid": 118,
@@ -1600,7 +1718,8 @@
       "staging_pointer": "0x200b45",
       "response_pointer": "0x200c11",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "target established; handler semantics pending"
+      "review_disposition": "target established; handler semantics pending",
+      "handler_review": null
     },
     {
       "aid": 119,
@@ -1614,7 +1733,8 @@
       "staging_pointer": "0x200b47",
       "response_pointer": "0x200c13",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "target established; handler semantics pending"
+      "review_disposition": "target established; handler semantics pending",
+      "handler_review": null
     },
     {
       "aid": 120,
@@ -1628,7 +1748,8 @@
       "staging_pointer": "0x200b49",
       "response_pointer": "0x200c15",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "target established; handler semantics pending"
+      "review_disposition": "target established; handler semantics pending",
+      "handler_review": null
     },
     {
       "aid": 121,
@@ -1642,7 +1763,8 @@
       "staging_pointer": "0x200b4b",
       "response_pointer": "0x200c17",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "target established; handler semantics pending"
+      "review_disposition": "target established; handler semantics pending",
+      "handler_review": null
     },
     {
       "aid": 122,
@@ -1656,7 +1778,8 @@
       "staging_pointer": "0x200b4d",
       "response_pointer": "0x200c19",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "target established; handler semantics pending"
+      "review_disposition": "target established; handler semantics pending",
+      "handler_review": null
     },
     {
       "aid": 123,
@@ -1670,7 +1793,8 @@
       "staging_pointer": "0x200b4f",
       "response_pointer": "0x200c1b",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "target established; handler semantics pending"
+      "review_disposition": "target established; handler semantics pending",
+      "handler_review": null
     },
     {
       "aid": 124,
@@ -1684,7 +1808,8 @@
       "staging_pointer": "0x200b51",
       "response_pointer": "0x200c1d",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "target established; handler semantics pending"
+      "review_disposition": "target established; handler semantics pending",
+      "handler_review": null
     },
     {
       "aid": 125,
@@ -1698,7 +1823,8 @@
       "staging_pointer": "0x200b53",
       "response_pointer": "0x200c1f",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "target established; handler semantics pending"
+      "review_disposition": "target established; handler semantics pending",
+      "handler_review": null
     },
     {
       "aid": 126,
@@ -1712,7 +1838,8 @@
       "staging_pointer": "0x200b55",
       "response_pointer": "0x200c21",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "target established; handler semantics pending"
+      "review_disposition": "target established; handler semantics pending",
+      "handler_review": null
     },
     {
       "aid": 127,
@@ -1726,7 +1853,8 @@
       "staging_pointer": "0x200b57",
       "response_pointer": "0x200c23",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "target established; handler semantics pending"
+      "review_disposition": "target established; handler semantics pending",
+      "handler_review": null
     },
     {
       "aid": 128,
@@ -1740,7 +1868,8 @@
       "staging_pointer": "0x200b59",
       "response_pointer": "0x200c25",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "target established; handler semantics pending"
+      "review_disposition": "target established; handler semantics pending",
+      "handler_review": null
     },
     {
       "aid": 129,
@@ -1754,7 +1883,8 @@
       "staging_pointer": "0x200b5b",
       "response_pointer": "0x200c27",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "target established; handler semantics pending"
+      "review_disposition": "target established; handler semantics pending",
+      "handler_review": null
     },
     {
       "aid": 130,
@@ -1768,7 +1898,8 @@
       "staging_pointer": "0x200b5d",
       "response_pointer": "0x200c29",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "target established; handler semantics pending"
+      "review_disposition": "target established; handler semantics pending",
+      "handler_review": null
     },
     {
       "aid": 131,
@@ -1782,7 +1913,8 @@
       "staging_pointer": "0x200b5f",
       "response_pointer": "0x200c2b",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "target established; handler semantics pending"
+      "review_disposition": "target established; handler semantics pending",
+      "handler_review": null
     },
     {
       "aid": 132,
@@ -1796,7 +1928,8 @@
       "staging_pointer": "0x200b61",
       "response_pointer": "0x200c2d",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "target established; handler semantics pending"
+      "review_disposition": "target established; handler semantics pending",
+      "handler_review": null
     },
     {
       "aid": 133,
@@ -1810,7 +1943,8 @@
       "staging_pointer": "0x200b63",
       "response_pointer": "0x200c2f",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "target established; handler semantics pending"
+      "review_disposition": "target established; handler semantics pending",
+      "handler_review": null
     },
     {
       "aid": 134,
@@ -1824,7 +1958,8 @@
       "staging_pointer": "0x200b65",
       "response_pointer": "0x200c31",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "target established; handler semantics pending"
+      "review_disposition": "target established; handler semantics pending",
+      "handler_review": null
     },
     {
       "aid": 135,
@@ -1838,7 +1973,8 @@
       "staging_pointer": "0x200b67",
       "response_pointer": "0x200c33",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "target established; handler semantics pending"
+      "review_disposition": "target established; handler semantics pending",
+      "handler_review": null
     },
     {
       "aid": 136,
@@ -1852,7 +1988,8 @@
       "staging_pointer": "0x200b69",
       "response_pointer": "0x200c35",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "target established; handler semantics pending"
+      "review_disposition": "target established; handler semantics pending",
+      "handler_review": null
     },
     {
       "aid": 137,
@@ -1866,7 +2003,8 @@
       "staging_pointer": "0x200b28",
       "response_pointer": "0x200bf5",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "target established; handler semantics pending"
+      "review_disposition": "target established; handler semantics pending",
+      "handler_review": null
     },
     {
       "aid": 138,
@@ -1880,7 +2018,8 @@
       "staging_pointer": "0x200b2a",
       "response_pointer": "0x200bf7",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "target established; handler semantics pending"
+      "review_disposition": "target established; handler semantics pending",
+      "handler_review": null
     },
     {
       "aid": 139,
@@ -1894,7 +2033,8 @@
       "staging_pointer": "0x200b2c",
       "response_pointer": "0x200bf9",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "target established; handler semantics pending"
+      "review_disposition": "target established; handler semantics pending",
+      "handler_review": null
     },
     {
       "aid": 140,
@@ -1908,7 +2048,8 @@
       "staging_pointer": "0x200b2e",
       "response_pointer": "0x200bfb",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "target established; handler semantics pending"
+      "review_disposition": "target established; handler semantics pending",
+      "handler_review": null
     },
     {
       "aid": 141,
@@ -1922,7 +2063,8 @@
       "staging_pointer": "0x200b1e",
       "response_pointer": "0x200beb",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "target established; handler semantics pending"
+      "review_disposition": "target established; handler semantics pending",
+      "handler_review": null
     },
     {
       "aid": 142,
@@ -1936,7 +2078,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 143,
@@ -1950,7 +2093,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 144,
@@ -1962,7 +2106,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 145,
@@ -1976,7 +2121,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 146,
@@ -1990,7 +2136,8 @@
       "staging_pointer": "0x200b17",
       "response_pointer": "0x200b19",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "target established; handler semantics pending"
+      "review_disposition": "bounded update handler reviewed",
+      "handler_review": "docs/COMPOUND_AID_UPDATE_REVIEW.md"
     },
     {
       "aid": 147,
@@ -2004,7 +2151,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x200bd2",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 148,
@@ -2018,7 +2166,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x200bb8",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 149,
@@ -2032,7 +2181,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x200bb6",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 150,
@@ -2046,7 +2196,8 @@
       "staging_pointer": "0x200b0e",
       "response_pointer": "0x200be4",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "target established; handler semantics pending"
+      "review_disposition": "bounded update handler reviewed",
+      "handler_review": "docs/COMPOUND_AID_UPDATE_REVIEW.md"
     },
     {
       "aid": 151,
@@ -2058,7 +2209,8 @@
       "staging_pointer": "0x200b11",
       "response_pointer": "0x200be7",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "target established; handler semantics pending"
+      "review_disposition": "bounded update handler reviewed",
+      "handler_review": "docs/COMPOUND_AID_UPDATE_REVIEW.md"
     },
     {
       "aid": 152,
@@ -2072,7 +2224,8 @@
       "staging_pointer": "0x200b02",
       "response_pointer": "0x200bd9",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "target established; handler semantics pending"
+      "review_disposition": "bounded update handler reviewed",
+      "handler_review": "docs/COMPOUND_AID_UPDATE_REVIEW.md"
     },
     {
       "aid": 153,
@@ -2086,7 +2239,8 @@
       "staging_pointer": "0x200b14",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "target established; handler semantics pending"
+      "review_disposition": "bounded update handler reviewed",
+      "handler_review": "docs/COMPOUND_AID_UPDATE_REVIEW.md"
     },
     {
       "aid": 154,
@@ -2100,7 +2254,8 @@
       "staging_pointer": "0x200b05",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "target established; handler semantics pending"
+      "review_disposition": "bounded update handler reviewed",
+      "handler_review": "docs/COMPOUND_AID_UPDATE_REVIEW.md"
     },
     {
       "aid": 155,
@@ -2114,7 +2269,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 156,
@@ -2126,7 +2282,8 @@
       "staging_pointer": "0x200b6b",
       "response_pointer": "0x200c37",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 157,
@@ -2138,7 +2295,8 @@
       "staging_pointer": "0x200b6e",
       "response_pointer": "0x200c3a",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 158,
@@ -2150,7 +2308,8 @@
       "staging_pointer": "0x200b71",
       "response_pointer": "0x200c3d",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 159,
@@ -2162,7 +2321,8 @@
       "staging_pointer": "0x200b74",
       "response_pointer": "0x200c40",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 160,
@@ -2174,7 +2334,8 @@
       "staging_pointer": "0x200b77",
       "response_pointer": "0x200c43",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 161,
@@ -2186,7 +2347,8 @@
       "staging_pointer": "0x200b7a",
       "response_pointer": "0x200c46",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 162,
@@ -2198,7 +2360,8 @@
       "staging_pointer": "0x200b7d",
       "response_pointer": "0x200c49",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 163,
@@ -2210,7 +2373,8 @@
       "staging_pointer": "0x200b80",
       "response_pointer": "0x200c4c",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 164,
@@ -2222,7 +2386,8 @@
       "staging_pointer": "0x200b83",
       "response_pointer": "0x200c4f",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 165,
@@ -2234,7 +2399,8 @@
       "staging_pointer": "0x200b86",
       "response_pointer": "0x200c52",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 166,
@@ -2246,7 +2412,8 @@
       "staging_pointer": "0x200b89",
       "response_pointer": "0x200c55",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 167,
@@ -2258,7 +2425,8 @@
       "staging_pointer": "0x200b8c",
       "response_pointer": "0x200c58",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 168,
@@ -2270,7 +2438,8 @@
       "staging_pointer": "0x200b8f",
       "response_pointer": "0x200c5b",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 169,
@@ -2282,7 +2451,8 @@
       "staging_pointer": "0x200b92",
       "response_pointer": "0x200c5e",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 170,
@@ -2294,7 +2464,8 @@
       "staging_pointer": "0x200b95",
       "response_pointer": "0x200c61",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 171,
@@ -2306,7 +2477,8 @@
       "staging_pointer": "0x200b98",
       "response_pointer": "0x200c64",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 172,
@@ -2318,7 +2490,8 @@
       "staging_pointer": "0x200b9b",
       "response_pointer": "0x200c67",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 173,
@@ -2330,7 +2503,8 @@
       "staging_pointer": "0x200b9e",
       "response_pointer": "0x200c6a",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 174,
@@ -2342,7 +2516,8 @@
       "staging_pointer": "0x200ba1",
       "response_pointer": "0x200c6d",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 175,
@@ -2354,7 +2529,8 @@
       "staging_pointer": "0x200ba4",
       "response_pointer": "0x200c70",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 176,
@@ -2366,7 +2542,8 @@
       "staging_pointer": "0x200ba7",
       "response_pointer": "0x200c73",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 177,
@@ -2378,7 +2555,8 @@
       "staging_pointer": "0x200baa",
       "response_pointer": "0x200c76",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 178,
@@ -2390,7 +2568,8 @@
       "staging_pointer": "0x200bad",
       "response_pointer": "0x200c79",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 179,
@@ -2402,7 +2581,8 @@
       "staging_pointer": "0x200bb0",
       "response_pointer": "0x200c7c",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 180,
@@ -2414,7 +2594,8 @@
       "staging_pointer": "0x200bb3",
       "response_pointer": "0x200c7f",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 181,
@@ -2428,7 +2609,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x200bd6",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 182,
@@ -2440,7 +2622,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 183,
@@ -2452,7 +2635,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 184,
@@ -2464,7 +2648,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 185,
@@ -2476,7 +2661,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 186,
@@ -2488,7 +2674,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 187,
@@ -2502,7 +2689,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 188,
@@ -2516,7 +2704,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x200af4",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 189,
@@ -2528,7 +2717,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 190,
@@ -2540,7 +2730,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 191,
@@ -2552,7 +2743,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 192,
@@ -2564,7 +2756,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 193,
@@ -2576,7 +2769,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 194,
@@ -2588,7 +2782,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 195,
@@ -2600,7 +2795,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 196,
@@ -2612,7 +2808,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 197,
@@ -2624,7 +2821,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 198,
@@ -2636,7 +2834,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 199,
@@ -2648,7 +2847,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 200,
@@ -2660,7 +2860,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 201,
@@ -2672,7 +2873,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 202,
@@ -2684,7 +2886,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 203,
@@ -2696,7 +2899,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 204,
@@ -2708,7 +2912,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 205,
@@ -2720,7 +2925,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 206,
@@ -2732,7 +2938,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 207,
@@ -2744,7 +2951,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 208,
@@ -2756,7 +2964,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 209,
@@ -2768,7 +2977,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 210,
@@ -2780,7 +2990,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 211,
@@ -2792,7 +3003,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 212,
@@ -2804,7 +3016,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 213,
@@ -2816,7 +3029,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 214,
@@ -2828,7 +3042,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 215,
@@ -2840,7 +3055,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 216,
@@ -2852,7 +3068,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 217,
@@ -2864,7 +3081,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 218,
@@ -2876,7 +3094,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 219,
@@ -2888,7 +3107,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 220,
@@ -2900,7 +3120,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 221,
@@ -2912,7 +3133,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 222,
@@ -2924,7 +3146,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 223,
@@ -2936,7 +3159,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 224,
@@ -2948,7 +3172,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 225,
@@ -2960,7 +3185,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 226,
@@ -2974,7 +3200,8 @@
       "staging_pointer": "0x200aec",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "target established; handler semantics pending"
+      "review_disposition": "target established; handler semantics pending",
+      "handler_review": null
     },
     {
       "aid": 227,
@@ -2986,7 +3213,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 228,
@@ -2998,7 +3226,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 229,
@@ -3010,7 +3239,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 230,
@@ -3022,7 +3252,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 231,
@@ -3034,7 +3265,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 232,
@@ -3046,7 +3278,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 233,
@@ -3058,7 +3291,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 234,
@@ -3070,7 +3304,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 235,
@@ -3082,7 +3317,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 236,
@@ -3094,7 +3330,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 237,
@@ -3106,7 +3343,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 238,
@@ -3118,7 +3356,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 239,
@@ -3130,7 +3369,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 240,
@@ -3142,7 +3382,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 241,
@@ -3154,7 +3395,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 242,
@@ -3166,7 +3408,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 243,
@@ -3178,7 +3421,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 244,
@@ -3190,7 +3434,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 245,
@@ -3202,7 +3447,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 246,
@@ -3214,7 +3460,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 247,
@@ -3226,7 +3473,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 248,
@@ -3238,7 +3486,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 249,
@@ -3250,7 +3499,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 250,
@@ -3262,7 +3512,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 251,
@@ -3274,7 +3525,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 252,
@@ -3286,7 +3538,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 253,
@@ -3298,7 +3551,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 254,
@@ -3310,7 +3564,8 @@
       "staging_pointer": "0x0",
       "response_pointer": "0x0",
       "pointer_slot_in_bounds": true,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     },
     {
       "aid": 255,
@@ -3322,13 +3577,16 @@
       "staging_pointer": "0x200bba",
       "response_pointer": "0x43c02097",
       "pointer_slot_in_bounds": false,
-      "review_disposition": "selection/default loop only"
+      "review_disposition": "selection/default loop only",
+      "handler_review": null
     }
   ],
+  "reviewed_nondefault_handlers": 13,
+  "pending_nondefault_handlers": 44,
   "limits": [
     "selector execution stops before any handler instruction",
     "default in this dispatcher does not imply no staging or response support",
     "profile declarations are descriptive; pointer presence is not complete parameter semantics",
-    "all 55 other nondefault handler accounts remain pending this review"
+    "44 other nondefault handler accounts remain pending complete review"
   ]
 }

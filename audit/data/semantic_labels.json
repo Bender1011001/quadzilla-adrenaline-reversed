@@ -296,7 +296,7 @@
     },
     {
       "entry": "0x601c",
-      "label": "Received-AID validation dispatcher; loop and selector/count paths reviewed, other handlers pending",
+      "label": "Received-AID validation dispatcher; loop and thirteen handlers reviewed, remaining handlers pending",
       "assurance": "static_instruction_trace",
       "evidence": [
         "quadzilla_mcu_map.json:functions.sub_601C",
@@ -304,7 +304,10 @@
         "audit/data/aid_validation_dispatch.json",
         "audit/data/selector_update_emulation.json",
         "audit/data/selector_update_binaryninja.json",
-        "docs/AID_DISPATCH_SELECTOR_UPDATES.md"
+        "docs/AID_DISPATCH_SELECTOR_UPDATES.md",
+        "audit/data/compound_update_emulation.json",
+        "audit/data/compound_update_binaryninja.json",
+        "docs/COMPOUND_AID_UPDATE_REVIEW.md"
       ]
     },
     {

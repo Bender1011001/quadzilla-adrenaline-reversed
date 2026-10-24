@@ -194,6 +194,8 @@ Flash sequence: LINK_CHECK, MODULE_INFO, BOOTLOAD_MODE, KEY_TRANSFER, DATA_TRANS
 
 The [validation switch map](AID_DISPATCH_SELECTOR_UPDATES.md) records all 256 byte-AID destinations, staging/response pointers and profile names. AID 9 masks/caps a staged selector after readiness and raw-equality gates; AID 15 clamps count to 5–14 and derives quotient/remainder mapping bytes. These paths have original-byte evidence; 55 other non-default handler accounts remain pending this review.
 
+The [compound AID contracts](COMPOUND_AID_UPDATE_REVIEW.md) map staging, working fields, masks, accumulator resets and conditional derived values for AIDs 10, 64, 80–82, 146 and 150–154. AID 154 always continues into AID 146 processing; its trailing 16-bit field is compared against and stored into a working byte. Response-pointer population remains distinct from these update paths.
+
 ## AIDs
 
 117 unique AIDs are declared across the 14 vendor profiles in `vehicles/` (`python tools/diff_profiles.py`). AIDs 145 and 181

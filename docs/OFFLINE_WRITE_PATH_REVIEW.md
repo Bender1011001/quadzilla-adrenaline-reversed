@@ -92,6 +92,8 @@ the values. Earlier descriptions of a universal "14 AIDs per frame" were too bro
 Mixed widths consume the same shared byte budget. Variable-width AIDs need
 separate length-prefix analysis; this table does not cover them.
 
+The subsequent [compound-handler review](COMPOUND_AID_UPDATE_REVIEW.md) reproduces a concrete cross-AID continuation: an incomplete AID 146 walker result leaves a staged byte that a later successful AID 154 ingest applies through fall-through. It executes the original walker and handlers with scripted receive results; full framing/CRC and physical effects remain outside that sequence.
+
 ## Finding: staging writes precede the success/validation decision
 
 `0x7CC4` writes each available value byte immediately. When the payload ends with

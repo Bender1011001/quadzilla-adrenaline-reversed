@@ -7,6 +7,7 @@ import struct
 from pathlib import Path
 
 from audit_aid_tables import AidRunner,SHA
+from model_compound_updates import HANDLERS
 
 ROOT=Path(__file__).resolve().parents[2]
 
@@ -66,18 +67,22 @@ def main():
                      'staging_pointer':pointers[0],'response_pointer':pointers[1],
                      'pointer_slot_in_bounds':aid<255,
                      'review_disposition':'selection/default loop only' if actual==0x604E else
-                         'bounded update handler reviewed' if aid in (9,15) else
-                         'target established; handler semantics pending'})
+                         'bounded update handler reviewed' if aid in (9,15)+HANDLERS else
+                         'target established; handler semantics pending',
+                     'handler_review': 'docs/COMPOUND_AID_UPDATE_REVIEW.md' if aid in HANDLERS else
+                         'docs/AID_DISPATCH_SELECTOR_UPDATES.md' if aid in (9,15) else None})
     result={'format':'quadzilla-aid-validation-dispatch-v1','raw_sha256':SHA,
             'table_range':['0x608c','0x6240'],'table_bytes':436,'slots':218,
             'offset_rule':'signed little-endian halfword; target = 0x608e + offset',
             'out_of_range_rule':'u32(AID-9) > 217 selects default 0x604e',
             'executed_selector_cases':256,'nondefault_handlers':sum(not r['default_path'] for r in rows),
             'reference_mismatches':0,'rows':rows,
+            'reviewed_nondefault_handlers':2+len(HANDLERS),
+            'pending_nondefault_handlers':sum(not r['default_path'] and r['handler_review'] is None for r in rows),
             'limits':['selector execution stops before any handler instruction',
                       'default in this dispatcher does not imply no staging or response support',
                       'profile declarations are descriptive; pointer presence is not complete parameter semantics',
-                      'all 55 other nondefault handler accounts remain pending this review']}
+                      '44 other nondefault handler accounts remain pending complete review']}
     args.output.write_text(json.dumps(result,indent=2)+'\n',encoding='utf-8')
     print('256 selector destinations agree; 57 nondefault handlers; 436 source-bound table bytes')
 
