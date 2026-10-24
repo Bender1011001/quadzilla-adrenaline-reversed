@@ -50,7 +50,12 @@ class FirmwareAudit(unittest.TestCase):
         for source in self.catalog["inputs"].values():
             self.assertTrue(source["path"].startswith("audit/data/"))
             path = ROOT / source["path"]
-            self.assertEqual(hashlib.sha256(path.read_bytes()).hexdigest(), source["sha256"])
+            self.assertEqual(hashlib.sha256(path.read_bytes().replace(b"\r\n", b"\n")).hexdigest(), source["sha256"])
+        self.assertIn("CRLF normalized to LF", self.catalog["input_hash_policy"])
+        for source in self.periph["inputs"].values():
+            self.assertTrue(source["path"].startswith("audit/data/"))
+            path = ROOT / source["path"]
+            self.assertEqual(hashlib.sha256(path.read_bytes().replace(b"\r\n", b"\n")).hexdigest(), source["sha256"])
 
     def test_peripheral_references_all_mapped(self):
         s = self.periph["summary"]

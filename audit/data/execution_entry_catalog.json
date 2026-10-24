@@ -17183,19 +17183,20 @@
   "inputs": {
     "audit": {
       "path": "audit/data/cross_disassembler_audit.json",
-      "sha256": "9d42194afb3117461e9fbc2edbbd3762ef60068088e9601f9d76e49baa022aad"
+      "sha256": "5baed1662535584586d1d8d792e3cfa63dc0c9e817a5a39e4ce1231bf389d30c"
     },
     "ida": {
       "path": "audit/data/ida_function_map.json",
-      "sha256": "d49b3511effa8e1aaf33984334a30484ad1dfe1d668bf0898a4b3e8b8451b049"
+      "sha256": "52f0c6858ba1363f4dd8ad4d60836ed2d9ab898ddf7c770781d46159e134ce42"
     },
     "ghidra": {
       "path": "audit/data/ghidra_function_map.json",
-      "sha256": "54d7119dabcd9088a473d63083e7312d38f265ab8e030f6910dc56b38d7dd213"
+      "sha256": "807e82541c569321c39ba4797eedbb7b0c55e4ebad1f58e7aa9d28eb9466ae78"
     },
     "labels": {
       "path": "audit/data/semantic_labels.json",
-      "sha256": "bdc555f2afdddaef523c63327c011c7ae8ddb3dfce867db62d019bfcfec0061a"
+      "sha256": "f6ccb1f891fedbcd5f03a232c0b34987a34a5ca7cd073f1ccc321eb6aabef326"
     }
-  }
+  },
+  "input_hash_policy": "SHA-256 of JSON text with CRLF normalized to LF"
 }

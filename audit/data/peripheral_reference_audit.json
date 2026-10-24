@@ -1257,12 +1257,13 @@
   "interpretation": "A mapped address proves that an instruction references a peripheral register block. It does not by itself distinguish initialization, status, data transfer or interrupt handling.",
   "inputs": {
     "catalog": {
-      "path": "C:\\Users\\admin\\.codex\\worktrees\\verify-public-repo\\quadzilla_rev\\audit\\data\\execution_entry_catalog.json",
-      "sha256": "85b777fdcf1ba283ece0b47b351c44be392a07bad73736ced5d0c630c69ba29e"
+      "path": "audit/data/execution_entry_catalog.json",
+      "sha256": "8980c9637bf7f4309b18f70c4514a06637cd7d0ac8eb6c4668f9f7ea90425f20"
     },
     "peripheral_map": {
-      "path": "C:\\Users\\admin\\.codex\\worktrees\\verify-public-repo\\quadzilla_rev\\audit\\data\\sam7s_peripheral_map.json",
-      "sha256": "1a21af63c4c1234fe4eef2e595a9af90c58bdd250316be86259e736be49396a1"
+      "path": "audit/data/sam7s_peripheral_map.json",
+      "sha256": "19a30754292a5e56b15a4a6e32af7d3f252aaae58105890f1fdb247cc5abc611"
     }
-  }
+  },
+  "input_hash_policy": "SHA-256 of JSON text with CRLF normalized to LF"
 }

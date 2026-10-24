@@ -11,6 +11,15 @@ from typing import Any
 
 
 FORMAT = "quadzilla-peripheral-reference-audit-v1"
+ROOT = Path(__file__).resolve().parents[2]
+
+
+def source_path(path: Path) -> str:
+    resolved = path.resolve()
+    try:
+        return resolved.relative_to(ROOT).as_posix()
+    except ValueError:
+        return str(resolved)
 
 
 def load_json(path: Path) -> Any:
@@ -21,7 +30,7 @@ def load_json(path: Path) -> Any:
 
 
 def sha256_file(path: Path) -> str:
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    return hashlib.sha256(path.read_bytes().replace(b"\r\n", b"\n")).hexdigest()
 
 
 def address(value: Any) -> int:
@@ -129,12 +138,13 @@ def main(argv: list[str] | None = None) -> int:
     args = parser().parse_args(argv)
     result = annotate(load_json(args.catalog), load_json(args.peripheral_map))
     result["inputs"] = {
-        "catalog": {"path": str(args.catalog.resolve()), "sha256": sha256_file(args.catalog)},
+        "catalog": {"path": source_path(args.catalog), "sha256": sha256_file(args.catalog)},
         "peripheral_map": {
-            "path": str(args.peripheral_map.resolve()),
+            "path": source_path(args.peripheral_map),
             "sha256": sha256_file(args.peripheral_map),
         },
     }
+    result["input_hash_policy"] = "SHA-256 of JSON text with CRLF normalized to LF"
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
     summary = result["summary"]
