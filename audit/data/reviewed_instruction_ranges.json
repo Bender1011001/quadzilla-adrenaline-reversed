@@ -329,6 +329,62 @@
       ]
     },
     {
+      "start": "0x601c",
+      "end": "0x6042",
+      "entry": "0x601c",
+      "isa": "thumb",
+      "account": "Reviewed dispatcher gate/loop and AID9/15 handlers; scripted receive boundary; remaining handler bytes and alternate entries excluded",
+      "evidence": [
+        "audit/data/selector_update_binaryninja.json",
+        "audit/data/selector_update_emulation.json",
+        "audit/data/aid_validation_dispatch.json",
+        "docs/AID_DISPATCH_SELECTOR_UPDATES.md"
+      ],
+      "decoder_artifact": "audit/data/selector_update_binaryninja.json"
+    },
+    {
+      "start": "0x604e",
+      "end": "0x608c",
+      "entry": "0x601c",
+      "isa": "thumb",
+      "account": "Reviewed dispatcher gate/loop and AID9/15 handlers; scripted receive boundary; remaining handler bytes and alternate entries excluded",
+      "evidence": [
+        "audit/data/selector_update_binaryninja.json",
+        "audit/data/selector_update_emulation.json",
+        "audit/data/aid_validation_dispatch.json",
+        "docs/AID_DISPATCH_SELECTOR_UPDATES.md"
+      ],
+      "decoder_artifact": "audit/data/selector_update_binaryninja.json"
+    },
+    {
+      "start": "0x6240",
+      "end": "0x6274",
+      "entry": "0x601c",
+      "isa": "thumb",
+      "account": "Reviewed dispatcher gate/loop and AID9/15 handlers; scripted receive boundary; remaining handler bytes and alternate entries excluded",
+      "evidence": [
+        "audit/data/selector_update_binaryninja.json",
+        "audit/data/selector_update_emulation.json",
+        "audit/data/aid_validation_dispatch.json",
+        "docs/AID_DISPATCH_SELECTOR_UPDATES.md"
+      ],
+      "decoder_artifact": "audit/data/selector_update_binaryninja.json"
+    },
+    {
+      "start": "0x6482",
+      "end": "0x64b8",
+      "entry": "0x601c",
+      "isa": "thumb",
+      "account": "Reviewed dispatcher gate/loop and AID9/15 handlers; scripted receive boundary; remaining handler bytes and alternate entries excluded",
+      "evidence": [
+        "audit/data/selector_update_binaryninja.json",
+        "audit/data/selector_update_emulation.json",
+        "audit/data/aid_validation_dispatch.json",
+        "docs/AID_DISPATCH_SELECTOR_UPDATES.md"
+      ],
+      "decoder_artifact": "audit/data/selector_update_binaryninja.json"
+    },
+    {
       "start": "0x6b08",
       "end": "0x6b0c",
       "entry": "0x6b08",

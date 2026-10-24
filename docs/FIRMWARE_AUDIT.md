@@ -8,6 +8,8 @@ vendor's `.qz` update file. The image itself is not redistributed here.
 
 The [capture parser review](CAPTURE_PARSER_REVIEW.md) completes entry `0x59E8`: all 315 added instruction boundaries match the IDA item export and explicit-mode Binary Ninja decode, and all are visited in original-byte controlled execution. At that stage, reviewed instruction bytes totaled 8,788 and baseline role coverage remained 108 with 37 pending. The subsequent [control selector review](CONTROL_SELECTOR_REVIEW.md) raises these to 8,900 bytes and 109 roles, with 36 pending; it accounts for two unreachable instruction starts explicitly.
 
+The [validation dispatch review](AID_DISPATCH_SELECTOR_UPDATES.md) adds 206 reviewed instruction bytes and classifies the 436-byte signed-offset table, bringing instruction coverage to 9,106 bytes. All 256 selection destinations are checked; only the gate/loop and AID 9/15 handlers receive their update account here. Baseline role counts remain 109/36.
+
 ## Why
 
 A single disassembler is not evidence. Ghidra's auto-analysis classified about 96 % of this firmware as data (Thumb

@@ -296,11 +296,15 @@
     },
     {
       "entry": "0x601c",
-      "label": "AID ingest and validation dispatcher, including AID 85 clamp/echo",
+      "label": "Received-AID validation dispatcher; loop and selector/count paths reviewed, other handlers pending",
       "assurance": "static_instruction_trace",
       "evidence": [
         "quadzilla_mcu_map.json:functions.sub_601C",
-        "quadzilla_vp44_chain.json:roles.requested_stretch_setting"
+        "quadzilla_vp44_chain.json:roles.requested_stretch_setting",
+        "audit/data/aid_validation_dispatch.json",
+        "audit/data/selector_update_emulation.json",
+        "audit/data/selector_update_binaryninja.json",
+        "docs/AID_DISPATCH_SELECTOR_UPDATES.md"
       ]
     },
     {

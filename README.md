@@ -33,6 +33,8 @@ The [capture parser review](docs/CAPTURE_PARSER_REVIEW.md) completes the instruc
 
 The [control selector review](docs/CONTROL_SELECTOR_REVIEW.md) raises baseline coverage to 109 roles with 36 pending. It separates the mapped arithmetic byte from the AID 9 response and checks 70,672 original-byte calls, including wrap, zero-count and marker cases. Total classified instruction coverage is 8,900 bytes; the full analysis remains incomplete.
 
+The [AID dispatch and selector-update review](docs/AID_DISPATCH_SELECTOR_UPDATES.md) maps all 256 validation destinations and checks AID 9/15 updates. It establishes count bounds of 5–14, derived mapping values and order-dependent results under a scripted receive contract. Reviewed instructions total 9,106 bytes, plus 436 explicitly classified switch-table bytes. The other 55 non-default handler accounts remain pending this review.
+
 ## Try it
 
 Python 3.10+, standard library only (`pyserial` for the USB tool).
