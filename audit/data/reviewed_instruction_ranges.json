@@ -353,6 +353,58 @@
       ]
     },
     {
+      "start": "0x7448",
+      "end": "0x7486",
+      "entry": "0x7448",
+      "isa": "thumb",
+      "decoder_artifact": "audit/data/pio_interrupt_binaryninja.json",
+      "account": "Bounded Thumb instructions only; adjacent literals and other entry bodies excluded",
+      "evidence": [
+        "audit/data/pio_interrupt_binaryninja.json",
+        "audit/data/pio_interrupt_emulation.json",
+        "docs/PIO_INTERRUPT_REVIEW.md"
+      ]
+    },
+    {
+      "start": "0x7498",
+      "end": "0x74b2",
+      "entry": "0x7498",
+      "isa": "thumb",
+      "decoder_artifact": "audit/data/pio_interrupt_binaryninja.json",
+      "account": "Bounded Thumb instructions only; adjacent literals and other entry bodies excluded",
+      "evidence": [
+        "audit/data/pio_interrupt_binaryninja.json",
+        "audit/data/pio_interrupt_emulation.json",
+        "docs/PIO_INTERRUPT_REVIEW.md"
+      ]
+    },
+    {
+      "start": "0x74b4",
+      "end": "0x74c2",
+      "entry": "0x74b4",
+      "isa": "thumb",
+      "decoder_artifact": "audit/data/pio_interrupt_binaryninja.json",
+      "account": "Bounded Thumb instructions only; adjacent literals and other entry bodies excluded",
+      "evidence": [
+        "audit/data/pio_interrupt_binaryninja.json",
+        "audit/data/pio_interrupt_emulation.json",
+        "docs/PIO_INTERRUPT_REVIEW.md"
+      ]
+    },
+    {
+      "start": "0x74e8",
+      "end": "0x7598",
+      "entry": "0x74e8",
+      "isa": "thumb",
+      "decoder_artifact": "audit/data/pio_interrupt_binaryninja.json",
+      "account": "Bounded Thumb instructions only; adjacent literals and other entry bodies excluded",
+      "evidence": [
+        "audit/data/pio_interrupt_binaryninja.json",
+        "audit/data/pio_interrupt_emulation.json",
+        "docs/PIO_INTERRUPT_REVIEW.md"
+      ]
+    },
+    {
       "start": "0x8678",
       "end": "0x896c",
       "entry": "0x8678",

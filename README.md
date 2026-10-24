@@ -69,6 +69,8 @@ The [software floating point review](docs/SOFT_FLOAT_REVIEW.md) expands the base
 
 The [configured ratio scorer review](docs/DRIVETRAIN_SCORE_REVIEW.md) raises baseline coverage to 85 roles with 60 pending. An original-byte trace shows that candidate scores are narrowed to one byte before comparison: a computed score of 512 becomes zero. The caller's input units and any live effect remain unresolved.
 
+The [PIOA and interrupt setup review](docs/PIO_INTERRUPT_REVIEW.md) documents four more entries, bringing baseline coverage to 89 roles with 56 pending. It records the exact PMC/PIO/AIC write sequence and bounded source-2 callback behavior using synthetic registers; subordinate setup routines and physical pin behavior remain open.
+
 ## Layout
 
 ```

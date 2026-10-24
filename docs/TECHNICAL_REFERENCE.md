@@ -42,7 +42,7 @@ evidence that every in-range slot is supported or that a hardware fault occurred
 
 ## Functions
 
-The baseline inventory is the two-tool audit: 145 confirmed execution entries, 85 with an evidence-backed role. The initial 14 roles are listed below
+The baseline inventory is the two-tool audit: 145 confirmed execution entries, 89 with an evidence-backed role. The initial 14 roles are listed below
 from `audit/data/semantic_labels.json`. `trace` means a static instruction trace; `chain` means part of the closed static chain below. The labels describe
 static roles and do not prove live engine behaviour.
 
@@ -86,6 +86,9 @@ Unreviewed paths and exceptional-value behavior remain under review.
 The [configured ratio scorer review](DRIVETRAIN_SCORE_REVIEW.md) adds one
 baseline role, bringing the total to 85 with 60 pending. Its upstream input
 units and live effect require further review.
+The [PIOA and interrupt setup review](PIO_INTERRUPT_REVIEW.md) adds four
+baseline roles, bringing the total to 89 with 56 pending. It traces source-2
+vector setup, a conditional timer trigger callback, and AIC mask helpers.
 
 ### The static pulse-stretch chain
 

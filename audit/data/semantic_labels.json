@@ -401,6 +401,46 @@
       ]
     },
     {
+      "entry": "0x7448",
+      "label": "PIOA interrupt callback: conditional TC0/TC1 software triggers and source masking",
+      "assurance": "static_instruction_trace_and_synthetic_mmio_emulation",
+      "evidence": [
+        "audit/data/pio_interrupt_binaryninja.json",
+        "audit/data/pio_interrupt_emulation.json",
+        "docs/PIO_INTERRUPT_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x7498",
+      "label": "Save AIC interrupt mask and disable all AIC sources",
+      "assurance": "static_instruction_trace_and_synthetic_mmio_emulation",
+      "evidence": [
+        "audit/data/pio_interrupt_binaryninja.json",
+        "audit/data/pio_interrupt_emulation.json",
+        "docs/PIO_INTERRUPT_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x74b4",
+      "label": "Enable AIC sources from saved mask",
+      "assurance": "static_instruction_trace_and_synthetic_mmio_emulation",
+      "evidence": [
+        "audit/data/pio_interrupt_binaryninja.json",
+        "audit/data/pio_interrupt_emulation.json",
+        "docs/PIO_INTERRUPT_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x74e8",
+      "label": "PIOA, PMC and AIC setup coordinator with six subordinate initialization calls",
+      "assurance": "static_instruction_trace_and_synthetic_mmio_emulation",
+      "evidence": [
+        "audit/data/pio_interrupt_binaryninja.json",
+        "audit/data/pio_interrupt_emulation.json",
+        "docs/PIO_INTERRUPT_REVIEW.md"
+      ]
+    },
+    {
       "entry": "0x76cc",
       "label": "Control-cycle orchestrator: capture unpack, AID validation, main control, and conditional communications",
       "assurance": "static_instruction_trace",
