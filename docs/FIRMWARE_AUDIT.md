@@ -6,7 +6,7 @@ Scope: the 32,000-byte application image `firmware_v2.8.4HF.bin`, loaded at `0x4
 `python tools/firmware_crypto.py decrypt ... --bin`, so every artifact below can be tied back to the
 vendor's `.qz` update file. The image itself is not redistributed here.
 
-The [capture parser review](CAPTURE_PARSER_REVIEW.md) completes entry `0x59E8`: all 315 added instruction boundaries match the IDA item export and explicit-mode Binary Ninja decode, and all are visited in original-byte controlled execution. Reviewed instruction bytes now total 8,788; baseline role coverage remains 108 with 37 pending.
+The [capture parser review](CAPTURE_PARSER_REVIEW.md) completes entry `0x59E8`: all 315 added instruction boundaries match the IDA item export and explicit-mode Binary Ninja decode, and all are visited in original-byte controlled execution. At that stage, reviewed instruction bytes totaled 8,788 and baseline role coverage remained 108 with 37 pending. The subsequent [control selector review](CONTROL_SELECTOR_REVIEW.md) raises these to 8,900 bytes and 109 roles, with 36 pending; it accounts for two unreachable instruction starts explicitly.
 
 ## Why
 
@@ -43,10 +43,10 @@ It is not a count of original C functions, and the two tools still disagree on w
 
 | | |
 |---|---|
-| Entries with an evidence-backed static role | 108 |
-| Entries still unlabelled | 37 |
+| Entries with an evidence-backed static role | 109 |
+| Entries still unlabelled | 36 |
 
-The 37 unlabelled entries are a work queue, not findings. Labels from the first-pass notes are treated as hypotheses
+The 36 unlabelled entries are a work queue, not findings. Labels from the first-pass notes are treated as hypotheses
 unless they appear in `audit/data/semantic_labels.json`.
 
 The initial audit assigned 14 roles; the [offline write-path review](OFFLINE_WRITE_PATH_REVIEW.md)
