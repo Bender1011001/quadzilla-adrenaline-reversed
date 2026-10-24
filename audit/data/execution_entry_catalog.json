@@ -4,8 +4,8 @@
   "unit": "execution_entries_including_vectors_thunks_and_alternate_entries",
   "summary": {
     "confirmed_entries": 145,
-    "documented_static_roles": 96,
-    "unlabeled_static_entries": 49,
+    "documented_static_roles": 97,
+    "unlabeled_static_entries": 48,
     "entries_with_ida_sram_references": 49,
     "entries_with_ida_peripheral_references": 21,
     "union_direct_call_edges": 180
@@ -8920,8 +8920,19 @@
           ]
         }
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x6c94",
+          "label": "TC2 vector callback for SRAM counters, flags and gated numeric accumulators",
+          "assurance": "static_instruction_trace_and_synthetic_mmio_emulation",
+          "evidence": [
+            "audit/data/tc2_callback_binaryninja.json",
+            "audit/data/tc2_callback_emulation.json",
+            "docs/TC2_CALLBACK_REVIEW.md"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [
           "0x7120",
@@ -17316,7 +17327,7 @@
     },
     "labels": {
       "path": "audit/data/semantic_labels.json",
-      "sha256": "06e36b1d4022b54ae8808d1752348eeeeb988edc533ffd53119fd581a2e4e4c6"
+      "sha256": "478002bbe9262e09fc081519ee4aed19b11f698c02d82415f02e74d112218ac0"
     }
   },
   "input_hash_policy": "SHA-256 of JSON text with CRLF normalized to LF"

@@ -18,7 +18,7 @@ incrementing the word at `0x200754` when byte `0x20070C` is set, and calls
 `0x7F28` at `0x6CFA` after incrementing `0x200758` when byte `0x20070E`
 is set. Both paths compare the *previous* counter value against literal
 `0x3E9` (1001). These caller sites establish reachability from the larger
-routine; the full `0x6C94` contract is still under review.
+routine; its full bounded contract is documented in the [TC2 callback review](TC2_CALLBACK_REVIEW.md).
 
 ## Exact helper effects
 

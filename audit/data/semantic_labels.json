@@ -293,6 +293,16 @@
       ]
     },
     {
+      "entry": "0x6c94",
+      "label": "TC2 vector callback for SRAM counters, flags and gated numeric accumulators",
+      "assurance": "static_instruction_trace_and_synthetic_mmio_emulation",
+      "evidence": [
+        "audit/data/tc2_callback_binaryninja.json",
+        "audit/data/tc2_callback_emulation.json",
+        "docs/TC2_CALLBACK_REVIEW.md"
+      ]
+    },
+    {
       "entry": "0x6fa0",
       "label": "AT91 TC channel write helper used for the TC0_RC output",
       "assurance": "static_closed_chain",

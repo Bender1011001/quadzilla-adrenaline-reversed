@@ -55,7 +55,8 @@ clock gating, SPI command semantics, peripheral status, IRQ entry/exit, or an
 external transfer. Thus the writes establish firmware intent and arithmetic,
 not a functioning live SPI bus or actual interrupt rate. The receive interrupt
 path through the IRQ wrapper and any related transport use remain open.
-The larger timer callback at `0x6C94` is also pending a separate review.
+The larger timer callback at `0x6C94` is documented separately in the
+[TC2 callback review](TC2_CALLBACK_REVIEW.md).
 
 ## Reproduction
 

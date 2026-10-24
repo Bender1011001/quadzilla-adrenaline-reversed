@@ -42,7 +42,7 @@ evidence that every in-range slot is supported or that a hardware fault occurred
 
 ## Functions
 
-The baseline inventory is the two-tool audit: 145 confirmed execution entries, 96 with an evidence-backed role. The initial 14 roles are listed below
+The baseline inventory is the two-tool audit: 145 confirmed execution entries, 97 with an evidence-backed role. The initial 14 roles are listed below
 from `audit/data/semantic_labels.json`. `trace` means a static instruction trace; `chain` means part of the closed static chain below. The labels describe
 static roles and do not prove live engine behaviour.
 
@@ -91,11 +91,14 @@ baseline roles, bringing the total to 89 with 56 pending. It traces source-2
 vector setup, a conditional timer trigger callback, and AIC mask helpers.
 The [timer setup review](TIMER_SETUP_REVIEW.md) adds three baseline roles,
 bringing the total to 92 with 53 pending. It traces the three-channel setup
-and two short callbacks; the third callback remains pending.
+and two short callbacks; the third callback is reviewed separately below.
 The [SPI setup review](SPI_SETUP_REVIEW.md) adds the setup coordinator and
 source-5 no-op callback, bringing the total to 94 with 51 pending.
 The [TC2 flag helper review](TC2_FLAG_HELPER_REVIEW.md) adds two SRAM flag
 transition helpers, bringing the total to 96 with 49 pending.
+The [TC2 callback review](TC2_CALLBACK_REVIEW.md) adds the vector entry,
+bringing the total to 97 with 48 pending. Its counter thresholds do not by
+themselves specify a real-time interval.
 
 ### The static pulse-stretch chain
 

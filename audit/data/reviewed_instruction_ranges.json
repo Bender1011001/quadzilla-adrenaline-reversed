@@ -279,6 +279,19 @@
       ]
     },
     {
+      "start": "0x6c94",
+      "end": "0x6f56",
+      "entry": "0x6c94",
+      "isa": "thumb",
+      "decoder_artifact": "audit/data/tc2_callback_binaryninja.json",
+      "account": "333 bounded Thumb instruction starts through return; adjacent NOP and literal pool excluded",
+      "evidence": [
+        "audit/data/tc2_callback_binaryninja.json",
+        "audit/data/tc2_callback_emulation.json",
+        "docs/TC2_CALLBACK_REVIEW.md"
+      ]
+    },
+    {
       "start": "0x6fb4",
       "end": "0x70ca",
       "entry": "0x6fb4",
