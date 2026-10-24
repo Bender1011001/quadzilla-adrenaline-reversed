@@ -9,7 +9,7 @@
     "0x8038",
     "0x7cc4"
   ],
-  "remaining_entries": 95,
+  "remaining_entries": 61,
   "queue": [
     {
       "entry": "0x46d0",
@@ -33,50 +33,6 @@
       "reference_regions": {
         "image": 5,
         "sram": 7
-      }
-    },
-    {
-      "entry": "0x56fc",
-      "undirected_call_distance": 1,
-      "anchor_path": [
-        "0x50f0",
-        "0x56fc"
-      ],
-      "reference_regions": {
-        "image": 2
-      }
-    },
-    {
-      "entry": "0x5704",
-      "undirected_call_distance": 1,
-      "anchor_path": [
-        "0x50f0",
-        "0x5704"
-      ],
-      "reference_regions": {
-        "image": 2
-      }
-    },
-    {
-      "entry": "0x5714",
-      "undirected_call_distance": 1,
-      "anchor_path": [
-        "0x50f0",
-        "0x5714"
-      ],
-      "reference_regions": {
-        "image": 2
-      }
-    },
-    {
-      "entry": "0x5f04",
-      "undirected_call_distance": 1,
-      "anchor_path": [
-        "0x50f0",
-        "0x5f04"
-      ],
-      "reference_regions": {
-        "image": 2
       }
     },
     {
@@ -107,83 +63,6 @@
         "0x604c"
       ],
       "reference_regions": {}
-    },
-    {
-      "entry": "0x6b08",
-      "undirected_call_distance": 1,
-      "anchor_path": [
-        "0x601c",
-        "0x6b08"
-      ],
-      "reference_regions": {
-        "image": 2
-      }
-    },
-    {
-      "entry": "0x6b10",
-      "undirected_call_distance": 1,
-      "anchor_path": [
-        "0x601c",
-        "0x6b10"
-      ],
-      "reference_regions": {
-        "image": 2
-      }
-    },
-    {
-      "entry": "0x7120",
-      "undirected_call_distance": 1,
-      "anchor_path": [
-        "0x50f0",
-        "0x7120"
-      ],
-      "reference_regions": {
-        "image": 2
-      }
-    },
-    {
-      "entry": "0x7128",
-      "undirected_call_distance": 1,
-      "anchor_path": [
-        "0x601c",
-        "0x7128"
-      ],
-      "reference_regions": {
-        "image": 2
-      }
-    },
-    {
-      "entry": "0x7138",
-      "undirected_call_distance": 1,
-      "anchor_path": [
-        "0x601c",
-        "0x7138"
-      ],
-      "reference_regions": {
-        "image": 2
-      }
-    },
-    {
-      "entry": "0x7150",
-      "undirected_call_distance": 1,
-      "anchor_path": [
-        "0x50f0",
-        "0x7150"
-      ],
-      "reference_regions": {
-        "image": 2
-      }
-    },
-    {
-      "entry": "0x7160",
-      "undirected_call_distance": 1,
-      "anchor_path": [
-        "0x601c",
-        "0x7160"
-      ],
-      "reference_regions": {
-        "image": 2
-      }
     },
     {
       "entry": "0x74e8",
@@ -273,18 +152,6 @@
       }
     },
     {
-      "entry": "0x5f0c",
-      "undirected_call_distance": 2,
-      "anchor_path": [
-        "0x50f0",
-        "0x46d0",
-        "0x5f0c"
-      ],
-      "reference_regions": {
-        "image": 2
-      }
-    },
-    {
       "entry": "0x604e",
       "undirected_call_distance": 2,
       "anchor_path": [
@@ -336,30 +203,6 @@
       }
     },
     {
-      "entry": "0x7140",
-      "undirected_call_distance": 2,
-      "anchor_path": [
-        "0x50f0",
-        "0x46d0",
-        "0x7140"
-      ],
-      "reference_regions": {
-        "image": 2
-      }
-    },
-    {
-      "entry": "0x7148",
-      "undirected_call_distance": 2,
-      "anchor_path": [
-        "0x50f0",
-        "0x46d0",
-        "0x7148"
-      ],
-      "reference_regions": {
-        "image": 2
-      }
-    },
-    {
       "entry": "0x77b8",
       "undirected_call_distance": 2,
       "anchor_path": [
@@ -398,26 +241,6 @@
         "image": 1,
         "sram": 63
       }
-    },
-    {
-      "entry": "0x8678",
-      "undirected_call_distance": 2,
-      "anchor_path": [
-        "0x601c",
-        "0x7128",
-        "0x8678"
-      ],
-      "reference_regions": {}
-    },
-    {
-      "entry": "0x86a8",
-      "undirected_call_distance": 2,
-      "anchor_path": [
-        "0x601c",
-        "0x7128",
-        "0x86a8"
-      ],
-      "reference_regions": {}
     },
     {
       "entry": "0x41f0",
@@ -531,32 +354,6 @@
       "reference_regions": {
         "image": 1,
         "peripheral": 1
-      }
-    },
-    {
-      "entry": "0x7158",
-      "undirected_call_distance": 3,
-      "anchor_path": [
-        "0x601c",
-        "0x7128",
-        "0x6c94",
-        "0x7158"
-      ],
-      "reference_regions": {
-        "image": 2
-      }
-    },
-    {
-      "entry": "0x7168",
-      "undirected_call_distance": 3,
-      "anchor_path": [
-        "0x601c",
-        "0x7128",
-        "0x6c94",
-        "0x7168"
-      ],
-      "reference_regions": {
-        "image": 2
       }
     },
     {
@@ -928,110 +725,11 @@
       "reference_regions": {}
     },
     {
-      "entry": "0x86d8",
-      "undirected_call_distance": null,
-      "anchor_path": null,
-      "reference_regions": {}
-    },
-    {
-      "entry": "0x86f0",
-      "undirected_call_distance": null,
-      "anchor_path": null,
-      "reference_regions": {
-        "external_or_literal": 1,
-        "image": 5
-      }
-    },
-    {
-      "entry": "0x874c",
-      "undirected_call_distance": null,
-      "anchor_path": null,
-      "reference_regions": {}
-    },
-    {
-      "entry": "0x8788",
-      "undirected_call_distance": null,
-      "anchor_path": null,
-      "reference_regions": {}
-    },
-    {
-      "entry": "0x87e8",
-      "undirected_call_distance": null,
-      "anchor_path": null,
-      "reference_regions": {}
-    },
-    {
-      "entry": "0x88a4",
-      "undirected_call_distance": null,
-      "anchor_path": null,
-      "reference_regions": {}
-    },
-    {
-      "entry": "0x8908",
-      "undirected_call_distance": null,
-      "anchor_path": null,
-      "reference_regions": {}
-    },
-    {
-      "entry": "0x893c",
-      "undirected_call_distance": null,
-      "anchor_path": null,
-      "reference_regions": {}
-    },
-    {
-      "entry": "0x8970",
-      "undirected_call_distance": null,
-      "anchor_path": null,
-      "reference_regions": {}
-    },
-    {
-      "entry": "0x89b0",
-      "undirected_call_distance": null,
-      "anchor_path": null,
-      "reference_regions": {}
-    },
-    {
-      "entry": "0x9038",
-      "undirected_call_distance": null,
-      "anchor_path": null,
-      "reference_regions": {}
-    },
-    {
-      "entry": "0x90b0",
-      "undirected_call_distance": null,
-      "anchor_path": null,
-      "reference_regions": {}
-    },
-    {
-      "entry": "0x90e4",
-      "undirected_call_distance": null,
-      "anchor_path": null,
-      "reference_regions": {}
-    },
-    {
-      "entry": "0x913c",
-      "undirected_call_distance": null,
-      "anchor_path": null,
-      "reference_regions": {}
-    },
-    {
-      "entry": "0x92cc",
-      "undirected_call_distance": null,
-      "anchor_path": null,
-      "reference_regions": {}
-    },
-    {
-      "entry": "0x95f4",
-      "undirected_call_distance": null,
-      "anchor_path": null,
-      "reference_regions": {}
-    },
-    {
       "entry": "0xb114",
       "undirected_call_distance": null,
       "anchor_path": null,
       "reference_regions": {}
     }
   ],
-  "catalog_lf_text_sha256": "d880eb91ced2cbb21e32d3e04e6815ff6fbdaee079315eed438f4dbbe7eb4298"
+  "catalog_lf_text_sha256": "4d8ffe4d896fb06a6f411d2280e25b395eaee4dea8fd777dfb3b5c61c245158f"
 }

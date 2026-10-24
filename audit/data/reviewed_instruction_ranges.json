@@ -14,7 +14,8 @@
         "audit/data/control_helper_binaryninja.json",
         "audit/data/control_helper_emulation.json:entry.0x4384",
         "docs/CONTROL_HELPER_REVIEW.md"
-      ]
+      ],
+      "decoder_artifact": "audit/data/control_helper_binaryninja.json"
     },
     {
       "start": "0x4650",
@@ -27,7 +28,8 @@
         "audit/data/control_helper_binaryninja.json",
         "audit/data/control_helper_emulation.json:entry.0x4650",
         "docs/CONTROL_HELPER_REVIEW.md"
-      ]
+      ],
+      "decoder_artifact": "audit/data/control_helper_binaryninja.json"
     },
     {
       "start": "0x4674",
@@ -40,7 +42,8 @@
         "audit/data/control_helper_binaryninja.json",
         "audit/data/control_helper_emulation.json:entry.0x4674",
         "docs/CONTROL_HELPER_REVIEW.md"
-      ]
+      ],
+      "decoder_artifact": "audit/data/control_helper_binaryninja.json"
     },
     {
       "start": "0x4698",
@@ -53,7 +56,8 @@
         "audit/data/control_helper_binaryninja.json",
         "audit/data/control_helper_emulation.json:entry.0x4698",
         "docs/CONTROL_HELPER_REVIEW.md"
-      ]
+      ],
+      "decoder_artifact": "audit/data/control_helper_binaryninja.json"
     },
     {
       "start": "0x47b0",
@@ -66,7 +70,8 @@
         "audit/data/control_helper_binaryninja.json",
         "audit/data/control_helper_emulation.json:entry.0x47b0",
         "docs/CONTROL_HELPER_REVIEW.md"
-      ]
+      ],
+      "decoder_artifact": "audit/data/control_helper_binaryninja.json"
     },
     {
       "start": "0x48e8",
@@ -79,7 +84,8 @@
         "audit/data/control_helper_binaryninja.json",
         "audit/data/control_helper_emulation.json:entry.0x48e8",
         "docs/CONTROL_HELPER_REVIEW.md"
-      ]
+      ],
+      "decoder_artifact": "audit/data/control_helper_binaryninja.json"
     },
     {
       "start": "0x495c",
@@ -92,7 +98,8 @@
         "audit/data/control_helper_binaryninja.json",
         "audit/data/control_helper_emulation.json:entry.0x495c",
         "docs/CONTROL_HELPER_REVIEW.md"
-      ]
+      ],
+      "decoder_artifact": "audit/data/control_helper_binaryninja.json"
     },
     {
       "start": "0x497c",
@@ -105,6 +112,259 @@
         "audit/data/control_helper_binaryninja.json",
         "audit/data/control_helper_emulation.json:entry.0x497c",
         "docs/CONTROL_HELPER_REVIEW.md"
+      ],
+      "decoder_artifact": "audit/data/control_helper_binaryninja.json"
+    },
+    {
+      "start": "0x8678",
+      "end": "0x896c",
+      "entry": "0x8678",
+      "isa": "arm",
+      "decoder_artifact": "audit/data/soft_float_binaryninja.json",
+      "account": "Reviewed software floating-point runtime instruction group, including shared bodies and callable unreferenced routines; literal/status pointer and wrapper alignment excluded",
+      "evidence": [
+        "audit/data/soft_float_function_reviews.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_emulation.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ]
+    },
+    {
+      "start": "0x8970",
+      "end": "0x96c4",
+      "entry": "0x8970",
+      "isa": "arm",
+      "decoder_artifact": "audit/data/soft_float_binaryninja.json",
+      "account": "Reviewed software floating-point runtime instruction group, including shared bodies and callable unreferenced routines; literal/status pointer and wrapper alignment excluded",
+      "evidence": [
+        "audit/data/soft_float_function_reviews.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_emulation.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ]
+    },
+    {
+      "start": "0x56fc",
+      "end": "0x5700",
+      "entry": "0x56fc",
+      "isa": "thumb",
+      "decoder_artifact": "audit/data/soft_float_binaryninja.json",
+      "account": "Pointer-jump wrapper instructions only; adjacent pointer literal and alignment excluded",
+      "evidence": [
+        "audit/data/soft_float_function_reviews.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_emulation.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ]
+    },
+    {
+      "start": "0x5704",
+      "end": "0x570e",
+      "entry": "0x5704",
+      "isa": "thumb",
+      "decoder_artifact": "audit/data/soft_float_binaryninja.json",
+      "account": "Pointer-jump wrapper instructions only; adjacent pointer literal and alignment excluded",
+      "evidence": [
+        "audit/data/soft_float_function_reviews.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_emulation.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ]
+    },
+    {
+      "start": "0x5714",
+      "end": "0x5718",
+      "entry": "0x5714",
+      "isa": "thumb",
+      "decoder_artifact": "audit/data/soft_float_binaryninja.json",
+      "account": "Pointer-jump wrapper instructions only; adjacent pointer literal and alignment excluded",
+      "evidence": [
+        "audit/data/soft_float_function_reviews.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_emulation.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ]
+    },
+    {
+      "start": "0x5f04",
+      "end": "0x5f08",
+      "entry": "0x5f04",
+      "isa": "thumb",
+      "decoder_artifact": "audit/data/soft_float_binaryninja.json",
+      "account": "Pointer-jump wrapper instructions only; adjacent pointer literal and alignment excluded",
+      "evidence": [
+        "audit/data/soft_float_function_reviews.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_emulation.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ]
+    },
+    {
+      "start": "0x5f0c",
+      "end": "0x5f10",
+      "entry": "0x5f0c",
+      "isa": "thumb",
+      "decoder_artifact": "audit/data/soft_float_binaryninja.json",
+      "account": "Pointer-jump wrapper instructions only; adjacent pointer literal and alignment excluded",
+      "evidence": [
+        "audit/data/soft_float_function_reviews.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_emulation.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ]
+    },
+    {
+      "start": "0x6b08",
+      "end": "0x6b0c",
+      "entry": "0x6b08",
+      "isa": "thumb",
+      "decoder_artifact": "audit/data/soft_float_binaryninja.json",
+      "account": "Pointer-jump wrapper instructions only; adjacent pointer literal and alignment excluded",
+      "evidence": [
+        "audit/data/soft_float_function_reviews.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_emulation.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ]
+    },
+    {
+      "start": "0x6b10",
+      "end": "0x6b1a",
+      "entry": "0x6b10",
+      "isa": "thumb",
+      "decoder_artifact": "audit/data/soft_float_binaryninja.json",
+      "account": "Pointer-jump wrapper instructions only; adjacent pointer literal and alignment excluded",
+      "evidence": [
+        "audit/data/soft_float_function_reviews.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_emulation.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ]
+    },
+    {
+      "start": "0x7120",
+      "end": "0x7124",
+      "entry": "0x7120",
+      "isa": "thumb",
+      "decoder_artifact": "audit/data/soft_float_binaryninja.json",
+      "account": "Pointer-jump wrapper instructions only; adjacent pointer literal and alignment excluded",
+      "evidence": [
+        "audit/data/soft_float_function_reviews.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_emulation.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ]
+    },
+    {
+      "start": "0x7128",
+      "end": "0x7132",
+      "entry": "0x7128",
+      "isa": "thumb",
+      "decoder_artifact": "audit/data/soft_float_binaryninja.json",
+      "account": "Pointer-jump wrapper instructions only; adjacent pointer literal and alignment excluded",
+      "evidence": [
+        "audit/data/soft_float_function_reviews.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_emulation.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ]
+    },
+    {
+      "start": "0x7138",
+      "end": "0x713c",
+      "entry": "0x7138",
+      "isa": "thumb",
+      "decoder_artifact": "audit/data/soft_float_binaryninja.json",
+      "account": "Pointer-jump wrapper instructions only; adjacent pointer literal and alignment excluded",
+      "evidence": [
+        "audit/data/soft_float_function_reviews.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_emulation.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ]
+    },
+    {
+      "start": "0x7140",
+      "end": "0x7144",
+      "entry": "0x7140",
+      "isa": "thumb",
+      "decoder_artifact": "audit/data/soft_float_binaryninja.json",
+      "account": "Pointer-jump wrapper instructions only; adjacent pointer literal and alignment excluded",
+      "evidence": [
+        "audit/data/soft_float_function_reviews.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_emulation.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ]
+    },
+    {
+      "start": "0x7148",
+      "end": "0x714c",
+      "entry": "0x7148",
+      "isa": "thumb",
+      "decoder_artifact": "audit/data/soft_float_binaryninja.json",
+      "account": "Pointer-jump wrapper instructions only; adjacent pointer literal and alignment excluded",
+      "evidence": [
+        "audit/data/soft_float_function_reviews.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_emulation.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ]
+    },
+    {
+      "start": "0x7150",
+      "end": "0x7154",
+      "entry": "0x7150",
+      "isa": "thumb",
+      "decoder_artifact": "audit/data/soft_float_binaryninja.json",
+      "account": "Pointer-jump wrapper instructions only; adjacent pointer literal and alignment excluded",
+      "evidence": [
+        "audit/data/soft_float_function_reviews.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_emulation.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ]
+    },
+    {
+      "start": "0x7158",
+      "end": "0x715c",
+      "entry": "0x7158",
+      "isa": "thumb",
+      "decoder_artifact": "audit/data/soft_float_binaryninja.json",
+      "account": "Pointer-jump wrapper instructions only; adjacent pointer literal and alignment excluded",
+      "evidence": [
+        "audit/data/soft_float_function_reviews.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_emulation.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ]
+    },
+    {
+      "start": "0x7160",
+      "end": "0x7164",
+      "entry": "0x7160",
+      "isa": "thumb",
+      "decoder_artifact": "audit/data/soft_float_binaryninja.json",
+      "account": "Pointer-jump wrapper instructions only; adjacent pointer literal and alignment excluded",
+      "evidence": [
+        "audit/data/soft_float_function_reviews.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_emulation.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ]
+    },
+    {
+      "start": "0x7168",
+      "end": "0x7172",
+      "entry": "0x7168",
+      "isa": "thumb",
+      "decoder_artifact": "audit/data/soft_float_binaryninja.json",
+      "account": "Pointer-jump wrapper instructions only; adjacent pointer literal and alignment excluded",
+      "evidence": [
+        "audit/data/soft_float_function_reviews.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_emulation.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
       ]
     }
   ]

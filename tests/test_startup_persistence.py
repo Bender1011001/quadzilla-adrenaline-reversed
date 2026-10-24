@@ -18,7 +18,7 @@ class StartupPersistence(unittest.TestCase):
         extra = {e["start"] for e in supplement["entries"]}
         self.assertFalse(starts & extra)
         self.assertEqual(len(starts | extra), supplement["combined_supported_starts"])
-        self.assertEqual(len(extra), 6)
+        self.assertEqual(len(extra), 12)
         self.assertEqual(supplement["baseline_lf_text_sha256"], hashlib.sha256(
             (ROOT / "audit/data/execution_entry_catalog.json").read_text(encoding="utf-8").encode()).hexdigest())
         for e in supplement["entries"]:
