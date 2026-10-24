@@ -9,7 +9,7 @@
     "0x8038",
     "0x7cc4"
   ],
-  "remaining_entries": 53,
+  "remaining_entries": 51,
   "queue": [
     {
       "entry": "0x506c",
@@ -135,19 +135,6 @@
         "0x604e"
       ],
       "reference_regions": {}
-    },
-    {
-      "entry": "0x6bd8",
-      "undirected_call_distance": 2,
-      "anchor_path": [
-        "0x50f0",
-        "0x74e8",
-        "0x6bd8"
-      ],
-      "reference_regions": {
-        "image": 14,
-        "peripheral": 11
-      }
     },
     {
       "entry": "0x6c94",
@@ -607,12 +594,6 @@
       "reference_regions": {}
     },
     {
-      "entry": "0x6b44",
-      "undirected_call_distance": null,
-      "anchor_path": null,
-      "reference_regions": {}
-    },
-    {
       "entry": "0x7444",
       "undirected_call_distance": null,
       "anchor_path": null,
@@ -631,5 +612,5 @@
       "reference_regions": {}
     }
   ],
-  "catalog_lf_text_sha256": "67257502b339a4169f1ae6d1c5f3224b42a885d3e64394b25c7278ead169fd05"
+  "catalog_lf_text_sha256": "8316b71cd2bb6e941b700e472312d80fbc21dfc6d7243a2d2fda34e26faa72bf"
 }

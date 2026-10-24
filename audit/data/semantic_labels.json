@@ -253,6 +253,26 @@
       ]
     },
     {
+      "entry": "0x6b44",
+      "label": "Two-byte no-op callback installed as SPI source-5 vector",
+      "assurance": "static_instruction_trace_and_synthetic_mmio_emulation",
+      "evidence": [
+        "audit/data/spi_setup_binaryninja.json",
+        "audit/data/spi_setup_emulation.json",
+        "docs/SPI_SETUP_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x6bd8",
+      "label": "SPI master and interrupt setup coordinator",
+      "assurance": "static_instruction_trace_and_synthetic_mmio_emulation",
+      "evidence": [
+        "audit/data/spi_setup_binaryninja.json",
+        "audit/data/spi_setup_emulation.json",
+        "docs/SPI_SETUP_REVIEW.md"
+      ]
+    },
+    {
       "entry": "0x6c48",
       "label": "TC0 interrupt callback: stop counter and update three SRAM flags",
       "assurance": "static_instruction_trace_and_synthetic_mmio_emulation",

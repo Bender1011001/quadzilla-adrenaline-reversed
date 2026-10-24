@@ -1,0 +1,259 @@
+{
+  "format": "quadzilla-spi-setup-emulation-v1",
+  "raw_sha256": "1ae519ba6194e8f7bdaaa94333a83a9e6fda3b0563f87f7d48383b37288c1780",
+  "cpu": "ARM926 functional surrogate",
+  "peripherals": "synthetic read/write memory",
+  "literal_words": {
+    "0x6c14": "0xfffffc10",
+    "0x6c18": "0xfffe0004",
+    "0x6c1c": "0xfffe0030",
+    "0x6c20": "0x3002",
+    "0x6c24": "0xfffe0000",
+    "0x6c28": "0xfffff094",
+    "0x6c2c": "0xfffff124",
+    "0x6c30": "0x6b45",
+    "0x6c34": "0xfffff014",
+    "0x6c38": "0xfffff128",
+    "0x6c3c": "0xfffe0018",
+    "0x6c40": "0xfffff120",
+    "0x6c44": "0xfffe0014"
+  },
+  "cases": [
+    {
+      "entry": "0x6bd8",
+      "initial_aic_svr5": "0x0",
+      "writes": [
+        {
+          "site": "0x6bdc",
+          "address": "0xfffffc10",
+          "size": 4,
+          "value": "0x20"
+        },
+        {
+          "site": "0x6be2",
+          "address": "0xfffe0004",
+          "size": 4,
+          "value": "0x1"
+        },
+        {
+          "site": "0x6be8",
+          "address": "0xfffe0030",
+          "size": 4,
+          "value": "0x3002"
+        },
+        {
+          "site": "0x6bec",
+          "address": "0xfffe0000",
+          "size": 4,
+          "value": "0x1"
+        },
+        {
+          "site": "0x6bf4",
+          "address": "0xfffff124",
+          "size": 4,
+          "value": "0x20"
+        },
+        {
+          "site": "0x6bf8",
+          "address": "0xfffff094",
+          "size": 4,
+          "value": "0x6b45"
+        },
+        {
+          "site": "0x6bfe",
+          "address": "0xfffff014",
+          "size": 4,
+          "value": "0x21"
+        },
+        {
+          "site": "0x6c02",
+          "address": "0xfffff128",
+          "size": 4,
+          "value": "0x20"
+        },
+        {
+          "site": "0x6c08",
+          "address": "0xfffe0018",
+          "size": 4,
+          "value": "0xfff"
+        },
+        {
+          "site": "0x6c0c",
+          "address": "0xfffff120",
+          "size": 4,
+          "value": "0x20"
+        },
+        {
+          "site": "0x6c10",
+          "address": "0xfffe0014",
+          "size": 4,
+          "value": "0x1"
+        }
+      ],
+      "reads": [
+        {
+          "site": "0x6bf0",
+          "address": "0xfffff094",
+          "size": 4
+        }
+      ],
+      "visited": [
+        "0x6bd8",
+        "0x6bda",
+        "0x6bdc",
+        "0x6bde",
+        "0x6be0",
+        "0x6be2",
+        "0x6be4",
+        "0x6be6",
+        "0x6be8",
+        "0x6bea",
+        "0x6bec",
+        "0x6bee",
+        "0x6bf0",
+        "0x6bf2",
+        "0x6bf4",
+        "0x6bf6",
+        "0x6bf8",
+        "0x6bfa",
+        "0x6bfc",
+        "0x6bfe",
+        "0x6c00",
+        "0x6c02",
+        "0x6c04",
+        "0x6c06",
+        "0x6c08",
+        "0x6c0a",
+        "0x6c0c",
+        "0x6c0e",
+        "0x6c10",
+        "0x6c12"
+      ]
+    },
+    {
+      "entry": "0x6bd8",
+      "initial_aic_svr5": "0xdeadbeef",
+      "writes": [
+        {
+          "site": "0x6bdc",
+          "address": "0xfffffc10",
+          "size": 4,
+          "value": "0x20"
+        },
+        {
+          "site": "0x6be2",
+          "address": "0xfffe0004",
+          "size": 4,
+          "value": "0x1"
+        },
+        {
+          "site": "0x6be8",
+          "address": "0xfffe0030",
+          "size": 4,
+          "value": "0x3002"
+        },
+        {
+          "site": "0x6bec",
+          "address": "0xfffe0000",
+          "size": 4,
+          "value": "0x1"
+        },
+        {
+          "site": "0x6bf4",
+          "address": "0xfffff124",
+          "size": 4,
+          "value": "0x20"
+        },
+        {
+          "site": "0x6bf8",
+          "address": "0xfffff094",
+          "size": 4,
+          "value": "0x6b45"
+        },
+        {
+          "site": "0x6bfe",
+          "address": "0xfffff014",
+          "size": 4,
+          "value": "0x21"
+        },
+        {
+          "site": "0x6c02",
+          "address": "0xfffff128",
+          "size": 4,
+          "value": "0x20"
+        },
+        {
+          "site": "0x6c08",
+          "address": "0xfffe0018",
+          "size": 4,
+          "value": "0xfff"
+        },
+        {
+          "site": "0x6c0c",
+          "address": "0xfffff120",
+          "size": 4,
+          "value": "0x20"
+        },
+        {
+          "site": "0x6c10",
+          "address": "0xfffe0014",
+          "size": 4,
+          "value": "0x1"
+        }
+      ],
+      "reads": [
+        {
+          "site": "0x6bf0",
+          "address": "0xfffff094",
+          "size": 4
+        }
+      ],
+      "visited": [
+        "0x6bd8",
+        "0x6bda",
+        "0x6bdc",
+        "0x6bde",
+        "0x6be0",
+        "0x6be2",
+        "0x6be4",
+        "0x6be6",
+        "0x6be8",
+        "0x6bea",
+        "0x6bec",
+        "0x6bee",
+        "0x6bf0",
+        "0x6bf2",
+        "0x6bf4",
+        "0x6bf6",
+        "0x6bf8",
+        "0x6bfa",
+        "0x6bfc",
+        "0x6bfe",
+        "0x6c00",
+        "0x6c02",
+        "0x6c04",
+        "0x6c06",
+        "0x6c08",
+        "0x6c0a",
+        "0x6c0c",
+        "0x6c0e",
+        "0x6c10",
+        "0x6c12"
+      ]
+    },
+    {
+      "entry": "0x6b44",
+      "initial_aic_svr5": "0x0",
+      "writes": [],
+      "reads": [],
+      "visited": [
+        "0x6b44"
+      ]
+    }
+  ],
+  "limits": [
+    "SPI, PMC and AIC register command side effects are absent",
+    "no physical SPI transaction or interrupt context simulated",
+    "only AIC vector prestate varies between setup cases"
+  ]
+}
