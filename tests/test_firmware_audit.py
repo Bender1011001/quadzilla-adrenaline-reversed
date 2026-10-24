@@ -42,7 +42,7 @@ class FirmwareAudit(unittest.TestCase):
 
     def test_entry_catalog(self):
         s = self.catalog["summary"]
-        self.assertEqual((s["confirmed_entries"], s["documented_static_roles"], s["unlabeled_static_entries"]), (145, 103, 42))
+        self.assertEqual((s["confirmed_entries"], s["documented_static_roles"], s["unlabeled_static_entries"]), (145, 104, 41))
         entries = {e["entry"] for e in self.catalog["entries"]}
         self.assertEqual(len(entries), 145)
         # IDA proposed a function at 0xAE82 inside the AID pointer table (0xAD18-0xB113): rejected as data.

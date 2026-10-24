@@ -4,8 +4,8 @@
   "unit": "execution_entries_including_vectors_thunks_and_alternate_entries",
   "summary": {
     "confirmed_entries": 145,
-    "documented_static_roles": 103,
-    "unlabeled_static_entries": 42,
+    "documented_static_roles": 104,
+    "unlabeled_static_entries": 41,
     "entries_with_ida_sram_references": 49,
     "entries_with_ida_peripheral_references": 21,
     "union_direct_call_edges": 180
@@ -5559,8 +5559,19 @@
           ]
         }
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x5cf0",
+          "label": "Gated SPI output state machine with nine-byte payload packing",
+          "assurance": "static_instruction_trace_and_synthetic_mmio_emulation",
+          "evidence": [
+            "audit/data/spi_state_machine_binaryninja.json",
+            "audit/data/spi_state_machine_emulation.json",
+            "docs/SPI_STATE_MACHINE_REVIEW.md"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [
           "0x571c",
@@ -17393,7 +17404,7 @@
     },
     "labels": {
       "path": "audit/data/semantic_labels.json",
-      "sha256": "1a25f88a462781f658ab97083461f315ea7b4a5293bf3e5f8bf81f01ff70f4dc"
+      "sha256": "5458f4a733bff14103a452b737b97fc96e3d739c10c571f38d66ba9bbebed4b3"
     }
   },
   "input_hash_policy": "SHA-256 of JSON text with CRLF normalized to LF"

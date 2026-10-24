@@ -81,6 +81,8 @@ The [TC2 callback review](docs/TC2_CALLBACK_REVIEW.md) now covers that larger ve
 
 The [SPI/PDC primitive review](docs/SPI_TRANSFER_REVIEW.md) adds six GPIO, readiness and buffer-programming roles, bringing baseline coverage to 103 roles with 42 pending. It records exact register-write order, gate outcomes and an IDA boundary correction; higher-level transfer/timeout flows remain under review.
 
+The [SPI output state review](docs/SPI_STATE_MACHINE_REVIEW.md) adds the four-state caller and payload packing, bringing baseline coverage to 104 roles with 41 pending. It records progress after ignored helper results and signed packing behavior as controlled findings requiring caller and hardware context.
+
 ## Layout
 
 ```

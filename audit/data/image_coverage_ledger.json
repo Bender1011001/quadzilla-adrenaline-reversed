@@ -31,9 +31,9 @@
     }
   ],
   "classification_bytes": {
-    "ida_code_pending_review": 14574,
+    "ida_code_pending_review": 14324,
     "ida_data_pending_review": 3144,
-    "reviewed_thumb_instructions": 2774,
+    "reviewed_thumb_instructions": 3024,
     "reviewed_arm_instructions": 4168,
     "soft_float_status_pointer": 4,
     "startup_region_descriptors": 36,
@@ -32504,710 +32504,828 @@
     {
       "start": "0x5cf0",
       "end": "0x5cf2",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5cf2",
       "end": "0x5cf4",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5cf4",
       "end": "0x5cf6",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5cf6",
       "end": "0x5cf8",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5cf8",
       "end": "0x5cfa",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5cfa",
       "end": "0x5cfc",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5cfc",
       "end": "0x5cfe",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5cfe",
       "end": "0x5d00",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5d00",
       "end": "0x5d02",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5d02",
       "end": "0x5d04",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5d04",
       "end": "0x5d06",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5d06",
       "end": "0x5d08",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5d08",
       "end": "0x5d0a",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5d0a",
       "end": "0x5d0c",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5d0c",
       "end": "0x5d0e",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5d0e",
       "end": "0x5d10",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5d10",
       "end": "0x5d12",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5d12",
       "end": "0x5d14",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5d14",
       "end": "0x5d16",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5d16",
       "end": "0x5d18",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5d18",
       "end": "0x5d1a",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5d1a",
       "end": "0x5d1c",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5d1c",
       "end": "0x5d1e",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5d1e",
       "end": "0x5d20",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5d20",
       "end": "0x5d22",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5d22",
       "end": "0x5d24",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5d24",
       "end": "0x5d26",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5d26",
       "end": "0x5d28",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5d28",
       "end": "0x5d2a",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5d2a",
       "end": "0x5d2c",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5d2c",
       "end": "0x5d2e",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5d2e",
       "end": "0x5d30",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5d30",
       "end": "0x5d32",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5d32",
       "end": "0x5d34",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5d34",
       "end": "0x5d36",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5d36",
       "end": "0x5d38",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5d38",
       "end": "0x5d3a",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5d3a",
       "end": "0x5d3c",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5d3c",
       "end": "0x5d3e",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5d3e",
       "end": "0x5d40",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5d40",
       "end": "0x5d44",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5d44",
       "end": "0x5d46",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5d46",
       "end": "0x5d48",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5d48",
       "end": "0x5d4a",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5d4a",
       "end": "0x5d4c",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5d4c",
       "end": "0x5d4e",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5d4e",
       "end": "0x5d50",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5d50",
       "end": "0x5d52",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5d52",
       "end": "0x5d54",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5d54",
       "end": "0x5d56",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5d56",
       "end": "0x5d58",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5d58",
       "end": "0x5d5a",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5d5a",
       "end": "0x5d5c",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5d5c",
       "end": "0x5d5e",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5d5e",
       "end": "0x5d60",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5d60",
       "end": "0x5d62",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5d62",
       "end": "0x5d64",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5d64",
       "end": "0x5d66",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5d66",
       "end": "0x5d68",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5d68",
       "end": "0x5d6a",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5d6a",
       "end": "0x5d6c",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5d6c",
       "end": "0x5d6e",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5d6e",
       "end": "0x5d70",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5d70",
       "end": "0x5d72",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5d72",
       "end": "0x5d76",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5d76",
       "end": "0x5d78",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5d78",
       "end": "0x5d7a",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5d7a",
       "end": "0x5d7c",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5d7c",
       "end": "0x5d7e",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5d7e",
       "end": "0x5d82",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5d82",
       "end": "0x5d84",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5d84",
       "end": "0x5d86",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5d86",
       "end": "0x5d88",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5d88",
       "end": "0x5d8a",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5d8a",
       "end": "0x5d8c",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5d8c",
       "end": "0x5d8e",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5d8e",
       "end": "0x5d90",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5d90",
       "end": "0x5d92",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5d92",
       "end": "0x5d94",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5d94",
       "end": "0x5d98",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5d98",
       "end": "0x5d9a",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5d9a",
       "end": "0x5d9c",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5d9c",
       "end": "0x5d9e",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5d9e",
       "end": "0x5da0",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5da0",
       "end": "0x5da2",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5da2",
       "end": "0x5da4",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5da4",
       "end": "0x5da6",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5da6",
       "end": "0x5da8",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5da8",
       "end": "0x5daa",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5daa",
       "end": "0x5dac",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5dac",
       "end": "0x5dae",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5dae",
       "end": "0x5db0",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5db0",
       "end": "0x5db2",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5db2",
       "end": "0x5db4",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5db4",
       "end": "0x5db6",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5db6",
       "end": "0x5db8",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5db8",
       "end": "0x5dba",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5dba",
       "end": "0x5dbc",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5dbc",
       "end": "0x5dbe",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5dbe",
       "end": "0x5dc0",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5dc0",
       "end": "0x5dc2",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5dc2",
       "end": "0x5dc4",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5dc4",
       "end": "0x5dc6",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5dc6",
       "end": "0x5dc8",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5dc8",
       "end": "0x5dcc",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5dcc",
       "end": "0x5dce",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5dce",
       "end": "0x5dd0",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5dd0",
       "end": "0x5dd2",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5dd2",
       "end": "0x5dd6",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5dd6",
       "end": "0x5dd8",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5dd8",
       "end": "0x5dda",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5dda",
       "end": "0x5ddc",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5ddc",
       "end": "0x5de0",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5de0",
       "end": "0x5de2",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5de2",
       "end": "0x5de4",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5de4",
       "end": "0x5de6",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5de6",
       "end": "0x5de8",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5de8",
       "end": "0x5dea",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x5cf0"
     },
     {
       "start": "0x5dea",

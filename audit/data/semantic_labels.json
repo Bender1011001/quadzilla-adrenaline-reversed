@@ -212,6 +212,16 @@
       ]
     },
     {
+      "entry": "0x5cf0",
+      "label": "Gated SPI output state machine with nine-byte payload packing",
+      "assurance": "static_instruction_trace_and_synthetic_mmio_emulation",
+      "evidence": [
+        "audit/data/spi_state_machine_binaryninja.json",
+        "audit/data/spi_state_machine_emulation.json",
+        "docs/SPI_STATE_MACHINE_REVIEW.md"
+      ]
+    },
+    {
       "entry": "0x5f04",
       "label": "Thumb-to-ARM wrapper: Software binary32 multiplication",
       "assurance": "static_instruction_trace_and_bounded_emulation",

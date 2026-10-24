@@ -197,6 +197,19 @@
       ]
     },
     {
+      "start": "0x5cf0",
+      "end": "0x5dea",
+      "entry": "0x5cf0",
+      "isa": "thumb",
+      "decoder_artifact": "audit/data/spi_state_machine_binaryninja.json",
+      "account": "118 Thumb instruction starts through return; adjacent alignment and literal pool excluded",
+      "evidence": [
+        "audit/data/spi_state_machine_binaryninja.json",
+        "audit/data/spi_state_machine_emulation.json",
+        "docs/SPI_STATE_MACHINE_REVIEW.md"
+      ]
+    },
+    {
       "start": "0x5f04",
       "end": "0x5f08",
       "entry": "0x5f04",
