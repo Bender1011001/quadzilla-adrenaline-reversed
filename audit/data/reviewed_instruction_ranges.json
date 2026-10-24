@@ -227,6 +227,45 @@
       ]
     },
     {
+      "start": "0x6c48",
+      "end": "0x6c5e",
+      "entry": "0x6c48",
+      "isa": "thumb",
+      "decoder_artifact": "audit/data/timer_setup_binaryninja.json",
+      "account": "Bounded Thumb instructions through return; adjacent alignment and the third timer callback excluded",
+      "evidence": [
+        "audit/data/timer_setup_binaryninja.json",
+        "audit/data/timer_setup_emulation.json",
+        "docs/TIMER_SETUP_REVIEW.md"
+      ]
+    },
+    {
+      "start": "0x6c68",
+      "end": "0x6c82",
+      "entry": "0x6c68",
+      "isa": "thumb",
+      "decoder_artifact": "audit/data/timer_setup_binaryninja.json",
+      "account": "Bounded Thumb instructions through return; adjacent alignment and the third timer callback excluded",
+      "evidence": [
+        "audit/data/timer_setup_binaryninja.json",
+        "audit/data/timer_setup_emulation.json",
+        "docs/TIMER_SETUP_REVIEW.md"
+      ]
+    },
+    {
+      "start": "0x6fb4",
+      "end": "0x70ca",
+      "entry": "0x6fb4",
+      "isa": "thumb",
+      "decoder_artifact": "audit/data/timer_setup_binaryninja.json",
+      "account": "Bounded Thumb instructions through return; adjacent alignment and the third timer callback excluded",
+      "evidence": [
+        "audit/data/timer_setup_binaryninja.json",
+        "audit/data/timer_setup_emulation.json",
+        "docs/TIMER_SETUP_REVIEW.md"
+      ]
+    },
+    {
       "start": "0x7120",
       "end": "0x7124",
       "entry": "0x7120",

@@ -71,6 +71,8 @@ The [configured ratio scorer review](docs/DRIVETRAIN_SCORE_REVIEW.md) raises bas
 
 The [PIOA and interrupt setup review](docs/PIO_INTERRUPT_REVIEW.md) documents four more entries, bringing baseline coverage to 89 roles with 56 pending. It records the exact PMC/PIO/AIC write sequence and bounded source-2 callback behavior using synthetic registers; subordinate setup routines and physical pin behavior remain open.
 
+The [three-channel timer setup review](docs/TIMER_SETUP_REVIEW.md) documents the timer coordinator and two short callbacks, bringing baseline coverage to 92 roles with 53 pending. It records conditional compare values, clock and interrupt setup writes, and the limits of synthetic register execution. The third timer callback and live timing remain open.
+
 ## Layout
 
 ```

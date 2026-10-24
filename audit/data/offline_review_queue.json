@@ -9,7 +9,7 @@
     "0x8038",
     "0x7cc4"
   ],
-  "remaining_entries": 56,
+  "remaining_entries": 53,
   "queue": [
     {
       "entry": "0x506c",
@@ -161,20 +161,6 @@
         "image": 18,
         "peripheral": 2,
         "sram": 146
-      }
-    },
-    {
-      "entry": "0x6fb4",
-      "undirected_call_distance": 2,
-      "anchor_path": [
-        "0x50f0",
-        "0x74e8",
-        "0x6fb4"
-      ],
-      "reference_regions": {
-        "image": 25,
-        "peripheral": 14,
-        "sram": 25
       }
     },
     {
@@ -627,25 +613,6 @@
       "reference_regions": {}
     },
     {
-      "entry": "0x6c48",
-      "undirected_call_distance": null,
-      "anchor_path": null,
-      "reference_regions": {
-        "image": 2,
-        "sram": 5
-      }
-    },
-    {
-      "entry": "0x6c68",
-      "undirected_call_distance": null,
-      "anchor_path": null,
-      "reference_regions": {
-        "image": 4,
-        "peripheral": 2,
-        "sram": 1
-      }
-    },
-    {
       "entry": "0x7444",
       "undirected_call_distance": null,
       "anchor_path": null,
@@ -664,5 +631,5 @@
       "reference_regions": {}
     }
   ],
-  "catalog_lf_text_sha256": "6befd791d83cbfee3d67bd4c63179a57cb28bfcbc431b8384657ffe48d947c5e"
+  "catalog_lf_text_sha256": "67257502b339a4169f1ae6d1c5f3224b42a885d3e64394b25c7278ead169fd05"
 }

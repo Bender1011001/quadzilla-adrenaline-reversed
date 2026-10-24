@@ -384,8 +384,19 @@
     },
     {
       "entry": "0x6c68",
-      "semantic_status": "unlabeled_static_entry",
-      "semantics": [],
+      "semantic_status": "documented_static_role",
+      "semantics": [
+        {
+          "entry": "0x6c68",
+          "label": "TC1 interrupt callback: stop counter and conditionally set RC",
+          "assurance": "static_instruction_trace_and_synthetic_mmio_emulation",
+          "evidence": [
+            "audit/data/timer_setup_binaryninja.json",
+            "audit/data/timer_setup_emulation.json",
+            "docs/TIMER_SETUP_REVIEW.md"
+          ]
+        }
+      ],
       "blocks": {
         "TC0_TC1_TC2": 2
       },
@@ -432,8 +443,19 @@
     },
     {
       "entry": "0x6fb4",
-      "semantic_status": "unlabeled_static_entry",
-      "semantics": [],
+      "semantic_status": "documented_static_role",
+      "semantics": [
+        {
+          "entry": "0x6fb4",
+          "label": "Three-channel timer, PMC and AIC setup coordinator",
+          "assurance": "static_instruction_trace_and_synthetic_mmio_emulation",
+          "evidence": [
+            "audit/data/timer_setup_binaryninja.json",
+            "audit/data/timer_setup_emulation.json",
+            "docs/TIMER_SETUP_REVIEW.md"
+          ]
+        }
+      ],
       "blocks": {
         "AIC": 9,
         "PMC": 1,
@@ -1280,7 +1302,7 @@
   "inputs": {
     "catalog": {
       "path": "audit/data/execution_entry_catalog.json",
-      "sha256": "6befd791d83cbfee3d67bd4c63179a57cb28bfcbc431b8384657ffe48d947c5e"
+      "sha256": "67257502b339a4169f1ae6d1c5f3224b42a885d3e64394b25c7278ead169fd05"
     },
     "peripheral_map": {
       "path": "audit/data/sam7s_peripheral_map.json",

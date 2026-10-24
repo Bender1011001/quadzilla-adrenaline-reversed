@@ -1,0 +1,883 @@
+{
+  "format": "quadzilla-timer-setup-emulation-v1",
+  "raw_sha256": "1ae519ba6194e8f7bdaaa94333a83a9e6fda3b0563f87f7d48383b37288c1780",
+  "entry": "0x6fb4",
+  "cpu": "ARM926 functional surrogate",
+  "peripherals": "synthetic read/write memory with no device side effects",
+  "source_pointers": {
+    "0x2006f8": {
+      "image_source": "0x9de0",
+      "value": "0xfffa00c0"
+    },
+    "0x2006fc": {
+      "image_source": "0x9de4",
+      "value": "0xfffa00c4"
+    },
+    "0x200700": {
+      "image_source": "0x9de8",
+      "value": "0xfffa0000"
+    },
+    "0x200704": {
+      "image_source": "0x9dec",
+      "value": "0xfffa0040"
+    },
+    "0x200728": {
+      "image_source": "0x9e10",
+      "value": "0xfffa0080"
+    }
+  },
+  "cases": [
+    {
+      "synthetic_tc_sr_each": "0x0",
+      "return_r0": 0,
+      "writes": [
+        {
+          "site": "0x6fbc",
+          "address": "0xfffa00c0",
+          "size": 4,
+          "value": "0x0"
+        },
+        {
+          "site": "0x6fc2",
+          "address": "0xfffa00c4",
+          "size": 4,
+          "value": "0x15"
+        },
+        {
+          "site": "0x6fca",
+          "address": "0xfffffc10",
+          "size": 4,
+          "value": "0x1000"
+        },
+        {
+          "site": "0x6fd0",
+          "address": "0xfffa0000",
+          "size": 4,
+          "value": "0x2"
+        },
+        {
+          "site": "0x6fd6",
+          "address": "0xfffa0004",
+          "size": 4,
+          "value": "0x980c0"
+        },
+        {
+          "site": "0x6fde",
+          "address": "0xfffff124",
+          "size": 4,
+          "value": "0x1000"
+        },
+        {
+          "site": "0x6fe2",
+          "address": "0xfffff0b0",
+          "size": 4,
+          "value": "0x6c49"
+        },
+        {
+          "site": "0x6fe8",
+          "address": "0xfffff030",
+          "size": 4,
+          "value": "0x26"
+        },
+        {
+          "site": "0x6fec",
+          "address": "0xfffff128",
+          "size": 4,
+          "value": "0x1000"
+        },
+        {
+          "site": "0x6ff0",
+          "address": "0xfffff120",
+          "size": 4,
+          "value": "0x1000"
+        },
+        {
+          "site": "0x6ff6",
+          "address": "0xfffa0024",
+          "size": 4,
+          "value": "0x10"
+        },
+        {
+          "site": "0x7006",
+          "address": "0xfffa0014",
+          "size": 4,
+          "value": "0x3"
+        },
+        {
+          "site": "0x7018",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0x1b"
+        },
+        {
+          "site": "0x701e",
+          "address": "0xfffa0000",
+          "size": 4,
+          "value": "0x5"
+        },
+        {
+          "site": "0x7022",
+          "address": "0xfffffc10",
+          "size": 4,
+          "value": "0x2000"
+        },
+        {
+          "site": "0x7028",
+          "address": "0xfffa0040",
+          "size": 4,
+          "value": "0x2"
+        },
+        {
+          "site": "0x702e",
+          "address": "0xfffa0044",
+          "size": 4,
+          "value": "0x980c0"
+        },
+        {
+          "site": "0x7036",
+          "address": "0xfffff124",
+          "size": 4,
+          "value": "0x2000"
+        },
+        {
+          "site": "0x703a",
+          "address": "0xfffff0b4",
+          "size": 4,
+          "value": "0x6c69"
+        },
+        {
+          "site": "0x7040",
+          "address": "0xfffff034",
+          "size": 4,
+          "value": "0x26"
+        },
+        {
+          "site": "0x7044",
+          "address": "0xfffff128",
+          "size": 4,
+          "value": "0x2000"
+        },
+        {
+          "site": "0x7046",
+          "address": "0xfffff120",
+          "size": 4,
+          "value": "0x2000"
+        },
+        {
+          "site": "0x704c",
+          "address": "0xfffa0064",
+          "size": 4,
+          "value": "0x10"
+        },
+        {
+          "site": "0x7058",
+          "address": "0xfffa0054",
+          "size": 4,
+          "value": "0x3"
+        },
+        {
+          "site": "0x706a",
+          "address": "0xfffa005c",
+          "size": 4,
+          "value": "0x1b"
+        },
+        {
+          "site": "0x7070",
+          "address": "0xfffa0040",
+          "size": 4,
+          "value": "0x5"
+        },
+        {
+          "site": "0x7074",
+          "address": "0xfffffc10",
+          "size": 4,
+          "value": "0x4000"
+        },
+        {
+          "site": "0x707c",
+          "address": "0xfffa0080",
+          "size": 4,
+          "value": "0x2"
+        },
+        {
+          "site": "0x7084",
+          "address": "0xfffa0084",
+          "size": 4,
+          "value": "0xc000"
+        },
+        {
+          "site": "0x708a",
+          "address": "0xfffff124",
+          "size": 4,
+          "value": "0x4000"
+        },
+        {
+          "site": "0x708e",
+          "address": "0xfffff0b8",
+          "size": 4,
+          "value": "0x6c95"
+        },
+        {
+          "site": "0x7094",
+          "address": "0xfffff038",
+          "size": 4,
+          "value": "0x25"
+        },
+        {
+          "site": "0x7096",
+          "address": "0xfffff128",
+          "size": 4,
+          "value": "0x4000"
+        },
+        {
+          "site": "0x7098",
+          "address": "0xfffff120",
+          "size": 4,
+          "value": "0x4000"
+        },
+        {
+          "site": "0x709e",
+          "address": "0xfffa00a4",
+          "size": 4,
+          "value": "0x10"
+        },
+        {
+          "site": "0x70aa",
+          "address": "0xfffa009c",
+          "size": 4,
+          "value": "0x963"
+        },
+        {
+          "site": "0x70b4",
+          "address": "0xfffa0080",
+          "size": 4,
+          "value": "0x1"
+        },
+        {
+          "site": "0x70ba",
+          "address": "0xfffa0080",
+          "size": 4,
+          "value": "0x4"
+        },
+        {
+          "site": "0x70be",
+          "address": "0x200748",
+          "size": 4,
+          "value": "0x0"
+        },
+        {
+          "site": "0x70c0",
+          "address": "0x20074c",
+          "size": 4,
+          "value": "0x0"
+        },
+        {
+          "site": "0x70c2",
+          "address": "0x20073c",
+          "size": 4,
+          "value": "0x0"
+        }
+      ],
+      "visited": [
+        "0x6fb4",
+        "0x6fb6",
+        "0x6fb8",
+        "0x6fba",
+        "0x6fbc",
+        "0x6fbe",
+        "0x6fc0",
+        "0x6fc2",
+        "0x6fc4",
+        "0x6fc6",
+        "0x6fc8",
+        "0x6fca",
+        "0x6fcc",
+        "0x6fce",
+        "0x6fd0",
+        "0x6fd2",
+        "0x6fd4",
+        "0x6fd6",
+        "0x6fd8",
+        "0x6fda",
+        "0x6fdc",
+        "0x6fde",
+        "0x6fe0",
+        "0x6fe2",
+        "0x6fe4",
+        "0x6fe6",
+        "0x6fe8",
+        "0x6fea",
+        "0x6fec",
+        "0x6fee",
+        "0x6ff0",
+        "0x6ff2",
+        "0x6ff4",
+        "0x6ff6",
+        "0x6ff8",
+        "0x6ffa",
+        "0x6ffc",
+        "0x6ffe",
+        "0x7000",
+        "0x7002",
+        "0x7004",
+        "0x7006",
+        "0x7008",
+        "0x700a",
+        "0x700c",
+        "0x700e",
+        "0x7010",
+        "0x7012",
+        "0x7014",
+        "0x7016",
+        "0x7018",
+        "0x701a",
+        "0x701c",
+        "0x701e",
+        "0x7020",
+        "0x7022",
+        "0x7024",
+        "0x7026",
+        "0x7028",
+        "0x702a",
+        "0x702c",
+        "0x702e",
+        "0x7030",
+        "0x7032",
+        "0x7034",
+        "0x7036",
+        "0x7038",
+        "0x703a",
+        "0x703c",
+        "0x703e",
+        "0x7040",
+        "0x7042",
+        "0x7044",
+        "0x7046",
+        "0x7048",
+        "0x704a",
+        "0x704c",
+        "0x704e",
+        "0x7050",
+        "0x7052",
+        "0x7054",
+        "0x7056",
+        "0x7058",
+        "0x705a",
+        "0x705c",
+        "0x705e",
+        "0x7060",
+        "0x7062",
+        "0x7064",
+        "0x7066",
+        "0x7068",
+        "0x706a",
+        "0x706c",
+        "0x706e",
+        "0x7070",
+        "0x7072",
+        "0x7074",
+        "0x7076",
+        "0x7078",
+        "0x707a",
+        "0x707c",
+        "0x707e",
+        "0x7080",
+        "0x7082",
+        "0x7084",
+        "0x7086",
+        "0x7088",
+        "0x708a",
+        "0x708c",
+        "0x708e",
+        "0x7090",
+        "0x7092",
+        "0x7094",
+        "0x7096",
+        "0x7098",
+        "0x709a",
+        "0x709c",
+        "0x709e",
+        "0x70a0",
+        "0x70a2",
+        "0x70a4",
+        "0x70a6",
+        "0x70a8",
+        "0x70aa",
+        "0x70ac",
+        "0x70ae",
+        "0x70b0",
+        "0x70b2",
+        "0x70b4",
+        "0x70b6",
+        "0x70b8",
+        "0x70ba",
+        "0x70bc",
+        "0x70be",
+        "0x70c0",
+        "0x70c2",
+        "0x70c4",
+        "0x70c6",
+        "0x70c8"
+      ]
+    },
+    {
+      "synthetic_tc_sr_each": "0x10000",
+      "return_r0": 0,
+      "writes": [
+        {
+          "site": "0x6fbc",
+          "address": "0xfffa00c0",
+          "size": 4,
+          "value": "0x0"
+        },
+        {
+          "site": "0x6fc2",
+          "address": "0xfffa00c4",
+          "size": 4,
+          "value": "0x15"
+        },
+        {
+          "site": "0x6fca",
+          "address": "0xfffffc10",
+          "size": 4,
+          "value": "0x1000"
+        },
+        {
+          "site": "0x6fd0",
+          "address": "0xfffa0000",
+          "size": 4,
+          "value": "0x2"
+        },
+        {
+          "site": "0x6fd6",
+          "address": "0xfffa0004",
+          "size": 4,
+          "value": "0x980c0"
+        },
+        {
+          "site": "0x6fde",
+          "address": "0xfffff124",
+          "size": 4,
+          "value": "0x1000"
+        },
+        {
+          "site": "0x6fe2",
+          "address": "0xfffff0b0",
+          "size": 4,
+          "value": "0x6c49"
+        },
+        {
+          "site": "0x6fe8",
+          "address": "0xfffff030",
+          "size": 4,
+          "value": "0x26"
+        },
+        {
+          "site": "0x6fec",
+          "address": "0xfffff128",
+          "size": 4,
+          "value": "0x1000"
+        },
+        {
+          "site": "0x6ff0",
+          "address": "0xfffff120",
+          "size": 4,
+          "value": "0x1000"
+        },
+        {
+          "site": "0x6ff6",
+          "address": "0xfffa0024",
+          "size": 4,
+          "value": "0x10"
+        },
+        {
+          "site": "0x701e",
+          "address": "0xfffa0000",
+          "size": 4,
+          "value": "0x5"
+        },
+        {
+          "site": "0x7022",
+          "address": "0xfffffc10",
+          "size": 4,
+          "value": "0x2000"
+        },
+        {
+          "site": "0x7028",
+          "address": "0xfffa0040",
+          "size": 4,
+          "value": "0x2"
+        },
+        {
+          "site": "0x702e",
+          "address": "0xfffa0044",
+          "size": 4,
+          "value": "0x980c0"
+        },
+        {
+          "site": "0x7036",
+          "address": "0xfffff124",
+          "size": 4,
+          "value": "0x2000"
+        },
+        {
+          "site": "0x703a",
+          "address": "0xfffff0b4",
+          "size": 4,
+          "value": "0x6c69"
+        },
+        {
+          "site": "0x7040",
+          "address": "0xfffff034",
+          "size": 4,
+          "value": "0x26"
+        },
+        {
+          "site": "0x7044",
+          "address": "0xfffff128",
+          "size": 4,
+          "value": "0x2000"
+        },
+        {
+          "site": "0x7046",
+          "address": "0xfffff120",
+          "size": 4,
+          "value": "0x2000"
+        },
+        {
+          "site": "0x704c",
+          "address": "0xfffa0064",
+          "size": 4,
+          "value": "0x10"
+        },
+        {
+          "site": "0x7070",
+          "address": "0xfffa0040",
+          "size": 4,
+          "value": "0x5"
+        },
+        {
+          "site": "0x7074",
+          "address": "0xfffffc10",
+          "size": 4,
+          "value": "0x4000"
+        },
+        {
+          "site": "0x707c",
+          "address": "0xfffa0080",
+          "size": 4,
+          "value": "0x2"
+        },
+        {
+          "site": "0x7084",
+          "address": "0xfffa0084",
+          "size": 4,
+          "value": "0xc000"
+        },
+        {
+          "site": "0x708a",
+          "address": "0xfffff124",
+          "size": 4,
+          "value": "0x4000"
+        },
+        {
+          "site": "0x708e",
+          "address": "0xfffff0b8",
+          "size": 4,
+          "value": "0x6c95"
+        },
+        {
+          "site": "0x7094",
+          "address": "0xfffff038",
+          "size": 4,
+          "value": "0x25"
+        },
+        {
+          "site": "0x7096",
+          "address": "0xfffff128",
+          "size": 4,
+          "value": "0x4000"
+        },
+        {
+          "site": "0x7098",
+          "address": "0xfffff120",
+          "size": 4,
+          "value": "0x4000"
+        },
+        {
+          "site": "0x709e",
+          "address": "0xfffa00a4",
+          "size": 4,
+          "value": "0x10"
+        },
+        {
+          "site": "0x70b4",
+          "address": "0xfffa0080",
+          "size": 4,
+          "value": "0x1"
+        },
+        {
+          "site": "0x70ba",
+          "address": "0xfffa0080",
+          "size": 4,
+          "value": "0x4"
+        },
+        {
+          "site": "0x70be",
+          "address": "0x200748",
+          "size": 4,
+          "value": "0x0"
+        },
+        {
+          "site": "0x70c0",
+          "address": "0x20074c",
+          "size": 4,
+          "value": "0x0"
+        },
+        {
+          "site": "0x70c2",
+          "address": "0x20073c",
+          "size": 4,
+          "value": "0x0"
+        }
+      ],
+      "visited": [
+        "0x6fb4",
+        "0x6fb6",
+        "0x6fb8",
+        "0x6fba",
+        "0x6fbc",
+        "0x6fbe",
+        "0x6fc0",
+        "0x6fc2",
+        "0x6fc4",
+        "0x6fc6",
+        "0x6fc8",
+        "0x6fca",
+        "0x6fcc",
+        "0x6fce",
+        "0x6fd0",
+        "0x6fd2",
+        "0x6fd4",
+        "0x6fd6",
+        "0x6fd8",
+        "0x6fda",
+        "0x6fdc",
+        "0x6fde",
+        "0x6fe0",
+        "0x6fe2",
+        "0x6fe4",
+        "0x6fe6",
+        "0x6fe8",
+        "0x6fea",
+        "0x6fec",
+        "0x6fee",
+        "0x6ff0",
+        "0x6ff2",
+        "0x6ff4",
+        "0x6ff6",
+        "0x6ff8",
+        "0x6ffa",
+        "0x6ffc",
+        "0x6ffe",
+        "0x7000",
+        "0x7002",
+        "0x7008",
+        "0x700a",
+        "0x700c",
+        "0x700e",
+        "0x7010",
+        "0x7012",
+        "0x701a",
+        "0x701c",
+        "0x701e",
+        "0x7020",
+        "0x7022",
+        "0x7024",
+        "0x7026",
+        "0x7028",
+        "0x702a",
+        "0x702c",
+        "0x702e",
+        "0x7030",
+        "0x7032",
+        "0x7034",
+        "0x7036",
+        "0x7038",
+        "0x703a",
+        "0x703c",
+        "0x703e",
+        "0x7040",
+        "0x7042",
+        "0x7044",
+        "0x7046",
+        "0x7048",
+        "0x704a",
+        "0x704c",
+        "0x704e",
+        "0x7050",
+        "0x7052",
+        "0x7054",
+        "0x705a",
+        "0x705c",
+        "0x705e",
+        "0x7060",
+        "0x7062",
+        "0x7064",
+        "0x706c",
+        "0x706e",
+        "0x7070",
+        "0x7072",
+        "0x7074",
+        "0x7076",
+        "0x7078",
+        "0x707a",
+        "0x707c",
+        "0x707e",
+        "0x7080",
+        "0x7082",
+        "0x7084",
+        "0x7086",
+        "0x7088",
+        "0x708a",
+        "0x708c",
+        "0x708e",
+        "0x7090",
+        "0x7092",
+        "0x7094",
+        "0x7096",
+        "0x7098",
+        "0x709a",
+        "0x709c",
+        "0x709e",
+        "0x70a0",
+        "0x70a2",
+        "0x70a4",
+        "0x70a6",
+        "0x70ac",
+        "0x70ae",
+        "0x70b0",
+        "0x70b2",
+        "0x70b4",
+        "0x70b6",
+        "0x70b8",
+        "0x70ba",
+        "0x70bc",
+        "0x70be",
+        "0x70c0",
+        "0x70c2",
+        "0x70c4",
+        "0x70c6",
+        "0x70c8"
+      ]
+    }
+  ],
+  "callbacks": [
+    {
+      "entry": "0x6c48",
+      "synthetic_tc1_sr": "0x0",
+      "writes": [
+        {
+          "site": "0x6c4e",
+          "address": "0xfffa0000",
+          "size": 4,
+          "value": "0x2"
+        },
+        {
+          "site": "0x6c54",
+          "address": "0x200726",
+          "size": 1,
+          "value": "0x1"
+        },
+        {
+          "site": "0x6c58",
+          "address": "0x200727",
+          "size": 1,
+          "value": "0x0"
+        },
+        {
+          "site": "0x6c5a",
+          "address": "0x200725",
+          "size": 1,
+          "value": "0x1"
+        }
+      ],
+      "visited": [
+        "0x6c48",
+        "0x6c4a",
+        "0x6c4c",
+        "0x6c4e",
+        "0x6c50",
+        "0x6c52",
+        "0x6c54",
+        "0x6c56",
+        "0x6c58",
+        "0x6c5a",
+        "0x6c5c"
+      ]
+    },
+    {
+      "entry": "0x6c68",
+      "synthetic_tc1_sr": "0x0",
+      "writes": [
+        {
+          "site": "0x6c6e",
+          "address": "0xfffa0040",
+          "size": 4,
+          "value": "0x2"
+        },
+        {
+          "site": "0x6c7c",
+          "address": "0xfffa005c",
+          "size": 4,
+          "value": "0x2583"
+        }
+      ],
+      "visited": [
+        "0x6c68",
+        "0x6c6a",
+        "0x6c6c",
+        "0x6c6e",
+        "0x6c70",
+        "0x6c72",
+        "0x6c74",
+        "0x6c76",
+        "0x6c78",
+        "0x6c7a",
+        "0x6c7c",
+        "0x6c7e",
+        "0x6c80"
+      ]
+    },
+    {
+      "entry": "0x6c68",
+      "synthetic_tc1_sr": "0x10000",
+      "writes": [
+        {
+          "site": "0x6c6e",
+          "address": "0xfffa0040",
+          "size": 4,
+          "value": "0x2"
+        }
+      ],
+      "visited": [
+        "0x6c68",
+        "0x6c6a",
+        "0x6c6c",
+        "0x6c6e",
+        "0x6c70",
+        "0x6c72",
+        "0x6c74",
+        "0x6c76",
+        "0x6c7e",
+        "0x6c80"
+      ]
+    }
+  ],
+  "limits": [
+    "TC_SR, AIC and PMC are plain synthetic memory, not peripheral models",
+    "only uniform CLKSTA=0 and CLKSTA=1 channel states sampled",
+    "callbacks are called as Thumb routines without IRQ entry simulation",
+    "counter timing, pin wiring and physical outputs not simulated"
+  ]
+}
