@@ -697,6 +697,26 @@
       ]
     },
     {
+      "entry": "0x7f28",
+      "label": "TC2-triggered SRAM flag transition helper A",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/tc2_flag_helper_binaryninja.json",
+        "audit/data/tc2_flag_helper_emulation.json",
+        "docs/TC2_FLAG_HELPER_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x7f40",
+      "label": "TC2-triggered SRAM flag transition helper B",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/tc2_flag_helper_binaryninja.json",
+        "audit/data/tc2_flag_helper_emulation.json",
+        "docs/TC2_FLAG_HELPER_REVIEW.md"
+      ]
+    },
+    {
       "entry": "0x8038",
       "label": "Receive-buffer and message-type dispatcher returning parsed AID lists to the validator",
       "assurance": "static_instruction_trace",

@@ -1,0 +1,167 @@
+{
+  "format": "quadzilla-tc2-flag-helper-emulation-v1",
+  "raw_sha256": "1ae519ba6194e8f7bdaaa94333a83a9e6fda3b0563f87f7d48383b37288c1780",
+  "cpu": "ARM926 functional surrogate",
+  "literal_pointers": {
+    "0x81a4": "0x2007c8",
+    "0x8034": "0x2007c8"
+  },
+  "cases": [
+    {
+      "entry": "0x7f28",
+      "gate": 0,
+      "writes": [
+        {
+          "site": "0x7f2c",
+          "address": "0x2007ca",
+          "size": 1,
+          "value": "0x1"
+        },
+        {
+          "site": "0x7f30",
+          "address": "0x2007df",
+          "size": 1,
+          "value": "0x0"
+        }
+      ],
+      "after": "000001000000000000000000000000000000000000000000",
+      "visited": [
+        "0x7f28",
+        "0x7f2a",
+        "0x7f2c",
+        "0x7f2e",
+        "0x7f30",
+        "0x7f32",
+        "0x7f34",
+        "0x7f36",
+        "0x7f3c",
+        "0x7f3e"
+      ]
+    },
+    {
+      "entry": "0x7f28",
+      "gate": 1,
+      "writes": [
+        {
+          "site": "0x7f2c",
+          "address": "0x2007ca",
+          "size": 1,
+          "value": "0x1"
+        },
+        {
+          "site": "0x7f30",
+          "address": "0x2007df",
+          "size": 1,
+          "value": "0x0"
+        },
+        {
+          "site": "0x7f38",
+          "address": "0x2007c8",
+          "size": 1,
+          "value": "0x1"
+        },
+        {
+          "site": "0x7f3a",
+          "address": "0x2007de",
+          "size": 1,
+          "value": "0x0"
+        }
+      ],
+      "after": "010001000001000000000000000000000000000000000000",
+      "visited": [
+        "0x7f28",
+        "0x7f2a",
+        "0x7f2c",
+        "0x7f2e",
+        "0x7f30",
+        "0x7f32",
+        "0x7f34",
+        "0x7f36",
+        "0x7f38",
+        "0x7f3a",
+        "0x7f3c",
+        "0x7f3e"
+      ]
+    },
+    {
+      "entry": "0x7f40",
+      "gate": 0,
+      "writes": [
+        {
+          "site": "0x7f44",
+          "address": "0x2007cb",
+          "size": 1,
+          "value": "0x1"
+        },
+        {
+          "site": "0x7f48",
+          "address": "0x2007da",
+          "size": 1,
+          "value": "0x0"
+        }
+      ],
+      "after": "000000010000000000000000000000000000000000000000",
+      "visited": [
+        "0x7f40",
+        "0x7f42",
+        "0x7f44",
+        "0x7f46",
+        "0x7f48",
+        "0x7f4a",
+        "0x7f4c",
+        "0x7f4e",
+        "0x7f54",
+        "0x7f56"
+      ]
+    },
+    {
+      "entry": "0x7f40",
+      "gate": 1,
+      "writes": [
+        {
+          "site": "0x7f44",
+          "address": "0x2007cb",
+          "size": 1,
+          "value": "0x1"
+        },
+        {
+          "site": "0x7f48",
+          "address": "0x2007da",
+          "size": 1,
+          "value": "0x0"
+        },
+        {
+          "site": "0x7f50",
+          "address": "0x2007c9",
+          "size": 1,
+          "value": "0x1"
+        },
+        {
+          "site": "0x7f52",
+          "address": "0x2007d9",
+          "size": 1,
+          "value": "0x0"
+        }
+      ],
+      "after": "000100010100000000000000000000000000000000000000",
+      "visited": [
+        "0x7f40",
+        "0x7f42",
+        "0x7f44",
+        "0x7f46",
+        "0x7f48",
+        "0x7f4a",
+        "0x7f4c",
+        "0x7f4e",
+        "0x7f50",
+        "0x7f52",
+        "0x7f54",
+        "0x7f56"
+      ]
+    }
+  ],
+  "limits": [
+    "controlled SRAM flags, not observed timer or interrupt state",
+    "helper calls are standalone Thumb routines, without caller timing"
+  ]
+}

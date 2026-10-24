@@ -41,10 +41,10 @@ It is not a count of original C functions, and the two tools still disagree on w
 
 | | |
 |---|---|
-| Entries with an evidence-backed static role | 94 |
-| Entries still unlabelled | 51 |
+| Entries with an evidence-backed static role | 96 |
+| Entries still unlabelled | 49 |
 
-The 51 unlabelled entries are a work queue, not findings. Labels from the first-pass notes are treated as hypotheses
+The 49 unlabelled entries are a work queue, not findings. Labels from the first-pass notes are treated as hypotheses
 unless they appear in `audit/data/semantic_labels.json`.
 
 The initial audit assigned 14 roles; the [offline write-path review](OFFLINE_WRITE_PATH_REVIEW.md)
@@ -68,6 +68,8 @@ The [three-channel timer setup review](TIMER_SETUP_REVIEW.md) adds three
 baseline roles, yielding 92 with 53 pending.
 The [SPI setup review](SPI_SETUP_REVIEW.md) adds two baseline roles,
 yielding 94 with 51 pending.
+The [TC2 flag helper review](TC2_FLAG_HELPER_REVIEW.md) adds two baseline
+roles, yielding 96 with 49 pending.
 
 ### Peripheral map
 

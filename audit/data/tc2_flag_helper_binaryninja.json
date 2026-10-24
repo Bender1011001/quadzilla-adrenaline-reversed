@@ -1,0 +1,142 @@
+{
+  "format": "quadzilla-bounded-decode-v1",
+  "raw_sha256": "1ae519ba6194e8f7bdaaa94333a83a9e6fda3b0563f87f7d48383b37288c1780",
+  "tool_version": "5.2.8722 Personal",
+  "limitation": "decoder supports a superset of ARMv4T; explicit mode and bounds are supplied hypotheses",
+  "ranges": [
+    {
+      "start": "0x7f28",
+      "end": "0x7f40",
+      "architecture": "thumb2",
+      "instructions": [
+        {
+          "address": "0x7f28",
+          "length": 2,
+          "text": "ldr     r0, [pc, #0x278]"
+        },
+        {
+          "address": "0x7f2a",
+          "length": 2,
+          "text": "movs    r1, #1"
+        },
+        {
+          "address": "0x7f2c",
+          "length": 2,
+          "text": "strb    r1, [r0, #2]"
+        },
+        {
+          "address": "0x7f2e",
+          "length": 2,
+          "text": "movs    r2, #0"
+        },
+        {
+          "address": "0x7f30",
+          "length": 2,
+          "text": "strb    r2, [r0, #0x17]"
+        },
+        {
+          "address": "0x7f32",
+          "length": 2,
+          "text": "ldrb    r3, [r0, #5]"
+        },
+        {
+          "address": "0x7f34",
+          "length": 2,
+          "text": "cmp     r3, #0"
+        },
+        {
+          "address": "0x7f36",
+          "length": 2,
+          "text": "beq     #0x7f3c"
+        },
+        {
+          "address": "0x7f38",
+          "length": 2,
+          "text": "strb    r1, [r0]"
+        },
+        {
+          "address": "0x7f3a",
+          "length": 2,
+          "text": "strb    r2, [r0, #0x16]"
+        },
+        {
+          "address": "0x7f3c",
+          "length": 2,
+          "text": "add     sp, #0"
+        },
+        {
+          "address": "0x7f3e",
+          "length": 2,
+          "text": "bx      lr"
+        }
+      ]
+    },
+    {
+      "start": "0x7f40",
+      "end": "0x7f58",
+      "architecture": "thumb2",
+      "instructions": [
+        {
+          "address": "0x7f40",
+          "length": 2,
+          "text": "movs    r0, #1"
+        },
+        {
+          "address": "0x7f42",
+          "length": 2,
+          "text": "ldr     r1, [pc, #0xf0]"
+        },
+        {
+          "address": "0x7f44",
+          "length": 2,
+          "text": "strb    r0, [r1, #3]"
+        },
+        {
+          "address": "0x7f46",
+          "length": 2,
+          "text": "movs    r2, #0"
+        },
+        {
+          "address": "0x7f48",
+          "length": 2,
+          "text": "strb    r2, [r1, #0x12]"
+        },
+        {
+          "address": "0x7f4a",
+          "length": 2,
+          "text": "ldrb    r3, [r1, #4]"
+        },
+        {
+          "address": "0x7f4c",
+          "length": 2,
+          "text": "cmp     r3, #0"
+        },
+        {
+          "address": "0x7f4e",
+          "length": 2,
+          "text": "beq     #0x7f54"
+        },
+        {
+          "address": "0x7f50",
+          "length": 2,
+          "text": "strb    r0, [r1, #1]"
+        },
+        {
+          "address": "0x7f52",
+          "length": 2,
+          "text": "strb    r2, [r1, #0x11]"
+        },
+        {
+          "address": "0x7f54",
+          "length": 2,
+          "text": "add     sp, #0"
+        },
+        {
+          "address": "0x7f56",
+          "length": 2,
+          "text": "bx      lr"
+        }
+      ]
+    }
+  ]
+}
