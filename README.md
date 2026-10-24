@@ -79,6 +79,8 @@ The [TC2 flag helper review](docs/TC2_FLAG_HELPER_REVIEW.md) documents two small
 
 The [TC2 callback review](docs/TC2_CALLBACK_REVIEW.md) now covers that larger vector routine itself, bringing baseline coverage to 97 roles with 48 pending. Fifty controlled cases visit all 333 decoded instruction starts and document its counter transitions and gated numeric updates; live timing and upstream value units remain unresolved.
 
+The [SPI/PDC primitive review](docs/SPI_TRANSFER_REVIEW.md) adds six GPIO, readiness and buffer-programming roles, bringing baseline coverage to 103 roles with 42 pending. It records exact register-write order, gate outcomes and an IDA boundary correction; higher-level transfer/timeout flows remain under review.
+
 ## Layout
 
 ```

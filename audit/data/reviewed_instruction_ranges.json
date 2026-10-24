@@ -171,6 +171,32 @@
       ]
     },
     {
+      "start": "0x571c",
+      "end": "0x5736",
+      "entry": "0x571c",
+      "isa": "thumb",
+      "decoder_artifact": "audit/data/spi_transfer_binaryninja.json",
+      "account": "Bounded Thumb instructions through return; adjacent literal pools and ISA-conflicted alignment excluded",
+      "evidence": [
+        "audit/data/spi_transfer_binaryninja.json",
+        "audit/data/spi_transfer_emulation.json",
+        "docs/SPI_TRANSFER_REVIEW.md"
+      ]
+    },
+    {
+      "start": "0x573c",
+      "end": "0x5756",
+      "entry": "0x573c",
+      "isa": "thumb",
+      "decoder_artifact": "audit/data/spi_transfer_binaryninja.json",
+      "account": "Bounded Thumb instructions through return; adjacent literal pools and ISA-conflicted alignment excluded",
+      "evidence": [
+        "audit/data/spi_transfer_binaryninja.json",
+        "audit/data/spi_transfer_emulation.json",
+        "docs/SPI_TRANSFER_REVIEW.md"
+      ]
+    },
+    {
       "start": "0x5f04",
       "end": "0x5f08",
       "entry": "0x5f04",
@@ -237,6 +263,58 @@
         "audit/data/spi_setup_binaryninja.json",
         "audit/data/spi_setup_emulation.json",
         "docs/SPI_SETUP_REVIEW.md"
+      ]
+    },
+    {
+      "start": "0x6b48",
+      "end": "0x6b60",
+      "entry": "0x6b48",
+      "isa": "thumb",
+      "decoder_artifact": "audit/data/spi_transfer_binaryninja.json",
+      "account": "Bounded Thumb instructions through return; adjacent literal pools and ISA-conflicted alignment excluded",
+      "evidence": [
+        "audit/data/spi_transfer_binaryninja.json",
+        "audit/data/spi_transfer_emulation.json",
+        "docs/SPI_TRANSFER_REVIEW.md"
+      ]
+    },
+    {
+      "start": "0x6b64",
+      "end": "0x6b8c",
+      "entry": "0x6b64",
+      "isa": "thumb",
+      "decoder_artifact": "audit/data/spi_transfer_binaryninja.json",
+      "account": "Bounded Thumb instructions through return; adjacent literal pools and ISA-conflicted alignment excluded",
+      "evidence": [
+        "audit/data/spi_transfer_binaryninja.json",
+        "audit/data/spi_transfer_emulation.json",
+        "docs/SPI_TRANSFER_REVIEW.md"
+      ]
+    },
+    {
+      "start": "0x6b8c",
+      "end": "0x6b9c",
+      "entry": "0x6b8c",
+      "isa": "thumb",
+      "decoder_artifact": "audit/data/spi_transfer_binaryninja.json",
+      "account": "Bounded Thumb instructions through return; adjacent literal pools and ISA-conflicted alignment excluded",
+      "evidence": [
+        "audit/data/spi_transfer_binaryninja.json",
+        "audit/data/spi_transfer_emulation.json",
+        "docs/SPI_TRANSFER_REVIEW.md"
+      ]
+    },
+    {
+      "start": "0x6b9c",
+      "end": "0x6bd2",
+      "entry": "0x6b9c",
+      "isa": "thumb",
+      "decoder_artifact": "audit/data/spi_transfer_binaryninja.json",
+      "account": "Bounded Thumb instructions through return; adjacent literal pools and ISA-conflicted alignment excluded",
+      "evidence": [
+        "audit/data/spi_transfer_binaryninja.json",
+        "audit/data/spi_transfer_emulation.json",
+        "docs/SPI_TRANSFER_REVIEW.md"
       ]
     },
     {

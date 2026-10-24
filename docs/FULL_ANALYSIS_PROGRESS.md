@@ -10,8 +10,8 @@ Update: the [startup/persistence review](STARTUP_PERSISTENCE_REVIEW.md) and
 entries, for at least 157 supported starts. Three callable numeric routines
 have no identified incoming image call and are not claimed reachable in service.
 The original 145-start catalog is retained as the baseline; its semantic coverage
-now stands at 97 roles with 48 entries left after the
-[TC2 callback review](TC2_CALLBACK_REVIEW.md). The
+now stands at 103 roles with 42 entries left after the
+[SPI/PDC primitive review](SPI_TRANSFER_REVIEW.md). The
 new entries and aliases are recorded separately in
 `audit/data/entry_adjudications.json`. Neither inventory is claimed exhaustive.
 
@@ -27,8 +27,8 @@ address without hiding pending review:
 
 | Classification | Bytes |
 |---|---:|
-| IDA code candidates awaiting review | 14,760 |
-| Explicitly reviewed Thumb instruction ranges | 2,588 |
+| IDA code candidates awaiting review | 14,574 |
+| Explicitly reviewed Thumb instruction ranges | 2,774 |
 | Explicitly reviewed ARM instruction ranges | 4,168 |
 | IDA data candidates awaiting review | 3,144 |
 | Soft float status pointer literal | 4 |
@@ -39,8 +39,8 @@ address without hiding pending review:
 | Erased trailing `FF` | 2,888 |
 
 Coverage of an address is not proof that its meaning or ISA has been reviewed.
-The explicit instruction-range manifest now accepts 6,756 bytes through the
-[TC2 callback review](TC2_CALLBACK_REVIEW.md). It excludes adjacent literal
+The explicit instruction-range manifest now accepts 6,942 bytes through the
+[SPI/PDC primitive review](SPI_TRANSFER_REVIEW.md). It excludes adjacent literal
 pools and alignment. Earlier semantic labels are not automatically promoted to
 byte-level classification; their exact ranges still need to be adjudicated.
 The ledger explicitly preserves 2,119 item/layout conflicts. These are tool item
@@ -87,8 +87,11 @@ swallows the `PUSH` at `0xB124`). ARM7TDMI cannot execute NEON instructions.
 Bounded Binary Ninja decoding beginning at `0xB124` recovers an ordinary Thumb
 routine; the same pass decodes `0xB18C` and the startup/copy helpers.
 
+The [SPI/PDC review](SPI_TRANSFER_REVIEW.md) adjudicates `0x6B48` as a
+Thumb predicate; IDA's NEON item at `0x6B46` overlaps its first instruction.
+The preceding halfword remains outside the reviewed instruction body.
 Other invalid-ISA candidates occur around
-entry starts such as `0x6B48`, `0x7B04`, `0x7BE8`, `0x7BF0`, and `0x8530`.
+entry starts such as `0x7B04`, `0x7BE8`, `0x7BF0`, and `0x8530`.
 The known catalog already contains some of these exact starts while the IDA item
 spans overlap them. Shared entry recognition does not prove correct surrounding
 decoding. Those spans remain pending, and the current 145-entry inventory will

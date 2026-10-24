@@ -184,6 +184,26 @@
       ]
     },
     {
+      "entry": "0x571c",
+      "label": "PIOA output-clear selector for masks 0x100 and 0x200",
+      "assurance": "static_instruction_trace_and_synthetic_mmio_emulation",
+      "evidence": [
+        "audit/data/spi_transfer_binaryninja.json",
+        "audit/data/spi_transfer_emulation.json",
+        "docs/SPI_TRANSFER_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x573c",
+      "label": "PIOA output-set selector for masks 0x100 and 0x200",
+      "assurance": "static_instruction_trace_and_synthetic_mmio_emulation",
+      "evidence": [
+        "audit/data/spi_transfer_binaryninja.json",
+        "audit/data/spi_transfer_emulation.json",
+        "docs/SPI_TRANSFER_REVIEW.md"
+      ]
+    },
+    {
       "entry": "0x59e8",
       "label": "Incoming capture unpacker and writer for the 0x2005C4 SRAM structure",
       "assurance": "static_instruction_trace",
@@ -260,6 +280,46 @@
         "audit/data/spi_setup_binaryninja.json",
         "audit/data/spi_setup_emulation.json",
         "docs/SPI_SETUP_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x6b48",
+      "label": "SPI ENDTX and PIOA bit-11 readiness predicate",
+      "assurance": "static_instruction_trace_and_synthetic_mmio_emulation",
+      "evidence": [
+        "audit/data/spi_transfer_binaryninja.json",
+        "audit/data/spi_transfer_emulation.json",
+        "docs/SPI_TRANSFER_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x6b64",
+      "label": "Gate and program PDC transmit pointer and count",
+      "assurance": "static_instruction_trace_and_synthetic_mmio_emulation",
+      "evidence": [
+        "audit/data/spi_transfer_binaryninja.json",
+        "audit/data/spi_transfer_emulation.json",
+        "docs/SPI_TRANSFER_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x6b8c",
+      "label": "Peripheral ENDRX status predicate",
+      "assurance": "static_instruction_trace_and_synthetic_mmio_emulation",
+      "evidence": [
+        "audit/data/spi_transfer_binaryninja.json",
+        "audit/data/spi_transfer_emulation.json",
+        "docs/SPI_TRANSFER_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x6b9c",
+      "label": "Gate and program paired PDC receive/transmit buffers",
+      "assurance": "static_instruction_trace_and_synthetic_mmio_emulation",
+      "evidence": [
+        "audit/data/spi_transfer_binaryninja.json",
+        "audit/data/spi_transfer_emulation.json",
+        "docs/SPI_TRANSFER_REVIEW.md"
       ]
     },
     {

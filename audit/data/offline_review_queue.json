@@ -9,7 +9,7 @@
     "0x8038",
     "0x7cc4"
   ],
-  "remaining_entries": 48,
+  "remaining_entries": 42,
   "queue": [
     {
       "entry": "0x506c",
@@ -188,34 +188,6 @@
       "reference_regions": {}
     },
     {
-      "entry": "0x571c",
-      "undirected_call_distance": 3,
-      "anchor_path": [
-        "0x601c",
-        "0x76cc",
-        "0x5cf0",
-        "0x571c"
-      ],
-      "reference_regions": {
-        "image": 1,
-        "peripheral": 1
-      }
-    },
-    {
-      "entry": "0x573c",
-      "undirected_call_distance": 3,
-      "anchor_path": [
-        "0x601c",
-        "0x7128",
-        "0x59e8",
-        "0x573c"
-      ],
-      "reference_regions": {
-        "image": 1,
-        "peripheral": 1
-      }
-    },
-    {
       "entry": "0x5ebc",
       "undirected_call_distance": 3,
       "anchor_path": [
@@ -241,53 +213,6 @@
       "reference_regions": {
         "external_or_literal": 1,
         "image": 2
-      }
-    },
-    {
-      "entry": "0x6b48",
-      "undirected_call_distance": 3,
-      "anchor_path": [
-        "0x601c",
-        "0x76cc",
-        "0x5cf0",
-        "0x6b48"
-      ],
-      "reference_regions": {}
-    },
-    {
-      "entry": "0x6b64",
-      "undirected_call_distance": 3,
-      "anchor_path": [
-        "0x601c",
-        "0x7128",
-        "0x59e8",
-        "0x6b64"
-      ],
-      "reference_regions": {}
-    },
-    {
-      "entry": "0x6b8c",
-      "undirected_call_distance": 3,
-      "anchor_path": [
-        "0x601c",
-        "0x7128",
-        "0x59e8",
-        "0x6b8c"
-      ],
-      "reference_regions": {}
-    },
-    {
-      "entry": "0x6b9c",
-      "undirected_call_distance": 3,
-      "anchor_path": [
-        "0x601c",
-        "0x7128",
-        "0x59e8",
-        "0x6b9c"
-      ],
-      "reference_regions": {
-        "image": 1,
-        "peripheral": 1
       }
     },
     {
@@ -570,5 +495,5 @@
       "reference_regions": {}
     }
   ],
-  "catalog_lf_text_sha256": "d353e8d844a08c62766a33dfffcb27e44400a0f8e97f51a2f8ee4c85bbbaa4d1"
+  "catalog_lf_text_sha256": "32c30e965fb30af3c3ccb1d2ed3af7f7b19aadb343ac96bf360d2630f96636b6"
 }
