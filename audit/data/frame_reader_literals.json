@@ -1,0 +1,81 @@
+{
+  "format": "quadzilla-frame-reader-literals-v1",
+  "raw_sha256": "1ae519ba6194e8f7bdaaa94333a83a9e6fda3b0563f87f7d48383b37288c1780",
+  "range": [
+    "0x7ca0",
+    "0x7cc4"
+  ],
+  "words": [
+    {
+      "address": "0x7ca0",
+      "word": "0xad18",
+      "reader_sites": [
+        "0x7c6e"
+      ]
+    },
+    {
+      "address": "0x7ca4",
+      "word": "0xae44",
+      "reader_sites": [
+        "0x7c7a"
+      ]
+    },
+    {
+      "address": "0x7ca8",
+      "word": "0xaf70",
+      "reader_sites": [
+        "0x7c84"
+      ]
+    },
+    {
+      "address": "0x7cac",
+      "word": "0xaffc",
+      "reader_sites": [
+        "0x7c8e"
+      ]
+    },
+    {
+      "address": "0x7cb0",
+      "word": "0xb088",
+      "reader_sites": [
+        "0x7c94"
+      ]
+    },
+    {
+      "address": "0x7cb4",
+      "word": "0xfffffed4",
+      "reader_sites": [
+        "0x7c2c",
+        "0x7c78"
+      ]
+    },
+    {
+      "address": "0x7cb8",
+      "word": "0xfffffda8",
+      "reader_sites": [
+        "0x7c36",
+        "0x7c82"
+      ]
+    },
+    {
+      "address": "0x7cbc",
+      "word": "0xfffffd1c",
+      "reader_sites": [
+        "0x7c40",
+        "0x7c8c"
+      ]
+    },
+    {
+      "address": "0x7cc0",
+      "word": "0xfffffc90",
+      "reader_sites": [
+        "0x7c46",
+        "0x7c92"
+      ]
+    }
+  ],
+  "classification": "shared AID resolver literal pool; 0x7c9e..0x7ca0 excluded",
+  "limits": [
+    "IDA references confirm use sites; exact value roles follow the decoded resolver arithmetic"
+  ]
+}

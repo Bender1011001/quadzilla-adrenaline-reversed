@@ -903,6 +903,20 @@
       ]
     },
     {
+      "start": "0x7c68",
+      "end": "0x7c9e",
+      "entry": "0x7c68",
+      "isa": "thumb",
+      "account": "Reviewed complete local helper body, exact decoded boundaries and bounded original-byte cases; adjacent bytes excluded",
+      "evidence": [
+        "audit/data/frame_reader_binaryninja.json",
+        "audit/data/frame_reader_literals.json",
+        "audit/data/frame_reader_emulation.json",
+        "docs/FRAME_READER_REVIEW.md"
+      ],
+      "decoder_artifact": "audit/data/frame_reader_binaryninja.json"
+    },
+    {
       "start": "0x7cc4",
       "end": "0x7d7e",
       "entry": "0x7cc4",
@@ -917,6 +931,19 @@
       ]
     },
     {
+      "start": "0x7d80",
+      "end": "0x7e64",
+      "entry": "0x7d80",
+      "isa": "thumb",
+      "account": "Reviewed complete local helper body, exact decoded boundaries and bounded original-byte cases; adjacent bytes excluded",
+      "evidence": [
+        "audit/data/frame_reader_binaryninja.json",
+        "audit/data/frame_reader_emulation.json",
+        "docs/FRAME_READER_REVIEW.md"
+      ],
+      "decoder_artifact": "audit/data/frame_reader_binaryninja.json"
+    },
+    {
       "start": "0x7e64",
       "end": "0x7eb4",
       "entry": "0x7e64",
@@ -929,6 +956,19 @@
         "audit/data/short_value_admission.json",
         "docs/PAYLOAD_WALKER_REVIEW.md"
       ]
+    },
+    {
+      "start": "0x7eb4",
+      "end": "0x7efc",
+      "entry": "0x7eb4",
+      "isa": "thumb",
+      "account": "Reviewed complete local helper body, exact decoded boundaries and bounded original-byte cases; adjacent bytes excluded",
+      "evidence": [
+        "audit/data/frame_reader_binaryninja.json",
+        "audit/data/frame_reader_emulation.json",
+        "docs/FRAME_READER_REVIEW.md"
+      ],
+      "decoder_artifact": "audit/data/frame_reader_binaryninja.json"
     },
     {
       "start": "0x7f28",
@@ -955,6 +995,20 @@
         "audit/data/tc2_flag_helper_emulation.json",
         "docs/TC2_FLAG_HELPER_REVIEW.md"
       ]
+    },
+    {
+      "start": "0x7fd8",
+      "end": "0x800a",
+      "entry": "0x7fd8",
+      "isa": "thumb",
+      "account": "Reviewed complete local helper body, exact decoded boundaries and bounded original-byte cases; adjacent bytes excluded",
+      "evidence": [
+        "audit/data/frame_reader_binaryninja.json",
+        "audit/data/frame_reader_boundary.json",
+        "audit/data/frame_reader_emulation.json",
+        "docs/FRAME_READER_REVIEW.md"
+      ],
+      "decoder_artifact": "audit/data/frame_reader_binaryninja.json"
     },
     {
       "start": "0x8504",

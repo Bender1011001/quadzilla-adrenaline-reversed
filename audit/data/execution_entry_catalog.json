@@ -4,8 +4,8 @@
   "unit": "execution_entries_including_vectors_thunks_and_alternate_entries",
   "summary": {
     "confirmed_entries": 145,
-    "documented_static_roles": 113,
-    "unlabeled_static_entries": 32,
+    "documented_static_roles": 114,
+    "unlabeled_static_entries": 31,
     "entries_with_ida_sram_references": 49,
     "entries_with_ida_peripheral_references": 21,
     "union_direct_call_edges": 180
@@ -14882,10 +14882,12 @@
         {
           "entry": "0x7c68",
           "label": "AID-to-SRAM resolver for pointer table 2",
-          "assurance": "static_instruction_trace",
+          "assurance": "static_instruction_trace_and_bounded_emulation",
           "evidence": [
-            "CONTEXT.md:Architecture Quirks",
-            "quadzilla_aid_map.json"
+            "audit/data/frame_reader_binaryninja.json",
+            "audit/data/frame_reader_literals.json",
+            "audit/data/frame_reader_emulation.json",
+            "docs/FRAME_READER_REVIEW.md"
           ]
         }
       ],
@@ -15031,10 +15033,11 @@
         {
           "entry": "0x7d80",
           "label": "AID data reader that consumes the pointer returned by the table-2 resolver",
-          "assurance": "static_instruction_trace",
+          "assurance": "static_instruction_trace_and_bounded_emulation",
           "evidence": [
-            "CONTEXT.md:Architecture Quirks",
-            "firmware_v2.8.4HF.bin.asm"
+            "audit/data/frame_reader_binaryninja.json",
+            "audit/data/frame_reader_emulation.json",
+            "docs/FRAME_READER_REVIEW.md"
           ]
         }
       ],
@@ -15135,11 +15138,11 @@
         {
           "entry": "0x7eb4",
           "label": "Frame builder combining message-type header, table-2 data reader, and CRC",
-          "assurance": "static_instruction_trace",
+          "assurance": "static_instruction_trace_and_bounded_emulation",
           "evidence": [
-            "audit/data/write_path_ida.json:entries.0x7eb4",
-            "audit/data/write_path_binaryninja.json:entries.0x7eb4",
-            "docs/OFFLINE_WRITE_PATH_REVIEW.md"
+            "audit/data/frame_reader_binaryninja.json",
+            "audit/data/frame_reader_emulation.json",
+            "docs/FRAME_READER_REVIEW.md"
           ]
         }
       ],
@@ -15463,8 +15466,20 @@
           ]
         }
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x7fd8",
+          "label": "Bounded outgoing-list copier that caps nonzero copy requests to 14 bytes",
+          "assurance": "static_instruction_trace_and_bounded_emulation",
+          "evidence": [
+            "audit/data/frame_reader_binaryninja.json",
+            "audit/data/frame_reader_boundary.json",
+            "audit/data/frame_reader_emulation.json",
+            "docs/FRAME_READER_REVIEW.md"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [],
         "incoming": [
@@ -17533,7 +17548,7 @@
     },
     "labels": {
       "path": "audit/data/semantic_labels.json",
-      "sha256": "e72bd492bacd38dfc41e7c094c39617b41b82f79ded19fec60ff4cb1c0407e34"
+      "sha256": "fafde18f2aded1d81c740293e56331dfe58a7f048f3ca323669136f0a868f944"
     }
   },
   "input_hash_policy": "SHA-256 of JSON text with CRLF normalized to LF"
