@@ -253,12 +253,42 @@
       ]
     },
     {
+      "entry": "0x6c48",
+      "label": "TC0 interrupt callback: stop counter and update three SRAM flags",
+      "assurance": "static_instruction_trace_and_synthetic_mmio_emulation",
+      "evidence": [
+        "audit/data/timer_setup_binaryninja.json",
+        "audit/data/timer_setup_emulation.json",
+        "docs/TIMER_SETUP_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x6c68",
+      "label": "TC1 interrupt callback: stop counter and conditionally set RC",
+      "assurance": "static_instruction_trace_and_synthetic_mmio_emulation",
+      "evidence": [
+        "audit/data/timer_setup_binaryninja.json",
+        "audit/data/timer_setup_emulation.json",
+        "docs/TIMER_SETUP_REVIEW.md"
+      ]
+    },
+    {
       "entry": "0x6fa0",
       "label": "AT91 TC channel write helper used for the TC0_RC output",
       "assurance": "static_closed_chain",
       "evidence": [
         "quadzilla_mcu_map.json:functions.sub_6FA0",
         "quadzilla_vp44_chain.json:hardware_output"
+      ]
+    },
+    {
+      "entry": "0x6fb4",
+      "label": "Three-channel timer, PMC and AIC setup coordinator",
+      "assurance": "static_instruction_trace_and_synthetic_mmio_emulation",
+      "evidence": [
+        "audit/data/timer_setup_binaryninja.json",
+        "audit/data/timer_setup_emulation.json",
+        "docs/TIMER_SETUP_REVIEW.md"
       ]
     },
     {

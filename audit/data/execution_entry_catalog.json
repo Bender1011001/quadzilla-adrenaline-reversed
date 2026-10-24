@@ -4,8 +4,8 @@
   "unit": "execution_entries_including_vectors_thunks_and_alternate_entries",
   "summary": {
     "confirmed_entries": 145,
-    "documented_static_roles": 89,
-    "unlabeled_static_entries": 56,
+    "documented_static_roles": 92,
+    "unlabeled_static_entries": 53,
     "entries_with_ida_sram_references": 49,
     "entries_with_ida_peripheral_references": 21,
     "union_direct_call_edges": 180
@@ -8735,8 +8735,19 @@
         },
         "ghidra": null
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x6c48",
+          "label": "TC0 interrupt callback: stop counter and update three SRAM flags",
+          "assurance": "static_instruction_trace_and_synthetic_mmio_emulation",
+          "evidence": [
+            "audit/data/timer_setup_binaryninja.json",
+            "audit/data/timer_setup_emulation.json",
+            "docs/TIMER_SETUP_REVIEW.md"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [],
         "incoming": []
@@ -8800,8 +8811,19 @@
         },
         "ghidra": null
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x6c68",
+          "label": "TC1 interrupt callback: stop counter and conditionally set RC",
+          "assurance": "static_instruction_trace_and_synthetic_mmio_emulation",
+          "evidence": [
+            "audit/data/timer_setup_binaryninja.json",
+            "audit/data/timer_setup_emulation.json",
+            "docs/TIMER_SETUP_REVIEW.md"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [],
         "incoming": []
@@ -9807,8 +9829,19 @@
           ]
         }
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x6fb4",
+          "label": "Three-channel timer, PMC and AIC setup coordinator",
+          "assurance": "static_instruction_trace_and_synthetic_mmio_emulation",
+          "evidence": [
+            "audit/data/timer_setup_binaryninja.json",
+            "audit/data/timer_setup_emulation.json",
+            "docs/TIMER_SETUP_REVIEW.md"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [],
         "incoming": [
@@ -17239,7 +17272,7 @@
     },
     "labels": {
       "path": "audit/data/semantic_labels.json",
-      "sha256": "71d57cd91c8a8ec16460c5a1f8b8c4dd823a2f487f1719d099664a12d7480b12"
+      "sha256": "eb8de463a873d982df22d2b0a048b1c184af9528ce977756ca2a3c933b4bb013"
     }
   },
   "input_hash_policy": "SHA-256 of JSON text with CRLF normalized to LF"
