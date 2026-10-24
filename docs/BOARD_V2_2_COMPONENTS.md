@@ -19,8 +19,8 @@ partially legible ST markings. They do not resolve U11.
 | U9 | ST `2902` | High-confidence reported LM2902-family quad op amp identification; exact suffix and individual channel functions unresolved. |
 | U10 | ST `2902` | Same family interpretation as U9; channel functions unresolved. |
 | U11 | `04227AN` or similar | Unidentified. Preserve the tentative transcription; do not assign a part number from this alone. |
-| Y1 | `EC18.4` | Possible 18.4 MHz crystal; nominal frequency and connected device unconfirmed. |
-| Metal package near U2 | Partially legible | Possible second crystal; marking, frequency and connections unresolved. |
+| Y1 / crystal beside main Atmel MCU | `EC18.4` / `18.4` | Reported MCU-side crystal; possible 18.4 MHz nominal frequency, still unconfirmed. |
+| Crystal immediately beside U2 | `EC 16.0`, second line `AEN F` | Owner's later reading supports a provisional 16.000 MHz CAN-controller oscillator. Electrical connection and operating frequency unmeasured; other text not decoded. |
 | Metal package marked `250` | `250` | Possible power-supply inductor; component type, units and value unconfirmed. |
 
 ## Manufacturer references and interpretation
@@ -47,6 +47,13 @@ pump signal, ADC channel or control output requires connectivity evidence.
 Do not infer a schematic from proximity alone.
 
 ## Most useful next observations
+
+The owner's subsequent crystal reading distinguishes the apparent 16 MHz
+package beside U2 from the apparent 18.4 MHz MCU-side package. Use 16 MHz
+provisionally for the [firmware CAN timing calculation](SPI_CAN_CONTROLLER_REVIEW.md#conditional-can-bit-timing),
+with the oscillator assumption explicit. Proximity and a marking are not a
+continuity test or frequency measurement. `EC` and `AEN F` may be manufacturer
+or production identifiers; no manufacturer/date-code interpretation is established.
 
 1. Preserve clear photographs of both board faces, revision text, IC markings
    and connector orientation, including U3, U7, U11 and both crystal packages.

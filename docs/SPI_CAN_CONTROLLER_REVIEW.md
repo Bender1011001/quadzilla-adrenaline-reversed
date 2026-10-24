@@ -39,6 +39,39 @@ corroborating component identification; an independent marking inspection and
 board traces remain useful verification. CNF bytes are recorded without
 claiming a measured oscillator or bus rate.
 
+## Conditional CAN bit timing
+
+The owner reports the crystal immediately beside U2 marked `EC 16.0` and
+`AEN F`, distinct from the MCU-side `18.4` marking. This supports a
+**provisional 16 MHz MCP2515 oscillator**, not a measured frequency or traced
+oscillator connection. See the [board record](BOARD_V2_2_COMPONENTS.md).
+
+The source-bound initialization command `02 28 05 F1 01` writes
+CNF3=`05`, CNF2=`F1`, CNF1=`01`. Applying the datasheet's section 5 and
+registers 5-1 through 5-3 yields:
+
+| Field | Decoded value |
+|---|---|
+| BRP field | 1, giving a time quantum of `2 * (1 + 1) / Fosc` |
+| Synchronization segment | 1 TQ |
+| Propagation segment | 2 TQ |
+| Phase segment 1 | 7 TQ |
+| Phase segment 2 | 6 TQ, selected by BTLMODE=1 |
+| Total nominal bit | 16 TQ |
+| Synchronization jump width | 1 TQ |
+| Sampling | Three samples (SAM=1) |
+
+Thus `bitrate = Fosc / (2 * 2 * 16) = Fosc / 64`.
+At the provisional 16 MHz frequency, TQ is 250 ns, a nominal bit is 4 us,
+and the **configured nominal rate is 250,000 bit/s**. The nominal sample
+point is `(1 + 2 + 7) / 16 = 62.5%` of the bit time.
+
+This is a conditional calculation from this image's initialization bytes
+and the reported crystal marking. It does not establish the installed
+firmware version, successful register programming, measured bus rate,
+network identity or absence of later timing changes. A passive capture of
+normal operation can test the predicted rate.
+
 ## Seven request records
 
 Each nine-byte table record starts with `40`, a TXB0 identifier-start load,
