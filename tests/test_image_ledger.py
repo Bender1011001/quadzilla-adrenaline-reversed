@@ -14,7 +14,7 @@ spec.loader.exec_module(ledger)
 class ImageLedger(unittest.TestCase):
     def test_review_manifest_rejects_false_coverage(self):
         doc = json.loads((ROOT / "audit/data/reviewed_instruction_ranges.json").read_text())
-        self.assertEqual(sum(b-a for a, b, _ in ledger.validate_instruction_reviews(doc)), 888)
+        self.assertEqual(sum(b-a for a, b, *_ in ledger.validate_instruction_reviews(doc)), 5144)
         for change in ("hash", "overlap", "layout", "odd", "account"):
             malformed = copy.deepcopy(doc)
             if change == "hash":
@@ -33,10 +33,12 @@ class ImageLedger(unittest.TestCase):
     def test_accepted_instruction_bytes_have_exact_manifest_and_decoder_bounds(self):
         manifest = json.loads((ROOT / "audit/data/reviewed_instruction_ranges.json").read_text())
         doc = json.loads((ROOT / "audit/data/image_coverage_ledger.json").read_text())
-        decode = json.loads((ROOT / "audit/data/control_helper_binaryninja.json").read_text())
         ranges = {r["entry"]: (int(r["start"], 0), int(r["end"], 0)) for r in manifest["ranges"]}
-        decoded = {r["start"]: r for r in decode["ranges"]}
-        self.assertEqual(set(decoded), set(ranges))
+        decoded = {}
+        for row in manifest["ranges"]:
+            decode = json.loads((ROOT / row["decoder_artifact"]).read_text())
+            decoded[row["entry"]] = next(r for r in decode["ranges"] if r["start"] == row["start"])
+            self.assertEqual(decoded[row["entry"]]["architecture"], "armv7" if row["isa"] == "arm" else "thumb2")
         for entry, (start, end) in ranges.items():
             block = decoded[entry]
             self.assertNotIn("decode_stopped_at", block)
@@ -46,8 +48,8 @@ class ImageLedger(unittest.TestCase):
                 self.assertNotIn("undefined", instruction["text"])
                 cursor += instruction["length"]
             self.assertEqual(cursor, end)
-        accepted = [r for r in doc["ranges"] if r["classification"] == "reviewed_thumb_instructions"]
-        self.assertEqual(sum(int(r["end"], 0)-int(r["start"], 0) for r in accepted), 888)
+        accepted = [r for r in doc["ranges"] if r["classification"] in ("reviewed_thumb_instructions", "reviewed_arm_instructions")]
+        self.assertEqual(sum(int(r["end"], 0)-int(r["start"], 0) for r in accepted), 5144)
         for r in accepted:
             start, end = ranges[r["review_entry"]]
             self.assertTrue(start <= int(r["start"], 0) < int(r["end"], 0) <= end)

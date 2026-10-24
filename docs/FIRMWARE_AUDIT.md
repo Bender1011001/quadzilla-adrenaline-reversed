@@ -41,10 +41,10 @@ It is not a count of original C functions, and the two tools still disagree on w
 
 | | |
 |---|---|
-| Entries with an evidence-backed static role | 50 |
-| Entries still unlabelled | 95 |
+| Entries with an evidence-backed static role | 84 |
+| Entries still unlabelled | 61 |
 
-The 95 unlabelled entries are a work queue, not findings. Labels from the first-pass notes are treated as hypotheses
+The 61 unlabelled entries are a work queue, not findings. Labels from the first-pass notes are treated as hypotheses
 unless they appear in `audit/data/semantic_labels.json`.
 
 The initial audit assigned 14 roles; the [offline write-path review](OFFLINE_WRITE_PATH_REVIEW.md)
@@ -53,12 +53,13 @@ adds seven from fresh IDA/Binary Ninja traces. The 145-entry inventory itself is
 The [USART0 buffer review](USART0_BUFFER_REVIEW.md) adds fifteen more roles,
 bringing the baseline semantic total to 36. Six separately adjudicated source
 starts are listed in the [startup review](STARTUP_PERSISTENCE_REVIEW.md); 145 is
-the historical baseline count, not the complete supported minimum of 151.
+the historical baseline count, not the complete supported minimum of 157.
 
 Six division-runtime entry/body roles from the
 [integer execution review](INTEGER_ARITHMETIC_REVIEW.md) brought the baseline total to 42 roles. Eight more entries from the
-[control helper review](CONTROL_HELPER_REVIEW.md) bring the current total to 50,
-with 95 entries pending semantic review.
+[control helper review](CONTROL_HELPER_REVIEW.md) bring that total to 50.
+The [software floating point review](SOFT_FLOAT_REVIEW.md) adds 34 baseline
+roles, yielding 84 with 61 pending.
 
 ### Peripheral map
 

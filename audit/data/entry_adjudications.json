@@ -2,14 +2,16 @@
   "format": "quadzilla-entry-adjudications-v1",
   "raw_sha256": "1ae519ba6194e8f7bdaaa94333a83a9e6fda3b0563f87f7d48383b37288c1780",
   "baseline_entry_count": 145,
-  "additional_supported_entries": 6,
-  "combined_supported_starts": 151,
+  "additional_supported_entries": 12,
+  "combined_supported_starts": 157,
   "count_rule": "ROM/template source starts; runtime aliases are not counted twice",
-  "baseline_lf_text_sha256": "d880eb91ced2cbb21e32d3e04e6815ff6fbdaee079315eed438f4dbbe7eb4298",
+  "baseline_lf_text_sha256": "4d8ffe4d896fb06a6f411d2280e25b395eaee4dea8fd777dfb3b5c61c245158f",
   "evidence": [
     "audit/data/ida_image_items.json",
     "audit/data/startup_persistence_binaryninja.json",
-    "audit/data/image_coverage_ledger.json"
+    "audit/data/image_coverage_ledger.json",
+    "audit/data/soft_float_function_reviews.json",
+    "audit/data/soft_float_emulation.json"
   ],
   "entries": [
     {
@@ -106,6 +108,96 @@
       ],
       "limits": [
         "attempted command is proven statically; current physical security state is unmeasured"
+      ]
+    },
+    {
+      "start": "0x8954",
+      "isa": "arm",
+      "instruction_end": "0x896c",
+      "role": "Sticky comparison-status tail helper",
+      "runtime_alias": null,
+      "status": "supported_static_execution_entry",
+      "evidence_chain": [
+        "Explicit ARM decode and primary entry contract in soft_float_function_reviews.json",
+        "Reached tail helper via ARM branch from 0x897C"
+      ],
+      "limits": [
+        "Shared code bodies are documented separately; hardware reachability is untested"
+      ]
+    },
+    {
+      "start": "0x89c8",
+      "isa": "arm",
+      "instruction_end": "0x8cfc",
+      "role": "Software binary64 division with documented exceptional-value differences",
+      "runtime_alias": null,
+      "status": "supported_static_execution_entry",
+      "evidence_chain": [
+        "Explicit ARM decode and primary entry contract in soft_float_function_reviews.json",
+        "Independent original-byte execution with balanced stack and checked public register preservation"
+      ],
+      "limits": [
+        "Shared code bodies are documented separately; hardware reachability is untested"
+      ]
+    },
+    {
+      "start": "0x8cfc",
+      "isa": "arm",
+      "instruction_end": "0x8ef4",
+      "role": "Software binary64 subtraction sharing the caller-R4-dependent addition body",
+      "runtime_alias": null,
+      "status": "supported_callable_entry_no_incoming_reference_found",
+      "evidence_chain": [
+        "Explicit ARM decode and primary entry contract in soft_float_function_reviews.json",
+        "Independent original-byte execution with balanced stack and checked public register preservation"
+      ],
+      "limits": [
+        "No in-image incoming direct branch or wrapper pointer found; offline callability does not establish deployed reachability"
+      ]
+    },
+    {
+      "start": "0x8ef4",
+      "isa": "arm",
+      "instruction_end": "0x9038",
+      "role": "Software binary64 addition with subnormal caller-R4 dependency",
+      "runtime_alias": null,
+      "status": "supported_static_execution_entry",
+      "evidence_chain": [
+        "Explicit ARM decode and primary entry contract in soft_float_function_reviews.json",
+        "Independent original-byte execution with balanced stack and checked public register preservation"
+      ],
+      "limits": [
+        "Shared code bodies are documented separately; hardware reachability is untested"
+      ]
+    },
+    {
+      "start": "0x9048",
+      "isa": "arm",
+      "instruction_end": "0x90b0",
+      "role": "Signed 32-bit integer to rounded binary32 conversion",
+      "runtime_alias": null,
+      "status": "supported_callable_entry_no_incoming_reference_found",
+      "evidence_chain": [
+        "Explicit ARM decode and primary entry contract in soft_float_function_reviews.json",
+        "Independent original-byte execution with balanced stack and checked public register preservation"
+      ],
+      "limits": [
+        "No in-image incoming direct branch or wrapper pointer found; offline callability does not establish deployed reachability"
+      ]
+    },
+    {
+      "start": "0x94b4",
+      "isa": "arm",
+      "instruction_end": "0x95f4",
+      "role": "Software binary32 subtraction, no incoming reference found",
+      "runtime_alias": null,
+      "status": "supported_callable_entry_no_incoming_reference_found",
+      "evidence_chain": [
+        "Explicit ARM decode and primary entry contract in soft_float_function_reviews.json",
+        "Independent original-byte execution with balanced stack and checked public register preservation"
+      ],
+      "limits": [
+        "No in-image incoming direct branch or wrapper pointer found; offline callability does not establish deployed reachability"
       ]
     }
   ],

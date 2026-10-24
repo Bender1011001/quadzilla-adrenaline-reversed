@@ -1,0 +1,4286 @@
+{
+  "format": "quadzilla-function-reviews-v1",
+  "raw_sha256": "1ae519ba6194e8f7bdaaa94333a83a9e6fda3b0563f87f7d48383b37288c1780",
+  "entries": [
+    {
+      "entry": "0x56fc",
+      "isa": "thumb",
+      "primary_instruction_end": "0x5700",
+      "role": "Thumb-to-ARM wrapper: Software binary32 division with documented subnormal differences",
+      "inputs": "Binary32 operand bit patterns in R0 and R1",
+      "outputs": "Binary32 result bits in R0; no universal IEEE 754 conformance claim",
+      "side_effects": "Public arithmetic/conversion/Boolean calls preserve R4..R11 and SP in checked cases; caller-saved registers and flags may change. Writes are limited to stack and comparison status byte 0x200AF8.",
+      "callers": [
+        {
+          "caller_partition": "0x46d0",
+          "site": "0x4750",
+          "target": "0x56fc",
+          "context": [
+            {
+              "address": "0x4748",
+              "text": "LDR             R1, [R1]"
+            },
+            {
+              "address": "0x474a",
+              "text": "BL              sub_5F04"
+            },
+            {
+              "address": "0x474e",
+              "text": "POP             {R1}"
+            },
+            {
+              "address": "0x4750",
+              "text": "BL              sub_56FC"
+            },
+            {
+              "address": "0x4754",
+              "text": "LDR             R1, =0xBF800000"
+            },
+            {
+              "address": "0x4756",
+              "text": "BL              sub_7148"
+            },
+            {
+              "address": "0x475a",
+              "text": "LDR             R1, =0x42C80000"
+            },
+            {
+              "address": "0x475c",
+              "text": "BL              sub_5F04"
+            }
+          ]
+        },
+        {
+          "caller_partition": "0x50f0",
+          "site": "0x54b0",
+          "target": "0x56fc",
+          "context": [
+            {
+              "address": "0x54a6",
+              "text": "BL              sub_7128"
+            },
+            {
+              "address": "0x54aa",
+              "text": "BL              sub_7138"
+            },
+            {
+              "address": "0x54ae",
+              "text": "MOVS            R1, R5"
+            },
+            {
+              "address": "0x54b0",
+              "text": "BL              sub_56FC"
+            },
+            {
+              "address": "0x54b4",
+              "text": "BL              sub_7160"
+            },
+            {
+              "address": "0x54b8",
+              "text": "BL              sub_7138"
+            },
+            {
+              "address": "0x54bc",
+              "text": "MOVS            R1, R0"
+            },
+            {
+              "address": "0x54be",
+              "text": "B               loc_54C2"
+            }
+          ]
+        },
+        {
+          "caller_partition": "0x50f0",
+          "site": "0x5500",
+          "target": "0x56fc",
+          "context": [
+            {
+              "address": "0x54fa",
+              "text": "LDR             R0, =0x200748"
+            },
+            {
+              "address": "0x54fc",
+              "text": "LDR             R0, [R0]"
+            },
+            {
+              "address": "0x54fe",
+              "text": "MOVS            R1, R6"
+            },
+            {
+              "address": "0x5500",
+              "text": "BL              sub_56FC"
+            },
+            {
+              "address": "0x5504",
+              "text": "BL              sub_5714"
+            },
+            {
+              "address": "0x5508",
+              "text": "LDR             R1, =0x200BD6"
+            },
+            {
+              "address": "0x550a",
+              "text": "STRB            R0, [R1]"
+            },
+            {
+              "address": "0x550c",
+              "text": "LSRS            R2, R0, #8"
+            }
+          ]
+        }
+      ],
+      "callees": [
+        "0x92cc"
+      ],
+      "primary_region_branch_edges": [],
+      "shared_body_note": "Primary bounds are not exclusive function ownership; arithmetic routines share branch targets and internal bodies.",
+      "confidence": "High for stated instruction roles and reproduced examples; exceptional-value differences retained explicitly",
+      "evidence": [
+        "audit/data/soft_float_emulation.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_ida.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ],
+      "limits": [
+        "Bounded operand domains; NaN payload and quieting policy not proven universally",
+        "IDA explicit-mode export retains decoder gaps; Binary Ninja and emulator evidence are not relabeled as IDA agreement",
+        "Live reachability, timing, complete status-byte consumers and hardware effects remain unverified"
+      ],
+      "contract": "f32_div"
+    },
+    {
+      "entry": "0x5704",
+      "isa": "thumb",
+      "primary_instruction_end": "0x570e",
+      "role": "Thumb-to-ARM wrapper: Binary64 unequal Boolean wrapper with low-word NaN limitation",
+      "inputs": "Binary64 operands: first low/high R0/R1, second low/high R2/R3",
+      "outputs": "Boolean comparison result in R0; status byte 0x200AF8 may record exceptional operands",
+      "side_effects": "Public arithmetic/conversion/Boolean calls preserve R4..R11 and SP in checked cases; caller-saved registers and flags may change. Writes are limited to stack and comparison status byte 0x200AF8.",
+      "callers": [
+        {
+          "caller_partition": "0x50f0",
+          "site": "0x5492",
+          "target": "0x5704",
+          "context": [
+            {
+              "address": "0x548c",
+              "text": "MOVS            R3, R1"
+            },
+            {
+              "address": "0x548e",
+              "text": "MOVS            R0, #0"
+            },
+            {
+              "address": "0x5490",
+              "text": "MOVS            R1, #0"
+            },
+            {
+              "address": "0x5492",
+              "text": "BL              sub_5704"
+            },
+            {
+              "address": "0x5496",
+              "text": "CMP             R0, #0"
+            },
+            {
+              "address": "0x5498",
+              "text": "BEQ             loc_54C0"
+            },
+            {
+              "address": "0x549a",
+              "text": "LDR             R0, =0x200BC3"
+            },
+            {
+              "address": "0x549c",
+              "text": "LDRB            R0, [R0]"
+            }
+          ]
+        },
+        {
+          "caller_partition": "0x50f0",
+          "site": "0x54f2",
+          "target": "0x5704",
+          "context": [
+            {
+              "address": "0x54ec",
+              "text": "MOVS            R3, R1"
+            },
+            {
+              "address": "0x54ee",
+              "text": "MOVS            R0, #0"
+            },
+            {
+              "address": "0x54f0",
+              "text": "MOVS            R1, #0"
+            },
+            {
+              "address": "0x54f2",
+              "text": "BL              sub_5704"
+            },
+            {
+              "address": "0x54f6",
+              "text": "CMP             R0, #0"
+            },
+            {
+              "address": "0x54f8",
+              "text": "BEQ             loc_5504"
+            },
+            {
+              "address": "0x54fa",
+              "text": "LDR             R0, =0x200748"
+            },
+            {
+              "address": "0x54fc",
+              "text": "LDR             R0, [R0]"
+            }
+          ]
+        }
+      ],
+      "callees": [
+        "0x893c"
+      ],
+      "primary_region_branch_edges": [],
+      "shared_body_note": "Primary bounds are not exclusive function ownership; arithmetic routines share branch targets and internal bodies.",
+      "confidence": "High for stated instruction roles and reproduced examples; exceptional-value differences retained explicitly",
+      "evidence": [
+        "audit/data/soft_float_emulation.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_ida.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ],
+      "limits": [
+        "Bounded operand domains; NaN payload and quieting policy not proven universally",
+        "IDA explicit-mode export retains decoder gaps; Binary Ninja and emulator evidence are not relabeled as IDA agreement",
+        "Live reachability, timing, complete status-byte consumers and hardware effects remain unverified"
+      ],
+      "contract": "f64_compare_ne"
+    },
+    {
+      "entry": "0x5714",
+      "isa": "thumb",
+      "primary_instruction_end": "0x5718",
+      "role": "Thumb-to-ARM wrapper: Binary32 to signed integer with saturation",
+      "inputs": "Binary64 input low/high in R0/R1 or binary32 input in R0, as specified by contract",
+      "outputs": "R0 integer/Boolean result; actual exceptional cases and saturation documented in SOFT_FLOAT_REVIEW.md",
+      "side_effects": "Public arithmetic/conversion/Boolean calls preserve R4..R11 and SP in checked cases; caller-saved registers and flags may change. Writes are limited to stack and comparison status byte 0x200AF8.",
+      "callers": [
+        {
+          "caller_partition": "0x50f0",
+          "site": "0x5504",
+          "target": "0x5714",
+          "context": [
+            {
+              "address": "0x54fc",
+              "text": "LDR             R0, [R0]"
+            },
+            {
+              "address": "0x54fe",
+              "text": "MOVS            R1, R6"
+            },
+            {
+              "address": "0x5500",
+              "text": "BL              sub_56FC"
+            },
+            {
+              "address": "0x5504",
+              "text": "BL              sub_5714"
+            },
+            {
+              "address": "0x5508",
+              "text": "LDR             R1, =0x200BD6"
+            },
+            {
+              "address": "0x550a",
+              "text": "STRB            R0, [R1]"
+            },
+            {
+              "address": "0x550c",
+              "text": "LSRS            R2, R0, #8"
+            },
+            {
+              "address": "0x550e",
+              "text": "STRB            R2, [R1,#1]"
+            }
+          ]
+        }
+      ],
+      "callees": [
+        "0x90e4"
+      ],
+      "primary_region_branch_edges": [],
+      "shared_body_note": "Primary bounds are not exclusive function ownership; arithmetic routines share branch targets and internal bodies.",
+      "confidence": "High for stated instruction roles and reproduced examples; exceptional-value differences retained explicitly",
+      "evidence": [
+        "audit/data/soft_float_emulation.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_ida.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ],
+      "limits": [
+        "Bounded operand domains; NaN payload and quieting policy not proven universally",
+        "IDA explicit-mode export retains decoder gaps; Binary Ninja and emulator evidence are not relabeled as IDA agreement",
+        "Live reachability, timing, complete status-byte consumers and hardware effects remain unverified"
+      ],
+      "contract": "f32_to_s32_saturating"
+    },
+    {
+      "entry": "0x5f04",
+      "isa": "thumb",
+      "primary_instruction_end": "0x5f08",
+      "role": "Thumb-to-ARM wrapper: Software binary32 multiplication",
+      "inputs": "Binary32 operand bit patterns in R0 and R1",
+      "outputs": "Binary32 result bits in R0; no universal IEEE 754 conformance claim",
+      "side_effects": "Public arithmetic/conversion/Boolean calls preserve R4..R11 and SP in checked cases; caller-saved registers and flags may change. Writes are limited to stack and comparison status byte 0x200AF8.",
+      "callers": [
+        {
+          "caller_partition": "0x46d0",
+          "site": "0x4720",
+          "target": "0x5f04",
+          "context": [
+            {
+              "address": "0x471a",
+              "text": "ADDS            R0, R3, R0"
+            },
+            {
+              "address": "0x471c",
+              "text": "ADDS            R0, R0, R2"
+            },
+            {
+              "address": "0x471e",
+              "text": "LDR             R0, [R0,#4]"
+            },
+            {
+              "address": "0x4720",
+              "text": "BL              sub_5F04"
+            },
+            {
+              "address": "0x4724",
+              "text": "MOVS            R1, R0"
+            },
+            {
+              "address": "0x4726",
+              "text": "PUSH            {R1}"
+            },
+            {
+              "address": "0x4728",
+              "text": "ADD             R0, SP, #0x14+var_10"
+            },
+            {
+              "address": "0x472a",
+              "text": "LDRB            R0, [R0,#0xC]"
+            }
+          ]
+        },
+        {
+          "caller_partition": "0x46d0",
+          "site": "0x4732",
+          "target": "0x5f04",
+          "context": [
+            {
+              "address": "0x472a",
+              "text": "LDRB            R0, [R0,#0xC]"
+            },
+            {
+              "address": "0x472c",
+              "text": "BL              sub_7140"
+            },
+            {
+              "address": "0x4730",
+              "text": "POP             {R1}"
+            },
+            {
+              "address": "0x4732",
+              "text": "BL              sub_5F04"
+            },
+            {
+              "address": "0x4736",
+              "text": "LDR             R1, =0x44840000"
+            },
+            {
+              "address": "0x4738",
+              "text": "BL              sub_5F04"
+            },
+            {
+              "address": "0x473c",
+              "text": "MOVS            R1, R0"
+            },
+            {
+              "address": "0x473e",
+              "text": "PUSH            {R1}"
+            }
+          ]
+        },
+        {
+          "caller_partition": "0x46d0",
+          "site": "0x4738",
+          "target": "0x5f04",
+          "context": [
+            {
+              "address": "0x4730",
+              "text": "POP             {R1}"
+            },
+            {
+              "address": "0x4732",
+              "text": "BL              sub_5F04"
+            },
+            {
+              "address": "0x4736",
+              "text": "LDR             R1, =0x44840000"
+            },
+            {
+              "address": "0x4738",
+              "text": "BL              sub_5F04"
+            },
+            {
+              "address": "0x473c",
+              "text": "MOVS            R1, R0"
+            },
+            {
+              "address": "0x473e",
+              "text": "PUSH            {R1}"
+            },
+            {
+              "address": "0x4740",
+              "text": "LDR             R0, [SP,#0x14+var_8]"
+            },
+            {
+              "address": "0x4742",
+              "text": "BL              sub_7140"
+            }
+          ]
+        },
+        {
+          "caller_partition": "0x46d0",
+          "site": "0x474a",
+          "target": "0x5f04",
+          "context": [
+            {
+              "address": "0x4742",
+              "text": "BL              sub_7140"
+            },
+            {
+              "address": "0x4746",
+              "text": "LDR             R1, =0x2006E8"
+            },
+            {
+              "address": "0x4748",
+              "text": "LDR             R1, [R1]"
+            },
+            {
+              "address": "0x474a",
+              "text": "BL              sub_5F04"
+            },
+            {
+              "address": "0x474e",
+              "text": "POP             {R1}"
+            },
+            {
+              "address": "0x4750",
+              "text": "BL              sub_56FC"
+            },
+            {
+              "address": "0x4754",
+              "text": "LDR             R1, =0xBF800000"
+            },
+            {
+              "address": "0x4756",
+              "text": "BL              sub_7148"
+            }
+          ]
+        },
+        {
+          "caller_partition": "0x46d0",
+          "site": "0x475c",
+          "target": "0x5f04",
+          "context": [
+            {
+              "address": "0x4754",
+              "text": "LDR             R1, =0xBF800000"
+            },
+            {
+              "address": "0x4756",
+              "text": "BL              sub_7148"
+            },
+            {
+              "address": "0x475a",
+              "text": "LDR             R1, =0x42C80000"
+            },
+            {
+              "address": "0x475c",
+              "text": "BL              sub_5F04"
+            },
+            {
+              "address": "0x4760",
+              "text": "BL              sub_7160"
+            },
+            {
+              "address": "0x4764",
+              "text": "LSLS            R1, R1, #1"
+            },
+            {
+              "address": "0x4766",
+              "text": "LSRS            R1, R1, #1"
+            },
+            {
+              "address": "0x4768",
+              "text": "BL              sub_5F0C"
+            }
+          ]
+        },
+        {
+          "caller_partition": "0x50f0",
+          "site": "0x54c4",
+          "target": "0x5f04",
+          "context": [
+            {
+              "address": "0x54be",
+              "text": "B               loc_54C2"
+            },
+            {
+              "address": "0x54c0",
+              "text": "LDR             R1, =0x42C7FAE1"
+            },
+            {
+              "address": "0x54c2",
+              "text": "LDR             R0, =0x42C80000"
+            },
+            {
+              "address": "0x54c4",
+              "text": "BL              sub_5F04"
+            },
+            {
+              "address": "0x54c8",
+              "text": "BL              sub_7150"
+            },
+            {
+              "address": "0x54cc",
+              "text": "LDR             R1, =0x2710"
+            },
+            {
+              "address": "0x54ce",
+              "text": "CMP             R0, R1"
+            },
+            {
+              "address": "0x54d0",
+              "text": "BCC             loc_54D4"
+            }
+          ]
+        },
+        {
+          "caller_partition": "0x59e8",
+          "site": "0x5b50",
+          "target": "0x5f04",
+          "context": [
+            {
+              "address": "0x5b48",
+              "text": "BL              sub_7140"
+            },
+            {
+              "address": "0x5b4c",
+              "text": "LDR             R1, =0x2006E8"
+            },
+            {
+              "address": "0x5b4e",
+              "text": "LDR             R1, [R1]"
+            },
+            {
+              "address": "0x5b50",
+              "text": "BL              sub_5F04"
+            },
+            {
+              "address": "0x5b54",
+              "text": "BL              sub_7160"
+            },
+            {
+              "address": "0x5b58",
+              "text": "LDR             R2, =0xCCCCCCCD"
+            },
+            {
+              "address": "0x5b5a",
+              "text": "LDR             R3, =0x4057ECCC"
+            },
+            {
+              "address": "0x5b5c",
+              "text": "BL              sub_7128"
+            }
+          ]
+        }
+      ],
+      "callees": [
+        "0x913c"
+      ],
+      "primary_region_branch_edges": [],
+      "shared_body_note": "Primary bounds are not exclusive function ownership; arithmetic routines share branch targets and internal bodies.",
+      "confidence": "High for stated instruction roles and reproduced examples; exceptional-value differences retained explicitly",
+      "evidence": [
+        "audit/data/soft_float_emulation.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_ida.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ],
+      "limits": [
+        "Bounded operand domains; NaN payload and quieting policy not proven universally",
+        "IDA explicit-mode export retains decoder gaps; Binary Ninja and emulator evidence are not relabeled as IDA agreement",
+        "Live reachability, timing, complete status-byte consumers and hardware effects remain unverified"
+      ],
+      "contract": "f32_mul"
+    },
+    {
+      "entry": "0x5f0c",
+      "isa": "thumb",
+      "primary_instruction_end": "0x5f10",
+      "role": "Thumb-to-ARM wrapper: Binary64 to signed integer with saturation",
+      "inputs": "Binary64 input low/high in R0/R1 or binary32 input in R0, as specified by contract",
+      "outputs": "R0 integer/Boolean result; actual exceptional cases and saturation documented in SOFT_FLOAT_REVIEW.md",
+      "side_effects": "Public arithmetic/conversion/Boolean calls preserve R4..R11 and SP in checked cases; caller-saved registers and flags may change. Writes are limited to stack and comparison status byte 0x200AF8.",
+      "callers": [
+        {
+          "caller_partition": "0x46d0",
+          "site": "0x4768",
+          "target": "0x5f0c",
+          "context": [
+            {
+              "address": "0x4760",
+              "text": "BL              sub_7160"
+            },
+            {
+              "address": "0x4764",
+              "text": "LSLS            R1, R1, #1"
+            },
+            {
+              "address": "0x4766",
+              "text": "LSRS            R1, R1, #1"
+            },
+            {
+              "address": "0x4768",
+              "text": "BL              sub_5F0C"
+            },
+            {
+              "address": "0x476c",
+              "text": "STRB            R0, [R6]"
+            },
+            {
+              "address": "0x476e",
+              "text": "LDRB            R0, [R4]"
+            },
+            {
+              "address": "0x4770",
+              "text": "LDRB            R2, [R6]"
+            },
+            {
+              "address": "0x4772",
+              "text": "ADDS            R1, R5, #1"
+            }
+          ]
+        },
+        {
+          "caller_partition": "0x59e8",
+          "site": "0x5b60",
+          "target": "0x5f0c",
+          "context": [
+            {
+              "address": "0x5b58",
+              "text": "LDR             R2, =0xCCCCCCCD"
+            },
+            {
+              "address": "0x5b5a",
+              "text": "LDR             R3, =0x4057ECCC"
+            },
+            {
+              "address": "0x5b5c",
+              "text": "BL              sub_7128"
+            },
+            {
+              "address": "0x5b60",
+              "text": "BL              sub_5F0C"
+            },
+            {
+              "address": "0x5b64",
+              "text": "STRB            R0, [R4,#0x13]"
+            },
+            {
+              "address": "0x5b66",
+              "text": "B               loc_5CB2"
+            },
+            {
+              "address": "0x5b68",
+              "text": "MOVS            R2, #4"
+            },
+            {
+              "address": "0x5b6a",
+              "text": "MOVS            R1, R4"
+            }
+          ]
+        }
+      ],
+      "callees": [
+        "0x8788"
+      ],
+      "primary_region_branch_edges": [],
+      "shared_body_note": "Primary bounds are not exclusive function ownership; arithmetic routines share branch targets and internal bodies.",
+      "confidence": "High for stated instruction roles and reproduced examples; exceptional-value differences retained explicitly",
+      "evidence": [
+        "audit/data/soft_float_emulation.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_ida.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ],
+      "limits": [
+        "Bounded operand domains; NaN payload and quieting policy not proven universally",
+        "IDA explicit-mode export retains decoder gaps; Binary Ninja and emulator evidence are not relabeled as IDA agreement",
+        "Live reachability, timing, complete status-byte consumers and hardware effects remain unverified"
+      ],
+      "contract": "f64_to_s32_saturating"
+    },
+    {
+      "entry": "0x6b08",
+      "isa": "thumb",
+      "primary_instruction_end": "0x6b0c",
+      "role": "Thumb-to-ARM wrapper: Signed 32-bit integer to binary64 conversion",
+      "inputs": "Integer bit pattern in R0; signedness specified by contract",
+      "outputs": "Binary64 low/high result in R0/R1, except f64_to_f32 returns binary32 in R0; see contract and execution evidence",
+      "side_effects": "Public arithmetic/conversion/Boolean calls preserve R4..R11 and SP in checked cases; caller-saved registers and flags may change. Writes are limited to stack and comparison status byte 0x200AF8.",
+      "callers": [
+        {
+          "caller_partition": "0x601c",
+          "site": "0x66c6",
+          "target": "0x6b08",
+          "context": [
+            {
+              "address": "0x66c0",
+              "text": "LDRB            R0, [R0,#4]"
+            },
+            {
+              "address": "0x66c2",
+              "text": "LSLS            R0, R0, #8"
+            },
+            {
+              "address": "0x66c4",
+              "text": "ADDS            R0, R1, R0"
+            },
+            {
+              "address": "0x66c6",
+              "text": "BL              sub_6B08"
+            },
+            {
+              "address": "0x66ca",
+              "text": "MOVS            R2, #0"
+            },
+            {
+              "address": "0x66cc",
+              "text": "LDR             R3, =0x40240000"
+            },
+            {
+              "address": "0x66ce",
+              "text": "BL              sub_7128"
+            },
+            {
+              "address": "0x66d2",
+              "text": "BL              sub_7138"
+            }
+          ]
+        }
+      ],
+      "callees": [
+        "0x86f0"
+      ],
+      "primary_region_branch_edges": [],
+      "shared_body_note": "Primary bounds are not exclusive function ownership; arithmetic routines share branch targets and internal bodies.",
+      "confidence": "High for stated instruction roles and reproduced examples; exceptional-value differences retained explicitly",
+      "evidence": [
+        "audit/data/soft_float_emulation.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_ida.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ],
+      "limits": [
+        "Bounded operand domains; NaN payload and quieting policy not proven universally",
+        "IDA explicit-mode export retains decoder gaps; Binary Ninja and emulator evidence are not relabeled as IDA agreement",
+        "Live reachability, timing, complete status-byte consumers and hardware effects remain unverified"
+      ],
+      "contract": "s32_to_f64"
+    },
+    {
+      "entry": "0x6b10",
+      "isa": "thumb",
+      "primary_instruction_end": "0x6b1a",
+      "role": "Thumb-to-ARM wrapper: Binary64 greater/equal Boolean wrapper with high-word special-value checks",
+      "inputs": "Binary64 operands: first low/high R0/R1, second low/high R2/R3",
+      "outputs": "Boolean comparison result in R0; status byte 0x200AF8 may record exceptional operands",
+      "side_effects": "Public arithmetic/conversion/Boolean calls preserve R4..R11 and SP in checked cases; caller-saved registers and flags may change. Writes are limited to stack and comparison status byte 0x200AF8.",
+      "callers": [
+        {
+          "caller_partition": "0x601c",
+          "site": "0x66e0",
+          "target": "0x6b10",
+          "context": [
+            {
+              "address": "0x66d8",
+              "text": "BL              sub_7160"
+            },
+            {
+              "address": "0x66dc",
+              "text": "MOVS            R2, #1"
+            },
+            {
+              "address": "0x66de",
+              "text": "MOVS            R3, #0"
+            },
+            {
+              "address": "0x66e0",
+              "text": "BL              sub_6B10"
+            },
+            {
+              "address": "0x66e4",
+              "text": "CMP             R0, #0"
+            },
+            {
+              "address": "0x66e6",
+              "text": "BNE             loc_66EA"
+            },
+            {
+              "address": "0x66e8",
+              "text": "B               def_608A; jumptable 000000000000608A default case, cases 11-14,16,20,21,23,25-58,63,65-79,83,84,86-103,105-109,142-145,147-149,155-225"
+            },
+            {
+              "address": "0x66ea",
+              "text": "STR             R5, [R4,#0x10]"
+            }
+          ]
+        }
+      ],
+      "callees": [
+        "0x89b0"
+      ],
+      "primary_region_branch_edges": [],
+      "shared_body_note": "Primary bounds are not exclusive function ownership; arithmetic routines share branch targets and internal bodies.",
+      "confidence": "High for stated instruction roles and reproduced examples; exceptional-value differences retained explicitly",
+      "evidence": [
+        "audit/data/soft_float_emulation.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_ida.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ],
+      "limits": [
+        "Bounded operand domains; NaN payload and quieting policy not proven universally",
+        "IDA explicit-mode export retains decoder gaps; Binary Ninja and emulator evidence are not relabeled as IDA agreement",
+        "Live reachability, timing, complete status-byte consumers and hardware effects remain unverified"
+      ],
+      "contract": "f64_compare_ge"
+    },
+    {
+      "entry": "0x7120",
+      "isa": "thumb",
+      "primary_instruction_end": "0x7124",
+      "role": "Thumb-to-ARM wrapper: Unsigned 32-bit integer to binary64 conversion",
+      "inputs": "Integer bit pattern in R0; signedness specified by contract",
+      "outputs": "Binary64 low/high result in R0/R1, except f64_to_f32 returns binary32 in R0; see contract and execution evidence",
+      "side_effects": "Public arithmetic/conversion/Boolean calls preserve R4..R11 and SP in checked cases; caller-saved registers and flags may change. Writes are limited to stack and comparison status byte 0x200AF8.",
+      "callers": [
+        {
+          "caller_partition": "0x50f0",
+          "site": "0x5474",
+          "target": "0x7120",
+          "context": [
+            {
+              "address": "0x546e",
+              "text": "MOVS            R1, #3"
+            },
+            {
+              "address": "0x5470",
+              "text": "MULS            R0, R1"
+            },
+            {
+              "address": "0x5472",
+              "text": "STR             R0, [R4,#0x50]"
+            },
+            {
+              "address": "0x5474",
+              "text": "BL              sub_7120"
+            },
+            {
+              "address": "0x5478",
+              "text": "MOVS            R2, #0"
+            },
+            {
+              "address": "0x547a",
+              "text": "LDR             R3, =0x414CE161"
+            },
+            {
+              "address": "0x547c",
+              "text": "BL              sub_7128"
+            },
+            {
+              "address": "0x5480",
+              "text": "BL              sub_7138"
+            }
+          ]
+        },
+        {
+          "caller_partition": "0x50f0",
+          "site": "0x549e",
+          "target": "0x7120",
+          "context": [
+            {
+              "address": "0x5498",
+              "text": "BEQ             loc_54C0"
+            },
+            {
+              "address": "0x549a",
+              "text": "LDR             R0, =0x200BC3"
+            },
+            {
+              "address": "0x549c",
+              "text": "LDRB            R0, [R0]"
+            },
+            {
+              "address": "0x549e",
+              "text": "BL              sub_7120"
+            },
+            {
+              "address": "0x54a2",
+              "text": "MOVS            R2, #0"
+            },
+            {
+              "address": "0x54a4",
+              "text": "LDR             R3, =0x404E0000"
+            },
+            {
+              "address": "0x54a6",
+              "text": "BL              sub_7128"
+            },
+            {
+              "address": "0x54aa",
+              "text": "BL              sub_7138"
+            }
+          ]
+        },
+        {
+          "caller_partition": "0x6c94",
+          "site": "0x6ed0",
+          "target": "0x7120",
+          "context": [
+            {
+              "address": "0x6eca",
+              "text": "BEQ             loc_6F50"
+            },
+            {
+              "address": "0x6ecc",
+              "text": "LDR             R0, =0x200474"
+            },
+            {
+              "address": "0x6ece",
+              "text": "LDR             R0, [R0]"
+            },
+            {
+              "address": "0x6ed0",
+              "text": "BL              sub_7120"
+            },
+            {
+              "address": "0x6ed4",
+              "text": "MOVS            R2, #0"
+            },
+            {
+              "address": "0x6ed6",
+              "text": "LDR             R3, =0x404E0000"
+            },
+            {
+              "address": "0x6ed8",
+              "text": "BL              sub_7128"
+            },
+            {
+              "address": "0x6edc",
+              "text": "BL              sub_7138"
+            }
+          ]
+        },
+        {
+          "caller_partition": "0x6c94",
+          "site": "0x6ef6",
+          "target": "0x7120",
+          "context": [
+            {
+              "address": "0x6eec",
+              "text": "BL              sub_7148"
+            },
+            {
+              "address": "0x6ef0",
+              "text": "BL              sub_7150"
+            },
+            {
+              "address": "0x6ef4",
+              "text": "STR             R0, [R4,#0x34]"
+            },
+            {
+              "address": "0x6ef6",
+              "text": "BL              sub_7120"
+            },
+            {
+              "address": "0x6efa",
+              "text": "LDR             R2, =0x33333333"
+            },
+            {
+              "address": "0x6efc",
+              "text": "LDR             R3, =0x40E27BC3"
+            },
+            {
+              "address": "0x6efe",
+              "text": "BL              sub_7128"
+            },
+            {
+              "address": "0x6f02",
+              "text": "BL              sub_7158"
+            }
+          ]
+        },
+        {
+          "caller_partition": "0x6c94",
+          "site": "0x6f32",
+          "target": "0x7120",
+          "context": [
+            {
+              "address": "0x6f2c",
+              "text": "STR             R0, [R4,#0x44]"
+            },
+            {
+              "address": "0x6f2e",
+              "text": "LDR             R0, =0x200BC3"
+            },
+            {
+              "address": "0x6f30",
+              "text": "LDRB            R0, [R0]"
+            },
+            {
+              "address": "0x6f32",
+              "text": "BL              sub_7120"
+            },
+            {
+              "address": "0x6f36",
+              "text": "MOVS            R2, #0"
+            },
+            {
+              "address": "0x6f38",
+              "text": "LDR             R3, =0x40420000"
+            },
+            {
+              "address": "0x6f3a",
+              "text": "BL              sub_7128"
+            },
+            {
+              "address": "0x6f3e",
+              "text": "BL              sub_7138"
+            }
+          ]
+        }
+      ],
+      "callees": [
+        "0x86d8"
+      ],
+      "primary_region_branch_edges": [],
+      "shared_body_note": "Primary bounds are not exclusive function ownership; arithmetic routines share branch targets and internal bodies.",
+      "confidence": "High for stated instruction roles and reproduced examples; exceptional-value differences retained explicitly",
+      "evidence": [
+        "audit/data/soft_float_emulation.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_ida.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ],
+      "limits": [
+        "Bounded operand domains; NaN payload and quieting policy not proven universally",
+        "IDA explicit-mode export retains decoder gaps; Binary Ninja and emulator evidence are not relabeled as IDA agreement",
+        "Live reachability, timing, complete status-byte consumers and hardware effects remain unverified"
+      ],
+      "contract": "u32_to_f64"
+    },
+    {
+      "entry": "0x7128",
+      "isa": "thumb",
+      "primary_instruction_end": "0x7132",
+      "role": "Thumb-to-ARM wrapper: Software binary64 division with documented exceptional-value differences",
+      "inputs": "Binary64 operands: first low/high R0/R1, second low/high R2/R3; add/sub subnormal paths may read incoming R4",
+      "outputs": "Binary64 result low/high in R0/R1; exceptional differences are recorded in the execution artifact",
+      "side_effects": "Public arithmetic/conversion/Boolean calls preserve R4..R11 and SP in checked cases; caller-saved registers and flags may change. Writes are limited to stack and comparison status byte 0x200AF8.",
+      "callers": [
+        {
+          "caller_partition": "0x50f0",
+          "site": "0x547c",
+          "target": "0x7128",
+          "context": [
+            {
+              "address": "0x5474",
+              "text": "BL              sub_7120"
+            },
+            {
+              "address": "0x5478",
+              "text": "MOVS            R2, #0"
+            },
+            {
+              "address": "0x547a",
+              "text": "LDR             R3, =0x414CE161"
+            },
+            {
+              "address": "0x547c",
+              "text": "BL              sub_7128"
+            },
+            {
+              "address": "0x5480",
+              "text": "BL              sub_7138"
+            },
+            {
+              "address": "0x5484",
+              "text": "MOVS            R5, R0"
+            },
+            {
+              "address": "0x5486",
+              "text": "BL              sub_7160"
+            },
+            {
+              "address": "0x548a",
+              "text": "MOVS            R2, R0"
+            }
+          ]
+        },
+        {
+          "caller_partition": "0x50f0",
+          "site": "0x54a6",
+          "target": "0x7128",
+          "context": [
+            {
+              "address": "0x549e",
+              "text": "BL              sub_7120"
+            },
+            {
+              "address": "0x54a2",
+              "text": "MOVS            R2, #0"
+            },
+            {
+              "address": "0x54a4",
+              "text": "LDR             R3, =0x404E0000"
+            },
+            {
+              "address": "0x54a6",
+              "text": "BL              sub_7128"
+            },
+            {
+              "address": "0x54aa",
+              "text": "BL              sub_7138"
+            },
+            {
+              "address": "0x54ae",
+              "text": "MOVS            R1, R5"
+            },
+            {
+              "address": "0x54b0",
+              "text": "BL              sub_56FC"
+            },
+            {
+              "address": "0x54b4",
+              "text": "BL              sub_7160"
+            }
+          ]
+        },
+        {
+          "caller_partition": "0x59e8",
+          "site": "0x5b5c",
+          "target": "0x7128",
+          "context": [
+            {
+              "address": "0x5b54",
+              "text": "BL              sub_7160"
+            },
+            {
+              "address": "0x5b58",
+              "text": "LDR             R2, =0xCCCCCCCD"
+            },
+            {
+              "address": "0x5b5a",
+              "text": "LDR             R3, =0x4057ECCC"
+            },
+            {
+              "address": "0x5b5c",
+              "text": "BL              sub_7128"
+            },
+            {
+              "address": "0x5b60",
+              "text": "BL              sub_5F0C"
+            },
+            {
+              "address": "0x5b64",
+              "text": "STRB            R0, [R4,#0x13]"
+            },
+            {
+              "address": "0x5b66",
+              "text": "B               loc_5CB2"
+            },
+            {
+              "address": "0x5b68",
+              "text": "MOVS            R2, #4"
+            }
+          ]
+        },
+        {
+          "caller_partition": "0x601c",
+          "site": "0x66ce",
+          "target": "0x7128",
+          "context": [
+            {
+              "address": "0x66c6",
+              "text": "BL              sub_6B08"
+            },
+            {
+              "address": "0x66ca",
+              "text": "MOVS            R2, #0"
+            },
+            {
+              "address": "0x66cc",
+              "text": "LDR             R3, =0x40240000"
+            },
+            {
+              "address": "0x66ce",
+              "text": "BL              sub_7128"
+            },
+            {
+              "address": "0x66d2",
+              "text": "BL              sub_7138"
+            },
+            {
+              "address": "0x66d6",
+              "text": "MOVS            R5, R0"
+            },
+            {
+              "address": "0x66d8",
+              "text": "BL              sub_7160"
+            },
+            {
+              "address": "0x66dc",
+              "text": "MOVS            R2, #1"
+            }
+          ]
+        },
+        {
+          "caller_partition": "0x6c94",
+          "site": "0x6ed8",
+          "target": "0x7128",
+          "context": [
+            {
+              "address": "0x6ed0",
+              "text": "BL              sub_7120"
+            },
+            {
+              "address": "0x6ed4",
+              "text": "MOVS            R2, #0"
+            },
+            {
+              "address": "0x6ed6",
+              "text": "LDR             R3, =0x404E0000"
+            },
+            {
+              "address": "0x6ed8",
+              "text": "BL              sub_7128"
+            },
+            {
+              "address": "0x6edc",
+              "text": "BL              sub_7138"
+            },
+            {
+              "address": "0x6ee0",
+              "text": "MOVS            R6, R0"
+            },
+            {
+              "address": "0x6ee2",
+              "text": "STR             R6, [R4,#0x38]"
+            },
+            {
+              "address": "0x6ee4",
+              "text": "LDR             R0, [R4,#0x34]"
+            }
+          ]
+        },
+        {
+          "caller_partition": "0x6c94",
+          "site": "0x6efe",
+          "target": "0x7128",
+          "context": [
+            {
+              "address": "0x6ef6",
+              "text": "BL              sub_7120"
+            },
+            {
+              "address": "0x6efa",
+              "text": "LDR             R2, =0x33333333"
+            },
+            {
+              "address": "0x6efc",
+              "text": "LDR             R3, =0x40E27BC3"
+            },
+            {
+              "address": "0x6efe",
+              "text": "BL              sub_7128"
+            },
+            {
+              "address": "0x6f02",
+              "text": "BL              sub_7158"
+            },
+            {
+              "address": "0x6f06",
+              "text": "STR             R0, [R4,#0x30]"
+            },
+            {
+              "address": "0x6f08",
+              "text": "MOVS            R0, R6"
+            },
+            {
+              "address": "0x6f0a",
+              "text": "BL              sub_7160"
+            }
+          ]
+        },
+        {
+          "caller_partition": "0x6c94",
+          "site": "0x6f12",
+          "target": "0x7128",
+          "context": [
+            {
+              "address": "0x6f0a",
+              "text": "BL              sub_7160"
+            },
+            {
+              "address": "0x6f0e",
+              "text": "MOVS            R2, #0"
+            },
+            {
+              "address": "0x6f10",
+              "text": "LDR             R3, =0x414CE161"
+            },
+            {
+              "address": "0x6f12",
+              "text": "BL              sub_7128"
+            },
+            {
+              "address": "0x6f16",
+              "text": "MOVS            R6, R0"
+            },
+            {
+              "address": "0x6f18",
+              "text": "MOVS            R7, R1"
+            },
+            {
+              "address": "0x6f1a",
+              "text": "LDR             R0, [R4,#0x44]"
+            },
+            {
+              "address": "0x6f1c",
+              "text": "BL              sub_7160"
+            }
+          ]
+        },
+        {
+          "caller_partition": "0x6c94",
+          "site": "0x6f3a",
+          "target": "0x7128",
+          "context": [
+            {
+              "address": "0x6f32",
+              "text": "BL              sub_7120"
+            },
+            {
+              "address": "0x6f36",
+              "text": "MOVS            R2, #0"
+            },
+            {
+              "address": "0x6f38",
+              "text": "LDR             R3, =0x40420000"
+            },
+            {
+              "address": "0x6f3a",
+              "text": "BL              sub_7128"
+            },
+            {
+              "address": "0x6f3e",
+              "text": "BL              sub_7138"
+            },
+            {
+              "address": "0x6f42",
+              "text": "MOVS            R1, R0"
+            },
+            {
+              "address": "0x6f44",
+              "text": "STR             R1, [R4,#0x3C]"
+            },
+            {
+              "address": "0x6f46",
+              "text": "LDR             R0, [R4,#0x40]"
+            }
+          ]
+        }
+      ],
+      "callees": [
+        "0x89c8"
+      ],
+      "primary_region_branch_edges": [],
+      "shared_body_note": "Primary bounds are not exclusive function ownership; arithmetic routines share branch targets and internal bodies.",
+      "confidence": "High for stated instruction roles and reproduced examples; exceptional-value differences retained explicitly",
+      "evidence": [
+        "audit/data/soft_float_emulation.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_ida.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ],
+      "limits": [
+        "Bounded operand domains; NaN payload and quieting policy not proven universally",
+        "IDA explicit-mode export retains decoder gaps; Binary Ninja and emulator evidence are not relabeled as IDA agreement",
+        "Live reachability, timing, complete status-byte consumers and hardware effects remain unverified"
+      ],
+      "contract": "f64_div"
+    },
+    {
+      "entry": "0x7138",
+      "isa": "thumb",
+      "primary_instruction_end": "0x713c",
+      "role": "Thumb-to-ARM wrapper: Binary64 to binary32 conversion with low-payload NaN limitation",
+      "inputs": "Binary64 input low/high in R0/R1 or binary32 input in R0, as specified by contract",
+      "outputs": "Binary32 result bits in R0; two low-word-only NaN samples differ from reference",
+      "side_effects": "Public arithmetic/conversion/Boolean calls preserve R4..R11 and SP in checked cases; caller-saved registers and flags may change. Writes are limited to stack and comparison status byte 0x200AF8.",
+      "callers": [
+        {
+          "caller_partition": "0x50f0",
+          "site": "0x5480",
+          "target": "0x7138",
+          "context": [
+            {
+              "address": "0x5478",
+              "text": "MOVS            R2, #0"
+            },
+            {
+              "address": "0x547a",
+              "text": "LDR             R3, =0x414CE161"
+            },
+            {
+              "address": "0x547c",
+              "text": "BL              sub_7128"
+            },
+            {
+              "address": "0x5480",
+              "text": "BL              sub_7138"
+            },
+            {
+              "address": "0x5484",
+              "text": "MOVS            R5, R0"
+            },
+            {
+              "address": "0x5486",
+              "text": "BL              sub_7160"
+            },
+            {
+              "address": "0x548a",
+              "text": "MOVS            R2, R0"
+            },
+            {
+              "address": "0x548c",
+              "text": "MOVS            R3, R1"
+            }
+          ]
+        },
+        {
+          "caller_partition": "0x50f0",
+          "site": "0x54aa",
+          "target": "0x7138",
+          "context": [
+            {
+              "address": "0x54a2",
+              "text": "MOVS            R2, #0"
+            },
+            {
+              "address": "0x54a4",
+              "text": "LDR             R3, =0x404E0000"
+            },
+            {
+              "address": "0x54a6",
+              "text": "BL              sub_7128"
+            },
+            {
+              "address": "0x54aa",
+              "text": "BL              sub_7138"
+            },
+            {
+              "address": "0x54ae",
+              "text": "MOVS            R1, R5"
+            },
+            {
+              "address": "0x54b0",
+              "text": "BL              sub_56FC"
+            },
+            {
+              "address": "0x54b4",
+              "text": "BL              sub_7160"
+            },
+            {
+              "address": "0x54b8",
+              "text": "BL              sub_7138"
+            }
+          ]
+        },
+        {
+          "caller_partition": "0x50f0",
+          "site": "0x54b8",
+          "target": "0x7138",
+          "context": [
+            {
+              "address": "0x54ae",
+              "text": "MOVS            R1, R5"
+            },
+            {
+              "address": "0x54b0",
+              "text": "BL              sub_56FC"
+            },
+            {
+              "address": "0x54b4",
+              "text": "BL              sub_7160"
+            },
+            {
+              "address": "0x54b8",
+              "text": "BL              sub_7138"
+            },
+            {
+              "address": "0x54bc",
+              "text": "MOVS            R1, R0"
+            },
+            {
+              "address": "0x54be",
+              "text": "B               loc_54C2"
+            },
+            {
+              "address": "0x54c0",
+              "text": "LDR             R1, =0x42C7FAE1"
+            },
+            {
+              "address": "0x54c2",
+              "text": "LDR             R0, =0x42C80000"
+            }
+          ]
+        },
+        {
+          "caller_partition": "0x601c",
+          "site": "0x66d2",
+          "target": "0x7138",
+          "context": [
+            {
+              "address": "0x66ca",
+              "text": "MOVS            R2, #0"
+            },
+            {
+              "address": "0x66cc",
+              "text": "LDR             R3, =0x40240000"
+            },
+            {
+              "address": "0x66ce",
+              "text": "BL              sub_7128"
+            },
+            {
+              "address": "0x66d2",
+              "text": "BL              sub_7138"
+            },
+            {
+              "address": "0x66d6",
+              "text": "MOVS            R5, R0"
+            },
+            {
+              "address": "0x66d8",
+              "text": "BL              sub_7160"
+            },
+            {
+              "address": "0x66dc",
+              "text": "MOVS            R2, #1"
+            },
+            {
+              "address": "0x66de",
+              "text": "MOVS            R3, #0"
+            }
+          ]
+        },
+        {
+          "caller_partition": "0x6c94",
+          "site": "0x6edc",
+          "target": "0x7138",
+          "context": [
+            {
+              "address": "0x6ed4",
+              "text": "MOVS            R2, #0"
+            },
+            {
+              "address": "0x6ed6",
+              "text": "LDR             R3, =0x404E0000"
+            },
+            {
+              "address": "0x6ed8",
+              "text": "BL              sub_7128"
+            },
+            {
+              "address": "0x6edc",
+              "text": "BL              sub_7138"
+            },
+            {
+              "address": "0x6ee0",
+              "text": "MOVS            R6, R0"
+            },
+            {
+              "address": "0x6ee2",
+              "text": "STR             R6, [R4,#0x38]"
+            },
+            {
+              "address": "0x6ee4",
+              "text": "LDR             R0, [R4,#0x34]"
+            },
+            {
+              "address": "0x6ee6",
+              "text": "BL              sub_7140"
+            }
+          ]
+        },
+        {
+          "caller_partition": "0x6c94",
+          "site": "0x6f28",
+          "target": "0x7138",
+          "context": [
+            {
+              "address": "0x6f20",
+              "text": "MOVS            R2, R6"
+            },
+            {
+              "address": "0x6f22",
+              "text": "MOVS            R3, R7"
+            },
+            {
+              "address": "0x6f24",
+              "text": "BL              sub_7168"
+            },
+            {
+              "address": "0x6f28",
+              "text": "BL              sub_7138"
+            },
+            {
+              "address": "0x6f2c",
+              "text": "STR             R0, [R4,#0x44]"
+            },
+            {
+              "address": "0x6f2e",
+              "text": "LDR             R0, =0x200BC3"
+            },
+            {
+              "address": "0x6f30",
+              "text": "LDRB            R0, [R0]"
+            },
+            {
+              "address": "0x6f32",
+              "text": "BL              sub_7120"
+            }
+          ]
+        },
+        {
+          "caller_partition": "0x6c94",
+          "site": "0x6f3e",
+          "target": "0x7138",
+          "context": [
+            {
+              "address": "0x6f36",
+              "text": "MOVS            R2, #0"
+            },
+            {
+              "address": "0x6f38",
+              "text": "LDR             R3, =0x40420000"
+            },
+            {
+              "address": "0x6f3a",
+              "text": "BL              sub_7128"
+            },
+            {
+              "address": "0x6f3e",
+              "text": "BL              sub_7138"
+            },
+            {
+              "address": "0x6f42",
+              "text": "MOVS            R1, R0"
+            },
+            {
+              "address": "0x6f44",
+              "text": "STR             R1, [R4,#0x3C]"
+            },
+            {
+              "address": "0x6f46",
+              "text": "LDR             R0, [R4,#0x40]"
+            },
+            {
+              "address": "0x6f48",
+              "text": "BL              sub_7148"
+            }
+          ]
+        }
+      ],
+      "callees": [
+        "0x87e8"
+      ],
+      "primary_region_branch_edges": [],
+      "shared_body_note": "Primary bounds are not exclusive function ownership; arithmetic routines share branch targets and internal bodies.",
+      "confidence": "High for stated instruction roles and reproduced examples; exceptional-value differences retained explicitly",
+      "evidence": [
+        "audit/data/soft_float_emulation.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_ida.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ],
+      "limits": [
+        "Bounded operand domains; NaN payload and quieting policy not proven universally",
+        "IDA explicit-mode export retains decoder gaps; Binary Ninja and emulator evidence are not relabeled as IDA agreement",
+        "Live reachability, timing, complete status-byte consumers and hardware effects remain unverified"
+      ],
+      "contract": "f64_to_f32"
+    },
+    {
+      "entry": "0x7140",
+      "isa": "thumb",
+      "primary_instruction_end": "0x7144",
+      "role": "Thumb-to-ARM wrapper: Unsigned 32-bit integer to rounded binary32 conversion",
+      "inputs": "Integer bit pattern in R0; signedness specified by contract",
+      "outputs": "Binary32 result bits in R0; no universal IEEE 754 conformance claim",
+      "side_effects": "Public arithmetic/conversion/Boolean calls preserve R4..R11 and SP in checked cases; caller-saved registers and flags may change. Writes are limited to stack and comparison status byte 0x200AF8.",
+      "callers": [
+        {
+          "caller_partition": "0x46d0",
+          "site": "0x472c",
+          "target": "0x7140",
+          "context": [
+            {
+              "address": "0x4726",
+              "text": "PUSH            {R1}"
+            },
+            {
+              "address": "0x4728",
+              "text": "ADD             R0, SP, #0x14+var_10"
+            },
+            {
+              "address": "0x472a",
+              "text": "LDRB            R0, [R0,#0xC]"
+            },
+            {
+              "address": "0x472c",
+              "text": "BL              sub_7140"
+            },
+            {
+              "address": "0x4730",
+              "text": "POP             {R1}"
+            },
+            {
+              "address": "0x4732",
+              "text": "BL              sub_5F04"
+            },
+            {
+              "address": "0x4736",
+              "text": "LDR             R1, =0x44840000"
+            },
+            {
+              "address": "0x4738",
+              "text": "BL              sub_5F04"
+            }
+          ]
+        },
+        {
+          "caller_partition": "0x46d0",
+          "site": "0x4742",
+          "target": "0x7140",
+          "context": [
+            {
+              "address": "0x473c",
+              "text": "MOVS            R1, R0"
+            },
+            {
+              "address": "0x473e",
+              "text": "PUSH            {R1}"
+            },
+            {
+              "address": "0x4740",
+              "text": "LDR             R0, [SP,#0x14+var_8]"
+            },
+            {
+              "address": "0x4742",
+              "text": "BL              sub_7140"
+            },
+            {
+              "address": "0x4746",
+              "text": "LDR             R1, =0x2006E8"
+            },
+            {
+              "address": "0x4748",
+              "text": "LDR             R1, [R1]"
+            },
+            {
+              "address": "0x474a",
+              "text": "BL              sub_5F04"
+            },
+            {
+              "address": "0x474e",
+              "text": "POP             {R1}"
+            }
+          ]
+        },
+        {
+          "caller_partition": "0x59e8",
+          "site": "0x5b48",
+          "target": "0x7140",
+          "context": [
+            {
+              "address": "0x5b40",
+              "text": "MOVS            R1, #0x64 ; 'd'"
+            },
+            {
+              "address": "0x5b42",
+              "text": "BL              loc_8572+2"
+            },
+            {
+              "address": "0x5b46",
+              "text": "MOVS            R0, R1"
+            },
+            {
+              "address": "0x5b48",
+              "text": "BL              sub_7140"
+            },
+            {
+              "address": "0x5b4c",
+              "text": "LDR             R1, =0x2006E8"
+            },
+            {
+              "address": "0x5b4e",
+              "text": "LDR             R1, [R1]"
+            },
+            {
+              "address": "0x5b50",
+              "text": "BL              sub_5F04"
+            },
+            {
+              "address": "0x5b54",
+              "text": "BL              sub_7160"
+            }
+          ]
+        },
+        {
+          "caller_partition": "0x6c94",
+          "site": "0x6ee6",
+          "target": "0x7140",
+          "context": [
+            {
+              "address": "0x6ee0",
+              "text": "MOVS            R6, R0"
+            },
+            {
+              "address": "0x6ee2",
+              "text": "STR             R6, [R4,#0x38]"
+            },
+            {
+              "address": "0x6ee4",
+              "text": "LDR             R0, [R4,#0x34]"
+            },
+            {
+              "address": "0x6ee6",
+              "text": "BL              sub_7140"
+            },
+            {
+              "address": "0x6eea",
+              "text": "MOVS            R1, R6"
+            },
+            {
+              "address": "0x6eec",
+              "text": "BL              sub_7148"
+            },
+            {
+              "address": "0x6ef0",
+              "text": "BL              sub_7150"
+            },
+            {
+              "address": "0x6ef4",
+              "text": "STR             R0, [R4,#0x34]"
+            }
+          ]
+        }
+      ],
+      "callees": [
+        "0x9038"
+      ],
+      "primary_region_branch_edges": [],
+      "shared_body_note": "Primary bounds are not exclusive function ownership; arithmetic routines share branch targets and internal bodies.",
+      "confidence": "High for stated instruction roles and reproduced examples; exceptional-value differences retained explicitly",
+      "evidence": [
+        "audit/data/soft_float_emulation.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_ida.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ],
+      "limits": [
+        "Bounded operand domains; NaN payload and quieting policy not proven universally",
+        "IDA explicit-mode export retains decoder gaps; Binary Ninja and emulator evidence are not relabeled as IDA agreement",
+        "Live reachability, timing, complete status-byte consumers and hardware effects remain unverified"
+      ],
+      "contract": "u32_to_f32"
+    },
+    {
+      "entry": "0x7148",
+      "isa": "thumb",
+      "primary_instruction_end": "0x714c",
+      "role": "Thumb-to-ARM wrapper: Software binary32 addition",
+      "inputs": "Binary32 operand bit patterns in R0 and R1",
+      "outputs": "Binary32 result bits in R0; no universal IEEE 754 conformance claim",
+      "side_effects": "Public arithmetic/conversion/Boolean calls preserve R4..R11 and SP in checked cases; caller-saved registers and flags may change. Writes are limited to stack and comparison status byte 0x200AF8.",
+      "callers": [
+        {
+          "caller_partition": "0x46d0",
+          "site": "0x4756",
+          "target": "0x7148",
+          "context": [
+            {
+              "address": "0x474e",
+              "text": "POP             {R1}"
+            },
+            {
+              "address": "0x4750",
+              "text": "BL              sub_56FC"
+            },
+            {
+              "address": "0x4754",
+              "text": "LDR             R1, =0xBF800000"
+            },
+            {
+              "address": "0x4756",
+              "text": "BL              sub_7148"
+            },
+            {
+              "address": "0x475a",
+              "text": "LDR             R1, =0x42C80000"
+            },
+            {
+              "address": "0x475c",
+              "text": "BL              sub_5F04"
+            },
+            {
+              "address": "0x4760",
+              "text": "BL              sub_7160"
+            },
+            {
+              "address": "0x4764",
+              "text": "LSLS            R1, R1, #1"
+            }
+          ]
+        },
+        {
+          "caller_partition": "0x6c94",
+          "site": "0x6eec",
+          "target": "0x7148",
+          "context": [
+            {
+              "address": "0x6ee4",
+              "text": "LDR             R0, [R4,#0x34]"
+            },
+            {
+              "address": "0x6ee6",
+              "text": "BL              sub_7140"
+            },
+            {
+              "address": "0x6eea",
+              "text": "MOVS            R1, R6"
+            },
+            {
+              "address": "0x6eec",
+              "text": "BL              sub_7148"
+            },
+            {
+              "address": "0x6ef0",
+              "text": "BL              sub_7150"
+            },
+            {
+              "address": "0x6ef4",
+              "text": "STR             R0, [R4,#0x34]"
+            },
+            {
+              "address": "0x6ef6",
+              "text": "BL              sub_7120"
+            },
+            {
+              "address": "0x6efa",
+              "text": "LDR             R2, =0x33333333"
+            }
+          ]
+        },
+        {
+          "caller_partition": "0x6c94",
+          "site": "0x6f48",
+          "target": "0x7148",
+          "context": [
+            {
+              "address": "0x6f42",
+              "text": "MOVS            R1, R0"
+            },
+            {
+              "address": "0x6f44",
+              "text": "STR             R1, [R4,#0x3C]"
+            },
+            {
+              "address": "0x6f46",
+              "text": "LDR             R0, [R4,#0x40]"
+            },
+            {
+              "address": "0x6f48",
+              "text": "BL              sub_7148"
+            },
+            {
+              "address": "0x6f4c",
+              "text": "STR             R0, [R4,#0x40]"
+            },
+            {
+              "address": "0x6f4e",
+              "text": "STRB            R5, [R4]"
+            },
+            {
+              "address": "0x6f50",
+              "text": "POP             {R4-R7}"
+            },
+            {
+              "address": "0x6f52",
+              "text": "POP             {R0}"
+            }
+          ]
+        }
+      ],
+      "callees": [
+        "0x95f4"
+      ],
+      "primary_region_branch_edges": [],
+      "shared_body_note": "Primary bounds are not exclusive function ownership; arithmetic routines share branch targets and internal bodies.",
+      "confidence": "High for stated instruction roles and reproduced examples; exceptional-value differences retained explicitly",
+      "evidence": [
+        "audit/data/soft_float_emulation.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_ida.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ],
+      "limits": [
+        "Bounded operand domains; NaN payload and quieting policy not proven universally",
+        "IDA explicit-mode export retains decoder gaps; Binary Ninja and emulator evidence are not relabeled as IDA agreement",
+        "Live reachability, timing, complete status-byte consumers and hardware effects remain unverified"
+      ],
+      "contract": "f32_add"
+    },
+    {
+      "entry": "0x7150",
+      "isa": "thumb",
+      "primary_instruction_end": "0x7154",
+      "role": "Thumb-to-ARM wrapper: Binary32 to unsigned integer with saturation",
+      "inputs": "Binary64 input low/high in R0/R1 or binary32 input in R0, as specified by contract",
+      "outputs": "R0 integer/Boolean result; actual exceptional cases and saturation documented in SOFT_FLOAT_REVIEW.md",
+      "side_effects": "Public arithmetic/conversion/Boolean calls preserve R4..R11 and SP in checked cases; caller-saved registers and flags may change. Writes are limited to stack and comparison status byte 0x200AF8.",
+      "callers": [
+        {
+          "caller_partition": "0x50f0",
+          "site": "0x54c8",
+          "target": "0x7150",
+          "context": [
+            {
+              "address": "0x54c0",
+              "text": "LDR             R1, =0x42C7FAE1"
+            },
+            {
+              "address": "0x54c2",
+              "text": "LDR             R0, =0x42C80000"
+            },
+            {
+              "address": "0x54c4",
+              "text": "BL              sub_5F04"
+            },
+            {
+              "address": "0x54c8",
+              "text": "BL              sub_7150"
+            },
+            {
+              "address": "0x54cc",
+              "text": "LDR             R1, =0x2710"
+            },
+            {
+              "address": "0x54ce",
+              "text": "CMP             R0, R1"
+            },
+            {
+              "address": "0x54d0",
+              "text": "BCC             loc_54D4"
+            },
+            {
+              "address": "0x54d2",
+              "text": "SUBS            R0, R1, #1"
+            }
+          ]
+        },
+        {
+          "caller_partition": "0x6c94",
+          "site": "0x6ef0",
+          "target": "0x7150",
+          "context": [
+            {
+              "address": "0x6ee6",
+              "text": "BL              sub_7140"
+            },
+            {
+              "address": "0x6eea",
+              "text": "MOVS            R1, R6"
+            },
+            {
+              "address": "0x6eec",
+              "text": "BL              sub_7148"
+            },
+            {
+              "address": "0x6ef0",
+              "text": "BL              sub_7150"
+            },
+            {
+              "address": "0x6ef4",
+              "text": "STR             R0, [R4,#0x34]"
+            },
+            {
+              "address": "0x6ef6",
+              "text": "BL              sub_7120"
+            },
+            {
+              "address": "0x6efa",
+              "text": "LDR             R2, =0x33333333"
+            },
+            {
+              "address": "0x6efc",
+              "text": "LDR             R3, =0x40E27BC3"
+            }
+          ]
+        }
+      ],
+      "callees": [
+        "0x90b0"
+      ],
+      "primary_region_branch_edges": [],
+      "shared_body_note": "Primary bounds are not exclusive function ownership; arithmetic routines share branch targets and internal bodies.",
+      "confidence": "High for stated instruction roles and reproduced examples; exceptional-value differences retained explicitly",
+      "evidence": [
+        "audit/data/soft_float_emulation.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_ida.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ],
+      "limits": [
+        "Bounded operand domains; NaN payload and quieting policy not proven universally",
+        "IDA explicit-mode export retains decoder gaps; Binary Ninja and emulator evidence are not relabeled as IDA agreement",
+        "Live reachability, timing, complete status-byte consumers and hardware effects remain unverified"
+      ],
+      "contract": "f32_to_u32_saturating"
+    },
+    {
+      "entry": "0x7158",
+      "isa": "thumb",
+      "primary_instruction_end": "0x715c",
+      "role": "Thumb-to-ARM wrapper: Binary64 to unsigned integer with saturation",
+      "inputs": "Binary64 input low/high in R0/R1 or binary32 input in R0, as specified by contract",
+      "outputs": "R0 integer/Boolean result; actual exceptional cases and saturation documented in SOFT_FLOAT_REVIEW.md",
+      "side_effects": "Public arithmetic/conversion/Boolean calls preserve R4..R11 and SP in checked cases; caller-saved registers and flags may change. Writes are limited to stack and comparison status byte 0x200AF8.",
+      "callers": [
+        {
+          "caller_partition": "0x6c94",
+          "site": "0x6f02",
+          "target": "0x7158",
+          "context": [
+            {
+              "address": "0x6efa",
+              "text": "LDR             R2, =0x33333333"
+            },
+            {
+              "address": "0x6efc",
+              "text": "LDR             R3, =0x40E27BC3"
+            },
+            {
+              "address": "0x6efe",
+              "text": "BL              sub_7128"
+            },
+            {
+              "address": "0x6f02",
+              "text": "BL              sub_7158"
+            },
+            {
+              "address": "0x6f06",
+              "text": "STR             R0, [R4,#0x30]"
+            },
+            {
+              "address": "0x6f08",
+              "text": "MOVS            R0, R6"
+            },
+            {
+              "address": "0x6f0a",
+              "text": "BL              sub_7160"
+            },
+            {
+              "address": "0x6f0e",
+              "text": "MOVS            R2, #0"
+            }
+          ]
+        }
+      ],
+      "callees": [
+        "0x874c"
+      ],
+      "primary_region_branch_edges": [],
+      "shared_body_note": "Primary bounds are not exclusive function ownership; arithmetic routines share branch targets and internal bodies.",
+      "confidence": "High for stated instruction roles and reproduced examples; exceptional-value differences retained explicitly",
+      "evidence": [
+        "audit/data/soft_float_emulation.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_ida.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ],
+      "limits": [
+        "Bounded operand domains; NaN payload and quieting policy not proven universally",
+        "IDA explicit-mode export retains decoder gaps; Binary Ninja and emulator evidence are not relabeled as IDA agreement",
+        "Live reachability, timing, complete status-byte consumers and hardware effects remain unverified"
+      ],
+      "contract": "f64_to_u32_saturating"
+    },
+    {
+      "entry": "0x7160",
+      "isa": "thumb",
+      "primary_instruction_end": "0x7164",
+      "role": "Thumb-to-ARM wrapper: Binary32 to binary64 conversion",
+      "inputs": "Binary64 input low/high in R0/R1 or binary32 input in R0, as specified by contract",
+      "outputs": "Binary64 low/high result in R0/R1, except f64_to_f32 returns binary32 in R0; see contract and execution evidence",
+      "side_effects": "Public arithmetic/conversion/Boolean calls preserve R4..R11 and SP in checked cases; caller-saved registers and flags may change. Writes are limited to stack and comparison status byte 0x200AF8.",
+      "callers": [
+        {
+          "caller_partition": "0x46d0",
+          "site": "0x4760",
+          "target": "0x7160",
+          "context": [
+            {
+              "address": "0x4756",
+              "text": "BL              sub_7148"
+            },
+            {
+              "address": "0x475a",
+              "text": "LDR             R1, =0x42C80000"
+            },
+            {
+              "address": "0x475c",
+              "text": "BL              sub_5F04"
+            },
+            {
+              "address": "0x4760",
+              "text": "BL              sub_7160"
+            },
+            {
+              "address": "0x4764",
+              "text": "LSLS            R1, R1, #1"
+            },
+            {
+              "address": "0x4766",
+              "text": "LSRS            R1, R1, #1"
+            },
+            {
+              "address": "0x4768",
+              "text": "BL              sub_5F0C"
+            },
+            {
+              "address": "0x476c",
+              "text": "STRB            R0, [R6]"
+            }
+          ]
+        },
+        {
+          "caller_partition": "0x50f0",
+          "site": "0x5486",
+          "target": "0x7160",
+          "context": [
+            {
+              "address": "0x547c",
+              "text": "BL              sub_7128"
+            },
+            {
+              "address": "0x5480",
+              "text": "BL              sub_7138"
+            },
+            {
+              "address": "0x5484",
+              "text": "MOVS            R5, R0"
+            },
+            {
+              "address": "0x5486",
+              "text": "BL              sub_7160"
+            },
+            {
+              "address": "0x548a",
+              "text": "MOVS            R2, R0"
+            },
+            {
+              "address": "0x548c",
+              "text": "MOVS            R3, R1"
+            },
+            {
+              "address": "0x548e",
+              "text": "MOVS            R0, #0"
+            },
+            {
+              "address": "0x5490",
+              "text": "MOVS            R1, #0"
+            }
+          ]
+        },
+        {
+          "caller_partition": "0x50f0",
+          "site": "0x54b4",
+          "target": "0x7160",
+          "context": [
+            {
+              "address": "0x54aa",
+              "text": "BL              sub_7138"
+            },
+            {
+              "address": "0x54ae",
+              "text": "MOVS            R1, R5"
+            },
+            {
+              "address": "0x54b0",
+              "text": "BL              sub_56FC"
+            },
+            {
+              "address": "0x54b4",
+              "text": "BL              sub_7160"
+            },
+            {
+              "address": "0x54b8",
+              "text": "BL              sub_7138"
+            },
+            {
+              "address": "0x54bc",
+              "text": "MOVS            R1, R0"
+            },
+            {
+              "address": "0x54be",
+              "text": "B               loc_54C2"
+            },
+            {
+              "address": "0x54c0",
+              "text": "LDR             R1, =0x42C7FAE1"
+            }
+          ]
+        },
+        {
+          "caller_partition": "0x50f0",
+          "site": "0x54e6",
+          "target": "0x7160",
+          "context": [
+            {
+              "address": "0x54e0",
+              "text": "LDR             R0, =0x20074C"
+            },
+            {
+              "address": "0x54e2",
+              "text": "LDR             R6, [R0]"
+            },
+            {
+              "address": "0x54e4",
+              "text": "MOVS            R0, R6"
+            },
+            {
+              "address": "0x54e6",
+              "text": "BL              sub_7160"
+            },
+            {
+              "address": "0x54ea",
+              "text": "MOVS            R2, R0"
+            },
+            {
+              "address": "0x54ec",
+              "text": "MOVS            R3, R1"
+            },
+            {
+              "address": "0x54ee",
+              "text": "MOVS            R0, #0"
+            },
+            {
+              "address": "0x54f0",
+              "text": "MOVS            R1, #0"
+            }
+          ]
+        },
+        {
+          "caller_partition": "0x59e8",
+          "site": "0x5b54",
+          "target": "0x7160",
+          "context": [
+            {
+              "address": "0x5b4c",
+              "text": "LDR             R1, =0x2006E8"
+            },
+            {
+              "address": "0x5b4e",
+              "text": "LDR             R1, [R1]"
+            },
+            {
+              "address": "0x5b50",
+              "text": "BL              sub_5F04"
+            },
+            {
+              "address": "0x5b54",
+              "text": "BL              sub_7160"
+            },
+            {
+              "address": "0x5b58",
+              "text": "LDR             R2, =0xCCCCCCCD"
+            },
+            {
+              "address": "0x5b5a",
+              "text": "LDR             R3, =0x4057ECCC"
+            },
+            {
+              "address": "0x5b5c",
+              "text": "BL              sub_7128"
+            },
+            {
+              "address": "0x5b60",
+              "text": "BL              sub_5F0C"
+            }
+          ]
+        },
+        {
+          "caller_partition": "0x601c",
+          "site": "0x66d8",
+          "target": "0x7160",
+          "context": [
+            {
+              "address": "0x66ce",
+              "text": "BL              sub_7128"
+            },
+            {
+              "address": "0x66d2",
+              "text": "BL              sub_7138"
+            },
+            {
+              "address": "0x66d6",
+              "text": "MOVS            R5, R0"
+            },
+            {
+              "address": "0x66d8",
+              "text": "BL              sub_7160"
+            },
+            {
+              "address": "0x66dc",
+              "text": "MOVS            R2, #1"
+            },
+            {
+              "address": "0x66de",
+              "text": "MOVS            R3, #0"
+            },
+            {
+              "address": "0x66e0",
+              "text": "BL              sub_6B10"
+            },
+            {
+              "address": "0x66e4",
+              "text": "CMP             R0, #0"
+            }
+          ]
+        },
+        {
+          "caller_partition": "0x6c94",
+          "site": "0x6f0a",
+          "target": "0x7160",
+          "context": [
+            {
+              "address": "0x6f02",
+              "text": "BL              sub_7158"
+            },
+            {
+              "address": "0x6f06",
+              "text": "STR             R0, [R4,#0x30]"
+            },
+            {
+              "address": "0x6f08",
+              "text": "MOVS            R0, R6"
+            },
+            {
+              "address": "0x6f0a",
+              "text": "BL              sub_7160"
+            },
+            {
+              "address": "0x6f0e",
+              "text": "MOVS            R2, #0"
+            },
+            {
+              "address": "0x6f10",
+              "text": "LDR             R3, =0x414CE161"
+            },
+            {
+              "address": "0x6f12",
+              "text": "BL              sub_7128"
+            },
+            {
+              "address": "0x6f16",
+              "text": "MOVS            R6, R0"
+            }
+          ]
+        },
+        {
+          "caller_partition": "0x6c94",
+          "site": "0x6f1c",
+          "target": "0x7160",
+          "context": [
+            {
+              "address": "0x6f16",
+              "text": "MOVS            R6, R0"
+            },
+            {
+              "address": "0x6f18",
+              "text": "MOVS            R7, R1"
+            },
+            {
+              "address": "0x6f1a",
+              "text": "LDR             R0, [R4,#0x44]"
+            },
+            {
+              "address": "0x6f1c",
+              "text": "BL              sub_7160"
+            },
+            {
+              "address": "0x6f20",
+              "text": "MOVS            R2, R6"
+            },
+            {
+              "address": "0x6f22",
+              "text": "MOVS            R3, R7"
+            },
+            {
+              "address": "0x6f24",
+              "text": "BL              sub_7168"
+            },
+            {
+              "address": "0x6f28",
+              "text": "BL              sub_7138"
+            }
+          ]
+        }
+      ],
+      "callees": [
+        "0x88a4"
+      ],
+      "primary_region_branch_edges": [],
+      "shared_body_note": "Primary bounds are not exclusive function ownership; arithmetic routines share branch targets and internal bodies.",
+      "confidence": "High for stated instruction roles and reproduced examples; exceptional-value differences retained explicitly",
+      "evidence": [
+        "audit/data/soft_float_emulation.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_ida.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ],
+      "limits": [
+        "Bounded operand domains; NaN payload and quieting policy not proven universally",
+        "IDA explicit-mode export retains decoder gaps; Binary Ninja and emulator evidence are not relabeled as IDA agreement",
+        "Live reachability, timing, complete status-byte consumers and hardware effects remain unverified"
+      ],
+      "contract": "f32_to_f64"
+    },
+    {
+      "entry": "0x7168",
+      "isa": "thumb",
+      "primary_instruction_end": "0x7172",
+      "role": "Thumb-to-ARM wrapper: Software binary64 addition with subnormal caller-R4 dependency",
+      "inputs": "Binary64 operands: first low/high R0/R1, second low/high R2/R3; add/sub subnormal paths may read incoming R4",
+      "outputs": "Binary64 result low/high in R0/R1; exceptional differences are recorded in the execution artifact",
+      "side_effects": "Public arithmetic/conversion/Boolean calls preserve R4..R11 and SP in checked cases; caller-saved registers and flags may change. Writes are limited to stack and comparison status byte 0x200AF8.",
+      "callers": [
+        {
+          "caller_partition": "0x6c94",
+          "site": "0x6f24",
+          "target": "0x7168",
+          "context": [
+            {
+              "address": "0x6f1c",
+              "text": "BL              sub_7160"
+            },
+            {
+              "address": "0x6f20",
+              "text": "MOVS            R2, R6"
+            },
+            {
+              "address": "0x6f22",
+              "text": "MOVS            R3, R7"
+            },
+            {
+              "address": "0x6f24",
+              "text": "BL              sub_7168"
+            },
+            {
+              "address": "0x6f28",
+              "text": "BL              sub_7138"
+            },
+            {
+              "address": "0x6f2c",
+              "text": "STR             R0, [R4,#0x44]"
+            },
+            {
+              "address": "0x6f2e",
+              "text": "LDR             R0, =0x200BC3"
+            },
+            {
+              "address": "0x6f30",
+              "text": "LDRB            R0, [R0]"
+            }
+          ]
+        }
+      ],
+      "callees": [
+        "0x8ef4"
+      ],
+      "primary_region_branch_edges": [],
+      "shared_body_note": "Primary bounds are not exclusive function ownership; arithmetic routines share branch targets and internal bodies.",
+      "confidence": "High for stated instruction roles and reproduced examples; exceptional-value differences retained explicitly",
+      "evidence": [
+        "audit/data/soft_float_emulation.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_ida.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ],
+      "limits": [
+        "Bounded operand domains; NaN payload and quieting policy not proven universally",
+        "IDA explicit-mode export retains decoder gaps; Binary Ninja and emulator evidence are not relabeled as IDA agreement",
+        "Live reachability, timing, complete status-byte consumers and hardware effects remain unverified"
+      ],
+      "contract": "f64_add"
+    },
+    {
+      "entry": "0x8678",
+      "isa": "arm",
+      "primary_instruction_end": "0x86a8",
+      "role": "First binary64 subnormal mantissa normalizer",
+      "inputs": "R0/R1 nonzero 52-bit mantissa, high word below 0x100000; R7 sign accumulator",
+      "outputs": "R0/R1 shifted until bit 52 is set; R12 = 1-shift; R7 doubled modulo 32 bits; zero mantissa is outside precondition",
+      "side_effects": "Internal helper ABI: scratch registers and flags are outputs, not general C callee-preservation promises. 0x8954 sets status byte bit 0; normalizers use R7 and R12/R5.",
+      "callers": [
+        {
+          "kind": "direct_arm_branch",
+          "site": "0x8a6c",
+          "target": "0x8678",
+          "link": true,
+          "condition": 14
+        },
+        {
+          "kind": "direct_arm_branch",
+          "site": "0x8a80",
+          "target": "0x8678",
+          "link": true,
+          "condition": 14
+        }
+      ],
+      "callees": [],
+      "primary_region_branch_edges": [
+        {
+          "site": "0x86a0",
+          "target": "0x8690",
+          "link": false,
+          "condition": 0
+        }
+      ],
+      "shared_body_note": "Primary bounds are not exclusive function ownership; arithmetic routines share branch targets and internal bodies.",
+      "confidence": "High for stated instruction roles and reproduced examples; exceptional-value differences retained explicitly",
+      "evidence": [
+        "audit/data/soft_float_emulation.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_ida.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ],
+      "limits": [
+        "Bounded operand domains; NaN payload and quieting policy not proven universally",
+        "IDA explicit-mode export retains decoder gaps; Binary Ninja and emulator evidence are not relabeled as IDA agreement",
+        "Live reachability, timing, complete status-byte consumers and hardware effects remain unverified"
+      ],
+      "contract": "internal_f64_subnormal_normalizer"
+    },
+    {
+      "entry": "0x86a8",
+      "isa": "arm",
+      "primary_instruction_end": "0x86d8",
+      "role": "Second binary64 subnormal mantissa normalizer",
+      "inputs": "R2/R3 nonzero 52-bit mantissa, high word below 0x100000; R7 sign accumulator",
+      "outputs": "R2/R3 shifted until bit 52 is set; R5 = 1-shift; R7 doubled modulo 32 bits; zero mantissa is outside precondition",
+      "side_effects": "Internal helper ABI: scratch registers and flags are outputs, not general C callee-preservation promises. 0x8954 sets status byte bit 0; normalizers use R7 and R12/R5.",
+      "callers": [
+        {
+          "kind": "direct_arm_branch",
+          "site": "0x8a68",
+          "target": "0x86a8",
+          "link": true,
+          "condition": 14
+        },
+        {
+          "kind": "direct_arm_branch",
+          "site": "0x8a94",
+          "target": "0x86a8",
+          "link": true,
+          "condition": 14
+        }
+      ],
+      "callees": [],
+      "primary_region_branch_edges": [
+        {
+          "site": "0x86d0",
+          "target": "0x86c0",
+          "link": false,
+          "condition": 0
+        }
+      ],
+      "shared_body_note": "Primary bounds are not exclusive function ownership; arithmetic routines share branch targets and internal bodies.",
+      "confidence": "High for stated instruction roles and reproduced examples; exceptional-value differences retained explicitly",
+      "evidence": [
+        "audit/data/soft_float_emulation.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_ida.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ],
+      "limits": [
+        "Bounded operand domains; NaN payload and quieting policy not proven universally",
+        "IDA explicit-mode export retains decoder gaps; Binary Ninja and emulator evidence are not relabeled as IDA agreement",
+        "Live reachability, timing, complete status-byte consumers and hardware effects remain unverified"
+      ],
+      "contract": "internal_f64_subnormal_normalizer"
+    },
+    {
+      "entry": "0x86d8",
+      "isa": "arm",
+      "primary_instruction_end": "0x86f0",
+      "role": "Unsigned 32-bit integer to binary64 conversion",
+      "inputs": "Integer bit pattern in R0; signedness specified by contract",
+      "outputs": "Binary64 low/high result in R0/R1, except f64_to_f32 returns binary32 in R0; see contract and execution evidence",
+      "side_effects": "Public arithmetic/conversion/Boolean calls preserve R4..R11 and SP in checked cases; caller-saved registers and flags may change. Writes are limited to stack and comparison status byte 0x200AF8.",
+      "callers": [
+        {
+          "kind": "thumb_pointer_jump",
+          "source": "0x7120",
+          "literal": "0x7124"
+        }
+      ],
+      "callees": [],
+      "primary_region_branch_edges": [
+        {
+          "site": "0x86ec",
+          "target": "0x870c",
+          "link": false,
+          "condition": 14
+        }
+      ],
+      "shared_body_note": "Primary bounds are not exclusive function ownership; arithmetic routines share branch targets and internal bodies.",
+      "confidence": "High for stated instruction roles and reproduced examples; exceptional-value differences retained explicitly",
+      "evidence": [
+        "audit/data/soft_float_emulation.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_ida.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ],
+      "limits": [
+        "Bounded operand domains; NaN payload and quieting policy not proven universally",
+        "IDA explicit-mode export retains decoder gaps; Binary Ninja and emulator evidence are not relabeled as IDA agreement",
+        "Live reachability, timing, complete status-byte consumers and hardware effects remain unverified"
+      ],
+      "contract": "u32_to_f64"
+    },
+    {
+      "entry": "0x86f0",
+      "isa": "arm",
+      "primary_instruction_end": "0x874c",
+      "role": "Signed 32-bit integer to binary64 conversion",
+      "inputs": "Integer bit pattern in R0; signedness specified by contract",
+      "outputs": "Binary64 low/high result in R0/R1, except f64_to_f32 returns binary32 in R0; see contract and execution evidence",
+      "side_effects": "Public arithmetic/conversion/Boolean calls preserve R4..R11 and SP in checked cases; caller-saved registers and flags may change. Writes are limited to stack and comparison status byte 0x200AF8.",
+      "callers": [
+        {
+          "kind": "thumb_pointer_jump",
+          "source": "0x6b08",
+          "literal": "0x6b0c"
+        }
+      ],
+      "callees": [],
+      "primary_region_branch_edges": [
+        {
+          "site": "0x8714",
+          "target": "0x8738",
+          "link": false,
+          "condition": 3
+        },
+        {
+          "site": "0x8728",
+          "target": "0x8718",
+          "link": false,
+          "condition": 2
+        },
+        {
+          "site": "0x872c",
+          "target": "0x8740",
+          "link": false,
+          "condition": 14
+        },
+        {
+          "site": "0x873c",
+          "target": "0x8730",
+          "link": false,
+          "condition": 0
+        }
+      ],
+      "shared_body_note": "Primary bounds are not exclusive function ownership; arithmetic routines share branch targets and internal bodies.",
+      "confidence": "High for stated instruction roles and reproduced examples; exceptional-value differences retained explicitly",
+      "evidence": [
+        "audit/data/soft_float_emulation.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_ida.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ],
+      "limits": [
+        "Bounded operand domains; NaN payload and quieting policy not proven universally",
+        "IDA explicit-mode export retains decoder gaps; Binary Ninja and emulator evidence are not relabeled as IDA agreement",
+        "Live reachability, timing, complete status-byte consumers and hardware effects remain unverified"
+      ],
+      "contract": "s32_to_f64"
+    },
+    {
+      "entry": "0x874c",
+      "isa": "arm",
+      "primary_instruction_end": "0x8788",
+      "role": "Binary64 to unsigned integer with saturation",
+      "inputs": "Binary64 input low/high in R0/R1 or binary32 input in R0, as specified by contract",
+      "outputs": "R0 integer/Boolean result; actual exceptional cases and saturation documented in SOFT_FLOAT_REVIEW.md",
+      "side_effects": "Public arithmetic/conversion/Boolean calls preserve R4..R11 and SP in checked cases; caller-saved registers and flags may change. Writes are limited to stack and comparison status byte 0x200AF8.",
+      "callers": [
+        {
+          "kind": "thumb_pointer_jump",
+          "source": "0x7158",
+          "literal": "0x715c"
+        }
+      ],
+      "callees": [],
+      "primary_region_branch_edges": [
+        {
+          "site": "0x8750",
+          "target": "0x8780",
+          "link": false,
+          "condition": 2
+        },
+        {
+          "site": "0x8760",
+          "target": "0x8780",
+          "link": false,
+          "condition": 4
+        }
+      ],
+      "shared_body_note": "Primary bounds are not exclusive function ownership; arithmetic routines share branch targets and internal bodies.",
+      "confidence": "High for stated instruction roles and reproduced examples; exceptional-value differences retained explicitly",
+      "evidence": [
+        "audit/data/soft_float_emulation.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_ida.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ],
+      "limits": [
+        "Bounded operand domains; NaN payload and quieting policy not proven universally",
+        "IDA explicit-mode export retains decoder gaps; Binary Ninja and emulator evidence are not relabeled as IDA agreement",
+        "Live reachability, timing, complete status-byte consumers and hardware effects remain unverified"
+      ],
+      "contract": "f64_to_u32_saturating"
+    },
+    {
+      "entry": "0x8788",
+      "isa": "arm",
+      "primary_instruction_end": "0x87e8",
+      "role": "Binary64 to signed integer with saturation",
+      "inputs": "Binary64 input low/high in R0/R1 or binary32 input in R0, as specified by contract",
+      "outputs": "R0 integer/Boolean result; actual exceptional cases and saturation documented in SOFT_FLOAT_REVIEW.md",
+      "side_effects": "Public arithmetic/conversion/Boolean calls preserve R4..R11 and SP in checked cases; caller-saved registers and flags may change. Writes are limited to stack and comparison status byte 0x200AF8.",
+      "callers": [
+        {
+          "kind": "thumb_pointer_jump",
+          "source": "0x5f0c",
+          "literal": "0x5f10"
+        }
+      ],
+      "callees": [],
+      "primary_region_branch_edges": [
+        {
+          "site": "0x8798",
+          "target": "0x87d0",
+          "link": false,
+          "condition": 4
+        },
+        {
+          "site": "0x87a0",
+          "target": "0x87d8",
+          "link": false,
+          "condition": 4
+        }
+      ],
+      "shared_body_note": "Primary bounds are not exclusive function ownership; arithmetic routines share branch targets and internal bodies.",
+      "confidence": "High for stated instruction roles and reproduced examples; exceptional-value differences retained explicitly",
+      "evidence": [
+        "audit/data/soft_float_emulation.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_ida.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ],
+      "limits": [
+        "Bounded operand domains; NaN payload and quieting policy not proven universally",
+        "IDA explicit-mode export retains decoder gaps; Binary Ninja and emulator evidence are not relabeled as IDA agreement",
+        "Live reachability, timing, complete status-byte consumers and hardware effects remain unverified"
+      ],
+      "contract": "f64_to_s32_saturating"
+    },
+    {
+      "entry": "0x87e8",
+      "isa": "arm",
+      "primary_instruction_end": "0x88a4",
+      "role": "Binary64 to binary32 conversion with low-payload NaN limitation",
+      "inputs": "Binary64 input low/high in R0/R1 or binary32 input in R0, as specified by contract",
+      "outputs": "Binary32 result bits in R0; two low-word-only NaN samples differ from reference",
+      "side_effects": "Public arithmetic/conversion/Boolean calls preserve R4..R11 and SP in checked cases; caller-saved registers and flags may change. Writes are limited to stack and comparison status byte 0x200AF8.",
+      "callers": [
+        {
+          "kind": "thumb_pointer_jump",
+          "source": "0x7138",
+          "literal": "0x713c"
+        }
+      ],
+      "callees": [],
+      "primary_region_branch_edges": [
+        {
+          "site": "0x87f0",
+          "target": "0x87fc",
+          "link": false,
+          "condition": 9
+        },
+        {
+          "site": "0x8808",
+          "target": "0x883c",
+          "link": false,
+          "condition": 3
+        },
+        {
+          "site": "0x8814",
+          "target": "0x8894",
+          "link": false,
+          "condition": 2
+        },
+        {
+          "site": "0x885c",
+          "target": "0x888c",
+          "link": false,
+          "condition": 8
+        }
+      ],
+      "shared_body_note": "Primary bounds are not exclusive function ownership; arithmetic routines share branch targets and internal bodies.",
+      "confidence": "High for stated instruction roles and reproduced examples; exceptional-value differences retained explicitly",
+      "evidence": [
+        "audit/data/soft_float_emulation.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_ida.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ],
+      "limits": [
+        "Bounded operand domains; NaN payload and quieting policy not proven universally",
+        "IDA explicit-mode export retains decoder gaps; Binary Ninja and emulator evidence are not relabeled as IDA agreement",
+        "Live reachability, timing, complete status-byte consumers and hardware effects remain unverified"
+      ],
+      "contract": "f64_to_f32"
+    },
+    {
+      "entry": "0x88a4",
+      "isa": "arm",
+      "primary_instruction_end": "0x8908",
+      "role": "Binary32 to binary64 conversion",
+      "inputs": "Binary64 input low/high in R0/R1 or binary32 input in R0, as specified by contract",
+      "outputs": "Binary64 low/high result in R0/R1, except f64_to_f32 returns binary32 in R0; see contract and execution evidence",
+      "side_effects": "Public arithmetic/conversion/Boolean calls preserve R4..R11 and SP in checked cases; caller-saved registers and flags may change. Writes are limited to stack and comparison status byte 0x200AF8.",
+      "callers": [
+        {
+          "kind": "thumb_pointer_jump",
+          "source": "0x7160",
+          "literal": "0x7164"
+        }
+      ],
+      "callees": [],
+      "primary_region_branch_edges": [
+        {
+          "site": "0x88b4",
+          "target": "0x88c4",
+          "link": false,
+          "condition": 3
+        },
+        {
+          "site": "0x88c8",
+          "target": "0x88f8",
+          "link": false,
+          "condition": 9
+        },
+        {
+          "site": "0x88e8",
+          "target": "0x88e0",
+          "link": false,
+          "condition": 5
+        }
+      ],
+      "shared_body_note": "Primary bounds are not exclusive function ownership; arithmetic routines share branch targets and internal bodies.",
+      "confidence": "High for stated instruction roles and reproduced examples; exceptional-value differences retained explicitly",
+      "evidence": [
+        "audit/data/soft_float_emulation.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_ida.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ],
+      "limits": [
+        "Bounded operand domains; NaN payload and quieting policy not proven universally",
+        "IDA explicit-mode export retains decoder gaps; Binary Ninja and emulator evidence are not relabeled as IDA agreement",
+        "Live reachability, timing, complete status-byte consumers and hardware effects remain unverified"
+      ],
+      "contract": "f32_to_f64"
+    },
+    {
+      "entry": "0x8908",
+      "isa": "arm",
+      "primary_instruction_end": "0x893c",
+      "role": "Binary64 unequal-condition flag helper",
+      "inputs": "Binary64 operands in R0/R1 and R2/R3",
+      "outputs": "NZCV for unequal Boolean wrapper; signed zeros compare equal; NaN with fraction only in low word can compare equal to itself",
+      "side_effects": "Internal helper ABI: scratch registers and flags are outputs, not general C callee-preservation promises. 0x8954 sets status byte bit 0; normalizers use R7 and R12/R5.",
+      "callers": [
+        {
+          "kind": "direct_arm_branch",
+          "site": "0x8940",
+          "target": "0x8908",
+          "link": true,
+          "condition": 14
+        }
+      ],
+      "callees": [],
+      "primary_region_branch_edges": [],
+      "shared_body_note": "Primary bounds are not exclusive function ownership; arithmetic routines share branch targets and internal bodies.",
+      "confidence": "High for stated instruction roles and reproduced examples; exceptional-value differences retained explicitly",
+      "evidence": [
+        "audit/data/soft_float_emulation.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_ida.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ],
+      "limits": [
+        "Bounded operand domains; NaN payload and quieting policy not proven universally",
+        "IDA explicit-mode export retains decoder gaps; Binary Ninja and emulator evidence are not relabeled as IDA agreement",
+        "Live reachability, timing, complete status-byte consumers and hardware effects remain unverified"
+      ],
+      "contract": "internal_f64_comparison_condition_flags"
+    },
+    {
+      "entry": "0x893c",
+      "isa": "arm",
+      "primary_instruction_end": "0x8954",
+      "role": "Binary64 unequal Boolean wrapper with low-word NaN limitation",
+      "inputs": "Binary64 operands: first low/high R0/R1, second low/high R2/R3",
+      "outputs": "Boolean comparison result in R0; status byte 0x200AF8 may record exceptional operands",
+      "side_effects": "Public arithmetic/conversion/Boolean calls preserve R4..R11 and SP in checked cases; caller-saved registers and flags may change. Writes are limited to stack and comparison status byte 0x200AF8.",
+      "callers": [
+        {
+          "kind": "thumb_pointer_jump",
+          "source": "0x5704",
+          "literal": "0x5710"
+        }
+      ],
+      "callees": [
+        "0x8908"
+      ],
+      "primary_region_branch_edges": [
+        {
+          "site": "0x8940",
+          "target": "0x8908",
+          "link": true,
+          "condition": 14
+        }
+      ],
+      "shared_body_note": "Primary bounds are not exclusive function ownership; arithmetic routines share branch targets and internal bodies.",
+      "confidence": "High for stated instruction roles and reproduced examples; exceptional-value differences retained explicitly",
+      "evidence": [
+        "audit/data/soft_float_emulation.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_ida.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ],
+      "limits": [
+        "Bounded operand domains; NaN payload and quieting policy not proven universally",
+        "IDA explicit-mode export retains decoder gaps; Binary Ninja and emulator evidence are not relabeled as IDA agreement",
+        "Live reachability, timing, complete status-byte consumers and hardware effects remain unverified"
+      ],
+      "contract": "f64_compare_ne"
+    },
+    {
+      "entry": "0x8954",
+      "isa": "arm",
+      "primary_instruction_end": "0x896c",
+      "role": "Sticky comparison-status tail helper",
+      "inputs": "R12 from comparison branch; byte at 0x200AF8",
+      "outputs": "Sets status byte bit 0, retains other bits; flags from LSL R12,1; R2 and R12 clobbered",
+      "side_effects": "Internal helper ABI: scratch registers and flags are outputs, not general C callee-preservation promises. 0x8954 sets status byte bit 0; normalizers use R7 and R12/R5.",
+      "callers": [
+        {
+          "kind": "direct_arm_branch",
+          "site": "0x897c",
+          "target": "0x8954",
+          "link": false,
+          "condition": 8
+        }
+      ],
+      "callees": [],
+      "primary_region_branch_edges": [],
+      "shared_body_note": "Primary bounds are not exclusive function ownership; arithmetic routines share branch targets and internal bodies.",
+      "confidence": "High for stated instruction roles and reproduced examples; exceptional-value differences retained explicitly",
+      "evidence": [
+        "audit/data/soft_float_emulation.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_ida.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ],
+      "limits": [
+        "Bounded operand domains; NaN payload and quieting policy not proven universally",
+        "IDA explicit-mode export retains decoder gaps; Binary Ninja and emulator evidence are not relabeled as IDA agreement",
+        "Live reachability, timing, complete status-byte consumers and hardware effects remain unverified"
+      ],
+      "contract": "comparison_status_helper"
+    },
+    {
+      "entry": "0x8970",
+      "isa": "arm",
+      "primary_instruction_end": "0x89b0",
+      "role": "Binary64 ordering-condition flag helper",
+      "inputs": "Binary64 operands in R0/R1 and R2/R3",
+      "outputs": "NZCV for greater/equal Boolean wrapper; high-word NaNs take sticky-status tail helper; low-word-only NaNs are not recognized",
+      "side_effects": "Internal helper ABI: scratch registers and flags are outputs, not general C callee-preservation promises. 0x8954 sets status byte bit 0; normalizers use R7 and R12/R5.",
+      "callers": [
+        {
+          "kind": "direct_arm_branch",
+          "site": "0x89b4",
+          "target": "0x8970",
+          "link": true,
+          "condition": 14
+        }
+      ],
+      "callees": [],
+      "primary_region_branch_edges": [
+        {
+          "site": "0x897c",
+          "target": "0x8954",
+          "link": false,
+          "condition": 8
+        },
+        {
+          "site": "0x8994",
+          "target": "0x89a4",
+          "link": false,
+          "condition": 4
+        }
+      ],
+      "shared_body_note": "Primary bounds are not exclusive function ownership; arithmetic routines share branch targets and internal bodies.",
+      "confidence": "High for stated instruction roles and reproduced examples; exceptional-value differences retained explicitly",
+      "evidence": [
+        "audit/data/soft_float_emulation.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_ida.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ],
+      "limits": [
+        "Bounded operand domains; NaN payload and quieting policy not proven universally",
+        "IDA explicit-mode export retains decoder gaps; Binary Ninja and emulator evidence are not relabeled as IDA agreement",
+        "Live reachability, timing, complete status-byte consumers and hardware effects remain unverified"
+      ],
+      "contract": "internal_f64_comparison_condition_flags"
+    },
+    {
+      "entry": "0x89b0",
+      "isa": "arm",
+      "primary_instruction_end": "0x89c8",
+      "role": "Binary64 greater/equal Boolean wrapper with high-word special-value checks",
+      "inputs": "Binary64 operands: first low/high R0/R1, second low/high R2/R3",
+      "outputs": "Boolean comparison result in R0; status byte 0x200AF8 may record exceptional operands",
+      "side_effects": "Public arithmetic/conversion/Boolean calls preserve R4..R11 and SP in checked cases; caller-saved registers and flags may change. Writes are limited to stack and comparison status byte 0x200AF8.",
+      "callers": [
+        {
+          "kind": "thumb_pointer_jump",
+          "source": "0x6b10",
+          "literal": "0x6b1c"
+        }
+      ],
+      "callees": [
+        "0x8970"
+      ],
+      "primary_region_branch_edges": [
+        {
+          "site": "0x89b4",
+          "target": "0x8970",
+          "link": true,
+          "condition": 14
+        }
+      ],
+      "shared_body_note": "Primary bounds are not exclusive function ownership; arithmetic routines share branch targets and internal bodies.",
+      "confidence": "High for stated instruction roles and reproduced examples; exceptional-value differences retained explicitly",
+      "evidence": [
+        "audit/data/soft_float_emulation.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_ida.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ],
+      "limits": [
+        "Bounded operand domains; NaN payload and quieting policy not proven universally",
+        "IDA explicit-mode export retains decoder gaps; Binary Ninja and emulator evidence are not relabeled as IDA agreement",
+        "Live reachability, timing, complete status-byte consumers and hardware effects remain unverified"
+      ],
+      "contract": "f64_compare_ge"
+    },
+    {
+      "entry": "0x89c8",
+      "isa": "arm",
+      "primary_instruction_end": "0x8cfc",
+      "role": "Software binary64 division with documented exceptional-value differences",
+      "inputs": "Binary64 operands: first low/high R0/R1, second low/high R2/R3; add/sub subnormal paths may read incoming R4",
+      "outputs": "Binary64 result low/high in R0/R1; exceptional differences are recorded in the execution artifact",
+      "side_effects": "Public arithmetic/conversion/Boolean calls preserve R4..R11 and SP in checked cases; caller-saved registers and flags may change. Writes are limited to stack and comparison status byte 0x200AF8.",
+      "callers": [
+        {
+          "kind": "thumb_pointer_jump",
+          "source": "0x7128",
+          "literal": "0x7134"
+        }
+      ],
+      "callees": [
+        "0x86a8",
+        "0x8678",
+        "0x8678",
+        "0x86a8"
+      ],
+      "primary_region_branch_edges": [
+        {
+          "site": "0x89d4",
+          "target": "0x8a0c",
+          "link": false,
+          "condition": 3
+        },
+        {
+          "site": "0x89dc",
+          "target": "0x89f4",
+          "link": false,
+          "condition": 3
+        },
+        {
+          "site": "0x8a14",
+          "target": "0x8aa8",
+          "link": false,
+          "condition": 9
+        },
+        {
+          "site": "0x8a20",
+          "target": "0x8a4c",
+          "link": false,
+          "condition": 1
+        },
+        {
+          "site": "0x8a5c",
+          "target": "0x8a94",
+          "link": false,
+          "condition": 9
+        },
+        {
+          "site": "0x8a64",
+          "target": "0x8a80",
+          "link": false,
+          "condition": 9
+        },
+        {
+          "site": "0x8a68",
+          "target": "0x86a8",
+          "link": true,
+          "condition": 14
+        },
+        {
+          "site": "0x8a6c",
+          "target": "0x8678",
+          "link": true,
+          "condition": 14
+        },
+        {
+          "site": "0x8a7c",
+          "target": "0x8ac0",
+          "link": false,
+          "condition": 14
+        },
+        {
+          "site": "0x8a80",
+          "target": "0x8678",
+          "link": true,
+          "condition": 14
+        },
+        {
+          "site": "0x8a90",
+          "target": "0x8ac0",
+          "link": false,
+          "condition": 14
+        },
+        {
+          "site": "0x8a94",
+          "target": "0x86a8",
+          "link": true,
+          "condition": 14
+        },
+        {
+          "site": "0x8aa4",
+          "target": "0x8ac0",
+          "link": false,
+          "condition": 14
+        },
+        {
+          "site": "0x8ae8",
+          "target": "0x8b6c",
+          "link": false,
+          "condition": 0
+        },
+        {
+          "site": "0x8af8",
+          "target": "0x8b10",
+          "link": false,
+          "condition": 2
+        },
+        {
+          "site": "0x8b2c",
+          "target": "0x8b10",
+          "link": false,
+          "condition": 3
+        },
+        {
+          "site": "0x8b50",
+          "target": "0x8b34",
+          "link": false,
+          "condition": 3
+        },
+        {
+          "site": "0x8b68",
+          "target": "0x8c30",
+          "link": false,
+          "condition": 14
+        },
+        {
+          "site": "0x8b74",
+          "target": "0x8b84",
+          "link": false,
+          "condition": 2
+        },
+        {
+          "site": "0x8b8c",
+          "target": "0x8bd8",
+          "link": false,
+          "condition": 0
+        },
+        {
+          "site": "0x8bd4",
+          "target": "0x8ba4",
+          "link": false,
+          "condition": 3
+        },
+        {
+          "site": "0x8bfc",
+          "target": "0x8be4",
+          "link": false,
+          "condition": 3
+        },
+        {
+          "site": "0x8c28",
+          "target": "0x8c04",
+          "link": false,
+          "condition": 3
+        },
+        {
+          "site": "0x8c48",
+          "target": "0x8cbc",
+          "link": false,
+          "condition": 12
+        },
+        {
+          "site": "0x8c58",
+          "target": "0x8c80",
+          "link": false,
+          "condition": 10
+        },
+        {
+          "site": "0x8c7c",
+          "target": "0x8cdc",
+          "link": false,
+          "condition": 14
+        },
+        {
+          "site": "0x8c84",
+          "target": "0x8cb0",
+          "link": false,
+          "condition": 12
+        },
+        {
+          "site": "0x8cac",
+          "target": "0x8cdc",
+          "link": false,
+          "condition": 14
+        },
+        {
+          "site": "0x8cb8",
+          "target": "0x8cf4",
+          "link": false,
+          "condition": 14
+        },
+        {
+          "site": "0x8cc8",
+          "target": "0x8cdc",
+          "link": false,
+          "condition": 5
+        },
+        {
+          "site": "0x8cd8",
+          "target": "0x8cf0",
+          "link": false,
+          "condition": 14
+        },
+        {
+          "site": "0x8ce4",
+          "target": "0x8cf0",
+          "link": false,
+          "condition": 9
+        }
+      ],
+      "shared_body_note": "Primary bounds are not exclusive function ownership; arithmetic routines share branch targets and internal bodies.",
+      "confidence": "High for stated instruction roles and reproduced examples; exceptional-value differences retained explicitly",
+      "evidence": [
+        "audit/data/soft_float_emulation.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_ida.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ],
+      "limits": [
+        "Bounded operand domains; NaN payload and quieting policy not proven universally",
+        "IDA explicit-mode export retains decoder gaps; Binary Ninja and emulator evidence are not relabeled as IDA agreement",
+        "Live reachability, timing, complete status-byte consumers and hardware effects remain unverified"
+      ],
+      "contract": "f64_div"
+    },
+    {
+      "entry": "0x8cfc",
+      "isa": "arm",
+      "primary_instruction_end": "0x8ef4",
+      "role": "Software binary64 subtraction sharing the caller-R4-dependent addition body",
+      "inputs": "Binary64 operands: first low/high R0/R1, second low/high R2/R3; add/sub subnormal paths may read incoming R4",
+      "outputs": "Binary64 result low/high in R0/R1; exceptional differences are recorded in the execution artifact",
+      "side_effects": "Public arithmetic/conversion/Boolean calls preserve R4..R11 and SP in checked cases; caller-saved registers and flags may change. Writes are limited to stack and comparison status byte 0x200AF8.",
+      "callers": [],
+      "callees": [],
+      "primary_region_branch_edges": [
+        {
+          "site": "0x8d08",
+          "target": "0x8f04",
+          "link": false,
+          "condition": 4
+        },
+        {
+          "site": "0x8d34",
+          "target": "0x8d44",
+          "link": false,
+          "condition": 3
+        },
+        {
+          "site": "0x8d40",
+          "target": "0x8eec",
+          "link": false,
+          "condition": 14
+        },
+        {
+          "site": "0x8d48",
+          "target": "0x8d94",
+          "link": false,
+          "condition": 9
+        },
+        {
+          "site": "0x8d50",
+          "target": "0x8d88",
+          "link": false,
+          "condition": 0
+        },
+        {
+          "site": "0x8d5c",
+          "target": "0x8d7c",
+          "link": false,
+          "condition": 8
+        },
+        {
+          "site": "0x8d74",
+          "target": "0x8e58",
+          "link": false,
+          "condition": 13
+        },
+        {
+          "site": "0x8d78",
+          "target": "0x8eec",
+          "link": false,
+          "condition": 14
+        },
+        {
+          "site": "0x8d90",
+          "target": "0x8eec",
+          "link": false,
+          "condition": 14
+        },
+        {
+          "site": "0x8da0",
+          "target": "0x8eec",
+          "link": false,
+          "condition": 12
+        },
+        {
+          "site": "0x8dac",
+          "target": "0x8e54",
+          "link": false,
+          "condition": 12
+        },
+        {
+          "site": "0x8dd8",
+          "target": "0x8e38",
+          "link": false,
+          "condition": 4
+        },
+        {
+          "site": "0x8df0",
+          "target": "0x8eec",
+          "link": false,
+          "condition": 0
+        },
+        {
+          "site": "0x8df4",
+          "target": "0x8e08",
+          "link": false,
+          "condition": 4
+        },
+        {
+          "site": "0x8e04",
+          "target": "0x8df8",
+          "link": false,
+          "condition": 5
+        },
+        {
+          "site": "0x8e18",
+          "target": "0x8e38",
+          "link": false,
+          "condition": 8
+        },
+        {
+          "site": "0x8e50",
+          "target": "0x8eec",
+          "link": false,
+          "condition": 14
+        },
+        {
+          "site": "0x8e68",
+          "target": "0x8e90",
+          "link": false,
+          "condition": 11
+        },
+        {
+          "site": "0x8e8c",
+          "target": "0x8eb4",
+          "link": false,
+          "condition": 14
+        },
+        {
+          "site": "0x8eb8",
+          "target": "0x8ed4",
+          "link": false,
+          "condition": 1
+        },
+        {
+          "site": "0x8ec4",
+          "target": "0x8ed4",
+          "link": false,
+          "condition": 0
+        }
+      ],
+      "shared_body_note": "Primary bounds are not exclusive function ownership; arithmetic routines share branch targets and internal bodies.",
+      "confidence": "High for stated instruction roles and reproduced examples; exceptional-value differences retained explicitly",
+      "evidence": [
+        "audit/data/soft_float_emulation.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_ida.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ],
+      "limits": [
+        "Bounded operand domains; NaN payload and quieting policy not proven universally",
+        "IDA explicit-mode export retains decoder gaps; Binary Ninja and emulator evidence are not relabeled as IDA agreement",
+        "Live reachability, timing, complete status-byte consumers and hardware effects remain unverified"
+      ],
+      "contract": "f64_sub"
+    },
+    {
+      "entry": "0x8ef4",
+      "isa": "arm",
+      "primary_instruction_end": "0x9038",
+      "role": "Software binary64 addition with subnormal caller-R4 dependency",
+      "inputs": "Binary64 operands: first low/high R0/R1, second low/high R2/R3; add/sub subnormal paths may read incoming R4",
+      "outputs": "Binary64 result low/high in R0/R1; exceptional differences are recorded in the execution artifact",
+      "side_effects": "Public arithmetic/conversion/Boolean calls preserve R4..R11 and SP in checked cases; caller-saved registers and flags may change. Writes are limited to stack and comparison status byte 0x200AF8.",
+      "callers": [
+        {
+          "kind": "thumb_pointer_jump",
+          "source": "0x7168",
+          "literal": "0x7174"
+        }
+      ],
+      "callees": [],
+      "primary_region_branch_edges": [
+        {
+          "site": "0x8f00",
+          "target": "0x8d0c",
+          "link": false,
+          "condition": 4
+        },
+        {
+          "site": "0x8f2c",
+          "target": "0x8f38",
+          "link": false,
+          "condition": 3
+        },
+        {
+          "site": "0x8f3c",
+          "target": "0x8f7c",
+          "link": false,
+          "condition": 9
+        },
+        {
+          "site": "0x8f44",
+          "target": "0x9018",
+          "link": false,
+          "condition": 0
+        },
+        {
+          "site": "0x8f4c",
+          "target": "0x8f6c",
+          "link": false,
+          "condition": 8
+        },
+        {
+          "site": "0x8f64",
+          "target": "0x8f90",
+          "link": false,
+          "condition": 13
+        },
+        {
+          "site": "0x8f68",
+          "target": "0x9018",
+          "link": false,
+          "condition": 14
+        },
+        {
+          "site": "0x8f78",
+          "target": "0x9018",
+          "link": false,
+          "condition": 14
+        },
+        {
+          "site": "0x8f88",
+          "target": "0x9018",
+          "link": false,
+          "condition": 12
+        },
+        {
+          "site": "0x8fa4",
+          "target": "0x8fcc",
+          "link": false,
+          "condition": 11
+        },
+        {
+          "site": "0x8fc4",
+          "target": "0x8ff0",
+          "link": false,
+          "condition": 2
+        },
+        {
+          "site": "0x8fc8",
+          "target": "0x9000",
+          "link": false,
+          "condition": 14
+        },
+        {
+          "site": "0x8fec",
+          "target": "0x9000",
+          "link": false,
+          "condition": 3
+        }
+      ],
+      "shared_body_note": "Primary bounds are not exclusive function ownership; arithmetic routines share branch targets and internal bodies.",
+      "confidence": "High for stated instruction roles and reproduced examples; exceptional-value differences retained explicitly",
+      "evidence": [
+        "audit/data/soft_float_emulation.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_ida.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ],
+      "limits": [
+        "Bounded operand domains; NaN payload and quieting policy not proven universally",
+        "IDA explicit-mode export retains decoder gaps; Binary Ninja and emulator evidence are not relabeled as IDA agreement",
+        "Live reachability, timing, complete status-byte consumers and hardware effects remain unverified"
+      ],
+      "contract": "f64_add"
+    },
+    {
+      "entry": "0x9038",
+      "isa": "arm",
+      "primary_instruction_end": "0x9048",
+      "role": "Unsigned 32-bit integer to rounded binary32 conversion",
+      "inputs": "Integer bit pattern in R0; signedness specified by contract",
+      "outputs": "Binary32 result bits in R0; no universal IEEE 754 conformance claim",
+      "side_effects": "Public arithmetic/conversion/Boolean calls preserve R4..R11 and SP in checked cases; caller-saved registers and flags may change. Writes are limited to stack and comparison status byte 0x200AF8.",
+      "callers": [
+        {
+          "kind": "thumb_pointer_jump",
+          "source": "0x7140",
+          "literal": "0x7144"
+        }
+      ],
+      "callees": [],
+      "primary_region_branch_edges": [
+        {
+          "site": "0x9040",
+          "target": "0x905c",
+          "link": false,
+          "condition": 1
+        }
+      ],
+      "shared_body_note": "Primary bounds are not exclusive function ownership; arithmetic routines share branch targets and internal bodies.",
+      "confidence": "High for stated instruction roles and reproduced examples; exceptional-value differences retained explicitly",
+      "evidence": [
+        "audit/data/soft_float_emulation.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_ida.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ],
+      "limits": [
+        "Bounded operand domains; NaN payload and quieting policy not proven universally",
+        "IDA explicit-mode export retains decoder gaps; Binary Ninja and emulator evidence are not relabeled as IDA agreement",
+        "Live reachability, timing, complete status-byte consumers and hardware effects remain unverified"
+      ],
+      "contract": "u32_to_f32"
+    },
+    {
+      "entry": "0x9048",
+      "isa": "arm",
+      "primary_instruction_end": "0x90b0",
+      "role": "Signed 32-bit integer to rounded binary32 conversion",
+      "inputs": "Integer bit pattern in R0; signedness specified by contract",
+      "outputs": "Binary32 result bits in R0; no universal IEEE 754 conformance claim",
+      "side_effects": "Public arithmetic/conversion/Boolean calls preserve R4..R11 and SP in checked cases; caller-saved registers and flags may change. Writes are limited to stack and comparison status byte 0x200AF8.",
+      "callers": [],
+      "callees": [],
+      "primary_region_branch_edges": [],
+      "shared_body_note": "Primary bounds are not exclusive function ownership; arithmetic routines share branch targets and internal bodies.",
+      "confidence": "High for stated instruction roles and reproduced examples; exceptional-value differences retained explicitly",
+      "evidence": [
+        "audit/data/soft_float_emulation.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_ida.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ],
+      "limits": [
+        "Bounded operand domains; NaN payload and quieting policy not proven universally",
+        "IDA explicit-mode export retains decoder gaps; Binary Ninja and emulator evidence are not relabeled as IDA agreement",
+        "Live reachability, timing, complete status-byte consumers and hardware effects remain unverified"
+      ],
+      "contract": "s32_to_f32"
+    },
+    {
+      "entry": "0x90b0",
+      "isa": "arm",
+      "primary_instruction_end": "0x90e4",
+      "role": "Binary32 to unsigned integer with saturation",
+      "inputs": "Binary64 input low/high in R0/R1 or binary32 input in R0, as specified by contract",
+      "outputs": "R0 integer/Boolean result; actual exceptional cases and saturation documented in SOFT_FLOAT_REVIEW.md",
+      "side_effects": "Public arithmetic/conversion/Boolean calls preserve R4..R11 and SP in checked cases; caller-saved registers and flags may change. Writes are limited to stack and comparison status byte 0x200AF8.",
+      "callers": [
+        {
+          "kind": "thumb_pointer_jump",
+          "source": "0x7150",
+          "literal": "0x7154"
+        }
+      ],
+      "callees": [],
+      "primary_region_branch_edges": [
+        {
+          "site": "0x90b4",
+          "target": "0x90dc",
+          "link": false,
+          "condition": 2
+        },
+        {
+          "site": "0x90c0",
+          "target": "0x90dc",
+          "link": false,
+          "condition": 4
+        }
+      ],
+      "shared_body_note": "Primary bounds are not exclusive function ownership; arithmetic routines share branch targets and internal bodies.",
+      "confidence": "High for stated instruction roles and reproduced examples; exceptional-value differences retained explicitly",
+      "evidence": [
+        "audit/data/soft_float_emulation.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_ida.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ],
+      "limits": [
+        "Bounded operand domains; NaN payload and quieting policy not proven universally",
+        "IDA explicit-mode export retains decoder gaps; Binary Ninja and emulator evidence are not relabeled as IDA agreement",
+        "Live reachability, timing, complete status-byte consumers and hardware effects remain unverified"
+      ],
+      "contract": "f32_to_u32_saturating"
+    },
+    {
+      "entry": "0x90e4",
+      "isa": "arm",
+      "primary_instruction_end": "0x913c",
+      "role": "Binary32 to signed integer with saturation",
+      "inputs": "Binary64 input low/high in R0/R1 or binary32 input in R0, as specified by contract",
+      "outputs": "R0 integer/Boolean result; actual exceptional cases and saturation documented in SOFT_FLOAT_REVIEW.md",
+      "side_effects": "Public arithmetic/conversion/Boolean calls preserve R4..R11 and SP in checked cases; caller-saved registers and flags may change. Writes are limited to stack and comparison status byte 0x200AF8.",
+      "callers": [
+        {
+          "kind": "thumb_pointer_jump",
+          "source": "0x5714",
+          "literal": "0x5718"
+        }
+      ],
+      "callees": [],
+      "primary_region_branch_edges": [
+        {
+          "site": "0x90f0",
+          "target": "0x9124",
+          "link": false,
+          "condition": 4
+        },
+        {
+          "site": "0x90f8",
+          "target": "0x912c",
+          "link": false,
+          "condition": 4
+        }
+      ],
+      "shared_body_note": "Primary bounds are not exclusive function ownership; arithmetic routines share branch targets and internal bodies.",
+      "confidence": "High for stated instruction roles and reproduced examples; exceptional-value differences retained explicitly",
+      "evidence": [
+        "audit/data/soft_float_emulation.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_ida.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ],
+      "limits": [
+        "Bounded operand domains; NaN payload and quieting policy not proven universally",
+        "IDA explicit-mode export retains decoder gaps; Binary Ninja and emulator evidence are not relabeled as IDA agreement",
+        "Live reachability, timing, complete status-byte consumers and hardware effects remain unverified"
+      ],
+      "contract": "f32_to_s32_saturating"
+    },
+    {
+      "entry": "0x913c",
+      "isa": "arm",
+      "primary_instruction_end": "0x92cc",
+      "role": "Software binary32 multiplication",
+      "inputs": "Binary32 operand bit patterns in R0 and R1",
+      "outputs": "Binary32 result bits in R0; no universal IEEE 754 conformance claim",
+      "side_effects": "Public arithmetic/conversion/Boolean calls preserve R4..R11 and SP in checked cases; caller-saved registers and flags may change. Writes are limited to stack and comparison status byte 0x200AF8.",
+      "callers": [
+        {
+          "kind": "thumb_pointer_jump",
+          "source": "0x5f04",
+          "literal": "0x5f08"
+        }
+      ],
+      "callees": [],
+      "primary_region_branch_edges": [
+        {
+          "site": "0x9150",
+          "target": "0x9240",
+          "link": false,
+          "condition": 1
+        },
+        {
+          "site": "0x9160",
+          "target": "0x91bc",
+          "link": false,
+          "condition": 3
+        },
+        {
+          "site": "0x9168",
+          "target": "0x919c",
+          "link": false,
+          "condition": 3
+        },
+        {
+          "site": "0x9174",
+          "target": "0x9188",
+          "link": false,
+          "condition": 3
+        },
+        {
+          "site": "0x91c4",
+          "target": "0x91d4",
+          "link": false,
+          "condition": 1
+        },
+        {
+          "site": "0x91d8",
+          "target": "0x9218",
+          "link": false,
+          "condition": 9
+        },
+        {
+          "site": "0x91e0",
+          "target": "0x91f0",
+          "link": false,
+          "condition": 9
+        },
+        {
+          "site": "0x91ec",
+          "target": "0x929c",
+          "link": false,
+          "condition": 14
+        },
+        {
+          "site": "0x9208",
+          "target": "0x9200",
+          "link": false,
+          "condition": 5
+        },
+        {
+          "site": "0x9214",
+          "target": "0x9258",
+          "link": false,
+          "condition": 14
+        },
+        {
+          "site": "0x9230",
+          "target": "0x9228",
+          "link": false,
+          "condition": 5
+        },
+        {
+          "site": "0x923c",
+          "target": "0x9258",
+          "link": false,
+          "condition": 14
+        },
+        {
+          "site": "0x9270",
+          "target": "0x92a4",
+          "link": false,
+          "condition": 10
+        },
+        {
+          "site": "0x927c",
+          "target": "0x929c",
+          "link": false,
+          "condition": 12
+        }
+      ],
+      "shared_body_note": "Primary bounds are not exclusive function ownership; arithmetic routines share branch targets and internal bodies.",
+      "confidence": "High for stated instruction roles and reproduced examples; exceptional-value differences retained explicitly",
+      "evidence": [
+        "audit/data/soft_float_emulation.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_ida.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ],
+      "limits": [
+        "Bounded operand domains; NaN payload and quieting policy not proven universally",
+        "IDA explicit-mode export retains decoder gaps; Binary Ninja and emulator evidence are not relabeled as IDA agreement",
+        "Live reachability, timing, complete status-byte consumers and hardware effects remain unverified"
+      ],
+      "contract": "f32_mul"
+    },
+    {
+      "entry": "0x92cc",
+      "isa": "arm",
+      "primary_instruction_end": "0x94b4",
+      "role": "Software binary32 division with documented subnormal differences",
+      "inputs": "Binary32 operand bit patterns in R0 and R1",
+      "outputs": "Binary32 result bits in R0; no universal IEEE 754 conformance claim",
+      "side_effects": "Public arithmetic/conversion/Boolean calls preserve R4..R11 and SP in checked cases; caller-saved registers and flags may change. Writes are limited to stack and comparison status byte 0x200AF8.",
+      "callers": [
+        {
+          "kind": "thumb_pointer_jump",
+          "source": "0x56fc",
+          "literal": "0x5700"
+        }
+      ],
+      "callees": [],
+      "primary_region_branch_edges": [
+        {
+          "site": "0x92e0",
+          "target": "0x93e8",
+          "link": false,
+          "condition": 1
+        },
+        {
+          "site": "0x92f0",
+          "target": "0x9324",
+          "link": false,
+          "condition": 3
+        },
+        {
+          "site": "0x92f8",
+          "target": "0x9310",
+          "link": false,
+          "condition": 3
+        },
+        {
+          "site": "0x932c",
+          "target": "0x9350",
+          "link": false,
+          "condition": 1
+        },
+        {
+          "site": "0x9358",
+          "target": "0x93c0",
+          "link": false,
+          "condition": 9
+        },
+        {
+          "site": "0x9360",
+          "target": "0x9394",
+          "link": false,
+          "condition": 9
+        },
+        {
+          "site": "0x937c",
+          "target": "0x9374",
+          "link": false,
+          "condition": 5
+        },
+        {
+          "site": "0x938c",
+          "target": "0x9384",
+          "link": false,
+          "condition": 5
+        },
+        {
+          "site": "0x9390",
+          "target": "0x9400",
+          "link": false,
+          "condition": 14
+        },
+        {
+          "site": "0x93b0",
+          "target": "0x93a8",
+          "link": false,
+          "condition": 5
+        },
+        {
+          "site": "0x93bc",
+          "target": "0x9400",
+          "link": false,
+          "condition": 14
+        },
+        {
+          "site": "0x93d8",
+          "target": "0x93d0",
+          "link": false,
+          "condition": 5
+        },
+        {
+          "site": "0x93e4",
+          "target": "0x9400",
+          "link": false,
+          "condition": 14
+        },
+        {
+          "site": "0x9410",
+          "target": "0x941c",
+          "link": false,
+          "condition": 2
+        },
+        {
+          "site": "0x944c",
+          "target": "0x941c",
+          "link": false,
+          "condition": 3
+        },
+        {
+          "site": "0x9454",
+          "target": "0x948c",
+          "link": false,
+          "condition": 12
+        },
+        {
+          "site": "0x9464",
+          "target": "0x9484",
+          "link": false,
+          "condition": 12
+        }
+      ],
+      "shared_body_note": "Primary bounds are not exclusive function ownership; arithmetic routines share branch targets and internal bodies.",
+      "confidence": "High for stated instruction roles and reproduced examples; exceptional-value differences retained explicitly",
+      "evidence": [
+        "audit/data/soft_float_emulation.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_ida.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ],
+      "limits": [
+        "Bounded operand domains; NaN payload and quieting policy not proven universally",
+        "IDA explicit-mode export retains decoder gaps; Binary Ninja and emulator evidence are not relabeled as IDA agreement",
+        "Live reachability, timing, complete status-byte consumers and hardware effects remain unverified"
+      ],
+      "contract": "f32_div"
+    },
+    {
+      "entry": "0x94b4",
+      "isa": "arm",
+      "primary_instruction_end": "0x95f4",
+      "role": "Software binary32 subtraction, no incoming reference found",
+      "inputs": "Binary32 operand bit patterns in R0 and R1",
+      "outputs": "Binary32 result bits in R0; no universal IEEE 754 conformance claim",
+      "side_effects": "Public arithmetic/conversion/Boolean calls preserve R4..R11 and SP in checked cases; caller-saved registers and flags may change. Writes are limited to stack and comparison status byte 0x200AF8.",
+      "callers": [],
+      "callees": [],
+      "primary_region_branch_edges": [
+        {
+          "site": "0x94bc",
+          "target": "0x9600",
+          "link": false,
+          "condition": 4
+        },
+        {
+          "site": "0x94e0",
+          "target": "0x9538",
+          "link": false,
+          "condition": 1
+        },
+        {
+          "site": "0x94ec",
+          "target": "0x94fc",
+          "link": false,
+          "condition": 3
+        },
+        {
+          "site": "0x9500",
+          "target": "0x952c",
+          "link": false,
+          "condition": 0
+        },
+        {
+          "site": "0x9508",
+          "target": "0x9524",
+          "link": false,
+          "condition": 11
+        },
+        {
+          "site": "0x951c",
+          "target": "0x95b8",
+          "link": false,
+          "condition": 13
+        },
+        {
+          "site": "0x954c",
+          "target": "0x95b4",
+          "link": false,
+          "condition": 12
+        },
+        {
+          "site": "0x9564",
+          "target": "0x95a0",
+          "link": false,
+          "condition": 4
+        },
+        {
+          "site": "0x9578",
+          "target": "0x9570",
+          "link": false,
+          "condition": 5
+        },
+        {
+          "site": "0x9580",
+          "target": "0x95a0",
+          "link": false,
+          "condition": 8
+        }
+      ],
+      "shared_body_note": "Primary bounds are not exclusive function ownership; arithmetic routines share branch targets and internal bodies.",
+      "confidence": "High for stated instruction roles and reproduced examples; exceptional-value differences retained explicitly",
+      "evidence": [
+        "audit/data/soft_float_emulation.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_ida.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ],
+      "limits": [
+        "Bounded operand domains; NaN payload and quieting policy not proven universally",
+        "IDA explicit-mode export retains decoder gaps; Binary Ninja and emulator evidence are not relabeled as IDA agreement",
+        "Live reachability, timing, complete status-byte consumers and hardware effects remain unverified"
+      ],
+      "contract": "f32_sub"
+    },
+    {
+      "entry": "0x95f4",
+      "isa": "arm",
+      "primary_instruction_end": "0x96c4",
+      "role": "Software binary32 addition",
+      "inputs": "Binary32 operand bit patterns in R0 and R1",
+      "outputs": "Binary32 result bits in R0; no universal IEEE 754 conformance claim",
+      "side_effects": "Public arithmetic/conversion/Boolean calls preserve R4..R11 and SP in checked cases; caller-saved registers and flags may change. Writes are limited to stack and comparison status byte 0x200AF8.",
+      "callers": [
+        {
+          "kind": "thumb_pointer_jump",
+          "source": "0x7148",
+          "literal": "0x714c"
+        }
+      ],
+      "callees": [],
+      "primary_region_branch_edges": [
+        {
+          "site": "0x95fc",
+          "target": "0x94c0",
+          "link": false,
+          "condition": 4
+        },
+        {
+          "site": "0x9620",
+          "target": "0x9664",
+          "link": false,
+          "condition": 1
+        },
+        {
+          "site": "0x963c",
+          "target": "0x9658",
+          "link": false,
+          "condition": 0
+        },
+        {
+          "site": "0x9650",
+          "target": "0x9678",
+          "link": false,
+          "condition": 13
+        }
+      ],
+      "shared_body_note": "Primary bounds are not exclusive function ownership; arithmetic routines share branch targets and internal bodies.",
+      "confidence": "High for stated instruction roles and reproduced examples; exceptional-value differences retained explicitly",
+      "evidence": [
+        "audit/data/soft_float_emulation.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_ida.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ],
+      "limits": [
+        "Bounded operand domains; NaN payload and quieting policy not proven universally",
+        "IDA explicit-mode export retains decoder gaps; Binary Ninja and emulator evidence are not relabeled as IDA agreement",
+        "Live reachability, timing, complete status-byte consumers and hardware effects remain unverified"
+      ],
+      "contract": "f32_add"
+    }
+  ]
+}

@@ -201,5 +201,10 @@ Finding your own mistakes before a reader does is part of the method. These were
 
 ## Suggested disclosure
 
+The [offline software floating point review](SOFT_FLOAT_REVIEW.md) identifies
+reproducible exceptional-input numeric differences and a binary64 add path
+dependent on the caller's R4 value. No connected-controller effect or security
+severity is established by these offline calls.
+
 The product is an old aftermarket part, but the pattern (static obfuscation key, unsigned updates, unauthenticated control
 channel) is common. If this is reported, send the vendor F2 and F4 first, with the recommendations above.

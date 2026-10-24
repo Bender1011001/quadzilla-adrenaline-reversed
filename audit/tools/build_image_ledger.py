@@ -15,6 +15,7 @@ ROOT = Path(__file__).resolve().parents[2]
 SHA = "1ae519ba6194e8f7bdaaa94333a83a9e6fda3b0563f87f7d48383b37288c1780"
 BASE, END = 0x4000, 0xBD00
 LAYOUT = (
+    (0x896C, 0x8970, "soft_float_status_pointer"),
     (0x96C4, 0x96E8, "startup_region_descriptors"),
     (0x96E8, 0x9F88, "initialized_ram_data_source"),
     (0xA91C, 0xAD18, "aid_pointer_table_1"),
@@ -41,13 +42,14 @@ def validate_instruction_reviews(document):
     reviewed = []
     for row in document["ranges"]:
         lo, hi = int(row["start"], 0), int(row["end"], 0)
-        if not BASE <= lo < hi <= END or lo % 2 or hi % 2 or row.get("isa") != "thumb":
-            raise ValueError("invalid reviewed Thumb range")
+        alignment = {"thumb": 2, "arm": 4}.get(row.get("isa"))
+        if not alignment or not BASE <= lo < hi <= END or lo % alignment or hi % alignment:
+            raise ValueError("invalid reviewed instruction range or ISA alignment")
         if not row.get("evidence") or not row.get("account"):
             raise ValueError("reviewed range lacks supporting account")
         if any(lo < b and hi > a for a, b, _ in LAYOUT):
             raise ValueError("instruction review overlaps a supported layout region")
-        reviewed.append((lo, hi, row["entry"]))
+        reviewed.append((lo, hi, row["entry"], row["isa"]))
     reviewed.sort()
     if any(a[1] > b[0] for a, b in zip(reviewed, reviewed[1:])):
         raise ValueError("overlapping instruction reviews")
@@ -72,11 +74,11 @@ def build(raw, export, reviews=None):
     conflicts = []
     for row in rows:
         lo, hi = int(row["start"], 0), int(row["end"], 0)
-        cuts = sorted({lo, hi} | {v for a, b, _ in (*LAYOUT, *reviewed) for v in (a, b) if lo < v < hi})
+        cuts = sorted({lo, hi} | {v for a, b, *_ in (*LAYOUT, *reviewed) for v in (a, b) if lo < v < hi})
         for a, b in zip(cuts, cuts[1:]):
             purpose = next((name for x, y, name in LAYOUT if x <= a and b <= y), None)
-            review = next((entry for x, y, entry in reviewed if x <= a and b <= y), None)
-            classification = purpose or ("reviewed_thumb_instructions" if review else row["kind"] + "_pending_review")
+            review = next(((entry, isa) for x, y, entry, isa in reviewed if x <= a and b <= y), None)
+            classification = purpose or ("reviewed_"+review[1]+"_instructions" if review else row["kind"] + "_pending_review")
             if purpose and row["kind"] == "ida_code" and purpose != "ram_executable_template":
                 conflicts.append({"start": hex(a), "end": hex(b), "ida_text": row.get("text"),
                                   "layout": purpose})
@@ -84,7 +86,7 @@ def build(raw, export, reviews=None):
                       "review_state": "layout_role_supported" if purpose else
                                       "instruction_range_supported" if review else "needs_instruction_or_data_review"}
             if review:
-                record["review_entry"] = review
+                record["review_entry"] = review[0]
             ranges.append(record)
     counts = Counter()
     for row in ranges:

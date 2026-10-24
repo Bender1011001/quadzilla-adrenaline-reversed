@@ -489,6 +489,380 @@
         "audit/data/control_helper_callers.json",
         "docs/CONTROL_HELPER_REVIEW.md"
       ]
+    },
+    {
+      "entry": "0x56fc",
+      "label": "Thumb-to-ARM wrapper: Software binary32 division with documented subnormal differences",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/soft_float_emulation.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_ida.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x5704",
+      "label": "Thumb-to-ARM wrapper: Binary64 unequal Boolean wrapper with low-word NaN limitation",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/soft_float_emulation.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_ida.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x5714",
+      "label": "Thumb-to-ARM wrapper: Binary32 to signed integer with saturation",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/soft_float_emulation.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_ida.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x5f04",
+      "label": "Thumb-to-ARM wrapper: Software binary32 multiplication",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/soft_float_emulation.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_ida.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x5f0c",
+      "label": "Thumb-to-ARM wrapper: Binary64 to signed integer with saturation",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/soft_float_emulation.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_ida.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x6b08",
+      "label": "Thumb-to-ARM wrapper: Signed 32-bit integer to binary64 conversion",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/soft_float_emulation.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_ida.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x6b10",
+      "label": "Thumb-to-ARM wrapper: Binary64 greater/equal Boolean wrapper with high-word special-value checks",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/soft_float_emulation.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_ida.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x7120",
+      "label": "Thumb-to-ARM wrapper: Unsigned 32-bit integer to binary64 conversion",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/soft_float_emulation.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_ida.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x7128",
+      "label": "Thumb-to-ARM wrapper: Software binary64 division with documented exceptional-value differences",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/soft_float_emulation.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_ida.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x7138",
+      "label": "Thumb-to-ARM wrapper: Binary64 to binary32 conversion with low-payload NaN limitation",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/soft_float_emulation.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_ida.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x7140",
+      "label": "Thumb-to-ARM wrapper: Unsigned 32-bit integer to rounded binary32 conversion",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/soft_float_emulation.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_ida.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x7148",
+      "label": "Thumb-to-ARM wrapper: Software binary32 addition",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/soft_float_emulation.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_ida.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x7150",
+      "label": "Thumb-to-ARM wrapper: Binary32 to unsigned integer with saturation",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/soft_float_emulation.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_ida.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x7158",
+      "label": "Thumb-to-ARM wrapper: Binary64 to unsigned integer with saturation",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/soft_float_emulation.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_ida.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x7160",
+      "label": "Thumb-to-ARM wrapper: Binary32 to binary64 conversion",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/soft_float_emulation.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_ida.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x7168",
+      "label": "Thumb-to-ARM wrapper: Software binary64 addition with subnormal caller-R4 dependency",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/soft_float_emulation.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_ida.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x8678",
+      "label": "First binary64 subnormal mantissa normalizer",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/soft_float_emulation.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_ida.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x86a8",
+      "label": "Second binary64 subnormal mantissa normalizer",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/soft_float_emulation.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_ida.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x86d8",
+      "label": "Unsigned 32-bit integer to binary64 conversion",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/soft_float_emulation.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_ida.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x86f0",
+      "label": "Signed 32-bit integer to binary64 conversion",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/soft_float_emulation.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_ida.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x874c",
+      "label": "Binary64 to unsigned integer with saturation",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/soft_float_emulation.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_ida.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x8788",
+      "label": "Binary64 to signed integer with saturation",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/soft_float_emulation.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_ida.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x87e8",
+      "label": "Binary64 to binary32 conversion with low-payload NaN limitation",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/soft_float_emulation.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_ida.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x88a4",
+      "label": "Binary32 to binary64 conversion",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/soft_float_emulation.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_ida.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x8908",
+      "label": "Binary64 unequal-condition flag helper",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/soft_float_emulation.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_ida.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x893c",
+      "label": "Binary64 unequal Boolean wrapper with low-word NaN limitation",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/soft_float_emulation.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_ida.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x8970",
+      "label": "Binary64 ordering-condition flag helper",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/soft_float_emulation.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_ida.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x89b0",
+      "label": "Binary64 greater/equal Boolean wrapper with high-word special-value checks",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/soft_float_emulation.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_ida.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x9038",
+      "label": "Unsigned 32-bit integer to rounded binary32 conversion",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/soft_float_emulation.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_ida.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x90b0",
+      "label": "Binary32 to unsigned integer with saturation",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/soft_float_emulation.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_ida.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x90e4",
+      "label": "Binary32 to signed integer with saturation",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/soft_float_emulation.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_ida.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x913c",
+      "label": "Software binary32 multiplication",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/soft_float_emulation.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_ida.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x92cc",
+      "label": "Software binary32 division with documented subnormal differences",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/soft_float_emulation.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_ida.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x95f4",
+      "label": "Software binary32 addition",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/soft_float_emulation.json",
+        "audit/data/soft_float_binaryninja.json",
+        "audit/data/soft_float_ida.json",
+        "docs/SOFT_FLOAT_REVIEW.md"
+      ]
     }
   ],
   "limitations": [
