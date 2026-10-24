@@ -1,0 +1,652 @@
+{
+  "format": "quadzilla-pio-interrupt-emulation-v1",
+  "raw_sha256": "1ae519ba6194e8f7bdaaa94333a83a9e6fda3b0563f87f7d48383b37288c1780",
+  "emulator": "Unicorn 2.1.4",
+  "cpu": "ARM926 functional surrogate",
+  "registers": "synthetic read/write memory, no peripheral model",
+  "source_literals": {
+    "aic_base_source": "0x9e80",
+    "aic_base": "0xfffff000",
+    "thumb_vector_literal": "0x75dc",
+    "thumb_vector": "0x7449"
+  },
+  "initialization_prefix": [
+    {
+      "synthetic_pio_pdsr": "0x0",
+      "ram_200791": 1,
+      "mmio_writes": [
+        {
+          "site": "0x74f6",
+          "address": "0xfffff124",
+          "size": 4,
+          "value": "0xffffffff"
+        },
+        {
+          "site": "0x74fa",
+          "address": "0xfffffc14",
+          "size": 4,
+          "value": "0xffffffff"
+        },
+        {
+          "site": "0x7500",
+          "address": "0xfffffc10",
+          "size": 4,
+          "value": "0x4"
+        },
+        {
+          "site": "0x7506",
+          "address": "0xfffff400",
+          "size": 4,
+          "value": "0x3208383"
+        },
+        {
+          "site": "0x750a",
+          "address": "0xfffff410",
+          "size": 4,
+          "value": "0x3208383"
+        },
+        {
+          "site": "0x7510",
+          "address": "0xfffff414",
+          "size": 4,
+          "value": "0xfcdf7c7c"
+        },
+        {
+          "site": "0x7512",
+          "address": "0xfffff400",
+          "size": 4,
+          "value": "0xfcdf7c7c"
+        },
+        {
+          "site": "0x7516",
+          "address": "0xfffff434",
+          "size": 4,
+          "value": "0x3208383"
+        },
+        {
+          "site": "0x751a",
+          "address": "0xfffff4a4",
+          "size": 4,
+          "value": "0xfcdf7c7c"
+        },
+        {
+          "site": "0x751e",
+          "address": "0xfffff4a0",
+          "size": 4,
+          "value": "0x3208383"
+        },
+        {
+          "site": "0x7524",
+          "address": "0xfffff454",
+          "size": 4,
+          "value": "0xfdff97ff"
+        },
+        {
+          "site": "0x752a",
+          "address": "0xfffff450",
+          "size": 4,
+          "value": "0x2006800"
+        },
+        {
+          "site": "0x7530",
+          "address": "0xfffff460",
+          "size": 4,
+          "value": "0xfffdffff"
+        },
+        {
+          "site": "0x7536",
+          "address": "0xfffff464",
+          "size": 4,
+          "value": "0x20000"
+        },
+        {
+          "site": "0x754c",
+          "address": "0xfffff470",
+          "size": 4,
+          "value": "0x7860"
+        },
+        {
+          "site": "0x7552",
+          "address": "0xfffff474",
+          "size": 4,
+          "value": "0x88001"
+        },
+        {
+          "site": "0x7558",
+          "address": "0xfffff404",
+          "size": 4,
+          "value": "0x8f861"
+        },
+        {
+          "site": "0x7560",
+          "address": "0xfffff124",
+          "size": 4,
+          "value": "0x4"
+        },
+        {
+          "site": "0x7564",
+          "address": "0xfffff088",
+          "size": 4,
+          "value": "0x7449"
+        },
+        {
+          "site": "0x756a",
+          "address": "0xfffff008",
+          "size": 4,
+          "value": "0x47"
+        },
+        {
+          "site": "0x756e",
+          "address": "0xfffff128",
+          "size": 4,
+          "value": "0x4"
+        },
+        {
+          "site": "0x7574",
+          "address": "0xfffff440",
+          "size": 4,
+          "value": "0x40000000"
+        },
+        {
+          "site": "0x7578",
+          "address": "0xfffff120",
+          "size": 4,
+          "value": "0x4"
+        }
+      ],
+      "visited": [
+        "0x74e8",
+        "0x74ea",
+        "0x74ec",
+        "0x74ee",
+        "0x74f0",
+        "0x74f2",
+        "0x74f4",
+        "0x74f6",
+        "0x74f8",
+        "0x74fa",
+        "0x74fc",
+        "0x74fe",
+        "0x7500",
+        "0x7502",
+        "0x7504",
+        "0x7506",
+        "0x7508",
+        "0x750a",
+        "0x750c",
+        "0x750e",
+        "0x7510",
+        "0x7512",
+        "0x7514",
+        "0x7516",
+        "0x7518",
+        "0x751a",
+        "0x751c",
+        "0x751e",
+        "0x7520",
+        "0x7522",
+        "0x7524",
+        "0x7526",
+        "0x7528",
+        "0x752a",
+        "0x752c",
+        "0x752e",
+        "0x7530",
+        "0x7532",
+        "0x7534",
+        "0x7536",
+        "0x7538",
+        "0x753a",
+        "0x753c",
+        "0x753e",
+        "0x7540",
+        "0x7542",
+        "0x7546",
+        "0x7548",
+        "0x754a",
+        "0x754c",
+        "0x754e",
+        "0x7550",
+        "0x7552",
+        "0x7554",
+        "0x7556",
+        "0x7558",
+        "0x755a",
+        "0x755c",
+        "0x755e",
+        "0x7560",
+        "0x7562",
+        "0x7564",
+        "0x7566",
+        "0x7568",
+        "0x756a",
+        "0x756c",
+        "0x756e",
+        "0x7570",
+        "0x7572",
+        "0x7574",
+        "0x7576",
+        "0x7578"
+      ]
+    },
+    {
+      "synthetic_pio_pdsr": "0x20000",
+      "ram_200791": 0,
+      "mmio_writes": [
+        {
+          "site": "0x74f6",
+          "address": "0xfffff124",
+          "size": 4,
+          "value": "0xffffffff"
+        },
+        {
+          "site": "0x74fa",
+          "address": "0xfffffc14",
+          "size": 4,
+          "value": "0xffffffff"
+        },
+        {
+          "site": "0x7500",
+          "address": "0xfffffc10",
+          "size": 4,
+          "value": "0x4"
+        },
+        {
+          "site": "0x7506",
+          "address": "0xfffff400",
+          "size": 4,
+          "value": "0x3208383"
+        },
+        {
+          "site": "0x750a",
+          "address": "0xfffff410",
+          "size": 4,
+          "value": "0x3208383"
+        },
+        {
+          "site": "0x7510",
+          "address": "0xfffff414",
+          "size": 4,
+          "value": "0xfcdf7c7c"
+        },
+        {
+          "site": "0x7512",
+          "address": "0xfffff400",
+          "size": 4,
+          "value": "0xfcdf7c7c"
+        },
+        {
+          "site": "0x7516",
+          "address": "0xfffff434",
+          "size": 4,
+          "value": "0x3208383"
+        },
+        {
+          "site": "0x751a",
+          "address": "0xfffff4a4",
+          "size": 4,
+          "value": "0xfcdf7c7c"
+        },
+        {
+          "site": "0x751e",
+          "address": "0xfffff4a0",
+          "size": 4,
+          "value": "0x3208383"
+        },
+        {
+          "site": "0x7524",
+          "address": "0xfffff454",
+          "size": 4,
+          "value": "0xfdff97ff"
+        },
+        {
+          "site": "0x752a",
+          "address": "0xfffff450",
+          "size": 4,
+          "value": "0x2006800"
+        },
+        {
+          "site": "0x7530",
+          "address": "0xfffff460",
+          "size": 4,
+          "value": "0xfffdffff"
+        },
+        {
+          "site": "0x7536",
+          "address": "0xfffff464",
+          "size": 4,
+          "value": "0x20000"
+        },
+        {
+          "site": "0x754c",
+          "address": "0xfffff470",
+          "size": 4,
+          "value": "0x7860"
+        },
+        {
+          "site": "0x7552",
+          "address": "0xfffff474",
+          "size": 4,
+          "value": "0x88001"
+        },
+        {
+          "site": "0x7558",
+          "address": "0xfffff404",
+          "size": 4,
+          "value": "0x8f861"
+        },
+        {
+          "site": "0x7560",
+          "address": "0xfffff124",
+          "size": 4,
+          "value": "0x4"
+        },
+        {
+          "site": "0x7564",
+          "address": "0xfffff088",
+          "size": 4,
+          "value": "0x7449"
+        },
+        {
+          "site": "0x756a",
+          "address": "0xfffff008",
+          "size": 4,
+          "value": "0x47"
+        },
+        {
+          "site": "0x756e",
+          "address": "0xfffff128",
+          "size": 4,
+          "value": "0x4"
+        },
+        {
+          "site": "0x7574",
+          "address": "0xfffff440",
+          "size": 4,
+          "value": "0x40000000"
+        },
+        {
+          "site": "0x7578",
+          "address": "0xfffff120",
+          "size": 4,
+          "value": "0x4"
+        }
+      ],
+      "visited": [
+        "0x74e8",
+        "0x74ea",
+        "0x74ec",
+        "0x74ee",
+        "0x74f0",
+        "0x74f2",
+        "0x74f4",
+        "0x74f6",
+        "0x74f8",
+        "0x74fa",
+        "0x74fc",
+        "0x74fe",
+        "0x7500",
+        "0x7502",
+        "0x7504",
+        "0x7506",
+        "0x7508",
+        "0x750a",
+        "0x750c",
+        "0x750e",
+        "0x7510",
+        "0x7512",
+        "0x7514",
+        "0x7516",
+        "0x7518",
+        "0x751a",
+        "0x751c",
+        "0x751e",
+        "0x7520",
+        "0x7522",
+        "0x7524",
+        "0x7526",
+        "0x7528",
+        "0x752a",
+        "0x752c",
+        "0x752e",
+        "0x7530",
+        "0x7532",
+        "0x7534",
+        "0x7536",
+        "0x7538",
+        "0x753a",
+        "0x753c",
+        "0x753e",
+        "0x7544",
+        "0x7546",
+        "0x7548",
+        "0x754a",
+        "0x754c",
+        "0x754e",
+        "0x7550",
+        "0x7552",
+        "0x7554",
+        "0x7556",
+        "0x7558",
+        "0x755a",
+        "0x755c",
+        "0x755e",
+        "0x7560",
+        "0x7562",
+        "0x7564",
+        "0x7566",
+        "0x7568",
+        "0x756a",
+        "0x756c",
+        "0x756e",
+        "0x7570",
+        "0x7572",
+        "0x7574",
+        "0x7576",
+        "0x7578"
+      ]
+    }
+  ],
+  "pio_handler": [
+    {
+      "pin30_high": true,
+      "ram_200788": 1,
+      "ram_200789": 1,
+      "mmio_writes": [],
+      "visited": [
+        "0x7448",
+        "0x744a",
+        "0x744c",
+        "0x744e",
+        "0x7450",
+        "0x7452",
+        "0x7454",
+        "0x7456",
+        "0x7458",
+        "0x747c",
+        "0x747e",
+        "0x7480",
+        "0x7482",
+        "0x7484"
+      ]
+    },
+    {
+      "pin30_high": false,
+      "ram_200788": 0,
+      "ram_200789": 1,
+      "mmio_writes": [],
+      "visited": [
+        "0x7448",
+        "0x744a",
+        "0x744c",
+        "0x744e",
+        "0x7450",
+        "0x7452",
+        "0x7454",
+        "0x7456",
+        "0x7458",
+        "0x745a",
+        "0x745c",
+        "0x745e",
+        "0x7460",
+        "0x747c",
+        "0x747e",
+        "0x7480",
+        "0x7482",
+        "0x7484"
+      ]
+    },
+    {
+      "pin30_high": false,
+      "ram_200788": 1,
+      "ram_200789": 0,
+      "mmio_writes": [
+        {
+          "site": "0x7470",
+          "address": "0xfffa0000",
+          "size": 4,
+          "value": "0x5"
+        },
+        {
+          "site": "0x7476",
+          "address": "0xfffff124",
+          "size": 4,
+          "value": "0x4"
+        },
+        {
+          "site": "0x747a",
+          "address": "0xfffff128",
+          "size": 4,
+          "value": "0x4"
+        }
+      ],
+      "visited": [
+        "0x7448",
+        "0x744a",
+        "0x744c",
+        "0x744e",
+        "0x7450",
+        "0x7452",
+        "0x7454",
+        "0x7456",
+        "0x7458",
+        "0x745a",
+        "0x745c",
+        "0x745e",
+        "0x7460",
+        "0x7462",
+        "0x7464",
+        "0x7466",
+        "0x7468",
+        "0x746e",
+        "0x7470",
+        "0x7472",
+        "0x7474",
+        "0x7476",
+        "0x7478",
+        "0x747a",
+        "0x747c",
+        "0x747e",
+        "0x7480",
+        "0x7482",
+        "0x7484"
+      ]
+    },
+    {
+      "pin30_high": false,
+      "ram_200788": 1,
+      "ram_200789": 1,
+      "mmio_writes": [
+        {
+          "site": "0x746c",
+          "address": "0xfffa0040",
+          "size": 4,
+          "value": "0x5"
+        },
+        {
+          "site": "0x7470",
+          "address": "0xfffa0000",
+          "size": 4,
+          "value": "0x5"
+        },
+        {
+          "site": "0x7476",
+          "address": "0xfffff124",
+          "size": 4,
+          "value": "0x4"
+        },
+        {
+          "site": "0x747a",
+          "address": "0xfffff128",
+          "size": 4,
+          "value": "0x4"
+        }
+      ],
+      "visited": [
+        "0x7448",
+        "0x744a",
+        "0x744c",
+        "0x744e",
+        "0x7450",
+        "0x7452",
+        "0x7454",
+        "0x7456",
+        "0x7458",
+        "0x745a",
+        "0x745c",
+        "0x745e",
+        "0x7460",
+        "0x7462",
+        "0x7464",
+        "0x7466",
+        "0x7468",
+        "0x746a",
+        "0x746c",
+        "0x746e",
+        "0x7470",
+        "0x7472",
+        "0x7474",
+        "0x7476",
+        "0x7478",
+        "0x747a",
+        "0x747c",
+        "0x747e",
+        "0x7480",
+        "0x7482",
+        "0x7484"
+      ]
+    }
+  ],
+  "aic_mask_helpers": {
+    "synthetic_aic_imr": "0x12345678",
+    "saved_ram_20079c": "0x12345678",
+    "save_and_disable_writes": [
+      {
+        "site": "0x74a2",
+        "address": "0x20079c",
+        "size": 4,
+        "value": "0x12345678"
+      },
+      {
+        "site": "0x74ae",
+        "address": "0xfffff124",
+        "size": 4,
+        "value": "0xffffffff"
+      }
+    ],
+    "restore_writes": [
+      {
+        "site": "0x74be",
+        "address": "0xfffff120",
+        "size": 4,
+        "value": "0x12345678"
+      }
+    ]
+  },
+  "limits": [
+    "0x74E8 is stopped before its first BL; six subordinate routines need separate review",
+    "synthetic MMIO has no register side effects or timing",
+    "handler is called as a bounded Thumb routine, not through a simulated IRQ controller",
+    "installed device part suffix and pin wiring are unmeasured"
+  ]
+}

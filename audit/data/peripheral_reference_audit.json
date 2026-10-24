@@ -915,8 +915,19 @@
     },
     {
       "entry": "0x7448",
-      "semantic_status": "unlabeled_static_entry",
-      "semantics": [],
+      "semantic_status": "documented_static_role",
+      "semantics": [
+        {
+          "entry": "0x7448",
+          "label": "PIOA interrupt callback: conditional TC0/TC1 software triggers and source masking",
+          "assurance": "static_instruction_trace_and_synthetic_mmio_emulation",
+          "evidence": [
+            "audit/data/pio_interrupt_binaryninja.json",
+            "audit/data/pio_interrupt_emulation.json",
+            "docs/PIO_INTERRUPT_REVIEW.md"
+          ]
+        }
+      ],
       "blocks": {
         "AIC": 2,
         "PIOA": 2
@@ -954,8 +965,19 @@
     },
     {
       "entry": "0x74e8",
-      "semantic_status": "unlabeled_static_entry",
-      "semantics": [],
+      "semantic_status": "documented_static_role",
+      "semantics": [
+        {
+          "entry": "0x74e8",
+          "label": "PIOA, PMC and AIC setup coordinator with six subordinate initialization calls",
+          "assurance": "static_instruction_trace_and_synthetic_mmio_emulation",
+          "evidence": [
+            "audit/data/pio_interrupt_binaryninja.json",
+            "audit/data/pio_interrupt_emulation.json",
+            "docs/PIO_INTERRUPT_REVIEW.md"
+          ]
+        }
+      ],
       "blocks": {
         "AIC": 5,
         "PIOA": 15,
@@ -1258,7 +1280,7 @@
   "inputs": {
     "catalog": {
       "path": "audit/data/execution_entry_catalog.json",
-      "sha256": "8980c9637bf7f4309b18f70c4514a06637cd7d0ac8eb6c4668f9f7ea90425f20"
+      "sha256": "6befd791d83cbfee3d67bd4c63179a57cb28bfcbc431b8384657ffe48d947c5e"
     },
     "peripheral_map": {
       "path": "audit/data/sam7s_peripheral_map.json",

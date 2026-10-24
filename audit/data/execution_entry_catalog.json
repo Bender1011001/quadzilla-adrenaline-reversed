@@ -4,8 +4,8 @@
   "unit": "execution_entries_including_vectors_thunks_and_alternate_entries",
   "summary": {
     "confirmed_entries": 145,
-    "documented_static_roles": 85,
-    "unlabeled_static_entries": 60,
+    "documented_static_roles": 89,
+    "unlabeled_static_entries": 56,
     "entries_with_ida_sram_references": 49,
     "entries_with_ida_peripheral_references": 21,
     "union_direct_call_edges": 180
@@ -11869,8 +11869,19 @@
         },
         "ghidra": null
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x7448",
+          "label": "PIOA interrupt callback: conditional TC0/TC1 software triggers and source masking",
+          "assurance": "static_instruction_trace_and_synthetic_mmio_emulation",
+          "evidence": [
+            "audit/data/pio_interrupt_binaryninja.json",
+            "audit/data/pio_interrupt_emulation.json",
+            "docs/PIO_INTERRUPT_REVIEW.md"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [],
         "incoming": []
@@ -11975,8 +11986,19 @@
           ]
         }
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x7498",
+          "label": "Save AIC interrupt mask and disable all AIC sources",
+          "assurance": "static_instruction_trace_and_synthetic_mmio_emulation",
+          "evidence": [
+            "audit/data/pio_interrupt_binaryninja.json",
+            "audit/data/pio_interrupt_emulation.json",
+            "docs/PIO_INTERRUPT_REVIEW.md"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [],
         "incoming": [
@@ -12042,8 +12064,19 @@
           ]
         }
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x74b4",
+          "label": "Enable AIC sources from saved mask",
+          "assurance": "static_instruction_trace_and_synthetic_mmio_emulation",
+          "evidence": [
+            "audit/data/pio_interrupt_binaryninja.json",
+            "audit/data/pio_interrupt_emulation.json",
+            "docs/PIO_INTERRUPT_REVIEW.md"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [],
         "incoming": [
@@ -12130,8 +12163,19 @@
           ]
         }
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x74e8",
+          "label": "PIOA, PMC and AIC setup coordinator with six subordinate initialization calls",
+          "assurance": "static_instruction_trace_and_synthetic_mmio_emulation",
+          "evidence": [
+            "audit/data/pio_interrupt_binaryninja.json",
+            "audit/data/pio_interrupt_emulation.json",
+            "docs/PIO_INTERRUPT_REVIEW.md"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [
           "0x4330",
@@ -17195,7 +17239,7 @@
     },
     "labels": {
       "path": "audit/data/semantic_labels.json",
-      "sha256": "f6ccb1f891fedbcd5f03a232c0b34987a34a5ca7cd073f1ccc321eb6aabef326"
+      "sha256": "71d57cd91c8a8ec16460c5a1f8b8c4dd823a2f487f1719d099664a12d7480b12"
     }
   },
   "input_hash_policy": "SHA-256 of JSON text with CRLF normalized to LF"
