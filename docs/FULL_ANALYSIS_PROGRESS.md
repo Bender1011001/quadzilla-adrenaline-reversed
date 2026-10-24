@@ -27,8 +27,8 @@ address without hiding pending review:
 
 | Classification | Bytes |
 |---|---:|
-| IDA code candidates awaiting review | 12,347 |
-| Explicitly reviewed Thumb instruction ranges | 4,938 |
+| IDA code candidates awaiting review | 11,889 |
+| Explicitly reviewed Thumb instruction ranges | 5,396 |
 | Explicitly reviewed ARM instruction ranges | 4,168 |
 | IDA data candidates awaiting review | 2,708 |
 | Soft float status pointer literal | 4 |
@@ -41,8 +41,8 @@ address without hiding pending review:
 | Erased trailing `FF` | 2,888 |
 
 Coverage of an address is not proof that its meaning or ISA has been reviewed.
-The explicit instruction-range manifest now accepts 9,106 bytes through the
-[AID dispatch/selector update review](AID_DISPATCH_SELECTOR_UPDATES.md). It excludes adjacent literal
+The explicit instruction-range manifest now accepts 9,564 bytes through the
+[compound AID update review](COMPOUND_AID_UPDATE_REVIEW.md). It excludes adjacent literal
 pools and alignment. Earlier semantic labels are not automatically promoted to
 byte-level classification; their exact ranges still need to be adjudicated.
 The ledger explicitly preserves 2,144 item/layout conflicts. These are tool item
@@ -130,6 +130,17 @@ original selector helper, reproduce count bounds, sequential update ordering
 and retained working selectors. The receive boundary is scripted, not a
 transport execution claim. The other 55 non-default handler accounts remain
 pending this review; role counts stay at 109/36.
+
+## Compound updates and cross-AID staging
+
+The [compound-handler review](COMPOUND_AID_UPDATE_REVIEW.md) adds eleven
+handler accounts and 458 instruction bytes. Thirteen of the 57 non-default
+handlers now have bounded update accounts; 44 remain pending. The original
+walker plus two scripted receive results reproduce partial AID 146 staging
+later reaching working state through AID 154 fall-through. A separate repeated
+16-bit-compare/eight-bit-store case sets the update flag without changing
+the final byte. Full transport reachability, intended ranges and downstream
+impact remain unresolved. Entry-role counts stay at 109/36.
 
 ## Outstanding requirements
 

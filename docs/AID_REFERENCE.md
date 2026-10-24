@@ -15,6 +15,8 @@ For AID 9 specifically, the [control selector review](CONTROL_SELECTOR_REVIEW.md
 
 The [AID 9/15 update account](AID_DISPATCH_SELECTOR_UPDATES.md) now establishes their local staging-to-working rules and ordered-loop behavior. Its machine-readable dispatch map includes all 256 destination selections and 57 non-default handlers, with unreviewed handler semantics explicitly marked. A default validation branch does not imply no staging or response support.
 
+The [compound handler review](COMPOUND_AID_UPDATE_REVIEW.md) adds eleven local update accounts, including unprofiled AIDs 10, 64, 80, 82 and 151. It records the AID 154-to-146 staging dependency and distinguishes variable storage widths from profile labels. Current bounded handler coverage is 13 of 57, with 44 pending; this does not claim complete read/write semantics for all parameters.
+
 ## AID Data Size Rules (from firmware + libx2com-jni.so)
 
 | AID Range | Byte Width | Firmware Segment | X2com Buffer |

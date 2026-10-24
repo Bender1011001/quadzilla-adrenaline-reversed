@@ -371,6 +371,32 @@
       "decoder_artifact": "audit/data/selector_update_binaryninja.json"
     },
     {
+      "start": "0x6274",
+      "end": "0x63ac",
+      "entry": "0x601c",
+      "isa": "thumb",
+      "account": "Eleven compound parameter handlers including AID154-to146 fall-through; excludes intervening literal pool; scripted receive contract and original walker sequence documented",
+      "evidence": [
+        "audit/data/compound_update_binaryninja.json",
+        "audit/data/compound_update_emulation.json",
+        "docs/COMPOUND_AID_UPDATE_REVIEW.md"
+      ],
+      "decoder_artifact": "audit/data/compound_update_binaryninja.json"
+    },
+    {
+      "start": "0x63f0",
+      "end": "0x6482",
+      "entry": "0x601c",
+      "isa": "thumb",
+      "account": "Eleven compound parameter handlers including AID154-to146 fall-through; excludes intervening literal pool; scripted receive contract and original walker sequence documented",
+      "evidence": [
+        "audit/data/compound_update_binaryninja.json",
+        "audit/data/compound_update_emulation.json",
+        "docs/COMPOUND_AID_UPDATE_REVIEW.md"
+      ],
+      "decoder_artifact": "audit/data/compound_update_binaryninja.json"
+    },
+    {
       "start": "0x6482",
       "end": "0x64b8",
       "entry": "0x601c",

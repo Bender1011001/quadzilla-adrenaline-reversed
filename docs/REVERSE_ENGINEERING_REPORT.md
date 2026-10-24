@@ -10,6 +10,8 @@ The [control selector review](CONTROL_SELECTOR_REVIEW.md) adds one role and trac
 
 The [validation dispatch and update review](AID_DISPATCH_SELECTOR_UPDATES.md) distinguishes 57 selected non-default handlers from a complete semantic reconstruction. It checks all 256 destination selections and 5,391 controlled AID 9/15 ingest cases, documenting order-dependent outputs and stored/effective selector differences. The other handler accounts and full transport path remain open.
 
+The [compound-handler account](COMPOUND_AID_UPDATE_REVIEW.md) traces eleven update paths, including five unprofiled AIDs. The original payload walker and scripted receive-result sequence establish partial staging later consumed by a different AID; repeated narrowing is recorded separately. Complete frame acceptance, intended parameter ranges and physical consequences remain unresolved.
+
 ## 1. Scope and approach
 
 Four independent surfaces were attacked, each giving a cross-check on the others:

@@ -35,6 +35,8 @@ The [control selector review](docs/CONTROL_SELECTOR_REVIEW.md) raises baseline c
 
 The [AID dispatch and selector-update review](docs/AID_DISPATCH_SELECTOR_UPDATES.md) maps all 256 validation destinations and checks AID 9/15 updates. It establishes count bounds of 5–14, derived mapping values and order-dependent results under a scripted receive contract. Reviewed instructions total 9,106 bytes, plus 436 explicitly classified switch-table bytes. The other 55 non-default handler accounts remain pending this review.
 
+The [compound AID review](docs/COMPOUND_AID_UPDATE_REVIEW.md) adds eleven handler accounts, including five AIDs absent from the profiles. Original-byte evidence reproduces AID 154 consuming AID 146 staging after an earlier partial write, and a repeated 16-bit comparison/eight-bit store. Thirteen of 57 non-default handlers are reviewed, 44 remain pending, and instruction coverage is 9,564 bytes. Receive results are scripted; live transport and downstream effects remain unverified.
+
 ## Try it
 
 Python 3.10+, standard library only (`pyserial` for the USB tool).
