@@ -116,8 +116,10 @@ This establishes one connection from the CAN parser to selection, but does
 not establish freshness checks, complete global writer sets or IRQ ordering.
 M is written by the preceding `0x499C` path under caller conditions that still
 require a full account. Its application meaning and the app's interpretation
-of E's special/high-bit values remain unresolved. Trace `0x601C` parameter
-updates and `0x50F0` consumers before assigning physical output or severity.
+of E's special/high-bit values remain unresolved. The subsequent [AID 9/15 update review](AID_DISPATCH_SELECTOR_UPDATES.md)
+establishes their count bounds, mapping derivation and sequential behavior.
+Other `0x601C` handlers and the full `0x50F0` consumer account remain required
+before assigning physical output or severity.
 Passive hardware observations can test reported AID 9 values during ordinary
 operation; no traffic injection or engine setting changes were performed.
 

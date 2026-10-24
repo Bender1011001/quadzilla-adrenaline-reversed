@@ -6619,11 +6619,15 @@
       "semantics": [
         {
           "entry": "0x601c",
-          "label": "AID ingest and validation dispatcher, including AID 85 clamp/echo",
+          "label": "Received-AID validation dispatcher; loop and selector/count paths reviewed, other handlers pending",
           "assurance": "static_instruction_trace",
           "evidence": [
             "quadzilla_mcu_map.json:functions.sub_601C",
-            "quadzilla_vp44_chain.json:roles.requested_stretch_setting"
+            "quadzilla_vp44_chain.json:roles.requested_stretch_setting",
+            "audit/data/aid_validation_dispatch.json",
+            "audit/data/selector_update_emulation.json",
+            "audit/data/selector_update_binaryninja.json",
+            "docs/AID_DISPATCH_SELECTOR_UPDATES.md"
           ]
         }
       ],
@@ -17462,7 +17466,7 @@
     },
     "labels": {
       "path": "audit/data/semantic_labels.json",
-      "sha256": "88daee3da2d5d23088f4754d0c400a5b58e3909a3f1c4c1c0748ab3a77e297e1"
+      "sha256": "f9478c95a93f0a3c744fe041bf49b8b1b9696702624f60302937acdc8d97b246"
     }
   },
   "input_hash_policy": "SHA-256 of JSON text with CRLF normalized to LF"

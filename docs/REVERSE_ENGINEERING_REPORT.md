@@ -8,6 +8,8 @@ The [complete capture-entry review](CAPTURE_PARSER_REVIEW.md) adds 692 instructi
 
 The [control selector review](CONTROL_SELECTOR_REVIEW.md) adds one role and traces a captured source through readiness into separate control and AID 9 response bytes. It records 70,672 original-byte calls and explicitly adjudicates two dead-path starts; synthetic boundary inputs are not promoted to reachable parameter defects.
 
+The [validation dispatch and update review](AID_DISPATCH_SELECTOR_UPDATES.md) distinguishes 57 selected non-default handlers from a complete semantic reconstruction. It checks all 256 destination selections and 5,391 controlled AID 9/15 ingest cases, documenting order-dependent outputs and stored/effective selector differences. The other handler accounts and full transport path remain open.
+
 ## 1. Scope and approach
 
 Four independent surfaces were attacked, each giving a cross-check on the others:

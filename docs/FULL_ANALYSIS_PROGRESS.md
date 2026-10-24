@@ -27,21 +27,22 @@ address without hiding pending review:
 
 | Classification | Bytes |
 |---|---:|
-| IDA code candidates awaiting review | 12,553 |
-| Explicitly reviewed Thumb instruction ranges | 4,732 |
+| IDA code candidates awaiting review | 12,347 |
+| Explicitly reviewed Thumb instruction ranges | 4,938 |
 | Explicitly reviewed ARM instruction ranges | 4,168 |
-| IDA data candidates awaiting review | 3,144 |
+| IDA data candidates awaiting review | 2,708 |
 | Soft float status pointer literal | 4 |
 | Startup descriptors | 36 |
 | Initialized RAM data source | 2,208 |
 | Indexed SPI request transmit table | 63 |
 | Two AID pointer tables | 2,040 |
+| AID validation switch offsets | 436 |
 | RAM executable source template | 164 |
 | Erased trailing `FF` | 2,888 |
 
 Coverage of an address is not proof that its meaning or ISA has been reviewed.
-The explicit instruction-range manifest now accepts 8,900 bytes through the
-[control selector review](CONTROL_SELECTOR_REVIEW.md). It excludes adjacent literal
+The explicit instruction-range manifest now accepts 9,106 bytes through the
+[AID dispatch/selector update review](AID_DISPATCH_SELECTOR_UPDATES.md). It excludes adjacent literal
 pools and alignment. Earlier semantic labels are not automatically promoted to
 byte-level classification; their exact ranges still need to be adjudicated.
 The ledger explicitly preserves 2,144 item/layout conflicts. These are tool item
@@ -118,6 +119,17 @@ It adds one role and 112 instruction bytes, including a supported disposition
 for two unreachable instruction starts. 70,672 original-byte calls agree with
 the bounded model. Parameter validation, later writers, application decoding
 and the full downstream control calculation remain incomplete.
+
+## Validation dispatch and selector updates
+
+The [dispatch audit](AID_DISPATCH_SELECTOR_UPDATES.md) establishes all 256
+AID destinations using both signed source offsets and original selector
+instructions. It classifies 436 table bytes and 206 instruction bytes for
+the gate/loop and AID 9/15 handlers. 5,391 ingest cases, each followed by the
+original selector helper, reproduce count bounds, sequential update ordering
+and retained working selectors. The receive boundary is scripted, not a
+transport execution claim. The other 55 non-default handler accounts remain
+pending this review; role counts stay at 109/36.
 
 ## Outstanding requirements
 

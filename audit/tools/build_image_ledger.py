@@ -15,6 +15,7 @@ ROOT = Path(__file__).resolve().parents[2]
 SHA = "1ae519ba6194e8f7bdaaa94333a83a9e6fda3b0563f87f7d48383b37288c1780"
 BASE, END = 0x4000, 0xBD00
 LAYOUT = (
+    (0x608C, 0x6240, "aid_validation_dispatch_table"),
     (0x896C, 0x8970, "soft_float_status_pointer"),
     (0x96C4, 0x96E8, "startup_region_descriptors"),
     (0x96E8, 0x9F88, "initialized_ram_data_source"),

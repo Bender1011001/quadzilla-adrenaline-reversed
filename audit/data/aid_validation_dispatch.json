@@ -1,0 +1,3334 @@
+{
+  "format": "quadzilla-aid-validation-dispatch-v1",
+  "raw_sha256": "1ae519ba6194e8f7bdaaa94333a83a9e6fda3b0563f87f7d48383b37288c1780",
+  "table_range": [
+    "0x608c",
+    "0x6240"
+  ],
+  "table_bytes": 436,
+  "slots": 218,
+  "offset_rule": "signed little-endian halfword; target = 0x608e + offset",
+  "out_of_range_rule": "u32(AID-9) > 217 selects default 0x604e",
+  "executed_selector_cases": 256,
+  "nondefault_handlers": 57,
+  "reference_mismatches": 0,
+  "rows": [
+    {
+      "aid": 0,
+      "table_address": null,
+      "signed_offset": null,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [
+        "Fuel Pressure"
+      ],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x200bba",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 1,
+      "table_address": null,
+      "signed_offset": null,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [
+        "Boost Pressure"
+      ],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x200bbb",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 2,
+      "table_address": null,
+      "signed_offset": null,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 3,
+      "table_address": null,
+      "signed_offset": null,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [
+        "Fuel Temp"
+      ],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x200bbe",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 4,
+      "table_address": null,
+      "signed_offset": null,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [
+        "Intake Air Temperature"
+      ],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x200bbf",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 5,
+      "table_address": null,
+      "signed_offset": null,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [
+        "Throttle Position"
+      ],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x200bc0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 6,
+      "table_address": null,
+      "signed_offset": null,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [
+        "Oil Pressure"
+      ],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x200bc1",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 7,
+      "table_address": null,
+      "signed_offset": null,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [
+        "Engine Load"
+      ],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x200bc2",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 8,
+      "table_address": null,
+      "signed_offset": null,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [
+        "Vehicle Speed"
+      ],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x200bc3",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 9,
+      "table_address": "0x608c",
+      "signed_offset": 434,
+      "target": "0x6240",
+      "default_path": false,
+      "profile_names": [
+        "Power Level"
+      ],
+      "staging_pointer": "0x200b00",
+      "response_pointer": "0x200bc4",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "bounded update handler reviewed"
+    },
+    {
+      "aid": 10,
+      "table_address": "0x608e",
+      "signed_offset": 486,
+      "target": "0x6274",
+      "default_path": false,
+      "profile_names": [],
+      "staging_pointer": "0x200b01",
+      "response_pointer": "0x200bc5",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "target established; handler semantics pending"
+    },
+    {
+      "aid": 11,
+      "table_address": "0x6090",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 12,
+      "table_address": "0x6092",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [
+        "ECM Voltage"
+      ],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x200bca",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 13,
+      "table_address": "0x6094",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [
+        "Backdown Percentage"
+      ],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x200bcd",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 14,
+      "table_address": "0x6096",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 15,
+      "table_address": "0x6098",
+      "signed_offset": 1012,
+      "target": "0x6482",
+      "default_path": false,
+      "profile_names": [
+        "Number of Power Levels"
+      ],
+      "staging_pointer": "0x200b1d",
+      "response_pointer": "0x200bea",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "bounded update handler reviewed"
+    },
+    {
+      "aid": 16,
+      "table_address": "0x609a",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [
+        "Timing Limit"
+      ],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x200bd1",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 17,
+      "table_address": "0x609c",
+      "signed_offset": 1066,
+      "target": "0x64b8",
+      "default_path": false,
+      "profile_names": [
+        "Load Timing",
+        "Max Load Timing Offset",
+        "Timing Scaling"
+      ],
+      "staging_pointer": "0x200b20",
+      "response_pointer": "0x200bed",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "target established; handler semantics pending"
+    },
+    {
+      "aid": 18,
+      "table_address": "0x609e",
+      "signed_offset": 1440,
+      "target": "0x662e",
+      "default_path": false,
+      "profile_names": [
+        "TPS Pump Maximum"
+      ],
+      "staging_pointer": "0x200b21",
+      "response_pointer": "0x200bee",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "target established; handler semantics pending"
+    },
+    {
+      "aid": 19,
+      "table_address": "0x60a0",
+      "signed_offset": 1456,
+      "target": "0x663e",
+      "default_path": false,
+      "profile_names": [
+        "TPS Pump Minimum"
+      ],
+      "staging_pointer": "0x200b22",
+      "response_pointer": "0x200bef",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "target established; handler semantics pending"
+    },
+    {
+      "aid": 20,
+      "table_address": "0x60a2",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [
+        "TPS CAN Maximum"
+      ],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 21,
+      "table_address": "0x60a4",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [
+        "TPS CAN Minimum"
+      ],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 22,
+      "table_address": "0x60a6",
+      "signed_offset": 1472,
+      "target": "0x664e",
+      "default_path": false,
+      "profile_names": [
+        "Boost Scaling"
+      ],
+      "staging_pointer": "0x200b23",
+      "response_pointer": "0x200bf0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "target established; handler semantics pending"
+    },
+    {
+      "aid": 23,
+      "table_address": "0x60a8",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 24,
+      "table_address": "0x60aa",
+      "signed_offset": 1550,
+      "target": "0x669c",
+      "default_path": false,
+      "profile_names": [
+        "Reset Factory Defaults"
+      ],
+      "staging_pointer": "0x200b34",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "target established; handler semantics pending"
+    },
+    {
+      "aid": 25,
+      "table_address": "0x60ac",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 26,
+      "table_address": "0x60ae",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 27,
+      "table_address": "0x60b0",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 28,
+      "table_address": "0x60b2",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 29,
+      "table_address": "0x60b4",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [
+        "Barometer"
+      ],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 30,
+      "table_address": "0x60b6",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [
+        "Commanded EGR"
+      ],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 31,
+      "table_address": "0x60b8",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [
+        "EGR Error"
+      ],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 32,
+      "table_address": "0x60ba",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [
+        "Current Gear"
+      ],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x200bd0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 33,
+      "table_address": "0x60bc",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [
+        "Ambient Air Temperature"
+      ],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 34,
+      "table_address": "0x60be",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [
+        "Fuel Level"
+      ],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 35,
+      "table_address": "0x60c0",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 36,
+      "table_address": "0x60c2",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 37,
+      "table_address": "0x60c4",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 38,
+      "table_address": "0x60c6",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [
+        "Warmups Since DTC Cleared"
+      ],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 39,
+      "table_address": "0x60c8",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [
+        "Torque Converter Lock"
+      ],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x200bcf",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 40,
+      "table_address": "0x60ca",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [
+        "Transmission Slip"
+      ],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x200bce",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 41,
+      "table_address": "0x60cc",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [
+        "Driver Demand Torque"
+      ],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 42,
+      "table_address": "0x60ce",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [
+        "Nominal Friction Torque"
+      ],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 43,
+      "table_address": "0x60d0",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 44,
+      "table_address": "0x60d2",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 45,
+      "table_address": "0x60d4",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 46,
+      "table_address": "0x60d6",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 47,
+      "table_address": "0x60d8",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [
+        "Rail Pressure Scaling"
+      ],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 48,
+      "table_address": "0x60da",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [
+        "TPS Rail Pressure Max"
+      ],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 49,
+      "table_address": "0x60dc",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [
+        "TPS Rail Pressure Min"
+      ],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 50,
+      "table_address": "0x60de",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [
+        "TPS Fuel Stretch Max"
+      ],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 51,
+      "table_address": "0x60e0",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [
+        "TPS Fuel Stretch Min"
+      ],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 52,
+      "table_address": "0x60e2",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [
+        "Percent of Max Injector Stretch"
+      ],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 53,
+      "table_address": "0x60e4",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [
+        "Soot Regeneration"
+      ],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 54,
+      "table_address": "0x60e6",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [
+        "SOX Regeneration"
+      ],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 55,
+      "table_address": "0x60e8",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 56,
+      "table_address": "0x60ea",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 57,
+      "table_address": "0x60ec",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 58,
+      "table_address": "0x60ee",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 59,
+      "table_address": "0x60f0",
+      "signed_offset": 1090,
+      "target": "0x64d0",
+      "default_path": false,
+      "profile_names": [
+        "Low PSI Timing Reduct"
+      ],
+      "staging_pointer": "0x200b24",
+      "response_pointer": "0x200bf1",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "target established; handler semantics pending"
+    },
+    {
+      "aid": 60,
+      "table_address": "0x60f2",
+      "signed_offset": 1108,
+      "target": "0x64e2",
+      "default_path": false,
+      "profile_names": [
+        "Timing Reduct Scaling"
+      ],
+      "staging_pointer": "0x200b25",
+      "response_pointer": "0x200bf2",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "target established; handler semantics pending"
+    },
+    {
+      "aid": 61,
+      "table_address": "0x60f4",
+      "signed_offset": 1126,
+      "target": "0x64f4",
+      "default_path": false,
+      "profile_names": [
+        "Light Throttle Timing Adv",
+        "LightThrottle Timing Adv"
+      ],
+      "staging_pointer": "0x200b26",
+      "response_pointer": "0x200bf3",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "target established; handler semantics pending"
+    },
+    {
+      "aid": 62,
+      "table_address": "0x60f6",
+      "signed_offset": 1158,
+      "target": "0x6514",
+      "default_path": false,
+      "profile_names": [
+        "Light Throttle Limit",
+        "Light Throttle Load Limit (Percent)"
+      ],
+      "staging_pointer": "0x200b27",
+      "response_pointer": "0x200bf4",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "target established; handler semantics pending"
+    },
+    {
+      "aid": 63,
+      "table_address": "0x60f8",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 64,
+      "table_address": "0x60fa",
+      "signed_offset": 614,
+      "target": "0x62f4",
+      "default_path": false,
+      "profile_names": [],
+      "staging_pointer": "0x200b1b",
+      "response_pointer": "0x200b1c",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "target established; handler semantics pending"
+    },
+    {
+      "aid": 65,
+      "table_address": "0x60fc",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 66,
+      "table_address": "0x60fe",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 67,
+      "table_address": "0x6100",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 68,
+      "table_address": "0x6102",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 69,
+      "table_address": "0x6104",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 70,
+      "table_address": "0x6106",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 71,
+      "table_address": "0x6108",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 72,
+      "table_address": "0x610a",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 73,
+      "table_address": "0x610c",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 74,
+      "table_address": "0x610e",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 75,
+      "table_address": "0x6110",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [
+        "EGT"
+      ],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x200bc6",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 76,
+      "table_address": "0x6112",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [
+        "Transmission Temperature"
+      ],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x200bc8",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 77,
+      "table_address": "0x6114",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [
+        "ECM Voltage"
+      ],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 78,
+      "table_address": "0x6116",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [
+        "RPM"
+      ],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x200bcb",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 79,
+      "table_address": "0x6118",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x200bdc",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 80,
+      "table_address": "0x611a",
+      "signed_offset": 640,
+      "target": "0x630e",
+      "default_path": false,
+      "profile_names": [],
+      "staging_pointer": "0x200b08",
+      "response_pointer": "0x200bde",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "target established; handler semantics pending"
+    },
+    {
+      "aid": 81,
+      "table_address": "0x611c",
+      "signed_offset": 678,
+      "target": "0x6334",
+      "default_path": false,
+      "profile_names": [
+        "Boost Defuel Setting"
+      ],
+      "staging_pointer": "0x200b0a",
+      "response_pointer": "0x200be0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "target established; handler semantics pending"
+    },
+    {
+      "aid": 82,
+      "table_address": "0x611e",
+      "signed_offset": 716,
+      "target": "0x635a",
+      "default_path": false,
+      "profile_names": [],
+      "staging_pointer": "0x200b0c",
+      "response_pointer": "0x200be2",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "target established; handler semantics pending"
+    },
+    {
+      "aid": 83,
+      "table_address": "0x6120",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [
+        "Rail Pressure"
+      ],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 84,
+      "table_address": "0x6122",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [
+        "Coolant"
+      ],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x200bbc",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 85,
+      "table_address": "0x6124",
+      "signed_offset": 1508,
+      "target": "0x6672",
+      "default_path": false,
+      "profile_names": [
+        "Maximum Fuel Stretch"
+      ],
+      "staging_pointer": "0x200b30",
+      "response_pointer": "0x200bfd",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "target established; handler semantics pending"
+    },
+    {
+      "aid": 86,
+      "table_address": "0x6126",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [
+        "MAF"
+      ],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 87,
+      "table_address": "0x6128",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [
+        "Runtime Since Start"
+      ],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 88,
+      "table_address": "0x612a",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [
+        "Distance With MIL On"
+      ],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 89,
+      "table_address": "0x612c",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [
+        "Distance Since DTC Cleared"
+      ],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 90,
+      "table_address": "0x612e",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [
+        "Output Shaft Speed"
+      ],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 91,
+      "table_address": "0x6130",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [
+        "Gear Change Defuel Setting"
+      ],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 92,
+      "table_address": "0x6132",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [
+        "Transmission Slip Defuel Setting"
+      ],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 93,
+      "table_address": "0x6134",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [
+        "Distance With MIL On",
+        "Time With MIL On"
+      ],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 94,
+      "table_address": "0x6136",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [
+        "Time Since DTC Cleared"
+      ],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 95,
+      "table_address": "0x6138",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 96,
+      "table_address": "0x613a",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [
+        "Regeneration Filter Load"
+      ],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 97,
+      "table_address": "0x613c",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [
+        "Total Regenerations Complete"
+      ],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 98,
+      "table_address": "0x613e",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [
+        "Total Regenerations Desired"
+      ],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 99,
+      "table_address": "0x6140",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 100,
+      "table_address": "0x6142",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [
+        "O2 Sensor 1"
+      ],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 101,
+      "table_address": "0x6144",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [
+        "O2 Sensor 2"
+      ],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 102,
+      "table_address": "0x6146",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [
+        "Cat Temperature Bank 1 Sensor 1"
+      ],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 103,
+      "table_address": "0x6148",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [
+        "Cat Temperature Bank 1 Sensor 2"
+      ],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 104,
+      "table_address": "0x614a",
+      "signed_offset": 1632,
+      "target": "0x66ee",
+      "default_path": false,
+      "profile_names": [
+        "RPM Limit"
+      ],
+      "staging_pointer": "0x200b32",
+      "response_pointer": "0x200bff",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "target established; handler semantics pending"
+    },
+    {
+      "aid": 105,
+      "table_address": "0x614c",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [
+        "Gallon Trip"
+      ],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x200bd4",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 106,
+      "table_address": "0x614e",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 107,
+      "table_address": "0x6150",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 108,
+      "table_address": "0x6152",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 109,
+      "table_address": "0x6154",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 110,
+      "table_address": "0x6156",
+      "signed_offset": 1380,
+      "target": "0x65f2",
+      "default_path": false,
+      "profile_names": [
+        "Minimum Pump Tap Fueling Percentage"
+      ],
+      "staging_pointer": "0x200b35",
+      "response_pointer": "0x200c01",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "target established; handler semantics pending"
+    },
+    {
+      "aid": 111,
+      "table_address": "0x6158",
+      "signed_offset": 1398,
+      "target": "0x6604",
+      "default_path": false,
+      "profile_names": [
+        "Maximum Valet Mode Power"
+      ],
+      "staging_pointer": "0x200b37",
+      "response_pointer": "0x200c03",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "target established; handler semantics pending"
+    },
+    {
+      "aid": 112,
+      "table_address": "0x615a",
+      "signed_offset": 1422,
+      "target": "0x661c",
+      "default_path": false,
+      "profile_names": [
+        "Pump Low Boost Scale PSI"
+      ],
+      "staging_pointer": "0x200b39",
+      "response_pointer": "0x200c05",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "target established; handler semantics pending"
+    },
+    {
+      "aid": 113,
+      "table_address": "0x615c",
+      "signed_offset": 1886,
+      "target": "0x67ec",
+      "default_path": false,
+      "profile_names": [
+        "0 PSI"
+      ],
+      "staging_pointer": "0x200b3b",
+      "response_pointer": "0x200c07",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "target established; handler semantics pending"
+    },
+    {
+      "aid": 114,
+      "table_address": "0x615e",
+      "signed_offset": 1910,
+      "target": "0x6804",
+      "default_path": false,
+      "profile_names": [
+        "1 PSI"
+      ],
+      "staging_pointer": "0x200b3d",
+      "response_pointer": "0x200c09",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "target established; handler semantics pending"
+    },
+    {
+      "aid": 115,
+      "table_address": "0x6160",
+      "signed_offset": 1934,
+      "target": "0x681c",
+      "default_path": false,
+      "profile_names": [
+        "2 PSI"
+      ],
+      "staging_pointer": "0x200b3f",
+      "response_pointer": "0x200c0b",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "target established; handler semantics pending"
+    },
+    {
+      "aid": 116,
+      "table_address": "0x6162",
+      "signed_offset": 1958,
+      "target": "0x6834",
+      "default_path": false,
+      "profile_names": [
+        "3 PSI"
+      ],
+      "staging_pointer": "0x200b41",
+      "response_pointer": "0x200c0d",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "target established; handler semantics pending"
+    },
+    {
+      "aid": 117,
+      "table_address": "0x6164",
+      "signed_offset": 1986,
+      "target": "0x6850",
+      "default_path": false,
+      "profile_names": [
+        "4 PSI"
+      ],
+      "staging_pointer": "0x200b43",
+      "response_pointer": "0x200c0f",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "target established; handler semantics pending"
+    },
+    {
+      "aid": 118,
+      "table_address": "0x6166",
+      "signed_offset": 2010,
+      "target": "0x6868",
+      "default_path": false,
+      "profile_names": [
+        "5 PSI"
+      ],
+      "staging_pointer": "0x200b45",
+      "response_pointer": "0x200c11",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "target established; handler semantics pending"
+    },
+    {
+      "aid": 119,
+      "table_address": "0x6168",
+      "signed_offset": 2034,
+      "target": "0x6880",
+      "default_path": false,
+      "profile_names": [
+        "6 PSI"
+      ],
+      "staging_pointer": "0x200b47",
+      "response_pointer": "0x200c13",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "target established; handler semantics pending"
+    },
+    {
+      "aid": 120,
+      "table_address": "0x616a",
+      "signed_offset": 2058,
+      "target": "0x6898",
+      "default_path": false,
+      "profile_names": [
+        "7 PSI"
+      ],
+      "staging_pointer": "0x200b49",
+      "response_pointer": "0x200c15",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "target established; handler semantics pending"
+    },
+    {
+      "aid": 121,
+      "table_address": "0x616c",
+      "signed_offset": 2082,
+      "target": "0x68b0",
+      "default_path": false,
+      "profile_names": [
+        "8 PSI"
+      ],
+      "staging_pointer": "0x200b4b",
+      "response_pointer": "0x200c17",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "target established; handler semantics pending"
+    },
+    {
+      "aid": 122,
+      "table_address": "0x616e",
+      "signed_offset": 2108,
+      "target": "0x68ca",
+      "default_path": false,
+      "profile_names": [
+        "9 PSI"
+      ],
+      "staging_pointer": "0x200b4d",
+      "response_pointer": "0x200c19",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "target established; handler semantics pending"
+    },
+    {
+      "aid": 123,
+      "table_address": "0x6170",
+      "signed_offset": 2134,
+      "target": "0x68e4",
+      "default_path": false,
+      "profile_names": [
+        "10 PSI"
+      ],
+      "staging_pointer": "0x200b4f",
+      "response_pointer": "0x200c1b",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "target established; handler semantics pending"
+    },
+    {
+      "aid": 124,
+      "table_address": "0x6172",
+      "signed_offset": 2160,
+      "target": "0x68fe",
+      "default_path": false,
+      "profile_names": [
+        "11 PSI"
+      ],
+      "staging_pointer": "0x200b51",
+      "response_pointer": "0x200c1d",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "target established; handler semantics pending"
+    },
+    {
+      "aid": 125,
+      "table_address": "0x6174",
+      "signed_offset": 2186,
+      "target": "0x6918",
+      "default_path": false,
+      "profile_names": [
+        "12 PSI"
+      ],
+      "staging_pointer": "0x200b53",
+      "response_pointer": "0x200c1f",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "target established; handler semantics pending"
+    },
+    {
+      "aid": 126,
+      "table_address": "0x6176",
+      "signed_offset": 2212,
+      "target": "0x6932",
+      "default_path": false,
+      "profile_names": [
+        "13 PSI"
+      ],
+      "staging_pointer": "0x200b55",
+      "response_pointer": "0x200c21",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "target established; handler semantics pending"
+    },
+    {
+      "aid": 127,
+      "table_address": "0x6178",
+      "signed_offset": 2238,
+      "target": "0x694c",
+      "default_path": false,
+      "profile_names": [
+        "14 PSI"
+      ],
+      "staging_pointer": "0x200b57",
+      "response_pointer": "0x200c23",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "target established; handler semantics pending"
+    },
+    {
+      "aid": 128,
+      "table_address": "0x617a",
+      "signed_offset": 2264,
+      "target": "0x6966",
+      "default_path": false,
+      "profile_names": [
+        "15 PSI"
+      ],
+      "staging_pointer": "0x200b59",
+      "response_pointer": "0x200c25",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "target established; handler semantics pending"
+    },
+    {
+      "aid": 129,
+      "table_address": "0x617c",
+      "signed_offset": 2290,
+      "target": "0x6980",
+      "default_path": false,
+      "profile_names": [
+        "16 PSI"
+      ],
+      "staging_pointer": "0x200b5b",
+      "response_pointer": "0x200c27",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "target established; handler semantics pending"
+    },
+    {
+      "aid": 130,
+      "table_address": "0x617e",
+      "signed_offset": 2316,
+      "target": "0x699a",
+      "default_path": false,
+      "profile_names": [
+        "18 PSI"
+      ],
+      "staging_pointer": "0x200b5d",
+      "response_pointer": "0x200c29",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "target established; handler semantics pending"
+    },
+    {
+      "aid": 131,
+      "table_address": "0x6180",
+      "signed_offset": 2342,
+      "target": "0x69b4",
+      "default_path": false,
+      "profile_names": [
+        "20 PSI"
+      ],
+      "staging_pointer": "0x200b5f",
+      "response_pointer": "0x200c2b",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "target established; handler semantics pending"
+    },
+    {
+      "aid": 132,
+      "table_address": "0x6182",
+      "signed_offset": 2368,
+      "target": "0x69ce",
+      "default_path": false,
+      "profile_names": [
+        "22 PSI"
+      ],
+      "staging_pointer": "0x200b61",
+      "response_pointer": "0x200c2d",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "target established; handler semantics pending"
+    },
+    {
+      "aid": 133,
+      "table_address": "0x6184",
+      "signed_offset": 2394,
+      "target": "0x69e8",
+      "default_path": false,
+      "profile_names": [
+        "24 PSI"
+      ],
+      "staging_pointer": "0x200b63",
+      "response_pointer": "0x200c2f",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "target established; handler semantics pending"
+    },
+    {
+      "aid": 134,
+      "table_address": "0x6186",
+      "signed_offset": 2420,
+      "target": "0x6a02",
+      "default_path": false,
+      "profile_names": [
+        "26 PSI"
+      ],
+      "staging_pointer": "0x200b65",
+      "response_pointer": "0x200c31",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "target established; handler semantics pending"
+    },
+    {
+      "aid": 135,
+      "table_address": "0x6188",
+      "signed_offset": 2446,
+      "target": "0x6a1c",
+      "default_path": false,
+      "profile_names": [
+        "28 PSI"
+      ],
+      "staging_pointer": "0x200b67",
+      "response_pointer": "0x200c33",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "target established; handler semantics pending"
+    },
+    {
+      "aid": 136,
+      "table_address": "0x618a",
+      "signed_offset": 2472,
+      "target": "0x6a36",
+      "default_path": false,
+      "profile_names": [
+        "30+ PSI"
+      ],
+      "staging_pointer": "0x200b69",
+      "response_pointer": "0x200c35",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "target established; handler semantics pending"
+    },
+    {
+      "aid": 137,
+      "table_address": "0x618c",
+      "signed_offset": 1180,
+      "target": "0x652a",
+      "default_path": false,
+      "profile_names": [
+        "1500RPM"
+      ],
+      "staging_pointer": "0x200b28",
+      "response_pointer": "0x200bf5",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "target established; handler semantics pending"
+    },
+    {
+      "aid": 138,
+      "table_address": "0x618e",
+      "signed_offset": 1226,
+      "target": "0x6558",
+      "default_path": false,
+      "profile_names": [
+        "2000RPM"
+      ],
+      "staging_pointer": "0x200b2a",
+      "response_pointer": "0x200bf7",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "target established; handler semantics pending"
+    },
+    {
+      "aid": 139,
+      "table_address": "0x6190",
+      "signed_offset": 1262,
+      "target": "0x657c",
+      "default_path": false,
+      "profile_names": [
+        "2500RPM"
+      ],
+      "staging_pointer": "0x200b2c",
+      "response_pointer": "0x200bf9",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "target established; handler semantics pending"
+    },
+    {
+      "aid": 140,
+      "table_address": "0x6192",
+      "signed_offset": 1308,
+      "target": "0x65aa",
+      "default_path": false,
+      "profile_names": [
+        "3000RPM"
+      ],
+      "staging_pointer": "0x200b2e",
+      "response_pointer": "0x200bfb",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "target established; handler semantics pending"
+    },
+    {
+      "aid": 141,
+      "table_address": "0x6194",
+      "signed_offset": 1344,
+      "target": "0x65ce",
+      "default_path": false,
+      "profile_names": [
+        "Max"
+      ],
+      "staging_pointer": "0x200b1e",
+      "response_pointer": "0x200beb",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "target established; handler semantics pending"
+    },
+    {
+      "aid": 142,
+      "table_address": "0x6196",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [
+        "3500RPM"
+      ],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 143,
+      "table_address": "0x6198",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [
+        "4000RPM"
+      ],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 144,
+      "table_address": "0x619a",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 145,
+      "table_address": "0x619c",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [
+        "AVG MPG reset"
+      ],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 146,
+      "table_address": "0x619e",
+      "signed_offset": 552,
+      "target": "0x62b6",
+      "default_path": false,
+      "profile_names": [
+        "MPG Offset"
+      ],
+      "staging_pointer": "0x200b17",
+      "response_pointer": "0x200b19",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "target established; handler semantics pending"
+    },
+    {
+      "aid": 147,
+      "table_address": "0x61a0",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [
+        "ECO"
+      ],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x200bd2",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 148,
+      "table_address": "0x61a2",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [
+        "CanBus Fuel"
+      ],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x200bb8",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 149,
+      "table_address": "0x61a4",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [
+        "Timing"
+      ],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x200bb6",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 150,
+      "table_address": "0x61a6",
+      "signed_offset": 754,
+      "target": "0x6380",
+      "default_path": false,
+      "profile_names": [
+        "EGT Defuel Setting"
+      ],
+      "staging_pointer": "0x200b0e",
+      "response_pointer": "0x200be4",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "target established; handler semantics pending"
+    },
+    {
+      "aid": 151,
+      "table_address": "0x61a8",
+      "signed_offset": 866,
+      "target": "0x63f0",
+      "default_path": false,
+      "profile_names": [],
+      "staging_pointer": "0x200b11",
+      "response_pointer": "0x200be7",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "target established; handler semantics pending"
+    },
+    {
+      "aid": 152,
+      "table_address": "0x61aa",
+      "signed_offset": 906,
+      "target": "0x6418",
+      "default_path": false,
+      "profile_names": [
+        "Turbo Timer Setting"
+      ],
+      "staging_pointer": "0x200b02",
+      "response_pointer": "0x200bd9",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "target established; handler semantics pending"
+    },
+    {
+      "aid": 153,
+      "table_address": "0x61ac",
+      "signed_offset": 972,
+      "target": "0x645a",
+      "default_path": false,
+      "profile_names": [
+        "High Idle Delay Setting"
+      ],
+      "staging_pointer": "0x200b14",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "target established; handler semantics pending"
+    },
+    {
+      "aid": 154,
+      "table_address": "0x61ae",
+      "signed_offset": 504,
+      "target": "0x6286",
+      "default_path": false,
+      "profile_names": [
+        "Warmup Mode Setting"
+      ],
+      "staging_pointer": "0x200b05",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "target established; handler semantics pending"
+    },
+    {
+      "aid": 155,
+      "table_address": "0x61b0",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [
+        "Rail Pressure Defuel Setting"
+      ],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 156,
+      "table_address": "0x61b2",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x200b6b",
+      "response_pointer": "0x200c37",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 157,
+      "table_address": "0x61b4",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x200b6e",
+      "response_pointer": "0x200c3a",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 158,
+      "table_address": "0x61b6",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x200b71",
+      "response_pointer": "0x200c3d",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 159,
+      "table_address": "0x61b8",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x200b74",
+      "response_pointer": "0x200c40",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 160,
+      "table_address": "0x61ba",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x200b77",
+      "response_pointer": "0x200c43",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 161,
+      "table_address": "0x61bc",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x200b7a",
+      "response_pointer": "0x200c46",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 162,
+      "table_address": "0x61be",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x200b7d",
+      "response_pointer": "0x200c49",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 163,
+      "table_address": "0x61c0",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x200b80",
+      "response_pointer": "0x200c4c",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 164,
+      "table_address": "0x61c2",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x200b83",
+      "response_pointer": "0x200c4f",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 165,
+      "table_address": "0x61c4",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x200b86",
+      "response_pointer": "0x200c52",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 166,
+      "table_address": "0x61c6",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x200b89",
+      "response_pointer": "0x200c55",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 167,
+      "table_address": "0x61c8",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x200b8c",
+      "response_pointer": "0x200c58",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 168,
+      "table_address": "0x61ca",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x200b8f",
+      "response_pointer": "0x200c5b",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 169,
+      "table_address": "0x61cc",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x200b92",
+      "response_pointer": "0x200c5e",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 170,
+      "table_address": "0x61ce",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x200b95",
+      "response_pointer": "0x200c61",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 171,
+      "table_address": "0x61d0",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x200b98",
+      "response_pointer": "0x200c64",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 172,
+      "table_address": "0x61d2",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x200b9b",
+      "response_pointer": "0x200c67",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 173,
+      "table_address": "0x61d4",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x200b9e",
+      "response_pointer": "0x200c6a",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 174,
+      "table_address": "0x61d6",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x200ba1",
+      "response_pointer": "0x200c6d",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 175,
+      "table_address": "0x61d8",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x200ba4",
+      "response_pointer": "0x200c70",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 176,
+      "table_address": "0x61da",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x200ba7",
+      "response_pointer": "0x200c73",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 177,
+      "table_address": "0x61dc",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x200baa",
+      "response_pointer": "0x200c76",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 178,
+      "table_address": "0x61de",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x200bad",
+      "response_pointer": "0x200c79",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 179,
+      "table_address": "0x61e0",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x200bb0",
+      "response_pointer": "0x200c7c",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 180,
+      "table_address": "0x61e2",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x200bb3",
+      "response_pointer": "0x200c7f",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 181,
+      "table_address": "0x61e4",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [
+        "Average MPG"
+      ],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x200bd6",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 182,
+      "table_address": "0x61e6",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 183,
+      "table_address": "0x61e8",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 184,
+      "table_address": "0x61ea",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 185,
+      "table_address": "0x61ec",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 186,
+      "table_address": "0x61ee",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 187,
+      "table_address": "0x61f0",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [
+        "Regeneration Last Time"
+      ],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 188,
+      "table_address": "0x61f2",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [
+        "Build Date"
+      ],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x200af4",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 189,
+      "table_address": "0x61f4",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 190,
+      "table_address": "0x61f6",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 191,
+      "table_address": "0x61f8",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 192,
+      "table_address": "0x61fa",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 193,
+      "table_address": "0x61fc",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 194,
+      "table_address": "0x61fe",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 195,
+      "table_address": "0x6200",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 196,
+      "table_address": "0x6202",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 197,
+      "table_address": "0x6204",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 198,
+      "table_address": "0x6206",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 199,
+      "table_address": "0x6208",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 200,
+      "table_address": "0x620a",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 201,
+      "table_address": "0x620c",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 202,
+      "table_address": "0x620e",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 203,
+      "table_address": "0x6210",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 204,
+      "table_address": "0x6212",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 205,
+      "table_address": "0x6214",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 206,
+      "table_address": "0x6216",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 207,
+      "table_address": "0x6218",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 208,
+      "table_address": "0x621a",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 209,
+      "table_address": "0x621c",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 210,
+      "table_address": "0x621e",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 211,
+      "table_address": "0x6220",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 212,
+      "table_address": "0x6222",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 213,
+      "table_address": "0x6224",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 214,
+      "table_address": "0x6226",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 215,
+      "table_address": "0x6228",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 216,
+      "table_address": "0x622a",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 217,
+      "table_address": "0x622c",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 218,
+      "table_address": "0x622e",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 219,
+      "table_address": "0x6230",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 220,
+      "table_address": "0x6232",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 221,
+      "table_address": "0x6234",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 222,
+      "table_address": "0x6236",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 223,
+      "table_address": "0x6238",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 224,
+      "table_address": "0x623a",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 225,
+      "table_address": "0x623c",
+      "signed_offset": -64,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 226,
+      "table_address": "0x623e",
+      "signed_offset": 1566,
+      "target": "0x66ac",
+      "default_path": false,
+      "profile_names": [
+        "Drive Train Info"
+      ],
+      "staging_pointer": "0x200aec",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "target established; handler semantics pending"
+    },
+    {
+      "aid": 227,
+      "table_address": null,
+      "signed_offset": null,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 228,
+      "table_address": null,
+      "signed_offset": null,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 229,
+      "table_address": null,
+      "signed_offset": null,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 230,
+      "table_address": null,
+      "signed_offset": null,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 231,
+      "table_address": null,
+      "signed_offset": null,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 232,
+      "table_address": null,
+      "signed_offset": null,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 233,
+      "table_address": null,
+      "signed_offset": null,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 234,
+      "table_address": null,
+      "signed_offset": null,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 235,
+      "table_address": null,
+      "signed_offset": null,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 236,
+      "table_address": null,
+      "signed_offset": null,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 237,
+      "table_address": null,
+      "signed_offset": null,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 238,
+      "table_address": null,
+      "signed_offset": null,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 239,
+      "table_address": null,
+      "signed_offset": null,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 240,
+      "table_address": null,
+      "signed_offset": null,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 241,
+      "table_address": null,
+      "signed_offset": null,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 242,
+      "table_address": null,
+      "signed_offset": null,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 243,
+      "table_address": null,
+      "signed_offset": null,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 244,
+      "table_address": null,
+      "signed_offset": null,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 245,
+      "table_address": null,
+      "signed_offset": null,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 246,
+      "table_address": null,
+      "signed_offset": null,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 247,
+      "table_address": null,
+      "signed_offset": null,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 248,
+      "table_address": null,
+      "signed_offset": null,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 249,
+      "table_address": null,
+      "signed_offset": null,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 250,
+      "table_address": null,
+      "signed_offset": null,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 251,
+      "table_address": null,
+      "signed_offset": null,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 252,
+      "table_address": null,
+      "signed_offset": null,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 253,
+      "table_address": null,
+      "signed_offset": null,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 254,
+      "table_address": null,
+      "signed_offset": null,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x0",
+      "response_pointer": "0x0",
+      "pointer_slot_in_bounds": true,
+      "review_disposition": "selection/default loop only"
+    },
+    {
+      "aid": 255,
+      "table_address": null,
+      "signed_offset": null,
+      "target": "0x604e",
+      "default_path": true,
+      "profile_names": [],
+      "staging_pointer": "0x200bba",
+      "response_pointer": "0x43c02097",
+      "pointer_slot_in_bounds": false,
+      "review_disposition": "selection/default loop only"
+    }
+  ],
+  "limits": [
+    "selector execution stops before any handler instruction",
+    "default in this dispatcher does not imply no staging or response support",
+    "profile declarations are descriptive; pointer presence is not complete parameter semantics",
+    "all 55 other nondefault handler accounts remain pending this review"
+  ]
+}

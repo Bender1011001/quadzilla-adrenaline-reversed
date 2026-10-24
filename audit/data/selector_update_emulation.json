@@ -1,0 +1,3314 @@
+{
+  "format": "quadzilla-selector-update-emulation-v1",
+  "raw_sha256": "1ae519ba6194e8f7bdaaa94333a83a9e6fda3b0563f87f7d48383b37288c1780",
+  "entry": "0x601c",
+  "cpu": "ARM926 functional surrogate",
+  "calls": 5391,
+  "reference_mismatches": 0,
+  "digest_inputs_and_outputs_sha256": "c396bc6cd4eae868054ae903412a1168058f7d1188efacdee16c5aa4011e5855",
+  "examples": [
+    {
+      "inputs": {
+        "aids": [
+          9
+        ],
+        "staged_selector": 0,
+        "staged_count": 11,
+        "selector": 2,
+        "count": 5,
+        "step": 25,
+        "offset": 0,
+        "blocked": false,
+        "receive_status": 1
+      },
+      "scripted_receive": [
+        {
+          "aid_list_pointer": "0x202fdc",
+          "count_pointer": "0x202fd8",
+          "aids": [
+            9
+          ],
+          "return_status": 1
+        }
+      ],
+      "after_ingest": {
+        "selector": 0,
+        "count": 5,
+        "step": 25,
+        "offset": 0,
+        "changed": 1,
+        "count_echo": 167,
+        "latch": [
+          120,
+          0,
+          1,
+          0
+        ]
+      },
+      "after_selector": {
+        "mapped": 0,
+        "response": 0,
+        "latch": [
+          120,
+          0,
+          1,
+          0
+        ]
+      },
+      "ingest_writes": [
+        {
+          "pc": "0x47f6",
+          "address": "0x200431",
+          "size": 1,
+          "value": 1
+        },
+        {
+          "pc": "0x6260",
+          "address": "0x2006cd",
+          "size": 1,
+          "value": 0
+        },
+        {
+          "pc": "0x6270",
+          "address": "0x200ac4",
+          "size": 1,
+          "value": 1
+        }
+      ]
+    },
+    {
+      "inputs": {
+        "aids": [
+          9
+        ],
+        "staged_selector": 0,
+        "staged_count": 11,
+        "selector": 2,
+        "count": 5,
+        "step": 25,
+        "offset": 0,
+        "blocked": true,
+        "receive_status": 1
+      },
+      "scripted_receive": [
+        {
+          "aid_list_pointer": "0x202fdc",
+          "count_pointer": "0x202fd8",
+          "aids": [
+            9
+          ],
+          "return_status": 1
+        }
+      ],
+      "after_ingest": {
+        "selector": 2,
+        "count": 5,
+        "step": 25,
+        "offset": 0,
+        "changed": 0,
+        "count_echo": 167,
+        "latch": [
+          120,
+          0,
+          0,
+          0
+        ]
+      },
+      "after_selector": {
+        "mapped": 0,
+        "response": 228,
+        "latch": [
+          120,
+          0,
+          0,
+          0
+        ]
+      },
+      "ingest_writes": []
+    },
+    {
+      "inputs": {
+        "aids": [
+          9
+        ],
+        "staged_selector": 0,
+        "staged_count": 11,
+        "selector": 2,
+        "count": 14,
+        "step": 7,
+        "offset": 9,
+        "blocked": false,
+        "receive_status": 1
+      },
+      "scripted_receive": [
+        {
+          "aid_list_pointer": "0x202fdc",
+          "count_pointer": "0x202fd8",
+          "aids": [
+            9
+          ],
+          "return_status": 1
+        }
+      ],
+      "after_ingest": {
+        "selector": 0,
+        "count": 14,
+        "step": 7,
+        "offset": 9,
+        "changed": 1,
+        "count_echo": 167,
+        "latch": [
+          120,
+          0,
+          1,
+          0
+        ]
+      },
+      "after_selector": {
+        "mapped": 0,
+        "response": 0,
+        "latch": [
+          120,
+          0,
+          1,
+          0
+        ]
+      },
+      "ingest_writes": [
+        {
+          "pc": "0x47f6",
+          "address": "0x200431",
+          "size": 1,
+          "value": 1
+        },
+        {
+          "pc": "0x6260",
+          "address": "0x2006cd",
+          "size": 1,
+          "value": 0
+        },
+        {
+          "pc": "0x6270",
+          "address": "0x200ac4",
+          "size": 1,
+          "value": 1
+        }
+      ]
+    },
+    {
+      "inputs": {
+        "aids": [
+          9
+        ],
+        "staged_selector": 0,
+        "staged_count": 11,
+        "selector": 2,
+        "count": 14,
+        "step": 7,
+        "offset": 9,
+        "blocked": true,
+        "receive_status": 1
+      },
+      "scripted_receive": [
+        {
+          "aid_list_pointer": "0x202fdc",
+          "count_pointer": "0x202fd8",
+          "aids": [
+            9
+          ],
+          "return_status": 1
+        }
+      ],
+      "after_ingest": {
+        "selector": 2,
+        "count": 14,
+        "step": 7,
+        "offset": 9,
+        "changed": 0,
+        "count_echo": 167,
+        "latch": [
+          120,
+          0,
+          0,
+          0
+        ]
+      },
+      "after_selector": {
+        "mapped": 0,
+        "response": 228,
+        "latch": [
+          120,
+          0,
+          0,
+          0
+        ]
+      },
+      "ingest_writes": []
+    },
+    {
+      "inputs": {
+        "aids": [
+          9
+        ],
+        "staged_selector": 2,
+        "staged_count": 11,
+        "selector": 2,
+        "count": 5,
+        "step": 25,
+        "offset": 0,
+        "blocked": false,
+        "receive_status": 1
+      },
+      "scripted_receive": [
+        {
+          "aid_list_pointer": "0x202fdc",
+          "count_pointer": "0x202fd8",
+          "aids": [
+            9
+          ],
+          "return_status": 1
+        }
+      ],
+      "after_ingest": {
+        "selector": 2,
+        "count": 5,
+        "step": 25,
+        "offset": 0,
+        "changed": 0,
+        "count_echo": 167,
+        "latch": [
+          120,
+          0,
+          1,
+          0
+        ]
+      },
+      "after_selector": {
+        "mapped": 50,
+        "response": 2,
+        "latch": [
+          120,
+          0,
+          1,
+          0
+        ]
+      },
+      "ingest_writes": [
+        {
+          "pc": "0x47f6",
+          "address": "0x200431",
+          "size": 1,
+          "value": 1
+        }
+      ]
+    },
+    {
+      "inputs": {
+        "aids": [
+          9
+        ],
+        "staged_selector": 2,
+        "staged_count": 11,
+        "selector": 2,
+        "count": 5,
+        "step": 25,
+        "offset": 0,
+        "blocked": true,
+        "receive_status": 1
+      },
+      "scripted_receive": [
+        {
+          "aid_list_pointer": "0x202fdc",
+          "count_pointer": "0x202fd8",
+          "aids": [
+            9
+          ],
+          "return_status": 1
+        }
+      ],
+      "after_ingest": {
+        "selector": 2,
+        "count": 5,
+        "step": 25,
+        "offset": 0,
+        "changed": 0,
+        "count_echo": 167,
+        "latch": [
+          120,
+          0,
+          0,
+          0
+        ]
+      },
+      "after_selector": {
+        "mapped": 0,
+        "response": 228,
+        "latch": [
+          120,
+          0,
+          0,
+          0
+        ]
+      },
+      "ingest_writes": []
+    },
+    {
+      "inputs": {
+        "aids": [
+          9
+        ],
+        "staged_selector": 2,
+        "staged_count": 11,
+        "selector": 2,
+        "count": 14,
+        "step": 7,
+        "offset": 9,
+        "blocked": false,
+        "receive_status": 1
+      },
+      "scripted_receive": [
+        {
+          "aid_list_pointer": "0x202fdc",
+          "count_pointer": "0x202fd8",
+          "aids": [
+            9
+          ],
+          "return_status": 1
+        }
+      ],
+      "after_ingest": {
+        "selector": 2,
+        "count": 14,
+        "step": 7,
+        "offset": 9,
+        "changed": 0,
+        "count_echo": 167,
+        "latch": [
+          120,
+          0,
+          1,
+          0
+        ]
+      },
+      "after_selector": {
+        "mapped": 23,
+        "response": 2,
+        "latch": [
+          120,
+          0,
+          1,
+          0
+        ]
+      },
+      "ingest_writes": [
+        {
+          "pc": "0x47f6",
+          "address": "0x200431",
+          "size": 1,
+          "value": 1
+        }
+      ]
+    },
+    {
+      "inputs": {
+        "aids": [
+          9
+        ],
+        "staged_selector": 2,
+        "staged_count": 11,
+        "selector": 2,
+        "count": 14,
+        "step": 7,
+        "offset": 9,
+        "blocked": true,
+        "receive_status": 1
+      },
+      "scripted_receive": [
+        {
+          "aid_list_pointer": "0x202fdc",
+          "count_pointer": "0x202fd8",
+          "aids": [
+            9
+          ],
+          "return_status": 1
+        }
+      ],
+      "after_ingest": {
+        "selector": 2,
+        "count": 14,
+        "step": 7,
+        "offset": 9,
+        "changed": 0,
+        "count_echo": 167,
+        "latch": [
+          120,
+          0,
+          0,
+          0
+        ]
+      },
+      "after_selector": {
+        "mapped": 0,
+        "response": 228,
+        "latch": [
+          120,
+          0,
+          0,
+          0
+        ]
+      },
+      "ingest_writes": []
+    },
+    {
+      "inputs": {
+        "aids": [
+          9
+        ],
+        "staged_selector": 127,
+        "staged_count": 11,
+        "selector": 2,
+        "count": 5,
+        "step": 25,
+        "offset": 0,
+        "blocked": false,
+        "receive_status": 1
+      },
+      "scripted_receive": [
+        {
+          "aid_list_pointer": "0x202fdc",
+          "count_pointer": "0x202fd8",
+          "aids": [
+            9
+          ],
+          "return_status": 1
+        }
+      ],
+      "after_ingest": {
+        "selector": 4,
+        "count": 5,
+        "step": 25,
+        "offset": 0,
+        "changed": 1,
+        "count_echo": 167,
+        "latch": [
+          120,
+          0,
+          1,
+          0
+        ]
+      },
+      "after_selector": {
+        "mapped": 100,
+        "response": 4,
+        "latch": [
+          120,
+          0,
+          1,
+          0
+        ]
+      },
+      "ingest_writes": [
+        {
+          "pc": "0x47f6",
+          "address": "0x200431",
+          "size": 1,
+          "value": 1
+        },
+        {
+          "pc": "0x6260",
+          "address": "0x2006cd",
+          "size": 1,
+          "value": 127
+        },
+        {
+          "pc": "0x626c",
+          "address": "0x2006cd",
+          "size": 1,
+          "value": 4
+        },
+        {
+          "pc": "0x6270",
+          "address": "0x200ac4",
+          "size": 1,
+          "value": 1
+        }
+      ]
+    },
+    {
+      "inputs": {
+        "aids": [
+          9
+        ],
+        "staged_selector": 127,
+        "staged_count": 11,
+        "selector": 2,
+        "count": 5,
+        "step": 25,
+        "offset": 0,
+        "blocked": true,
+        "receive_status": 1
+      },
+      "scripted_receive": [
+        {
+          "aid_list_pointer": "0x202fdc",
+          "count_pointer": "0x202fd8",
+          "aids": [
+            9
+          ],
+          "return_status": 1
+        }
+      ],
+      "after_ingest": {
+        "selector": 2,
+        "count": 5,
+        "step": 25,
+        "offset": 0,
+        "changed": 0,
+        "count_echo": 167,
+        "latch": [
+          120,
+          0,
+          0,
+          0
+        ]
+      },
+      "after_selector": {
+        "mapped": 0,
+        "response": 228,
+        "latch": [
+          120,
+          0,
+          0,
+          0
+        ]
+      },
+      "ingest_writes": []
+    },
+    {
+      "inputs": {
+        "aids": [
+          9
+        ],
+        "staged_selector": 127,
+        "staged_count": 11,
+        "selector": 2,
+        "count": 14,
+        "step": 7,
+        "offset": 9,
+        "blocked": false,
+        "receive_status": 1
+      },
+      "scripted_receive": [
+        {
+          "aid_list_pointer": "0x202fdc",
+          "count_pointer": "0x202fd8",
+          "aids": [
+            9
+          ],
+          "return_status": 1
+        }
+      ],
+      "after_ingest": {
+        "selector": 13,
+        "count": 14,
+        "step": 7,
+        "offset": 9,
+        "changed": 1,
+        "count_echo": 167,
+        "latch": [
+          120,
+          0,
+          1,
+          0
+        ]
+      },
+      "after_selector": {
+        "mapped": 100,
+        "response": 13,
+        "latch": [
+          120,
+          0,
+          1,
+          0
+        ]
+      },
+      "ingest_writes": [
+        {
+          "pc": "0x47f6",
+          "address": "0x200431",
+          "size": 1,
+          "value": 1
+        },
+        {
+          "pc": "0x6260",
+          "address": "0x2006cd",
+          "size": 1,
+          "value": 127
+        },
+        {
+          "pc": "0x626c",
+          "address": "0x2006cd",
+          "size": 1,
+          "value": 13
+        },
+        {
+          "pc": "0x6270",
+          "address": "0x200ac4",
+          "size": 1,
+          "value": 1
+        }
+      ]
+    },
+    {
+      "inputs": {
+        "aids": [
+          9
+        ],
+        "staged_selector": 127,
+        "staged_count": 11,
+        "selector": 2,
+        "count": 14,
+        "step": 7,
+        "offset": 9,
+        "blocked": true,
+        "receive_status": 1
+      },
+      "scripted_receive": [
+        {
+          "aid_list_pointer": "0x202fdc",
+          "count_pointer": "0x202fd8",
+          "aids": [
+            9
+          ],
+          "return_status": 1
+        }
+      ],
+      "after_ingest": {
+        "selector": 2,
+        "count": 14,
+        "step": 7,
+        "offset": 9,
+        "changed": 0,
+        "count_echo": 167,
+        "latch": [
+          120,
+          0,
+          0,
+          0
+        ]
+      },
+      "after_selector": {
+        "mapped": 0,
+        "response": 228,
+        "latch": [
+          120,
+          0,
+          0,
+          0
+        ]
+      },
+      "ingest_writes": []
+    },
+    {
+      "inputs": {
+        "aids": [
+          9
+        ],
+        "staged_selector": 128,
+        "staged_count": 11,
+        "selector": 2,
+        "count": 5,
+        "step": 25,
+        "offset": 0,
+        "blocked": false,
+        "receive_status": 1
+      },
+      "scripted_receive": [
+        {
+          "aid_list_pointer": "0x202fdc",
+          "count_pointer": "0x202fd8",
+          "aids": [
+            9
+          ],
+          "return_status": 1
+        }
+      ],
+      "after_ingest": {
+        "selector": 0,
+        "count": 5,
+        "step": 25,
+        "offset": 0,
+        "changed": 1,
+        "count_echo": 167,
+        "latch": [
+          120,
+          0,
+          1,
+          0
+        ]
+      },
+      "after_selector": {
+        "mapped": 0,
+        "response": 0,
+        "latch": [
+          120,
+          0,
+          1,
+          0
+        ]
+      },
+      "ingest_writes": [
+        {
+          "pc": "0x47f6",
+          "address": "0x200431",
+          "size": 1,
+          "value": 1
+        },
+        {
+          "pc": "0x6260",
+          "address": "0x2006cd",
+          "size": 1,
+          "value": 0
+        },
+        {
+          "pc": "0x6270",
+          "address": "0x200ac4",
+          "size": 1,
+          "value": 1
+        }
+      ]
+    },
+    {
+      "inputs": {
+        "aids": [
+          9
+        ],
+        "staged_selector": 128,
+        "staged_count": 11,
+        "selector": 2,
+        "count": 5,
+        "step": 25,
+        "offset": 0,
+        "blocked": true,
+        "receive_status": 1
+      },
+      "scripted_receive": [
+        {
+          "aid_list_pointer": "0x202fdc",
+          "count_pointer": "0x202fd8",
+          "aids": [
+            9
+          ],
+          "return_status": 1
+        }
+      ],
+      "after_ingest": {
+        "selector": 2,
+        "count": 5,
+        "step": 25,
+        "offset": 0,
+        "changed": 0,
+        "count_echo": 167,
+        "latch": [
+          120,
+          0,
+          0,
+          0
+        ]
+      },
+      "after_selector": {
+        "mapped": 0,
+        "response": 228,
+        "latch": [
+          120,
+          0,
+          0,
+          0
+        ]
+      },
+      "ingest_writes": []
+    },
+    {
+      "inputs": {
+        "aids": [
+          9
+        ],
+        "staged_selector": 128,
+        "staged_count": 11,
+        "selector": 2,
+        "count": 14,
+        "step": 7,
+        "offset": 9,
+        "blocked": false,
+        "receive_status": 1
+      },
+      "scripted_receive": [
+        {
+          "aid_list_pointer": "0x202fdc",
+          "count_pointer": "0x202fd8",
+          "aids": [
+            9
+          ],
+          "return_status": 1
+        }
+      ],
+      "after_ingest": {
+        "selector": 0,
+        "count": 14,
+        "step": 7,
+        "offset": 9,
+        "changed": 1,
+        "count_echo": 167,
+        "latch": [
+          120,
+          0,
+          1,
+          0
+        ]
+      },
+      "after_selector": {
+        "mapped": 0,
+        "response": 0,
+        "latch": [
+          120,
+          0,
+          1,
+          0
+        ]
+      },
+      "ingest_writes": [
+        {
+          "pc": "0x47f6",
+          "address": "0x200431",
+          "size": 1,
+          "value": 1
+        },
+        {
+          "pc": "0x6260",
+          "address": "0x2006cd",
+          "size": 1,
+          "value": 0
+        },
+        {
+          "pc": "0x6270",
+          "address": "0x200ac4",
+          "size": 1,
+          "value": 1
+        }
+      ]
+    },
+    {
+      "inputs": {
+        "aids": [
+          9
+        ],
+        "staged_selector": 128,
+        "staged_count": 11,
+        "selector": 2,
+        "count": 14,
+        "step": 7,
+        "offset": 9,
+        "blocked": true,
+        "receive_status": 1
+      },
+      "scripted_receive": [
+        {
+          "aid_list_pointer": "0x202fdc",
+          "count_pointer": "0x202fd8",
+          "aids": [
+            9
+          ],
+          "return_status": 1
+        }
+      ],
+      "after_ingest": {
+        "selector": 2,
+        "count": 14,
+        "step": 7,
+        "offset": 9,
+        "changed": 0,
+        "count_echo": 167,
+        "latch": [
+          120,
+          0,
+          0,
+          0
+        ]
+      },
+      "after_selector": {
+        "mapped": 0,
+        "response": 228,
+        "latch": [
+          120,
+          0,
+          0,
+          0
+        ]
+      },
+      "ingest_writes": []
+    },
+    {
+      "inputs": {
+        "aids": [
+          9
+        ],
+        "staged_selector": 255,
+        "staged_count": 11,
+        "selector": 2,
+        "count": 5,
+        "step": 25,
+        "offset": 0,
+        "blocked": false,
+        "receive_status": 1
+      },
+      "scripted_receive": [
+        {
+          "aid_list_pointer": "0x202fdc",
+          "count_pointer": "0x202fd8",
+          "aids": [
+            9
+          ],
+          "return_status": 1
+        }
+      ],
+      "after_ingest": {
+        "selector": 4,
+        "count": 5,
+        "step": 25,
+        "offset": 0,
+        "changed": 1,
+        "count_echo": 167,
+        "latch": [
+          120,
+          0,
+          1,
+          0
+        ]
+      },
+      "after_selector": {
+        "mapped": 100,
+        "response": 4,
+        "latch": [
+          120,
+          0,
+          1,
+          0
+        ]
+      },
+      "ingest_writes": [
+        {
+          "pc": "0x47f6",
+          "address": "0x200431",
+          "size": 1,
+          "value": 1
+        },
+        {
+          "pc": "0x6260",
+          "address": "0x2006cd",
+          "size": 1,
+          "value": 127
+        },
+        {
+          "pc": "0x626c",
+          "address": "0x2006cd",
+          "size": 1,
+          "value": 4
+        },
+        {
+          "pc": "0x6270",
+          "address": "0x200ac4",
+          "size": 1,
+          "value": 1
+        }
+      ]
+    },
+    {
+      "inputs": {
+        "aids": [
+          9
+        ],
+        "staged_selector": 255,
+        "staged_count": 11,
+        "selector": 2,
+        "count": 5,
+        "step": 25,
+        "offset": 0,
+        "blocked": true,
+        "receive_status": 1
+      },
+      "scripted_receive": [
+        {
+          "aid_list_pointer": "0x202fdc",
+          "count_pointer": "0x202fd8",
+          "aids": [
+            9
+          ],
+          "return_status": 1
+        }
+      ],
+      "after_ingest": {
+        "selector": 2,
+        "count": 5,
+        "step": 25,
+        "offset": 0,
+        "changed": 0,
+        "count_echo": 167,
+        "latch": [
+          120,
+          0,
+          0,
+          0
+        ]
+      },
+      "after_selector": {
+        "mapped": 0,
+        "response": 228,
+        "latch": [
+          120,
+          0,
+          0,
+          0
+        ]
+      },
+      "ingest_writes": []
+    },
+    {
+      "inputs": {
+        "aids": [
+          9
+        ],
+        "staged_selector": 255,
+        "staged_count": 11,
+        "selector": 2,
+        "count": 14,
+        "step": 7,
+        "offset": 9,
+        "blocked": false,
+        "receive_status": 1
+      },
+      "scripted_receive": [
+        {
+          "aid_list_pointer": "0x202fdc",
+          "count_pointer": "0x202fd8",
+          "aids": [
+            9
+          ],
+          "return_status": 1
+        }
+      ],
+      "after_ingest": {
+        "selector": 13,
+        "count": 14,
+        "step": 7,
+        "offset": 9,
+        "changed": 1,
+        "count_echo": 167,
+        "latch": [
+          120,
+          0,
+          1,
+          0
+        ]
+      },
+      "after_selector": {
+        "mapped": 100,
+        "response": 13,
+        "latch": [
+          120,
+          0,
+          1,
+          0
+        ]
+      },
+      "ingest_writes": [
+        {
+          "pc": "0x47f6",
+          "address": "0x200431",
+          "size": 1,
+          "value": 1
+        },
+        {
+          "pc": "0x6260",
+          "address": "0x2006cd",
+          "size": 1,
+          "value": 127
+        },
+        {
+          "pc": "0x626c",
+          "address": "0x2006cd",
+          "size": 1,
+          "value": 13
+        },
+        {
+          "pc": "0x6270",
+          "address": "0x200ac4",
+          "size": 1,
+          "value": 1
+        }
+      ]
+    },
+    {
+      "inputs": {
+        "aids": [
+          9
+        ],
+        "staged_selector": 255,
+        "staged_count": 11,
+        "selector": 2,
+        "count": 14,
+        "step": 7,
+        "offset": 9,
+        "blocked": true,
+        "receive_status": 1
+      },
+      "scripted_receive": [
+        {
+          "aid_list_pointer": "0x202fdc",
+          "count_pointer": "0x202fd8",
+          "aids": [
+            9
+          ],
+          "return_status": 1
+        }
+      ],
+      "after_ingest": {
+        "selector": 2,
+        "count": 14,
+        "step": 7,
+        "offset": 9,
+        "changed": 0,
+        "count_echo": 167,
+        "latch": [
+          120,
+          0,
+          0,
+          0
+        ]
+      },
+      "after_selector": {
+        "mapped": 0,
+        "response": 228,
+        "latch": [
+          120,
+          0,
+          0,
+          0
+        ]
+      },
+      "ingest_writes": []
+    },
+    {
+      "inputs": {
+        "aids": [
+          15
+        ],
+        "staged_selector": 0,
+        "staged_count": 0,
+        "selector": 13,
+        "count": 11,
+        "step": 10,
+        "offset": 0,
+        "blocked": false,
+        "receive_status": 1
+      },
+      "scripted_receive": [
+        {
+          "aid_list_pointer": "0x202fdc",
+          "count_pointer": "0x202fd8",
+          "aids": [
+            15
+          ],
+          "return_status": 1
+        }
+      ],
+      "after_ingest": {
+        "selector": 13,
+        "count": 5,
+        "step": 25,
+        "offset": 0,
+        "changed": 0,
+        "count_echo": 5,
+        "latch": [
+          120,
+          0,
+          0,
+          0
+        ]
+      },
+      "after_selector": {
+        "mapped": 100,
+        "response": 4,
+        "latch": [
+          120,
+          0,
+          1,
+          0
+        ]
+      },
+      "ingest_writes": [
+        {
+          "pc": "0x6494",
+          "address": "0x200580",
+          "size": 1,
+          "value": 5
+        },
+        {
+          "pc": "0x6498",
+          "address": "0x200bea",
+          "size": 1,
+          "value": 5
+        },
+        {
+          "pc": "0x64a6",
+          "address": "0x200433",
+          "size": 1,
+          "value": 25
+        },
+        {
+          "pc": "0x64b4",
+          "address": "0x200434",
+          "size": 1,
+          "value": 0
+        }
+      ]
+    },
+    {
+      "inputs": {
+        "aids": [
+          15
+        ],
+        "staged_selector": 0,
+        "staged_count": 4,
+        "selector": 13,
+        "count": 11,
+        "step": 10,
+        "offset": 0,
+        "blocked": false,
+        "receive_status": 1
+      },
+      "scripted_receive": [
+        {
+          "aid_list_pointer": "0x202fdc",
+          "count_pointer": "0x202fd8",
+          "aids": [
+            15
+          ],
+          "return_status": 1
+        }
+      ],
+      "after_ingest": {
+        "selector": 13,
+        "count": 5,
+        "step": 25,
+        "offset": 0,
+        "changed": 0,
+        "count_echo": 5,
+        "latch": [
+          120,
+          0,
+          0,
+          0
+        ]
+      },
+      "after_selector": {
+        "mapped": 100,
+        "response": 4,
+        "latch": [
+          120,
+          0,
+          1,
+          0
+        ]
+      },
+      "ingest_writes": [
+        {
+          "pc": "0x6494",
+          "address": "0x200580",
+          "size": 1,
+          "value": 5
+        },
+        {
+          "pc": "0x6498",
+          "address": "0x200bea",
+          "size": 1,
+          "value": 5
+        },
+        {
+          "pc": "0x64a6",
+          "address": "0x200433",
+          "size": 1,
+          "value": 25
+        },
+        {
+          "pc": "0x64b4",
+          "address": "0x200434",
+          "size": 1,
+          "value": 0
+        }
+      ]
+    },
+    {
+      "inputs": {
+        "aids": [
+          15
+        ],
+        "staged_selector": 0,
+        "staged_count": 5,
+        "selector": 13,
+        "count": 11,
+        "step": 10,
+        "offset": 0,
+        "blocked": false,
+        "receive_status": 1
+      },
+      "scripted_receive": [
+        {
+          "aid_list_pointer": "0x202fdc",
+          "count_pointer": "0x202fd8",
+          "aids": [
+            15
+          ],
+          "return_status": 1
+        }
+      ],
+      "after_ingest": {
+        "selector": 13,
+        "count": 5,
+        "step": 25,
+        "offset": 0,
+        "changed": 0,
+        "count_echo": 5,
+        "latch": [
+          120,
+          0,
+          0,
+          0
+        ]
+      },
+      "after_selector": {
+        "mapped": 100,
+        "response": 4,
+        "latch": [
+          120,
+          0,
+          1,
+          0
+        ]
+      },
+      "ingest_writes": [
+        {
+          "pc": "0x6494",
+          "address": "0x200580",
+          "size": 1,
+          "value": 5
+        },
+        {
+          "pc": "0x6498",
+          "address": "0x200bea",
+          "size": 1,
+          "value": 5
+        },
+        {
+          "pc": "0x64a6",
+          "address": "0x200433",
+          "size": 1,
+          "value": 25
+        },
+        {
+          "pc": "0x64b4",
+          "address": "0x200434",
+          "size": 1,
+          "value": 0
+        }
+      ]
+    },
+    {
+      "inputs": {
+        "aids": [
+          15
+        ],
+        "staged_selector": 0,
+        "staged_count": 11,
+        "selector": 13,
+        "count": 11,
+        "step": 10,
+        "offset": 0,
+        "blocked": false,
+        "receive_status": 1
+      },
+      "scripted_receive": [
+        {
+          "aid_list_pointer": "0x202fdc",
+          "count_pointer": "0x202fd8",
+          "aids": [
+            15
+          ],
+          "return_status": 1
+        }
+      ],
+      "after_ingest": {
+        "selector": 13,
+        "count": 11,
+        "step": 10,
+        "offset": 0,
+        "changed": 0,
+        "count_echo": 11,
+        "latch": [
+          120,
+          0,
+          0,
+          0
+        ]
+      },
+      "after_selector": {
+        "mapped": 100,
+        "response": 10,
+        "latch": [
+          120,
+          0,
+          1,
+          0
+        ]
+      },
+      "ingest_writes": [
+        {
+          "pc": "0x6494",
+          "address": "0x200580",
+          "size": 1,
+          "value": 11
+        },
+        {
+          "pc": "0x6498",
+          "address": "0x200bea",
+          "size": 1,
+          "value": 11
+        },
+        {
+          "pc": "0x64a6",
+          "address": "0x200433",
+          "size": 1,
+          "value": 10
+        },
+        {
+          "pc": "0x64b4",
+          "address": "0x200434",
+          "size": 1,
+          "value": 0
+        }
+      ]
+    },
+    {
+      "inputs": {
+        "aids": [
+          15
+        ],
+        "staged_selector": 0,
+        "staged_count": 14,
+        "selector": 13,
+        "count": 11,
+        "step": 10,
+        "offset": 0,
+        "blocked": false,
+        "receive_status": 1
+      },
+      "scripted_receive": [
+        {
+          "aid_list_pointer": "0x202fdc",
+          "count_pointer": "0x202fd8",
+          "aids": [
+            15
+          ],
+          "return_status": 1
+        }
+      ],
+      "after_ingest": {
+        "selector": 13,
+        "count": 14,
+        "step": 7,
+        "offset": 9,
+        "changed": 0,
+        "count_echo": 14,
+        "latch": [
+          120,
+          0,
+          0,
+          0
+        ]
+      },
+      "after_selector": {
+        "mapped": 100,
+        "response": 13,
+        "latch": [
+          120,
+          0,
+          1,
+          0
+        ]
+      },
+      "ingest_writes": [
+        {
+          "pc": "0x6494",
+          "address": "0x200580",
+          "size": 1,
+          "value": 14
+        },
+        {
+          "pc": "0x6498",
+          "address": "0x200bea",
+          "size": 1,
+          "value": 14
+        },
+        {
+          "pc": "0x64a6",
+          "address": "0x200433",
+          "size": 1,
+          "value": 7
+        },
+        {
+          "pc": "0x64b4",
+          "address": "0x200434",
+          "size": 1,
+          "value": 9
+        }
+      ]
+    },
+    {
+      "inputs": {
+        "aids": [
+          15
+        ],
+        "staged_selector": 0,
+        "staged_count": 15,
+        "selector": 13,
+        "count": 11,
+        "step": 10,
+        "offset": 0,
+        "blocked": false,
+        "receive_status": 1
+      },
+      "scripted_receive": [
+        {
+          "aid_list_pointer": "0x202fdc",
+          "count_pointer": "0x202fd8",
+          "aids": [
+            15
+          ],
+          "return_status": 1
+        }
+      ],
+      "after_ingest": {
+        "selector": 13,
+        "count": 14,
+        "step": 7,
+        "offset": 9,
+        "changed": 0,
+        "count_echo": 14,
+        "latch": [
+          120,
+          0,
+          0,
+          0
+        ]
+      },
+      "after_selector": {
+        "mapped": 100,
+        "response": 13,
+        "latch": [
+          120,
+          0,
+          1,
+          0
+        ]
+      },
+      "ingest_writes": [
+        {
+          "pc": "0x6494",
+          "address": "0x200580",
+          "size": 1,
+          "value": 14
+        },
+        {
+          "pc": "0x6498",
+          "address": "0x200bea",
+          "size": 1,
+          "value": 14
+        },
+        {
+          "pc": "0x64a6",
+          "address": "0x200433",
+          "size": 1,
+          "value": 7
+        },
+        {
+          "pc": "0x64b4",
+          "address": "0x200434",
+          "size": 1,
+          "value": 9
+        }
+      ]
+    },
+    {
+      "inputs": {
+        "aids": [
+          15
+        ],
+        "staged_selector": 0,
+        "staged_count": 255,
+        "selector": 13,
+        "count": 11,
+        "step": 10,
+        "offset": 0,
+        "blocked": false,
+        "receive_status": 1
+      },
+      "scripted_receive": [
+        {
+          "aid_list_pointer": "0x202fdc",
+          "count_pointer": "0x202fd8",
+          "aids": [
+            15
+          ],
+          "return_status": 1
+        }
+      ],
+      "after_ingest": {
+        "selector": 13,
+        "count": 14,
+        "step": 7,
+        "offset": 9,
+        "changed": 0,
+        "count_echo": 14,
+        "latch": [
+          120,
+          0,
+          0,
+          0
+        ]
+      },
+      "after_selector": {
+        "mapped": 100,
+        "response": 13,
+        "latch": [
+          120,
+          0,
+          1,
+          0
+        ]
+      },
+      "ingest_writes": [
+        {
+          "pc": "0x6494",
+          "address": "0x200580",
+          "size": 1,
+          "value": 14
+        },
+        {
+          "pc": "0x6498",
+          "address": "0x200bea",
+          "size": 1,
+          "value": 14
+        },
+        {
+          "pc": "0x64a6",
+          "address": "0x200433",
+          "size": 1,
+          "value": 7
+        },
+        {
+          "pc": "0x64b4",
+          "address": "0x200434",
+          "size": 1,
+          "value": 9
+        }
+      ]
+    },
+    {
+      "inputs": {
+        "aids": [
+          9,
+          15
+        ],
+        "staged_selector": 10,
+        "staged_count": 11,
+        "selector": 2,
+        "count": 5,
+        "step": 25,
+        "offset": 0,
+        "blocked": false,
+        "receive_status": 1
+      },
+      "scripted_receive": [
+        {
+          "aid_list_pointer": "0x202fdc",
+          "count_pointer": "0x202fd8",
+          "aids": [
+            9,
+            15
+          ],
+          "return_status": 1
+        }
+      ],
+      "after_ingest": {
+        "selector": 4,
+        "count": 11,
+        "step": 10,
+        "offset": 0,
+        "changed": 1,
+        "count_echo": 11,
+        "latch": [
+          120,
+          0,
+          1,
+          0
+        ]
+      },
+      "after_selector": {
+        "mapped": 40,
+        "response": 4,
+        "latch": [
+          120,
+          0,
+          1,
+          0
+        ]
+      },
+      "ingest_writes": [
+        {
+          "pc": "0x47f6",
+          "address": "0x200431",
+          "size": 1,
+          "value": 1
+        },
+        {
+          "pc": "0x6260",
+          "address": "0x2006cd",
+          "size": 1,
+          "value": 10
+        },
+        {
+          "pc": "0x626c",
+          "address": "0x2006cd",
+          "size": 1,
+          "value": 4
+        },
+        {
+          "pc": "0x6270",
+          "address": "0x200ac4",
+          "size": 1,
+          "value": 1
+        },
+        {
+          "pc": "0x6494",
+          "address": "0x200580",
+          "size": 1,
+          "value": 11
+        },
+        {
+          "pc": "0x6498",
+          "address": "0x200bea",
+          "size": 1,
+          "value": 11
+        },
+        {
+          "pc": "0x64a6",
+          "address": "0x200433",
+          "size": 1,
+          "value": 10
+        },
+        {
+          "pc": "0x64b4",
+          "address": "0x200434",
+          "size": 1,
+          "value": 0
+        }
+      ]
+    },
+    {
+      "inputs": {
+        "aids": [
+          15,
+          9
+        ],
+        "staged_selector": 10,
+        "staged_count": 11,
+        "selector": 2,
+        "count": 5,
+        "step": 25,
+        "offset": 0,
+        "blocked": false,
+        "receive_status": 1
+      },
+      "scripted_receive": [
+        {
+          "aid_list_pointer": "0x202fdc",
+          "count_pointer": "0x202fd8",
+          "aids": [
+            15,
+            9
+          ],
+          "return_status": 1
+        }
+      ],
+      "after_ingest": {
+        "selector": 10,
+        "count": 11,
+        "step": 10,
+        "offset": 0,
+        "changed": 1,
+        "count_echo": 11,
+        "latch": [
+          120,
+          0,
+          1,
+          0
+        ]
+      },
+      "after_selector": {
+        "mapped": 100,
+        "response": 10,
+        "latch": [
+          120,
+          0,
+          1,
+          0
+        ]
+      },
+      "ingest_writes": [
+        {
+          "pc": "0x6494",
+          "address": "0x200580",
+          "size": 1,
+          "value": 11
+        },
+        {
+          "pc": "0x6498",
+          "address": "0x200bea",
+          "size": 1,
+          "value": 11
+        },
+        {
+          "pc": "0x64a6",
+          "address": "0x200433",
+          "size": 1,
+          "value": 10
+        },
+        {
+          "pc": "0x64b4",
+          "address": "0x200434",
+          "size": 1,
+          "value": 0
+        },
+        {
+          "pc": "0x47f6",
+          "address": "0x200431",
+          "size": 1,
+          "value": 1
+        },
+        {
+          "pc": "0x6260",
+          "address": "0x2006cd",
+          "size": 1,
+          "value": 10
+        },
+        {
+          "pc": "0x6270",
+          "address": "0x200ac4",
+          "size": 1,
+          "value": 1
+        }
+      ]
+    },
+    {
+      "inputs": {
+        "aids": [
+          9,
+          9
+        ],
+        "staged_selector": 10,
+        "staged_count": 11,
+        "selector": 2,
+        "count": 5,
+        "step": 25,
+        "offset": 0,
+        "blocked": false,
+        "receive_status": 1
+      },
+      "scripted_receive": [
+        {
+          "aid_list_pointer": "0x202fdc",
+          "count_pointer": "0x202fd8",
+          "aids": [
+            9,
+            9
+          ],
+          "return_status": 1
+        }
+      ],
+      "after_ingest": {
+        "selector": 4,
+        "count": 5,
+        "step": 25,
+        "offset": 0,
+        "changed": 1,
+        "count_echo": 167,
+        "latch": [
+          120,
+          0,
+          1,
+          0
+        ]
+      },
+      "after_selector": {
+        "mapped": 100,
+        "response": 4,
+        "latch": [
+          120,
+          0,
+          1,
+          0
+        ]
+      },
+      "ingest_writes": [
+        {
+          "pc": "0x47f6",
+          "address": "0x200431",
+          "size": 1,
+          "value": 1
+        },
+        {
+          "pc": "0x6260",
+          "address": "0x2006cd",
+          "size": 1,
+          "value": 10
+        },
+        {
+          "pc": "0x626c",
+          "address": "0x2006cd",
+          "size": 1,
+          "value": 4
+        },
+        {
+          "pc": "0x6270",
+          "address": "0x200ac4",
+          "size": 1,
+          "value": 1
+        },
+        {
+          "pc": "0x47f6",
+          "address": "0x200431",
+          "size": 1,
+          "value": 1
+        },
+        {
+          "pc": "0x6260",
+          "address": "0x2006cd",
+          "size": 1,
+          "value": 10
+        },
+        {
+          "pc": "0x626c",
+          "address": "0x2006cd",
+          "size": 1,
+          "value": 4
+        },
+        {
+          "pc": "0x6270",
+          "address": "0x200ac4",
+          "size": 1,
+          "value": 1
+        }
+      ]
+    },
+    {
+      "inputs": {
+        "aids": [
+          15,
+          15
+        ],
+        "staged_selector": 10,
+        "staged_count": 11,
+        "selector": 2,
+        "count": 5,
+        "step": 25,
+        "offset": 0,
+        "blocked": false,
+        "receive_status": 1
+      },
+      "scripted_receive": [
+        {
+          "aid_list_pointer": "0x202fdc",
+          "count_pointer": "0x202fd8",
+          "aids": [
+            15,
+            15
+          ],
+          "return_status": 1
+        }
+      ],
+      "after_ingest": {
+        "selector": 2,
+        "count": 11,
+        "step": 10,
+        "offset": 0,
+        "changed": 0,
+        "count_echo": 11,
+        "latch": [
+          120,
+          0,
+          0,
+          0
+        ]
+      },
+      "after_selector": {
+        "mapped": 20,
+        "response": 2,
+        "latch": [
+          120,
+          0,
+          1,
+          0
+        ]
+      },
+      "ingest_writes": [
+        {
+          "pc": "0x6494",
+          "address": "0x200580",
+          "size": 1,
+          "value": 11
+        },
+        {
+          "pc": "0x6498",
+          "address": "0x200bea",
+          "size": 1,
+          "value": 11
+        },
+        {
+          "pc": "0x64a6",
+          "address": "0x200433",
+          "size": 1,
+          "value": 10
+        },
+        {
+          "pc": "0x64b4",
+          "address": "0x200434",
+          "size": 1,
+          "value": 0
+        },
+        {
+          "pc": "0x6494",
+          "address": "0x200580",
+          "size": 1,
+          "value": 11
+        },
+        {
+          "pc": "0x6498",
+          "address": "0x200bea",
+          "size": 1,
+          "value": 11
+        },
+        {
+          "pc": "0x64a6",
+          "address": "0x200433",
+          "size": 1,
+          "value": 10
+        },
+        {
+          "pc": "0x64b4",
+          "address": "0x200434",
+          "size": 1,
+          "value": 0
+        }
+      ]
+    },
+    {
+      "inputs": {
+        "aids": [
+          0,
+          8,
+          227,
+          255,
+          9,
+          15
+        ],
+        "staged_selector": 10,
+        "staged_count": 11,
+        "selector": 2,
+        "count": 5,
+        "step": 25,
+        "offset": 0,
+        "blocked": false,
+        "receive_status": 1
+      },
+      "scripted_receive": [
+        {
+          "aid_list_pointer": "0x202fdc",
+          "count_pointer": "0x202fd8",
+          "aids": [
+            0,
+            8,
+            227,
+            255,
+            9,
+            15
+          ],
+          "return_status": 1
+        }
+      ],
+      "after_ingest": {
+        "selector": 4,
+        "count": 11,
+        "step": 10,
+        "offset": 0,
+        "changed": 1,
+        "count_echo": 11,
+        "latch": [
+          120,
+          0,
+          1,
+          0
+        ]
+      },
+      "after_selector": {
+        "mapped": 40,
+        "response": 4,
+        "latch": [
+          120,
+          0,
+          1,
+          0
+        ]
+      },
+      "ingest_writes": [
+        {
+          "pc": "0x47f6",
+          "address": "0x200431",
+          "size": 1,
+          "value": 1
+        },
+        {
+          "pc": "0x6260",
+          "address": "0x2006cd",
+          "size": 1,
+          "value": 10
+        },
+        {
+          "pc": "0x626c",
+          "address": "0x2006cd",
+          "size": 1,
+          "value": 4
+        },
+        {
+          "pc": "0x6270",
+          "address": "0x200ac4",
+          "size": 1,
+          "value": 1
+        },
+        {
+          "pc": "0x6494",
+          "address": "0x200580",
+          "size": 1,
+          "value": 11
+        },
+        {
+          "pc": "0x6498",
+          "address": "0x200bea",
+          "size": 1,
+          "value": 11
+        },
+        {
+          "pc": "0x64a6",
+          "address": "0x200433",
+          "size": 1,
+          "value": 10
+        },
+        {
+          "pc": "0x64b4",
+          "address": "0x200434",
+          "size": 1,
+          "value": 0
+        }
+      ]
+    },
+    {
+      "inputs": {
+        "aids": [],
+        "staged_selector": 10,
+        "staged_count": 11,
+        "selector": 2,
+        "count": 5,
+        "step": 25,
+        "offset": 0,
+        "blocked": false,
+        "receive_status": 1
+      },
+      "scripted_receive": [
+        {
+          "aid_list_pointer": "0x202fdc",
+          "count_pointer": "0x202fd8",
+          "aids": [],
+          "return_status": 1
+        }
+      ],
+      "after_ingest": {
+        "selector": 2,
+        "count": 5,
+        "step": 25,
+        "offset": 0,
+        "changed": 0,
+        "count_echo": 167,
+        "latch": [
+          120,
+          0,
+          0,
+          0
+        ]
+      },
+      "after_selector": {
+        "mapped": 50,
+        "response": 2,
+        "latch": [
+          120,
+          0,
+          1,
+          0
+        ]
+      },
+      "ingest_writes": []
+    },
+    {
+      "inputs": {
+        "aids": [
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9
+        ],
+        "staged_selector": 10,
+        "staged_count": 11,
+        "selector": 2,
+        "count": 5,
+        "step": 25,
+        "offset": 0,
+        "blocked": false,
+        "receive_status": 1
+      },
+      "scripted_receive": [
+        {
+          "aid_list_pointer": "0x202fdc",
+          "count_pointer": "0x202fd8",
+          "aids": [
+            9,
+            9,
+            9,
+            9,
+            9,
+            9,
+            9,
+            9,
+            9,
+            9,
+            9,
+            9,
+            9,
+            9
+          ],
+          "return_status": 1
+        }
+      ],
+      "after_ingest": {
+        "selector": 4,
+        "count": 5,
+        "step": 25,
+        "offset": 0,
+        "changed": 1,
+        "count_echo": 167,
+        "latch": [
+          120,
+          0,
+          1,
+          0
+        ]
+      },
+      "after_selector": {
+        "mapped": 100,
+        "response": 4,
+        "latch": [
+          120,
+          0,
+          1,
+          0
+        ]
+      },
+      "ingest_writes": [
+        {
+          "pc": "0x47f6",
+          "address": "0x200431",
+          "size": 1,
+          "value": 1
+        },
+        {
+          "pc": "0x6260",
+          "address": "0x2006cd",
+          "size": 1,
+          "value": 10
+        },
+        {
+          "pc": "0x626c",
+          "address": "0x2006cd",
+          "size": 1,
+          "value": 4
+        },
+        {
+          "pc": "0x6270",
+          "address": "0x200ac4",
+          "size": 1,
+          "value": 1
+        },
+        {
+          "pc": "0x47f6",
+          "address": "0x200431",
+          "size": 1,
+          "value": 1
+        },
+        {
+          "pc": "0x6260",
+          "address": "0x2006cd",
+          "size": 1,
+          "value": 10
+        },
+        {
+          "pc": "0x626c",
+          "address": "0x2006cd",
+          "size": 1,
+          "value": 4
+        },
+        {
+          "pc": "0x6270",
+          "address": "0x200ac4",
+          "size": 1,
+          "value": 1
+        },
+        {
+          "pc": "0x47f6",
+          "address": "0x200431",
+          "size": 1,
+          "value": 1
+        },
+        {
+          "pc": "0x6260",
+          "address": "0x2006cd",
+          "size": 1,
+          "value": 10
+        },
+        {
+          "pc": "0x626c",
+          "address": "0x2006cd",
+          "size": 1,
+          "value": 4
+        },
+        {
+          "pc": "0x6270",
+          "address": "0x200ac4",
+          "size": 1,
+          "value": 1
+        },
+        {
+          "pc": "0x47f6",
+          "address": "0x200431",
+          "size": 1,
+          "value": 1
+        },
+        {
+          "pc": "0x6260",
+          "address": "0x2006cd",
+          "size": 1,
+          "value": 10
+        },
+        {
+          "pc": "0x626c",
+          "address": "0x2006cd",
+          "size": 1,
+          "value": 4
+        },
+        {
+          "pc": "0x6270",
+          "address": "0x200ac4",
+          "size": 1,
+          "value": 1
+        },
+        {
+          "pc": "0x47f6",
+          "address": "0x200431",
+          "size": 1,
+          "value": 1
+        },
+        {
+          "pc": "0x6260",
+          "address": "0x2006cd",
+          "size": 1,
+          "value": 10
+        },
+        {
+          "pc": "0x626c",
+          "address": "0x2006cd",
+          "size": 1,
+          "value": 4
+        },
+        {
+          "pc": "0x6270",
+          "address": "0x200ac4",
+          "size": 1,
+          "value": 1
+        },
+        {
+          "pc": "0x47f6",
+          "address": "0x200431",
+          "size": 1,
+          "value": 1
+        },
+        {
+          "pc": "0x6260",
+          "address": "0x2006cd",
+          "size": 1,
+          "value": 10
+        },
+        {
+          "pc": "0x626c",
+          "address": "0x2006cd",
+          "size": 1,
+          "value": 4
+        },
+        {
+          "pc": "0x6270",
+          "address": "0x200ac4",
+          "size": 1,
+          "value": 1
+        },
+        {
+          "pc": "0x47f6",
+          "address": "0x200431",
+          "size": 1,
+          "value": 1
+        },
+        {
+          "pc": "0x6260",
+          "address": "0x2006cd",
+          "size": 1,
+          "value": 10
+        },
+        {
+          "pc": "0x626c",
+          "address": "0x2006cd",
+          "size": 1,
+          "value": 4
+        },
+        {
+          "pc": "0x6270",
+          "address": "0x200ac4",
+          "size": 1,
+          "value": 1
+        },
+        {
+          "pc": "0x47f6",
+          "address": "0x200431",
+          "size": 1,
+          "value": 1
+        },
+        {
+          "pc": "0x6260",
+          "address": "0x2006cd",
+          "size": 1,
+          "value": 10
+        },
+        {
+          "pc": "0x626c",
+          "address": "0x2006cd",
+          "size": 1,
+          "value": 4
+        },
+        {
+          "pc": "0x6270",
+          "address": "0x200ac4",
+          "size": 1,
+          "value": 1
+        },
+        {
+          "pc": "0x47f6",
+          "address": "0x200431",
+          "size": 1,
+          "value": 1
+        },
+        {
+          "pc": "0x6260",
+          "address": "0x2006cd",
+          "size": 1,
+          "value": 10
+        },
+        {
+          "pc": "0x626c",
+          "address": "0x2006cd",
+          "size": 1,
+          "value": 4
+        },
+        {
+          "pc": "0x6270",
+          "address": "0x200ac4",
+          "size": 1,
+          "value": 1
+        },
+        {
+          "pc": "0x47f6",
+          "address": "0x200431",
+          "size": 1,
+          "value": 1
+        },
+        {
+          "pc": "0x6260",
+          "address": "0x2006cd",
+          "size": 1,
+          "value": 10
+        },
+        {
+          "pc": "0x626c",
+          "address": "0x2006cd",
+          "size": 1,
+          "value": 4
+        },
+        {
+          "pc": "0x6270",
+          "address": "0x200ac4",
+          "size": 1,
+          "value": 1
+        },
+        {
+          "pc": "0x47f6",
+          "address": "0x200431",
+          "size": 1,
+          "value": 1
+        },
+        {
+          "pc": "0x6260",
+          "address": "0x2006cd",
+          "size": 1,
+          "value": 10
+        },
+        {
+          "pc": "0x626c",
+          "address": "0x2006cd",
+          "size": 1,
+          "value": 4
+        },
+        {
+          "pc": "0x6270",
+          "address": "0x200ac4",
+          "size": 1,
+          "value": 1
+        },
+        {
+          "pc": "0x47f6",
+          "address": "0x200431",
+          "size": 1,
+          "value": 1
+        },
+        {
+          "pc": "0x6260",
+          "address": "0x2006cd",
+          "size": 1,
+          "value": 10
+        },
+        {
+          "pc": "0x626c",
+          "address": "0x2006cd",
+          "size": 1,
+          "value": 4
+        },
+        {
+          "pc": "0x6270",
+          "address": "0x200ac4",
+          "size": 1,
+          "value": 1
+        },
+        {
+          "pc": "0x47f6",
+          "address": "0x200431",
+          "size": 1,
+          "value": 1
+        },
+        {
+          "pc": "0x6260",
+          "address": "0x2006cd",
+          "size": 1,
+          "value": 10
+        },
+        {
+          "pc": "0x626c",
+          "address": "0x2006cd",
+          "size": 1,
+          "value": 4
+        },
+        {
+          "pc": "0x6270",
+          "address": "0x200ac4",
+          "size": 1,
+          "value": 1
+        },
+        {
+          "pc": "0x47f6",
+          "address": "0x200431",
+          "size": 1,
+          "value": 1
+        },
+        {
+          "pc": "0x6260",
+          "address": "0x2006cd",
+          "size": 1,
+          "value": 10
+        },
+        {
+          "pc": "0x626c",
+          "address": "0x2006cd",
+          "size": 1,
+          "value": 4
+        },
+        {
+          "pc": "0x6270",
+          "address": "0x200ac4",
+          "size": 1,
+          "value": 1
+        }
+      ]
+    },
+    {
+      "inputs": {
+        "aids": [
+          9
+        ],
+        "staged_selector": 0,
+        "staged_count": 11,
+        "selector": 0,
+        "count": 11,
+        "step": 10,
+        "offset": 0,
+        "blocked": false,
+        "receive_status": 1
+      },
+      "scripted_receive": [
+        {
+          "aid_list_pointer": "0x202fdc",
+          "count_pointer": "0x202fd8",
+          "aids": [
+            9
+          ],
+          "return_status": 1
+        }
+      ],
+      "after_ingest": {
+        "selector": 0,
+        "count": 11,
+        "step": 10,
+        "offset": 0,
+        "changed": 0,
+        "count_echo": 167,
+        "latch": [
+          120,
+          0,
+          1,
+          0
+        ]
+      },
+      "after_selector": {
+        "mapped": 0,
+        "response": 0,
+        "latch": [
+          120,
+          0,
+          1,
+          0
+        ]
+      },
+      "ingest_writes": [
+        {
+          "pc": "0x47f6",
+          "address": "0x200431",
+          "size": 1,
+          "value": 1
+        }
+      ]
+    },
+    {
+      "inputs": {
+        "aids": [
+          9
+        ],
+        "staged_selector": 128,
+        "staged_count": 11,
+        "selector": 0,
+        "count": 11,
+        "step": 10,
+        "offset": 0,
+        "blocked": false,
+        "receive_status": 1
+      },
+      "scripted_receive": [
+        {
+          "aid_list_pointer": "0x202fdc",
+          "count_pointer": "0x202fd8",
+          "aids": [
+            9
+          ],
+          "return_status": 1
+        }
+      ],
+      "after_ingest": {
+        "selector": 0,
+        "count": 11,
+        "step": 10,
+        "offset": 0,
+        "changed": 1,
+        "count_echo": 167,
+        "latch": [
+          120,
+          0,
+          1,
+          0
+        ]
+      },
+      "after_selector": {
+        "mapped": 0,
+        "response": 0,
+        "latch": [
+          120,
+          0,
+          1,
+          0
+        ]
+      },
+      "ingest_writes": [
+        {
+          "pc": "0x47f6",
+          "address": "0x200431",
+          "size": 1,
+          "value": 1
+        },
+        {
+          "pc": "0x6260",
+          "address": "0x2006cd",
+          "size": 1,
+          "value": 0
+        },
+        {
+          "pc": "0x6270",
+          "address": "0x200ac4",
+          "size": 1,
+          "value": 1
+        }
+      ]
+    },
+    {
+      "inputs": {
+        "aids": [
+          9
+        ],
+        "staged_selector": 130,
+        "staged_count": 11,
+        "selector": 2,
+        "count": 11,
+        "step": 10,
+        "offset": 0,
+        "blocked": false,
+        "receive_status": 1
+      },
+      "scripted_receive": [
+        {
+          "aid_list_pointer": "0x202fdc",
+          "count_pointer": "0x202fd8",
+          "aids": [
+            9
+          ],
+          "return_status": 1
+        }
+      ],
+      "after_ingest": {
+        "selector": 2,
+        "count": 11,
+        "step": 10,
+        "offset": 0,
+        "changed": 1,
+        "count_echo": 167,
+        "latch": [
+          120,
+          0,
+          1,
+          0
+        ]
+      },
+      "after_selector": {
+        "mapped": 20,
+        "response": 2,
+        "latch": [
+          120,
+          0,
+          1,
+          0
+        ]
+      },
+      "ingest_writes": [
+        {
+          "pc": "0x47f6",
+          "address": "0x200431",
+          "size": 1,
+          "value": 1
+        },
+        {
+          "pc": "0x6260",
+          "address": "0x2006cd",
+          "size": 1,
+          "value": 2
+        },
+        {
+          "pc": "0x6270",
+          "address": "0x200ac4",
+          "size": 1,
+          "value": 1
+        }
+      ]
+    },
+    {
+      "inputs": {
+        "aids": [
+          9
+        ],
+        "staged_selector": 2,
+        "staged_count": 11,
+        "selector": 2,
+        "count": 11,
+        "step": 10,
+        "offset": 0,
+        "blocked": false,
+        "receive_status": 1
+      },
+      "scripted_receive": [
+        {
+          "aid_list_pointer": "0x202fdc",
+          "count_pointer": "0x202fd8",
+          "aids": [
+            9
+          ],
+          "return_status": 1
+        }
+      ],
+      "after_ingest": {
+        "selector": 2,
+        "count": 11,
+        "step": 10,
+        "offset": 0,
+        "changed": 0,
+        "count_echo": 167,
+        "latch": [
+          120,
+          0,
+          1,
+          0
+        ]
+      },
+      "after_selector": {
+        "mapped": 20,
+        "response": 2,
+        "latch": [
+          120,
+          0,
+          1,
+          0
+        ]
+      },
+      "ingest_writes": [
+        {
+          "pc": "0x47f6",
+          "address": "0x200431",
+          "size": 1,
+          "value": 1
+        }
+      ]
+    },
+    {
+      "inputs": {
+        "aids": [
+          9,
+          15
+        ],
+        "staged_selector": 10,
+        "staged_count": 14,
+        "selector": 2,
+        "count": 11,
+        "step": 10,
+        "offset": 0,
+        "blocked": false,
+        "receive_status": 0
+      },
+      "scripted_receive": [
+        {
+          "aid_list_pointer": "0x202fdc",
+          "count_pointer": "0x202fd8",
+          "aids": [
+            9,
+            15
+          ],
+          "return_status": 0
+        }
+      ],
+      "after_ingest": {
+        "selector": 2,
+        "count": 11,
+        "step": 10,
+        "offset": 0,
+        "changed": 0,
+        "count_echo": 167,
+        "latch": [
+          120,
+          0,
+          0,
+          0
+        ]
+      },
+      "after_selector": {
+        "mapped": 20,
+        "response": 2,
+        "latch": [
+          120,
+          0,
+          1,
+          0
+        ]
+      },
+      "ingest_writes": []
+    },
+    {
+      "inputs": {
+        "aids": [
+          9,
+          15
+        ],
+        "staged_selector": 10,
+        "staged_count": 14,
+        "selector": 2,
+        "count": 11,
+        "step": 10,
+        "offset": 0,
+        "blocked": false,
+        "receive_status": 2
+      },
+      "scripted_receive": [
+        {
+          "aid_list_pointer": "0x202fdc",
+          "count_pointer": "0x202fd8",
+          "aids": [
+            9,
+            15
+          ],
+          "return_status": 2
+        }
+      ],
+      "after_ingest": {
+        "selector": 2,
+        "count": 11,
+        "step": 10,
+        "offset": 0,
+        "changed": 0,
+        "count_echo": 167,
+        "latch": [
+          120,
+          0,
+          0,
+          0
+        ]
+      },
+      "after_selector": {
+        "mapped": 20,
+        "response": 2,
+        "latch": [
+          120,
+          0,
+          1,
+          0
+        ]
+      },
+      "ingest_writes": []
+    },
+    {
+      "inputs": {
+        "aids": [
+          9
+        ],
+        "staged_selector": 255,
+        "staged_count": 11,
+        "selector": 2,
+        "count": 0,
+        "step": 1,
+        "offset": 0,
+        "blocked": false,
+        "receive_status": 1
+      },
+      "scripted_receive": [
+        {
+          "aid_list_pointer": "0x202fdc",
+          "count_pointer": "0x202fd8",
+          "aids": [
+            9
+          ],
+          "return_status": 1
+        }
+      ],
+      "after_ingest": {
+        "selector": 255,
+        "count": 0,
+        "step": 1,
+        "offset": 0,
+        "changed": 1,
+        "count_echo": 167,
+        "latch": [
+          120,
+          0,
+          1,
+          0
+        ]
+      },
+      "after_selector": {
+        "mapped": 255,
+        "response": 255,
+        "latch": [
+          120,
+          0,
+          1,
+          0
+        ]
+      },
+      "ingest_writes": [
+        {
+          "pc": "0x47f6",
+          "address": "0x200431",
+          "size": 1,
+          "value": 1
+        },
+        {
+          "pc": "0x6260",
+          "address": "0x2006cd",
+          "size": 1,
+          "value": 127
+        },
+        {
+          "pc": "0x626c",
+          "address": "0x2006cd",
+          "size": 1,
+          "value": 255
+        },
+        {
+          "pc": "0x6270",
+          "address": "0x200ac4",
+          "size": 1,
+          "value": 1
+        }
+      ]
+    },
+    {
+      "inputs": {
+        "aids": [
+          15,
+          9
+        ],
+        "staged_selector": 13,
+        "staged_count": 5,
+        "selector": 13,
+        "count": 14,
+        "step": 7,
+        "offset": 9,
+        "blocked": false,
+        "receive_status": 1
+      },
+      "scripted_receive": [
+        {
+          "aid_list_pointer": "0x202fdc",
+          "count_pointer": "0x202fd8",
+          "aids": [
+            15,
+            9
+          ],
+          "return_status": 1
+        }
+      ],
+      "after_ingest": {
+        "selector": 13,
+        "count": 5,
+        "step": 25,
+        "offset": 0,
+        "changed": 0,
+        "count_echo": 5,
+        "latch": [
+          120,
+          0,
+          1,
+          0
+        ]
+      },
+      "after_selector": {
+        "mapped": 100,
+        "response": 4,
+        "latch": [
+          120,
+          0,
+          1,
+          0
+        ]
+      },
+      "ingest_writes": [
+        {
+          "pc": "0x6494",
+          "address": "0x200580",
+          "size": 1,
+          "value": 5
+        },
+        {
+          "pc": "0x6498",
+          "address": "0x200bea",
+          "size": 1,
+          "value": 5
+        },
+        {
+          "pc": "0x64a6",
+          "address": "0x200433",
+          "size": 1,
+          "value": 25
+        },
+        {
+          "pc": "0x64b4",
+          "address": "0x200434",
+          "size": 1,
+          "value": 0
+        },
+        {
+          "pc": "0x47f6",
+          "address": "0x200431",
+          "size": 1,
+          "value": 1
+        }
+      ]
+    }
+  ],
+  "visited": [
+    "0x601c",
+    "0x601e",
+    "0x6020",
+    "0x6022",
+    "0x6024",
+    "0x6028",
+    "0x602a",
+    "0x602c",
+    "0x602e",
+    "0x6030",
+    "0x6032",
+    "0x6034",
+    "0x6036",
+    "0x6038",
+    "0x603a",
+    "0x603c",
+    "0x603e",
+    "0x6040",
+    "0x604e",
+    "0x6050",
+    "0x6052",
+    "0x6054",
+    "0x6056",
+    "0x6058",
+    "0x605a",
+    "0x605c",
+    "0x605e",
+    "0x6060",
+    "0x6062",
+    "0x6064",
+    "0x6066",
+    "0x6068",
+    "0x606a",
+    "0x606c",
+    "0x606e",
+    "0x6070",
+    "0x6072",
+    "0x6074",
+    "0x6076",
+    "0x6078",
+    "0x607a",
+    "0x607c",
+    "0x607e",
+    "0x6080",
+    "0x6082",
+    "0x6084",
+    "0x6086",
+    "0x6088",
+    "0x608a",
+    "0x6240",
+    "0x6242",
+    "0x6246",
+    "0x6248",
+    "0x624a",
+    "0x624c",
+    "0x624e",
+    "0x6250",
+    "0x6252",
+    "0x6254",
+    "0x6256",
+    "0x6258",
+    "0x625a",
+    "0x625c",
+    "0x625e",
+    "0x6260",
+    "0x6262",
+    "0x6264",
+    "0x6266",
+    "0x6268",
+    "0x626a",
+    "0x626c",
+    "0x626e",
+    "0x6270",
+    "0x6272",
+    "0x6482",
+    "0x6484",
+    "0x6486",
+    "0x6488",
+    "0x648a",
+    "0x648c",
+    "0x648e",
+    "0x6490",
+    "0x6492",
+    "0x6494",
+    "0x6496",
+    "0x6498",
+    "0x649a",
+    "0x649c",
+    "0x649e",
+    "0x64a0",
+    "0x64a2",
+    "0x64a6",
+    "0x64a8",
+    "0x64aa",
+    "0x64ac",
+    "0x64ae",
+    "0x64b0",
+    "0x64b4",
+    "0x64b6"
+  ],
+  "limits": [
+    "0x8038 is replaced by a scripted receive-result contract; its instructions do not execute",
+    "staging bytes are preloaded, not written by actual transport or payload walker",
+    "only AID9/15 handlers, loop and default selection are executed here",
+    "no IRQ interleaving, hardware, packet framing or physical effects modeled",
+    "existing invalid configuration probes do not establish live reachability"
+  ]
+}

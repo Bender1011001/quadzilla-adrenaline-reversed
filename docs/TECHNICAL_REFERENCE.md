@@ -192,6 +192,8 @@ decompile is damaged, so the table was not re-verified in the latest revision.
 Flash sequence: LINK_CHECK, MODULE_INFO, BOOTLOAD_MODE, KEY_TRANSFER, DATA_TRANSFER (repeated), XFER_COMPLETE, DISCONNECT.
 `tools/quadzilla_tool.py` implements only LINK_CHECK, MODULE_INFO, FEATURE_READ and DISCONNECT.
 
+The [validation switch map](AID_DISPATCH_SELECTOR_UPDATES.md) records all 256 byte-AID destinations, staging/response pointers and profile names. AID 9 masks/caps a staged selector after readiness and raw-equality gates; AID 15 clamps count to 5–14 and derives quotient/remainder mapping bytes. These paths have original-byte evidence; 55 other non-default handler accounts remain pending this review.
+
 ## AIDs
 
 117 unique AIDs are declared across the 14 vendor profiles in `vehicles/` (`python tools/diff_profiles.py`). AIDs 145 and 181
