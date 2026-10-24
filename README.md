@@ -75,6 +75,8 @@ The [three-channel timer setup review](docs/TIMER_SETUP_REVIEW.md) documents the
 
 The [SPI setup review](docs/SPI_SETUP_REVIEW.md) documents the following setup call and its no-op source-5 callback, bringing baseline coverage to 94 roles with 51 pending. It records the eleven ordered register writes and literal-pool provenance; live SPI transfers and IRQ handling remain open.
 
+The [TC2 flag helper review](docs/TC2_FLAG_HELPER_REVIEW.md) documents two small callbacks invoked from the larger TC2 routine, bringing baseline coverage to 96 roles with 49 pending. Their exact SRAM flag writes and trigger sites are recorded; the full TC2 callback remains under review.
+
 ## Layout
 
 ```

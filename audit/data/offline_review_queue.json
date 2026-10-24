@@ -9,7 +9,7 @@
     "0x8038",
     "0x7cc4"
   ],
-  "remaining_entries": 51,
+  "remaining_entries": 49,
   "queue": [
     {
       "entry": "0x506c",
@@ -427,34 +427,6 @@
       }
     },
     {
-      "entry": "0x7f28",
-      "undirected_call_distance": 3,
-      "anchor_path": [
-        "0x601c",
-        "0x7128",
-        "0x6c94",
-        "0x7f28"
-      ],
-      "reference_regions": {
-        "image": 1,
-        "sram": 5
-      }
-    },
-    {
-      "entry": "0x7f40",
-      "undirected_call_distance": 3,
-      "anchor_path": [
-        "0x601c",
-        "0x7128",
-        "0x6c94",
-        "0x7f40"
-      ],
-      "reference_regions": {
-        "image": 1,
-        "sram": 6
-      }
-    },
-    {
       "entry": "0x8504",
       "undirected_call_distance": 3,
       "anchor_path": [
@@ -612,5 +584,5 @@
       "reference_regions": {}
     }
   ],
-  "catalog_lf_text_sha256": "8316b71cd2bb6e941b700e472312d80fbc21dfc6d7243a2d2fda34e26faa72bf"
+  "catalog_lf_text_sha256": "87f7ea88d65a6ad38e662f78db37f3ea473b4d8d7332bd2c0d1fc6230ffa1dc7"
 }

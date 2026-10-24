@@ -42,7 +42,7 @@ evidence that every in-range slot is supported or that a hardware fault occurred
 
 ## Functions
 
-The baseline inventory is the two-tool audit: 145 confirmed execution entries, 94 with an evidence-backed role. The initial 14 roles are listed below
+The baseline inventory is the two-tool audit: 145 confirmed execution entries, 96 with an evidence-backed role. The initial 14 roles are listed below
 from `audit/data/semantic_labels.json`. `trace` means a static instruction trace; `chain` means part of the closed static chain below. The labels describe
 static roles and do not prove live engine behaviour.
 
@@ -94,6 +94,8 @@ bringing the total to 92 with 53 pending. It traces the three-channel setup
 and two short callbacks; the third callback remains pending.
 The [SPI setup review](SPI_SETUP_REVIEW.md) adds the setup coordinator and
 source-5 no-op callback, bringing the total to 94 with 51 pending.
+The [TC2 flag helper review](TC2_FLAG_HELPER_REVIEW.md) adds two SRAM flag
+transition helpers, bringing the total to 96 with 49 pending.
 
 ### The static pulse-stretch chain
 

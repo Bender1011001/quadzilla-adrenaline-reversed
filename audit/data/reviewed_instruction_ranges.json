@@ -470,6 +470,32 @@
       ]
     },
     {
+      "start": "0x7f28",
+      "end": "0x7f40",
+      "entry": "0x7f28",
+      "isa": "thumb",
+      "decoder_artifact": "audit/data/tc2_flag_helper_binaryninja.json",
+      "account": "Bounded Thumb helper instructions through BX LR; adjacent literal pools excluded",
+      "evidence": [
+        "audit/data/tc2_flag_helper_binaryninja.json",
+        "audit/data/tc2_flag_helper_emulation.json",
+        "docs/TC2_FLAG_HELPER_REVIEW.md"
+      ]
+    },
+    {
+      "start": "0x7f40",
+      "end": "0x7f58",
+      "entry": "0x7f40",
+      "isa": "thumb",
+      "decoder_artifact": "audit/data/tc2_flag_helper_binaryninja.json",
+      "account": "Bounded Thumb helper instructions through BX LR; adjacent literal pools excluded",
+      "evidence": [
+        "audit/data/tc2_flag_helper_binaryninja.json",
+        "audit/data/tc2_flag_helper_emulation.json",
+        "docs/TC2_FLAG_HELPER_REVIEW.md"
+      ]
+    },
+    {
       "start": "0x8678",
       "end": "0x896c",
       "entry": "0x8678",
