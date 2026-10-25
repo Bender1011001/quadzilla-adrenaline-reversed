@@ -44,8 +44,10 @@ and `0x2007E1` in the inspected outgoing branches; the filter cannot
 increase a valid current count. Parsed lists from the normal 16-byte
 receive frame carry at most 14 AIDs. These observations support a
 bounded path for the inspected producers. The complete set of writes
-to `0x2007DB/0x2007E0` and the full `0x81A8` state transitions remain
-unresolved, so the normal-state invariant is not yet a whole-image proof.
+to `0x2007DB/0x2007E0` remain unresolved, so the normal-state invariant is
+not yet a whole-image proof. The [outgoing state review](OUTGOING_STATE_REVIEW.md)
+now traces all `0x81A8` instructions and confirms the local copier, frame
+builder, filter and USART submission order.
 
 ## Local stack boundary
 
@@ -59,8 +61,8 @@ records original stores and return/fault states for counts 14, 16, 17,
 Physical receive reachability, target exception behavior and engine
 effects have not been established.
 
-The full receive and outgoing state machines, indirect writers of queue
-counts, transmit scheduling and peripheral effects remain required for
+The full receive state machine, indirect writers of queue source counts,
+transmit completion and peripheral effects remain required for
 the firmware goal. No device traffic was sent.
 
 ```text

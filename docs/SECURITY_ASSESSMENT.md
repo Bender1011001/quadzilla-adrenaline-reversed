@@ -190,6 +190,10 @@ current-list count. A direct call with 17 unmatched AIDs reaches saved
 register storage. Its four direct call sites, zero-initialized queue
 fields and the inspected 14-byte copy caps narrow the normal-path risk;
 the complete writer provenance for those fields is still under review.
+The [outgoing state review](OUTGOING_STATE_REVIEW.md) confirms the local
+14-byte working-queue copies and shows that the response reader rewrites
+the distinct source counts after each frame. It does not establish every
+source-count producer or physical reachability of either stack boundary.
 
 ## Also checked, no issue found
 

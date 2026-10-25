@@ -135,7 +135,8 @@ control and timer anchors. Proximity is a review heuristic, not execution
 reachability, a vulnerability score, or a semantic conclusion.
 
 Highest-value next investigations: raw-staging readers outside the dispatcher;
-the receive gate/buffer routines used by `0x8038`; full `0x81A8` state handling;
+the receive gate/buffer routines used by `0x8038`; source-count provenance
+and transmit completion beyond the later [outgoing state review](OUTGOING_STATE_REVIEW.md);
 variable-width AIDs 220+; and interrupt/main-loop interactions. A complete proof
 that all writes are validated requires those additional paths.
 
