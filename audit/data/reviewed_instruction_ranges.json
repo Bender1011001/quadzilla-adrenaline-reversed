@@ -971,6 +971,20 @@
       "decoder_artifact": "audit/data/frame_reader_binaryninja.json"
     },
     {
+      "start": "0x7efc",
+      "end": "0x7f28",
+      "entry": "0x7efc",
+      "isa": "thumb",
+      "account": "Guarded outgoing-data queue setup; complete 21-start body visited with zero, bounded and oversized synthetic source counts",
+      "evidence": [
+        "audit/data/queue_state_owners_binaryninja.json",
+        "audit/data/queue_state_owners_emulation.json",
+        "audit/data/queue_state_refs.json",
+        "docs/QUEUE_STATE_OWNER_REVIEW.md"
+      ],
+      "decoder_artifact": "audit/data/queue_state_owners_binaryninja.json"
+    },
+    {
       "start": "0x7f28",
       "end": "0x7f40",
       "entry": "0x7f28",
@@ -1023,6 +1037,20 @@
         "docs/FRAME_READER_REVIEW.md"
       ],
       "decoder_artifact": "audit/data/frame_reader_binaryninja.json"
+    },
+    {
+      "start": "0x800c",
+      "end": "0x8034",
+      "entry": "0x800c",
+      "isa": "thumb",
+      "account": "Flag reset and receive rearm helper; complete 19-start body visited with controlled shared state and passive USART page",
+      "evidence": [
+        "audit/data/queue_state_owners_binaryninja.json",
+        "audit/data/queue_state_owners_emulation.json",
+        "audit/data/queue_state_refs.json",
+        "docs/QUEUE_STATE_OWNER_REVIEW.md"
+      ],
+      "decoder_artifact": "audit/data/queue_state_owners_binaryninja.json"
     },
     {
       "start": "0x8038",

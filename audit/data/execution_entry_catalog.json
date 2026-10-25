@@ -4,8 +4,8 @@
   "unit": "execution_entries_including_vectors_thunks_and_alternate_entries",
   "summary": {
     "confirmed_entries": 145,
-    "documented_static_roles": 116,
-    "unlabeled_static_entries": 29,
+    "documented_static_roles": 117,
+    "unlabeled_static_entries": 28,
     "entries_with_ida_sram_references": 49,
     "entries_with_ida_peripheral_references": 21,
     "union_direct_call_edges": 180
@@ -15190,11 +15190,12 @@
         {
           "entry": "0x7efc",
           "label": "Conditional outgoing-data queue setup with busy-flag guards",
-          "assurance": "static_instruction_trace",
+          "assurance": "static_instruction_trace_and_bounded_emulation",
           "evidence": [
-            "audit/data/write_path_ida.json:entries.0x7efc",
-            "audit/data/write_path_binaryninja.json:entries.0x7efc",
-            "docs/OFFLINE_WRITE_PATH_REVIEW.md"
+            "audit/data/queue_state_owners_binaryninja.json",
+            "audit/data/queue_state_owners_emulation.json",
+            "audit/data/queue_state_refs.json",
+            "docs/QUEUE_STATE_OWNER_REVIEW.md"
           ]
         }
       ],
@@ -15530,8 +15531,20 @@
           ]
         }
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x800c",
+          "label": "Outgoing-state flag reset and USART0 receive rearm helper",
+          "assurance": "static_instruction_trace_and_bounded_emulation",
+          "evidence": [
+            "audit/data/queue_state_owners_binaryninja.json",
+            "audit/data/queue_state_owners_emulation.json",
+            "audit/data/queue_state_refs.json",
+            "docs/QUEUE_STATE_OWNER_REVIEW.md"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [
           "0x7b1c"
@@ -17572,7 +17585,7 @@
     },
     "labels": {
       "path": "audit/data/semantic_labels.json",
-      "sha256": "00b97bac86aa819d5912a09b04ddfd86e0fc5db9993236b421fe805d33d88b37"
+      "sha256": "f37971fe541850647a0a97589b9af1b675c3d38880f73e20e8249090e66e2c75"
     }
   },
   "input_hash_policy": "SHA-256 of JSON text with CRLF normalized to LF"

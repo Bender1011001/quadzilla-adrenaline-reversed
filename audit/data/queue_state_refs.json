@@ -1,0 +1,129 @@
+{
+  "format": "quadzilla-queue-state-references-v1",
+  "raw_sha256": "1ae519ba6194e8f7bdaaa94333a83a9e6fda3b0563f87f7d48383b37288c1780",
+  "aligned_words_pointing_into_state": [
+    {
+      "at": "0x8034",
+      "value": "0x2007c8"
+    },
+    {
+      "at": "0x81a4",
+      "value": "0x2007c8"
+    },
+    {
+      "at": "0x8500",
+      "value": "0x2007c8"
+    },
+    {
+      "at": "0x9ed0",
+      "value": "0x2007f0"
+    }
+  ],
+  "ida_references_to_state_base": [
+    {
+      "at": "0x7f00",
+      "text": "LDR             R0, =0x2007C8",
+      "data_refs": [
+        "0x8034",
+        "0x2007c8"
+      ]
+    },
+    {
+      "at": "0x7f28",
+      "text": "LDR             R0, =0x2007C8",
+      "data_refs": [
+        "0x81a4",
+        "0x2007c8"
+      ]
+    },
+    {
+      "at": "0x7f42",
+      "text": "LDR             R1, =0x2007C8",
+      "data_refs": [
+        "0x8034",
+        "0x2007c8"
+      ]
+    },
+    {
+      "at": "0x800e",
+      "text": "LDR             R0, =0x2007C8",
+      "data_refs": [
+        "0x8034",
+        "0x2007c8"
+      ]
+    },
+    {
+      "at": "0x804c",
+      "text": "LDR             R6, =0x2007C8",
+      "data_refs": [
+        "0x81a4",
+        "0x2007c8"
+      ]
+    },
+    {
+      "at": "0x81bc",
+      "text": "LDR             R6, =0x2007C8",
+      "data_refs": [
+        "0x8500",
+        "0x2007c8"
+      ]
+    }
+  ],
+  "decoded_direct_call_sites": {
+    "0x7eb4": [
+      "0x81d4",
+      "0x8200",
+      "0x8240",
+      "0x8274",
+      "0x82b6",
+      "0x82ea",
+      "0x832c",
+      "0x8388",
+      "0x83f2",
+      "0x845c",
+      "0x84b4"
+    ],
+    "0x7efc": [
+      "0x7706",
+      "0x7724",
+      "0x7744",
+      "0x7764",
+      "0x7780"
+    ],
+    "0x7f58": [
+      "0x8126",
+      "0x8172",
+      "0x83c4",
+      "0x84ec"
+    ],
+    "0x7fd8": [
+      "0x7f1a",
+      "0x80ce",
+      "0x80f6",
+      "0x837a",
+      "0x83e4",
+      "0x844e",
+      "0x84a6"
+    ],
+    "0x800c": [
+      "0x758e"
+    ],
+    "0x8038": [
+      "0x6024"
+    ],
+    "0x81a8": [
+      "0x779c"
+    ]
+  },
+  "initialized_count_bytes": {
+    "0x2007db": 0,
+    "0x2007dc": 0,
+    "0x2007e0": 0,
+    "0x2007e1": 0
+  },
+  "limitations": [
+    "aligned literal inventory does not rule out computed or aliased pointers",
+    "IDA references and direct targets are tool interpretations",
+    "runtime writes from unreviewed entries and interrupts remain to be audited"
+  ]
+}

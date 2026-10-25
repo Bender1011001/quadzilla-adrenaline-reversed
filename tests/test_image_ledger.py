@@ -14,7 +14,7 @@ spec.loader.exec_module(ledger)
 class ImageLedger(unittest.TestCase):
     def test_review_manifest_rejects_false_coverage(self):
         doc = json.loads((ROOT / "audit/data/reviewed_instruction_ranges.json").read_text())
-        self.assertEqual(sum(b-a for a, b, *_ in ledger.validate_instruction_reviews(doc)), 13022)
+        self.assertEqual(sum(b-a for a, b, *_ in ledger.validate_instruction_reviews(doc)), 13106)
         for change in ("hash", "overlap", "layout", "odd", "account"):
             malformed = copy.deepcopy(doc)
             if change == "hash":
@@ -48,7 +48,7 @@ class ImageLedger(unittest.TestCase):
                 cursor += instruction["length"]
             self.assertEqual(cursor, end)
         accepted = [r for r in doc["ranges"] if r["classification"] in ("reviewed_thumb_instructions", "reviewed_arm_instructions")]
-        self.assertEqual(sum(int(r["end"], 0)-int(r["start"], 0) for r in accepted), 13022)
+        self.assertEqual(sum(int(r["end"], 0)-int(r["start"], 0) for r in accepted), 13106)
         for r in accepted:
             self.assertTrue(any(entry == r["review_entry"] and
                                 start <= int(r["start"], 0) < int(r["end"], 0) <= end
@@ -104,6 +104,29 @@ class ImageLedger(unittest.TestCase):
         results = {row["label"]: row["status"] for row in executed["cases"]}
         self.assertEqual((results["no_pending"], results["bad_crc"], results["type5_finish"]),
                          (0, 4, 6))
+
+    def test_queue_owner_counts_and_direct_state_literals(self):
+        decoded = json.loads((ROOT / "audit/data/queue_state_owners_binaryninja.json").read_text())
+        executed = json.loads((ROOT / "audit/data/queue_state_owners_emulation.json").read_text())
+        refs = json.loads((ROOT / "audit/data/queue_state_refs.json").read_text())
+        starts = {int(item["address"], 0) for block in decoded["ranges"]
+                  for item in block["instructions"]}
+        visited = {int(a, 0) for a in executed["visited_starts"]}
+        self.assertEqual((len(starts), sum(item["length"] for block in decoded["ranges"]
+                                           for item in block["instructions"])), (40, 84))
+        self.assertTrue(starts <= visited)
+        rows = {row["label"]: row for row in executed["cases"]}
+        self.assertEqual([rows[name]["counts"]["0xd"] for name in
+                          ("queue_one", "queue_fourteen", "queue_fifteen", "queue_255")],
+                         [1, 14, 14, 14])
+        self.assertEqual([rows[name]["result"]["r0"] for name in ("busy_e", "busy_f")], [0, 0])
+        self.assertEqual([rows["reset_flags"]["counts"][name] for name in ("0x13", "0x18")],
+                         [14, 13])
+        self.assertEqual([(item["at"], item["value"]) for item in
+                          refs["aligned_words_pointing_into_state"]],
+                         [("0x8034", "0x2007c8"), ("0x81a4", "0x2007c8"),
+                          ("0x8500", "0x2007c8"), ("0x9ed0", "0x2007f0")])
+        self.assertEqual(set(refs["initialized_count_bytes"].values()), {0})
 
     def test_ram_template_descriptor_and_call_targets(self):
         doc = json.loads((ROOT / "audit/data/image_coverage_ledger.json").read_text())

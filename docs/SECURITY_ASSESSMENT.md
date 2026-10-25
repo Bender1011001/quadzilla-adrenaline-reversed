@@ -194,6 +194,10 @@ The [outgoing state review](OUTGOING_STATE_REVIEW.md) confirms the local
 14-byte working-queue copies and shows that the response reader rewrites
 the distinct source counts after each frame. It does not establish every
 source-count producer or physical reachability of either stack boundary.
+The [queue state owner review](QUEUE_STATE_OWNER_REVIEW.md) also checks the
+guarded third-queue setup, flag reset and all aligned image literals into
+the shared state block. Neither reviewed helper fills the two outgoing AID
+source counts; indirect or computed-pointer writers remain to be excluded.
 
 ## Also checked, no issue found
 

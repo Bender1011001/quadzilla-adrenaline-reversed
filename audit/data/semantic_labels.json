@@ -882,11 +882,12 @@
     {
       "entry": "0x7efc",
       "label": "Conditional outgoing-data queue setup with busy-flag guards",
-      "assurance": "static_instruction_trace",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
       "evidence": [
-        "audit/data/write_path_ida.json:entries.0x7efc",
-        "audit/data/write_path_binaryninja.json:entries.0x7efc",
-        "docs/OFFLINE_WRITE_PATH_REVIEW.md"
+        "audit/data/queue_state_owners_binaryninja.json",
+        "audit/data/queue_state_owners_emulation.json",
+        "audit/data/queue_state_refs.json",
+        "docs/QUEUE_STATE_OWNER_REVIEW.md"
       ]
     },
     {
@@ -929,6 +930,17 @@
         "audit/data/frame_reader_boundary.json",
         "audit/data/frame_reader_emulation.json",
         "docs/FRAME_READER_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x800c",
+      "label": "Outgoing-state flag reset and USART0 receive rearm helper",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/queue_state_owners_binaryninja.json",
+        "audit/data/queue_state_owners_emulation.json",
+        "audit/data/queue_state_refs.json",
+        "docs/QUEUE_STATE_OWNER_REVIEW.md"
       ]
     },
     {

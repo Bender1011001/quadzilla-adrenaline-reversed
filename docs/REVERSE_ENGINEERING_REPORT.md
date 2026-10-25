@@ -22,6 +22,8 @@ The [outgoing state review](OUTGOING_STATE_REVIEW.md) traces the 854-byte priori
 
 The [receive state review](RECEIVE_STATE_REVIEW.md) executes all 162 instruction starts across 14 controlled cases. It classifies the six-byte type switch, FF alignment and state-base literal as data; types 0/4 queue bounded response lists, while types 2/5 filter armed working lists. The source counts passed to the outgoing frame builder are not populated in this receive routine.
 
+The [queue state owner review](QUEUE_STATE_OWNER_REVIEW.md) executes the guarded type-3 queue setup and flag-reset helper, and inventories exact state-block literals. Neither helper writes the two outgoing AID source counts. A computed pointer or indirect writer elsewhere remains possible until whole-image pointer flow is reviewed.
+
 ## 1. Scope and approach
 
 Four independent surfaces were attacked, each giving a cross-check on the others:
