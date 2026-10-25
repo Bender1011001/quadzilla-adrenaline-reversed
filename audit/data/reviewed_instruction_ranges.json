@@ -971,6 +971,20 @@
       "decoder_artifact": "audit/data/frame_reader_binaryninja.json"
     },
     {
+      "start": "0x76cc",
+      "end": "0x77a6",
+      "entry": "0x76cc",
+      "isa": "thumb",
+      "account": "Full control-cycle orchestration and five-slot queue selector: 98 decoded starts match IDA, 85 continuation starts execute with explicit caller context, 13 upstream-call instructions statically traced",
+      "evidence": [
+        "audit/data/cycle_queue_binaryninja.json",
+        "audit/data/cycle_queue_selection_emulation.json",
+        "audit/data/cycle_queue_sources.json",
+        "docs/CYCLE_QUEUE_SELECTION_REVIEW.md"
+      ],
+      "decoder_artifact": "audit/data/cycle_queue_binaryninja.json"
+    },
+    {
       "start": "0x7efc",
       "end": "0x7f28",
       "entry": "0x7efc",

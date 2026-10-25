@@ -671,11 +671,12 @@
     {
       "entry": "0x76cc",
       "label": "Control-cycle orchestrator: capture unpack, AID validation, main control, and conditional communications",
-      "assurance": "static_instruction_trace",
+      "assurance": "static_instruction_trace_and_bounded_continuation_emulation",
       "evidence": [
-        "audit/data/write_path_ida.json:entries.0x76cc",
-        "audit/data/write_path_binaryninja.json:entries.0x76cc",
-        "docs/OFFLINE_WRITE_PATH_REVIEW.md"
+        "audit/data/cycle_queue_binaryninja.json",
+        "audit/data/cycle_queue_selection_emulation.json",
+        "audit/data/cycle_queue_sources.json",
+        "docs/CYCLE_QUEUE_SELECTION_REVIEW.md"
       ]
     },
     {

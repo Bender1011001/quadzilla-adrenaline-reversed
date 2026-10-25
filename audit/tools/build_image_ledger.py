@@ -16,6 +16,8 @@ SHA = "1ae519ba6194e8f7bdaaa94333a83a9e6fda3b0563f87f7d48383b37288c1780"
 BASE, END = 0x4000, 0xBD00
 LAYOUT = (
     (0x608C, 0x6240, "aid_validation_dispatch_table"),
+    (0x77A6, 0x77A8, "cycle_queue_alignment_ff"),
+    (0x77A8, 0x77B8, "cycle_queue_literal_pool"),
     (0x7CA0, 0x7CC4, "aid_resolver_literal_pool"),
     (0x800A, 0x800C, "queue_helper_alignment_ff"),
     (0x8034, 0x8038, "queue_state_base_literal"),

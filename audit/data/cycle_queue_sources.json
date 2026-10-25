@@ -1,0 +1,148 @@
+{
+  "format": "quadzilla-cycle-queue-sources-v1",
+  "raw_sha256": "1ae519ba6194e8f7bdaaa94333a83a9e6fda3b0563f87f7d48383b37288c1780",
+  "state_base": "0x200788",
+  "initialized_selector": 0,
+  "initialized_pending": 0,
+  "alignment": {
+    "start": "0x77a6",
+    "end": "0x77a8",
+    "bytes": "ffff"
+  },
+  "literal_pool": {
+    "start": "0x77a8",
+    "end": "0x77b8",
+    "words": [
+      "0x200788",
+      "0x200712",
+      "0x200710",
+      "0x200711"
+    ]
+  },
+  "aligned_literals_into_source_block": [
+    {
+      "at": "0x562c",
+      "value": "0x200789"
+    },
+    {
+      "at": "0x5630",
+      "value": "0x200788"
+    },
+    {
+      "at": "0x6f7c",
+      "value": "0x200792"
+    },
+    {
+      "at": "0x7494",
+      "value": "0x200788"
+    },
+    {
+      "at": "0x74e0",
+      "value": "0x200791"
+    },
+    {
+      "at": "0x76a0",
+      "value": "0x200794"
+    },
+    {
+      "at": "0x77a8",
+      "value": "0x200788"
+    },
+    {
+      "at": "0x7a40",
+      "value": "0x200788"
+    }
+  ],
+  "slots": [
+    {
+      "slot": 0,
+      "call": "0x7706",
+      "count_address": "0x20078a",
+      "count_initialized": 6,
+      "source_address": "0x2007a0",
+      "block_bytes": "00204c0609bc0000",
+      "aids": [
+        0,
+        32,
+        76,
+        6,
+        9,
+        188
+      ],
+      "unused_bytes": "0000"
+    },
+    {
+      "slot": 1,
+      "call": "0x7724",
+      "count_address": "0x20078b",
+      "count_initialized": 6,
+      "source_address": "0x2007a8",
+      "block_bytes": "544b042827100000",
+      "aids": [
+        84,
+        75,
+        4,
+        40,
+        39,
+        16
+      ],
+      "unused_bytes": "0000"
+    },
+    {
+      "slot": 2,
+      "call": "0x7744",
+      "count_address": "0x20078c",
+      "count_initialized": 7,
+      "source_address": "0x2007b0",
+      "block_bytes": "949501054e93b500",
+      "aids": [
+        148,
+        149,
+        1,
+        5,
+        78,
+        147,
+        181
+      ],
+      "unused_bytes": "00"
+    },
+    {
+      "slot": 3,
+      "call": "0x7764",
+      "count_address": "0x20078d",
+      "count_initialized": 6,
+      "source_address": "0x2007b8",
+      "block_bytes": "0d0c070308090000",
+      "aids": [
+        13,
+        12,
+        7,
+        3,
+        8,
+        9
+      ],
+      "unused_bytes": "0000"
+    },
+    {
+      "slot": 4,
+      "call": "0x7780",
+      "count_address": "0x20078e",
+      "count_initialized": 5,
+      "source_address": "0x2007c0",
+      "block_bytes": "6994954e10000000",
+      "aids": [
+        105,
+        148,
+        149,
+        78,
+        16
+      ],
+      "unused_bytes": "000000"
+    }
+  ],
+  "limitations": [
+    "startup values do not bound all later writers",
+    "profile names and physical signal meanings are separate evidence",
+    "call-site decode validates targets but not every upstream producer"
+  ]
+}

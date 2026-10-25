@@ -24,6 +24,8 @@ The [receive state review](RECEIVE_STATE_REVIEW.md) executes all 162 instruction
 
 The [queue state owner review](QUEUE_STATE_OWNER_REVIEW.md) executes the guarded type-3 queue setup and flag-reset helper, and inventories exact state-block literals. Neither helper writes the two outgoing AID source counts. A computed pointer or indirect writer elsewhere remains possible until whole-image pointer flow is reviewed.
 
+The [cycle queue selection review](CYCLE_QUEUE_SELECTION_REVIEW.md) identifies five initialized AID lists of 5–7 entries, each stored in an eight-byte block, and follows their round-robin submission into the third queue. A synthetic count of nine crosses into the next slot; whether any runtime writer can raise a slot count that far remains unproved.
+
 ## 1. Scope and approach
 
 Four independent surfaces were attacked, each giving a cross-check on the others:

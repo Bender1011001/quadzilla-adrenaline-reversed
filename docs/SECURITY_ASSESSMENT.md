@@ -199,6 +199,14 @@ guarded third-queue setup, flag reset and all aligned image literals into
 the shared state block. Neither reviewed helper fills the two outgoing AID
 source counts; indirect or computed-pointer writers remain to be excluded.
 
+The [cycle queue selector](CYCLE_QUEUE_SELECTION_REVIEW.md) has a separate
+conditional source-boundary issue. Its five initialized telemetry lists
+occupy eight bytes each and start with counts 5–7. A controlled count of
+nine makes the otherwise 14-capped queue copier read the first byte of
+the following list. The source-count writers have not yet been fully
+traced, so this is a demonstrated local condition, not an established
+ordinary operating state or hardware effect.
+
 ## Also checked, no issue found
 
 - Secure RFCOMM variant used; no insecure-socket call.
