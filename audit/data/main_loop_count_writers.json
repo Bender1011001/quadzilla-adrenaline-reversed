@@ -1,0 +1,182 @@
+{
+  "format": "quadzilla-main-loop-count-writer-audit-v1",
+  "raw_sha256": "1ae519ba6194e8f7bdaaa94333a83a9e6fda3b0563f87f7d48383b37288c1780",
+  "main_loop": [
+    "0x77b8",
+    "0x7a3e"
+  ],
+  "bn_instruction_starts": 307,
+  "ida_code_item_starts": 305,
+  "bn_only_starts": [
+    "0x77c0",
+    "0x786e"
+  ],
+  "ida_only_starts": [],
+  "main_loop_explicit_r5_assignments": [
+    {
+      "site": "0x77c6",
+      "instruction": "LDR             R5, =0x200788"
+    }
+  ],
+  "main_loop_r5_direct_stores": [
+    {
+      "site": "0x77f4",
+      "size": 1,
+      "offset": 7,
+      "address": "0x20078f"
+    },
+    {
+      "site": "0x77fa",
+      "size": 1,
+      "offset": 1,
+      "address": "0x200789"
+    },
+    {
+      "site": "0x77fc",
+      "size": 1,
+      "offset": 0,
+      "address": "0x200788"
+    },
+    {
+      "site": "0x7842",
+      "size": 1,
+      "offset": 8,
+      "address": "0x200790"
+    },
+    {
+      "site": "0x78b2",
+      "size": 1,
+      "offset": 10,
+      "address": "0x200792"
+    },
+    {
+      "site": "0x78c4",
+      "size": 1,
+      "offset": 1,
+      "address": "0x200789"
+    },
+    {
+      "site": "0x78c6",
+      "size": 1,
+      "offset": 0,
+      "address": "0x200788"
+    },
+    {
+      "site": "0x78e2",
+      "size": 1,
+      "offset": 8,
+      "address": "0x200790"
+    },
+    {
+      "site": "0x7906",
+      "size": 1,
+      "offset": 10,
+      "address": "0x200792"
+    },
+    {
+      "site": "0x7966",
+      "size": 1,
+      "offset": 8,
+      "address": "0x200790"
+    },
+    {
+      "site": "0x797a",
+      "size": 2,
+      "offset": 12,
+      "address": "0x200794"
+    },
+    {
+      "site": "0x797e",
+      "size": 1,
+      "offset": 8,
+      "address": "0x200790"
+    },
+    {
+      "site": "0x7992",
+      "size": 1,
+      "offset": 8,
+      "address": "0x200790"
+    },
+    {
+      "site": "0x79a0",
+      "size": 1,
+      "offset": 10,
+      "address": "0x200792"
+    },
+    {
+      "site": "0x7a0a",
+      "size": 1,
+      "offset": 8,
+      "address": "0x200790"
+    }
+  ],
+  "global_direct_count_references": [
+    {
+      "site": "0x7700",
+      "instruction": "LDRB            R1, [R4,#2]",
+      "address": "0x20078a"
+    },
+    {
+      "site": "0x771e",
+      "instruction": "LDRB            R1, [R4,#3]",
+      "address": "0x20078b"
+    },
+    {
+      "site": "0x773e",
+      "instruction": "LDRB            R1, [R4,#4]",
+      "address": "0x20078c"
+    },
+    {
+      "site": "0x775e",
+      "instruction": "LDRB            R1, [R4,#5]",
+      "address": "0x20078d"
+    },
+    {
+      "site": "0x777a",
+      "instruction": "LDRB            R1, [R4,#6]",
+      "address": "0x20078e"
+    }
+  ],
+  "global_direct_state_base_references": [
+    {
+      "site": "0x53aa",
+      "function": "0x50f0",
+      "instruction": "LDR             R0, =0x200788"
+    },
+    {
+      "site": "0x745a",
+      "function": "0x7448",
+      "instruction": "LDR             R0, =0x200788"
+    },
+    {
+      "site": "0x7498",
+      "function": "0x7498",
+      "instruction": "LDR             R0, =0x200788"
+    },
+    {
+      "site": "0x74b4",
+      "function": "0x74b4",
+      "instruction": "LDR             R0, =0x200788"
+    },
+    {
+      "site": "0x74ee",
+      "function": "0x74e8",
+      "instruction": "LDR             R0, =0x200788"
+    },
+    {
+      "site": "0x76d2",
+      "function": "0x76cc",
+      "instruction": "LDR             R4, =0x200788"
+    },
+    {
+      "site": "0x77c6",
+      "function": "0x77b8",
+      "instruction": "LDR             R5, =0x200788"
+    }
+  ],
+  "limits": [
+    "R5 is loaded from the 0x200788 literal at 0x77c6 and has no explicit reassignment in the bounded body; subordinate calls are separate paths",
+    "IDA data references are a static xref inventory, not complete alias analysis",
+    "computed pointers, interrupt effects, and downstream callees remain possible count writers"
+  ]
+}

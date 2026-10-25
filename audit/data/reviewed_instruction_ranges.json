@@ -985,6 +985,20 @@
       "decoder_artifact": "audit/data/cycle_queue_binaryninja.json"
     },
     {
+      "start": "0x77b8",
+      "end": "0x7a3e",
+      "entry": "0x77b8",
+      "isa": "thumb",
+      "account": "Complete bounded nonreturning Thumb body statically traced; 157 of 307 decoded starts visited in synthetic dispatcher continuations; subordinate calls remain separate",
+      "evidence": [
+        "audit/data/main_loop_binaryninja.json",
+        "audit/data/main_loop_count_writers.json",
+        "audit/data/main_loop_dispatch_emulation.json",
+        "docs/MAIN_LOOP_STATE_REVIEW.md"
+      ],
+      "decoder_artifact": "audit/data/main_loop_binaryninja.json"
+    },
+    {
       "start": "0x7efc",
       "end": "0x7f28",
       "entry": "0x7efc",

@@ -1272,8 +1272,20 @@
     },
     {
       "entry": "0x77b8",
-      "semantic_status": "unlabeled_static_entry",
-      "semantics": [],
+      "semantic_status": "documented_static_role",
+      "semantics": [
+        {
+          "entry": "0x77b8",
+          "label": "Nonreturning reset continuation and three-state control-cycle dispatcher",
+          "assurance": "static_instruction_trace_and_bounded_dispatch_emulation",
+          "evidence": [
+            "audit/data/main_loop_binaryninja.json",
+            "audit/data/main_loop_count_writers.json",
+            "audit/data/main_loop_dispatch_emulation.json",
+            "docs/MAIN_LOOP_STATE_REVIEW.md"
+          ]
+        }
+      ],
       "blocks": {
         "AIC": 1,
         "PIOA": 13,
@@ -1393,7 +1405,7 @@
   "inputs": {
     "catalog": {
       "path": "audit/data/execution_entry_catalog.json",
-      "sha256": "487572ff8bdb514c3a461dd12629fd74f6b981c6a0b5fe66143d6b366f74e55d"
+      "sha256": "c88ad5bb2d19c668fbd41400f4b134430f423def61affc351c88428ff581b44c"
     },
     "peripheral_map": {
       "path": "audit/data/sam7s_peripheral_map.json",

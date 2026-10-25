@@ -14,7 +14,7 @@ spec.loader.exec_module(ledger)
 class ImageLedger(unittest.TestCase):
     def test_review_manifest_rejects_false_coverage(self):
         doc = json.loads((ROOT / "audit/data/reviewed_instruction_ranges.json").read_text())
-        self.assertEqual(sum(b-a for a, b, *_ in ledger.validate_instruction_reviews(doc)), 13324)
+        self.assertEqual(sum(b-a for a, b, *_ in ledger.validate_instruction_reviews(doc)), 13970)
         for change in ("hash", "overlap", "layout", "odd", "account"):
             malformed = copy.deepcopy(doc)
             if change == "hash":
@@ -48,7 +48,7 @@ class ImageLedger(unittest.TestCase):
                 cursor += instruction["length"]
             self.assertEqual(cursor, end)
         accepted = [r for r in doc["ranges"] if r["classification"] in ("reviewed_thumb_instructions", "reviewed_arm_instructions")]
-        self.assertEqual(sum(int(r["end"], 0)-int(r["start"], 0) for r in accepted), 13324)
+        self.assertEqual(sum(int(r["end"], 0)-int(r["start"], 0) for r in accepted), 13970)
         for r in accepted:
             self.assertTrue(any(entry == r["review_entry"] and
                                 start <= int(r["start"], 0) < int(r["end"], 0) <= end
@@ -69,6 +69,24 @@ class ImageLedger(unittest.TestCase):
         self.assertIn("incomplete", doc["completion"])
         self.assertGreater(doc["classification_bytes"]["ida_code_pending_review"], 0)
         self.assertGreater(len(doc["ida_layout_conflicts"]), 0)
+
+    def test_main_loop_count_writer_claim_is_bounded_to_direct_stores(self):
+        audit = json.loads((ROOT / "audit/data/main_loop_count_writers.json").read_text())
+        run = json.loads((ROOT / "audit/data/main_loop_dispatch_emulation.json").read_text())
+        self.assertEqual((audit["bn_instruction_starts"], audit["ida_code_item_starts"]), (307, 305))
+        self.assertEqual(audit["bn_only_starts"], ["0x77c0", "0x786e"])
+        self.assertEqual(len(audit["main_loop_r5_direct_stores"]), 15)
+        counts = set(range(0x20078A, 0x20078F))
+        self.assertTrue(all(not counts.intersection(range(int(row["address"], 0),
+                                                      int(row["address"], 0) + row["size"]))
+                            for row in audit["main_loop_r5_direct_stores"]))
+        self.assertEqual({int(row["address"], 0) for row in audit["global_direct_count_references"]}, counts)
+        self.assertTrue(all(row["instruction"].startswith("LDRB")
+                            for row in audit["global_direct_count_references"]))
+        self.assertEqual(len(run["cases"]), 8)
+        self.assertEqual(len(run["visited_starts"]), 157)
+        self.assertTrue(all(int(write["address"], 0) not in counts
+                            for row in run["cases"] for write in row["writes"]))
 
     def test_outgoing_state_evidence_and_count_write_order(self):
         decoded = json.loads((ROOT / "audit/data/outgoing_state_binaryninja.json").read_text())

@@ -9,7 +9,7 @@
     "0x8038",
     "0x7cc4"
   ],
-  "remaining_entries": 28,
+  "remaining_entries": 27,
   "queue": [
     {
       "entry": "0x4214",
@@ -37,20 +37,6 @@
         "image": 9,
         "peripheral": 5,
         "sram": 3
-      }
-    },
-    {
-      "entry": "0x77b8",
-      "undirected_call_distance": 2,
-      "anchor_path": [
-        "0x601c",
-        "0x4384",
-        "0x77b8"
-      ],
-      "reference_regions": {
-        "image": 87,
-        "peripheral": 15,
-        "sram": 84
       }
     },
     {
@@ -331,5 +317,5 @@
       "reference_regions": {}
     }
   ],
-  "catalog_lf_text_sha256": "487572ff8bdb514c3a461dd12629fd74f6b981c6a0b5fe66143d6b366f74e55d"
+  "catalog_lf_text_sha256": "c88ad5bb2d19c668fbd41400f4b134430f423def61affc351c88428ff581b44c"
 }

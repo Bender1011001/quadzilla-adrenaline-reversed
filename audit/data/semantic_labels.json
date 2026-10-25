@@ -680,6 +680,17 @@
       ]
     },
     {
+      "entry": "0x77b8",
+      "label": "Nonreturning reset continuation and three-state control-cycle dispatcher",
+      "assurance": "static_instruction_trace_and_bounded_dispatch_emulation",
+      "evidence": [
+        "audit/data/main_loop_binaryninja.json",
+        "audit/data/main_loop_count_writers.json",
+        "audit/data/main_loop_dispatch_emulation.json",
+        "docs/MAIN_LOOP_STATE_REVIEW.md"
+      ]
+    },
+    {
       "entry": "0x7af8",
       "label": "Transmit staging call wrapper",
       "assurance": "static_instruction_trace",
