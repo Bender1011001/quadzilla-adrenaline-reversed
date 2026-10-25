@@ -12946,11 +12946,12 @@
         {
           "entry": "0x76cc",
           "label": "Control-cycle orchestrator: capture unpack, AID validation, main control, and conditional communications",
-          "assurance": "static_instruction_trace",
+          "assurance": "static_instruction_trace_and_bounded_continuation_emulation",
           "evidence": [
-            "audit/data/write_path_ida.json:entries.0x76cc",
-            "audit/data/write_path_binaryninja.json:entries.0x76cc",
-            "docs/OFFLINE_WRITE_PATH_REVIEW.md"
+            "audit/data/cycle_queue_binaryninja.json",
+            "audit/data/cycle_queue_selection_emulation.json",
+            "audit/data/cycle_queue_sources.json",
+            "docs/CYCLE_QUEUE_SELECTION_REVIEW.md"
           ]
         }
       ],
@@ -17585,7 +17586,7 @@
     },
     "labels": {
       "path": "audit/data/semantic_labels.json",
-      "sha256": "f37971fe541850647a0a97589b9af1b675c3d38880f73e20e8249090e66e2c75"
+      "sha256": "a5c4261258a031732e83ba7e570d86ed2f5c98c11873c278a4824de8689f7b47"
     }
   },
   "input_hash_policy": "SHA-256 of JSON text with CRLF normalized to LF"

@@ -14,7 +14,7 @@ spec.loader.exec_module(ledger)
 class ImageLedger(unittest.TestCase):
     def test_review_manifest_rejects_false_coverage(self):
         doc = json.loads((ROOT / "audit/data/reviewed_instruction_ranges.json").read_text())
-        self.assertEqual(sum(b-a for a, b, *_ in ledger.validate_instruction_reviews(doc)), 13106)
+        self.assertEqual(sum(b-a for a, b, *_ in ledger.validate_instruction_reviews(doc)), 13324)
         for change in ("hash", "overlap", "layout", "odd", "account"):
             malformed = copy.deepcopy(doc)
             if change == "hash":
@@ -48,7 +48,7 @@ class ImageLedger(unittest.TestCase):
                 cursor += instruction["length"]
             self.assertEqual(cursor, end)
         accepted = [r for r in doc["ranges"] if r["classification"] in ("reviewed_thumb_instructions", "reviewed_arm_instructions")]
-        self.assertEqual(sum(int(r["end"], 0)-int(r["start"], 0) for r in accepted), 13106)
+        self.assertEqual(sum(int(r["end"], 0)-int(r["start"], 0) for r in accepted), 13324)
         for r in accepted:
             self.assertTrue(any(entry == r["review_entry"] and
                                 start <= int(r["start"], 0) < int(r["end"], 0) <= end
@@ -127,6 +127,31 @@ class ImageLedger(unittest.TestCase):
                          [("0x8034", "0x2007c8"), ("0x81a4", "0x2007c8"),
                           ("0x8500", "0x2007c8"), ("0x9ed0", "0x2007f0")])
         self.assertEqual(set(refs["initialized_count_bytes"].values()), {0})
+
+    def test_cycle_queue_sources_and_conditional_cross_slot_copy(self):
+        decoded = json.loads((ROOT / "audit/data/cycle_queue_binaryninja.json").read_text())
+        executed = json.loads((ROOT / "audit/data/cycle_queue_selection_emulation.json").read_text())
+        source = json.loads((ROOT / "audit/data/cycle_queue_sources.json").read_text())
+        instructions = decoded["ranges"][0]["instructions"]
+        self.assertEqual((len(instructions), sum(row["length"] for row in instructions)),
+                         (98, 218))
+        tail = {int(row["address"], 0) for row in instructions
+                if int(row["address"], 0) >= 0x76F0}
+        self.assertEqual(tail, {int(a, 0) for a in executed["visited_cycle_starts"]})
+        self.assertEqual([row["count_initialized"] for row in source["slots"]],
+                         [6, 6, 7, 6, 5])
+        self.assertEqual(source["literal_pool"]["words"],
+                         ["0x200788", "0x200712", "0x200710", "0x200711"])
+        rows = {row["label"]: row for row in executed["cases"]}
+        for slot in range(5):
+            case = rows[f"template_slot_{slot}"]
+            self.assertEqual(case["queue_count"], source["slots"][slot]["count_initialized"])
+            self.assertEqual(bytes.fromhex(case["queue_bytes"])[:case["queue_count"]],
+                             bytes(source["slots"][slot]["aids"]))
+        self.assertEqual(bytes.fromhex(rows["cross_slot_synthetic"]["queue_bytes"])[:9],
+                         bytes.fromhex("101112131415161720"))
+        self.assertEqual((rows["busy"]["pending_out"], rows["busy"]["selector_out"]),
+                         (1, 0))
 
     def test_ram_template_descriptor_and_call_targets(self):
         doc = json.loads((ROOT / "audit/data/image_coverage_ledger.json").read_text())

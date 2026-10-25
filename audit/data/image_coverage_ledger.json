@@ -31,10 +31,12 @@
     }
   ],
   "classification_bytes": {
-    "ida_code_pending_review": 8347,
-    "ida_data_pending_review": 2650,
-    "reviewed_thumb_instructions": 8938,
+    "ida_code_pending_review": 8129,
+    "ida_data_pending_review": 2632,
+    "reviewed_thumb_instructions": 9156,
     "aid_validation_dispatch_table": 436,
+    "cycle_queue_alignment_ff": 2,
+    "cycle_queue_literal_pool": 16,
     "aid_resolver_literal_pool": 36,
     "queue_helper_alignment_ff": 2,
     "queue_state_base_literal": 8,
@@ -52548,620 +52550,718 @@
     {
       "start": "0x76cc",
       "end": "0x76ce",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x76ce",
       "end": "0x76d2",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x76d2",
       "end": "0x76d4",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x76d4",
       "end": "0x76d6",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x76d6",
       "end": "0x76d8",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x76d8",
       "end": "0x76dc",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x76dc",
       "end": "0x76e0",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x76e0",
       "end": "0x76e4",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x76e4",
       "end": "0x76e6",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x76e6",
       "end": "0x76e8",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x76e8",
       "end": "0x76ea",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x76ea",
       "end": "0x76ee",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x76ee",
       "end": "0x76f0",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x76f0",
       "end": "0x76f2",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x76f2",
       "end": "0x76f4",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x76f4",
       "end": "0x76f6",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x76f6",
       "end": "0x76f8",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x76f8",
       "end": "0x76fa",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x76fa",
       "end": "0x76fc",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x76fc",
       "end": "0x76fe",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x76fe",
       "end": "0x7700",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x7700",
       "end": "0x7702",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x7702",
       "end": "0x7704",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x7704",
       "end": "0x7706",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x7706",
       "end": "0x770a",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x770a",
       "end": "0x770c",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x770c",
       "end": "0x770e",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x770e",
       "end": "0x7710",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x7710",
       "end": "0x7712",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x7712",
       "end": "0x7714",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x7714",
       "end": "0x7716",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x7716",
       "end": "0x7718",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x7718",
       "end": "0x771a",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x771a",
       "end": "0x771c",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x771c",
       "end": "0x771e",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x771e",
       "end": "0x7720",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x7720",
       "end": "0x7722",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x7722",
       "end": "0x7724",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x7724",
       "end": "0x7728",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x7728",
       "end": "0x772a",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x772a",
       "end": "0x772c",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x772c",
       "end": "0x772e",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x772e",
       "end": "0x7730",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x7730",
       "end": "0x7732",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x7732",
       "end": "0x7734",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x7734",
       "end": "0x7736",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x7736",
       "end": "0x7738",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x7738",
       "end": "0x773a",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x773a",
       "end": "0x773c",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x773c",
       "end": "0x773e",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x773e",
       "end": "0x7740",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x7740",
       "end": "0x7742",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x7742",
       "end": "0x7744",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x7744",
       "end": "0x7748",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x7748",
       "end": "0x774a",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x774a",
       "end": "0x774c",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x774c",
       "end": "0x774e",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x774e",
       "end": "0x7750",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x7750",
       "end": "0x7752",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x7752",
       "end": "0x7754",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x7754",
       "end": "0x7756",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x7756",
       "end": "0x7758",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x7758",
       "end": "0x775a",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x775a",
       "end": "0x775c",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x775c",
       "end": "0x775e",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x775e",
       "end": "0x7760",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x7760",
       "end": "0x7762",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x7762",
       "end": "0x7764",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x7764",
       "end": "0x7768",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x7768",
       "end": "0x776a",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x776a",
       "end": "0x776c",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x776c",
       "end": "0x776e",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x776e",
       "end": "0x7770",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x7770",
       "end": "0x7772",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x7772",
       "end": "0x7774",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x7774",
       "end": "0x7776",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x7776",
       "end": "0x7778",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x7778",
       "end": "0x777a",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x777a",
       "end": "0x777c",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x777c",
       "end": "0x777e",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x777e",
       "end": "0x7780",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x7780",
       "end": "0x7784",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x7784",
       "end": "0x7786",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x7786",
       "end": "0x7788",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x7788",
       "end": "0x778a",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x778a",
       "end": "0x778c",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x778c",
       "end": "0x778e",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x778e",
       "end": "0x7790",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x7790",
       "end": "0x7792",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x7792",
       "end": "0x7794",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x7794",
       "end": "0x7796",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x7796",
       "end": "0x7798",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x7798",
       "end": "0x779a",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x779a",
       "end": "0x779c",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x779c",
       "end": "0x77a0",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x77a0",
       "end": "0x77a2",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x77a2",
       "end": "0x77a4",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x77a4",
       "end": "0x77a6",
-      "classification": "ida_code_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "reviewed_thumb_instructions",
+      "review_state": "instruction_range_supported",
+      "review_entry": "0x76cc"
     },
     {
       "start": "0x77a6",
       "end": "0x77a8",
-      "classification": "ida_data_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "cycle_queue_alignment_ff",
+      "review_state": "layout_role_supported"
     },
     {
       "start": "0x77a8",
       "end": "0x77ac",
-      "classification": "ida_data_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "cycle_queue_literal_pool",
+      "review_state": "layout_role_supported"
     },
     {
       "start": "0x77ac",
       "end": "0x77b0",
-      "classification": "ida_data_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "cycle_queue_literal_pool",
+      "review_state": "layout_role_supported"
     },
     {
       "start": "0x77b0",
       "end": "0x77b4",
-      "classification": "ida_data_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "cycle_queue_literal_pool",
+      "review_state": "layout_role_supported"
     },
     {
       "start": "0x77b4",
       "end": "0x77b8",
-      "classification": "ida_data_pending_review",
-      "review_state": "needs_instruction_or_data_review"
+      "classification": "cycle_queue_literal_pool",
+      "review_state": "layout_role_supported"
     },
     {
       "start": "0x77b8",
