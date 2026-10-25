@@ -11,7 +11,7 @@ entries, for at least 157 supported starts. Three callable numeric routines
 have no identified incoming image call and are not claimed reachable in service.
 The original 145-start catalog is retained as the baseline; its semantic coverage
 now stands at 116 roles with 29 entries left after the
-[outgoing state review](OUTGOING_STATE_REVIEW.md). The
+[receive state review](RECEIVE_STATE_REVIEW.md). The
 new entries and aliases are recorded separately in
 `audit/data/entry_adjudications.json`. Neither inventory is claimed exhaustive.
 
@@ -27,10 +27,12 @@ address without hiding pending review:
 
 | Classification | Bytes |
 |---|---:|
-| IDA code candidates awaiting review | 8,787 |
-| Explicitly reviewed Thumb instruction ranges | 8,498 |
+| IDA code candidates awaiting review | 8,431 |
+| Explicitly reviewed Thumb instruction ranges | 8,854 |
 | Explicitly reviewed ARM instruction ranges | 4,168 |
-| IDA data candidates awaiting review | 2,672 |
+| IDA data candidates awaiting review | 2,660 |
+| Receive type jump table | 6 |
+| Receive alignment and state-base literal | 6 |
 | Shared AID resolver literal pool | 36 |
 | Soft float status pointer literal | 4 |
 | Startup descriptors | 36 |
@@ -42,8 +44,8 @@ address without hiding pending review:
 | Erased trailing `FF` | 2,888 |
 
 Coverage of an address is not proof that its meaning or ISA has been reviewed.
-The explicit instruction-range manifest now accepts 12,666 bytes through the
-[outgoing state review](OUTGOING_STATE_REVIEW.md). It excludes adjacent literal
+The explicit instruction-range manifest now accepts 13,022 bytes through the
+[receive state review](RECEIVE_STATE_REVIEW.md). It excludes adjacent literal
 pools and alignment. Earlier semantic labels are not automatically promoted to
 byte-level classification; their exact ranges still need to be adjudicated.
 The ledger explicitly preserves 2,144 item/layout conflicts. These are tool item

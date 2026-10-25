@@ -17,6 +17,9 @@ BASE, END = 0x4000, 0xBD00
 LAYOUT = (
     (0x608C, 0x6240, "aid_validation_dispatch_table"),
     (0x7CA0, 0x7CC4, "aid_resolver_literal_pool"),
+    (0x809C, 0x80A2, "receive_type_jump_table"),
+    (0x81A2, 0x81A4, "receive_alignment_ff"),
+    (0x81A4, 0x81A8, "receive_state_base_literal"),
     (0x896C, 0x8970, "soft_float_status_pointer"),
     (0x96C4, 0x96E8, "startup_region_descriptors"),
     (0x96E8, 0x9F88, "initialized_ram_data_source"),

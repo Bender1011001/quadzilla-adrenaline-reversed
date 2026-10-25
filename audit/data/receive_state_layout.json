@@ -1,0 +1,33 @@
+{
+  "format": "quadzilla-receive-layout-v1",
+  "raw_sha256": "1ae519ba6194e8f7bdaaa94333a83a9e6fda3b0563f87f7d48383b37288c1780",
+  "switch": {
+    "start": "0x809c",
+    "end": "0x80a2",
+    "bytes": "1d0231020a57",
+    "index_rule": "header high nibble 0..5",
+    "target_rule": "0x809e + 2 * unsigned_table_byte",
+    "targets": [
+      "0x80d8",
+      "0x80a2",
+      "0x8100",
+      "0x80a2",
+      "0x80b2",
+      "0x814c"
+    ]
+  },
+  "alignment": {
+    "start": "0x81a2",
+    "end": "0x81a4",
+    "bytes": "ffff"
+  },
+  "state_base_literal": {
+    "start": "0x81a4",
+    "end": "0x81a8",
+    "value": "0x2007c8",
+    "reader": "0x804c"
+  },
+  "limitations": [
+    "layout and local transfer target evidence; no physical frame admission claim"
+  ]
+}

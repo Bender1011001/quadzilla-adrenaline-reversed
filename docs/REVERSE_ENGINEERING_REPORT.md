@@ -20,6 +20,8 @@ The [outgoing queue filter review](OUTGOING_QUEUE_FILTER_REVIEW.md) checks 4,549
 
 The [outgoing state review](OUTGOING_STATE_REVIEW.md) traces the 854-byte priority scheduler and its two AID queues. Twenty-eight controlled original-byte cases visit 378 of 383 starts. The scheduler copies no more than 14 AIDs into each working queue, then the frame builder rewrites the original source count to the number deferred. Source-count provenance outside this routine and physical USART behavior remain open.
 
+The [receive state review](RECEIVE_STATE_REVIEW.md) executes all 162 instruction starts across 14 controlled cases. It classifies the six-byte type switch, FF alignment and state-base literal as data; types 0/4 queue bounded response lists, while types 2/5 filter armed working lists. The source counts passed to the outgoing frame builder are not populated in this receive routine.
+
 ## 1. Scope and approach
 
 Four independent surfaces were attacked, each giving a cross-check on the others:

@@ -1025,6 +1025,34 @@
       "decoder_artifact": "audit/data/frame_reader_binaryninja.json"
     },
     {
+      "start": "0x8038",
+      "end": "0x809c",
+      "entry": "0x8038",
+      "isa": "thumb",
+      "account": "Receive dispatcher prologue through indexed type switch; all bounded instruction starts visited, adjacent six-byte switch table excluded",
+      "evidence": [
+        "audit/data/receive_state_binaryninja.json",
+        "audit/data/receive_state_emulation.json",
+        "audit/data/receive_state_layout.json",
+        "docs/RECEIVE_STATE_REVIEW.md"
+      ],
+      "decoder_artifact": "audit/data/receive_state_binaryninja.json"
+    },
+    {
+      "start": "0x80a2",
+      "end": "0x81a2",
+      "entry": "0x8038",
+      "isa": "thumb",
+      "account": "Six receive-type branches, queue/flag updates and return epilogue; all bounded instruction starts visited, adjacent padding and literal excluded",
+      "evidence": [
+        "audit/data/receive_state_binaryninja.json",
+        "audit/data/receive_state_emulation.json",
+        "audit/data/receive_state_layout.json",
+        "docs/RECEIVE_STATE_REVIEW.md"
+      ],
+      "decoder_artifact": "audit/data/receive_state_binaryninja.json"
+    },
+    {
       "start": "0x81a8",
       "end": "0x84fe",
       "entry": "0x81a8",

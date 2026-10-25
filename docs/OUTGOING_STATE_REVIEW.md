@@ -84,6 +84,7 @@ python -m unittest discover -s tests -t .
 The emulator uses controlled SRAM flags, counts and lists, executes exact
 firmware instructions in an ARM926 functional surrogate, and maps USART0
 registers as ordinary memory. It proves instruction and local state behavior
-for those inputs. Receive dispatch, all indirect producers of the two source
-counts, completion-driven USART state and board V2.2 behavior remain separate
-work. No device traffic was sent.
+for those inputs. The [receive dispatcher](RECEIVE_STATE_REVIEW.md) now has a
+bounded account. Indirect producers of the two source counts,
+completion-driven USART state and board V2.2 behavior remain separate work.
+No device traffic was sent.

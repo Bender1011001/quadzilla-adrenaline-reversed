@@ -934,11 +934,12 @@
     {
       "entry": "0x8038",
       "label": "Receive-buffer and message-type dispatcher returning parsed AID lists to the validator",
-      "assurance": "static_instruction_trace",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
       "evidence": [
-        "audit/data/write_path_ida.json:entries.0x8038",
-        "audit/data/write_path_binaryninja.json:entries.0x8038",
-        "docs/OFFLINE_WRITE_PATH_REVIEW.md"
+        "audit/data/receive_state_binaryninja.json",
+        "audit/data/receive_state_emulation.json",
+        "audit/data/receive_state_layout.json",
+        "docs/RECEIVE_STATE_REVIEW.md"
       ]
     },
     {

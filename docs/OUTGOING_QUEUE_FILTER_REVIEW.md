@@ -61,8 +61,9 @@ records original stores and return/fault states for counts 14, 16, 17,
 Physical receive reachability, target exception behavior and engine
 effects have not been established.
 
-The full receive state machine, indirect writers of queue source counts,
-transmit completion and peripheral effects remain required for
+The [receive dispatcher](RECEIVE_STATE_REVIEW.md) now has a bounded account.
+Indirect writers of queue source counts, transmit completion and peripheral
+effects remain required for
 the firmware goal. No device traffic was sent.
 
 ```text

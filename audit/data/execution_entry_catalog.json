@@ -15657,11 +15657,12 @@
         {
           "entry": "0x8038",
           "label": "Receive-buffer and message-type dispatcher returning parsed AID lists to the validator",
-          "assurance": "static_instruction_trace",
+          "assurance": "static_instruction_trace_and_bounded_emulation",
           "evidence": [
-            "audit/data/write_path_ida.json:entries.0x8038",
-            "audit/data/write_path_binaryninja.json:entries.0x8038",
-            "docs/OFFLINE_WRITE_PATH_REVIEW.md"
+            "audit/data/receive_state_binaryninja.json",
+            "audit/data/receive_state_emulation.json",
+            "audit/data/receive_state_layout.json",
+            "docs/RECEIVE_STATE_REVIEW.md"
           ]
         }
       ],
@@ -17571,7 +17572,7 @@
     },
     "labels": {
       "path": "audit/data/semantic_labels.json",
-      "sha256": "5824e00841bd49506f777cb68edde1e3d92cabe457ad08992550d5829cabe3e1"
+      "sha256": "00b97bac86aa819d5912a09b04ddfd86e0fc5db9993236b421fe805d33d88b37"
     }
   },
   "input_hash_policy": "SHA-256 of JSON text with CRLF normalized to LF"
