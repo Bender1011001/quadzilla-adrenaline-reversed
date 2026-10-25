@@ -65,8 +65,10 @@ A **synthetically preloaded** count of nine for slot 0 copied eight bytes
 from `0x2007A0..A7` plus the first byte of slot 1 at `0x2007A8`. This
 proves a local cross-slot read if the slot count is corrupted or raised
 beyond eight. It does not show that ordinary firmware can create such a
-count. Initialized counts are 5–7, and the remaining writers of
-`0x20078A..8E` must be traced before assigning normal-path reachability.
+count. Initialized counts are 5–7. The [main-loop review](MAIN_LOOP_STATE_REVIEW.md)
+found no direct stores to `0x20078A..8E` in its 646-byte body, but computed
+aliases, subordinate calls and interrupts still need review before assigning
+normal-path reachability.
 
 The `FFFF` at `0x77A6..A7` is alignment. The four following words at
 `0x77A8..B7` are literals `0x200788`, `0x200712`, `0x200710`, and

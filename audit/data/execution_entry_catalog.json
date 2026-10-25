@@ -4,8 +4,8 @@
   "unit": "execution_entries_including_vectors_thunks_and_alternate_entries",
   "summary": {
     "confirmed_entries": 145,
-    "documented_static_roles": 117,
-    "unlabeled_static_entries": 28,
+    "documented_static_roles": 118,
+    "unlabeled_static_entries": 27,
     "entries_with_ida_sram_references": 49,
     "entries_with_ida_peripheral_references": 21,
     "union_direct_call_edges": 180
@@ -13084,8 +13084,20 @@
         },
         "ghidra": null
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x77b8",
+          "label": "Nonreturning reset continuation and three-state control-cycle dispatcher",
+          "assurance": "static_instruction_trace_and_bounded_dispatch_emulation",
+          "evidence": [
+            "audit/data/main_loop_binaryninja.json",
+            "audit/data/main_loop_count_writers.json",
+            "audit/data/main_loop_dispatch_emulation.json",
+            "docs/MAIN_LOOP_STATE_REVIEW.md"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [
           "0x4384",
@@ -17586,7 +17598,7 @@
     },
     "labels": {
       "path": "audit/data/semantic_labels.json",
-      "sha256": "a5c4261258a031732e83ba7e570d86ed2f5c98c11873c278a4824de8689f7b47"
+      "sha256": "e9081d1be8b23054f79961c1ffc698376b4037e1794677f32f34fd72a1a49253"
     }
   },
   "input_hash_policy": "SHA-256 of JSON text with CRLF normalized to LF"
