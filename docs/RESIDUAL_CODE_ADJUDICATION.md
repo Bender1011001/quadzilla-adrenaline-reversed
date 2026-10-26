@@ -3,10 +3,11 @@
 The exact 32,000-byte V2.8.4HF image, SHA-256
 `1ae519ba6194e8f7bdaaa94333a83a9e6fda3b0563f87f7d48383b37288c1780`,
 now has no remaining **IDA code-candidate bytes** in the current ledger.
-This does not close the full analysis: 1,802 data-candidate bytes still need
-adjudication, and alternate entry discovery, complete writer/consumer paths,
-interrupt interactions and subsystem semantics remain open. A tool's code/data
-label is not an exhaustive execution inventory.
+At this review 1,802 data-candidate bytes remained; the subsequent
+[PC-literal audit](PC_LITERAL_POOL_REVIEW.md) adjudicates them. Alternate entry
+discovery, complete writer/consumer paths, interrupt interactions and subsystem
+semantics remain open. A tool's code/data label is not an exhaustive execution
+inventory, and complete byte classification does not close the full analysis.
 
 The [source audit](../audit/data/residual_code_adjudication.json) checks the
 residual candidates against exact bytes, prior bounded decodes and execution

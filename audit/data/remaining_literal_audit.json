@@ -1,0 +1,6263 @@
+{
+  "format": "quadzilla-remaining-literal-audit-v1",
+  "raw_sha256": "1ae519ba6194e8f7bdaaa94333a83a9e6fda3b0563f87f7d48383b37288c1780",
+  "literal_bytes": 1788,
+  "literal_words": 447,
+  "literal_extents": [
+    {
+      "start": "0x4304",
+      "end": "0x4330",
+      "bytes": 44,
+      "source_sha256": "ec8644ea787aefd2251742e471f0b129021b989e66988b7f41642b4bfe65a13c",
+      "words": [
+        {
+          "address": "0x4304",
+          "value": "0xfffd801c",
+          "load_sites": [
+            {
+              "site": "0x4216",
+              "isa": "thumb",
+              "opcode": "0x483b",
+              "decoder": "audit/data/adc_pipeline_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x4308",
+          "value": "0xfffd803c",
+          "load_sites": [
+            {
+              "site": "0x4222",
+              "isa": "thumb",
+              "opcode": "0x4839",
+              "decoder": "audit/data/adc_pipeline_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x430c",
+          "value": "0x200afe",
+          "load_sites": [
+            {
+              "site": "0x4234",
+              "isa": "thumb",
+              "opcode": "0x4935",
+              "decoder": "audit/data/adc_pipeline_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x4310",
+          "value": "0xfffd8040",
+          "load_sites": [
+            {
+              "site": "0x4244",
+              "isa": "thumb",
+              "opcode": "0x4832",
+              "decoder": "audit/data/adc_pipeline_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x4314",
+          "value": "0x200721",
+          "load_sites": [
+            {
+              "site": "0x424e",
+              "isa": "thumb",
+              "opcode": "0x4f31",
+              "decoder": "audit/data/adc_pipeline_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x4318",
+          "value": "0xfffd8044",
+          "load_sites": [
+            {
+              "site": "0x426e",
+              "isa": "thumb",
+              "opcode": "0x482a",
+              "decoder": "audit/data/adc_pipeline_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x431c",
+          "value": "0x200722",
+          "load_sites": [
+            {
+              "site": "0x4278",
+              "isa": "thumb",
+              "opcode": "0x4f28",
+              "decoder": "audit/data/adc_pipeline_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x4320",
+          "value": "0xfffd8048",
+          "load_sites": [
+            {
+              "site": "0x4298",
+              "isa": "thumb",
+              "opcode": "0x4821",
+              "decoder": "audit/data/adc_pipeline_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x4324",
+          "value": "0x200723",
+          "load_sites": [
+            {
+              "site": "0x42a2",
+              "isa": "thumb",
+              "opcode": "0x4f20",
+              "decoder": "audit/data/adc_pipeline_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x4328",
+          "value": "0xfffd804c",
+          "load_sites": [
+            {
+              "site": "0x42c4",
+              "isa": "thumb",
+              "opcode": "0x4818",
+              "decoder": "audit/data/adc_pipeline_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x432c",
+          "value": "0x200724",
+          "load_sites": [
+            {
+              "site": "0x42ce",
+              "isa": "thumb",
+              "opcode": "0x4c17",
+              "decoder": "audit/data/adc_pipeline_binaryninja.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "start": "0x4360",
+      "end": "0x4384",
+      "bytes": 36,
+      "source_sha256": "3f01d9a670a8f98706cb238f34acd43d123e43269ace5ff148a7697131b1fdf1",
+      "words": [
+        {
+          "address": "0x4360",
+          "value": "0xfffffc10",
+          "load_sites": [
+            {
+              "site": "0x4330",
+              "isa": "thumb",
+              "opcode": "0x480b",
+              "decoder": "audit/data/adc_init_vector_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x4364",
+          "value": "0xfffd8014",
+          "load_sites": [
+            {
+              "site": "0x4336",
+              "isa": "thumb",
+              "opcode": "0x480b",
+              "decoder": "audit/data/adc_init_vector_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x4368",
+          "value": "0xfffd8004",
+          "load_sites": [
+            {
+              "site": "0x433c",
+              "isa": "thumb",
+              "opcode": "0x480a",
+              "decoder": "audit/data/adc_init_vector_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x436c",
+          "value": "0x2010a00",
+          "load_sites": [
+            {
+              "site": "0x433e",
+              "isa": "thumb",
+              "opcode": "0x490b",
+              "decoder": "audit/data/adc_init_vector_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x4370",
+          "value": "0xfffd8010",
+          "load_sites": [
+            {
+              "site": "0x4344",
+              "isa": "thumb",
+              "opcode": "0x490a",
+              "decoder": "audit/data/adc_init_vector_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x4374",
+          "value": "0x200720",
+          "load_sites": [
+            {
+              "site": "0x4354",
+              "isa": "thumb",
+              "opcode": "0x4907",
+              "decoder": "audit/data/adc_init_vector_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x4378",
+          "value": "0x20071f",
+          "load_sites": [
+            {
+              "site": "0x4358",
+              "isa": "thumb",
+              "opcode": "0x4907",
+              "decoder": "audit/data/adc_init_vector_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x437c",
+          "value": "0xfffd8000",
+          "load_sites": [
+            {
+              "site": "0x42f6",
+              "isa": "thumb",
+              "opcode": "0x4821",
+              "decoder": "audit/data/adc_pipeline_binaryninja.json"
+            },
+            {
+              "site": "0x4348",
+              "isa": "thumb",
+              "opcode": "0x490c",
+              "decoder": "audit/data/adc_init_vector_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x4380",
+          "value": "0x2008a0",
+          "load_sites": [
+            {
+              "site": "0x421a",
+              "isa": "thumb",
+              "opcode": "0x4d59",
+              "decoder": "audit/data/adc_pipeline_binaryninja.json"
+            },
+            {
+              "site": "0x434e",
+              "isa": "thumb",
+              "opcode": "0x490c",
+              "decoder": "audit/data/adc_init_vector_binaryninja.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "start": "0x4598",
+      "end": "0x4650",
+      "bytes": 184,
+      "source_sha256": "f1fec4093d7cb29f18c360365d259d41f3daf81f65a43c321fac6b592adfaf81",
+      "words": [
+        {
+          "address": "0x4598",
+          "value": "0xd48",
+          "load_sites": [
+            {
+              "site": "0x43b2",
+              "isa": "thumb",
+              "opcode": "0x4c79",
+              "decoder": "audit/data/control_helper_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x459c",
+          "value": "0x200bea",
+          "load_sites": [
+            {
+              "site": "0x4438",
+              "isa": "thumb",
+              "opcode": "0x4858",
+              "decoder": "audit/data/control_helper_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x45a0",
+          "value": "0x200beb",
+          "load_sites": [
+            {
+              "site": "0x443e",
+              "isa": "thumb",
+              "opcode": "0x4858",
+              "decoder": "audit/data/control_helper_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x45a4",
+          "value": "0x200bf5",
+          "load_sites": [
+            {
+              "site": "0x4448",
+              "isa": "thumb",
+              "opcode": "0x4856",
+              "decoder": "audit/data/control_helper_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x45a8",
+          "value": "0x200bf7",
+          "load_sites": [
+            {
+              "site": "0x4452",
+              "isa": "thumb",
+              "opcode": "0x4855",
+              "decoder": "audit/data/control_helper_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x45ac",
+          "value": "0x200bf9",
+          "load_sites": [
+            {
+              "site": "0x445c",
+              "isa": "thumb",
+              "opcode": "0x4853",
+              "decoder": "audit/data/control_helper_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x45b0",
+          "value": "0x200bfb",
+          "load_sites": [
+            {
+              "site": "0x4466",
+              "isa": "thumb",
+              "opcode": "0x4852",
+              "decoder": "audit/data/control_helper_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x45b4",
+          "value": "0x200bee",
+          "load_sites": [
+            {
+              "site": "0x4476",
+              "isa": "thumb",
+              "opcode": "0x484f",
+              "decoder": "audit/data/control_helper_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x45b8",
+          "value": "0x200bef",
+          "load_sites": [
+            {
+              "site": "0x447c",
+              "isa": "thumb",
+              "opcode": "0x484e",
+              "decoder": "audit/data/control_helper_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x45bc",
+          "value": "0x200bf2",
+          "load_sites": [
+            {
+              "site": "0x4486",
+              "isa": "thumb",
+              "opcode": "0x484d",
+              "decoder": "audit/data/control_helper_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x45c0",
+          "value": "0x200bf0",
+          "load_sites": [
+            {
+              "site": "0x4496",
+              "isa": "thumb",
+              "opcode": "0x484a",
+              "decoder": "audit/data/control_helper_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x45c4",
+          "value": "0x200bfd",
+          "load_sites": [
+            {
+              "site": "0x449c",
+              "isa": "thumb",
+              "opcode": "0x4849",
+              "decoder": "audit/data/control_helper_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x45c8",
+          "value": "0x200bff",
+          "load_sites": [
+            {
+              "site": "0x44a6",
+              "isa": "thumb",
+              "opcode": "0x4848",
+              "decoder": "audit/data/control_helper_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x45cc",
+          "value": "0x200c01",
+          "load_sites": [
+            {
+              "site": "0x44b0",
+              "isa": "thumb",
+              "opcode": "0x4846",
+              "decoder": "audit/data/control_helper_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x45d0",
+          "value": "0x200c03",
+          "load_sites": [
+            {
+              "site": "0x44b4",
+              "isa": "thumb",
+              "opcode": "0x4846",
+              "decoder": "audit/data/control_helper_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x45d4",
+          "value": "0x200c05",
+          "load_sites": [
+            {
+              "site": "0x44ba",
+              "isa": "thumb",
+              "opcode": "0x4846",
+              "decoder": "audit/data/control_helper_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x45d8",
+          "value": "0x200c07",
+          "load_sites": [
+            {
+              "site": "0x44c0",
+              "isa": "thumb",
+              "opcode": "0x4845",
+              "decoder": "audit/data/control_helper_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x45dc",
+          "value": "0x200c09",
+          "load_sites": [
+            {
+              "site": "0x44c6",
+              "isa": "thumb",
+              "opcode": "0x4845",
+              "decoder": "audit/data/control_helper_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x45e0",
+          "value": "0x200c0b",
+          "load_sites": [
+            {
+              "site": "0x44cc",
+              "isa": "thumb",
+              "opcode": "0x4844",
+              "decoder": "audit/data/control_helper_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x45e4",
+          "value": "0x200c0d",
+          "load_sites": [
+            {
+              "site": "0x44d2",
+              "isa": "thumb",
+              "opcode": "0x4844",
+              "decoder": "audit/data/control_helper_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x45e8",
+          "value": "0x200c0f",
+          "load_sites": [
+            {
+              "site": "0x44d8",
+              "isa": "thumb",
+              "opcode": "0x4843",
+              "decoder": "audit/data/control_helper_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x45ec",
+          "value": "0x200c11",
+          "load_sites": [
+            {
+              "site": "0x44de",
+              "isa": "thumb",
+              "opcode": "0x4843",
+              "decoder": "audit/data/control_helper_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x45f0",
+          "value": "0x200c13",
+          "load_sites": [
+            {
+              "site": "0x44e4",
+              "isa": "thumb",
+              "opcode": "0x4842",
+              "decoder": "audit/data/control_helper_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x45f4",
+          "value": "0x200c15",
+          "load_sites": [
+            {
+              "site": "0x44ea",
+              "isa": "thumb",
+              "opcode": "0x4842",
+              "decoder": "audit/data/control_helper_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x45f8",
+          "value": "0x200c17",
+          "load_sites": [
+            {
+              "site": "0x44f0",
+              "isa": "thumb",
+              "opcode": "0x4841",
+              "decoder": "audit/data/control_helper_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x45fc",
+          "value": "0x200c19",
+          "load_sites": [
+            {
+              "site": "0x44f6",
+              "isa": "thumb",
+              "opcode": "0x4841",
+              "decoder": "audit/data/control_helper_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x4600",
+          "value": "0x200c1b",
+          "load_sites": [
+            {
+              "site": "0x44fc",
+              "isa": "thumb",
+              "opcode": "0x4840",
+              "decoder": "audit/data/control_helper_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x4604",
+          "value": "0x200c1d",
+          "load_sites": [
+            {
+              "site": "0x4502",
+              "isa": "thumb",
+              "opcode": "0x4840",
+              "decoder": "audit/data/control_helper_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x4608",
+          "value": "0x200c1f",
+          "load_sites": [
+            {
+              "site": "0x4508",
+              "isa": "thumb",
+              "opcode": "0x483f",
+              "decoder": "audit/data/control_helper_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x460c",
+          "value": "0x200c21",
+          "load_sites": [
+            {
+              "site": "0x450e",
+              "isa": "thumb",
+              "opcode": "0x483f",
+              "decoder": "audit/data/control_helper_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x4610",
+          "value": "0x200c23",
+          "load_sites": [
+            {
+              "site": "0x4514",
+              "isa": "thumb",
+              "opcode": "0x483e",
+              "decoder": "audit/data/control_helper_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x4614",
+          "value": "0x200c25",
+          "load_sites": [
+            {
+              "site": "0x451a",
+              "isa": "thumb",
+              "opcode": "0x483e",
+              "decoder": "audit/data/control_helper_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x4618",
+          "value": "0x200c27",
+          "load_sites": [
+            {
+              "site": "0x4520",
+              "isa": "thumb",
+              "opcode": "0x483d",
+              "decoder": "audit/data/control_helper_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x461c",
+          "value": "0x200c29",
+          "load_sites": [
+            {
+              "site": "0x4526",
+              "isa": "thumb",
+              "opcode": "0x483d",
+              "decoder": "audit/data/control_helper_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x4620",
+          "value": "0x200c2b",
+          "load_sites": [
+            {
+              "site": "0x452c",
+              "isa": "thumb",
+              "opcode": "0x483c",
+              "decoder": "audit/data/control_helper_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x4624",
+          "value": "0x200c2d",
+          "load_sites": [
+            {
+              "site": "0x4532",
+              "isa": "thumb",
+              "opcode": "0x483c",
+              "decoder": "audit/data/control_helper_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x4628",
+          "value": "0x200c2f",
+          "load_sites": [
+            {
+              "site": "0x4536",
+              "isa": "thumb",
+              "opcode": "0x483c",
+              "decoder": "audit/data/control_helper_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x462c",
+          "value": "0x200c31",
+          "load_sites": [
+            {
+              "site": "0x453a",
+              "isa": "thumb",
+              "opcode": "0x483c",
+              "decoder": "audit/data/control_helper_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x4630",
+          "value": "0x200c33",
+          "load_sites": [
+            {
+              "site": "0x453e",
+              "isa": "thumb",
+              "opcode": "0x483c",
+              "decoder": "audit/data/control_helper_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x4634",
+          "value": "0x200c35",
+          "load_sites": [
+            {
+              "site": "0x4542",
+              "isa": "thumb",
+              "opcode": "0x483c",
+              "decoder": "audit/data/control_helper_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x4638",
+          "value": "0x200580",
+          "load_sites": [
+            {
+              "site": "0x4386",
+              "isa": "thumb",
+              "opcode": "0x4aac",
+              "decoder": "audit/data/control_helper_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x463c",
+          "value": "0x200424",
+          "load_sites": [
+            {
+              "site": "0x4428",
+              "isa": "thumb",
+              "opcode": "0x4d84",
+              "decoder": "audit/data/control_helper_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x4640",
+          "value": "0x200bed",
+          "load_sites": [
+            {
+              "site": "0x4470",
+              "isa": "thumb",
+              "opcode": "0x4873",
+              "decoder": "audit/data/control_helper_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x4644",
+          "value": "0x200bf1",
+          "load_sites": [
+            {
+              "site": "0x4482",
+              "isa": "thumb",
+              "opcode": "0x4870",
+              "decoder": "audit/data/control_helper_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x4648",
+          "value": "0x200bf3",
+          "load_sites": [
+            {
+              "site": "0x448c",
+              "isa": "thumb",
+              "opcode": "0x486e",
+              "decoder": "audit/data/control_helper_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x464c",
+          "value": "0x200bf4",
+          "load_sites": [
+            {
+              "site": "0x4490",
+              "isa": "thumb",
+              "opcode": "0x486e",
+              "decoder": "audit/data/control_helper_binaryninja.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "start": "0x46c4",
+      "end": "0x46d0",
+      "bytes": 12,
+      "source_sha256": "5b868456e42387b25899ade57c04345a173b6bc7df1e567c176244ae029ce6e6",
+      "words": [
+        {
+          "address": "0x46c4",
+          "value": "0x200ad8",
+          "load_sites": [
+            {
+              "site": "0x469a",
+              "isa": "thumb",
+              "opcode": "0x4a0a",
+              "decoder": "audit/data/control_helper_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x46c8",
+          "value": "0x200ad7",
+          "load_sites": [
+            {
+              "site": "0x46aa",
+              "isa": "thumb",
+              "opcode": "0x4c07",
+              "decoder": "audit/data/control_helper_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x46cc",
+          "value": "0x200ad6",
+          "load_sites": [
+            {
+              "site": "0x46b0",
+              "isa": "thumb",
+              "opcode": "0x4c06",
+              "decoder": "audit/data/control_helper_binaryninja.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "start": "0x4790",
+      "end": "0x47b0",
+      "bytes": 32,
+      "source_sha256": "3569df1e5f5297a60f6ee78a55a1c887321030b81a4ee36e7ba62a041b96a407",
+      "words": [
+        {
+          "address": "0x4790",
+          "value": "0x200bd0",
+          "load_sites": [
+            {
+              "site": "0x46d6",
+              "isa": "thumb",
+              "opcode": "0x4c2e",
+              "decoder": "audit/data/drivetrain_score_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x4794",
+          "value": "0x2006e6",
+          "load_sites": [
+            {
+              "site": "0x46de",
+              "isa": "thumb",
+              "opcode": "0x482d",
+              "decoder": "audit/data/drivetrain_score_binaryninja.json"
+            },
+            {
+              "site": "0x46f8",
+              "isa": "thumb",
+              "opcode": "0x4826",
+              "decoder": "audit/data/drivetrain_score_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x4798",
+          "value": "0x9f88",
+          "load_sites": [
+            {
+              "site": "0x46e6",
+              "isa": "thumb",
+              "opcode": "0x492c",
+              "decoder": "audit/data/drivetrain_score_binaryninja.json"
+            },
+            {
+              "site": "0x4700",
+              "isa": "thumb",
+              "opcode": "0x4925",
+              "decoder": "audit/data/drivetrain_score_binaryninja.json"
+            },
+            {
+              "site": "0x4712",
+              "isa": "thumb",
+              "opcode": "0x4b21",
+              "decoder": "audit/data/drivetrain_score_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x479c",
+          "value": "0x2006e7",
+          "load_sites": [
+            {
+              "site": "0x470c",
+              "isa": "thumb",
+              "opcode": "0x4923",
+              "decoder": "audit/data/drivetrain_score_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x47a0",
+          "value": "0x44840000",
+          "load_sites": [
+            {
+              "site": "0x4736",
+              "isa": "thumb",
+              "opcode": "0x491a",
+              "decoder": "audit/data/drivetrain_score_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x47a4",
+          "value": "0x2006e8",
+          "load_sites": [
+            {
+              "site": "0x4746",
+              "isa": "thumb",
+              "opcode": "0x4917",
+              "decoder": "audit/data/drivetrain_score_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x47a8",
+          "value": "0xbf800000",
+          "load_sites": [
+            {
+              "site": "0x4754",
+              "isa": "thumb",
+              "opcode": "0x4914",
+              "decoder": "audit/data/drivetrain_score_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x47ac",
+          "value": "0x42c80000",
+          "load_sites": [
+            {
+              "site": "0x475a",
+              "isa": "thumb",
+              "opcode": "0x4914",
+              "decoder": "audit/data/drivetrain_score_binaryninja.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "start": "0x4810",
+      "end": "0x4818",
+      "bytes": 8,
+      "source_sha256": "73577a830035c0d20e993357c795a09256d0c145a33514af3fc569481989c5d2",
+      "words": [
+        {
+          "address": "0x4810",
+          "value": "0x2006cc",
+          "load_sites": [
+            {
+              "site": "0x47b4",
+              "isa": "thumb",
+              "opcode": "0x4916",
+              "decoder": "audit/data/control_helper_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x4814",
+          "value": "0x2005f4",
+          "load_sites": [
+            {
+              "site": "0x47d2",
+              "isa": "thumb",
+              "opcode": "0x4810",
+              "decoder": "audit/data/control_helper_binaryninja.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "start": "0x4944",
+      "end": "0x495c",
+      "bytes": 24,
+      "source_sha256": "1b251c25dbf5e7a9a48e1b1a09583b927bfe090789fcb8f765a26df02cdbbaae",
+      "words": [
+        {
+          "address": "0x4944",
+          "value": "0x20071d",
+          "load_sites": [
+            {
+              "site": "0x48fc",
+              "isa": "thumb",
+              "opcode": "0x4d11",
+              "decoder": "audit/data/control_helper_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x4948",
+          "value": "0x20071c",
+          "load_sites": [
+            {
+              "site": "0x4900",
+              "isa": "thumb",
+              "opcode": "0x4d11",
+              "decoder": "audit/data/control_helper_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x494c",
+          "value": "0x28b",
+          "load_sites": [
+            {
+              "site": "0x492e",
+              "isa": "thumb",
+              "opcode": "0x4807",
+              "decoder": "audit/data/control_helper_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x4950",
+          "value": "0x200424",
+          "load_sites": [
+            {
+              "site": "0x47b6",
+              "isa": "thumb",
+              "opcode": "0x4a66",
+              "decoder": "audit/data/control_helper_binaryninja.json"
+            },
+            {
+              "site": "0x4822",
+              "isa": "thumb",
+              "opcode": "0x4a4b",
+              "decoder": "audit/data/input_gate_binaryninja.json"
+            },
+            {
+              "site": "0x48ea",
+              "isa": "thumb",
+              "opcode": "0x4a19",
+              "decoder": "audit/data/control_helper_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x4954",
+          "value": "0x20071e",
+          "load_sites": [
+            {
+              "site": "0x4894",
+              "isa": "thumb",
+              "opcode": "0x482f",
+              "decoder": "audit/data/input_gate_binaryninja.json"
+            },
+            {
+              "site": "0x48ee",
+              "isa": "thumb",
+              "opcode": "0x4819",
+              "decoder": "audit/data/control_helper_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x4958",
+          "value": "0x2005ec",
+          "load_sites": [
+            {
+              "site": "0x4830",
+              "isa": "thumb",
+              "opcode": "0x4849",
+              "decoder": "audit/data/input_gate_binaryninja.json"
+            },
+            {
+              "site": "0x4908",
+              "isa": "thumb",
+              "opcode": "0x4d13",
+              "decoder": "audit/data/control_helper_binaryninja.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "start": "0x4978",
+      "end": "0x497c",
+      "bytes": 4,
+      "source_sha256": "d8e73950377ccd9739830d542821f6083bf88b04b80b58d93e84cfa924a78c13",
+      "words": [
+        {
+          "address": "0x4978",
+          "value": "0xfff",
+          "load_sites": [
+            {
+              "site": "0x495e",
+              "isa": "thumb",
+              "opcode": "0x4906",
+              "decoder": "audit/data/control_helper_binaryninja.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "start": "0x50dc",
+      "end": "0x50f0",
+      "bytes": 20,
+      "source_sha256": "9b4ea0fd4f9d72186c844e0d39a1dc3a286c560ed5d55545bbd2194db869ed71",
+      "words": [
+        {
+          "address": "0x50dc",
+          "value": "0x2006cd",
+          "load_sites": [
+            {
+              "site": "0x5078",
+              "isa": "thumb",
+              "opcode": "0x4818",
+              "decoder": "audit/data/control_selector_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x50e0",
+          "value": "0x200bc4",
+          "load_sites": [
+            {
+              "site": "0x50d0",
+              "isa": "thumb",
+              "opcode": "0x4903",
+              "decoder": "audit/data/control_selector_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x50e4",
+          "value": "0x200580",
+          "load_sites": [
+            {
+              "site": "0x5080",
+              "isa": "thumb",
+              "opcode": "0x4918",
+              "decoder": "audit/data/control_selector_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x50e8",
+          "value": "0x200424",
+          "load_sites": [
+            {
+              "site": "0x508e",
+              "isa": "thumb",
+              "opcode": "0x4916",
+              "decoder": "audit/data/control_selector_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x50ec",
+          "value": "0x200bcd",
+          "load_sites": [
+            {
+              "site": "0x50b6",
+              "isa": "thumb",
+              "opcode": "0x490d",
+              "decoder": "audit/data/control_selector_binaryninja.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "start": "0x5700",
+      "end": "0x5704",
+      "bytes": 4,
+      "source_sha256": "af6b2882eef57dc1141f8ac7e9c4d47f51f33bf95ed9a294a9335e4c72adab85",
+      "words": [
+        {
+          "address": "0x5700",
+          "value": "0x92cc",
+          "load_sites": [
+            {
+              "site": "0x56fc",
+              "isa": "thumb",
+              "opcode": "0x4b00",
+              "decoder": "audit/data/soft_float_binaryninja.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "start": "0x5710",
+      "end": "0x5714",
+      "bytes": 4,
+      "source_sha256": "ef9f1af1802903af13c9699e8fe0c581a9534d888c7fa6796ee8f5fd39285aed",
+      "words": [
+        {
+          "address": "0x5710",
+          "value": "0x893c",
+          "load_sites": [
+            {
+              "site": "0x5706",
+              "isa": "thumb",
+              "opcode": "0x4b02",
+              "decoder": "audit/data/soft_float_binaryninja.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "start": "0x5718",
+      "end": "0x571c",
+      "bytes": 4,
+      "source_sha256": "e85e6f4827474318259cf4c39361c0aa9194110494534fc0201525cc28b9b14a",
+      "words": [
+        {
+          "address": "0x5718",
+          "value": "0x90e4",
+          "load_sites": [
+            {
+              "site": "0x5714",
+              "isa": "thumb",
+              "opcode": "0x4b00",
+              "decoder": "audit/data/soft_float_binaryninja.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "start": "0x5738",
+      "end": "0x573c",
+      "bytes": 4,
+      "source_sha256": "459ac13be3849c4fc5833951f9f6481ab90ae6b695149a93ffa924a6cffcd05b",
+      "words": [
+        {
+          "address": "0x5738",
+          "value": "0xfffff434",
+          "load_sites": [
+            {
+              "site": "0x571c",
+              "isa": "thumb",
+              "opcode": "0x4906",
+              "decoder": "audit/data/spi_transfer_binaryninja.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "start": "0x5758",
+      "end": "0x575c",
+      "bytes": 4,
+      "source_sha256": "7e49729e0a935de1736ceddb2be0748139083f42f57fc9de1e06e919d03f32e7",
+      "words": [
+        {
+          "address": "0x5758",
+          "value": "0xfffff430",
+          "load_sites": [
+            {
+              "site": "0x573c",
+              "isa": "thumb",
+              "opcode": "0x4906",
+              "decoder": "audit/data/spi_transfer_binaryninja.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "start": "0x59cc",
+      "end": "0x59e8",
+      "bytes": 28,
+      "source_sha256": "3309cfee8edf3e6a19b560b46e2e40020679b9ccb9192eeec37db02d3be04ef3",
+      "words": [
+        {
+          "address": "0x59cc",
+          "value": "0x200ad4",
+          "load_sites": [
+            {
+              "site": "0x577a",
+              "isa": "thumb",
+              "opcode": "0x4994",
+              "decoder": "audit/data/spi_initialization_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x59d0",
+          "value": "0x200ad5",
+          "load_sites": [
+            {
+              "site": "0x577e",
+              "isa": "thumb",
+              "opcode": "0x4d94",
+              "decoder": "audit/data/spi_initialization_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x59d4",
+          "value": "0x200ad3",
+          "load_sites": [
+            {
+              "site": "0x5782",
+              "isa": "thumb",
+              "opcode": "0x4994",
+              "decoder": "audit/data/spi_initialization_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x59d8",
+          "value": "0x2005c4",
+          "load_sites": [
+            {
+              "site": "0x5786",
+              "isa": "thumb",
+              "opcode": "0x4e94",
+              "decoder": "audit/data/spi_initialization_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x59dc",
+          "value": "0x9ff0",
+          "load_sites": [
+            {
+              "site": "0x58fa",
+              "isa": "thumb",
+              "opcode": "0x4938",
+              "decoder": "audit/data/spi_initialization_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x59e0",
+          "value": "0xfffffd00",
+          "load_sites": [
+            {
+              "site": "0x59ac",
+              "isa": "thumb",
+              "opcode": "0x480c",
+              "decoder": "audit/data/spi_initialization_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x59e4",
+          "value": "0xa500000d",
+          "load_sites": [
+            {
+              "site": "0x59ae",
+              "isa": "thumb",
+              "opcode": "0x490d",
+              "decoder": "audit/data/spi_initialization_binaryninja.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "start": "0x5cbc",
+      "end": "0x5cf0",
+      "bytes": 52,
+      "source_sha256": "fabc01356fab4b18d55e375912592a1c452054845a38aa364076389648cca2e6",
+      "words": [
+        {
+          "address": "0x5cbc",
+          "value": "0x200ab4",
+          "load_sites": [
+            {
+              "site": "0x5a10",
+              "isa": "thumb",
+              "opcode": "0x4daa",
+              "decoder": "audit/data/capture_parser_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x5cc0",
+          "value": "0x2006e8",
+          "load_sites": [
+            {
+              "site": "0x5b4c",
+              "isa": "thumb",
+              "opcode": "0x495c",
+              "decoder": "audit/data/capture_parser_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x5cc4",
+          "value": "0xcccccccd",
+          "load_sites": [
+            {
+              "site": "0x5b58",
+              "isa": "thumb",
+              "opcode": "0x4a5a",
+              "decoder": "audit/data/capture_parser_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x5cc8",
+          "value": "0x4057eccc",
+          "load_sites": [
+            {
+              "site": "0x5b5a",
+              "isa": "thumb",
+              "opcode": "0x4b5b",
+              "decoder": "audit/data/capture_parser_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x5ccc",
+          "value": "0x465",
+          "load_sites": [
+            {
+              "site": "0x5be8",
+              "isa": "thumb",
+              "opcode": "0x4938",
+              "decoder": "audit/data/capture_parser_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x5cd0",
+          "value": "0x2710",
+          "load_sites": [
+            {
+              "site": "0x5bec",
+              "isa": "thumb",
+              "opcode": "0x4938",
+              "decoder": "audit/data/capture_parser_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x5cd4",
+          "value": "0xfffffe34",
+          "load_sites": [
+            {
+              "site": "0x5bf2",
+              "isa": "thumb",
+              "opcode": "0x4838",
+              "decoder": "audit/data/capture_parser_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x5cd8",
+          "value": "0x200afe",
+          "load_sites": [
+            {
+              "site": "0x5c2c",
+              "isa": "thumb",
+              "opcode": "0x482a",
+              "decoder": "audit/data/capture_parser_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x5cdc",
+          "value": "0x2005c4",
+          "load_sites": [
+            {
+              "site": "0x59ee",
+              "isa": "thumb",
+              "opcode": "0x4cbb",
+              "decoder": "audit/data/spi_initialization_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x5ce0",
+          "value": "0x20042d",
+          "load_sites": [
+            {
+              "site": "0x5a34",
+              "isa": "thumb",
+              "opcode": "0x48aa",
+              "decoder": "audit/data/capture_parser_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x5ce4",
+          "value": "0x20042e",
+          "load_sites": [
+            {
+              "site": "0x5a3c",
+              "isa": "thumb",
+              "opcode": "0x48a9",
+              "decoder": "audit/data/capture_parser_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x5ce8",
+          "value": "0x20042a",
+          "load_sites": [
+            {
+              "site": "0x5a46",
+              "isa": "thumb",
+              "opcode": "0x48a8",
+              "decoder": "audit/data/capture_parser_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x5cec",
+          "value": "0xfffff43c",
+          "load_sites": [
+            {
+              "site": "0x5a1e",
+              "isa": "thumb",
+              "opcode": "0x49b3",
+              "decoder": "audit/data/capture_parser_binaryninja.json"
+            },
+            {
+              "site": "0x5a58",
+              "isa": "thumb",
+              "opcode": "0x48a4",
+              "decoder": "audit/data/capture_parser_binaryninja.json"
+            },
+            {
+              "site": "0x5a92",
+              "isa": "thumb",
+              "opcode": "0x4996",
+              "decoder": "audit/data/capture_parser_binaryninja.json"
+            },
+            {
+              "site": "0x5c7a",
+              "isa": "thumb",
+              "opcode": "0x481c",
+              "decoder": "audit/data/capture_parser_binaryninja.json"
+            },
+            {
+              "site": "0x5ca2",
+              "isa": "thumb",
+              "opcode": "0x4812",
+              "decoder": "audit/data/capture_parser_binaryninja.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "start": "0x5dec",
+      "end": "0x5e04",
+      "bytes": 24,
+      "source_sha256": "1847ba89f23343c76b00c8416831945a112b9a791bfffe614ed15fa17541a403",
+      "words": [
+        {
+          "address": "0x5dec",
+          "value": "0x2006c0",
+          "load_sites": [
+            {
+              "site": "0x5d9c",
+              "isa": "thumb",
+              "opcode": "0x4913",
+              "decoder": "audit/data/spi_state_machine_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x5df0",
+          "value": "0x2005c4",
+          "load_sites": [
+            {
+              "site": "0x5cf6",
+              "isa": "thumb",
+              "opcode": "0x4d3e",
+              "decoder": "audit/data/spi_state_machine_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x5df4",
+          "value": "0x20042d",
+          "load_sites": [
+            {
+              "site": "0x5d08",
+              "isa": "thumb",
+              "opcode": "0x483a",
+              "decoder": "audit/data/spi_state_machine_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x5df8",
+          "value": "0x20042e",
+          "load_sites": [
+            {
+              "site": "0x5d10",
+              "isa": "thumb",
+              "opcode": "0x4839",
+              "decoder": "audit/data/spi_state_machine_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x5dfc",
+          "value": "0x20042a",
+          "load_sites": [
+            {
+              "site": "0x5d50",
+              "isa": "thumb",
+              "opcode": "0x482a",
+              "decoder": "audit/data/spi_state_machine_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x5e00",
+          "value": "0xfffff43c",
+          "load_sites": [
+            {
+              "site": "0x5d66",
+              "isa": "thumb",
+              "opcode": "0x4926",
+              "decoder": "audit/data/spi_state_machine_binaryninja.json"
+            },
+            {
+              "site": "0x5d86",
+              "isa": "thumb",
+              "opcode": "0x481e",
+              "decoder": "audit/data/spi_state_machine_binaryninja.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "start": "0x5ea0",
+      "end": "0x5ebc",
+      "bytes": 28,
+      "source_sha256": "0ead9839f21bb6977912476f00e0018139104757a412371196cd6fdfa2194c11",
+      "words": [
+        {
+          "address": "0x5ea0",
+          "value": "0x200ad4",
+          "load_sites": [
+            {
+              "site": "0x5e18",
+              "isa": "thumb",
+              "opcode": "0x4921",
+              "decoder": "audit/data/capture_helper_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x5ea4",
+          "value": "0x200ad5",
+          "load_sites": [
+            {
+              "site": "0x5e1c",
+              "isa": "thumb",
+              "opcode": "0x4e21",
+              "decoder": "audit/data/capture_helper_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x5ea8",
+          "value": "0x200ad3",
+          "load_sites": [
+            {
+              "site": "0x5e22",
+              "isa": "thumb",
+              "opcode": "0x4921",
+              "decoder": "audit/data/capture_helper_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x5eac",
+          "value": "0x9ff0",
+          "load_sites": [
+            {
+              "site": "0x5e2a",
+              "isa": "thumb",
+              "opcode": "0x4820",
+              "decoder": "audit/data/capture_helper_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x5eb0",
+          "value": "0x2005c4",
+          "load_sites": [
+            {
+              "site": "0x5e30",
+              "isa": "thumb",
+              "opcode": "0x4f1f",
+              "decoder": "audit/data/capture_helper_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x5eb4",
+          "value": "0xfffffd00",
+          "load_sites": [
+            {
+              "site": "0x5e92",
+              "isa": "thumb",
+              "opcode": "0x4808",
+              "decoder": "audit/data/capture_helper_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x5eb8",
+          "value": "0xa500000d",
+          "load_sites": [
+            {
+              "site": "0x5e94",
+              "isa": "thumb",
+              "opcode": "0x4908",
+              "decoder": "audit/data/capture_helper_binaryninja.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "start": "0x5ef4",
+      "end": "0x5f04",
+      "bytes": 16,
+      "source_sha256": "34197719fce667192f7f723f49d32c7c5cd6d0c95a1d8422033e7898f705ab9f",
+      "words": [
+        {
+          "address": "0x5ef4",
+          "value": "0x200ad2",
+          "load_sites": [
+            {
+              "site": "0x5ebe",
+              "isa": "thumb",
+              "opcode": "0x480d",
+              "decoder": "audit/data/capture_helper_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x5ef8",
+          "value": "0x200ad1",
+          "load_sites": [
+            {
+              "site": "0x5ecc",
+              "isa": "thumb",
+              "opcode": "0x4a0a",
+              "decoder": "audit/data/capture_helper_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x5efc",
+          "value": "0x200ad0",
+          "load_sites": [
+            {
+              "site": "0x5ed0",
+              "isa": "thumb",
+              "opcode": "0x4a0a",
+              "decoder": "audit/data/capture_helper_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x5f00",
+          "value": "0x200afc",
+          "load_sites": [
+            {
+              "site": "0x5ed4",
+              "isa": "thumb",
+              "opcode": "0x480a",
+              "decoder": "audit/data/capture_helper_binaryninja.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "start": "0x5f08",
+      "end": "0x5f0c",
+      "bytes": 4,
+      "source_sha256": "ff10b3efbbad40c0c97fb60dd0d173188638547ed7c7bbe24c8412104df6cc3a",
+      "words": [
+        {
+          "address": "0x5f08",
+          "value": "0x913c",
+          "load_sites": [
+            {
+              "site": "0x5f04",
+              "isa": "thumb",
+              "opcode": "0x4b00",
+              "decoder": "audit/data/soft_float_binaryninja.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "start": "0x5f10",
+      "end": "0x5f14",
+      "bytes": 4,
+      "source_sha256": "c013c8d6e255aa07a5d8ece0e8210a24e64ad6c1388f474d36277440cd04007d",
+      "words": [
+        {
+          "address": "0x5f10",
+          "value": "0x8788",
+          "load_sites": [
+            {
+              "site": "0x5f0c",
+              "isa": "thumb",
+              "opcode": "0x4b00",
+              "decoder": "audit/data/soft_float_binaryninja.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "start": "0x5f30",
+      "end": "0x5f34",
+      "bytes": 4,
+      "source_sha256": "52561baaac3c462b483af07a4b8fbd0774e8b4bf1dd90130e71476ef249649df",
+      "words": [
+        {
+          "address": "0x5f30",
+          "value": "0x10ff00",
+          "load_sites": [
+            {
+              "site": "0x5f16",
+              "isa": "thumb",
+              "opcode": "0x4906",
+              "decoder": "audit/data/config_restore_binaryninja.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "start": "0x5fec",
+      "end": "0x601c",
+      "bytes": 48,
+      "source_sha256": "55a59a586508f069691c5cfc4c9b39c4caad77b7f1cb691f7fbaea8d936bf1b7",
+      "words": [
+        {
+          "address": "0x5fec",
+          "value": "0x200bc4",
+          "load_sites": [
+            {
+              "site": "0x5f38",
+              "isa": "thumb",
+              "opcode": "0x4a2c",
+              "decoder": "audit/data/config_restore_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x5ff0",
+          "value": "0x200bc5",
+          "load_sites": [
+            {
+              "site": "0x5f42",
+              "isa": "thumb",
+              "opcode": "0x4a2b",
+              "decoder": "audit/data/config_restore_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x5ff4",
+          "value": "0x200bdc",
+          "load_sites": [
+            {
+              "site": "0x5f48",
+              "isa": "thumb",
+              "opcode": "0x4a2a",
+              "decoder": "audit/data/config_restore_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x5ff8",
+          "value": "0x200bde",
+          "load_sites": [
+            {
+              "site": "0x5f52",
+              "isa": "thumb",
+              "opcode": "0x4a29",
+              "decoder": "audit/data/config_restore_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x5ffc",
+          "value": "0x200be0",
+          "load_sites": [
+            {
+              "site": "0x5f5c",
+              "isa": "thumb",
+              "opcode": "0x4a27",
+              "decoder": "audit/data/config_restore_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6000",
+          "value": "0x200be2",
+          "load_sites": [
+            {
+              "site": "0x5f66",
+              "isa": "thumb",
+              "opcode": "0x4a26",
+              "decoder": "audit/data/config_restore_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6004",
+          "value": "0x200be4",
+          "load_sites": [
+            {
+              "site": "0x5f70",
+              "isa": "thumb",
+              "opcode": "0x4a24",
+              "decoder": "audit/data/config_restore_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6008",
+          "value": "0x200be7",
+          "load_sites": [
+            {
+              "site": "0x5f88",
+              "isa": "thumb",
+              "opcode": "0x491f",
+              "decoder": "audit/data/config_restore_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x600c",
+          "value": "0x200bd9",
+          "load_sites": [
+            {
+              "site": "0x5f9e",
+              "isa": "thumb",
+              "opcode": "0x491b",
+              "decoder": "audit/data/config_restore_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6010",
+          "value": "0x200b19",
+          "load_sites": [
+            {
+              "site": "0x5fd8",
+              "isa": "thumb",
+              "opcode": "0x490d",
+              "decoder": "audit/data/config_restore_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6014",
+          "value": "0x200b1c",
+          "load_sites": [
+            {
+              "site": "0x5fe2",
+              "isa": "thumb",
+              "opcode": "0x490c",
+              "decoder": "audit/data/config_restore_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6018",
+          "value": "0x2006cc",
+          "load_sites": [
+            {
+              "site": "0x5f20",
+              "isa": "thumb",
+              "opcode": "0x483d",
+              "decoder": "audit/data/config_restore_binaryninja.json"
+            },
+            {
+              "site": "0x5f34",
+              "isa": "thumb",
+              "opcode": "0x4838",
+              "decoder": "audit/data/config_restore_binaryninja.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "start": "0x63ac",
+      "end": "0x63f0",
+      "bytes": 68,
+      "source_sha256": "a2d00c748e0ad50bcd4f6869a4cf2603847a8275e45b5804150257cb181ec4ea",
+      "words": [
+        {
+          "address": "0x63ac",
+          "value": "0x200ac4",
+          "load_sites": [
+            {
+              "site": "0x6036",
+              "isa": "thumb",
+              "opcode": "0x4edd",
+              "decoder": "audit/data/selector_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x63b0",
+          "value": "0x200c35",
+          "load_sites": [
+            {
+              "site": "0x604a",
+              "isa": "thumb",
+              "opcode": "0x48d9",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x63b4",
+          "value": "0x2006cc",
+          "load_sites": [
+            {
+              "site": "0x6066",
+              "isa": "thumb",
+              "opcode": "0x4cd3",
+              "decoder": "audit/data/selector_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x63b8",
+          "value": "0x200580",
+          "load_sites": [
+            {
+              "site": "0x606e",
+              "isa": "thumb",
+              "opcode": "0x4dd2",
+              "decoder": "audit/data/selector_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x63bc",
+          "value": "0x200b00",
+          "load_sites": [
+            {
+              "site": "0x624c",
+              "isa": "thumb",
+              "opcode": "0x485b",
+              "decoder": "audit/data/selector_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x63c0",
+          "value": "0x200b01",
+          "load_sites": [
+            {
+              "site": "0x6274",
+              "isa": "thumb",
+              "opcode": "0x4852",
+              "decoder": "audit/data/compound_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x63c4",
+          "value": "0x200aff",
+          "load_sites": [
+            {
+              "site": "0x6278",
+              "isa": "thumb",
+              "opcode": "0x4952",
+              "decoder": "audit/data/compound_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x63c8",
+          "value": "0x200b05",
+          "load_sites": [
+            {
+              "site": "0x6286",
+              "isa": "thumb",
+              "opcode": "0x4850",
+              "decoder": "audit/data/compound_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x63cc",
+          "value": "0x200b17",
+          "load_sites": [
+            {
+              "site": "0x62b6",
+              "isa": "thumb",
+              "opcode": "0x4845",
+              "decoder": "audit/data/compound_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x63d0",
+          "value": "0x20073c",
+          "load_sites": [
+            {
+              "site": "0x62c2",
+              "isa": "thumb",
+              "opcode": "0x4943",
+              "decoder": "audit/data/compound_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x63d4",
+          "value": "0x200b1b",
+          "load_sites": [
+            {
+              "site": "0x62f4",
+              "isa": "thumb",
+              "opcode": "0x4837",
+              "decoder": "audit/data/compound_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x63d8",
+          "value": "0x200748",
+          "load_sites": [
+            {
+              "site": "0x6304",
+              "isa": "thumb",
+              "opcode": "0x4934",
+              "decoder": "audit/data/compound_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x63dc",
+          "value": "0x20074c",
+          "load_sites": [
+            {
+              "site": "0x6308",
+              "isa": "thumb",
+              "opcode": "0x4934",
+              "decoder": "audit/data/compound_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x63e0",
+          "value": "0x200b08",
+          "load_sites": [
+            {
+              "site": "0x630e",
+              "isa": "thumb",
+              "opcode": "0x4834",
+              "decoder": "audit/data/compound_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x63e4",
+          "value": "0x200b0a",
+          "load_sites": [
+            {
+              "site": "0x6334",
+              "isa": "thumb",
+              "opcode": "0x482b",
+              "decoder": "audit/data/compound_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x63e8",
+          "value": "0x200b0c",
+          "load_sites": [
+            {
+              "site": "0x635a",
+              "isa": "thumb",
+              "opcode": "0x4823",
+              "decoder": "audit/data/compound_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x63ec",
+          "value": "0x200b0e",
+          "load_sites": [
+            {
+              "site": "0x6380",
+              "isa": "thumb",
+              "opcode": "0x481a",
+              "decoder": "audit/data/compound_update_binaryninja.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "start": "0x6704",
+      "end": "0x67dc",
+      "bytes": 216,
+      "source_sha256": "3b66c6187afe05624468dcc66f75e547f387646f661b4a52e5d7cc6b0ce4695c",
+      "words": [
+        {
+          "address": "0x6704",
+          "value": "0x200b11",
+          "load_sites": [
+            {
+              "site": "0x63f0",
+              "isa": "thumb",
+              "opcode": "0x48c4",
+              "decoder": "audit/data/compound_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6708",
+          "value": "0x200b02",
+          "load_sites": [
+            {
+              "site": "0x6418",
+              "isa": "thumb",
+              "opcode": "0x48bb",
+              "decoder": "audit/data/compound_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x670c",
+          "value": "0x200b14",
+          "load_sites": [
+            {
+              "site": "0x645a",
+              "isa": "thumb",
+              "opcode": "0x48ac",
+              "decoder": "audit/data/compound_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6710",
+          "value": "0x200b1d",
+          "load_sites": [
+            {
+              "site": "0x6482",
+              "isa": "thumb",
+              "opcode": "0x48a3",
+              "decoder": "audit/data/selector_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6714",
+          "value": "0x200bea",
+          "load_sites": [
+            {
+              "site": "0x6496",
+              "isa": "thumb",
+              "opcode": "0x499f",
+              "decoder": "audit/data/selector_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6718",
+          "value": "0x200433",
+          "load_sites": [
+            {
+              "site": "0x649a",
+              "isa": "thumb",
+              "opcode": "0x4a9f",
+              "decoder": "audit/data/selector_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x671c",
+          "value": "0x200434",
+          "load_sites": [
+            {
+              "site": "0x64a8",
+              "isa": "thumb",
+              "opcode": "0x4a9c",
+              "decoder": "audit/data/selector_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6720",
+          "value": "0x200b20",
+          "load_sites": [
+            {
+              "site": "0x64b8",
+              "isa": "thumb",
+              "opcode": "0x4899",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6724",
+          "value": "0x200bed",
+          "load_sites": [
+            {
+              "site": "0x64c4",
+              "isa": "thumb",
+              "opcode": "0x4997",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6728",
+          "value": "0x200426",
+          "load_sites": [
+            {
+              "site": "0x64c8",
+              "isa": "thumb",
+              "opcode": "0x4897",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            },
+            {
+              "site": "0x6524",
+              "isa": "thumb",
+              "opcode": "0x4880",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x672c",
+          "value": "0x200b24",
+          "load_sites": [
+            {
+              "site": "0x64d0",
+              "isa": "thumb",
+              "opcode": "0x4a96",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6730",
+          "value": "0x200bf1",
+          "load_sites": [
+            {
+              "site": "0x64dc",
+              "isa": "thumb",
+              "opcode": "0x4894",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6734",
+          "value": "0x200b25",
+          "load_sites": [
+            {
+              "site": "0x64e2",
+              "isa": "thumb",
+              "opcode": "0x4994",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6738",
+          "value": "0x200bf2",
+          "load_sites": [
+            {
+              "site": "0x64ee",
+              "isa": "thumb",
+              "opcode": "0x4892",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x673c",
+          "value": "0x200b26",
+          "load_sites": [
+            {
+              "site": "0x64f4",
+              "isa": "thumb",
+              "opcode": "0x4991",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6740",
+          "value": "0x200bf3",
+          "load_sites": [
+            {
+              "site": "0x6500",
+              "isa": "thumb",
+              "opcode": "0x4a8f",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6744",
+          "value": "0x20046c",
+          "load_sites": [
+            {
+              "site": "0x6504",
+              "isa": "thumb",
+              "opcode": "0x4a8f",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6748",
+          "value": "0x200b27",
+          "load_sites": [
+            {
+              "site": "0x6514",
+              "isa": "thumb",
+              "opcode": "0x498c",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x674c",
+          "value": "0x200bf4",
+          "load_sites": [
+            {
+              "site": "0x6520",
+              "isa": "thumb",
+              "opcode": "0x488a",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6750",
+          "value": "0x200b28",
+          "load_sites": [
+            {
+              "site": "0x652a",
+              "isa": "thumb",
+              "opcode": "0x4989",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6754",
+          "value": "0x200bf5",
+          "load_sites": [
+            {
+              "site": "0x6540",
+              "isa": "thumb",
+              "opcode": "0x4a84",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6758",
+          "value": "0x200458",
+          "load_sites": [
+            {
+              "site": "0x6548",
+              "isa": "thumb",
+              "opcode": "0x4a83",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x675c",
+          "value": "0x200b2a",
+          "load_sites": [
+            {
+              "site": "0x6558",
+              "isa": "thumb",
+              "opcode": "0x4980",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6760",
+          "value": "0x200bf7",
+          "load_sites": [
+            {
+              "site": "0x656e",
+              "isa": "thumb",
+              "opcode": "0x4a7c",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6764",
+          "value": "0x20045c",
+          "load_sites": [
+            {
+              "site": "0x6576",
+              "isa": "thumb",
+              "opcode": "0x4a7b",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6768",
+          "value": "0x200b2c",
+          "load_sites": [
+            {
+              "site": "0x657c",
+              "isa": "thumb",
+              "opcode": "0x497a",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x676c",
+          "value": "0x200bf9",
+          "load_sites": [
+            {
+              "site": "0x6592",
+              "isa": "thumb",
+              "opcode": "0x4a76",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6770",
+          "value": "0x200460",
+          "load_sites": [
+            {
+              "site": "0x659a",
+              "isa": "thumb",
+              "opcode": "0x4a75",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6774",
+          "value": "0x200b2e",
+          "load_sites": [
+            {
+              "site": "0x65aa",
+              "isa": "thumb",
+              "opcode": "0x4972",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6778",
+          "value": "0x200bfb",
+          "load_sites": [
+            {
+              "site": "0x65c0",
+              "isa": "thumb",
+              "opcode": "0x4a6d",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x677c",
+          "value": "0x200464",
+          "load_sites": [
+            {
+              "site": "0x65c8",
+              "isa": "thumb",
+              "opcode": "0x4a6c",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6780",
+          "value": "0x200b1e",
+          "load_sites": [
+            {
+              "site": "0x65ce",
+              "isa": "thumb",
+              "opcode": "0x486c",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6784",
+          "value": "0x200beb",
+          "load_sites": [
+            {
+              "site": "0x65e4",
+              "isa": "thumb",
+              "opcode": "0x4967",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6788",
+          "value": "0x200468",
+          "load_sites": [
+            {
+              "site": "0x65ec",
+              "isa": "thumb",
+              "opcode": "0x4a66",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x678c",
+          "value": "0x200b35",
+          "load_sites": [
+            {
+              "site": "0x65f2",
+              "isa": "thumb",
+              "opcode": "0x4866",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6790",
+          "value": "0x200c01",
+          "load_sites": [
+            {
+              "site": "0x65fe",
+              "isa": "thumb",
+              "opcode": "0x4964",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6794",
+          "value": "0x200b37",
+          "load_sites": [
+            {
+              "site": "0x6604",
+              "isa": "thumb",
+              "opcode": "0x4863",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6798",
+          "value": "0x200c03",
+          "load_sites": [
+            {
+              "site": "0x6618",
+              "isa": "thumb",
+              "opcode": "0x495f",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x679c",
+          "value": "0x200b39",
+          "load_sites": [
+            {
+              "site": "0x661c",
+              "isa": "thumb",
+              "opcode": "0x485f",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x67a0",
+          "value": "0x200c05",
+          "load_sites": [
+            {
+              "site": "0x6628",
+              "isa": "thumb",
+              "opcode": "0x495d",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x67a4",
+          "value": "0x200b21",
+          "load_sites": [
+            {
+              "site": "0x662e",
+              "isa": "thumb",
+              "opcode": "0x485d",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x67a8",
+          "value": "0x200bee",
+          "load_sites": [
+            {
+              "site": "0x663a",
+              "isa": "thumb",
+              "opcode": "0x495b",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x67ac",
+          "value": "0x200b22",
+          "load_sites": [
+            {
+              "site": "0x663e",
+              "isa": "thumb",
+              "opcode": "0x485b",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x67b0",
+          "value": "0x200bef",
+          "load_sites": [
+            {
+              "site": "0x664a",
+              "isa": "thumb",
+              "opcode": "0x4959",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x67b4",
+          "value": "0x200b23",
+          "load_sites": [
+            {
+              "site": "0x664e",
+              "isa": "thumb",
+              "opcode": "0x4859",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x67b8",
+          "value": "0x200bf0",
+          "load_sites": [
+            {
+              "site": "0x666e",
+              "isa": "thumb",
+              "opcode": "0x4852",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x67bc",
+          "value": "0x200b30",
+          "load_sites": [
+            {
+              "site": "0x6672",
+              "isa": "thumb",
+              "opcode": "0x4852",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x67c0",
+          "value": "0x899",
+          "load_sites": [
+            {
+              "site": "0x667c",
+              "isa": "thumb",
+              "opcode": "0x4950",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x67c4",
+          "value": "0x200bfd",
+          "load_sites": [
+            {
+              "site": "0x6692",
+              "isa": "thumb",
+              "opcode": "0x494c",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x67c8",
+          "value": "0x200b34",
+          "load_sites": [
+            {
+              "site": "0x669c",
+              "isa": "thumb",
+              "opcode": "0x484a",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x67cc",
+          "value": "0x200aec",
+          "load_sites": [
+            {
+              "site": "0x66ac",
+              "isa": "thumb",
+              "opcode": "0x4847",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x67d0",
+          "value": "0x40240000",
+          "load_sites": [
+            {
+              "site": "0x66cc",
+              "isa": "thumb",
+              "opcode": "0x4b40",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x67d4",
+          "value": "0x200b32",
+          "load_sites": [
+            {
+              "site": "0x66ee",
+              "isa": "thumb",
+              "opcode": "0x4839",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x67d8",
+          "value": "0xe75",
+          "load_sites": [
+            {
+              "site": "0x66f8",
+              "isa": "thumb",
+              "opcode": "0x4937",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "start": "0x6a48",
+      "end": "0x6b08",
+      "bytes": 192,
+      "source_sha256": "ccdee0f46227bd1459856597a873ea80afa8f589a89170505cae7fb401f164e4",
+      "words": [
+        {
+          "address": "0x6a48",
+          "value": "0x200bff",
+          "load_sites": [
+            {
+              "site": "0x67e8",
+              "isa": "thumb",
+              "opcode": "0x4997",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6a4c",
+          "value": "0x200b3b",
+          "load_sites": [
+            {
+              "site": "0x67ec",
+              "isa": "thumb",
+              "opcode": "0x4897",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6a50",
+          "value": "0x200c07",
+          "load_sites": [
+            {
+              "site": "0x6800",
+              "isa": "thumb",
+              "opcode": "0x4993",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6a54",
+          "value": "0x200b3d",
+          "load_sites": [
+            {
+              "site": "0x6804",
+              "isa": "thumb",
+              "opcode": "0x4893",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6a58",
+          "value": "0x200c09",
+          "load_sites": [
+            {
+              "site": "0x6818",
+              "isa": "thumb",
+              "opcode": "0x498f",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6a5c",
+          "value": "0x200b3f",
+          "load_sites": [
+            {
+              "site": "0x681c",
+              "isa": "thumb",
+              "opcode": "0x488f",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6a60",
+          "value": "0x200c0b",
+          "load_sites": [
+            {
+              "site": "0x6830",
+              "isa": "thumb",
+              "opcode": "0x498b",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6a64",
+          "value": "0x200b41",
+          "load_sites": [
+            {
+              "site": "0x6834",
+              "isa": "thumb",
+              "opcode": "0x488b",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6a68",
+          "value": "0x200c0d",
+          "load_sites": [
+            {
+              "site": "0x6848",
+              "isa": "thumb",
+              "opcode": "0x4987",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6a6c",
+          "value": "0x200b43",
+          "load_sites": [
+            {
+              "site": "0x6850",
+              "isa": "thumb",
+              "opcode": "0x4886",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6a70",
+          "value": "0x200c0f",
+          "load_sites": [
+            {
+              "site": "0x6864",
+              "isa": "thumb",
+              "opcode": "0x4982",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6a74",
+          "value": "0x200b45",
+          "load_sites": [
+            {
+              "site": "0x6868",
+              "isa": "thumb",
+              "opcode": "0x4882",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6a78",
+          "value": "0x200c11",
+          "load_sites": [
+            {
+              "site": "0x687c",
+              "isa": "thumb",
+              "opcode": "0x497e",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6a7c",
+          "value": "0x200b47",
+          "load_sites": [
+            {
+              "site": "0x6880",
+              "isa": "thumb",
+              "opcode": "0x487e",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6a80",
+          "value": "0x200c13",
+          "load_sites": [
+            {
+              "site": "0x6894",
+              "isa": "thumb",
+              "opcode": "0x497a",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6a84",
+          "value": "0x200b49",
+          "load_sites": [
+            {
+              "site": "0x6898",
+              "isa": "thumb",
+              "opcode": "0x487a",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6a88",
+          "value": "0x200c15",
+          "load_sites": [
+            {
+              "site": "0x68ac",
+              "isa": "thumb",
+              "opcode": "0x4976",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6a8c",
+          "value": "0x200b4b",
+          "load_sites": [
+            {
+              "site": "0x68b0",
+              "isa": "thumb",
+              "opcode": "0x4b76",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6a90",
+          "value": "0x200c17",
+          "load_sites": [
+            {
+              "site": "0x68c4",
+              "isa": "thumb",
+              "opcode": "0x4872",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6a94",
+          "value": "0x200b4d",
+          "load_sites": [
+            {
+              "site": "0x68ca",
+              "isa": "thumb",
+              "opcode": "0x4b72",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6a98",
+          "value": "0x200c19",
+          "load_sites": [
+            {
+              "site": "0x68de",
+              "isa": "thumb",
+              "opcode": "0x486e",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6a9c",
+          "value": "0x200b4f",
+          "load_sites": [
+            {
+              "site": "0x68e4",
+              "isa": "thumb",
+              "opcode": "0x4b6d",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6aa0",
+          "value": "0x200c1b",
+          "load_sites": [
+            {
+              "site": "0x68f8",
+              "isa": "thumb",
+              "opcode": "0x4869",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6aa4",
+          "value": "0x200b51",
+          "load_sites": [
+            {
+              "site": "0x68fe",
+              "isa": "thumb",
+              "opcode": "0x4b69",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6aa8",
+          "value": "0x200c1d",
+          "load_sites": [
+            {
+              "site": "0x6912",
+              "isa": "thumb",
+              "opcode": "0x4865",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6aac",
+          "value": "0x200b53",
+          "load_sites": [
+            {
+              "site": "0x6918",
+              "isa": "thumb",
+              "opcode": "0x4b64",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6ab0",
+          "value": "0x200c1f",
+          "load_sites": [
+            {
+              "site": "0x692c",
+              "isa": "thumb",
+              "opcode": "0x4860",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6ab4",
+          "value": "0x200b55",
+          "load_sites": [
+            {
+              "site": "0x6932",
+              "isa": "thumb",
+              "opcode": "0x4b60",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6ab8",
+          "value": "0x200c21",
+          "load_sites": [
+            {
+              "site": "0x6946",
+              "isa": "thumb",
+              "opcode": "0x485c",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6abc",
+          "value": "0x200b57",
+          "load_sites": [
+            {
+              "site": "0x694c",
+              "isa": "thumb",
+              "opcode": "0x4b5b",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6ac0",
+          "value": "0x200c23",
+          "load_sites": [
+            {
+              "site": "0x6960",
+              "isa": "thumb",
+              "opcode": "0x4857",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6ac4",
+          "value": "0x200b59",
+          "load_sites": [
+            {
+              "site": "0x6966",
+              "isa": "thumb",
+              "opcode": "0x4b57",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6ac8",
+          "value": "0x200c25",
+          "load_sites": [
+            {
+              "site": "0x697a",
+              "isa": "thumb",
+              "opcode": "0x4853",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6acc",
+          "value": "0x200b5b",
+          "load_sites": [
+            {
+              "site": "0x6980",
+              "isa": "thumb",
+              "opcode": "0x4b52",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6ad0",
+          "value": "0x200c27",
+          "load_sites": [
+            {
+              "site": "0x6994",
+              "isa": "thumb",
+              "opcode": "0x484e",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6ad4",
+          "value": "0x200b5d",
+          "load_sites": [
+            {
+              "site": "0x699a",
+              "isa": "thumb",
+              "opcode": "0x4b4e",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6ad8",
+          "value": "0x200c29",
+          "load_sites": [
+            {
+              "site": "0x69ae",
+              "isa": "thumb",
+              "opcode": "0x484a",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6adc",
+          "value": "0x200b5f",
+          "load_sites": [
+            {
+              "site": "0x69b4",
+              "isa": "thumb",
+              "opcode": "0x4b49",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6ae0",
+          "value": "0x200c2b",
+          "load_sites": [
+            {
+              "site": "0x69c8",
+              "isa": "thumb",
+              "opcode": "0x4845",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6ae4",
+          "value": "0x200b61",
+          "load_sites": [
+            {
+              "site": "0x69ce",
+              "isa": "thumb",
+              "opcode": "0x4b45",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6ae8",
+          "value": "0x200c2d",
+          "load_sites": [
+            {
+              "site": "0x69e2",
+              "isa": "thumb",
+              "opcode": "0x4841",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6aec",
+          "value": "0x200b63",
+          "load_sites": [
+            {
+              "site": "0x69e8",
+              "isa": "thumb",
+              "opcode": "0x4b40",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6af0",
+          "value": "0x200c2f",
+          "load_sites": [
+            {
+              "site": "0x69fc",
+              "isa": "thumb",
+              "opcode": "0x483c",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6af4",
+          "value": "0x200b65",
+          "load_sites": [
+            {
+              "site": "0x6a02",
+              "isa": "thumb",
+              "opcode": "0x4b3c",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6af8",
+          "value": "0x200c31",
+          "load_sites": [
+            {
+              "site": "0x6a16",
+              "isa": "thumb",
+              "opcode": "0x4838",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6afc",
+          "value": "0x200b67",
+          "load_sites": [
+            {
+              "site": "0x6a1c",
+              "isa": "thumb",
+              "opcode": "0x4b37",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6b00",
+          "value": "0x200c33",
+          "load_sites": [
+            {
+              "site": "0x6a30",
+              "isa": "thumb",
+              "opcode": "0x4833",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6b04",
+          "value": "0x200b69",
+          "load_sites": [
+            {
+              "site": "0x6a36",
+              "isa": "thumb",
+              "opcode": "0x4b33",
+              "decoder": "audit/data/remaining_update_binaryninja.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "start": "0x6b0c",
+      "end": "0x6b10",
+      "bytes": 4,
+      "source_sha256": "0cec5b9988eb57206029673f593087054c56c19e4586c99f040f9852ac36ef7c",
+      "words": [
+        {
+          "address": "0x6b0c",
+          "value": "0x86f0",
+          "load_sites": [
+            {
+              "site": "0x6b08",
+              "isa": "thumb",
+              "opcode": "0x4b00",
+              "decoder": "audit/data/soft_float_binaryninja.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "start": "0x6b1c",
+      "end": "0x6b20",
+      "bytes": 4,
+      "source_sha256": "b2d38030e1522f734689e84eb76142274b7fd1e2419919bec378ba9c058f2a13",
+      "words": [
+        {
+          "address": "0x6b1c",
+          "value": "0x89b0",
+          "load_sites": [
+            {
+              "site": "0x6b12",
+              "isa": "thumb",
+              "opcode": "0x4b02",
+              "decoder": "audit/data/soft_float_binaryninja.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "start": "0x6b60",
+      "end": "0x6b64",
+      "bytes": 4,
+      "source_sha256": "043ba656f625e77a80d4beae1e221eb3f191afde6f2db684d895ec5b08a3ec61",
+      "words": [
+        {
+          "address": "0x6b60",
+          "value": "0xfffff43c",
+          "load_sites": [
+            {
+              "site": "0x6b4e",
+              "isa": "thumb",
+              "opcode": "0x4804",
+              "decoder": "audit/data/spi_transfer_binaryninja.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "start": "0x6bd4",
+      "end": "0x6bd8",
+      "bytes": 4,
+      "source_sha256": "63f9fc77d06d4c42e8342ef8281b9a65944b7996918577e89c8c3bfd01b89c2c",
+      "words": [
+        {
+          "address": "0x6bd4",
+          "value": "0xfffe0008",
+          "load_sites": [
+            {
+              "site": "0x6bae",
+              "isa": "thumb",
+              "opcode": "0x4809",
+              "decoder": "audit/data/spi_transfer_binaryninja.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "start": "0x6c14",
+      "end": "0x6c48",
+      "bytes": 52,
+      "source_sha256": "aec41e7ad49e548161edc31d160363b9fd2b6e02ccaf43393539a55cd4d81a6f",
+      "words": [
+        {
+          "address": "0x6c14",
+          "value": "0xfffffc10",
+          "load_sites": [
+            {
+              "site": "0x6bda",
+              "isa": "thumb",
+              "opcode": "0x490e",
+              "decoder": "audit/data/spi_setup_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6c18",
+          "value": "0xfffe0004",
+          "load_sites": [
+            {
+              "site": "0x6be0",
+              "isa": "thumb",
+              "opcode": "0x4a0d",
+              "decoder": "audit/data/spi_setup_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6c1c",
+          "value": "0xfffe0030",
+          "load_sites": [
+            {
+              "site": "0x6be4",
+              "isa": "thumb",
+              "opcode": "0x4a0d",
+              "decoder": "audit/data/spi_setup_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6c20",
+          "value": "0x3002",
+          "load_sites": [
+            {
+              "site": "0x6be6",
+              "isa": "thumb",
+              "opcode": "0x4b0e",
+              "decoder": "audit/data/spi_setup_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6c24",
+          "value": "0xfffe0000",
+          "load_sites": [
+            {
+              "site": "0x6bea",
+              "isa": "thumb",
+              "opcode": "0x4a0e",
+              "decoder": "audit/data/spi_setup_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6c28",
+          "value": "0xfffff094",
+          "load_sites": [
+            {
+              "site": "0x6bee",
+              "isa": "thumb",
+              "opcode": "0x4a0e",
+              "decoder": "audit/data/spi_setup_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6c2c",
+          "value": "0xfffff124",
+          "load_sites": [
+            {
+              "site": "0x6bf2",
+              "isa": "thumb",
+              "opcode": "0x4b0e",
+              "decoder": "audit/data/spi_setup_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6c30",
+          "value": "0x6b45",
+          "load_sites": [
+            {
+              "site": "0x6bf6",
+              "isa": "thumb",
+              "opcode": "0x4b0e",
+              "decoder": "audit/data/spi_setup_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6c34",
+          "value": "0xfffff014",
+          "load_sites": [
+            {
+              "site": "0x6bfa",
+              "isa": "thumb",
+              "opcode": "0x4a0e",
+              "decoder": "audit/data/spi_setup_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6c38",
+          "value": "0xfffff128",
+          "load_sites": [
+            {
+              "site": "0x6c00",
+              "isa": "thumb",
+              "opcode": "0x4a0d",
+              "decoder": "audit/data/spi_setup_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6c3c",
+          "value": "0xfffe0018",
+          "load_sites": [
+            {
+              "site": "0x6c04",
+              "isa": "thumb",
+              "opcode": "0x4a0d",
+              "decoder": "audit/data/spi_setup_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6c40",
+          "value": "0xfffff120",
+          "load_sites": [
+            {
+              "site": "0x6c0a",
+              "isa": "thumb",
+              "opcode": "0x4a0d",
+              "decoder": "audit/data/spi_setup_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6c44",
+          "value": "0xfffe0014",
+          "load_sites": [
+            {
+              "site": "0x6c0e",
+              "isa": "thumb",
+              "opcode": "0x480d",
+              "decoder": "audit/data/spi_setup_binaryninja.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "start": "0x6c60",
+      "end": "0x6c68",
+      "bytes": 8,
+      "source_sha256": "d402f6d36788a7b04dfdec65efbb3e64d4596972f2227f1c43c5c06e0235166b",
+      "words": [
+        {
+          "address": "0x6c60",
+          "value": "0x200700",
+          "load_sites": [
+            {
+              "site": "0x6c48",
+              "isa": "thumb",
+              "opcode": "0x4805",
+              "decoder": "audit/data/timer_setup_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6c64",
+          "value": "0x200708",
+          "load_sites": [
+            {
+              "site": "0x6c50",
+              "isa": "thumb",
+              "opcode": "0x4804",
+              "decoder": "audit/data/timer_setup_binaryninja.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "start": "0x6c84",
+      "end": "0x6c94",
+      "bytes": 16,
+      "source_sha256": "5a1902058cfab3c5e4c591e4bd677350eabe893e6d362950b9ae01994d0a7e1d",
+      "words": [
+        {
+          "address": "0x6c84",
+          "value": "0x200704",
+          "load_sites": [
+            {
+              "site": "0x6c68",
+              "isa": "thumb",
+              "opcode": "0x4806",
+              "decoder": "audit/data/timer_setup_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6c88",
+          "value": "0x2583",
+          "load_sites": [
+            {
+              "site": "0x6c7a",
+              "isa": "thumb",
+              "opcode": "0x4903",
+              "decoder": "audit/data/timer_setup_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6c8c",
+          "value": "0xfffa0060",
+          "load_sites": [
+            {
+              "site": "0x6c70",
+              "isa": "thumb",
+              "opcode": "0x4806",
+              "decoder": "audit/data/timer_setup_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6c90",
+          "value": "0xfffa005c",
+          "load_sites": [
+            {
+              "site": "0x6c78",
+              "isa": "thumb",
+              "opcode": "0x4805",
+              "decoder": "audit/data/timer_setup_binaryninja.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "start": "0x6f58",
+      "end": "0x6fa0",
+      "bytes": 72,
+      "source_sha256": "f1353275678122d6ff00913116f5c410aabf2770c7a4d29f37cf31108a4135c3",
+      "words": [
+        {
+          "address": "0x6f58",
+          "value": "0x200708",
+          "load_sites": [
+            {
+              "site": "0x6c96",
+              "isa": "thumb",
+              "opcode": "0x4cb0",
+              "decoder": "audit/data/tc2_callback_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6f5c",
+          "value": "0x3e9",
+          "load_sites": [
+            {
+              "site": "0x6cc8",
+              "isa": "thumb",
+              "opcode": "0x4fa4",
+              "decoder": "audit/data/tc2_callback_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6f60",
+          "value": "0x200ad0",
+          "load_sites": [
+            {
+              "site": "0x6d80",
+              "isa": "thumb",
+              "opcode": "0x4977",
+              "decoder": "audit/data/tc2_callback_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6f64",
+          "value": "0xfffff110",
+          "load_sites": [
+            {
+              "site": "0x6dc8",
+              "isa": "thumb",
+              "opcode": "0x4a66",
+              "decoder": "audit/data/tc2_callback_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6f68",
+          "value": "0xbb9",
+          "load_sites": [
+            {
+              "site": "0x6dee",
+              "isa": "thumb",
+              "opcode": "0x485e",
+              "decoder": "audit/data/tc2_callback_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6f6c",
+          "value": "0x4e21",
+          "load_sites": [
+            {
+              "site": "0x6e0e",
+              "isa": "thumb",
+              "opcode": "0x4857",
+              "decoder": "audit/data/tc2_callback_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6f70",
+          "value": "0xfa1",
+          "load_sites": [
+            {
+              "site": "0x6e2e",
+              "isa": "thumb",
+              "opcode": "0x4850",
+              "decoder": "audit/data/tc2_callback_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6f74",
+          "value": "0xc351",
+          "load_sites": [
+            {
+              "site": "0x6ea4",
+              "isa": "thumb",
+              "opcode": "0x4833",
+              "decoder": "audit/data/tc2_callback_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6f78",
+          "value": "0x2711",
+          "load_sites": [
+            {
+              "site": "0x6ebe",
+              "isa": "thumb",
+              "opcode": "0x482e",
+              "decoder": "audit/data/tc2_callback_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6f7c",
+          "value": "0x200792",
+          "load_sites": [
+            {
+              "site": "0x6ec4",
+              "isa": "thumb",
+              "opcode": "0x482d",
+              "decoder": "audit/data/tc2_callback_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6f80",
+          "value": "0x200474",
+          "load_sites": [
+            {
+              "site": "0x6ecc",
+              "isa": "thumb",
+              "opcode": "0x482c",
+              "decoder": "audit/data/tc2_callback_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6f84",
+          "value": "0x404e0000",
+          "load_sites": [
+            {
+              "site": "0x6ed6",
+              "isa": "thumb",
+              "opcode": "0x4b2b",
+              "decoder": "audit/data/tc2_callback_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6f88",
+          "value": "0x33333333",
+          "load_sites": [
+            {
+              "site": "0x6efa",
+              "isa": "thumb",
+              "opcode": "0x4a23",
+              "decoder": "audit/data/tc2_callback_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6f8c",
+          "value": "0x40e27bc3",
+          "load_sites": [
+            {
+              "site": "0x6efc",
+              "isa": "thumb",
+              "opcode": "0x4b23",
+              "decoder": "audit/data/tc2_callback_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6f90",
+          "value": "0x414ce161",
+          "load_sites": [
+            {
+              "site": "0x6f10",
+              "isa": "thumb",
+              "opcode": "0x4b1f",
+              "decoder": "audit/data/tc2_callback_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6f94",
+          "value": "0x200bc3",
+          "load_sites": [
+            {
+              "site": "0x6f2e",
+              "isa": "thumb",
+              "opcode": "0x4819",
+              "decoder": "audit/data/tc2_callback_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6f98",
+          "value": "0x40420000",
+          "load_sites": [
+            {
+              "site": "0x6f38",
+              "isa": "thumb",
+              "opcode": "0x4b17",
+              "decoder": "audit/data/tc2_callback_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x6f9c",
+          "value": "0xfffff120",
+          "load_sites": [
+            {
+              "site": "0x6dc4",
+              "isa": "thumb",
+              "opcode": "0x4a75",
+              "decoder": "audit/data/tc2_callback_binaryninja.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "start": "0x70cc",
+      "end": "0x7120",
+      "bytes": 84,
+      "source_sha256": "b6fab28930870440ada19ae9a89209261a971c3f581c89bf83d8e5fc72283c4e",
+      "words": [
+        {
+          "address": "0x70cc",
+          "value": "0x2006f8",
+          "load_sites": [
+            {
+              "site": "0x6fb6",
+              "isa": "thumb",
+              "opcode": "0x4d45",
+              "decoder": "audit/data/timer_setup_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x70d0",
+          "value": "0xfffffc10",
+          "load_sites": [
+            {
+              "site": "0x6fc4",
+              "isa": "thumb",
+              "opcode": "0x4b42",
+              "decoder": "audit/data/timer_setup_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x70d4",
+          "value": "0x980c0",
+          "load_sites": [
+            {
+              "site": "0x6fd4",
+              "isa": "thumb",
+              "opcode": "0x493f",
+              "decoder": "audit/data/timer_setup_binaryninja.json"
+            },
+            {
+              "site": "0x702c",
+              "isa": "thumb",
+              "opcode": "0x4f29",
+              "decoder": "audit/data/timer_setup_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x70d8",
+          "value": "0xfffff0b0",
+          "load_sites": [
+            {
+              "site": "0x6fd8",
+              "isa": "thumb",
+              "opcode": "0x493f",
+              "decoder": "audit/data/timer_setup_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x70dc",
+          "value": "0xfffff124",
+          "load_sites": [
+            {
+              "site": "0x6fdc",
+              "isa": "thumb",
+              "opcode": "0x483f",
+              "decoder": "audit/data/timer_setup_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x70e0",
+          "value": "0x6c49",
+          "load_sites": [
+            {
+              "site": "0x6fe0",
+              "isa": "thumb",
+              "opcode": "0x4a3f",
+              "decoder": "audit/data/timer_setup_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x70e4",
+          "value": "0xfffff030",
+          "load_sites": [
+            {
+              "site": "0x6fe4",
+              "isa": "thumb",
+              "opcode": "0x493f",
+              "decoder": "audit/data/timer_setup_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x70e8",
+          "value": "0xfffff128",
+          "load_sites": [
+            {
+              "site": "0x6fea",
+              "isa": "thumb",
+              "opcode": "0x493f",
+              "decoder": "audit/data/timer_setup_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x70ec",
+          "value": "0xfffa0020",
+          "load_sites": [
+            {
+              "site": "0x700c",
+              "isa": "thumb",
+              "opcode": "0x4e37",
+              "decoder": "audit/data/timer_setup_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x70f0",
+          "value": "0xfffa001c",
+          "load_sites": [
+            {
+              "site": "0x7014",
+              "isa": "thumb",
+              "opcode": "0x4e36",
+              "decoder": "audit/data/timer_setup_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x70f4",
+          "value": "0xfffff0b4",
+          "load_sites": [
+            {
+              "site": "0x7030",
+              "isa": "thumb",
+              "opcode": "0x4e30",
+              "decoder": "audit/data/timer_setup_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x70f8",
+          "value": "0x6c69",
+          "load_sites": [
+            {
+              "site": "0x7038",
+              "isa": "thumb",
+              "opcode": "0x4f2f",
+              "decoder": "audit/data/timer_setup_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x70fc",
+          "value": "0xfffff034",
+          "load_sites": [
+            {
+              "site": "0x703c",
+              "isa": "thumb",
+              "opcode": "0x4e2f",
+              "decoder": "audit/data/timer_setup_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x7100",
+          "value": "0xfffff0b8",
+          "load_sites": [
+            {
+              "site": "0x7086",
+              "isa": "thumb",
+              "opcode": "0x4e1e",
+              "decoder": "audit/data/timer_setup_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x7104",
+          "value": "0x6c95",
+          "load_sites": [
+            {
+              "site": "0x708c",
+              "isa": "thumb",
+              "opcode": "0x481d",
+              "decoder": "audit/data/timer_setup_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x7108",
+          "value": "0xfffff038",
+          "load_sites": [
+            {
+              "site": "0x7090",
+              "isa": "thumb",
+              "opcode": "0x481d",
+              "decoder": "audit/data/timer_setup_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x710c",
+          "value": "0x963",
+          "load_sites": [
+            {
+              "site": "0x70a8",
+              "isa": "thumb",
+              "opcode": "0x4918",
+              "decoder": "audit/data/timer_setup_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x7110",
+          "value": "0xfffff120",
+          "load_sites": [
+            {
+              "site": "0x6fee",
+              "isa": "thumb",
+              "opcode": "0x4a48",
+              "decoder": "audit/data/timer_setup_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x7114",
+          "value": "0xfffa0060",
+          "load_sites": [
+            {
+              "site": "0x705e",
+              "isa": "thumb",
+              "opcode": "0x4e2d",
+              "decoder": "audit/data/timer_setup_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x7118",
+          "value": "0xfffa005c",
+          "load_sites": [
+            {
+              "site": "0x7066",
+              "isa": "thumb",
+              "opcode": "0x4e2c",
+              "decoder": "audit/data/timer_setup_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x711c",
+          "value": "0x200708",
+          "load_sites": [
+            {
+              "site": "0x7076",
+              "isa": "thumb",
+              "opcode": "0x4b29",
+              "decoder": "audit/data/timer_setup_binaryninja.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "start": "0x7124",
+      "end": "0x7128",
+      "bytes": 4,
+      "source_sha256": "fcf74e6d2acde3a7d54d0cdde7bc50ed2ca5cd7ae9ccbee12202d1a7ce68960f",
+      "words": [
+        {
+          "address": "0x7124",
+          "value": "0x86d8",
+          "load_sites": [
+            {
+              "site": "0x7120",
+              "isa": "thumb",
+              "opcode": "0x4b00",
+              "decoder": "audit/data/soft_float_binaryninja.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "start": "0x7134",
+      "end": "0x7138",
+      "bytes": 4,
+      "source_sha256": "c7ccff78c713a26db6fdb8e0daa181785f8fb3d614222f2ac1b4ed01b2738775",
+      "words": [
+        {
+          "address": "0x7134",
+          "value": "0x89c8",
+          "load_sites": [
+            {
+              "site": "0x712a",
+              "isa": "thumb",
+              "opcode": "0x4b02",
+              "decoder": "audit/data/soft_float_binaryninja.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "start": "0x713c",
+      "end": "0x7140",
+      "bytes": 4,
+      "source_sha256": "c1919999c0b7a89f40018901ee83eea49607600aea34a25f78c4226128a82e68",
+      "words": [
+        {
+          "address": "0x713c",
+          "value": "0x87e8",
+          "load_sites": [
+            {
+              "site": "0x7138",
+              "isa": "thumb",
+              "opcode": "0x4b00",
+              "decoder": "audit/data/soft_float_binaryninja.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "start": "0x7144",
+      "end": "0x7148",
+      "bytes": 4,
+      "source_sha256": "15f76ffd2048a9da439165cdb9e9a49a7c258720d9de845460e79835b507c648",
+      "words": [
+        {
+          "address": "0x7144",
+          "value": "0x9038",
+          "load_sites": [
+            {
+              "site": "0x7140",
+              "isa": "thumb",
+              "opcode": "0x4b00",
+              "decoder": "audit/data/soft_float_binaryninja.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "start": "0x714c",
+      "end": "0x7150",
+      "bytes": 4,
+      "source_sha256": "aade69d831a909a09f39a6a09556275dda005745b12cbb58fd45c2895699f89a",
+      "words": [
+        {
+          "address": "0x714c",
+          "value": "0x95f4",
+          "load_sites": [
+            {
+              "site": "0x7148",
+              "isa": "thumb",
+              "opcode": "0x4b00",
+              "decoder": "audit/data/soft_float_binaryninja.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "start": "0x7154",
+      "end": "0x7158",
+      "bytes": 4,
+      "source_sha256": "9cb1d7406edc05ccd0160738e6096b9a563f6f70ac0e4dd460a6ff6c5be8475b",
+      "words": [
+        {
+          "address": "0x7154",
+          "value": "0x90b0",
+          "load_sites": [
+            {
+              "site": "0x7150",
+              "isa": "thumb",
+              "opcode": "0x4b00",
+              "decoder": "audit/data/soft_float_binaryninja.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "start": "0x715c",
+      "end": "0x7160",
+      "bytes": 4,
+      "source_sha256": "8082ca3360e96f3b6cfb3c16c9e8a4217d002b7e854bc2af328a6a337d804504",
+      "words": [
+        {
+          "address": "0x715c",
+          "value": "0x874c",
+          "load_sites": [
+            {
+              "site": "0x7158",
+              "isa": "thumb",
+              "opcode": "0x4b00",
+              "decoder": "audit/data/soft_float_binaryninja.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "start": "0x7164",
+      "end": "0x7168",
+      "bytes": 4,
+      "source_sha256": "c4bf571b47a9336ed96b1173aeb6aed369ab831d22c71bfbf10f338db651cce0",
+      "words": [
+        {
+          "address": "0x7164",
+          "value": "0x88a4",
+          "load_sites": [
+            {
+              "site": "0x7160",
+              "isa": "thumb",
+              "opcode": "0x4b00",
+              "decoder": "audit/data/soft_float_binaryninja.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "start": "0x7174",
+      "end": "0x7178",
+      "bytes": 4,
+      "source_sha256": "0ab43ce50246d72cfa8ef3359a7cd3ae9c73fa9e9355b7f8cb7319b058171c04",
+      "words": [
+        {
+          "address": "0x7174",
+          "value": "0x8ef4",
+          "load_sites": [
+            {
+              "site": "0x716a",
+              "isa": "thumb",
+              "opcode": "0x4b02",
+              "decoder": "audit/data/soft_float_binaryninja.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "start": "0x737c",
+      "end": "0x7380",
+      "bytes": 4,
+      "source_sha256": "355b5d0909251a31911ff0d5f5eeeb41b6766b99fa5895e79539d94ed388330f",
+      "words": [
+        {
+          "address": "0x737c",
+          "value": "0xa0b0",
+          "load_sites": [
+            {
+              "site": "0x7374",
+              "isa": "thumb",
+              "opcode": "0x4901",
+              "decoder": "audit/data/adc_pipeline_binaryninja.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "start": "0x7390",
+      "end": "0x7398",
+      "bytes": 8,
+      "source_sha256": "3a7d680e4535f0a36fb6b2c98c3308f76105cbe92e83079f2cdc4799fbb96ff5",
+      "words": [
+        {
+          "address": "0x7390",
+          "value": "0x200afe",
+          "load_sites": [
+            {
+              "site": "0x7382",
+              "isa": "thumb",
+              "opcode": "0x4903",
+              "decoder": "audit/data/adc_pipeline_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x7394",
+          "value": "0xa320",
+          "load_sites": [
+            {
+              "site": "0x7388",
+              "isa": "thumb",
+              "opcode": "0x4a02",
+              "decoder": "audit/data/adc_pipeline_binaryninja.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "start": "0x73b0",
+      "end": "0x73bc",
+      "bytes": 12,
+      "source_sha256": "6186e97836ee7d11d475dce207eba958f0b15f1cf6c6b7fede9cd80f7aa98b34",
+      "words": [
+        {
+          "address": "0x73b0",
+          "value": "0x2be",
+          "load_sites": [
+            {
+              "site": "0x7398",
+              "isa": "thumb",
+              "opcode": "0x4905",
+              "decoder": "audit/data/adc_pipeline_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x73b4",
+          "value": "0xa3a0",
+          "load_sites": [
+            {
+              "site": "0x73a2",
+              "isa": "thumb",
+              "opcode": "0x4904",
+              "decoder": "audit/data/adc_pipeline_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x73b8",
+          "value": "0x200aff",
+          "load_sites": [
+            {
+              "site": "0x73a6",
+              "isa": "thumb",
+              "opcode": "0x4904",
+              "decoder": "audit/data/adc_pipeline_binaryninja.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "start": "0x73c8",
+      "end": "0x73cc",
+      "bytes": 4,
+      "source_sha256": "6fa59c1e2db6d26375d6dffba761ef57a6e7c00a6eab8449af4153a3d19be5ca",
+      "words": [
+        {
+          "address": "0x73c8",
+          "value": "0xa030",
+          "load_sites": [
+            {
+              "site": "0x73c0",
+              "isa": "thumb",
+              "opcode": "0x4901",
+              "decoder": "audit/data/adc_pipeline_binaryninja.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "start": "0x73d0",
+      "end": "0x73d4",
+      "bytes": 4,
+      "source_sha256": "0a73e59ef10e0d417205504b51664b5f2e8eb842d594d76321d97fd5cc5f790a",
+      "words": [
+        {
+          "address": "0x73d0",
+          "value": "0x10fd00",
+          "load_sites": [
+            {
+              "site": "0x73cc",
+              "isa": "thumb",
+              "opcode": "0x4800",
+              "decoder": "audit/data/adc_init_vector_binaryninja.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "start": "0x73d8",
+      "end": "0x73dc",
+      "bytes": 4,
+      "source_sha256": "a5cbd2069844d013339ecf2194c78d69f7477823729ee3ff33b731009b4832e5",
+      "words": [
+        {
+          "address": "0x73d8",
+          "value": "0x133ef42",
+          "load_sites": [
+            {
+              "site": "0x73d4",
+              "isa": "thumb",
+              "opcode": "0x4800",
+              "decoder": "audit/data/adc_init_vector_binaryninja.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "start": "0x73e0",
+      "end": "0x73e4",
+      "bytes": 4,
+      "source_sha256": "304841527c79c65df2225ec9ab1c06ad329d18eb167f1a67ec3cf5f9a7a3de40",
+      "words": [
+        {
+          "address": "0x73e0",
+          "value": "0x10fe00",
+          "load_sites": [
+            {
+              "site": "0x73dc",
+              "isa": "thumb",
+              "opcode": "0x4800",
+              "decoder": "audit/data/adc_init_vector_binaryninja.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "start": "0x7430",
+      "end": "0x7434",
+      "bytes": 4,
+      "source_sha256": "55e2bc5e7266df6b4b5d113151058a2617e99103886bf095020d2fc82e4d1a73",
+      "words": [
+        {
+          "address": "0x7430",
+          "value": "0x104004",
+          "load_sites": [
+            {
+              "site": "0x73f0",
+              "isa": "thumb",
+              "opcode": "0x4a0f",
+              "decoder": "audit/data/adc_init_vector_binaryninja.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "start": "0x7488",
+      "end": "0x7498",
+      "bytes": 16,
+      "source_sha256": "43f6e839421efe1e096bc3814b9b835f21f3531d4f8c7aab2f1922a5e37ec92d",
+      "words": [
+        {
+          "address": "0x7488",
+          "value": "0xfffa0000",
+          "load_sites": [
+            {
+              "site": "0x744a",
+              "isa": "thumb",
+              "opcode": "0x480f",
+              "decoder": "audit/data/pio_interrupt_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x748c",
+          "value": "0xfffa0040",
+          "load_sites": [
+            {
+              "site": "0x744e",
+              "isa": "thumb",
+              "opcode": "0x480f",
+              "decoder": "audit/data/pio_interrupt_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x7490",
+          "value": "0xfffff44c",
+          "load_sites": [
+            {
+              "site": "0x747c",
+              "isa": "thumb",
+              "opcode": "0x4804",
+              "decoder": "audit/data/pio_interrupt_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x7494",
+          "value": "0x200788",
+          "load_sites": [
+            {
+              "site": "0x745a",
+              "isa": "thumb",
+              "opcode": "0x480e",
+              "decoder": "audit/data/pio_interrupt_binaryninja.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "start": "0x7598",
+      "end": "0x760c",
+      "bytes": 116,
+      "source_sha256": "835fe0ca021161ee8b9da17b44d1cd396141125ccad7089f21ec9c662522c992",
+      "words": [
+        {
+          "address": "0x7598",
+          "value": "0xfffffc14",
+          "load_sites": [
+            {
+              "site": "0x74f8",
+              "isa": "thumb",
+              "opcode": "0x4a27",
+              "decoder": "audit/data/pio_interrupt_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x759c",
+          "value": "0xfffffc10",
+          "load_sites": [
+            {
+              "site": "0x74fe",
+              "isa": "thumb",
+              "opcode": "0x4a27",
+              "decoder": "audit/data/pio_interrupt_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x75a0",
+          "value": "0x3208383",
+          "load_sites": [
+            {
+              "site": "0x7504",
+              "isa": "thumb",
+              "opcode": "0x4a26",
+              "decoder": "audit/data/pio_interrupt_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x75a4",
+          "value": "0xfcdf7c7c",
+          "load_sites": [
+            {
+              "site": "0x750c",
+              "isa": "thumb",
+              "opcode": "0x4c25",
+              "decoder": "audit/data/pio_interrupt_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x75a8",
+          "value": "0xfffff414",
+          "load_sites": [
+            {
+              "site": "0x750e",
+              "isa": "thumb",
+              "opcode": "0x4d26",
+              "decoder": "audit/data/pio_interrupt_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x75ac",
+          "value": "0xfffff4a4",
+          "load_sites": [
+            {
+              "site": "0x7518",
+              "isa": "thumb",
+              "opcode": "0x4b24",
+              "decoder": "audit/data/pio_interrupt_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x75b0",
+          "value": "0xfffff4a0",
+          "load_sites": [
+            {
+              "site": "0x751c",
+              "isa": "thumb",
+              "opcode": "0x4b24",
+              "decoder": "audit/data/pio_interrupt_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x75b4",
+          "value": "0xfffff454",
+          "load_sites": [
+            {
+              "site": "0x7520",
+              "isa": "thumb",
+              "opcode": "0x4a24",
+              "decoder": "audit/data/pio_interrupt_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x75b8",
+          "value": "0xfdff97ff",
+          "load_sites": [
+            {
+              "site": "0x7522",
+              "isa": "thumb",
+              "opcode": "0x4b25",
+              "decoder": "audit/data/pio_interrupt_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x75bc",
+          "value": "0xfffff450",
+          "load_sites": [
+            {
+              "site": "0x7526",
+              "isa": "thumb",
+              "opcode": "0x4a25",
+              "decoder": "audit/data/pio_interrupt_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x75c0",
+          "value": "0xfffff460",
+          "load_sites": [
+            {
+              "site": "0x752c",
+              "isa": "thumb",
+              "opcode": "0x4a24",
+              "decoder": "audit/data/pio_interrupt_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x75c4",
+          "value": "0xfffdffff",
+          "load_sites": [
+            {
+              "site": "0x752e",
+              "isa": "thumb",
+              "opcode": "0x4b25",
+              "decoder": "audit/data/pio_interrupt_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x75c8",
+          "value": "0xfffff464",
+          "load_sites": [
+            {
+              "site": "0x7532",
+              "isa": "thumb",
+              "opcode": "0x4a25",
+              "decoder": "audit/data/pio_interrupt_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x75cc",
+          "value": "0x7860",
+          "load_sites": [
+            {
+              "site": "0x754a",
+              "isa": "thumb",
+              "opcode": "0x4a20",
+              "decoder": "audit/data/pio_interrupt_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x75d0",
+          "value": "0x88001",
+          "load_sites": [
+            {
+              "site": "0x7550",
+              "isa": "thumb",
+              "opcode": "0x4a1f",
+              "decoder": "audit/data/pio_interrupt_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x75d4",
+          "value": "0x8f861",
+          "load_sites": [
+            {
+              "site": "0x7556",
+              "isa": "thumb",
+              "opcode": "0x4a1f",
+              "decoder": "audit/data/pio_interrupt_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x75d8",
+          "value": "0xfffff088",
+          "load_sites": [
+            {
+              "site": "0x755a",
+              "isa": "thumb",
+              "opcode": "0x481f",
+              "decoder": "audit/data/pio_interrupt_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x75dc",
+          "value": "0x7449",
+          "load_sites": [
+            {
+              "site": "0x7562",
+              "isa": "thumb",
+              "opcode": "0x4a1e",
+              "decoder": "audit/data/pio_interrupt_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x75e0",
+          "value": "0xfffff008",
+          "load_sites": [
+            {
+              "site": "0x7566",
+              "isa": "thumb",
+              "opcode": "0x481e",
+              "decoder": "audit/data/pio_interrupt_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x75e4",
+          "value": "0xfffff440",
+          "load_sites": [
+            {
+              "site": "0x7570",
+              "isa": "thumb",
+              "opcode": "0x481c",
+              "decoder": "audit/data/pio_interrupt_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x75e8",
+          "value": "0xfffff120",
+          "load_sites": [
+            {
+              "site": "0x7576",
+              "isa": "thumb",
+              "opcode": "0x481c",
+              "decoder": "audit/data/pio_interrupt_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x75ec",
+          "value": "0xfffff400",
+          "load_sites": [
+            {
+              "site": "0x7502",
+              "isa": "thumb",
+              "opcode": "0x4b3a",
+              "decoder": "audit/data/pio_interrupt_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x75f0",
+          "value": "0xfffff410",
+          "load_sites": [
+            {
+              "site": "0x7508",
+              "isa": "thumb",
+              "opcode": "0x4c39",
+              "decoder": "audit/data/pio_interrupt_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x75f4",
+          "value": "0xfffff434",
+          "load_sites": [
+            {
+              "site": "0x7514",
+              "isa": "thumb",
+              "opcode": "0x4b37",
+              "decoder": "audit/data/pio_interrupt_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x75f8",
+          "value": "0xfffff470",
+          "load_sites": [
+            {
+              "site": "0x7548",
+              "isa": "thumb",
+              "opcode": "0x482b",
+              "decoder": "audit/data/pio_interrupt_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x75fc",
+          "value": "0xfffff474",
+          "load_sites": [
+            {
+              "site": "0x754e",
+              "isa": "thumb",
+              "opcode": "0x482b",
+              "decoder": "audit/data/pio_interrupt_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x7600",
+          "value": "0xfffff404",
+          "load_sites": [
+            {
+              "site": "0x7554",
+              "isa": "thumb",
+              "opcode": "0x482a",
+              "decoder": "audit/data/pio_interrupt_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x7604",
+          "value": "0xfffff124",
+          "load_sites": [
+            {
+              "site": "0x7474",
+              "isa": "thumb",
+              "opcode": "0x4963",
+              "decoder": "audit/data/pio_interrupt_binaryninja.json"
+            },
+            {
+              "site": "0x755e",
+              "isa": "thumb",
+              "opcode": "0x4a29",
+              "decoder": "audit/data/pio_interrupt_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x7608",
+          "value": "0xfffff128",
+          "load_sites": [
+            {
+              "site": "0x7478",
+              "isa": "thumb",
+              "opcode": "0x4963",
+              "decoder": "audit/data/pio_interrupt_binaryninja.json"
+            },
+            {
+              "site": "0x756c",
+              "isa": "thumb",
+              "opcode": "0x4826",
+              "decoder": "audit/data/pio_interrupt_binaryninja.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "start": "0x7698",
+      "end": "0x76cc",
+      "bytes": 52,
+      "source_sha256": "2ccb964e612d7122d8fca88fbeba964dce46183252c1364da177023f64ea0fd5",
+      "words": [
+        {
+          "address": "0x7698",
+          "value": "0x2006cc",
+          "load_sites": [
+            {
+              "site": "0x761c",
+              "isa": "thumb",
+              "opcode": "0x4e1e",
+              "decoder": "audit/data/initial_state_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x769c",
+          "value": "0x200734",
+          "load_sites": [
+            {
+              "site": "0x765e",
+              "isa": "thumb",
+              "opcode": "0x4f0f",
+              "decoder": "audit/data/initial_state_binaryninja.json"
+            },
+            {
+              "site": "0x7680",
+              "isa": "thumb",
+              "opcode": "0x4f06",
+              "decoder": "audit/data/initial_state_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x76a0",
+          "value": "0x200794",
+          "load_sites": [
+            {
+              "site": "0x7672",
+              "isa": "thumb",
+              "opcode": "0x4f0b",
+              "decoder": "audit/data/initial_state_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x76a4",
+          "value": "0xfffff43c",
+          "load_sites": [
+            {
+              "site": "0x7452",
+              "isa": "thumb",
+              "opcode": "0x4894",
+              "decoder": "audit/data/pio_interrupt_binaryninja.json"
+            },
+            {
+              "site": "0x7538",
+              "isa": "thumb",
+              "opcode": "0x4a5a",
+              "decoder": "audit/data/pio_interrupt_binaryninja.json"
+            },
+            {
+              "site": "0x760e",
+              "isa": "thumb",
+              "opcode": "0x4825",
+              "decoder": "audit/data/initial_state_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x76a8",
+          "value": "0x200717",
+          "load_sites": [
+            {
+              "site": "0x7642",
+              "isa": "thumb",
+              "opcode": "0x4b19",
+              "decoder": "audit/data/initial_state_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x76ac",
+          "value": "0x200718",
+          "load_sites": [
+            {
+              "site": "0x7646",
+              "isa": "thumb",
+              "opcode": "0x4b19",
+              "decoder": "audit/data/initial_state_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x76b0",
+          "value": "0x200716",
+          "load_sites": [
+            {
+              "site": "0x764a",
+              "isa": "thumb",
+              "opcode": "0x4a19",
+              "decoder": "audit/data/initial_state_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x76b4",
+          "value": "0x200713",
+          "load_sites": [
+            {
+              "site": "0x7652",
+              "isa": "thumb",
+              "opcode": "0x4b18",
+              "decoder": "audit/data/initial_state_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x76b8",
+          "value": "0x200715",
+          "load_sites": [
+            {
+              "site": "0x7654",
+              "isa": "thumb",
+              "opcode": "0x4c18",
+              "decoder": "audit/data/initial_state_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x76bc",
+          "value": "0x20072c",
+          "load_sites": [
+            {
+              "site": "0x7656",
+              "isa": "thumb",
+              "opcode": "0x4d19",
+              "decoder": "audit/data/initial_state_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x76c0",
+          "value": "0x2710",
+          "load_sites": [
+            {
+              "site": "0x7664",
+              "isa": "thumb",
+              "opcode": "0x4e16",
+              "decoder": "audit/data/initial_state_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x76c4",
+          "value": "0x2008a8",
+          "load_sites": [
+            {
+              "site": "0x7676",
+              "isa": "thumb",
+              "opcode": "0x4f13",
+              "decoder": "audit/data/initial_state_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x76c8",
+          "value": "0x5b8d80",
+          "load_sites": [
+            {
+              "site": "0x7686",
+              "isa": "thumb",
+              "opcode": "0x4e10",
+              "decoder": "audit/data/initial_state_binaryninja.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "start": "0x7a40",
+      "end": "0x7af8",
+      "bytes": 184,
+      "source_sha256": "87c0db66f5a4bd6ceaf0ded1193c1f65d8a2ee2a846b221f57ab550970ba660f",
+      "words": [
+        {
+          "address": "0x7a40",
+          "value": "0x200788",
+          "load_sites": [
+            {
+              "site": "0x77c6",
+              "isa": "thumb",
+              "opcode": "0x4d9e",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x7a44",
+          "value": "0xfffff134",
+          "load_sites": [
+            {
+              "site": "0x77de",
+              "isa": "thumb",
+              "opcode": "0x4899",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x7a48",
+          "value": "0x7445",
+          "load_sites": [
+            {
+              "site": "0x77e0",
+              "isa": "thumb",
+              "opcode": "0x4999",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x7a4c",
+          "value": "0x2006cd",
+          "load_sites": [
+            {
+              "site": "0x77f0",
+              "isa": "thumb",
+              "opcode": "0x4896",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x7a50",
+          "value": "0x200712",
+          "load_sites": [
+            {
+              "site": "0x77fe",
+              "isa": "thumb",
+              "opcode": "0x4894",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            },
+            {
+              "site": "0x78c8",
+              "isa": "thumb",
+              "opcode": "0x4861",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x7a54",
+          "value": "0x200711",
+          "load_sites": [
+            {
+              "site": "0x7804",
+              "isa": "thumb",
+              "opcode": "0x4893",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            },
+            {
+              "site": "0x78cc",
+              "isa": "thumb",
+              "opcode": "0x4861",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x7a58",
+          "value": "0xfffff430",
+          "load_sites": [
+            {
+              "site": "0x780c",
+              "isa": "thumb",
+              "opcode": "0x4892",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            },
+            {
+              "site": "0x78a0",
+              "isa": "thumb",
+              "opcode": "0x496d",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            },
+            {
+              "site": "0x79b2",
+              "isa": "thumb",
+              "opcode": "0x4829",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x7a5c",
+          "value": "0x200710",
+          "load_sites": [
+            {
+              "site": "0x7808",
+              "isa": "thumb",
+              "opcode": "0x4894",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            },
+            {
+              "site": "0x78d0",
+              "isa": "thumb",
+              "opcode": "0x4862",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x7a60",
+          "value": "0x200ade",
+          "load_sites": [
+            {
+              "site": "0x7812",
+              "isa": "thumb",
+              "opcode": "0x4893",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            },
+            {
+              "site": "0x7894",
+              "isa": "thumb",
+              "opcode": "0x4972",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            },
+            {
+              "site": "0x78a6",
+              "isa": "thumb",
+              "opcode": "0x496e",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            },
+            {
+              "site": "0x7908",
+              "isa": "thumb",
+              "opcode": "0x4955",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            },
+            {
+              "site": "0x79a2",
+              "isa": "thumb",
+              "opcode": "0x482f",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x7a64",
+          "value": "0x200ae0",
+          "load_sites": [
+            {
+              "site": "0x7816",
+              "isa": "thumb",
+              "opcode": "0x4893",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            },
+            {
+              "site": "0x7898",
+              "isa": "thumb",
+              "opcode": "0x4972",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            },
+            {
+              "site": "0x78aa",
+              "isa": "thumb",
+              "opcode": "0x496e",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            },
+            {
+              "site": "0x790c",
+              "isa": "thumb",
+              "opcode": "0x4955",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            },
+            {
+              "site": "0x79a6",
+              "isa": "thumb",
+              "opcode": "0x482f",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x7a68",
+          "value": "0x200adf",
+          "load_sites": [
+            {
+              "site": "0x781a",
+              "isa": "thumb",
+              "opcode": "0x4893",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            },
+            {
+              "site": "0x78ae",
+              "isa": "thumb",
+              "opcode": "0x496e",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            },
+            {
+              "site": "0x7910",
+              "isa": "thumb",
+              "opcode": "0x4955",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            },
+            {
+              "site": "0x79aa",
+              "isa": "thumb",
+              "opcode": "0x482f",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x7a6c",
+          "value": "0xfffff434",
+          "load_sites": [
+            {
+              "site": "0x781e",
+              "isa": "thumb",
+              "opcode": "0x4f93",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x7a70",
+          "value": "0x200717",
+          "load_sites": [
+            {
+              "site": "0x7824",
+              "isa": "thumb",
+              "opcode": "0x4892",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            },
+            {
+              "site": "0x7a0c",
+              "isa": "thumb",
+              "opcode": "0x4818",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x7a74",
+          "value": "0x200718",
+          "load_sites": [
+            {
+              "site": "0x7828",
+              "isa": "thumb",
+              "opcode": "0x4892",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            },
+            {
+              "site": "0x7836",
+              "isa": "thumb",
+              "opcode": "0x488f",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            },
+            {
+              "site": "0x7a10",
+              "isa": "thumb",
+              "opcode": "0x4818",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            },
+            {
+              "site": "0x7a32",
+              "isa": "thumb",
+              "opcode": "0x4810",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x7a78",
+          "value": "0x200716",
+          "load_sites": [
+            {
+              "site": "0x782c",
+              "isa": "thumb",
+              "opcode": "0x4892",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            },
+            {
+              "site": "0x7a14",
+              "isa": "thumb",
+              "opcode": "0x4818",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x7a7c",
+          "value": "0x20042c",
+          "load_sites": [
+            {
+              "site": "0x7844",
+              "isa": "thumb",
+              "opcode": "0x488d",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            },
+            {
+              "site": "0x78d4",
+              "isa": "thumb",
+              "opcode": "0x4869",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x7a80",
+          "value": "0x200425",
+          "load_sites": [
+            {
+              "site": "0x784e",
+              "isa": "thumb",
+              "opcode": "0x488c",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x7a84",
+          "value": "0x200af4",
+          "load_sites": [
+            {
+              "site": "0x7856",
+              "isa": "thumb",
+              "opcode": "0x498b",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x7a88",
+          "value": "0x200ad2",
+          "load_sites": [
+            {
+              "site": "0x7866",
+              "isa": "thumb",
+              "opcode": "0x4888",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x7a8c",
+          "value": "0xfffff470",
+          "load_sites": [
+            {
+              "site": "0x7870",
+              "isa": "thumb",
+              "opcode": "0x4a86",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x7a90",
+          "value": "0xfffff474",
+          "load_sites": [
+            {
+              "site": "0x7874",
+              "isa": "thumb",
+              "opcode": "0x4a86",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x7a94",
+          "value": "0x32083e3",
+          "load_sites": [
+            {
+              "site": "0x787c",
+              "isa": "thumb",
+              "opcode": "0x4985",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x7a98",
+          "value": "0xfffff404",
+          "load_sites": [
+            {
+              "site": "0x7878",
+              "isa": "thumb",
+              "opcode": "0x4a87",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x7a9c",
+          "value": "0xfffff400",
+          "load_sites": [
+            {
+              "site": "0x787e",
+              "isa": "thumb",
+              "opcode": "0x4a87",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x7aa0",
+          "value": "0xfffff410",
+          "load_sites": [
+            {
+              "site": "0x7882",
+              "isa": "thumb",
+              "opcode": "0x4a87",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x7aa4",
+          "value": "0x2005f4",
+          "load_sites": [
+            {
+              "site": "0x78de",
+              "isa": "thumb",
+              "opcode": "0x4871",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x7aa8",
+          "value": "0x200ac4",
+          "load_sites": [
+            {
+              "site": "0x792a",
+              "isa": "thumb",
+              "opcode": "0x485f",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x7aac",
+          "value": "0x2006df",
+          "load_sites": [
+            {
+              "site": "0x793c",
+              "isa": "thumb",
+              "opcode": "0x485b",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x7ab0",
+          "value": "0x2006de",
+          "load_sites": [
+            {
+              "site": "0x7944",
+              "isa": "thumb",
+              "opcode": "0x485a",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            },
+            {
+              "site": "0x79e4",
+              "isa": "thumb",
+              "opcode": "0x4832",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x7ab4",
+          "value": "0x200714",
+          "load_sites": [
+            {
+              "site": "0x794c",
+              "isa": "thumb",
+              "opcode": "0x4859",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            },
+            {
+              "site": "0x7980",
+              "isa": "thumb",
+              "opcode": "0x484c",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            },
+            {
+              "site": "0x7996",
+              "isa": "thumb",
+              "opcode": "0x4847",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x7ab8",
+          "value": "0x2006e0",
+          "load_sites": [
+            {
+              "site": "0x7952",
+              "isa": "thumb",
+              "opcode": "0x4959",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            },
+            {
+              "site": "0x7976",
+              "isa": "thumb",
+              "opcode": "0x4850",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x7abc",
+          "value": "0x200ada",
+          "load_sites": [
+            {
+              "site": "0x796a",
+              "isa": "thumb",
+              "opcode": "0x4854",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            },
+            {
+              "site": "0x79d0",
+              "isa": "thumb",
+              "opcode": "0x483a",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x7ac0",
+          "value": "0x200adb",
+          "load_sites": [
+            {
+              "site": "0x796e",
+              "isa": "thumb",
+              "opcode": "0x4854",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            },
+            {
+              "site": "0x79d4",
+              "isa": "thumb",
+              "opcode": "0x483a",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            },
+            {
+              "site": "0x79ec",
+              "isa": "thumb",
+              "opcode": "0x4834",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x7ac4",
+          "value": "0x200ad9",
+          "load_sites": [
+            {
+              "site": "0x7972",
+              "isa": "thumb",
+              "opcode": "0x4854",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            },
+            {
+              "site": "0x79ca",
+              "isa": "thumb",
+              "opcode": "0x483e",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            },
+            {
+              "site": "0x79d8",
+              "isa": "thumb",
+              "opcode": "0x483a",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x7ac8",
+          "value": "0x186a0",
+          "load_sites": [
+            {
+              "site": "0x799c",
+              "isa": "thumb",
+              "opcode": "0x494a",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x7acc",
+          "value": "0x2005f0",
+          "load_sites": [
+            {
+              "site": "0x79f4",
+              "isa": "thumb",
+              "opcode": "0x4835",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x7ad0",
+          "value": "0x2005ec",
+          "load_sites": [
+            {
+              "site": "0x79fc",
+              "isa": "thumb",
+              "opcode": "0x4834",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x7ad4",
+          "value": "0xfffffd00",
+          "load_sites": [
+            {
+              "site": "0x78ec",
+              "isa": "thumb",
+              "opcode": "0x4879",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x7ad8",
+          "value": "0xa500000d",
+          "load_sites": [
+            {
+              "site": "0x78ee",
+              "isa": "thumb",
+              "opcode": "0x497a",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x7adc",
+          "value": "0x2710",
+          "load_sites": [
+            {
+              "site": "0x7956",
+              "isa": "thumb",
+              "opcode": "0x4a61",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x7ae0",
+          "value": "0x5b8d80",
+          "load_sites": [
+            {
+              "site": "0x7986",
+              "isa": "thumb",
+              "opcode": "0x4956",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x7ae4",
+          "value": "0x200713",
+          "load_sites": [
+            {
+              "site": "0x7960",
+              "isa": "thumb",
+              "opcode": "0x4860",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            },
+            {
+              "site": "0x798e",
+              "isa": "thumb",
+              "opcode": "0x4855",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x7ae8",
+          "value": "0x20072c",
+          "load_sites": [
+            {
+              "site": "0x7950",
+              "isa": "thumb",
+              "opcode": "0x4865",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            },
+            {
+              "site": "0x7984",
+              "isa": "thumb",
+              "opcode": "0x4858",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            },
+            {
+              "site": "0x799a",
+              "isa": "thumb",
+              "opcode": "0x4853",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x7aec",
+          "value": "0x2008a8",
+          "load_sites": [
+            {
+              "site": "0x79c2",
+              "isa": "thumb",
+              "opcode": "0x494a",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x7af0",
+          "value": "0x200715",
+          "load_sites": [
+            {
+              "site": "0x795c",
+              "isa": "thumb",
+              "opcode": "0x4864",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            },
+            {
+              "site": "0x798a",
+              "isa": "thumb",
+              "opcode": "0x4859",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            },
+            {
+              "site": "0x79dc",
+              "isa": "thumb",
+              "opcode": "0x4844",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            },
+            {
+              "site": "0x7a18",
+              "isa": "thumb",
+              "opcode": "0x4835",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x7af4",
+          "value": "0xfffff43c",
+          "load_sites": [
+            {
+              "site": "0x78b8",
+              "isa": "thumb",
+              "opcode": "0x498e",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            },
+            {
+              "site": "0x78e4",
+              "isa": "thumb",
+              "opcode": "0x4883",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            },
+            {
+              "site": "0x791c",
+              "isa": "thumb",
+              "opcode": "0x4975",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            },
+            {
+              "site": "0x7a2a",
+              "isa": "thumb",
+              "opcode": "0x4932",
+              "decoder": "audit/data/main_loop_binaryninja.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "start": "0x7b5c",
+      "end": "0x7b60",
+      "bytes": 4,
+      "source_sha256": "aa6051214e730fbf1de362eaddc3002cf7bb65011797fb5e844096d8d14411d7",
+      "words": [
+        {
+          "address": "0x7b5c",
+          "value": "0x20070c",
+          "load_sites": [
+            {
+              "site": "0x7b30",
+              "isa": "thumb",
+              "opcode": "0x480a",
+              "decoder": "audit/data/uart_buffer_binaryninja.json"
+            },
+            {
+              "site": "0x7b52",
+              "isa": "thumb",
+              "opcode": "0x4902",
+              "decoder": "audit/data/uart_buffer_binaryninja.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "start": "0x7c54",
+      "end": "0x7c68",
+      "bytes": 20,
+      "source_sha256": "f2470a3c953f9bbe152f05dc03813d7b09c3f97e505cd3da03396f70b52fa4b0",
+      "words": [
+        {
+          "address": "0x7c54",
+          "value": "0xa91c",
+          "load_sites": [
+            {
+              "site": "0x7c22",
+              "isa": "thumb",
+              "opcode": "0x480c",
+              "decoder": "audit/data/payload_walker_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x7c58",
+          "value": "0xaa48",
+          "load_sites": [
+            {
+              "site": "0x7c2e",
+              "isa": "thumb",
+              "opcode": "0x4a0a",
+              "decoder": "audit/data/payload_walker_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x7c5c",
+          "value": "0xab74",
+          "load_sites": [
+            {
+              "site": "0x7c38",
+              "isa": "thumb",
+              "opcode": "0x4a08",
+              "decoder": "audit/data/payload_walker_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x7c60",
+          "value": "0xac00",
+          "load_sites": [
+            {
+              "site": "0x7c42",
+              "isa": "thumb",
+              "opcode": "0x4a07",
+              "decoder": "audit/data/payload_walker_binaryninja.json"
+            }
+          ]
+        },
+        {
+          "address": "0x7c64",
+          "value": "0xac8c",
+          "load_sites": [
+            {
+              "site": "0x7c48",
+              "isa": "thumb",
+              "opcode": "0x4a06",
+              "decoder": "audit/data/payload_walker_binaryninja.json"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "padding_extents": [
+    {
+      "start": "0x499a",
+      "end": "0x499c",
+      "bytes": "ffff",
+      "preceding_transfer": "BX              R1"
+    },
+    {
+      "start": "0x59ca",
+      "end": "0x59cc",
+      "bytes": "ffff",
+      "preceding_transfer": "BX              R0"
+    },
+    {
+      "start": "0x74b2",
+      "end": "0x74b4",
+      "bytes": "ffff",
+      "preceding_transfer": "BX              LR"
+    },
+    {
+      "start": "0x7bca",
+      "end": "0x7bcc",
+      "bytes": "ffff",
+      "preceding_transfer": "B               loc_7B86"
+    },
+    {
+      "start": "0x7c1a",
+      "end": "0x7c1c",
+      "bytes": "ffff",
+      "preceding_transfer": "BX              LR"
+    },
+    {
+      "start": "0x7d7e",
+      "end": "0x7d80",
+      "bytes": "ffff",
+      "preceding_transfer": "BX              R1"
+    },
+    {
+      "start": "0x854a",
+      "end": "0x854c",
+      "bytes": "ffff",
+      "preceding_transfer": "BX              LR"
+    }
+  ],
+  "limitations": [
+    "PC-relative load proves literal use, not all semantic meaning of the value",
+    "Decoded direct branch exclusion is not exhaustive alternate-entry analysis",
+    "Complete byte classification does not complete the full firmware analysis"
+  ]
+}

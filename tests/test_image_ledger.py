@@ -69,7 +69,8 @@ class ImageLedger(unittest.TestCase):
         self.assertEqual(sum(doc["classification_bytes"].values()), 32000)
         self.assertIn("incomplete", doc["completion"])
         self.assertEqual(doc["classification_bytes"].get("ida_code_pending_review", 0), 0)
-        self.assertGreater(doc["classification_bytes"]["ida_data_pending_review"], 0)
+        self.assertEqual(doc["classification_bytes"].get("ida_data_pending_review", 0), 0)
+        self.assertFalse(any(r["classification"].endswith("pending_review") for r in doc["ranges"]))
         self.assertGreater(len(doc["ida_layout_conflicts"]), 0)
 
     def test_main_loop_count_writer_claim_is_bounded_to_direct_stores(self):
