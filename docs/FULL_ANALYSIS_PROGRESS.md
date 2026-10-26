@@ -48,7 +48,8 @@ address without hiding pending review:
 | Shared AID resolver literal pool | 36 |
 | Soft float status pointer literal | 4 |
 | Startup descriptors | 36 |
-| Initialized RAM data source | 2,208 |
+| Initialized RAM data source outside the capture table | 1,808 |
+| Capture scalar 20×20 initialized table | 400 |
 | Indexed SPI request transmit table | 63 |
 | Four ADC lookup tables | 2,284 |
 | Two AID pointer tables | 2,040 |

@@ -66,7 +66,8 @@
     "receive_state_base_literal": 4,
     "soft_float_status_pointer": 4,
     "startup_region_descriptors": 36,
-    "initialized_ram_data_source": 2208,
+    "initialized_ram_data_source": 1808,
+    "capture_scalar_20x20_table_source": 400,
     "spi_request_tx_table": 63,
     "adc_channel6_byte_lut": 128,
     "adc_channel7_signed_halfword_lut": 624,
@@ -2206,1189 +2207,1189 @@
       "start": "0x997c",
       "end": "0x997e",
       "ida_text": "STR             R4, [R4,#0x44]",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x997e",
       "end": "0x9980",
       "ida_text": "STR             R4, [R4,#0x44]",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9980",
       "end": "0x9982",
       "ida_text": "STR             R4, [R4,#0x44]",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9982",
       "end": "0x9984",
       "ida_text": "STR             R4, [R4,#0x44]",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9984",
       "end": "0x9986",
       "ida_text": "STR             R4, [R4,#0x44]",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9986",
       "end": "0x9988",
       "ida_text": "STR             R4, [R4,#0x44]",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9988",
       "end": "0x998a",
       "ida_text": "STR             R2, [R3,R1]",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x998a",
       "end": "0x998c",
       "ida_text": "ADDS            R2, #0x46 ; 'F'",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x998c",
       "end": "0x998e",
       "ida_text": "SUBS            R0, R5, #0",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x998e",
       "end": "0x9990",
       "ida_text": "LSRS            R4, R2, #8",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9990",
       "end": "0x9992",
       "ida_text": "STR             R4, [R4,#0x44]",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9992",
       "end": "0x9994",
       "ida_text": "STR             R4, [R4,#0x44]",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9994",
       "end": "0x9996",
       "ida_text": "STR             R4, [R4,#0x44]",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9996",
       "end": "0x9998",
       "ida_text": "STR             R4, [R4,#0x44]",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9998",
       "end": "0x999a",
       "ida_text": "STR             R4, [R4,#0x44]",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x999a",
       "end": "0x999c",
       "ida_text": "STR             R4, [R4,#0x44]",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x999c",
       "end": "0x999e",
       "ida_text": "STR             R2, [R3,R1]",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x999e",
       "end": "0x99a0",
       "ida_text": "ADDS            R2, #0x46 ; 'F'",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x99a0",
       "end": "0x99a2",
       "ida_text": "SUBS            R0, R5, #0",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x99a2",
       "end": "0x99a4",
       "ida_text": "LSRS            R4, R2, #8",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x99a4",
       "end": "0x99a6",
       "ida_text": "STR             R4, [R4,#0x44]",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x99a6",
       "end": "0x99a8",
       "ida_text": "STR             R4, [R4,#0x44]",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x99a8",
       "end": "0x99aa",
       "ida_text": "STR             R4, [R4,#0x44]",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x99aa",
       "end": "0x99ac",
       "ida_text": "STR             R4, [R4,#0x44]",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x99ac",
       "end": "0x99ae",
       "ida_text": "STR             R4, [R4,#0x44]",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x99ae",
       "end": "0x99b0",
       "ida_text": "STR             R4, [R4,R1]",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x99b0",
       "end": "0x99b2",
       "ida_text": "SUBS            R4, #0x46 ; 'F'",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x99b2",
       "end": "0x99b4",
       "ida_text": "CMP             R0, #0x32 ; '2'",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x99b4",
       "end": "0x99b6",
       "ida_text": "ASRS            R6, R3, #0x10",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x99b6",
       "end": "0x99b8",
       "ida_text": "MOVS            R2, R1",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x99b8",
       "end": "0x99ba",
       "ida_text": "STR             R4, [R4,#0x44]",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x99ba",
       "end": "0x99bc",
       "ida_text": "STR             R4, [R4,#0x44]",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x99bc",
       "end": "0x99be",
       "ida_text": "STR             R4, [R4,#0x44]",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x99be",
       "end": "0x99c0",
       "ida_text": "STR             R4, [R4,#0x44]",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x99c0",
       "end": "0x99c2",
       "ida_text": "STR             R4, [R4,#0x44]",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x99c2",
       "end": "0x99c4",
       "ida_text": "MOV             R0, R10",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x99c4",
       "end": "0x99c6",
       "ida_text": "ADDS            R2, #0x3C ; '<'",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x99c6",
       "end": "0x99c8",
       "ida_text": "SUBS            R0, R5, #0",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x99c8",
       "end": "0x99ca",
       "ida_text": "LSRS            R4, R2, #8",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x99ca",
       "end": "0x99cc",
       "ida_text": "MOVS            R0, R0",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x99cc",
       "end": "0x99ce",
       "ida_text": "STR             R4, [R4,#0x44]",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x99ce",
       "end": "0x99d0",
       "ida_text": "STR             R4, [R4,#0x44]",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x99d0",
       "end": "0x99d2",
       "ida_text": "STR             R4, [R4,#0x44]",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x99d2",
       "end": "0x99d4",
       "ida_text": "STR             R4, [R4,#0x44]",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x99d4",
       "end": "0x99d6",
       "ida_text": "STR             R4, [R4,R1]",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x99d6",
       "end": "0x99d8",
       "ida_text": "SUBS            R4, #0x46 ; 'F'",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x99d8",
       "end": "0x99da",
       "ida_text": "CMP             R0, #0x32 ; '2'",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x99da",
       "end": "0x99dc",
       "ida_text": "ASRS            R6, R3, #0x10",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x99dc",
       "end": "0x99de",
       "ida_text": "MOVS            R2, R1",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x99de",
       "end": "0x99e0",
       "ida_text": "MOVS            R0, R0",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x99e0",
       "end": "0x99e2",
       "ida_text": "STR             R4, [R4,#0x44]",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x99e2",
       "end": "0x99e4",
       "ida_text": "STR             R4, [R4,#0x44]",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x99e4",
       "end": "0x99e6",
       "ida_text": "STR             R4, [R4,#0x44]",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x99e6",
       "end": "0x99e8",
       "ida_text": "STR             R4, [R4,#0x44]",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x99e8",
       "end": "0x99ea",
       "ida_text": "MOV             R0, R10",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x99ea",
       "end": "0x99ec",
       "ida_text": "ADDS            R2, #0x3C ; '<'",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x99ec",
       "end": "0x99ee",
       "ida_text": "SUBS            R0, R5, #0",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x99ee",
       "end": "0x99f0",
       "ida_text": "LSRS            R4, R2, #8",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x99f0",
       "end": "0x99f2",
       "ida_text": "MOVS            R0, R0",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x99f2",
       "end": "0x99f4",
       "ida_text": "MOVS            R0, R0",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x99f4",
       "end": "0x99f6",
       "ida_text": "STR             R4, [R4,#0x44]",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x99f6",
       "end": "0x99f8",
       "ida_text": "STR             R4, [R4,#0x44]",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x99f8",
       "end": "0x99fa",
       "ida_text": "STR             R4, [R4,#0x44]",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x99fa",
       "end": "0x99fc",
       "ida_text": "STR             R4, [R4,R1]",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a00",
       "end": "0x9a02",
       "ida_text": "ASRS            R6, R3, #0x10",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a02",
       "end": "0x9a04",
       "ida_text": "MOVS            R2, R1",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a04",
       "end": "0x9a06",
       "ida_text": "MOVS            R0, R0",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a06",
       "end": "0x9a08",
       "ida_text": "MOVS            R0, R0",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a08",
       "end": "0x9a0a",
       "ida_text": "STR             R4, [R4,#0x44]",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a0a",
       "end": "0x9a0c",
       "ida_text": "STR             R4, [R4,#0x44]",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a0c",
       "end": "0x9a0e",
       "ida_text": "STR             R4, [R4,#0x44]",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a0e",
       "end": "0x9a10",
       "ida_text": "MOV             R0, R10",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a10",
       "end": "0x9a12",
       "ida_text": "ADDS            R2, #0x3C ; '<'",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a12",
       "end": "0x9a14",
       "ida_text": "SUBS            R0, R5, #0",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a14",
       "end": "0x9a16",
       "ida_text": "LSRS            R4, R2, #8",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a16",
       "end": "0x9a18",
       "ida_text": "MOVS            R0, R0",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a18",
       "end": "0x9a1a",
       "ida_text": "MOVS            R0, R0",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a1a",
       "end": "0x9a1c",
       "ida_text": "MOVS            R0, R0",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a1c",
       "end": "0x9a1e",
       "ida_text": "STR             R4, [R4,#0x44]",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a1e",
       "end": "0x9a20",
       "ida_text": "STR             R4, [R4,#0x44]",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a20",
       "end": "0x9a22",
       "ida_text": "STR             R4, [R4,R1]",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a22",
       "end": "0x9a24",
       "ida_text": "SUBS            R4, #0x46 ; 'F'",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a24",
       "end": "0x9a26",
       "ida_text": "CMP             R0, #0x32 ; '2'",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a26",
       "end": "0x9a28",
       "ida_text": "ASRS            R6, R3, #0x10",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a28",
       "end": "0x9a2a",
       "ida_text": "MOVS            R2, R1",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a2a",
       "end": "0x9a2c",
       "ida_text": "MOVS            R0, R0",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a2c",
       "end": "0x9a2e",
       "ida_text": "MOVS            R0, R0",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a2e",
       "end": "0x9a30",
       "ida_text": "MOVS            R0, R0",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a30",
       "end": "0x9a32",
       "ida_text": "STR             R4, [R4,#0x44]",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a32",
       "end": "0x9a34",
       "ida_text": "STR             R4, [R4,#0x44]",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a34",
       "end": "0x9a36",
       "ida_text": "MOV             R0, R10",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a36",
       "end": "0x9a38",
       "ida_text": "ADDS            R2, #0x3C ; '<'",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a38",
       "end": "0x9a3a",
       "ida_text": "SUBS            R0, R5, #0",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a3a",
       "end": "0x9a3c",
       "ida_text": "LSRS            R4, R2, #8",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a3c",
       "end": "0x9a3e",
       "ida_text": "MOVS            R0, R0",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a3e",
       "end": "0x9a40",
       "ida_text": "MOVS            R0, R0",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a40",
       "end": "0x9a42",
       "ida_text": "MOVS            R0, R0",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a42",
       "end": "0x9a44",
       "ida_text": "MOVS            R0, R0",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a44",
       "end": "0x9a46",
       "ida_text": "STR             R4, [R4,#0x44]",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a46",
       "end": "0x9a48",
       "ida_text": "STR             R4, [R4,R1]",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a48",
       "end": "0x9a4a",
       "ida_text": "MOV             R0, R10",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a4a",
       "end": "0x9a4c",
       "ida_text": "ADDS            R2, #0x3C ; '<'",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a4c",
       "end": "0x9a4e",
       "ida_text": "SUBS            R0, R5, #0",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a4e",
       "end": "0x9a50",
       "ida_text": "LSRS            R4, R2, #8",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a50",
       "end": "0x9a52",
       "ida_text": "MOVS            R0, R0",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a52",
       "end": "0x9a54",
       "ida_text": "MOVS            R0, R0",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a54",
       "end": "0x9a56",
       "ida_text": "MOVS            R0, R0",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a56",
       "end": "0x9a58",
       "ida_text": "MOVS            R0, R0",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a58",
       "end": "0x9a5a",
       "ida_text": "STR             R4, [R4,#0x44]",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a5a",
       "end": "0x9a5c",
       "ida_text": "STR             R2, [R3,R1]",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a5c",
       "end": "0x9a5e",
       "ida_text": "MOV             R0, R10",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a5e",
       "end": "0x9a60",
       "ida_text": "ADDS            R2, #0x3C ; '<'",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a60",
       "end": "0x9a62",
       "ida_text": "SUBS            R0, R5, #0",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a62",
       "end": "0x9a64",
       "ida_text": "LSRS            R4, R2, #8",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a64",
       "end": "0x9a66",
       "ida_text": "MOVS            R0, R0",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a66",
       "end": "0x9a68",
       "ida_text": "MOVS            R0, R0",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a68",
       "end": "0x9a6a",
       "ida_text": "MOVS            R0, R0",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a6a",
       "end": "0x9a6c",
       "ida_text": "MOVS            R0, R0",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a6c",
       "end": "0x9a6e",
       "ida_text": "LDRSH           R4, [R4,R5]",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a6e",
       "end": "0x9a70",
       "ida_text": "LDRH            R2, [R3,R1]",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a70",
       "end": "0x9a72",
       "ida_text": "MOV             R0, R10",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a72",
       "end": "0x9a74",
       "ida_text": "ADDS            R2, #0x3C ; '<'",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a74",
       "end": "0x9a76",
       "ida_text": "SUBS            R0, R5, #0",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a76",
       "end": "0x9a78",
       "ida_text": "LSRS            R4, R2, #8",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a78",
       "end": "0x9a7a",
       "ida_text": "MOVS            R0, R0",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a7a",
       "end": "0x9a7c",
       "ida_text": "MOVS            R0, R0",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a7c",
       "end": "0x9a7e",
       "ida_text": "MOVS            R0, R0",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a7e",
       "end": "0x9a80",
       "ida_text": "MOVS            R0, R0",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a80",
       "end": "0x9a82",
       "ida_text": "LDRSH           R4, [R4,R5]",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a82",
       "end": "0x9a84",
       "ida_text": "LDRH            R2, [R3,R1]",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a84",
       "end": "0x9a86",
       "ida_text": "MOV             R0, R10",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a86",
       "end": "0x9a88",
       "ida_text": "ADDS            R2, #0x3C ; '<'",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a88",
       "end": "0x9a8a",
       "ida_text": "SUBS            R0, R5, #0",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a8a",
       "end": "0x9a8c",
       "ida_text": "LSRS            R4, R2, #8",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a8c",
       "end": "0x9a8e",
       "ida_text": "MOVS            R0, R0",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a8e",
       "end": "0x9a90",
       "ida_text": "MOVS            R0, R0",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a90",
       "end": "0x9a92",
       "ida_text": "MOVS            R0, R0",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a92",
       "end": "0x9a94",
       "ida_text": "MOVS            R0, R0",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a94",
       "end": "0x9a96",
       "ida_text": "LDRSH           R4, [R4,R5]",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a96",
       "end": "0x9a98",
       "ida_text": "LDRH            R2, [R3,R1]",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a98",
       "end": "0x9a9a",
       "ida_text": "MOV             R0, R10",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a9a",
       "end": "0x9a9c",
       "ida_text": "ADDS            R2, #0x3C ; '<'",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a9c",
       "end": "0x9a9e",
       "ida_text": "SUBS            R0, R5, #0",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9a9e",
       "end": "0x9aa0",
       "ida_text": "LSRS            R4, R2, #8",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9aa0",
       "end": "0x9aa2",
       "ida_text": "MOVS            R0, R0",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9aa2",
       "end": "0x9aa4",
       "ida_text": "MOVS            R0, R0",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9aa4",
       "end": "0x9aa6",
       "ida_text": "MOVS            R0, R0",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9aa6",
       "end": "0x9aa8",
       "ida_text": "MOVS            R0, R0",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9aa8",
       "end": "0x9aaa",
       "ida_text": "LDRSH           R4, [R4,R5]",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9aaa",
       "end": "0x9aac",
       "ida_text": "LDRH            R2, [R3,R1]",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9aac",
       "end": "0x9aae",
       "ida_text": "MOV             R0, R10",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9aae",
       "end": "0x9ab0",
       "ida_text": "ADDS            R2, #0x3C ; '<'",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9ab0",
       "end": "0x9ab2",
       "ida_text": "SUBS            R0, R5, #0",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9ab2",
       "end": "0x9ab4",
       "ida_text": "LSRS            R4, R2, #8",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9ab4",
       "end": "0x9ab6",
       "ida_text": "MOVS            R0, R0",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9ab6",
       "end": "0x9ab8",
       "ida_text": "MOVS            R0, R0",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9ab8",
       "end": "0x9aba",
       "ida_text": "MOVS            R0, R0",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9aba",
       "end": "0x9abc",
       "ida_text": "MOVS            R0, R0",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9abc",
       "end": "0x9abe",
       "ida_text": "LDRSH           R4, [R4,R5]",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9abe",
       "end": "0x9ac0",
       "ida_text": "LDRH            R2, [R3,R1]",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9ac0",
       "end": "0x9ac2",
       "ida_text": "MOV             R0, R10",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9ac2",
       "end": "0x9ac4",
       "ida_text": "ADDS            R2, #0x3C ; '<'",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9ac4",
       "end": "0x9ac6",
       "ida_text": "SUBS            R0, R5, #0",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9ac6",
       "end": "0x9ac8",
       "ida_text": "LSRS            R4, R2, #8",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9ac8",
       "end": "0x9aca",
       "ida_text": "MOVS            R0, R0",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9aca",
       "end": "0x9acc",
       "ida_text": "MOVS            R0, R0",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9acc",
       "end": "0x9ace",
       "ida_text": "MOVS            R0, R0",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9ace",
       "end": "0x9ad0",
       "ida_text": "MOVS            R0, R0",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9ad0",
       "end": "0x9ad2",
       "ida_text": "LDRSH           R4, [R4,R5]",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9ad2",
       "end": "0x9ad4",
       "ida_text": "LDRH            R2, [R3,R1]",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9ad4",
       "end": "0x9ad6",
       "ida_text": "MOV             R0, R10",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9ad6",
       "end": "0x9ad8",
       "ida_text": "ADDS            R2, #0x3C ; '<'",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9ad8",
       "end": "0x9ada",
       "ida_text": "SUBS            R0, R5, #0",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9ada",
       "end": "0x9adc",
       "ida_text": "LSRS            R4, R2, #8",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9adc",
       "end": "0x9ade",
       "ida_text": "MOVS            R0, R0",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9ade",
       "end": "0x9ae0",
       "ida_text": "MOVS            R0, R0",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9ae0",
       "end": "0x9ae2",
       "ida_text": "MOVS            R0, R0",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9ae2",
       "end": "0x9ae4",
       "ida_text": "MOVS            R0, R0",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9ae4",
       "end": "0x9ae6",
       "ida_text": "LDRSH           R4, [R4,R5]",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9ae6",
       "end": "0x9ae8",
       "ida_text": "LDRH            R2, [R3,R1]",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9ae8",
       "end": "0x9aea",
       "ida_text": "MOV             R0, R10",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9aea",
       "end": "0x9aec",
       "ida_text": "ADDS            R2, #0x3C ; '<'",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9aec",
       "end": "0x9aee",
       "ida_text": "SUBS            R0, R5, #0",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9aee",
       "end": "0x9af0",
       "ida_text": "LSRS            R4, R2, #8",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9af0",
       "end": "0x9af2",
       "ida_text": "MOVS            R0, R0",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9af2",
       "end": "0x9af4",
       "ida_text": "MOVS            R0, R0",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9af4",
       "end": "0x9af6",
       "ida_text": "MOVS            R0, R0",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9af6",
       "end": "0x9af8",
       "ida_text": "MOVS            R0, R0",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9af8",
       "end": "0x9afa",
       "ida_text": "LDRSH           R4, [R4,R5]",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9afa",
       "end": "0x9afc",
       "ida_text": "LDRH            R2, [R3,R1]",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9afc",
       "end": "0x9afe",
       "ida_text": "MOV             R0, R10",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9afe",
       "end": "0x9b00",
       "ida_text": "ADDS            R2, #0x3C ; '<'",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9b00",
       "end": "0x9b02",
       "ida_text": "SUBS            R0, R5, #0",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9b02",
       "end": "0x9b04",
       "ida_text": "LSRS            R4, R2, #8",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9b04",
       "end": "0x9b06",
       "ida_text": "MOVS            R0, R0",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9b06",
       "end": "0x9b08",
       "ida_text": "MOVS            R0, R0",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9b08",
       "end": "0x9b0a",
       "ida_text": "MOVS            R0, R0",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9b0a",
       "end": "0x9b0c",
       "ida_text": "MOVS            R0, R0",
-      "layout": "initialized_ram_data_source"
+      "layout": "capture_scalar_20x20_table_source"
     },
     {
       "start": "0x9b0c",
@@ -88993,1195 +88994,1195 @@
     {
       "start": "0x997c",
       "end": "0x997e",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x997e",
       "end": "0x9980",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9980",
       "end": "0x9982",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9982",
       "end": "0x9984",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9984",
       "end": "0x9986",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9986",
       "end": "0x9988",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9988",
       "end": "0x998a",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x998a",
       "end": "0x998c",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x998c",
       "end": "0x998e",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x998e",
       "end": "0x9990",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9990",
       "end": "0x9992",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9992",
       "end": "0x9994",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9994",
       "end": "0x9996",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9996",
       "end": "0x9998",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9998",
       "end": "0x999a",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x999a",
       "end": "0x999c",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x999c",
       "end": "0x999e",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x999e",
       "end": "0x99a0",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x99a0",
       "end": "0x99a2",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x99a2",
       "end": "0x99a4",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x99a4",
       "end": "0x99a6",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x99a6",
       "end": "0x99a8",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x99a8",
       "end": "0x99aa",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x99aa",
       "end": "0x99ac",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x99ac",
       "end": "0x99ae",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x99ae",
       "end": "0x99b0",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x99b0",
       "end": "0x99b2",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x99b2",
       "end": "0x99b4",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x99b4",
       "end": "0x99b6",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x99b6",
       "end": "0x99b8",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x99b8",
       "end": "0x99ba",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x99ba",
       "end": "0x99bc",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x99bc",
       "end": "0x99be",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x99be",
       "end": "0x99c0",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x99c0",
       "end": "0x99c2",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x99c2",
       "end": "0x99c4",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x99c4",
       "end": "0x99c6",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x99c6",
       "end": "0x99c8",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x99c8",
       "end": "0x99ca",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x99ca",
       "end": "0x99cc",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x99cc",
       "end": "0x99ce",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x99ce",
       "end": "0x99d0",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x99d0",
       "end": "0x99d2",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x99d2",
       "end": "0x99d4",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x99d4",
       "end": "0x99d6",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x99d6",
       "end": "0x99d8",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x99d8",
       "end": "0x99da",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x99da",
       "end": "0x99dc",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x99dc",
       "end": "0x99de",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x99de",
       "end": "0x99e0",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x99e0",
       "end": "0x99e2",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x99e2",
       "end": "0x99e4",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x99e4",
       "end": "0x99e6",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x99e6",
       "end": "0x99e8",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x99e8",
       "end": "0x99ea",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x99ea",
       "end": "0x99ec",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x99ec",
       "end": "0x99ee",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x99ee",
       "end": "0x99f0",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x99f0",
       "end": "0x99f2",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x99f2",
       "end": "0x99f4",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x99f4",
       "end": "0x99f6",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x99f6",
       "end": "0x99f8",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x99f8",
       "end": "0x99fa",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x99fa",
       "end": "0x99fc",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x99fc",
       "end": "0x9a00",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a00",
       "end": "0x9a02",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a02",
       "end": "0x9a04",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a04",
       "end": "0x9a06",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a06",
       "end": "0x9a08",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a08",
       "end": "0x9a0a",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a0a",
       "end": "0x9a0c",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a0c",
       "end": "0x9a0e",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a0e",
       "end": "0x9a10",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a10",
       "end": "0x9a12",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a12",
       "end": "0x9a14",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a14",
       "end": "0x9a16",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a16",
       "end": "0x9a18",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a18",
       "end": "0x9a1a",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a1a",
       "end": "0x9a1c",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a1c",
       "end": "0x9a1e",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a1e",
       "end": "0x9a20",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a20",
       "end": "0x9a22",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a22",
       "end": "0x9a24",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a24",
       "end": "0x9a26",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a26",
       "end": "0x9a28",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a28",
       "end": "0x9a2a",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a2a",
       "end": "0x9a2c",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a2c",
       "end": "0x9a2e",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a2e",
       "end": "0x9a30",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a30",
       "end": "0x9a32",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a32",
       "end": "0x9a34",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a34",
       "end": "0x9a36",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a36",
       "end": "0x9a38",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a38",
       "end": "0x9a3a",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a3a",
       "end": "0x9a3c",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a3c",
       "end": "0x9a3e",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a3e",
       "end": "0x9a40",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a40",
       "end": "0x9a42",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a42",
       "end": "0x9a44",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a44",
       "end": "0x9a46",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a46",
       "end": "0x9a48",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a48",
       "end": "0x9a4a",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a4a",
       "end": "0x9a4c",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a4c",
       "end": "0x9a4e",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a4e",
       "end": "0x9a50",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a50",
       "end": "0x9a52",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a52",
       "end": "0x9a54",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a54",
       "end": "0x9a56",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a56",
       "end": "0x9a58",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a58",
       "end": "0x9a5a",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a5a",
       "end": "0x9a5c",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a5c",
       "end": "0x9a5e",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a5e",
       "end": "0x9a60",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a60",
       "end": "0x9a62",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a62",
       "end": "0x9a64",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a64",
       "end": "0x9a66",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a66",
       "end": "0x9a68",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a68",
       "end": "0x9a6a",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a6a",
       "end": "0x9a6c",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a6c",
       "end": "0x9a6e",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a6e",
       "end": "0x9a70",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a70",
       "end": "0x9a72",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a72",
       "end": "0x9a74",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a74",
       "end": "0x9a76",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a76",
       "end": "0x9a78",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a78",
       "end": "0x9a7a",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a7a",
       "end": "0x9a7c",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a7c",
       "end": "0x9a7e",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a7e",
       "end": "0x9a80",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a80",
       "end": "0x9a82",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a82",
       "end": "0x9a84",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a84",
       "end": "0x9a86",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a86",
       "end": "0x9a88",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a88",
       "end": "0x9a8a",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a8a",
       "end": "0x9a8c",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a8c",
       "end": "0x9a8e",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a8e",
       "end": "0x9a90",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a90",
       "end": "0x9a92",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a92",
       "end": "0x9a94",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a94",
       "end": "0x9a96",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a96",
       "end": "0x9a98",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a98",
       "end": "0x9a9a",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a9a",
       "end": "0x9a9c",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a9c",
       "end": "0x9a9e",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9a9e",
       "end": "0x9aa0",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9aa0",
       "end": "0x9aa2",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9aa2",
       "end": "0x9aa4",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9aa4",
       "end": "0x9aa6",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9aa6",
       "end": "0x9aa8",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9aa8",
       "end": "0x9aaa",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9aaa",
       "end": "0x9aac",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9aac",
       "end": "0x9aae",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9aae",
       "end": "0x9ab0",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9ab0",
       "end": "0x9ab2",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9ab2",
       "end": "0x9ab4",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9ab4",
       "end": "0x9ab6",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9ab6",
       "end": "0x9ab8",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9ab8",
       "end": "0x9aba",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9aba",
       "end": "0x9abc",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9abc",
       "end": "0x9abe",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9abe",
       "end": "0x9ac0",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9ac0",
       "end": "0x9ac2",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9ac2",
       "end": "0x9ac4",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9ac4",
       "end": "0x9ac6",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9ac6",
       "end": "0x9ac8",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9ac8",
       "end": "0x9aca",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9aca",
       "end": "0x9acc",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9acc",
       "end": "0x9ace",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9ace",
       "end": "0x9ad0",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9ad0",
       "end": "0x9ad2",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9ad2",
       "end": "0x9ad4",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9ad4",
       "end": "0x9ad6",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9ad6",
       "end": "0x9ad8",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9ad8",
       "end": "0x9ada",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9ada",
       "end": "0x9adc",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9adc",
       "end": "0x9ade",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9ade",
       "end": "0x9ae0",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9ae0",
       "end": "0x9ae2",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9ae2",
       "end": "0x9ae4",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9ae4",
       "end": "0x9ae6",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9ae6",
       "end": "0x9ae8",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9ae8",
       "end": "0x9aea",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9aea",
       "end": "0x9aec",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9aec",
       "end": "0x9aee",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9aee",
       "end": "0x9af0",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9af0",
       "end": "0x9af2",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9af2",
       "end": "0x9af4",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9af4",
       "end": "0x9af6",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9af6",
       "end": "0x9af8",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9af8",
       "end": "0x9afa",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9afa",
       "end": "0x9afc",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9afc",
       "end": "0x9afe",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9afe",
       "end": "0x9b00",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9b00",
       "end": "0x9b02",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9b02",
       "end": "0x9b04",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9b04",
       "end": "0x9b06",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9b06",
       "end": "0x9b08",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9b08",
       "end": "0x9b0a",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
       "start": "0x9b0a",
       "end": "0x9b0c",
-      "classification": "initialized_ram_data_source",
+      "classification": "capture_scalar_20x20_table_source",
       "review_state": "layout_role_supported"
     },
     {
