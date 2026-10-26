@@ -271,6 +271,15 @@
       "decoder_artifact": "audit/data/control_helper_binaryninja.json"
     },
     {
+      "start": "0x4818",
+      "end": "0x48c2",
+      "entry": "0x4818",
+      "isa": "thumb",
+      "account": "Complete high-idle delay/input gate state machine; all 85 body starts visited across 16390 original-byte synthetic calls with state, flag, timer, register and write checks",
+      "evidence": ["audit/data/input_gate_binaryninja.json", "audit/data/input_gate_emulation.json", "docs/INPUT_GATE_STATE_REVIEW.md"],
+      "decoder_artifact": "audit/data/input_gate_binaryninja.json"
+    },
+    {
       "start": "0x48e8",
       "end": "0x4942",
       "entry": "0x48e8",

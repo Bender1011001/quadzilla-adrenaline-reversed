@@ -14,8 +14,8 @@ now stands at 145 roles with no unlabeled baseline entries after the
 [final baseline-entry review](FINAL_BASELINE_ENTRIES_REVIEW.md). The
 new entries and aliases are recorded separately in
 `audit/data/entry_adjudications.json`. Neither inventory is claimed exhaustive.
-The empty baseline semantic queue does not close the full analysis: 1,069 IDA
-code-candidate bytes and 2,000 data-candidate bytes still need adjudication,
+The empty baseline semantic queue does not close the full analysis: 897 IDA
+code-candidate bytes and 1,964 data-candidate bytes still need adjudication,
 and additional entry discovery and complete downstream path review remain open.
 
 ## Full-image baseline
@@ -30,12 +30,13 @@ address without hiding pending review:
 
 | Classification | Bytes |
 |---|---:|
-| IDA code candidates awaiting review | 1,069 |
-| Explicitly reviewed Thumb instruction ranges | 13,696 |
+| IDA code candidates awaiting review | 897 |
+| Explicitly reviewed Thumb instruction ranges | 13,866 |
 | Explicitly reviewed ARM instruction ranges | 4,416 |
-| IDA data candidates awaiting review | 2,000 |
+| IDA data candidates awaiting review | 1,964 |
 | Startup literal pools and alignment | 86 |
 | Callback and predicate alignment/literals | 12 |
+| Input gate literals/alignment | 38 |
 | Backdown and stretch literals/alignment | 30 |
 | Capture scalar jump tables/literals/alignment | 90 |
 | Scalar helper literals/alignment | 86 |
@@ -58,12 +59,12 @@ address without hiding pending review:
 | Erased trailing `FF` | 2,888 |
 
 Coverage of an address is not proof that its meaning or ISA has been reviewed.
-The explicit instruction-range manifest now accepts 18,112 bytes through the
-[capture scalar review](CAPTURE_SCALAR_REVIEW.md). It excludes adjacent literal
+The explicit instruction-range manifest now accepts 18,282 bytes through the
+[input gate state review](INPUT_GATE_STATE_REVIEW.md). It excludes adjacent literal
 pools and alignment. Earlier semantic labels are not automatically promoted to
 byte-level classification; their exact ranges still need to be adjudicated.
-The ledger explicitly preserves 3,280 item/layout conflicts. These are tool item
-spans, not 3,280 bugs or distinct functions. Many arise because initialized data
+The ledger explicitly preserves 3,281 item/layout conflicts. These are tool item
+spans, not 3,281 bugs or distinct functions. Many arise because initialized data
 or erased space was interpreted as instructions.
 
 ## New finding: startup relocates executable helpers into SRAM
