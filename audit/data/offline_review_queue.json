@@ -9,22 +9,8 @@
     "0x8038",
     "0x7cc4"
   ],
-  "remaining_entries": 24,
+  "remaining_entries": 18,
   "queue": [
-    {
-      "entry": "0x4214",
-      "undirected_call_distance": 2,
-      "anchor_path": [
-        "0x601c",
-        "0x76cc",
-        "0x4214"
-      ],
-      "reference_regions": {
-        "image": 13,
-        "peripheral": 7,
-        "sram": 12
-      }
-    },
     {
       "entry": "0x4330",
       "undirected_call_distance": 2,
@@ -37,71 +23,6 @@
         "image": 9,
         "peripheral": 5,
         "sram": 3
-      }
-    },
-    {
-      "entry": "0x41f0",
-      "undirected_call_distance": 3,
-      "anchor_path": [
-        "0x601c",
-        "0x76cc",
-        "0x4214",
-        "0x41f0"
-      ],
-      "reference_regions": {}
-    },
-    {
-      "entry": "0x7364",
-      "undirected_call_distance": 3,
-      "anchor_path": [
-        "0x601c",
-        "0x76cc",
-        "0x4214",
-        "0x7364"
-      ],
-      "reference_regions": {
-        "image": 1
-      }
-    },
-    {
-      "entry": "0x7380",
-      "undirected_call_distance": 3,
-      "anchor_path": [
-        "0x601c",
-        "0x76cc",
-        "0x4214",
-        "0x7380"
-      ],
-      "reference_regions": {
-        "image": 2,
-        "sram": 1
-      }
-    },
-    {
-      "entry": "0x7398",
-      "undirected_call_distance": 3,
-      "anchor_path": [
-        "0x601c",
-        "0x76cc",
-        "0x4214",
-        "0x7398"
-      ],
-      "reference_regions": {
-        "image": 3,
-        "sram": 1
-      }
-    },
-    {
-      "entry": "0x73bc",
-      "undirected_call_distance": 3,
-      "anchor_path": [
-        "0x601c",
-        "0x76cc",
-        "0x4214",
-        "0x73bc"
-      ],
-      "reference_regions": {
-        "image": 1
       }
     },
     {
@@ -276,5 +197,5 @@
       "reference_regions": {}
     }
   ],
-  "catalog_lf_text_sha256": "50549b16c92822dc015bddfbdd906f22d0392c4c89622031502c0b8b7813252c"
+  "catalog_lf_text_sha256": "69b3711fab2b4b0b527cbe8de5d30328eface08bf80b5051fee59c8c9e8b2018"
 }

@@ -1,0 +1,151 @@
+{
+  "format": "quadzilla-adc-table-layout-v1",
+  "raw_sha256": "1ae519ba6194e8f7bdaaa94333a83a9e6fda3b0563f87f7d48383b37288c1780",
+  "region": [
+    "0xa030",
+    "0xa91c"
+  ],
+  "tables": [
+    {
+      "name": "channel6_byte_lut",
+      "start": "0xa030",
+      "end": "0xa0b0",
+      "bytes": 128,
+      "element_width": 1,
+      "element_count": 128,
+      "signed": false,
+      "min": 0,
+      "max": 100,
+      "first_values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "last_values": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "sha256": "c2f5edf1fc0ef5733effa712ff123ba5f43f1876e8c0cdf781b76361a1d3d3f8",
+      "reader_literal_site": "0x73c0",
+      "reader_load_site": "0x73c2"
+    },
+    {
+      "name": "channel7_signed_halfword_lut",
+      "start": "0xa0b0",
+      "end": "0xa320",
+      "bytes": 624,
+      "element_width": 2,
+      "element_count": 312,
+      "signed": true,
+      "min": 104,
+      "max": 300,
+      "first_values": [
+        300,
+        298,
+        296,
+        294,
+        292,
+        290,
+        288,
+        286
+      ],
+      "last_values": [
+        107,
+        107,
+        106,
+        106,
+        105,
+        105,
+        104,
+        104
+      ],
+      "sha256": "23048170776e97726b73e96122cf5d1e1c1fef16ed94c3511305b64aaf9f35e0",
+      "reader_literal_site": "0x7374",
+      "reader_load_site": "0x7376"
+    },
+    {
+      "name": "channel5_two_64_byte_pages",
+      "start": "0xa320",
+      "end": "0xa3a0",
+      "bytes": 128,
+      "element_width": 1,
+      "element_count": 128,
+      "signed": true,
+      "min": 0,
+      "max": 42,
+      "first_values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "last_values": [
+        33,
+        34,
+        36,
+        37,
+        38,
+        39,
+        41,
+        42
+      ],
+      "sha256": "382124bc650e64ff203fe385a3b3e41f5154b0cb125f1720d162b69fabccc8fb",
+      "reader_literal_site": "0x7388",
+      "reader_load_site": "0x738c"
+    },
+    {
+      "name": "channel4_signed_halfword_lut",
+      "start": "0xa3a0",
+      "end": "0xa91c",
+      "bytes": 1404,
+      "element_width": 2,
+      "element_count": 702,
+      "signed": true,
+      "min": 32,
+      "max": 1832,
+      "first_values": [
+        32,
+        35,
+        37,
+        40,
+        43,
+        45,
+        48,
+        50
+      ],
+      "last_values": [
+        1813,
+        1816,
+        1818,
+        1821,
+        1824,
+        1827,
+        1829,
+        1832
+      ],
+      "sha256": "fa9b763f80b45627e37f0c3061b12f5566083242cd15bef6ae7e8d040f72cbb1",
+      "reader_literal_site": "0x73a2",
+      "reader_load_site": "0x73a4"
+    }
+  ],
+  "limits": [
+    "table extents follow the bounded indexes in the original helpers under a 10-bit ADC result",
+    "physical signals, units, calibration intent, and actual analog voltages remain unverified",
+    "IDA instruction items inside this region are conflicting candidate interpretations"
+  ]
+}

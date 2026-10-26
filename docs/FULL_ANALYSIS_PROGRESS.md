@@ -10,8 +10,8 @@ Update: the [startup/persistence review](STARTUP_PERSISTENCE_REVIEW.md) and
 entries, for at least 157 supported starts. Three callable numeric routines
 have no identified incoming image call and are not claimed reachable in service.
 The original 145-start catalog is retained as the baseline; its semantic coverage
-now stands at 121 roles with 24 entries left after the
-[initial-state and configuration review](INITIAL_STATE_CONFIG_REVIEW.md). The
+now stands at 127 roles with 18 entries left after the
+[ADC pipeline review](ADC_PIPELINE_REVIEW.md). The
 new entries and aliases are recorded separately in
 `audit/data/entry_adjudications.json`. Neither inventory is claimed exhaustive.
 
@@ -27,10 +27,10 @@ address without hiding pending review:
 
 | Classification | Bytes |
 |---|---:|
-| IDA code candidates awaiting review | 7,107 |
-| Explicitly reviewed Thumb instruction ranges | 10,178 |
+| IDA code candidates awaiting review | 4,507 |
+| Explicitly reviewed Thumb instruction ranges | 10,526 |
 | Explicitly reviewed ARM instruction ranges | 4,168 |
-| IDA data candidates awaiting review | 2,632 |
+| IDA data candidates awaiting review | 2,600 |
 | Cycle queue alignment and literal pool | 18 |
 | Queue helper alignment and state-base literals | 10 |
 | Receive type jump table | 6 |
@@ -40,18 +40,19 @@ address without hiding pending review:
 | Startup descriptors | 36 |
 | Initialized RAM data source | 2,208 |
 | Indexed SPI request transmit table | 63 |
+| Four ADC lookup tables | 2,284 |
 | Two AID pointer tables | 2,040 |
 | AID validation switch offsets | 436 |
 | RAM executable source template | 164 |
 | Erased trailing `FF` | 2,888 |
 
 Coverage of an address is not proof that its meaning or ISA has been reviewed.
-The explicit instruction-range manifest now accepts 14,346 bytes through the
-[initial-state and configuration review](INITIAL_STATE_CONFIG_REVIEW.md). It excludes adjacent literal
+The explicit instruction-range manifest now accepts 14,694 bytes through the
+[ADC pipeline review](ADC_PIPELINE_REVIEW.md). It excludes adjacent literal
 pools and alignment. Earlier semantic labels are not automatically promoted to
 byte-level classification; their exact ranges still need to be adjudicated.
-The ledger explicitly preserves 2,144 item/layout conflicts. These are tool item
-spans, not 2,144 bugs or distinct functions. Many arise because initialized data
+The ledger explicitly preserves 3,270 item/layout conflicts. These are tool item
+spans, not 3,270 bugs or distinct functions. Many arise because initialized data
 or erased space was interpreted as instructions.
 
 ## New finding: startup relocates executable helpers into SRAM

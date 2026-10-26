@@ -37,7 +37,8 @@ the PIO reinitialization path at `0x786C`. State 1 enables the cycle gate
 at `0x200792`, checks PIOA data status, and either calls control cycle
 `0x76CC` or moves through the pin/flag branch. That branch can clear the
 state to zero or set it to two. State 2 also sets `0x200792`; it compares
-the halfword at `0x200794` with `word[0x2008A8]`, checks software flags,
+the halfword at `0x200794` with `word[0x2008A8]` from the
+[ADC pipeline](ADC_PIPELINE_REVIEW.md), checks software flags,
 and either calls `0x76CC` or moves to state 3. State 3 either calls
 `0x76CC`, returns to state 1, or clears the state depending on its pin and
 `0x200718` checks. The PIO writes in this path are **command-register

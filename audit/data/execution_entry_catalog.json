@@ -4,8 +4,8 @@
   "unit": "execution_entries_including_vectors_thunks_and_alternate_entries",
   "summary": {
     "confirmed_entries": 145,
-    "documented_static_roles": 121,
-    "unlabeled_static_entries": 24,
+    "documented_static_roles": 127,
+    "unlabeled_static_entries": 18,
     "entries_with_ida_sram_references": 49,
     "entries_with_ida_peripheral_references": 21,
     "union_direct_call_edges": 180
@@ -279,8 +279,19 @@
           ]
         }
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x41f0",
+          "label": "32-word ADC sample shift, wraparound sum and logical divide by 32",
+          "assurance": "static_instruction_trace_and_bounded_emulation",
+          "evidence": [
+            "audit/data/adc_pipeline_binaryninja.json",
+            "audit/data/adc_pipeline_emulation.json",
+            "docs/ADC_PIPELINE_REVIEW.md"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [],
         "incoming": [
@@ -317,8 +328,20 @@
           ]
         }
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x4214",
+          "label": "ADC channels 3-7 polling, lookup conversion and gated rolling-average coordinator",
+          "assurance": "static_instruction_trace_and_synthetic_mmio_emulation",
+          "evidence": [
+            "audit/data/adc_pipeline_binaryninja.json",
+            "audit/data/adc_pipeline_emulation.json",
+            "audit/data/adc_table_layout.json",
+            "docs/ADC_PIPELINE_REVIEW.md"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [
           "0x41f0",
@@ -11712,8 +11735,20 @@
           ]
         }
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x7364",
+          "label": "ADC channel-7 signed-halfword table transform with upper clamp",
+          "assurance": "static_instruction_trace_and_bounded_emulation",
+          "evidence": [
+            "audit/data/adc_pipeline_binaryninja.json",
+            "audit/data/adc_pipeline_emulation.json",
+            "audit/data/adc_table_layout.json",
+            "docs/ADC_PIPELINE_REVIEW.md"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [],
         "incoming": [
@@ -11758,8 +11793,20 @@
           ]
         }
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x7380",
+          "label": "ADC channel-5 two-page signed-byte table transform",
+          "assurance": "static_instruction_trace_and_bounded_emulation",
+          "evidence": [
+            "audit/data/adc_pipeline_binaryninja.json",
+            "audit/data/adc_pipeline_emulation.json",
+            "audit/data/adc_table_layout.json",
+            "docs/ADC_PIPELINE_REVIEW.md"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [],
         "incoming": [
@@ -11815,8 +11862,20 @@
           ]
         }
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x7398",
+          "label": "ADC channel-4 signed-halfword table transform plus working offset",
+          "assurance": "static_instruction_trace_and_bounded_emulation",
+          "evidence": [
+            "audit/data/adc_pipeline_binaryninja.json",
+            "audit/data/adc_pipeline_emulation.json",
+            "audit/data/adc_table_layout.json",
+            "docs/ADC_PIPELINE_REVIEW.md"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [],
         "incoming": [
@@ -11877,8 +11936,20 @@
           ]
         }
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x73bc",
+          "label": "ADC channel-6 byte-table transform",
+          "assurance": "static_instruction_trace_and_bounded_emulation",
+          "evidence": [
+            "audit/data/adc_pipeline_binaryninja.json",
+            "audit/data/adc_pipeline_emulation.json",
+            "audit/data/adc_table_layout.json",
+            "docs/ADC_PIPELINE_REVIEW.md"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [],
         "incoming": [
@@ -17633,7 +17704,7 @@
     },
     "labels": {
       "path": "audit/data/semantic_labels.json",
-      "sha256": "cb05cb18c4c58210b61a12e702a83840e0bd28ed57c2d91757f1d7e9310655c2"
+      "sha256": "49538dc3f6110afa1b5f5ad5cbb3d3d6ad841e6c70807f31650801a3dc47380c"
     }
   },
   "input_hash_policy": "SHA-256 of JSON text with CRLF normalized to LF"
