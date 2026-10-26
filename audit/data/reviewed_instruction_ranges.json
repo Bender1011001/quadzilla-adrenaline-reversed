@@ -340,6 +340,33 @@
       "decoder_artifact": "audit/data/backdown_stretch_binaryninja.json"
     },
     {
+      "start": "0x4b38",
+      "end": "0x4b82",
+      "entry": "0x4b38",
+      "isa": "thumb",
+      "account": "Capture scalar entry with first gate, curve index bounds check, and first computed Thumb jump-table dispatch",
+      "evidence": ["audit/data/capture_scalar_binaryninja.json", "audit/data/capture_scalar_structure.json", "docs/CAPTURE_SCALAR_REVIEW.md"],
+      "decoder_artifact": "audit/data/capture_scalar_binaryninja.json"
+    },
+    {
+      "start": "0x4ba2",
+      "end": "0x4c32",
+      "entry": "0x4b38",
+      "isa": "thumb",
+      "account": "First curve dispatch arms, percentage scaling, second gate and second bounded Thumb jump-table dispatch",
+      "evidence": ["audit/data/capture_scalar_binaryninja.json", "audit/data/capture_scalar_structure.json", "docs/CAPTURE_SCALAR_REVIEW.md"],
+      "decoder_artifact": "audit/data/capture_scalar_binaryninja.json"
+    },
+    {
+      "start": "0x4c3e",
+      "end": "0x4d0a",
+      "entry": "0x4b38",
+      "isa": "thumb",
+      "account": "Second curve dispatch arms, latch-dependent state and telemetry copy, conditional signed table adjustment, and 4095 cap/return",
+      "evidence": ["audit/data/capture_scalar_binaryninja.json", "audit/data/capture_scalar_structure.json", "docs/CAPTURE_SCALAR_REVIEW.md"],
+      "decoder_artifact": "audit/data/capture_scalar_binaryninja.json"
+    },
+    {
       "start": "0x4d38",
       "end": "0x5016",
       "entry": "0x4d38",

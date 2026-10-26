@@ -56,7 +56,7 @@ static roles and do not prove live engine behaviour.
 | `0x4818` | TPS/input gate that reads SRAM byte `0x2005D7` | trace |
 | `0x499C` | backdown-percentage threshold walk used to update AID 13 | chain |
 | `0x4A94` | applied-stretch percentage arithmetic using the AID 85 working copy | chain |
-| `0x4B38` | capture/fuel path that copies `0x2005E8` to telemetry word `0x200604` | trace |
+| `0x4B38` | [capture scalar and curve dispatch](CAPTURE_SCALAR_REVIEW.md), including a conditional `0x2005E8` to `0x200604` telemetry copy | bounded code/table review |
 | `0x4D38` | [five-knot scalar arithmetic](SCALAR_TELEMETRY_REVIEW.md) with signed table and capture-state paths, feeding `0x200604` telemetry | bounded code/literal review |
 | `0x50F0` | main control loop that applies the AID 13 derate and drives the TC0 path | chain |
 | `0x59E8` | incoming-capture unpacker and writer for the `0x2005C4` SRAM structure | trace |
