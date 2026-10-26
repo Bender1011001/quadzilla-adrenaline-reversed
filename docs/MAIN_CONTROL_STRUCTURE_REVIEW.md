@@ -49,6 +49,11 @@ The bounded phase map from original instructions is:
 | `0x5474..0x55BA` | Convert/filter numeric state through integer and software-float helpers; populate response bytes in `0x200BB6..0x200BD8`. Individual response scales need continued review. |
 | `0x55BA..0x5612` | Compare prior/current words, count consecutive matching states, conditionally call peripheral initializer `0x74E8` after the count reaches `0x7D1`, save current words, and return the low byte of a local selector. The count is iterations, not a measured time. |
 
+The subsequent [response arithmetic review](CONTROL_RESPONSE_ARITHMETIC_REVIEW.md)
+supplies the local integer/float/filter formulas and response-byte stores
+through `0x55A6`, including retained BC2/BC3 ordering across two complete
+calls. Physical units, NaN source paths and numeric status effects remain open.
+
 This phase map captures the branch/call structure and direct stores. It is not
 a full consumer/writer account for every state value or a proof that every
 branch executes in service.
