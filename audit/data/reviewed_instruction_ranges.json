@@ -1104,6 +1104,30 @@
       ]
     },
     {
+      "start": "0x7178", "end": "0x71be", "entry": "0x7178", "isa": "thumb",
+      "account": "Complete USART interrupt body with all timeout/TX-end/PDC-enabled status combinations executed and exact write sequence checked",
+      "evidence": ["audit/data/uart_buffer_binaryninja.json", "audit/data/usart_pdc_emulation.json", "docs/USART0_BUFFER_REVIEW.md"],
+      "decoder_artifact": "audit/data/uart_buffer_binaryninja.json"
+    },
+    {
+      "start": "0x71d0", "end": "0x720c", "entry": "0x71d0", "isa": "thumb",
+      "account": "Complete TX current/next staging body executed against frozen-register queue model, including both counts busy and zero requested count",
+      "evidence": ["audit/data/uart_buffer_binaryninja.json", "audit/data/usart_pdc_emulation.json", "docs/USART0_BUFFER_REVIEW.md"],
+      "decoder_artifact": "audit/data/uart_buffer_binaryninja.json"
+    },
+    {
+      "start": "0x720c", "end": "0x7256", "entry": "0x720c", "isa": "thumb",
+      "account": "Complete RX current/next staging body executed against frozen-register queue model and three explicit write-only US_CR read assumptions",
+      "evidence": ["audit/data/uart_buffer_binaryninja.json", "audit/data/usart_pdc_emulation.json", "docs/USART0_BUFFER_REVIEW.md"],
+      "decoder_artifact": "audit/data/uart_buffer_binaryninja.json"
+    },
+    {
+      "start": "0x725c", "end": "0x72fe", "entry": "0x725c", "isa": "thumb",
+      "account": "Complete USART/PDC/AIC initializer with original-byte write trace under three explicit write-only US_CR read assumptions; hardware command effects not emulated",
+      "evidence": ["audit/data/uart_buffer_binaryninja.json", "audit/data/usart_pdc_emulation.json", "docs/USART0_BUFFER_REVIEW.md"],
+      "decoder_artifact": "audit/data/uart_buffer_binaryninja.json"
+    },
+    {
       "start": "0x7364",
       "end": "0x737c",
       "entry": "0x7364",
