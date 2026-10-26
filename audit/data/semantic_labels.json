@@ -3,6 +3,88 @@
   "raw_sha256": "1ae519ba6194e8f7bdaaa94333a83a9e6fda3b0563f87f7d48383b37288c1780",
   "labels": [
     {
+      "entry": "0x4000",
+      "label": "ARM exception vector branch table, including reset and IRQ dispatch",
+      "assurance": "static_instruction_trace",
+      "evidence": [
+        "audit/data/startup_persistence_binaryninja.json",
+        "docs/STARTUP_VECTOR_CLOCK_REVIEW.md",
+        "docs/STARTUP_PERSISTENCE_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x4044",
+      "label": "ARM reset startup and Thumb handoff",
+      "assurance": "static_instruction_trace",
+      "evidence": [
+        "audit/data/startup_persistence_binaryninja.json",
+        "docs/STARTUP_VECTOR_CLOCK_REVIEW.md",
+        "docs/STARTUP_PERSISTENCE_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x408c",
+      "label": "Reset-continuation return fallback self-loop",
+      "assurance": "static_instruction_trace",
+      "evidence": [
+        "audit/data/startup_persistence_binaryninja.json",
+        "docs/STARTUP_VECTOR_CLOCK_REVIEW.md",
+        "docs/STARTUP_PERSISTENCE_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x40e0",
+      "label": "FIQ fallback self-loop",
+      "assurance": "static_instruction_trace",
+      "evidence": [
+        "audit/data/startup_persistence_binaryninja.json",
+        "docs/STARTUP_VECTOR_CLOCK_REVIEW.md",
+        "docs/STARTUP_PERSISTENCE_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x40e4",
+      "label": "IRQ fallback self-loop",
+      "assurance": "static_instruction_trace",
+      "evidence": [
+        "audit/data/startup_persistence_binaryninja.json",
+        "docs/STARTUP_VECTOR_CLOCK_REVIEW.md",
+        "docs/STARTUP_PERSISTENCE_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x40e8",
+      "label": "Spurious-interrupt fallback self-loop",
+      "assurance": "static_instruction_trace",
+      "evidence": [
+        "audit/data/startup_persistence_binaryninja.json",
+        "docs/STARTUP_VECTOR_CLOCK_REVIEW.md",
+        "docs/STARTUP_PERSISTENCE_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x4114",
+      "label": "Three-record initialized-data, zero-fill and executable-template relocation loop",
+      "assurance": "static_instruction_trace_and_synthetic_sram_emulation",
+      "evidence": [
+        "audit/data/startup_persistence_binaryninja.json",
+        "docs/STARTUP_VECTOR_CLOCK_REVIEW.md",
+        "docs/STARTUP_PERSISTENCE_REVIEW.md",
+        "audit/data/startup_init_emulation.json"
+      ]
+    },
+    {
+      "entry": "0x414c",
+      "label": "Oscillator, PLL, master-clock, watchdog and AIC fallback initializer",
+      "assurance": "static_instruction_trace_and_synthetic_mmio_emulation",
+      "evidence": [
+        "audit/data/startup_persistence_binaryninja.json",
+        "docs/STARTUP_VECTOR_CLOCK_REVIEW.md",
+        "docs/STARTUP_PERSISTENCE_REVIEW.md",
+        "audit/data/startup_init_emulation.json"
+      ]
+    },
+    {
       "entry": "0x41f0",
       "label": "32-word ADC sample shift, wraparound sum and logical divide by 32",
       "assurance": "static_instruction_trace_and_bounded_emulation",
@@ -762,6 +844,16 @@
       ]
     },
     {
+      "entry": "0x7444",
+      "label": "Spurious-interrupt no-op callback installed through AIC handler pointer",
+      "assurance": "static_instruction_trace_and_synthetic_emulation",
+      "evidence": [
+        "audit/data/remaining_entry_binaryninja.json",
+        "audit/data/remaining_entry_emulation.json",
+        "docs/FINAL_BASELINE_ENTRIES_REVIEW.md"
+      ]
+    },
+    {
       "entry": "0x7448",
       "label": "PIOA interrupt callback: conditional TC0/TC1 software triggers and source masking",
       "assurance": "static_instruction_trace_and_synthetic_mmio_emulation",
@@ -789,6 +881,16 @@
         "audit/data/pio_interrupt_binaryninja.json",
         "audit/data/pio_interrupt_emulation.json",
         "docs/PIO_INTERRUPT_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x74c4",
+      "label": "Boolean AND predicate of SRAM bytes 0x200791 and 0x2005DD",
+      "assurance": "static_instruction_trace_and_synthetic_emulation",
+      "evidence": [
+        "audit/data/remaining_entry_binaryninja.json",
+        "audit/data/remaining_entry_emulation.json",
+        "docs/FINAL_BASELINE_ENTRIES_REVIEW.md"
       ]
     },
     {
@@ -1140,6 +1242,17 @@
       ]
     },
     {
+      "entry": "0x854c",
+      "label": "Forward byte-fill helper used for startup zero fill",
+      "assurance": "static_instruction_trace_and_synthetic_sram_emulation",
+      "evidence": [
+        "audit/data/startup_persistence_binaryninja.json",
+        "docs/STARTUP_VECTOR_CLOCK_REVIEW.md",
+        "docs/STARTUP_PERSISTENCE_REVIEW.md",
+        "audit/data/startup_init_emulation.json"
+      ]
+    },
+    {
       "entry": "0x8564",
       "label": "u8 division Thumb entry; R0 remainder, R1 quotient",
       "assurance": "static_instruction_trace_and_bounded_emulation",
@@ -1395,6 +1508,18 @@
         "audit/data/soft_float_binaryninja.json",
         "audit/data/soft_float_ida.json",
         "docs/SOFT_FLOAT_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0xb114",
+      "label": "Source of runtime 0x200C84 flash-controller ready-bit polling helper",
+      "assurance": "static_instruction_trace_and_synthetic_emulation",
+      "evidence": [
+        "audit/data/remaining_entry_binaryninja.json",
+        "audit/data/remaining_entry_emulation.json",
+        "docs/FINAL_BASELINE_ENTRIES_REVIEW.md",
+        "docs/STARTUP_PERSISTENCE_REVIEW.md",
+        "audit/data/startup_init_emulation.json"
       ]
     }
   ],
