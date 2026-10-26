@@ -40,6 +40,13 @@ interpretation. Six original-byte cases verify selected transmit descriptor
 boundaries and blocked admission. It adds no source entries or instruction
 bytes and does not close exhaustive writer/consumer provenance.
 
+The [scalar telemetry arithmetic review](SCALAR_TELEMETRY_REVIEW.md) now adds
+a complete local 32-bit calculation account and 10,312 original helper calls,
+each followed by the original caller cap/floor/store slice. All 349 helper
+starts are visited with zero model differences. It corrects the incoming
+R0/R2 interpretation and signed lower-floor account; upstream writer bounds,
+complete caller execution and physical meaning remain open.
+
 ## Full-image baseline
 
 The byte-verified IDA export now records 13,201 items over the entire 32,000-byte

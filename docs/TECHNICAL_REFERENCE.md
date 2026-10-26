@@ -57,7 +57,7 @@ static roles and do not prove live engine behaviour.
 | `0x499C` | backdown-percentage threshold walk used to update AID 13 | chain |
 | `0x4A94` | applied-stretch percentage arithmetic using the AID 85 working copy | chain |
 | `0x4B38` | [capture scalar and curve dispatch](CAPTURE_SCALAR_REVIEW.md), including a conditional `0x2005E8` to `0x200604` telemetry copy and [bounded direct-caller 20×20 lookup](CAPTURE_TABLE_BOUNDS_REVIEW.md) | bounded code/table review |
-| `0x4D38` | [five-knot scalar arithmetic](SCALAR_TELEMETRY_REVIEW.md) with signed table and capture-state paths, feeding `0x200604` telemetry | bounded code/literal review |
+| `0x4D38` | [five-knot scalar arithmetic](SCALAR_TELEMETRY_REVIEW.md) with signed table and capture-state paths, feeding `0x200604` telemetry | 32-bit model and 10,312 original-byte cases; writer reachability open |
 | `0x50F0` | main control loop that applies the AID 13 derate and drives the TC0 path | chain |
 | `0x59E8` | incoming-capture unpacker and writer for the `0x2005C4` SRAM structure | trace |
 | `0x5F34` | writer of SRAM byte `0x200BE7`; live AID meaning remains unproven | trace |
