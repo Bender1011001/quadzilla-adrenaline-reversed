@@ -15,26 +15,30 @@ now stands at 145 roles with no unlabeled baseline entries after the
 new entries and aliases are recorded separately in
 `audit/data/entry_adjudications.json`. Neither inventory is claimed exhaustive.
 The empty baseline semantic queue does not close the full analysis. The
-[residual code audit](RESIDUAL_CODE_ADJUDICATION.md) adjudicates the remaining
-IDA code candidates, but 1,802 data-candidate bytes still need review, and
-additional entry discovery and complete downstream path review remain open.
+[residual code audit](RESIDUAL_CODE_ADJUDICATION.md) and
+[PC-literal audit](PC_LITERAL_POOL_REVIEW.md) give every image byte a supported
+classification. Additional entry discovery, complete semantic contracts,
+global writer/consumer paths and subsystem integration remain open.
 
 ## Full-image baseline
 
 The byte-verified IDA export now records 13,201 items over the entire 32,000-byte
 image. It includes decoded direct branch operands, because IDA's reference graph
-omits some targets in unmapped SRAM. Exported item kinds and Thumb state are tool
-interpretations and still require correction.
+omits some targets in unmapped SRAM. Exported item kinds and Thumb state remain
+tool interpretations retained for provenance; the ledger records their accepted
+source-bound dispositions.
 
 [The byte ledger](../audit/data/image_coverage_ledger.json) accounts for every
-address without hiding pending review:
+address without equating classification with complete semantic review:
 
 | Classification | Bytes |
 |---|---:|
 | IDA code candidates awaiting review | 0 |
 | Explicitly reviewed Thumb instruction ranges | 14,320 |
 | Explicitly reviewed ARM instruction ranges | 4,680 |
-| IDA data candidates awaiting review | 1,802 |
+| IDA data candidates awaiting review | 0 |
+| Remaining PC-relative literal words | 1,788 |
+| Remaining literal-pool FF alignment | 14 |
 | Residual function NOP/FF alignment | 76 |
 | Integer interworking NOPs | 6 |
 | Reset-request literal words | 8 |
@@ -69,8 +73,8 @@ address without hiding pending review:
 Coverage of an address is not proof that its meaning or ISA has been reviewed.
 The explicit instruction-range manifest now accepts 19,000 bytes through the
 [residual code audit](RESIDUAL_CODE_ADJUDICATION.md). It excludes adjacent literal
-pools and alignment. Earlier semantic labels are not automatically promoted to
-byte-level classification; their exact ranges still need to be adjudicated.
+pools and alignment. These byte roles do not prove complete branch states,
+caller invariants, writer coverage, or downstream subsystem semantics.
 The ledger explicitly preserves 3,376 item/layout conflicts. These are tool item
 spans, not 3,376 bugs or distinct functions. Many arise because initialized data
 or erased space was interpreted as instructions.
@@ -216,7 +220,9 @@ These remain specific caller/scheduling follow-ups rather than asserted live def
    variable-width-AID, control arithmetic and sensor/capture analyses.
 4. Trace alternate raw-staging consumers and interrupt interactions; validate
    potential defects with bounded models and instruction evidence.
-5. Replace remaining candidate classifications with supported byte-range roles,
-   publish the resulting architecture/reference, and complete the offline audit.
+5. Consolidate the global architecture/reference and discriminating hardware
+   checklist, then audit every original completion requirement against its
+   authoritative evidence. Complete byte classification alone does not satisfy
+   the remaining semantic, entry-discovery and integration requirements.
 
 No hardware traffic, flash operation or engine-setting change was performed.
