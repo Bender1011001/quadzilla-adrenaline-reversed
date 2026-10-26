@@ -20,6 +20,13 @@ The empty baseline semantic queue does not close the full analysis. The
 classification. Additional entry discovery, complete semantic contracts,
 global writer/consumer paths and subsystem integration remain open.
 
+The [execution-discovery review](EXECUTION_DISCOVERY_REVIEW.md) reconciles
+354 raw direct-call sites, 1,114 direct branches and 48 code-address data
+windows, including relocated source aliases. It establishes no new independent
+entry; 157 remains a supported minimum. Sixty non-LR/non-PC `BX` sites need
+register-source context, and other computed PC writes remain part of the
+entry-discovery work.
+
 ## Full-image baseline
 
 The byte-verified IDA export now records 13,201 items over the entire 32,000-byte
