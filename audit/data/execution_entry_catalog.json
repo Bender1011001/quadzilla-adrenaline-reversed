@@ -4,8 +4,8 @@
   "unit": "execution_entries_including_vectors_thunks_and_alternate_entries",
   "summary": {
     "confirmed_entries": 145,
-    "documented_static_roles": 118,
-    "unlabeled_static_entries": 27,
+    "documented_static_roles": 121,
+    "unlabeled_static_entries": 24,
     "entries_with_ida_sram_references": 49,
     "entries_with_ida_peripheral_references": 21,
     "union_direct_call_edges": 180
@@ -6219,8 +6219,19 @@
           ]
         }
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x5f14",
+          "label": "Conditional 44-byte non-image configuration restore followed by response mirror",
+          "assurance": "static_instruction_trace_and_bounded_emulation",
+          "evidence": [
+            "audit/data/config_restore_binaryninja.json",
+            "audit/data/config_restore_emulation.json",
+            "docs/INITIAL_STATE_CONFIG_REVIEW.md"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [
           "0x5f34",
@@ -6282,10 +6293,12 @@
       "semantics": [
         {
           "entry": "0x5f34",
-          "label": "Writer of SRAM byte 0x200BE7; live AID meaning remains unproven",
-          "assurance": "static_instruction_trace",
+          "label": "Configuration-to-response mirror with confirmed local AID 151 byte overwrite",
+          "assurance": "static_instruction_trace_and_bounded_emulation",
           "evidence": [
-            "quadzilla_mcu_map.json:functions.sub_5F34"
+            "audit/data/config_restore_binaryninja.json",
+            "audit/data/config_response_mirror_emulation.json",
+            "docs/INITIAL_STATE_CONFIG_REVIEW.md"
           ]
         }
       ],
@@ -12759,8 +12772,19 @@
           ]
         }
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x760c",
+          "label": "Initial main-loop state selector from configuration mode and PIOA bit 28",
+          "assurance": "static_instruction_trace_and_bounded_emulation",
+          "evidence": [
+            "audit/data/initial_state_binaryninja.json",
+            "audit/data/initial_state_emulation.json",
+            "docs/INITIAL_STATE_CONFIG_REVIEW.md"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [],
         "incoming": [
@@ -16275,8 +16299,19 @@
           ]
         }
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x8530",
+          "label": "Forward byte-copy helper used by startup and conditional configuration restore",
+          "assurance": "static_instruction_trace_and_bounded_emulation",
+          "evidence": [
+            "audit/data/config_restore_binaryninja.json",
+            "audit/data/config_restore_emulation.json",
+            "docs/INITIAL_STATE_CONFIG_REVIEW.md"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [],
         "incoming": [
@@ -17598,7 +17633,7 @@
     },
     "labels": {
       "path": "audit/data/semantic_labels.json",
-      "sha256": "e9081d1be8b23054f79961c1ffc698376b4037e1794677f32f34fd72a1a49253"
+      "sha256": "cb05cb18c4c58210b61a12e702a83840e0bd28ed57c2d91757f1d7e9310655c2"
     }
   },
   "input_hash_policy": "SHA-256 of JSON text with CRLF normalized to LF"

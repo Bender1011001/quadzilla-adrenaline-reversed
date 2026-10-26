@@ -48,6 +48,9 @@ The [source-bound dispatch map](../audit/data/aid_validation_dispatch.json)
 binds these AIDs to their source targets and staging/response pointer slots.
 These handlers do not themselves write their response-pointer destinations;
 read support and later response-population paths remain distinct questions.
+The [configuration mirror review](INITIAL_STATE_CONFIG_REVIEW.md) now traces
+the startup response-population path for AID 151 and records its local
+halfword-byte overwrite.
 The five unprofiled AIDs demonstrate implemented update paths beyond profile
 declarations, without establishing their application meaning.
 

@@ -14,7 +14,7 @@ spec.loader.exec_module(ledger)
 class ImageLedger(unittest.TestCase):
     def test_review_manifest_rejects_false_coverage(self):
         doc = json.loads((ROOT / "audit/data/reviewed_instruction_ranges.json").read_text())
-        self.assertEqual(sum(b-a for a, b, *_ in ledger.validate_instruction_reviews(doc)), 13970)
+        self.assertEqual(sum(b-a for a, b, *_ in ledger.validate_instruction_reviews(doc)), 14346)
         for change in ("hash", "overlap", "layout", "odd", "account"):
             malformed = copy.deepcopy(doc)
             if change == "hash":
@@ -48,7 +48,7 @@ class ImageLedger(unittest.TestCase):
                 cursor += instruction["length"]
             self.assertEqual(cursor, end)
         accepted = [r for r in doc["ranges"] if r["classification"] in ("reviewed_thumb_instructions", "reviewed_arm_instructions")]
-        self.assertEqual(sum(int(r["end"], 0)-int(r["start"], 0) for r in accepted), 13970)
+        self.assertEqual(sum(int(r["end"], 0)-int(r["start"], 0) for r in accepted), 14346)
         for r in accepted:
             self.assertTrue(any(entry == r["review_entry"] and
                                 start <= int(r["start"], 0) < int(r["end"], 0) <= end
@@ -87,6 +87,25 @@ class ImageLedger(unittest.TestCase):
         self.assertEqual(len(run["visited_starts"]), 157)
         self.assertTrue(all(int(write["address"], 0) not in counts
                             for row in run["cases"] for write in row["writes"]))
+
+    def test_initial_state_and_aid151_mirror_have_source_bound_results(self):
+        initial = json.loads((ROOT / "audit/data/initial_state_emulation.json").read_text())
+        restore = json.loads((ROOT / "audit/data/config_restore_emulation.json").read_text())
+        mirror = json.loads((ROOT / "audit/data/config_response_mirror_emulation.json").read_text())
+        self.assertEqual(len(initial["visited_starts"]), 70)
+        results = {row["label"]: row["return_r0"] for row in initial["cases"]}
+        self.assertEqual((results["default_pin_low"], results["default_pin_high"]), (1, 0))
+        self.assertEqual((results["mode2_disabled_below"], results["mode2_disabled_equal"]), (2, 0))
+        self.assertEqual([(row["copied"], row["after_mode_byte"]) for row in restore["cases"]],
+                         [(False, 4), (True, 234)])
+        self.assertEqual(len(mirror["visited_starts"]), 92)
+        zero = next(row for row in mirror["cases"] if row["response_fill"] == "0x0")
+        self.assertEqual(zero["config_halfword_dc"], "0x7a73")
+        self.assertEqual(zero["aid151_reader_payload"], "97657a00")
+        stores = [(row["pc"], row["address"], row["value"]) for row in zero["writes"]
+                  if row["address"] in ("0x200be8", "0x200be9")]
+        self.assertEqual(stores, [("0x5f96", "0x200be8", "0x73"),
+                                  ("0x5f9c", "0x200be8", "0x7a")])
 
     def test_outgoing_state_evidence_and_count_write_order(self):
         decoded = json.loads((ROOT / "audit/data/outgoing_state_binaryninja.json").read_text())

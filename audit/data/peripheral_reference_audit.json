@@ -1255,8 +1255,19 @@
     },
     {
       "entry": "0x760c",
-      "semantic_status": "unlabeled_static_entry",
-      "semantics": [],
+      "semantic_status": "documented_static_role",
+      "semantics": [
+        {
+          "entry": "0x760c",
+          "label": "Initial main-loop state selector from configuration mode and PIOA bit 28",
+          "assurance": "static_instruction_trace_and_bounded_emulation",
+          "evidence": [
+            "audit/data/initial_state_binaryninja.json",
+            "audit/data/initial_state_emulation.json",
+            "docs/INITIAL_STATE_CONFIG_REVIEW.md"
+          ]
+        }
+      ],
       "blocks": {
         "PIOA": 1
       },
@@ -1405,7 +1416,7 @@
   "inputs": {
     "catalog": {
       "path": "audit/data/execution_entry_catalog.json",
-      "sha256": "c88ad5bb2d19c668fbd41400f4b134430f423def61affc351c88428ff581b44c"
+      "sha256": "50549b16c92822dc015bddfbdd906f22d0392c4c89622031502c0b8b7813252c"
     },
     "peripheral_map": {
       "path": "audit/data/sam7s_peripheral_map.json",

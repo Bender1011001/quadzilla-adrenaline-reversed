@@ -19,6 +19,13 @@ The [compound handler review](COMPOUND_AID_UPDATE_REVIEW.md) adds eleven local u
 
 The [complete local handler account](REMAINING_AID_UPDATE_REVIEW.md) now covers all 57 selected update handlers. AIDs 110–136 have two-byte transport/read width, while these handlers consume only the low staged byte and write one echo byte. The original reader returns the retained upper echo byte in controlled probes. AID 226 has a local configuration account; variable-width transport admission and full parameter semantics remain incomplete.
 
+For unprofiled AID 151, the [configuration mirror review](INITIAL_STATE_CONFIG_REVIEW.md)
+traces the working value to its table-2 response pointer. The startup mirror
+writes the low and high bytes of its 16-bit field to the same response byte,
+leaving the next byte untouched; the original reader reproduces the resulting
+three-byte value in controlled SRAM. Later writers and live observation remain
+to be checked.
+
 ## AID Data Size Rules (from firmware + libx2com-jni.so)
 
 | AID Range | Byte Width | Firmware Segment | X2com Buffer |
