@@ -15,6 +15,13 @@ ROOT = Path(__file__).resolve().parents[2]
 SHA = "1ae519ba6194e8f7bdaaa94333a83a9e6fda3b0563f87f7d48383b37288c1780"
 BASE, END = 0x4000, 0xBD00
 LAYOUT = (
+    (0x40F8, 0x4114, "arm_startup_literal_pool"),
+    (0x4144, 0x414C, "sram_descriptor_loop_literals"),
+    (0x41BE, 0x41C0, "clock_setup_alignment_nop"),
+    (0x41C0, 0x41F0, "clock_setup_literal_pool"),
+    (0x7446, 0x7448, "spurious_callback_alignment_ff"),
+    (0x74DE, 0x74E0, "sram_predicate_alignment_nop"),
+    (0x74E0, 0x74E8, "sram_predicate_literal_pool"),
     (0x608C, 0x6240, "aid_validation_dispatch_table"),
     (0x77A6, 0x77A8, "cycle_queue_alignment_ff"),
     (0x77A8, 0x77B8, "cycle_queue_literal_pool"),

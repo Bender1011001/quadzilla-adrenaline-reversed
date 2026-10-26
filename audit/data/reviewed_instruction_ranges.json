@@ -4,6 +4,151 @@
   "limitation": "Explicit reviewed instruction ranges only; semantic role labels alone do not classify byte ranges",
   "ranges": [
     {
+      "start": "0x4000",
+      "end": "0x401c",
+      "entry": "0x4000",
+      "isa": "arm",
+      "account": "Seven ARM exception-vector branch instructions",
+      "evidence": [
+        "audit/data/startup_persistence_binaryninja.json",
+        "docs/STARTUP_VECTOR_CLOCK_REVIEW.md",
+        "docs/STARTUP_PERSISTENCE_REVIEW.md"
+      ],
+      "decoder_artifact": "audit/data/startup_persistence_binaryninja.json"
+    },
+    {
+      "start": "0x401c",
+      "end": "0x4044",
+      "entry": "0x401c",
+      "isa": "arm",
+      "account": "FIQ exception body with banked state and exception return",
+      "evidence": [
+        "audit/data/startup_persistence_binaryninja.json",
+        "docs/STARTUP_VECTOR_CLOCK_REVIEW.md",
+        "docs/STARTUP_PERSISTENCE_REVIEW.md"
+      ],
+      "decoder_artifact": "audit/data/startup_persistence_binaryninja.json"
+    },
+    {
+      "start": "0x4044",
+      "end": "0x408c",
+      "entry": "0x4044",
+      "isa": "arm",
+      "account": "ARM reset body and Thumb setup/descriptor/main-continuation handoffs",
+      "evidence": [
+        "audit/data/startup_persistence_binaryninja.json",
+        "docs/STARTUP_VECTOR_CLOCK_REVIEW.md",
+        "docs/STARTUP_PERSISTENCE_REVIEW.md"
+      ],
+      "decoder_artifact": "audit/data/startup_persistence_binaryninja.json"
+    },
+    {
+      "start": "0x408c",
+      "end": "0x4090",
+      "entry": "0x408c",
+      "isa": "arm",
+      "account": "Single ARM return fallback self-branch",
+      "evidence": [
+        "audit/data/startup_persistence_binaryninja.json",
+        "docs/STARTUP_VECTOR_CLOCK_REVIEW.md",
+        "docs/STARTUP_PERSISTENCE_REVIEW.md"
+      ],
+      "decoder_artifact": "audit/data/startup_persistence_binaryninja.json"
+    },
+    {
+      "start": "0x4090",
+      "end": "0x40e0",
+      "entry": "0x4090",
+      "isa": "arm",
+      "account": "IRQ exception save, AIC dispatch/acknowledge and restore body",
+      "evidence": [
+        "audit/data/startup_persistence_binaryninja.json",
+        "docs/STARTUP_VECTOR_CLOCK_REVIEW.md",
+        "docs/STARTUP_PERSISTENCE_REVIEW.md"
+      ],
+      "decoder_artifact": "audit/data/startup_persistence_binaryninja.json"
+    },
+    {
+      "start": "0x40e0",
+      "end": "0x40e4",
+      "entry": "0x40e0",
+      "isa": "arm",
+      "account": "Single ARM FIQ fallback self-branch",
+      "evidence": [
+        "audit/data/startup_persistence_binaryninja.json",
+        "docs/STARTUP_VECTOR_CLOCK_REVIEW.md",
+        "docs/STARTUP_PERSISTENCE_REVIEW.md"
+      ],
+      "decoder_artifact": "audit/data/startup_persistence_binaryninja.json"
+    },
+    {
+      "start": "0x40e4",
+      "end": "0x40e8",
+      "entry": "0x40e4",
+      "isa": "arm",
+      "account": "Single ARM IRQ fallback self-branch",
+      "evidence": [
+        "audit/data/startup_persistence_binaryninja.json",
+        "docs/STARTUP_VECTOR_CLOCK_REVIEW.md",
+        "docs/STARTUP_PERSISTENCE_REVIEW.md"
+      ],
+      "decoder_artifact": "audit/data/startup_persistence_binaryninja.json"
+    },
+    {
+      "start": "0x40e8",
+      "end": "0x40ec",
+      "entry": "0x40e8",
+      "isa": "arm",
+      "account": "Single ARM spurious-interrupt fallback self-branch",
+      "evidence": [
+        "audit/data/startup_persistence_binaryninja.json",
+        "docs/STARTUP_VECTOR_CLOCK_REVIEW.md",
+        "docs/STARTUP_PERSISTENCE_REVIEW.md"
+      ],
+      "decoder_artifact": "audit/data/startup_persistence_binaryninja.json"
+    },
+    {
+      "start": "0x40ec",
+      "end": "0x40f8",
+      "entry": "0x40ec",
+      "isa": "arm",
+      "account": "ARM exception reset-request trampoline to Thumb 0x7434",
+      "evidence": [
+        "audit/data/startup_persistence_binaryninja.json",
+        "docs/STARTUP_VECTOR_CLOCK_REVIEW.md",
+        "docs/STARTUP_PERSISTENCE_REVIEW.md"
+      ],
+      "decoder_artifact": "audit/data/startup_persistence_binaryninja.json"
+    },
+    {
+      "start": "0x4114",
+      "end": "0x4144",
+      "entry": "0x4114",
+      "isa": "thumb",
+      "account": "Complete descriptor loop; all 22 decoded starts visited in bounded SRAM copy/zero tests",
+      "evidence": [
+        "audit/data/startup_persistence_binaryninja.json",
+        "docs/STARTUP_VECTOR_CLOCK_REVIEW.md",
+        "docs/STARTUP_PERSISTENCE_REVIEW.md",
+        "audit/data/startup_init_emulation.json"
+      ],
+      "decoder_artifact": "audit/data/startup_persistence_binaryninja.json"
+    },
+    {
+      "start": "0x414c",
+      "end": "0x41be",
+      "entry": "0x414c",
+      "isa": "thumb",
+      "account": "Complete clock/watchdog/AIC initializer; all 57 decoded starts visited with synthetic ready flags",
+      "evidence": [
+        "audit/data/startup_persistence_binaryninja.json",
+        "docs/STARTUP_VECTOR_CLOCK_REVIEW.md",
+        "docs/STARTUP_PERSISTENCE_REVIEW.md",
+        "audit/data/startup_init_emulation.json"
+      ],
+      "decoder_artifact": "audit/data/startup_persistence_binaryninja.json"
+    },
+    {
       "start": "0x41f0",
       "end": "0x4214",
       "entry": "0x41f0",
@@ -948,6 +1093,19 @@
       "decoder_artifact": "audit/data/adc_init_vector_binaryninja.json"
     },
     {
+      "start": "0x7444",
+      "end": "0x7446",
+      "entry": "0x7444",
+      "isa": "thumb",
+      "account": "Complete single-instruction no-op AIC callback; bounded call confirms preserved R0/SP",
+      "evidence": [
+        "audit/data/remaining_entry_binaryninja.json",
+        "audit/data/remaining_entry_emulation.json",
+        "docs/FINAL_BASELINE_ENTRIES_REVIEW.md"
+      ],
+      "decoder_artifact": "audit/data/remaining_entry_binaryninja.json"
+    },
+    {
       "start": "0x7448",
       "end": "0x7486",
       "entry": "0x7448",
@@ -985,6 +1143,19 @@
         "audit/data/pio_interrupt_emulation.json",
         "docs/PIO_INTERRUPT_REVIEW.md"
       ]
+    },
+    {
+      "start": "0x74c4",
+      "end": "0x74de",
+      "entry": "0x74c4",
+      "isa": "thumb",
+      "account": "Complete fixed-SRAM two-byte predicate; both branches exercised and literal pool excluded",
+      "evidence": [
+        "audit/data/remaining_entry_binaryninja.json",
+        "audit/data/remaining_entry_emulation.json",
+        "docs/FINAL_BASELINE_ENTRIES_REVIEW.md"
+      ],
+      "decoder_artifact": "audit/data/remaining_entry_binaryninja.json"
     },
     {
       "start": "0x74e8",
@@ -1342,6 +1513,20 @@
         "docs/INITIAL_STATE_CONFIG_REVIEW.md"
       ],
       "decoder_artifact": "audit/data/config_restore_binaryninja.json"
+    },
+    {
+      "start": "0x854c",
+      "end": "0x8562",
+      "entry": "0x854c",
+      "isa": "thumb",
+      "account": "Complete byte-fill helper; all 11 decoded starts visited during startup zero fill",
+      "evidence": [
+        "audit/data/startup_persistence_binaryninja.json",
+        "docs/STARTUP_VECTOR_CLOCK_REVIEW.md",
+        "docs/STARTUP_PERSISTENCE_REVIEW.md",
+        "audit/data/startup_init_emulation.json"
+      ],
+      "decoder_artifact": "audit/data/startup_persistence_binaryninja.json"
     },
     {
       "start": "0x8678",

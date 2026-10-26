@@ -1,0 +1,144 @@
+{
+  "format": "quadzilla-remaining-entry-emulation-v1",
+  "raw_sha256": "1ae519ba6194e8f7bdaaa94333a83a9e6fda3b0563f87f7d48383b37288c1780",
+  "limitation": "Synthetic SRAM and status register; ARM926 instruction surrogate, no flash hardware or reachability proof",
+  "literal_words": {
+    "0x7a48": "0x7445",
+    "0x74e0": "0x200791",
+    "0x74e4": "0x2005dd"
+  },
+  "no_op_callback": {
+    "returned": true,
+    "r0": "0xa5a5a5a5",
+    "stack_preserved": true,
+    "visited": [
+      "0x7444"
+    ]
+  },
+  "sram_predicate": [
+    {
+      "sram_0x200791": 0,
+      "sram_0x2005dd": 0,
+      "returned": true,
+      "r0": "0x0",
+      "stack_preserved": true,
+      "visited": [
+        "0x74c4",
+        "0x74c6",
+        "0x74c8",
+        "0x74ca",
+        "0x74d8",
+        "0x74da",
+        "0x74dc"
+      ]
+    },
+    {
+      "sram_0x200791": 1,
+      "sram_0x2005dd": 0,
+      "returned": true,
+      "r0": "0x0",
+      "stack_preserved": true,
+      "visited": [
+        "0x74c4",
+        "0x74c6",
+        "0x74c8",
+        "0x74ca",
+        "0x74cc",
+        "0x74ce",
+        "0x74d0",
+        "0x74d2",
+        "0x74d8",
+        "0x74da",
+        "0x74dc"
+      ]
+    },
+    {
+      "sram_0x200791": 0,
+      "sram_0x2005dd": 1,
+      "returned": true,
+      "r0": "0x0",
+      "stack_preserved": true,
+      "visited": [
+        "0x74c4",
+        "0x74c6",
+        "0x74c8",
+        "0x74ca",
+        "0x74d8",
+        "0x74da",
+        "0x74dc"
+      ]
+    },
+    {
+      "sram_0x200791": 1,
+      "sram_0x2005dd": 1,
+      "returned": true,
+      "r0": "0x1",
+      "stack_preserved": true,
+      "visited": [
+        "0x74c4",
+        "0x74c6",
+        "0x74c8",
+        "0x74ca",
+        "0x74cc",
+        "0x74ce",
+        "0x74d0",
+        "0x74d2",
+        "0x74d4",
+        "0x74d6",
+        "0x74da",
+        "0x74dc"
+      ]
+    },
+    {
+      "sram_0x200791": 255,
+      "sram_0x2005dd": 2,
+      "returned": true,
+      "r0": "0x1",
+      "stack_preserved": true,
+      "visited": [
+        "0x74c4",
+        "0x74c6",
+        "0x74c8",
+        "0x74ca",
+        "0x74cc",
+        "0x74ce",
+        "0x74d0",
+        "0x74d2",
+        "0x74d4",
+        "0x74d6",
+        "0x74da",
+        "0x74dc"
+      ]
+    }
+  ],
+  "runtime_ready_helper": {
+    "source": "0xb114",
+    "runtime": "0x200c84",
+    "ready_status_1": {
+      "returned": true,
+      "r0": "0x1",
+      "stack_preserved": true,
+      "visited": [
+        "0x200c84",
+        "0x200c86",
+        "0x200c88",
+        "0x200c8a",
+        "0x200c8c",
+        "0x200c8e",
+        "0x200c90"
+      ]
+    },
+    "waiting_status_0": {
+      "returned": false,
+      "r0": "0x0",
+      "stack_preserved": true,
+      "visited": [
+        "0x200c84",
+        "0x200c86",
+        "0x200c88",
+        "0x200c8a",
+        "0x200c8c"
+      ]
+    }
+  }
+}

@@ -4,8 +4,8 @@
   "unit": "execution_entries_including_vectors_thunks_and_alternate_entries",
   "summary": {
     "confirmed_entries": 145,
-    "documented_static_roles": 133,
-    "unlabeled_static_entries": 12,
+    "documented_static_roles": 145,
+    "unlabeled_static_entries": 0,
     "entries_with_ida_sram_references": 49,
     "entries_with_ida_peripheral_references": 21,
     "union_direct_call_edges": 180
@@ -28,8 +28,19 @@
           ]
         }
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x4000",
+          "label": "ARM exception vector branch table, including reset and IRQ dispatch",
+          "assurance": "static_instruction_trace",
+          "evidence": [
+            "audit/data/startup_persistence_binaryninja.json",
+            "docs/STARTUP_VECTOR_CLOCK_REVIEW.md",
+            "docs/STARTUP_PERSISTENCE_REVIEW.md"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [],
         "incoming": []
@@ -54,8 +65,19 @@
           ]
         }
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x4044",
+          "label": "ARM reset startup and Thumb handoff",
+          "assurance": "static_instruction_trace",
+          "evidence": [
+            "audit/data/startup_persistence_binaryninja.json",
+            "docs/STARTUP_VECTOR_CLOCK_REVIEW.md",
+            "docs/STARTUP_PERSISTENCE_REVIEW.md"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [
           "0x4114",
@@ -83,8 +105,19 @@
         },
         "ghidra": null
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x408c",
+          "label": "Reset-continuation return fallback self-loop",
+          "assurance": "static_instruction_trace",
+          "evidence": [
+            "audit/data/startup_persistence_binaryninja.json",
+            "docs/STARTUP_VECTOR_CLOCK_REVIEW.md",
+            "docs/STARTUP_PERSISTENCE_REVIEW.md"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [],
         "incoming": []
@@ -109,8 +142,19 @@
         },
         "ghidra": null
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x40e0",
+          "label": "FIQ fallback self-loop",
+          "assurance": "static_instruction_trace",
+          "evidence": [
+            "audit/data/startup_persistence_binaryninja.json",
+            "docs/STARTUP_VECTOR_CLOCK_REVIEW.md",
+            "docs/STARTUP_PERSISTENCE_REVIEW.md"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [],
         "incoming": []
@@ -135,8 +179,19 @@
         },
         "ghidra": null
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x40e4",
+          "label": "IRQ fallback self-loop",
+          "assurance": "static_instruction_trace",
+          "evidence": [
+            "audit/data/startup_persistence_binaryninja.json",
+            "docs/STARTUP_VECTOR_CLOCK_REVIEW.md",
+            "docs/STARTUP_PERSISTENCE_REVIEW.md"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [],
         "incoming": []
@@ -161,8 +216,19 @@
         },
         "ghidra": null
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x40e8",
+          "label": "Spurious-interrupt fallback self-loop",
+          "assurance": "static_instruction_trace",
+          "evidence": [
+            "audit/data/startup_persistence_binaryninja.json",
+            "docs/STARTUP_VECTOR_CLOCK_REVIEW.md",
+            "docs/STARTUP_PERSISTENCE_REVIEW.md"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [],
         "incoming": []
@@ -197,8 +263,20 @@
           ]
         }
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x4114",
+          "label": "Three-record initialized-data, zero-fill and executable-template relocation loop",
+          "assurance": "static_instruction_trace_and_synthetic_sram_emulation",
+          "evidence": [
+            "audit/data/startup_persistence_binaryninja.json",
+            "docs/STARTUP_VECTOR_CLOCK_REVIEW.md",
+            "docs/STARTUP_PERSISTENCE_REVIEW.md",
+            "audit/data/startup_init_emulation.json"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [
           "0x8530",
@@ -241,8 +319,20 @@
           ]
         }
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x414c",
+          "label": "Oscillator, PLL, master-clock, watchdog and AIC fallback initializer",
+          "assurance": "static_instruction_trace_and_synthetic_mmio_emulation",
+          "evidence": [
+            "audit/data/startup_persistence_binaryninja.json",
+            "docs/STARTUP_VECTOR_CLOCK_REVIEW.md",
+            "docs/STARTUP_PERSISTENCE_REVIEW.md",
+            "audit/data/startup_init_emulation.json"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [],
         "incoming": [
@@ -12238,8 +12328,19 @@
         },
         "ghidra": null
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x7444",
+          "label": "Spurious-interrupt no-op callback installed through AIC handler pointer",
+          "assurance": "static_instruction_trace_and_synthetic_emulation",
+          "evidence": [
+            "audit/data/remaining_entry_binaryninja.json",
+            "audit/data/remaining_entry_emulation.json",
+            "docs/FINAL_BASELINE_ENTRIES_REVIEW.md"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [],
         "incoming": []
@@ -12522,8 +12623,19 @@
           ]
         }
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x74c4",
+          "label": "Boolean AND predicate of SRAM bytes 0x200791 and 0x2005DD",
+          "assurance": "static_instruction_trace_and_synthetic_emulation",
+          "evidence": [
+            "audit/data/remaining_entry_binaryninja.json",
+            "audit/data/remaining_entry_emulation.json",
+            "docs/FINAL_BASELINE_ENTRIES_REVIEW.md"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [],
         "incoming": []
@@ -16482,8 +16594,20 @@
           ]
         }
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x854c",
+          "label": "Forward byte-fill helper used for startup zero fill",
+          "assurance": "static_instruction_trace_and_synthetic_sram_emulation",
+          "evidence": [
+            "audit/data/startup_persistence_binaryninja.json",
+            "docs/STARTUP_VECTOR_CLOCK_REVIEW.md",
+            "docs/STARTUP_PERSISTENCE_REVIEW.md",
+            "audit/data/startup_init_emulation.json"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [],
         "incoming": [
@@ -17740,8 +17864,21 @@
         },
         "ghidra": null
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0xb114",
+          "label": "Source of runtime 0x200C84 flash-controller ready-bit polling helper",
+          "assurance": "static_instruction_trace_and_synthetic_emulation",
+          "evidence": [
+            "audit/data/remaining_entry_binaryninja.json",
+            "audit/data/remaining_entry_emulation.json",
+            "docs/FINAL_BASELINE_ENTRIES_REVIEW.md",
+            "docs/STARTUP_PERSISTENCE_REVIEW.md",
+            "audit/data/startup_init_emulation.json"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [],
         "incoming": []
@@ -17766,7 +17903,7 @@
     },
     "labels": {
       "path": "audit/data/semantic_labels.json",
-      "sha256": "a19bdfba4dbe6d046a77cfbce5079cb2e13e91a48898280f750c3c8c7b0fbdd9"
+      "sha256": "de5069863989533fb761245c81ba1e58adf78f73fa8691b419ed92077e034526"
     }
   },
   "input_hash_policy": "SHA-256 of JSON text with CRLF normalized to LF"

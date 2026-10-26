@@ -1,0 +1,134 @@
+{
+  "format": "quadzilla-bounded-decode-v1",
+  "raw_sha256": "1ae519ba6194e8f7bdaaa94333a83a9e6fda3b0563f87f7d48383b37288c1780",
+  "tool_version": "5.2.8722 Personal",
+  "limitation": "decoder supports a superset of ARMv4T; explicit mode and bounds are supplied hypotheses",
+  "ranges": [
+    {
+      "start": "0x7444",
+      "end": "0x7446",
+      "architecture": "thumb2",
+      "instructions": [
+        {
+          "address": "0x7444",
+          "length": 2,
+          "text": "bx      lr"
+        }
+      ]
+    },
+    {
+      "start": "0x74c4",
+      "end": "0x74de",
+      "architecture": "thumb2",
+      "instructions": [
+        {
+          "address": "0x74c4",
+          "length": 2,
+          "text": "ldr     r0, [pc, #0x18]"
+        },
+        {
+          "address": "0x74c6",
+          "length": 2,
+          "text": "ldrb    r0, [r0]"
+        },
+        {
+          "address": "0x74c8",
+          "length": 2,
+          "text": "cmp     r0, #0"
+        },
+        {
+          "address": "0x74ca",
+          "length": 2,
+          "text": "beq     #0x74d8"
+        },
+        {
+          "address": "0x74cc",
+          "length": 2,
+          "text": "ldr     r0, [pc, #0x14]"
+        },
+        {
+          "address": "0x74ce",
+          "length": 2,
+          "text": "ldrb    r0, [r0]"
+        },
+        {
+          "address": "0x74d0",
+          "length": 2,
+          "text": "cmp     r0, #0"
+        },
+        {
+          "address": "0x74d2",
+          "length": 2,
+          "text": "beq     #0x74d8"
+        },
+        {
+          "address": "0x74d4",
+          "length": 2,
+          "text": "movs    r0, #1"
+        },
+        {
+          "address": "0x74d6",
+          "length": 2,
+          "text": "b       #0x74da"
+        },
+        {
+          "address": "0x74d8",
+          "length": 2,
+          "text": "movs    r0, #0"
+        },
+        {
+          "address": "0x74da",
+          "length": 2,
+          "text": "add     sp, #0"
+        },
+        {
+          "address": "0x74dc",
+          "length": 2,
+          "text": "bx      lr"
+        }
+      ]
+    },
+    {
+      "start": "0xb114",
+      "end": "0xb122",
+      "architecture": "thumb2",
+      "instructions": [
+        {
+          "address": "0xb114",
+          "length": 2,
+          "text": "movs    r0, #0x97"
+        },
+        {
+          "address": "0xb116",
+          "length": 2,
+          "text": "mvns    r0, r0"
+        },
+        {
+          "address": "0xb118",
+          "length": 2,
+          "text": "ldr     r0, [r0]"
+        },
+        {
+          "address": "0xb11a",
+          "length": 2,
+          "text": "lsls    r1, r0, #0x1f"
+        },
+        {
+          "address": "0xb11c",
+          "length": 2,
+          "text": "bpl     #0xb114"
+        },
+        {
+          "address": "0xb11e",
+          "length": 2,
+          "text": "add     sp, #0"
+        },
+        {
+          "address": "0xb120",
+          "length": 2,
+          "text": "bx      lr"
+        }
+      ]
+    }
+  ]
+}
