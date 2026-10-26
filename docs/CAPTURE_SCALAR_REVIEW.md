@@ -76,11 +76,16 @@ telemetry word; this copy is not proof of the value ultimately transmitted.
 
 Finally, if word `0x2005EC` is in the unsigned interval 701..1499 and the
 current scalar is below R2, the helper accesses a signed byte at
-`0x200294 + 20 × stack_byte + another_stack_byte` and adds a percentage of
-the difference. **There is no local bounds check on those two byte indices.**
-The image's initialized bytes at this address contain a table, but reachable
-index bounds and any later writers must be established from upstream flow
-before treating an out-of-range access or signed-cell arithmetic as a defect.
+`0x200294 + 20 × row + column` and adds a percentage of the difference.
+**There is no local bounds check inside this helper.** The
+[direct-caller bound audit](../audit/data/capture_table_bounds.json) now traces
+both indices through `0x50F0`: row is 0..19 from word `0x2005F0`, and column
+is 0..19 from capture word `0x2005EC`. Their maximum offset is 399, the last
+byte of the 20×20 initialized table. Thus this direct call does not support
+an out-of-table claim for intact caller state. Alternate or indirect callers,
+stack corruption, and later table writers remain separate questions.
+The table's 400 initial bytes are all 0..100, so the signed load is initially
+nonnegative; later RAM mutation has not been excluded.
 The terminal comparison caps values at 4,095 when they are not less than
 4,096 under a signed comparison; its return is R0. Full overflow and live
 range analysis remains open.
