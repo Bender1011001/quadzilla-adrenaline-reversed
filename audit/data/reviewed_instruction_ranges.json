@@ -340,6 +340,19 @@
       "decoder_artifact": "audit/data/backdown_stretch_binaryninja.json"
     },
     {
+      "start": "0x4d38",
+      "end": "0x5016",
+      "entry": "0x4d38",
+      "isa": "thumb",
+      "account": "Scalar helper body with source-bound direct flow and literal references; two paths select values from five working knots, conditionally mix signed table and capture state, then return scalar arithmetic; full live writer reachability remains open",
+      "evidence": [
+        "audit/data/scalar_telemetry_binaryninja.json",
+        "audit/data/scalar_telemetry_structure.json",
+        "docs/SCALAR_TELEMETRY_REVIEW.md"
+      ],
+      "decoder_artifact": "audit/data/scalar_telemetry_binaryninja.json"
+    },
+    {
       "start": "0x506c",
       "end": "0x50dc",
       "entry": "0x506c",
