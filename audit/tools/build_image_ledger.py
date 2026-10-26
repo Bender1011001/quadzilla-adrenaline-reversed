@@ -22,6 +22,8 @@ LAYOUT = (
     (0x4A88, 0x4A94, "backdown_literal_pool"),
     (0x4B26, 0x4B28, "stretch_alignment_nop"),
     (0x4B28, 0x4B38, "stretch_literal_pool"),
+    (0x5016, 0x5018, "scalar_helper_alignment_nop"),
+    (0x5018, 0x506C, "scalar_helper_literal_pool"),
     (0x53C4, 0x5414, "main_control_literal_pool_1"),
     (0x5612, 0x5614, "main_control_alignment_nop"),
     (0x5614, 0x56FC, "main_control_literal_pool_2"),

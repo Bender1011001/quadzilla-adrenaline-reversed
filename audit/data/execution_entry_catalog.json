@@ -3080,10 +3080,12 @@
       "semantics": [
         {
           "entry": "0x4d38",
-          "label": "Percentage/scalar arithmetic feeding the 0x200604 telemetry path",
-          "assurance": "static_instruction_trace",
+          "label": "Five-knot scalar arithmetic with signed table and capture-state paths, feeding 0x200604 telemetry",
+          "assurance": "cross_decoder_control_flow_and_literal_reconciliation",
           "evidence": [
-            "quadzilla_mcu_map.json:functions.sub_4D38"
+            "audit/data/scalar_telemetry_binaryninja.json",
+            "audit/data/scalar_telemetry_structure.json",
+            "docs/SCALAR_TELEMETRY_REVIEW.md"
           ]
         }
       ],
@@ -17912,7 +17914,7 @@
     },
     "labels": {
       "path": "audit/data/semantic_labels.json",
-      "sha256": "078424d8cb9a54c9a62a3934857f12a5d936b8efc5ea3d7bf6203ba54deaeffd"
+      "sha256": "e5f96abb64254c02c90acbbbac4dfa8ea66a133d5a45a8c70c07099fdf8bb212"
     }
   },
   "input_hash_policy": "SHA-256 of JSON text with CRLF normalized to LF"
