@@ -40,7 +40,9 @@ the configured halfword at `0x200794`. If that halfword is greater than or
 equal to `word[0x2008A8]`, it returns 0 without the later stores. If less,
 it returns 2, copies the word to `0x200734`, stores `0x5B8D80` at
 `0x20072C`, clears `0x200715`, and sets `0x200713`. The emulation includes
-below, equal, and above comparisons. The names of the two time-like words
+below, equal, and above comparisons. The
+[ADC pipeline review](ADC_PIPELINE_REVIEW.md) identifies `0x2008A8` as
+the gated 32-sample average of a channel-4 table value. The names of the two time-like words
 and exact elapsed-time semantics remain unresolved; `0x5B8D80` is the
 literal six million, not a measured duration.
 

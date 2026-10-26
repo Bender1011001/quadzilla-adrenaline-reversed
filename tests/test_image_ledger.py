@@ -14,7 +14,7 @@ spec.loader.exec_module(ledger)
 class ImageLedger(unittest.TestCase):
     def test_review_manifest_rejects_false_coverage(self):
         doc = json.loads((ROOT / "audit/data/reviewed_instruction_ranges.json").read_text())
-        self.assertEqual(sum(b-a for a, b, *_ in ledger.validate_instruction_reviews(doc)), 14346)
+        self.assertEqual(sum(b-a for a, b, *_ in ledger.validate_instruction_reviews(doc)), 14694)
         for change in ("hash", "overlap", "layout", "odd", "account"):
             malformed = copy.deepcopy(doc)
             if change == "hash":
@@ -48,7 +48,7 @@ class ImageLedger(unittest.TestCase):
                 cursor += instruction["length"]
             self.assertEqual(cursor, end)
         accepted = [r for r in doc["ranges"] if r["classification"] in ("reviewed_thumb_instructions", "reviewed_arm_instructions")]
-        self.assertEqual(sum(int(r["end"], 0)-int(r["start"], 0) for r in accepted), 14346)
+        self.assertEqual(sum(int(r["end"], 0)-int(r["start"], 0) for r in accepted), 14694)
         for r in accepted:
             self.assertTrue(any(entry == r["review_entry"] and
                                 start <= int(r["start"], 0) < int(r["end"], 0) <= end
@@ -106,6 +106,26 @@ class ImageLedger(unittest.TestCase):
                   if row["address"] in ("0x200be8", "0x200be9")]
         self.assertEqual(stores, [("0x5f96", "0x200be8", "0x73"),
                                   ("0x5f9c", "0x200be8", "0x7a")])
+
+    def test_adc_pipeline_tables_and_channel4_producer(self):
+        layout = json.loads((ROOT / "audit/data/adc_table_layout.json").read_text())
+        run = json.loads((ROOT / "audit/data/adc_pipeline_emulation.json").read_text())
+        ledger_doc = json.loads((ROOT / "audit/data/image_coverage_ledger.json").read_text())
+        self.assertEqual([(row["start"], row["end"], row["element_count"])
+                          for row in layout["tables"]],
+                         [("0xa030", "0xa0b0", 128), ("0xa0b0", "0xa320", 312),
+                          ("0xa320", "0xa3a0", 128), ("0xa3a0", "0xa91c", 702)])
+        self.assertEqual(sum(row["bytes"] for row in layout["tables"]), 2284)
+        self.assertEqual(len(run["visited_starts"]), 166)
+        cases = {row["label"]: row for row in run["cases"]}
+        self.assertEqual(cases["all_zero"]["outputs"]["4"]["output"], 17)
+        self.assertEqual(cases["all_max"]["outputs"]["4"]["output"], 73)
+        self.assertEqual(cases["all_max"]["page_after"], 1)
+        self.assertEqual(cases["channel4_only"]["status_after"], "0xe8")
+        classes = ledger_doc["classification_bytes"]
+        self.assertEqual(sum(classes[name] for name in (
+            "adc_channel6_byte_lut", "adc_channel7_signed_halfword_lut",
+            "adc_channel5_two_page_lut", "adc_channel4_signed_halfword_lut")), 2284)
 
     def test_outgoing_state_evidence_and_count_write_order(self):
         decoded = json.loads((ROOT / "audit/data/outgoing_state_binaryninja.json").read_text())

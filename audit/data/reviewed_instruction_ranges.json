@@ -4,6 +4,89 @@
   "limitation": "Explicit reviewed instruction ranges only; semantic role labels alone do not classify byte ranges",
   "ranges": [
     {
+      "start": "0x41f0",
+      "end": "0x4214",
+      "entry": "0x41f0",
+      "isa": "thumb",
+      "account": "Complete 32-word shift-and-average helper, visited in controlled ADC pipeline cases",
+      "evidence": [
+        "audit/data/adc_pipeline_binaryninja.json",
+        "audit/data/adc_pipeline_emulation.json",
+        "docs/ADC_PIPELINE_REVIEW.md"
+      ],
+      "decoder_artifact": "audit/data/adc_pipeline_binaryninja.json"
+    },
+    {
+      "start": "0x4214",
+      "end": "0x4302",
+      "entry": "0x4214",
+      "isa": "thumb",
+      "account": "Complete ADC 3-7 poll, transform and restart coordinator; all 111 decoded starts visited under synthetic MMIO",
+      "evidence": [
+        "audit/data/adc_pipeline_binaryninja.json",
+        "audit/data/adc_pipeline_emulation.json",
+        "audit/data/adc_table_layout.json",
+        "docs/ADC_PIPELINE_REVIEW.md"
+      ],
+      "decoder_artifact": "audit/data/adc_pipeline_binaryninja.json"
+    },
+    {
+      "start": "0x7364",
+      "end": "0x737c",
+      "entry": "0x7364",
+      "isa": "thumb",
+      "account": "Complete ADC channel-7 LUT helper, both indexed and clamped paths visited",
+      "evidence": [
+        "audit/data/adc_pipeline_binaryninja.json",
+        "audit/data/adc_pipeline_emulation.json",
+        "audit/data/adc_table_layout.json",
+        "docs/ADC_PIPELINE_REVIEW.md"
+      ],
+      "decoder_artifact": "audit/data/adc_pipeline_binaryninja.json"
+    },
+    {
+      "start": "0x7380",
+      "end": "0x7390",
+      "entry": "0x7380",
+      "isa": "thumb",
+      "account": "Complete ADC channel-5 two-page LUT helper, both page values visited",
+      "evidence": [
+        "audit/data/adc_pipeline_binaryninja.json",
+        "audit/data/adc_pipeline_emulation.json",
+        "audit/data/adc_table_layout.json",
+        "docs/ADC_PIPELINE_REVIEW.md"
+      ],
+      "decoder_artifact": "audit/data/adc_pipeline_binaryninja.json"
+    },
+    {
+      "start": "0x7398",
+      "end": "0x73b0",
+      "entry": "0x7398",
+      "isa": "thumb",
+      "account": "Complete ADC channel-4 LUT helper, direct and saturated index paths visited",
+      "evidence": [
+        "audit/data/adc_pipeline_binaryninja.json",
+        "audit/data/adc_pipeline_emulation.json",
+        "audit/data/adc_table_layout.json",
+        "docs/ADC_PIPELINE_REVIEW.md"
+      ],
+      "decoder_artifact": "audit/data/adc_pipeline_binaryninja.json"
+    },
+    {
+      "start": "0x73bc",
+      "end": "0x73c6",
+      "entry": "0x73bc",
+      "isa": "thumb",
+      "account": "Complete ADC channel-6 byte LUT helper across first and last 10-bit indexes",
+      "evidence": [
+        "audit/data/adc_pipeline_binaryninja.json",
+        "audit/data/adc_pipeline_emulation.json",
+        "audit/data/adc_table_layout.json",
+        "docs/ADC_PIPELINE_REVIEW.md"
+      ],
+      "decoder_artifact": "audit/data/adc_pipeline_binaryninja.json"
+    },
+    {
       "start": "0x4384",
       "end": "0x4596",
       "entry": "0x4384",

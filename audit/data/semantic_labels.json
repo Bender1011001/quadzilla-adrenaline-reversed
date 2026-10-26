@@ -3,6 +3,27 @@
   "raw_sha256": "1ae519ba6194e8f7bdaaa94333a83a9e6fda3b0563f87f7d48383b37288c1780",
   "labels": [
     {
+      "entry": "0x41f0",
+      "label": "32-word ADC sample shift, wraparound sum and logical divide by 32",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/adc_pipeline_binaryninja.json",
+        "audit/data/adc_pipeline_emulation.json",
+        "docs/ADC_PIPELINE_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x4214",
+      "label": "ADC channels 3-7 polling, lookup conversion and gated rolling-average coordinator",
+      "assurance": "static_instruction_trace_and_synthetic_mmio_emulation",
+      "evidence": [
+        "audit/data/adc_pipeline_binaryninja.json",
+        "audit/data/adc_pipeline_emulation.json",
+        "audit/data/adc_table_layout.json",
+        "docs/ADC_PIPELINE_REVIEW.md"
+      ]
+    },
+    {
       "entry": "0x4384",
       "label": "Default working/echo initializer and derived scalar setup",
       "assurance": "static_instruction_trace_and_bounded_emulation",
@@ -638,6 +659,50 @@
         "audit/data/ida_image_items.json:items.0x725c",
         "audit/data/uart_buffer_binaryninja.json",
         "docs/USART0_BUFFER_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x7364",
+      "label": "ADC channel-7 signed-halfword table transform with upper clamp",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/adc_pipeline_binaryninja.json",
+        "audit/data/adc_pipeline_emulation.json",
+        "audit/data/adc_table_layout.json",
+        "docs/ADC_PIPELINE_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x7380",
+      "label": "ADC channel-5 two-page signed-byte table transform",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/adc_pipeline_binaryninja.json",
+        "audit/data/adc_pipeline_emulation.json",
+        "audit/data/adc_table_layout.json",
+        "docs/ADC_PIPELINE_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x7398",
+      "label": "ADC channel-4 signed-halfword table transform plus working offset",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/adc_pipeline_binaryninja.json",
+        "audit/data/adc_pipeline_emulation.json",
+        "audit/data/adc_table_layout.json",
+        "docs/ADC_PIPELINE_REVIEW.md"
+      ]
+    },
+    {
+      "entry": "0x73bc",
+      "label": "ADC channel-6 byte-table transform",
+      "assurance": "static_instruction_trace_and_bounded_emulation",
+      "evidence": [
+        "audit/data/adc_pipeline_binaryninja.json",
+        "audit/data/adc_pipeline_emulation.json",
+        "audit/data/adc_table_layout.json",
+        "docs/ADC_PIPELINE_REVIEW.md"
       ]
     },
     {
