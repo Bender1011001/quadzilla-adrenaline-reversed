@@ -85,9 +85,10 @@
       "evidence": [
         "audit/data/ida_image_items.json:items.0x7af8",
         "audit/data/uart_buffer_binaryninja.json",
-        "docs/USART0_BUFFER_REVIEW.md"
+        "docs/USART0_BUFFER_REVIEW.md",
+        "audit/data/residual_code_adjudication.json"
       ],
-      "confidence": "static instruction trace; no hardware execution",
+      "confidence": "static trace and bounded original-byte execution; no hardware execution",
       "limits": [
         "DMA promotion and concurrent interrupts are not modeled",
         "Physical transport endpoint and measured clock are unverified"
@@ -102,9 +103,10 @@
       "evidence": [
         "audit/data/ida_image_items.json:items.0x7b04",
         "audit/data/uart_buffer_binaryninja.json",
-        "docs/USART0_BUFFER_REVIEW.md"
+        "docs/USART0_BUFFER_REVIEW.md",
+        "audit/data/residual_code_adjudication.json"
       ],
-      "confidence": "static instruction trace; no hardware execution",
+      "confidence": "static trace and bounded original-byte execution; no hardware execution",
       "limits": [
         "DMA promotion and concurrent interrupts are not modeled",
         "Physical transport endpoint and measured clock are unverified"
@@ -119,9 +121,10 @@
       "evidence": [
         "audit/data/ida_image_items.json:items.0x7b10",
         "audit/data/uart_buffer_binaryninja.json",
-        "docs/USART0_BUFFER_REVIEW.md"
+        "docs/USART0_BUFFER_REVIEW.md",
+        "audit/data/residual_code_adjudication.json"
       ],
-      "confidence": "static instruction trace; no hardware execution",
+      "confidence": "static trace and bounded original-byte execution; no hardware execution",
       "limits": [
         "DMA promotion and concurrent interrupts are not modeled",
         "Physical transport endpoint and measured clock are unverified"
@@ -136,9 +139,10 @@
       "evidence": [
         "audit/data/ida_image_items.json:items.0x7b1c",
         "audit/data/uart_buffer_binaryninja.json",
-        "docs/USART0_BUFFER_REVIEW.md"
+        "docs/USART0_BUFFER_REVIEW.md",
+        "audit/data/residual_code_adjudication.json"
       ],
-      "confidence": "static instruction trace; no hardware execution",
+      "confidence": "static trace and bounded original-byte execution; no hardware execution",
       "limits": [
         "DMA promotion and concurrent interrupts are not modeled",
         "Physical transport endpoint and measured clock are unverified"
@@ -153,9 +157,10 @@
       "evidence": [
         "audit/data/ida_image_items.json:items.0x7b28",
         "audit/data/uart_buffer_binaryninja.json",
-        "docs/USART0_BUFFER_REVIEW.md"
+        "docs/USART0_BUFFER_REVIEW.md",
+        "audit/data/residual_code_adjudication.json"
       ],
-      "confidence": "static instruction trace; no hardware execution",
+      "confidence": "static trace and bounded original-byte execution; no hardware execution",
       "limits": [
         "DMA promotion and concurrent interrupts are not modeled",
         "Physical transport endpoint and measured clock are unverified"
@@ -170,9 +175,10 @@
       "evidence": [
         "audit/data/ida_image_items.json:items.0x7b30",
         "audit/data/uart_buffer_binaryninja.json",
-        "docs/USART0_BUFFER_REVIEW.md"
+        "docs/USART0_BUFFER_REVIEW.md",
+        "audit/data/residual_code_adjudication.json"
       ],
-      "confidence": "static instruction trace; no hardware execution",
+      "confidence": "static trace and bounded original-byte execution; no hardware execution",
       "limits": [
         "DMA promotion and concurrent interrupts are not modeled",
         "Physical transport endpoint and measured clock are unverified"
@@ -187,9 +193,10 @@
       "evidence": [
         "audit/data/ida_image_items.json:items.0x7b38",
         "audit/data/uart_buffer_binaryninja.json",
-        "docs/USART0_BUFFER_REVIEW.md"
+        "docs/USART0_BUFFER_REVIEW.md",
+        "audit/data/residual_code_adjudication.json"
       ],
-      "confidence": "static instruction trace; no hardware execution",
+      "confidence": "static trace and bounded original-byte execution; no hardware execution",
       "limits": [
         "DMA promotion and concurrent interrupts are not modeled",
         "Physical transport endpoint and measured clock are unverified"
@@ -204,9 +211,10 @@
       "evidence": [
         "audit/data/ida_image_items.json:items.0x7b4c",
         "audit/data/uart_buffer_binaryninja.json",
-        "docs/USART0_BUFFER_REVIEW.md"
+        "docs/USART0_BUFFER_REVIEW.md",
+        "audit/data/residual_code_adjudication.json"
       ],
-      "confidence": "static instruction trace; no hardware execution",
+      "confidence": "static trace and bounded original-byte execution; no hardware execution",
       "limits": [
         "DMA promotion and concurrent interrupts are not modeled",
         "Physical transport endpoint and measured clock are unverified"

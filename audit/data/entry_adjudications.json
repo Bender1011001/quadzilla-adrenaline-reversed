@@ -5,7 +5,7 @@
   "additional_supported_entries": 12,
   "combined_supported_starts": 157,
   "count_rule": "ROM/template source starts; runtime aliases are not counted twice",
-  "baseline_lf_text_sha256": "0aa9e5f115a69857bed1a45320c706ba09d99ca0f72b325564d40a27bc7cc357",
+  "baseline_lf_text_sha256": "dec0edf58327985001a6b9580eee78db8035984716abb6b30e158aa97be66181",
   "evidence": [
     "audit/data/ida_image_items.json",
     "audit/data/startup_persistence_binaryninja.json",
@@ -75,6 +75,9 @@
       ],
       "limits": [
         "electrical reset behavior not measured"
+      ],
+      "evidence": [
+        "audit/data/residual_code_adjudication.json"
       ]
     },
     {

@@ -14,7 +14,7 @@ spec.loader.exec_module(ledger)
 class ImageLedger(unittest.TestCase):
     def test_review_manifest_rejects_false_coverage(self):
         doc = json.loads((ROOT / "audit/data/reviewed_instruction_ranges.json").read_text())
-        self.assertEqual(sum(b-a for a, b, *_ in ledger.validate_instruction_reviews(doc)), 18648)
+        self.assertEqual(sum(b-a for a, b, *_ in ledger.validate_instruction_reviews(doc)), 19000)
         for change in ("hash", "overlap", "layout", "odd", "account"):
             malformed = copy.deepcopy(doc)
             if change == "hash":
@@ -49,7 +49,7 @@ class ImageLedger(unittest.TestCase):
                 cursor += instruction["length"]
             self.assertEqual(cursor, end)
         accepted = [r for r in doc["ranges"] if r["classification"] in ("reviewed_thumb_instructions", "reviewed_arm_instructions")]
-        self.assertEqual(sum(int(r["end"], 0)-int(r["start"], 0) for r in accepted), 18648)
+        self.assertEqual(sum(int(r["end"], 0)-int(r["start"], 0) for r in accepted), 19000)
         for r in accepted:
             self.assertTrue(any(entry == r["review_entry"] and
                                 start <= int(r["start"], 0) < int(r["end"], 0) <= end
@@ -68,7 +68,8 @@ class ImageLedger(unittest.TestCase):
         ledger.validate_item_coverage(doc["ranges"])
         self.assertEqual(sum(doc["classification_bytes"].values()), 32000)
         self.assertIn("incomplete", doc["completion"])
-        self.assertGreater(doc["classification_bytes"]["ida_code_pending_review"], 0)
+        self.assertEqual(doc["classification_bytes"].get("ida_code_pending_review", 0), 0)
+        self.assertGreater(doc["classification_bytes"]["ida_data_pending_review"], 0)
         self.assertGreater(len(doc["ida_layout_conflicts"]), 0)
 
     def test_main_loop_count_writer_claim_is_bounded_to_direct_stores(self):

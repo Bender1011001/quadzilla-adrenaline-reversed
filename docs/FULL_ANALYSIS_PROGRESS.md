@@ -14,9 +14,10 @@ now stands at 145 roles with no unlabeled baseline entries after the
 [final baseline-entry review](FINAL_BASELINE_ENTRIES_REVIEW.md). The
 new entries and aliases are recorded separately in
 `audit/data/entry_adjudications.json`. Neither inventory is claimed exhaustive.
-The empty baseline semantic queue does not close the full analysis: 527 IDA
-code-candidate bytes and 1,842 data-candidate bytes still need adjudication,
-and additional entry discovery and complete downstream path review remain open.
+The empty baseline semantic queue does not close the full analysis. The
+[residual code audit](RESIDUAL_CODE_ADJUDICATION.md) adjudicates the remaining
+IDA code candidates, but 1,802 data-candidate bytes still need review, and
+additional entry discovery and complete downstream path review remain open.
 
 ## Full-image baseline
 
@@ -30,10 +31,16 @@ address without hiding pending review:
 
 | Classification | Bytes |
 |---|---:|
-| IDA code candidates awaiting review | 527 |
-| Explicitly reviewed Thumb instruction ranges | 14,232 |
-| Explicitly reviewed ARM instruction ranges | 4,416 |
-| IDA data candidates awaiting review | 1,842 |
+| IDA code candidates awaiting review | 0 |
+| Explicitly reviewed Thumb instruction ranges | 14,320 |
+| Explicitly reviewed ARM instruction ranges | 4,680 |
+| IDA data candidates awaiting review | 1,802 |
+| Residual function NOP/FF alignment | 76 |
+| Integer interworking NOPs | 6 |
+| Reset-request literal words | 8 |
+| USART wrapper/flag literal words | 20 |
+| Ratio scorer rows and coefficients | 104 |
+| SPI/ADC zero alignment | 1 |
 | Startup literal pools and alignment | 86 |
 | Callback and predicate alignment/literals | 12 |
 | Input gate literals/alignment | 38 |
@@ -60,12 +67,12 @@ address without hiding pending review:
 | Erased trailing `FF` | 2,888 |
 
 Coverage of an address is not proof that its meaning or ISA has been reviewed.
-The explicit instruction-range manifest now accepts 18,648 bytes through the
-[USART/PDC execution review](USART0_BUFFER_REVIEW.md). It excludes adjacent literal
+The explicit instruction-range manifest now accepts 19,000 bytes through the
+[residual code audit](RESIDUAL_CODE_ADJUDICATION.md). It excludes adjacent literal
 pools and alignment. Earlier semantic labels are not automatically promoted to
 byte-level classification; their exact ranges still need to be adjudicated.
-The ledger explicitly preserves 3,283 item/layout conflicts. These are tool item
-spans, not 3,283 bugs or distinct functions. Many arise because initialized data
+The ledger explicitly preserves 3,376 item/layout conflicts. These are tool item
+spans, not 3,376 bugs or distinct functions. Many arise because initialized data
 or erased space was interpreted as instructions.
 
 ## New finding: startup relocates executable helpers into SRAM

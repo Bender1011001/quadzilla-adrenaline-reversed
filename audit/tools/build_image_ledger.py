@@ -71,6 +71,27 @@ LAYOUT = (
     (0xB1B8, END, "erased_tail_ff"),
 )
 
+# Source-checked residual alignments follow unconditional transfers; the three
+# interworking NOPs are skipped by BX PC. See residual_code_adjudication.json.
+LAYOUT += tuple((a, a+2, "reviewed_function_alignment_nop") for a in (
+    0x4302,0x435E,0x4596,0x46C2,0x4942,0x570E,0x5736,0x5756,
+    0x5CBA,0x5DEA,0x5EF2,0x5F2E,0x6702,0x6B1A,0x6BD2,0x6C5E,
+    0x6C82,0x6F56,0x70CA,0x7132,0x7172,0x73C6,0x742E,0x7486,
+    0x7A3E,0x7B0A,0x7B16,0x7C52,0x7C9E,0x84FE))
+LAYOUT += tuple((a, a+2, "reviewed_function_alignment_ff") for a in (
+    0x6B46,0x74C2,0x7B02,0x7BE6,0x7BEE,0x7FD6,0x852E,0x8562))
+LAYOUT += tuple((a, a+2, "integer_interworking_alignment_nop") for a in (0x8566,0x8576,0x8586))
+LAYOUT += (
+    (0x743C,0x7444,"reset_request_literals"),
+    (0x7B0C,0x7B10,"uart_wrapper_literals"),
+    (0x7B18,0x7B1C,"uart_wrapper_literals"),
+    (0x7B44,0x7B4C,"uart_wrapper_literals"),
+    (0x7B58,0x7B5C,"uart_wrapper_literals"),
+    (0x9F88,0x9FDC,"ratio_score_row_table"),
+    (0x9FDC,0x9FF0,"ratio_score_coefficients"),
+    (0xA02F,0xA030,"spi_adc_zero_alignment"),
+)
+
 
 def validate_item_coverage(rows, base=BASE, end=END):
     cursor = base
