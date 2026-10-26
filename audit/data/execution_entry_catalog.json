@@ -4,8 +4,8 @@
   "unit": "execution_entries_including_vectors_thunks_and_alternate_entries",
   "summary": {
     "confirmed_entries": 145,
-    "documented_static_roles": 127,
-    "unlabeled_static_entries": 18,
+    "documented_static_roles": 133,
+    "unlabeled_static_entries": 12,
     "entries_with_ida_sram_references": 49,
     "entries_with_ida_peripheral_references": 21,
     "union_direct_call_edges": 180
@@ -549,8 +549,18 @@
           ]
         }
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x4330",
+          "label": "ADC clock/channel configuration and initial conversion start",
+          "assurance": "cross_decoder_static_instruction_trace",
+          "evidence": [
+            "audit/data/adc_init_vector_binaryninja.json",
+            "docs/ADC_INIT_VECTOR_REVIEW.md"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [],
         "incoming": [
@@ -8519,8 +8529,19 @@
           ]
         }
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x6b20",
+          "label": "Interrupt-masked SRAM flash page-write wrapper",
+          "assurance": "cross_decoder_static_instruction_trace",
+          "evidence": [
+            "audit/data/adc_init_vector_binaryninja.json",
+            "docs/ADC_INIT_VECTOR_REVIEW.md",
+            "docs/STARTUP_PERSISTENCE_REVIEW.md"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [
           "0x7498",
@@ -11994,8 +12015,18 @@
           ]
         }
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x73cc",
+          "label": "Return startup literal 0x0010FD00",
+          "assurance": "cross_decoder_static_instruction_trace",
+          "evidence": [
+            "audit/data/adc_init_vector_binaryninja.json",
+            "docs/ADC_INIT_VECTOR_REVIEW.md"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [],
         "incoming": [
@@ -12040,8 +12071,18 @@
           ]
         }
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x73d4",
+          "label": "Return startup literal 0x0133EF42",
+          "assurance": "cross_decoder_static_instruction_trace",
+          "evidence": [
+            "audit/data/adc_init_vector_binaryninja.json",
+            "docs/ADC_INIT_VECTOR_REVIEW.md"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [],
         "incoming": [
@@ -12086,8 +12127,18 @@
           ]
         }
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x73dc",
+          "label": "Return startup literal 0x0010FE00",
+          "assurance": "cross_decoder_static_instruction_trace",
+          "evidence": [
+            "audit/data/adc_init_vector_binaryninja.json",
+            "docs/ADC_INIT_VECTOR_REVIEW.md"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [],
         "incoming": [
@@ -12132,8 +12183,19 @@
           ]
         }
       },
-      "semantics": [],
-      "semantic_status": "unlabeled_static_entry",
+      "semantics": [
+        {
+          "entry": "0x73e4",
+          "label": "Conditional vector-page copy and page-write request",
+          "assurance": "cross_decoder_static_instruction_trace",
+          "evidence": [
+            "audit/data/adc_init_vector_binaryninja.json",
+            "docs/ADC_INIT_VECTOR_REVIEW.md",
+            "docs/STARTUP_PERSISTENCE_REVIEW.md"
+          ]
+        }
+      ],
+      "semantic_status": "documented_static_role",
       "calls": {
         "outgoing": [
           "0x6b20"
@@ -17704,7 +17766,7 @@
     },
     "labels": {
       "path": "audit/data/semantic_labels.json",
-      "sha256": "49538dc3f6110afa1b5f5ad5cbb3d3d6ad841e6c70807f31650801a3dc47380c"
+      "sha256": "a19bdfba4dbe6d046a77cfbce5079cb2e13e91a48898280f750c3c8c7b0fbdd9"
     }
   },
   "input_hash_policy": "SHA-256 of JSON text with CRLF normalized to LF"

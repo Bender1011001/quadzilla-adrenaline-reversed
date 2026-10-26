@@ -31,60 +31,16 @@
       "decoder_artifact": "audit/data/adc_pipeline_binaryninja.json"
     },
     {
-      "start": "0x7364",
-      "end": "0x737c",
-      "entry": "0x7364",
+      "start": "0x4330",
+      "end": "0x435e",
+      "entry": "0x4330",
       "isa": "thumb",
-      "account": "Complete ADC channel-7 LUT helper, both indexed and clamped paths visited",
+      "account": "Complete ADC initializer, including register writes and SRAM flags; explicit Thumb decode and IDA literals",
       "evidence": [
-        "audit/data/adc_pipeline_binaryninja.json",
-        "audit/data/adc_pipeline_emulation.json",
-        "audit/data/adc_table_layout.json",
-        "docs/ADC_PIPELINE_REVIEW.md"
+        "audit/data/adc_init_vector_binaryninja.json",
+        "docs/ADC_INIT_VECTOR_REVIEW.md"
       ],
-      "decoder_artifact": "audit/data/adc_pipeline_binaryninja.json"
-    },
-    {
-      "start": "0x7380",
-      "end": "0x7390",
-      "entry": "0x7380",
-      "isa": "thumb",
-      "account": "Complete ADC channel-5 two-page LUT helper, both page values visited",
-      "evidence": [
-        "audit/data/adc_pipeline_binaryninja.json",
-        "audit/data/adc_pipeline_emulation.json",
-        "audit/data/adc_table_layout.json",
-        "docs/ADC_PIPELINE_REVIEW.md"
-      ],
-      "decoder_artifact": "audit/data/adc_pipeline_binaryninja.json"
-    },
-    {
-      "start": "0x7398",
-      "end": "0x73b0",
-      "entry": "0x7398",
-      "isa": "thumb",
-      "account": "Complete ADC channel-4 LUT helper, direct and saturated index paths visited",
-      "evidence": [
-        "audit/data/adc_pipeline_binaryninja.json",
-        "audit/data/adc_pipeline_emulation.json",
-        "audit/data/adc_table_layout.json",
-        "docs/ADC_PIPELINE_REVIEW.md"
-      ],
-      "decoder_artifact": "audit/data/adc_pipeline_binaryninja.json"
-    },
-    {
-      "start": "0x73bc",
-      "end": "0x73c6",
-      "entry": "0x73bc",
-      "isa": "thumb",
-      "account": "Complete ADC channel-6 byte LUT helper across first and last 10-bit indexes",
-      "evidence": [
-        "audit/data/adc_pipeline_binaryninja.json",
-        "audit/data/adc_pipeline_emulation.json",
-        "audit/data/adc_table_layout.json",
-        "docs/ADC_PIPELINE_REVIEW.md"
-      ],
-      "decoder_artifact": "audit/data/adc_pipeline_binaryninja.json"
+      "decoder_artifact": "audit/data/adc_init_vector_binaryninja.json"
     },
     {
       "start": "0x4384",
@@ -412,6 +368,32 @@
       ]
     },
     {
+      "start": "0x5f14",
+      "end": "0x5f2e",
+      "entry": "0x5f14",
+      "isa": "thumb",
+      "account": "Complete conditional configuration-restore wrapper; stops before mirror callee in bounded run and statically traces the returning epilogue",
+      "evidence": [
+        "audit/data/config_restore_binaryninja.json",
+        "audit/data/config_restore_emulation.json",
+        "docs/INITIAL_STATE_CONFIG_REVIEW.md"
+      ],
+      "decoder_artifact": "audit/data/config_restore_binaryninja.json"
+    },
+    {
+      "start": "0x5f34",
+      "end": "0x5fec",
+      "entry": "0x5f34",
+      "isa": "thumb",
+      "account": "Complete response mirror; all 92 starts visited with ordered AID 151 byte overwrite and original table-2 reader observation",
+      "evidence": [
+        "audit/data/config_restore_binaryninja.json",
+        "audit/data/config_response_mirror_emulation.json",
+        "docs/INITIAL_STATE_CONFIG_REVIEW.md"
+      ],
+      "decoder_artifact": "audit/data/config_restore_binaryninja.json"
+    },
+    {
       "start": "0x601c",
       "end": "0x6042",
       "entry": "0x601c",
@@ -590,6 +572,19 @@
         "audit/data/soft_float_emulation.json",
         "docs/SOFT_FLOAT_REVIEW.md"
       ]
+    },
+    {
+      "start": "0x6b20",
+      "end": "0x6b44",
+      "entry": "0x6b20",
+      "isa": "thumb",
+      "account": "Complete interrupt-masked page-write wrapper; SRAM callees reviewed separately",
+      "evidence": [
+        "audit/data/adc_init_vector_binaryninja.json",
+        "docs/ADC_INIT_VECTOR_REVIEW.md",
+        "docs/STARTUP_PERSISTENCE_REVIEW.md"
+      ],
+      "decoder_artifact": "audit/data/adc_init_vector_binaryninja.json"
     },
     {
       "start": "0x6b44",
@@ -848,6 +843,111 @@
       ]
     },
     {
+      "start": "0x7364",
+      "end": "0x737c",
+      "entry": "0x7364",
+      "isa": "thumb",
+      "account": "Complete ADC channel-7 LUT helper, both indexed and clamped paths visited",
+      "evidence": [
+        "audit/data/adc_pipeline_binaryninja.json",
+        "audit/data/adc_pipeline_emulation.json",
+        "audit/data/adc_table_layout.json",
+        "docs/ADC_PIPELINE_REVIEW.md"
+      ],
+      "decoder_artifact": "audit/data/adc_pipeline_binaryninja.json"
+    },
+    {
+      "start": "0x7380",
+      "end": "0x7390",
+      "entry": "0x7380",
+      "isa": "thumb",
+      "account": "Complete ADC channel-5 two-page LUT helper, both page values visited",
+      "evidence": [
+        "audit/data/adc_pipeline_binaryninja.json",
+        "audit/data/adc_pipeline_emulation.json",
+        "audit/data/adc_table_layout.json",
+        "docs/ADC_PIPELINE_REVIEW.md"
+      ],
+      "decoder_artifact": "audit/data/adc_pipeline_binaryninja.json"
+    },
+    {
+      "start": "0x7398",
+      "end": "0x73b0",
+      "entry": "0x7398",
+      "isa": "thumb",
+      "account": "Complete ADC channel-4 LUT helper, direct and saturated index paths visited",
+      "evidence": [
+        "audit/data/adc_pipeline_binaryninja.json",
+        "audit/data/adc_pipeline_emulation.json",
+        "audit/data/adc_table_layout.json",
+        "docs/ADC_PIPELINE_REVIEW.md"
+      ],
+      "decoder_artifact": "audit/data/adc_pipeline_binaryninja.json"
+    },
+    {
+      "start": "0x73bc",
+      "end": "0x73c6",
+      "entry": "0x73bc",
+      "isa": "thumb",
+      "account": "Complete ADC channel-6 byte LUT helper across first and last 10-bit indexes",
+      "evidence": [
+        "audit/data/adc_pipeline_binaryninja.json",
+        "audit/data/adc_pipeline_emulation.json",
+        "audit/data/adc_table_layout.json",
+        "docs/ADC_PIPELINE_REVIEW.md"
+      ],
+      "decoder_artifact": "audit/data/adc_pipeline_binaryninja.json"
+    },
+    {
+      "start": "0x73cc",
+      "end": "0x73d0",
+      "entry": "0x73cc",
+      "isa": "thumb",
+      "account": "Two-instruction constant-return helper; adjacent literal excluded",
+      "evidence": [
+        "audit/data/adc_init_vector_binaryninja.json",
+        "docs/ADC_INIT_VECTOR_REVIEW.md"
+      ],
+      "decoder_artifact": "audit/data/adc_init_vector_binaryninja.json"
+    },
+    {
+      "start": "0x73d4",
+      "end": "0x73d8",
+      "entry": "0x73d4",
+      "isa": "thumb",
+      "account": "Two-instruction constant-return helper; adjacent literal excluded",
+      "evidence": [
+        "audit/data/adc_init_vector_binaryninja.json",
+        "docs/ADC_INIT_VECTOR_REVIEW.md"
+      ],
+      "decoder_artifact": "audit/data/adc_init_vector_binaryninja.json"
+    },
+    {
+      "start": "0x73dc",
+      "end": "0x73e0",
+      "entry": "0x73dc",
+      "isa": "thumb",
+      "account": "Two-instruction constant-return helper; adjacent literal excluded",
+      "evidence": [
+        "audit/data/adc_init_vector_binaryninja.json",
+        "docs/ADC_INIT_VECTOR_REVIEW.md"
+      ],
+      "decoder_artifact": "audit/data/adc_init_vector_binaryninja.json"
+    },
+    {
+      "start": "0x73e4",
+      "end": "0x742e",
+      "entry": "0x73e4",
+      "isa": "thumb",
+      "account": "Complete conditional vector-page copy and flash-wrapper call; both branch outcomes statically traced",
+      "evidence": [
+        "audit/data/adc_init_vector_binaryninja.json",
+        "docs/ADC_INIT_VECTOR_REVIEW.md",
+        "docs/STARTUP_PERSISTENCE_REVIEW.md"
+      ],
+      "decoder_artifact": "audit/data/adc_init_vector_binaryninja.json"
+    },
+    {
       "start": "0x7448",
       "end": "0x7486",
       "entry": "0x7448",
@@ -898,6 +998,47 @@
         "audit/data/pio_interrupt_emulation.json",
         "docs/PIO_INTERRUPT_REVIEW.md"
       ]
+    },
+    {
+      "start": "0x760c",
+      "end": "0x7698",
+      "entry": "0x760c",
+      "isa": "thumb",
+      "account": "Complete initial-state selector; all 70 starts visited across 12 synthetic pin, mode and threshold cases",
+      "evidence": [
+        "audit/data/initial_state_binaryninja.json",
+        "audit/data/initial_state_emulation.json",
+        "docs/INITIAL_STATE_CONFIG_REVIEW.md"
+      ],
+      "decoder_artifact": "audit/data/initial_state_binaryninja.json"
+    },
+    {
+      "start": "0x76cc",
+      "end": "0x77a6",
+      "entry": "0x76cc",
+      "isa": "thumb",
+      "account": "Full control-cycle orchestration and five-slot queue selector: 98 decoded starts match IDA, 85 continuation starts execute with explicit caller context, 13 upstream-call instructions statically traced",
+      "evidence": [
+        "audit/data/cycle_queue_binaryninja.json",
+        "audit/data/cycle_queue_selection_emulation.json",
+        "audit/data/cycle_queue_sources.json",
+        "docs/CYCLE_QUEUE_SELECTION_REVIEW.md"
+      ],
+      "decoder_artifact": "audit/data/cycle_queue_binaryninja.json"
+    },
+    {
+      "start": "0x77b8",
+      "end": "0x7a3e",
+      "entry": "0x77b8",
+      "isa": "thumb",
+      "account": "Complete bounded nonreturning Thumb body statically traced; 157 of 307 decoded starts visited in synthetic dispatcher continuations; subordinate calls remain separate",
+      "evidence": [
+        "audit/data/main_loop_binaryninja.json",
+        "audit/data/main_loop_count_writers.json",
+        "audit/data/main_loop_dispatch_emulation.json",
+        "docs/MAIN_LOOP_STATE_REVIEW.md"
+      ],
+      "decoder_artifact": "audit/data/main_loop_binaryninja.json"
     },
     {
       "start": "0x7b60",
@@ -1054,34 +1195,6 @@
       "decoder_artifact": "audit/data/frame_reader_binaryninja.json"
     },
     {
-      "start": "0x76cc",
-      "end": "0x77a6",
-      "entry": "0x76cc",
-      "isa": "thumb",
-      "account": "Full control-cycle orchestration and five-slot queue selector: 98 decoded starts match IDA, 85 continuation starts execute with explicit caller context, 13 upstream-call instructions statically traced",
-      "evidence": [
-        "audit/data/cycle_queue_binaryninja.json",
-        "audit/data/cycle_queue_selection_emulation.json",
-        "audit/data/cycle_queue_sources.json",
-        "docs/CYCLE_QUEUE_SELECTION_REVIEW.md"
-      ],
-      "decoder_artifact": "audit/data/cycle_queue_binaryninja.json"
-    },
-    {
-      "start": "0x77b8",
-      "end": "0x7a3e",
-      "entry": "0x77b8",
-      "isa": "thumb",
-      "account": "Complete bounded nonreturning Thumb body statically traced; 157 of 307 decoded starts visited in synthetic dispatcher continuations; subordinate calls remain separate",
-      "evidence": [
-        "audit/data/main_loop_binaryninja.json",
-        "audit/data/main_loop_count_writers.json",
-        "audit/data/main_loop_dispatch_emulation.json",
-        "docs/MAIN_LOOP_STATE_REVIEW.md"
-      ],
-      "decoder_artifact": "audit/data/main_loop_binaryninja.json"
-    },
-    {
       "start": "0x7efc",
       "end": "0x7f28",
       "entry": "0x7efc",
@@ -1218,6 +1331,19 @@
       ]
     },
     {
+      "start": "0x8530",
+      "end": "0x854a",
+      "entry": "0x8530",
+      "isa": "thumb",
+      "account": "Complete forward-copy helper; all 13 starts visited during 44-byte configuration restore, including IDA invalid-ISA boundary correction",
+      "evidence": [
+        "audit/data/config_restore_binaryninja.json",
+        "audit/data/config_restore_emulation.json",
+        "docs/INITIAL_STATE_CONFIG_REVIEW.md"
+      ],
+      "decoder_artifact": "audit/data/config_restore_binaryninja.json"
+    },
+    {
       "start": "0x8678",
       "end": "0x896c",
       "entry": "0x8678",
@@ -1230,58 +1356,6 @@
         "audit/data/soft_float_emulation.json",
         "docs/SOFT_FLOAT_REVIEW.md"
       ]
-    },
-    {
-      "start": "0x5f14",
-      "end": "0x5f2e",
-      "entry": "0x5f14",
-      "isa": "thumb",
-      "account": "Complete conditional configuration-restore wrapper; stops before mirror callee in bounded run and statically traces the returning epilogue",
-      "evidence": [
-        "audit/data/config_restore_binaryninja.json",
-        "audit/data/config_restore_emulation.json",
-        "docs/INITIAL_STATE_CONFIG_REVIEW.md"
-      ],
-      "decoder_artifact": "audit/data/config_restore_binaryninja.json"
-    },
-    {
-      "start": "0x5f34",
-      "end": "0x5fec",
-      "entry": "0x5f34",
-      "isa": "thumb",
-      "account": "Complete response mirror; all 92 starts visited with ordered AID 151 byte overwrite and original table-2 reader observation",
-      "evidence": [
-        "audit/data/config_restore_binaryninja.json",
-        "audit/data/config_response_mirror_emulation.json",
-        "docs/INITIAL_STATE_CONFIG_REVIEW.md"
-      ],
-      "decoder_artifact": "audit/data/config_restore_binaryninja.json"
-    },
-    {
-      "start": "0x760c",
-      "end": "0x7698",
-      "entry": "0x760c",
-      "isa": "thumb",
-      "account": "Complete initial-state selector; all 70 starts visited across 12 synthetic pin, mode and threshold cases",
-      "evidence": [
-        "audit/data/initial_state_binaryninja.json",
-        "audit/data/initial_state_emulation.json",
-        "docs/INITIAL_STATE_CONFIG_REVIEW.md"
-      ],
-      "decoder_artifact": "audit/data/initial_state_binaryninja.json"
-    },
-    {
-      "start": "0x8530",
-      "end": "0x854a",
-      "entry": "0x8530",
-      "isa": "thumb",
-      "account": "Complete forward-copy helper; all 13 starts visited during 44-byte configuration restore, including IDA invalid-ISA boundary correction",
-      "evidence": [
-        "audit/data/config_restore_binaryninja.json",
-        "audit/data/config_restore_emulation.json",
-        "docs/INITIAL_STATE_CONFIG_REVIEW.md"
-      ],
-      "decoder_artifact": "audit/data/config_restore_binaryninja.json"
     },
     {
       "start": "0x8970",
