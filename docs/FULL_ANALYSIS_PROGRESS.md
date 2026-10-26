@@ -29,6 +29,11 @@ register sources of all 203 `BX` sites and six other computed PC writes.
 Programmable AIC values, frame integrity, synthesized/mutated pointers and
 the retained data windows remain part of the entry-discovery work.
 
+The [AIC installation review](AIC_VECTOR_INSTALLATION_REVIEW.md) composes seven
+selected setup pieces across 16 synthetic cases. It establishes their vector
+write set and the untouched slot-31 boundary, with a complete-startup and
+exhaustive-writer claim explicitly excluded.
+
 ## Full-image baseline
 
 The byte-verified IDA export now records 13,201 items over the entire 32,000-byte

@@ -58,6 +58,11 @@ programmable vector state, installed handlers, interrupt context and ordering.
 This local provenance audit does not claim a complete finite set of values
 that those two reads can return.
 
+The subsequent [AIC installation review](AIC_VECTOR_INSTALLATION_REVIEW.md)
+composes the selected original initialization segments and records their
+programmed vectors, including slot 31 remaining untouched. It retains the
+dynamic selection and global-writer limits above.
+
 ## Other computed PC writes
 
 The raw encoding scan finds six additional PC-writing instructions in the
