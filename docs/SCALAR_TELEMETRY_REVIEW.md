@@ -172,9 +172,12 @@ knots, ignored argument changes, and 2,000 deterministic mixed cases. Mixed
 cases include arbitrary 32-bit knot/capture/base/working values and byte
 coefficients. It compares final side effects as well as return values.
 
-The controlled row/column domain is 0..19; this suite does not establish that
-all callers and writers enforce it, or execute the complete caller from its
-entry. It does not prove all 32-bit combinations, physical units, intended
+The controlled row/column domain is 0..19. The later
+[complete-control integration review](CONTROL_SCALAR_INTEGRATION_REVIEW.md)
+traces these axes through the only decoded direct caller and executes 325
+complete caller invocations. It establishes the bounds under intact-frame
+and stable-input assumptions, retaining the repeated-load concurrency
+condition. Neither suite proves all 32-bit combinations, physical units, intended
 calibration, runtime mutability, interrupt ordering or live hardware effects.
 Those require upstream writer and integration evidence. No new execution
 entry or reviewed-byte count is added by this arithmetic pass.

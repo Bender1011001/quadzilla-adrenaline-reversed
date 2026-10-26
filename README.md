@@ -41,6 +41,8 @@ The [remaining local handler review](docs/REMAINING_AID_UPDATE_REVIEW.md) gives 
 
 The [SPI-template provenance review](docs/SPI_TEMPLATE_PROVENANCE_REVIEW.md) traces two code-like initialized byte windows to overlapping SPI command data and verifies selected transfer descriptor boundaries with original firmware instructions. Exhaustive global consumers and writers remain open.
 
+The [complete-control integration review](docs/CONTROL_SCALAR_INTEGRATION_REVIEW.md) executes 325 original control calls, connects scalar table indices to guarded caller calculations, and checks telemetry stores, periodic backdown dispatch and timer admission under explicit state/concurrency assumptions.
+
 ## Try it
 
 Python 3.10+, standard library only (`pyserial` for the USB tool).
