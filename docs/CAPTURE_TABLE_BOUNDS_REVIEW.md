@@ -69,6 +69,12 @@ RAM. A complete writer audit, indirect or alternate entry analysis, and fault
 or stack-corruption behavior remain open. Those limits prevent claiming the
 table can never change, or that every possible execution is bounded.
 
+The later [complete-control review](CONTROL_SCALAR_INTEGRATION_REVIEW.md)
+executes this path inside whole caller invocations and makes the stable-input
+assumption explicit: P is read for the guard at `0x5202` and reloaded before
+the multiply at `0x5210`. A concurrent writer between those reads requires
+its own invariant; no such interleaving is modeled by this bounded proof.
+
 Reproduce with a matching independently obtained image:
 
 ```sh

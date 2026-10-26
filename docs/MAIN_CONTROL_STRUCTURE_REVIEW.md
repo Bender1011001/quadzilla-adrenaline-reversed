@@ -10,6 +10,11 @@ starts inside the routine at `0x5324` with synthetic registers, stack, SRAM,
 and TC0 status. It tests that path and the real `0x4A94`, division, and
 `0x6FA0` helper bytes; it does not execute the entire control loop.
 
+The subsequent [complete-control integration review](CONTROL_SCALAR_INTEGRATION_REVIEW.md)
+executes 325 original calls from prologue to return, checking scalar/table
+provenance, caller stores, periodic dispatch and timer admission. Its 79
+unvisited main starts and remaining semantic/concurrency limits are explicit.
+
 ## Source layout and direct flow
 
 The catalog entry `0x50F0` is a Thumb routine whose returning body reaches

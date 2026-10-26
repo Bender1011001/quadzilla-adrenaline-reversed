@@ -47,6 +47,14 @@ starts are visited with zero model differences. It corrects the incoming
 R0/R2 interpretation and signed lower-floor account; upstream writer bounds,
 complete caller execution and physical meaning remain open.
 
+The [complete-control integration review](CONTROL_SCALAR_INTEGRATION_REVIEW.md)
+executes 325 original `0x50F0` calls, checking scalar inputs/results, both
+table extents, the actual caller store, timer admission and periodic backdown
+dispatch. It visits 495/574 main starts and explicitly retains 79 unvisited
+starts. Scalar axes are bounded to 0..19 under intact-frame/stable-input
+assumptions; a duplicated source-word load leaves an asynchronous-writer
+condition open. Full response contracts and remaining branch states are pending.
+
 ## Full-image baseline
 
 The byte-verified IDA export now records 13,201 items over the entire 32,000-byte
