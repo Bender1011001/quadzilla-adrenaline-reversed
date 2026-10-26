@@ -43,6 +43,8 @@ The [SPI-template provenance review](docs/SPI_TEMPLATE_PROVENANCE_REVIEW.md) tra
 
 The [complete-control integration review](docs/CONTROL_SCALAR_INTEGRATION_REVIEW.md) executes 325 original control calls, connects scalar table indices to guarded caller calculations, and checks telemetry stores, periodic backdown dispatch and timer admission under explicit state/concurrency assumptions.
 
+The [control-response arithmetic review](docs/CONTROL_RESPONSE_ARITHMETIC_REVIEW.md) checks the integer, floating-point and filter calculations in 1,072 original response slices, and confirms retained BC2/BC3 input ordering across consecutive complete control calls.
+
 ## Try it
 
 Python 3.10+, standard library only (`pyserial` for the USB tool).

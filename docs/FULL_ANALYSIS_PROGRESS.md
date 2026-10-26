@@ -55,6 +55,13 @@ starts. Scalar axes are bounded to 0..19 under intact-frame/stable-input
 assumptions; a duplicated source-word load leaves an asynchronous-writer
 condition open. Full response contracts and remaining branch states are pending.
 
+The [control-response arithmetic review](CONTROL_RESPONSE_ARITHMETIC_REVIEW.md)
+adds exact integer/float/filter accounts for `0x53A2..0x55A6`, with 1,072
+matching slice executions and all 196 starts visited. Two consecutive complete
+control calls demonstrate retained `0x200BC2/BC3` dependencies. NaN source
+paths, numeric status effects, physical units and global writer bounds remain
+open, along with the other unexercised main-control branches.
+
 ## Full-image baseline
 
 The byte-verified IDA export now records 13,201 items over the entire 32,000-byte
