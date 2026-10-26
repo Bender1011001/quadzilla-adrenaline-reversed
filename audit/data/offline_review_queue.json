@@ -9,87 +9,8 @@
     "0x8038",
     "0x7cc4"
   ],
-  "remaining_entries": 18,
+  "remaining_entries": 12,
   "queue": [
-    {
-      "entry": "0x4330",
-      "undirected_call_distance": 2,
-      "anchor_path": [
-        "0x50f0",
-        "0x74e8",
-        "0x4330"
-      ],
-      "reference_regions": {
-        "image": 9,
-        "peripheral": 5,
-        "sram": 3
-      }
-    },
-    {
-      "entry": "0x73cc",
-      "undirected_call_distance": 3,
-      "anchor_path": [
-        "0x601c",
-        "0x4384",
-        "0x77b8",
-        "0x73cc"
-      ],
-      "reference_regions": {
-        "image": 1
-      }
-    },
-    {
-      "entry": "0x73d4",
-      "undirected_call_distance": 3,
-      "anchor_path": [
-        "0x601c",
-        "0x4384",
-        "0x77b8",
-        "0x73d4"
-      ],
-      "reference_regions": {
-        "image": 1
-      }
-    },
-    {
-      "entry": "0x73dc",
-      "undirected_call_distance": 3,
-      "anchor_path": [
-        "0x601c",
-        "0x4384",
-        "0x77b8",
-        "0x73dc"
-      ],
-      "reference_regions": {
-        "image": 1
-      }
-    },
-    {
-      "entry": "0x73e4",
-      "undirected_call_distance": 3,
-      "anchor_path": [
-        "0x601c",
-        "0x4384",
-        "0x77b8",
-        "0x73e4"
-      ],
-      "reference_regions": {
-        "external_or_literal": 1,
-        "image": 1
-      }
-    },
-    {
-      "entry": "0x6b20",
-      "undirected_call_distance": 4,
-      "anchor_path": [
-        "0x601c",
-        "0x4384",
-        "0x77b8",
-        "0x73e4",
-        "0x6b20"
-      ],
-      "reference_regions": {}
-    },
     {
       "entry": "0x4114",
       "undirected_call_distance": 5,
@@ -197,5 +118,5 @@
       "reference_regions": {}
     }
   ],
-  "catalog_lf_text_sha256": "69b3711fab2b4b0b527cbe8de5d30328eface08bf80b5051fee59c8c9e8b2018"
+  "catalog_lf_text_sha256": "f2dfef003b5fbd573f1345ab768722cadc334e5680ecb8b7c52939e427fe7671"
 }

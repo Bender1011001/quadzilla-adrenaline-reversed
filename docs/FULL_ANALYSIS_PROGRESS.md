@@ -10,8 +10,8 @@ Update: the [startup/persistence review](STARTUP_PERSISTENCE_REVIEW.md) and
 entries, for at least 157 supported starts. Three callable numeric routines
 have no identified incoming image call and are not claimed reachable in service.
 The original 145-start catalog is retained as the baseline; its semantic coverage
-now stands at 127 roles with 18 entries left after the
-[ADC pipeline review](ADC_PIPELINE_REVIEW.md). The
+now stands at 133 roles with 12 entries left after the
+[ADC initializer and vector review](ADC_INIT_VECTOR_REVIEW.md). The
 new entries and aliases are recorded separately in
 `audit/data/entry_adjudications.json`. Neither inventory is claimed exhaustive.
 
@@ -27,8 +27,8 @@ address without hiding pending review:
 
 | Classification | Bytes |
 |---|---:|
-| IDA code candidates awaiting review | 4,507 |
-| Explicitly reviewed Thumb instruction ranges | 10,526 |
+| IDA code candidates awaiting review | 4,339 |
+| Explicitly reviewed Thumb instruction ranges | 10,694 |
 | Explicitly reviewed ARM instruction ranges | 4,168 |
 | IDA data candidates awaiting review | 2,600 |
 | Cycle queue alignment and literal pool | 18 |
@@ -47,8 +47,8 @@ address without hiding pending review:
 | Erased trailing `FF` | 2,888 |
 
 Coverage of an address is not proof that its meaning or ISA has been reviewed.
-The explicit instruction-range manifest now accepts 14,694 bytes through the
-[ADC pipeline review](ADC_PIPELINE_REVIEW.md). It excludes adjacent literal
+The explicit instruction-range manifest now accepts 14,862 bytes through the
+[ADC initializer and vector review](ADC_INIT_VECTOR_REVIEW.md). It excludes adjacent literal
 pools and alignment. Earlier semantic labels are not automatically promoted to
 byte-level classification; their exact ranges still need to be adjudicated.
 The ledger explicitly preserves 3,270 item/layout conflicts. These are tool item
