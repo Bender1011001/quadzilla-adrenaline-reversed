@@ -245,10 +245,12 @@
     },
     {
       "entry": "0x4b38",
-      "label": "Capture/fuel path that copies 0x2005E8 to telemetry word 0x200604",
-      "assurance": "static_instruction_trace",
+      "label": "Capture scalar with two bounded curve-slot jump tables and a conditional telemetry copy",
+      "assurance": "cross_decoder_jump_table_and_literal_reconciliation",
       "evidence": [
-        "quadzilla_mcu_map.json:functions.sub_4B38"
+        "audit/data/capture_scalar_binaryninja.json",
+        "audit/data/capture_scalar_structure.json",
+        "docs/CAPTURE_SCALAR_REVIEW.md"
       ]
     },
     {
