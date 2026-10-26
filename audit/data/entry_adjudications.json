@@ -11,7 +11,8 @@
     "audit/data/startup_persistence_binaryninja.json",
     "audit/data/image_coverage_ledger.json",
     "audit/data/soft_float_function_reviews.json",
-    "audit/data/soft_float_emulation.json"
+    "audit/data/soft_float_emulation.json",
+    "audit/data/execution_discovery_audit.json"
   ],
   "entries": [
     {
@@ -204,5 +205,5 @@
       ]
     }
   ],
-  "remaining": "Other missing entries, bad mode spans and shared/alternate entries still require adjudication. This is not an exhaustive inventory."
+  "remaining": "Bounded raw direct-transfer and bytewise data-window discovery is recorded in execution_discovery_audit.json. Non-LR BX provenance, other computed PC writes, synthesized pointers, alternate ISA/entry evidence and complete global writers/consumers remain open; 157 supported source starts is not exhaustive."
 }
