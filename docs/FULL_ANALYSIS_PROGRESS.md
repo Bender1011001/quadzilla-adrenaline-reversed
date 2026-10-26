@@ -34,6 +34,12 @@ selected setup pieces across 16 synthetic cases. It establishes their vector
 write set and the untouched slot-31 boundary, with a complete-startup and
 exhaustive-writer claim explicitly excluded.
 
+The [SPI-template provenance review](SPI_TEMPLATE_PROVENANCE_REVIEW.md) gives
+two retained code-address byte windows an established overlapping SPI-data
+interpretation. Six original-byte cases verify selected transmit descriptor
+boundaries and blocked admission. It adds no source entries or instruction
+bytes and does not close exhaustive writer/consumer provenance.
+
 ## Full-image baseline
 
 The byte-verified IDA export now records 13,201 items over the entire 32,000-byte

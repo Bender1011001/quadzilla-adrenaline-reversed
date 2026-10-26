@@ -77,14 +77,17 @@ That conflict is evidence against the proposed pointer in the current map;
 it does not prove every alternate ISA interpretation impossible.
 
 Six byte windows are compatible with the current target ISA but have no
-identified code-pointer consumer. They are retained explicitly:
+identified code-pointer consumer. The subsequent
+[SPI-template provenance review](SPI_TEMPLATE_PROVENANCE_REVIEW.md) establishes
+the overlapping SPI-data interpretation for two; it does not exclude all
+other consumers or writers. All six are retained explicitly:
 
 | Window source | Apparent value | Established storage context and remaining question |
 |---|---|---|
 | `0x5676` | `0x42C7` | Unaligned overlap of accepted main-control literal words; no load of a pointer from this window identified. |
 | `0x96FA` | `0x645F` | Initialized-RAM bytes copied to `0x200012`; located in the byte-coefficient region used by scalar arithmetic. A pointer consumer is not established. |
-| `0x9D7B` | `0x9200` | Initialized bytes copied to `0x200693`; complete consumer/provenance account remains open. |
-| `0x9D87` | `0x9400` | Initialized bytes copied to `0x20069F`; complete consumer/provenance account remains open. |
+| `0x9D7B` | `0x9200` | Copied to `0x200693`; overlaps the last byte of the RXB1 interrupt-clear command and the RXB0 `92` template. Original transfer paths establish those SPI-data extents; exhaustive global use remains open. |
+| `0x9D87` | `0x9400` | Copied to `0x20069F`; overlaps a zero gap and the RXB1 `94` template. Original transfer paths establish the template extent; exhaustive global use remains open. |
 | `0x9DB7` | `0x8C00` | Initialized bytes copied to `0x2006CF`, overlapping the reviewed warmup enable/threshold fields. A control-flow use of the composite window is not established. |
 | `0xB185` | `0x4901` | Unaligned overlap of the page-write helper's literal constants, including word `0x00490100`; no pointer consumer from the overlapping window identified. |
 
