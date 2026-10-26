@@ -2,10 +2,10 @@
 
 V2.8.4HF, source hash
 `1ae519ba6194e8f7bdaaa94333a83a9e6fda3b0563f87f7d48383b37288c1780`.
-This pass assigns fifteen additional baseline roles. There are now **36 reviewed
-roles among the original 145 starts**, leaving **109 baseline entries** unlabeled.
-The separately adjudicated six extra starts bring the supported minimum to 151;
-the inventories still do not claim exhaustiveness or complete semantic coverage.
+This review covers fifteen baseline roles. The original role pass recorded 36
+reviewed baseline entries; the current inventory and remaining work are in the
+[full-analysis ledger](FULL_ANALYSIS_PROGRESS.md). Neither the baseline catalog
+nor these bounded contracts establishes exhaustive execution-entry coverage.
 
 Each new role has inputs, outputs, side effects, evidence and limits in
 [the function reviews](../audit/data/uart_function_reviews.json). Fresh bounded
@@ -113,6 +113,49 @@ These byte effects are established. Assigning complete protocol/timer meanings t
 the `0x20070C..F` pairs requires tracing their remaining readers/writers. `0x7B04`
 is recovered by decoding at the accepted entry itself; the earlier IDA item before
 it incorrectly overlaps the start with a NEON interpretation.
+
+## Original-byte USART/PDC execution
+
+The [execution artifact](../audit/data/usart_pdc_emulation.json) now checks the
+four USART bodies directly against the snapshot queue model and instruction
+write sequence: 48 staging calls, all eight combinations of timeout/TX-end/
+TX-enabled status, and three complete initializer calls. Every one of the 183
+decoded body starts is visited. The accepted code spans are `0x7178..0x71BE`,
+`0x71D0..0x720C`, `0x720C..0x7256`, and `0x725C..0x72FE`, totaling 366 bytes.
+Alignment is separate: two `C0 46` NOPs at `0x71BE` and `0x72FE`, plus two
+`FF` bytes at `0x7256`. Thirty PC-relative literal words occupy
+`0x71C0..0x71D0`, `0x7258..0x725C`, and `0x7300..0x7364`; the harness
+accounts for every word and checks direct branch targets.
+
+The staging sweep varies both current/next occupancy states and requested
+counts 0, 16, and 65,535. Both helpers match the existing model, including the
+case where both counts are nonzero: no pointer/count pair is changed, while
+the software flag and interrupt/DMA command writes still occur. Zero requested
+count is also accepted by these instructions. The snapshot result does not
+model DMA transfer, next-slot promotion, or count-field truncation outside the
+tested 16-bit request domain.
+
+There is a hardware-sensitive read in the source: `0x7238` reads USART
+`US_CR`, ORs bit `0x800`, and writes the result; `0x72BE` does the same during
+initialization. The [SAM7S datasheet](https://ww1.microchip.com/downloads/en/DeviceDoc/doc6175.pdf),
+section 31.7.1, marks `US_CR` **write-only**. Accordingly the harness explicitly
+supplies read values 0, `0xAC`, and `0xFFFFFFFF`, rather than treating earlier
+command writes as readable register state. The resulting OR-dependent bus
+values are recorded. No guaranteed silicon read value or live malfunction
+follows from those synthetic values. This read assumption is required when
+interpreting an emulator result for this path.
+
+All calls check return, SP, R4–R11 and non-stack writes. The queue and IRQ
+calls check their entire ordered write sequence; initializer calls record the
+full sequence and check PDC pair clearing, selected USART settings, AIC vector,
+control writes and software flag. Unicorn ARM926 remains a functional
+surrogate. Hardware command effects, serial traffic, and physical timing are
+not simulated.
+
+```sh
+python audit/tools/emulate_usart_pdc.py firmware_v2.8.4HF.bin --output audit/data/usart_pdc_emulation.json
+python audit/tools/build_image_ledger.py firmware_v2.8.4HF.bin
+```
 
 ## What remains
 

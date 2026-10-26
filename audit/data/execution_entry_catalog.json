@@ -11166,8 +11166,9 @@
         {
           "entry": "0x7178",
           "label": "USART0 interrupt handler for receive timeout and enabled end-of-transmit event",
-          "assurance": "static_instruction_trace",
+          "assurance": "original_byte_execution_with_frozen_status",
           "evidence": [
+            "audit/data/usart_pdc_emulation.json",
             "audit/data/ida_image_items.json:items.0x7178",
             "audit/data/uart_buffer_binaryninja.json",
             "docs/USART0_BUFFER_REVIEW.md"
@@ -11298,8 +11299,9 @@
         {
           "entry": "0x71d0",
           "label": "USART0 PDC current/next transmit-buffer staging helper",
-          "assurance": "static_instruction_trace",
+          "assurance": "original_byte_execution_against_snapshot_queue_model",
           "evidence": [
+            "audit/data/usart_pdc_emulation.json",
             "audit/data/ida_image_items.json:items.0x71d0",
             "audit/data/uart_buffer_binaryninja.json",
             "docs/USART0_BUFFER_REVIEW.md"
@@ -11422,8 +11424,9 @@
         {
           "entry": "0x720c",
           "label": "USART0 PDC current/next receive-buffer staging helper",
-          "assurance": "static_instruction_trace",
+          "assurance": "original_byte_execution_against_snapshot_queue_model",
           "evidence": [
+            "audit/data/usart_pdc_emulation.json",
             "audit/data/ida_image_items.json:items.0x720c",
             "audit/data/uart_buffer_binaryninja.json",
             "docs/USART0_BUFFER_REVIEW.md"
@@ -11556,8 +11559,9 @@
         {
           "entry": "0x725c",
           "label": "USART0 and PDC initialization with AIC handler installation",
-          "assurance": "static_instruction_trace",
+          "assurance": "original_byte_register_trace_with_explicit_control_read_assumptions",
           "evidence": [
+            "audit/data/usart_pdc_emulation.json",
             "audit/data/ida_image_items.json:items.0x725c",
             "audit/data/uart_buffer_binaryninja.json",
             "docs/USART0_BUFFER_REVIEW.md"
@@ -17918,7 +17922,7 @@
     },
     "labels": {
       "path": "audit/data/semantic_labels.json",
-      "sha256": "a0ad992d1486b28944bbdfd63e8bd07a7b137a1924f45fdb7cda269c2c509fca"
+      "sha256": "f60dc69a6c4d072104ef452cd9d0649d80ce144809450b8ff23baeb99f7b4640"
     }
   },
   "input_hash_policy": "SHA-256 of JSON text with CRLF normalized to LF"

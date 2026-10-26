@@ -11,9 +11,10 @@
       "evidence": [
         "audit/data/ida_image_items.json:items.0x7178",
         "audit/data/uart_buffer_binaryninja.json",
-        "docs/USART0_BUFFER_REVIEW.md"
+        "docs/USART0_BUFFER_REVIEW.md",
+        "audit/data/usart_pdc_emulation.json"
       ],
-      "confidence": "static instruction trace; no hardware execution",
+      "confidence": "static trace and bounded original-byte execution with synthetic register status; no hardware execution",
       "limits": [
         "DMA promotion and concurrent interrupts are not modeled",
         "Physical transport endpoint and measured clock are unverified"
@@ -28,9 +29,10 @@
       "evidence": [
         "audit/data/ida_image_items.json:items.0x71d0",
         "audit/data/uart_buffer_binaryninja.json",
-        "docs/USART0_BUFFER_REVIEW.md"
+        "docs/USART0_BUFFER_REVIEW.md",
+        "audit/data/usart_pdc_emulation.json"
       ],
-      "confidence": "static instruction trace; no hardware execution",
+      "confidence": "static trace and bounded original-byte execution with synthetic register status; no hardware execution",
       "limits": [
         "DMA promotion and concurrent interrupts are not modeled",
         "Physical transport endpoint and measured clock are unverified"
@@ -45,12 +47,14 @@
       "evidence": [
         "audit/data/ida_image_items.json:items.0x720c",
         "audit/data/uart_buffer_binaryninja.json",
-        "docs/USART0_BUFFER_REVIEW.md"
+        "docs/USART0_BUFFER_REVIEW.md",
+        "audit/data/usart_pdc_emulation.json"
       ],
-      "confidence": "static instruction trace; no hardware execution",
+      "confidence": "static trace and bounded original-byte execution with synthetic register status; no hardware execution",
       "limits": [
         "DMA promotion and concurrent interrupts are not modeled",
-        "Physical transport endpoint and measured clock are unverified"
+        "Physical transport endpoint and measured clock are unverified",
+        "US_CR is write-only; its read value is explicitly supplied synthetic data in the harness"
       ]
     },
     {
@@ -62,12 +66,14 @@
       "evidence": [
         "audit/data/ida_image_items.json:items.0x725c",
         "audit/data/uart_buffer_binaryninja.json",
-        "docs/USART0_BUFFER_REVIEW.md"
+        "docs/USART0_BUFFER_REVIEW.md",
+        "audit/data/usart_pdc_emulation.json"
       ],
-      "confidence": "static instruction trace; no hardware execution",
+      "confidence": "static trace and bounded original-byte execution with synthetic register status; no hardware execution",
       "limits": [
         "DMA promotion and concurrent interrupts are not modeled",
-        "Physical transport endpoint and measured clock are unverified"
+        "Physical transport endpoint and measured clock are unverified",
+        "US_CR is write-only; its read value is explicitly supplied synthetic data in the harness"
       ]
     },
     {
