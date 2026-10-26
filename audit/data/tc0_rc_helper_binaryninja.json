@@ -1,0 +1,60 @@
+{
+  "format": "quadzilla-bounded-decode-v1",
+  "raw_sha256": "1ae519ba6194e8f7bdaaa94333a83a9e6fda3b0563f87f7d48383b37288c1780",
+  "tool_version": "5.2.8722 Personal",
+  "limitation": "decoder supports a superset of ARMv4T; explicit mode and bounds are supplied hypotheses",
+  "ranges": [
+    {
+      "start": "0x6fa0",
+      "end": "0x6fb2",
+      "architecture": "thumb2",
+      "instructions": [
+        {
+          "address": "0x6fa0",
+          "length": 2,
+          "text": "ldr     r2, [r0, #0x20]"
+        },
+        {
+          "address": "0x6fa2",
+          "length": 2,
+          "text": "lsls    r2, r2, #0xf"
+        },
+        {
+          "address": "0x6fa4",
+          "length": 2,
+          "text": "bmi     #0x6fac"
+        },
+        {
+          "address": "0x6fa6",
+          "length": 2,
+          "text": "str     r1, [r0, #0x1c]"
+        },
+        {
+          "address": "0x6fa8",
+          "length": 2,
+          "text": "movs    r0, #1"
+        },
+        {
+          "address": "0x6faa",
+          "length": 2,
+          "text": "b       #0x6fae"
+        },
+        {
+          "address": "0x6fac",
+          "length": 2,
+          "text": "movs    r0, #0"
+        },
+        {
+          "address": "0x6fae",
+          "length": 2,
+          "text": "add     sp, #0"
+        },
+        {
+          "address": "0x6fb0",
+          "length": 2,
+          "text": "bx      lr"
+        }
+      ]
+    }
+  ]
+}

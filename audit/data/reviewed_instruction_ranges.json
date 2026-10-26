@@ -353,6 +353,33 @@
       "decoder_artifact": "audit/data/control_selector_binaryninja.json"
     },
     {
+      "start": "0x50f0",
+      "end": "0x53c4",
+      "entry": "0x50f0",
+      "isa": "thumb",
+      "account": "Thumb control-loop first body; every branch/call and PC literal target reconciled, derate-to-TC0 tail executed synthetically; full live branch/dataflow semantics remain open",
+      "evidence": [
+        "audit/data/main_control_binaryninja.json",
+        "audit/data/main_control_structure.json",
+        "audit/data/control_timer_tail_emulation.json",
+        "docs/MAIN_CONTROL_STRUCTURE_REVIEW.md"
+      ],
+      "decoder_artifact": "audit/data/main_control_binaryninja.json"
+    },
+    {
+      "start": "0x5414",
+      "end": "0x5612",
+      "entry": "0x50f0",
+      "isa": "thumb",
+      "account": "Thumb control-loop continuation; every branch/call and PC literal target reconciled, response stores and stable-state reinit path statically traced; full live branch/dataflow semantics remain open",
+      "evidence": [
+        "audit/data/main_control_binaryninja.json",
+        "audit/data/main_control_structure.json",
+        "docs/MAIN_CONTROL_STRUCTURE_REVIEW.md"
+      ],
+      "decoder_artifact": "audit/data/main_control_binaryninja.json"
+    },
+    {
       "start": "0x56fc",
       "end": "0x5700",
       "entry": "0x56fc",
@@ -874,6 +901,19 @@
         "audit/data/tc2_callback_emulation.json",
         "docs/TC2_CALLBACK_REVIEW.md"
       ]
+    },
+    {
+      "start": "0x6fa0",
+      "end": "0x6fb2",
+      "entry": "0x6fa0",
+      "isa": "thumb",
+      "account": "Complete TC0 RC conditional helper; both clock-status outcomes visited with synthetic MMIO",
+      "evidence": [
+        "audit/data/tc0_rc_helper_binaryninja.json",
+        "audit/data/control_timer_tail_emulation.json",
+        "docs/MAIN_CONTROL_STRUCTURE_REVIEW.md"
+      ],
+      "decoder_artifact": "audit/data/tc0_rc_helper_binaryninja.json"
     },
     {
       "start": "0x6fb4",

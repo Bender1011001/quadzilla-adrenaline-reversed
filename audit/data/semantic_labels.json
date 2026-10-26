@@ -271,11 +271,13 @@
     },
     {
       "entry": "0x50f0",
-      "label": "Main control loop that applies AID 13 derate and drives the TC0 path",
-      "assurance": "static_closed_chain",
+      "label": "Control-loop state, telemetry and conditional derated TC0 RC request",
+      "assurance": "cross_decoder_control_flow_and_bounded_tail_emulation",
       "evidence": [
-        "quadzilla_mcu_map.json:functions.sub_50F0",
-        "quadzilla_vp44_chain.json:hardware_output"
+        "audit/data/main_control_binaryninja.json",
+        "audit/data/main_control_structure.json",
+        "audit/data/control_timer_tail_emulation.json",
+        "docs/MAIN_CONTROL_STRUCTURE_REVIEW.md"
       ]
     },
     {
@@ -612,11 +614,12 @@
     },
     {
       "entry": "0x6fa0",
-      "label": "AT91 TC channel write helper used for the TC0_RC output",
-      "assurance": "static_closed_chain",
+      "label": "TC0 RC writer conditional on clock-status bit 16",
+      "assurance": "static_instruction_trace_and_synthetic_mmio_emulation",
       "evidence": [
-        "quadzilla_mcu_map.json:functions.sub_6FA0",
-        "quadzilla_vp44_chain.json:hardware_output"
+        "audit/data/tc0_rc_helper_binaryninja.json",
+        "audit/data/control_timer_tail_emulation.json",
+        "docs/MAIN_CONTROL_STRUCTURE_REVIEW.md"
       ]
     },
     {

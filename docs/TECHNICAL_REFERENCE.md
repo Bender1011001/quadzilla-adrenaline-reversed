@@ -140,6 +140,11 @@ The [backdown and stretch review](BACKDOWN_STRETCH_REVIEW.md) traces the
 automatic AID 13 response writer to two clamped 0..80 candidates and records
 the guarded integer divisions in `0x4A94`; it does not establish all live
 sensor ranges or downstream pulse timing.
+The [main control structure review](MAIN_CONTROL_STRUCTURE_REVIEW.md) resolves
+the direct stretch-to-TC0 RC path: an optional scalar clamp depends on two
+separate conditions, and `0x6FA0` writes RC only when TC0 `CLKSTA` is clear.
+Its synthetic high-bit table case is a conditional path, with upstream
+table-writer reachability still unproven.
 
 Known SRAM locations: the TPS-gate input byte `0x2005D7`, the capture structure at `0x2005C4`, telemetry `0x200604`, and the boost-curve AIDs 113-136 at
 `0x200B3B`-`0x200B69`.
