@@ -181,10 +181,12 @@
     },
     {
       "entry": "0x4818",
-      "label": "TPS/input gate that reads SRAM byte 0x2005D7",
-      "assurance": "static_instruction_trace",
+      "label": "AID153-enabled high-idle delay and input-gated 0/1/3 state machine feeding the fresh accumulator flag",
+      "assurance": "static_instruction_trace_and_original_byte_state_emulation",
       "evidence": [
-        "quadzilla_mcu_map.json:functions.sub_4818"
+        "audit/data/input_gate_binaryninja.json",
+        "audit/data/input_gate_emulation.json",
+        "docs/INPUT_GATE_STATE_REVIEW.md"
       ]
     },
     {

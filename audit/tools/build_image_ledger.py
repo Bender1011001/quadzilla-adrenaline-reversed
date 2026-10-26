@@ -19,6 +19,8 @@ LAYOUT = (
     (0x4144, 0x414C, "sram_descriptor_loop_literals"),
     (0x41BE, 0x41C0, "clock_setup_alignment_nop"),
     (0x41C0, 0x41F0, "clock_setup_literal_pool"),
+    (0x48C2, 0x48C4, "input_gate_alignment_nop"),
+    (0x48C4, 0x48E8, "input_gate_literal_pool"),
     (0x4A88, 0x4A94, "backdown_literal_pool"),
     (0x4B26, 0x4B28, "stretch_alignment_nop"),
     (0x4B28, 0x4B38, "stretch_literal_pool"),

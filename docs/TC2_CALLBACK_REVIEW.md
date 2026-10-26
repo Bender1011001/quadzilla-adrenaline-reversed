@@ -76,6 +76,12 @@ These counters and flags are software state. The vector association suggests
 a TC2-driven service path, but no timer frequency, scheduling interval, or
 physical output timing follows from the static thresholds alone.
 
+The [input gate state review](INPUT_GATE_STATE_REVIEW.md) identifies `0x4818`
+as the starter and completion-event consumer for the `0x200719..71B` counter
+protocol. It derives threshold `0x200730` from AID 153's working halfword and
+sets the fresh accumulator flag when the completion event advances state 1
+to state 3. Interrupt interleavings and physical delay remain unmeasured.
+
 ## Conditional numeric update
 
 Byte `0x200708` resets word `0x200AE8` when nonzero; the word then increments

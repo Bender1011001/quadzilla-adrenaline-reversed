@@ -53,7 +53,7 @@ static roles and do not prove live engine behaviour.
 
 | Entry | Role | Assurance |
 |---|---|---|
-| `0x4818` | TPS/input gate that reads SRAM byte `0x2005D7` | trace |
+| `0x4818` | [AID-153 delay/input state machine](INPUT_GATE_STATE_REVIEW.md) feeding the fresh accumulator flag and active byte | original-byte state sweep |
 | `0x499C` | backdown-percentage threshold walk used to update AID 13 | chain |
 | `0x4A94` | applied-stretch percentage arithmetic using the AID 85 working copy | chain |
 | `0x4B38` | [capture scalar and curve dispatch](CAPTURE_SCALAR_REVIEW.md), including a conditional `0x2005E8` to `0x200604` telemetry copy and [bounded direct-caller 20×20 lookup](CAPTURE_TABLE_BOUNDS_REVIEW.md) | bounded code/table review |

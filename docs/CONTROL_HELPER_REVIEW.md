@@ -91,6 +91,9 @@ clamping it or changing the previous delta and three flag bytes. It still writes
 the unchanged accumulator back to storage.
 
 With a fresh flag, it clears that flag and sets `0x20071C`/`0x20071D` to 1.
+The [input gate state review](INPUT_GATE_STATE_REVIEW.md) traces one producer:
+`0x4818` sets the fresh flag when its delayed state advances from 1 to 3,
+and also writes the active byte used by this accumulator's gate.
 It computes `delta = u32(1200 - word[0x2005EC])`. If byte `0x20042D` is nonzero
 and argument R1 is zero, it computes:
 
