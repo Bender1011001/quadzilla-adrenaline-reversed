@@ -1,0 +1,2119 @@
+{
+  "format": "quadzilla-indirect-transfer-provenance-v1",
+  "raw_sha256": "1ae519ba6194e8f7bdaaa94333a83a9e6fda3b0563f87f7d48383b37288c1780",
+  "scope": "Accepted 19000 instruction bytes plus 138 source bytes of the three copied Thumb helper bodies",
+  "bx_count": 203,
+  "bx_kind_counts": {
+    "AIC-selected callback": 2,
+    "fixed startup/reset transfer": 4,
+    "stack-restored return-form": 38,
+    "LR return-form": 140,
+    "fixed numeric veneer": 16,
+    "ISA interworking veneer": 3
+  },
+  "bx_dispositions": [
+    {
+      "site": "0x4030",
+      "isa": "arm",
+      "register": "r0",
+      "instruction": "bx      r0",
+      "kind": "AIC-selected callback",
+      "source_site": "0x4020",
+      "target_source": "word[R8+0x104]",
+      "expected_address": "0xfffff104",
+      "precondition": "startup-initialized banked FIQ R8 = 0xfffff000"
+    },
+    {
+      "site": "0x4050",
+      "isa": "arm",
+      "register": "r0",
+      "instruction": "bx      r0",
+      "kind": "fixed startup/reset transfer",
+      "source_site": "0x4048",
+      "literal": "0x40fc",
+      "target": "0x414c",
+      "pointer_bits": "0x414d",
+      "target_isa": "thumb",
+      "return_strategy": "MOV LR,PC before BX"
+    },
+    {
+      "site": "0x407c",
+      "isa": "arm",
+      "register": "r0",
+      "instruction": "bx      r0",
+      "kind": "fixed startup/reset transfer",
+      "source_site": "0x4074",
+      "literal": "0x4104",
+      "target": "0x4114",
+      "pointer_bits": "0x4115",
+      "target_isa": "thumb",
+      "return_strategy": "MOV LR,PC before BX"
+    },
+    {
+      "site": "0x4088",
+      "isa": "arm",
+      "register": "r0",
+      "instruction": "bx      r0",
+      "kind": "fixed startup/reset transfer",
+      "source_site": "0x4084",
+      "literal": "0x410c",
+      "target": "0x77b8",
+      "pointer_bits": "0x77b9",
+      "target_isa": "thumb",
+      "return_strategy": "LR loaded with stop loop 0x408c"
+    },
+    {
+      "site": "0x40bc",
+      "isa": "arm",
+      "register": "r0",
+      "instruction": "bx      r0",
+      "kind": "AIC-selected callback",
+      "source_site": "0x40a8",
+      "target_source": "word[0xfffff100]",
+      "expected_address": "0xfffff100",
+      "precondition": "AIC vector state and installed handler ABI"
+    },
+    {
+      "site": "0x40f4",
+      "isa": "arm",
+      "register": "r0",
+      "instruction": "bx      r0",
+      "kind": "fixed startup/reset transfer",
+      "source_site": "0x40ec",
+      "literal": "0x4110",
+      "target": "0x7434",
+      "pointer_bits": "0x7435",
+      "target_isa": "thumb",
+      "return_strategy": "MOV LR,PC before BX"
+    },
+    {
+      "site": "0x4126",
+      "isa": "thumb",
+      "register": "r0",
+      "instruction": "bx      r0",
+      "kind": "stack-restored return-form",
+      "source_site": "0x4124",
+      "target_source": "word popped from current SP immediately before BX; frame integrity required"
+    },
+    {
+      "site": "0x41bc",
+      "isa": "thumb",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x4212",
+      "isa": "thumb",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x4300",
+      "isa": "thumb",
+      "register": "r0",
+      "instruction": "bx      r0",
+      "kind": "stack-restored return-form",
+      "source_site": "0x42fe",
+      "target_source": "word popped from current SP immediately before BX; frame integrity required"
+    },
+    {
+      "site": "0x435c",
+      "isa": "thumb",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x4594",
+      "isa": "thumb",
+      "register": "r0",
+      "instruction": "bx      r0",
+      "kind": "stack-restored return-form",
+      "source_site": "0x4592",
+      "target_source": "word popped from current SP immediately before BX; frame integrity required"
+    },
+    {
+      "site": "0x4672",
+      "isa": "thumb",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x4696",
+      "isa": "thumb",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x46c0",
+      "isa": "thumb",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x478e",
+      "isa": "thumb",
+      "register": "r1",
+      "instruction": "bx      r1",
+      "kind": "stack-restored return-form",
+      "source_site": "0x478c",
+      "target_source": "word popped from current SP immediately before BX; frame integrity required"
+    },
+    {
+      "site": "0x480e",
+      "isa": "thumb",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x48c0",
+      "isa": "thumb",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x4940",
+      "isa": "thumb",
+      "register": "r1",
+      "instruction": "bx      r1",
+      "kind": "stack-restored return-form",
+      "source_site": "0x493e",
+      "target_source": "word popped from current SP immediately before BX; frame integrity required"
+    },
+    {
+      "site": "0x4976",
+      "isa": "thumb",
+      "register": "r1",
+      "instruction": "bx      r1",
+      "kind": "stack-restored return-form",
+      "source_site": "0x4974",
+      "target_source": "word popped from current SP immediately before BX; frame integrity required"
+    },
+    {
+      "site": "0x4998",
+      "isa": "thumb",
+      "register": "r1",
+      "instruction": "bx      r1",
+      "kind": "stack-restored return-form",
+      "source_site": "0x4996",
+      "target_source": "word popped from current SP immediately before BX; frame integrity required"
+    },
+    {
+      "site": "0x4a86",
+      "isa": "thumb",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x4b24",
+      "isa": "thumb",
+      "register": "r1",
+      "instruction": "bx      r1",
+      "kind": "stack-restored return-form",
+      "source_site": "0x4b22",
+      "target_source": "word popped from current SP immediately before BX; frame integrity required"
+    },
+    {
+      "site": "0x4d08",
+      "isa": "thumb",
+      "register": "r1",
+      "instruction": "bx      r1",
+      "kind": "stack-restored return-form",
+      "source_site": "0x4d06",
+      "target_source": "word popped from current SP immediately before BX; frame integrity required"
+    },
+    {
+      "site": "0x5014",
+      "isa": "thumb",
+      "register": "r1",
+      "instruction": "bx      r1",
+      "kind": "stack-restored return-form",
+      "source_site": "0x5012",
+      "target_source": "word popped from current SP immediately before BX; frame integrity required"
+    },
+    {
+      "site": "0x50da",
+      "isa": "thumb",
+      "register": "r1",
+      "instruction": "bx      r1",
+      "kind": "stack-restored return-form",
+      "source_site": "0x50d8",
+      "target_source": "word popped from current SP immediately before BX; frame integrity required"
+    },
+    {
+      "site": "0x5610",
+      "isa": "thumb",
+      "register": "r1",
+      "instruction": "bx      r1",
+      "kind": "stack-restored return-form",
+      "source_site": "0x560e",
+      "target_source": "word popped from current SP immediately before BX; frame integrity required"
+    },
+    {
+      "site": "0x56fe",
+      "isa": "thumb",
+      "register": "r3",
+      "instruction": "bx      r3",
+      "kind": "fixed numeric veneer",
+      "entry": "0x56fc",
+      "source_site": "0x56fc",
+      "literal": "0x5700",
+      "target": "0x92cc",
+      "target_isa": "arm",
+      "r3_preserved": false
+    },
+    {
+      "site": "0x570c",
+      "isa": "thumb",
+      "register": "r12",
+      "instruction": "bx      r12",
+      "kind": "fixed numeric veneer",
+      "entry": "0x5704",
+      "source_site": "0x5706",
+      "literal": "0x5710",
+      "target": "0x893c",
+      "target_isa": "arm",
+      "r3_preserved": true
+    },
+    {
+      "site": "0x5716",
+      "isa": "thumb",
+      "register": "r3",
+      "instruction": "bx      r3",
+      "kind": "fixed numeric veneer",
+      "entry": "0x5714",
+      "source_site": "0x5714",
+      "literal": "0x5718",
+      "target": "0x90e4",
+      "target_isa": "arm",
+      "r3_preserved": false
+    },
+    {
+      "site": "0x5734",
+      "isa": "thumb",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x5754",
+      "isa": "thumb",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x59c8",
+      "isa": "thumb",
+      "register": "r0",
+      "instruction": "bx      r0",
+      "kind": "stack-restored return-form",
+      "source_site": "0x59c6",
+      "target_source": "word popped from current SP immediately before BX; frame integrity required"
+    },
+    {
+      "site": "0x5cb8",
+      "isa": "thumb",
+      "register": "r0",
+      "instruction": "bx      r0",
+      "kind": "stack-restored return-form",
+      "source_site": "0x5cb6",
+      "target_source": "word popped from current SP immediately before BX; frame integrity required"
+    },
+    {
+      "site": "0x5de8",
+      "isa": "thumb",
+      "register": "r0",
+      "instruction": "bx      r0",
+      "kind": "stack-restored return-form",
+      "source_site": "0x5de6",
+      "target_source": "word popped from current SP immediately before BX; frame integrity required"
+    },
+    {
+      "site": "0x5e9e",
+      "isa": "thumb",
+      "register": "r0",
+      "instruction": "bx      r0",
+      "kind": "stack-restored return-form",
+      "source_site": "0x5e9c",
+      "target_source": "word popped from current SP immediately before BX; frame integrity required"
+    },
+    {
+      "site": "0x5ef0",
+      "isa": "thumb",
+      "register": "r0",
+      "instruction": "bx      r0",
+      "kind": "stack-restored return-form",
+      "source_site": "0x5eee",
+      "target_source": "word popped from current SP immediately before BX; frame integrity required"
+    },
+    {
+      "site": "0x5f06",
+      "isa": "thumb",
+      "register": "r3",
+      "instruction": "bx      r3",
+      "kind": "fixed numeric veneer",
+      "entry": "0x5f04",
+      "source_site": "0x5f04",
+      "literal": "0x5f08",
+      "target": "0x913c",
+      "target_isa": "arm",
+      "r3_preserved": false
+    },
+    {
+      "site": "0x5f0e",
+      "isa": "thumb",
+      "register": "r3",
+      "instruction": "bx      r3",
+      "kind": "fixed numeric veneer",
+      "entry": "0x5f0c",
+      "source_site": "0x5f0c",
+      "literal": "0x5f10",
+      "target": "0x8788",
+      "target_isa": "arm",
+      "r3_preserved": false
+    },
+    {
+      "site": "0x5f2c",
+      "isa": "thumb",
+      "register": "r0",
+      "instruction": "bx      r0",
+      "kind": "stack-restored return-form",
+      "source_site": "0x5f2a",
+      "target_source": "word popped from current SP immediately before BX; frame integrity required"
+    },
+    {
+      "site": "0x5fea",
+      "isa": "thumb",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x6040",
+      "isa": "thumb",
+      "register": "r0",
+      "instruction": "bx      r0",
+      "kind": "stack-restored return-form",
+      "source_site": "0x603e",
+      "target_source": "word popped from current SP immediately before BX; frame integrity required"
+    },
+    {
+      "site": "0x6b0a",
+      "isa": "thumb",
+      "register": "r3",
+      "instruction": "bx      r3",
+      "kind": "fixed numeric veneer",
+      "entry": "0x6b08",
+      "source_site": "0x6b08",
+      "literal": "0x6b0c",
+      "target": "0x86f0",
+      "target_isa": "arm",
+      "r3_preserved": false
+    },
+    {
+      "site": "0x6b18",
+      "isa": "thumb",
+      "register": "r12",
+      "instruction": "bx      r12",
+      "kind": "fixed numeric veneer",
+      "entry": "0x6b10",
+      "source_site": "0x6b12",
+      "literal": "0x6b1c",
+      "target": "0x89b0",
+      "target_isa": "arm",
+      "r3_preserved": true
+    },
+    {
+      "site": "0x6b42",
+      "isa": "thumb",
+      "register": "r0",
+      "instruction": "bx      r0",
+      "kind": "stack-restored return-form",
+      "source_site": "0x6b40",
+      "target_source": "word popped from current SP immediately before BX; frame integrity required"
+    },
+    {
+      "site": "0x6b44",
+      "isa": "thumb",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x6b5e",
+      "isa": "thumb",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x6b8a",
+      "isa": "thumb",
+      "register": "r1",
+      "instruction": "bx      r1",
+      "kind": "stack-restored return-form",
+      "source_site": "0x6b88",
+      "target_source": "word popped from current SP immediately before BX; frame integrity required"
+    },
+    {
+      "site": "0x6b9a",
+      "isa": "thumb",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x6bd0",
+      "isa": "thumb",
+      "register": "r1",
+      "instruction": "bx      r1",
+      "kind": "stack-restored return-form",
+      "source_site": "0x6bce",
+      "target_source": "word popped from current SP immediately before BX; frame integrity required"
+    },
+    {
+      "site": "0x6c12",
+      "isa": "thumb",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x6c5c",
+      "isa": "thumb",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x6c80",
+      "isa": "thumb",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x6f54",
+      "isa": "thumb",
+      "register": "r0",
+      "instruction": "bx      r0",
+      "kind": "stack-restored return-form",
+      "source_site": "0x6f52",
+      "target_source": "word popped from current SP immediately before BX; frame integrity required"
+    },
+    {
+      "site": "0x6fb0",
+      "isa": "thumb",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x70c8",
+      "isa": "thumb",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x7122",
+      "isa": "thumb",
+      "register": "r3",
+      "instruction": "bx      r3",
+      "kind": "fixed numeric veneer",
+      "entry": "0x7120",
+      "source_site": "0x7120",
+      "literal": "0x7124",
+      "target": "0x86d8",
+      "target_isa": "arm",
+      "r3_preserved": false
+    },
+    {
+      "site": "0x7130",
+      "isa": "thumb",
+      "register": "r12",
+      "instruction": "bx      r12",
+      "kind": "fixed numeric veneer",
+      "entry": "0x7128",
+      "source_site": "0x712a",
+      "literal": "0x7134",
+      "target": "0x89c8",
+      "target_isa": "arm",
+      "r3_preserved": true
+    },
+    {
+      "site": "0x713a",
+      "isa": "thumb",
+      "register": "r3",
+      "instruction": "bx      r3",
+      "kind": "fixed numeric veneer",
+      "entry": "0x7138",
+      "source_site": "0x7138",
+      "literal": "0x713c",
+      "target": "0x87e8",
+      "target_isa": "arm",
+      "r3_preserved": false
+    },
+    {
+      "site": "0x7142",
+      "isa": "thumb",
+      "register": "r3",
+      "instruction": "bx      r3",
+      "kind": "fixed numeric veneer",
+      "entry": "0x7140",
+      "source_site": "0x7140",
+      "literal": "0x7144",
+      "target": "0x9038",
+      "target_isa": "arm",
+      "r3_preserved": false
+    },
+    {
+      "site": "0x714a",
+      "isa": "thumb",
+      "register": "r3",
+      "instruction": "bx      r3",
+      "kind": "fixed numeric veneer",
+      "entry": "0x7148",
+      "source_site": "0x7148",
+      "literal": "0x714c",
+      "target": "0x95f4",
+      "target_isa": "arm",
+      "r3_preserved": false
+    },
+    {
+      "site": "0x7152",
+      "isa": "thumb",
+      "register": "r3",
+      "instruction": "bx      r3",
+      "kind": "fixed numeric veneer",
+      "entry": "0x7150",
+      "source_site": "0x7150",
+      "literal": "0x7154",
+      "target": "0x90b0",
+      "target_isa": "arm",
+      "r3_preserved": false
+    },
+    {
+      "site": "0x715a",
+      "isa": "thumb",
+      "register": "r3",
+      "instruction": "bx      r3",
+      "kind": "fixed numeric veneer",
+      "entry": "0x7158",
+      "source_site": "0x7158",
+      "literal": "0x715c",
+      "target": "0x874c",
+      "target_isa": "arm",
+      "r3_preserved": false
+    },
+    {
+      "site": "0x7162",
+      "isa": "thumb",
+      "register": "r3",
+      "instruction": "bx      r3",
+      "kind": "fixed numeric veneer",
+      "entry": "0x7160",
+      "source_site": "0x7160",
+      "literal": "0x7164",
+      "target": "0x88a4",
+      "target_isa": "arm",
+      "r3_preserved": false
+    },
+    {
+      "site": "0x7170",
+      "isa": "thumb",
+      "register": "r12",
+      "instruction": "bx      r12",
+      "kind": "fixed numeric veneer",
+      "entry": "0x7168",
+      "source_site": "0x716a",
+      "literal": "0x7174",
+      "target": "0x8ef4",
+      "target_isa": "arm",
+      "r3_preserved": true
+    },
+    {
+      "site": "0x71bc",
+      "isa": "thumb",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x720a",
+      "isa": "thumb",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x7254",
+      "isa": "thumb",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x72fc",
+      "isa": "thumb",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x737a",
+      "isa": "thumb",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x738e",
+      "isa": "thumb",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x73ae",
+      "isa": "thumb",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x73c4",
+      "isa": "thumb",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x73ce",
+      "isa": "thumb",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x73d6",
+      "isa": "thumb",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x73de",
+      "isa": "thumb",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x742c",
+      "isa": "thumb",
+      "register": "r1",
+      "instruction": "bx      r1",
+      "kind": "stack-restored return-form",
+      "source_site": "0x742a",
+      "target_source": "word popped from current SP immediately before BX; frame integrity required"
+    },
+    {
+      "site": "0x743a",
+      "isa": "thumb",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x7444",
+      "isa": "thumb",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x7484",
+      "isa": "thumb",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x74b0",
+      "isa": "thumb",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x74c0",
+      "isa": "thumb",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x74dc",
+      "isa": "thumb",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x7596",
+      "isa": "thumb",
+      "register": "r0",
+      "instruction": "bx      r0",
+      "kind": "stack-restored return-form",
+      "source_site": "0x7594",
+      "target_source": "word popped from current SP immediately before BX; frame integrity required"
+    },
+    {
+      "site": "0x7696",
+      "isa": "thumb",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x77a4",
+      "isa": "thumb",
+      "register": "r0",
+      "instruction": "bx      r0",
+      "kind": "stack-restored return-form",
+      "source_site": "0x77a2",
+      "target_source": "word popped from current SP immediately before BX; frame integrity required"
+    },
+    {
+      "site": "0x7b00",
+      "isa": "thumb",
+      "register": "r0",
+      "instruction": "bx      r0",
+      "kind": "stack-restored return-form",
+      "source_site": "0x7afe",
+      "target_source": "word popped from current SP immediately before BX; frame integrity required"
+    },
+    {
+      "site": "0x7b08",
+      "isa": "thumb",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x7b14",
+      "isa": "thumb",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x7b26",
+      "isa": "thumb",
+      "register": "r0",
+      "instruction": "bx      r0",
+      "kind": "stack-restored return-form",
+      "source_site": "0x7b24",
+      "target_source": "word popped from current SP immediately before BX; frame integrity required"
+    },
+    {
+      "site": "0x7b2e",
+      "isa": "thumb",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x7b36",
+      "isa": "thumb",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x7b42",
+      "isa": "thumb",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x7b56",
+      "isa": "thumb",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x7b7a",
+      "isa": "thumb",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x7be4",
+      "isa": "thumb",
+      "register": "r1",
+      "instruction": "bx      r1",
+      "kind": "stack-restored return-form",
+      "source_site": "0x7be2",
+      "target_source": "word popped from current SP immediately before BX; frame integrity required"
+    },
+    {
+      "site": "0x7bec",
+      "isa": "thumb",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x7bf6",
+      "isa": "thumb",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x7c18",
+      "isa": "thumb",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x7c50",
+      "isa": "thumb",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x7c9c",
+      "isa": "thumb",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x7d7c",
+      "isa": "thumb",
+      "register": "r1",
+      "instruction": "bx      r1",
+      "kind": "stack-restored return-form",
+      "source_site": "0x7d7a",
+      "target_source": "word popped from current SP immediately before BX; frame integrity required"
+    },
+    {
+      "site": "0x7e62",
+      "isa": "thumb",
+      "register": "r1",
+      "instruction": "bx      r1",
+      "kind": "stack-restored return-form",
+      "source_site": "0x7e60",
+      "target_source": "word popped from current SP immediately before BX; frame integrity required"
+    },
+    {
+      "site": "0x7eb2",
+      "isa": "thumb",
+      "register": "r1",
+      "instruction": "bx      r1",
+      "kind": "stack-restored return-form",
+      "source_site": "0x7eb0",
+      "target_source": "word popped from current SP immediately before BX; frame integrity required"
+    },
+    {
+      "site": "0x7efa",
+      "isa": "thumb",
+      "register": "r1",
+      "instruction": "bx      r1",
+      "kind": "stack-restored return-form",
+      "source_site": "0x7ef8",
+      "target_source": "word popped from current SP immediately before BX; frame integrity required"
+    },
+    {
+      "site": "0x7f26",
+      "isa": "thumb",
+      "register": "r1",
+      "instruction": "bx      r1",
+      "kind": "stack-restored return-form",
+      "source_site": "0x7f24",
+      "target_source": "word popped from current SP immediately before BX; frame integrity required"
+    },
+    {
+      "site": "0x7f3e",
+      "isa": "thumb",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x7f56",
+      "isa": "thumb",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x7fd4",
+      "isa": "thumb",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x8008",
+      "isa": "thumb",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x8032",
+      "isa": "thumb",
+      "register": "r0",
+      "instruction": "bx      r0",
+      "kind": "stack-restored return-form",
+      "source_site": "0x8030",
+      "target_source": "word popped from current SP immediately before BX; frame integrity required"
+    },
+    {
+      "site": "0x81a0",
+      "isa": "thumb",
+      "register": "r1",
+      "instruction": "bx      r1",
+      "kind": "stack-restored return-form",
+      "source_site": "0x819e",
+      "target_source": "word popped from current SP immediately before BX; frame integrity required"
+    },
+    {
+      "site": "0x84fc",
+      "isa": "thumb",
+      "register": "r1",
+      "instruction": "bx      r1",
+      "kind": "stack-restored return-form",
+      "source_site": "0x84fa",
+      "target_source": "word popped from current SP immediately before BX; frame integrity required"
+    },
+    {
+      "site": "0x852c",
+      "isa": "thumb",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x8548",
+      "isa": "thumb",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x8560",
+      "isa": "thumb",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x8564",
+      "isa": "thumb",
+      "register": "r15",
+      "instruction": "bx      pc",
+      "kind": "ISA interworking veneer",
+      "target": "0x8568",
+      "target_isa": "arm"
+    },
+    {
+      "site": "0x8574",
+      "isa": "thumb",
+      "register": "r15",
+      "instruction": "bx      pc",
+      "kind": "ISA interworking veneer",
+      "target": "0x8578",
+      "target_isa": "arm"
+    },
+    {
+      "site": "0x8584",
+      "isa": "thumb",
+      "register": "r15",
+      "instruction": "bx      pc",
+      "kind": "ISA interworking veneer",
+      "target": "0x8588",
+      "target_isa": "arm"
+    },
+    {
+      "site": "0x8674",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x868c",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bxne    lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x86a4",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x86bc",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bxne    lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x86d4",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x86e4",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bxeq    lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x86fc",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bxeq    lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x8748",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x877c",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x8784",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x87c4",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bxhs    lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x87cc",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x87d4",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x87e4",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x87f8",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x8838",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x8888",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x8890",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x88a0",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x88c0",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x88d0",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bxeq    lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x88f4",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x8904",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x890c",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bxne    lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x8918",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bxeq    lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x8920",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bxne    lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x8938",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x8950",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x8968",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x898c",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bxeq    lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x89a0",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x89ac",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x89c4",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x89f0",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x8a08",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x8a3c",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bxne    lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x8a48",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x8cf8",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x8ef0",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x8f34",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x9024",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bxlo    lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x9034",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x9044",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x9058",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bxeq    lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x90ac",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x90d8",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x90e0",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x9118",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bxhs    lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x9120",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x9128",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x9138",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x916c",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bxne    lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x9184",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x9198",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x91b8",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x91d0",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x9298",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x92a0",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x92c8",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x930c",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x9320",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x9340",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bxne    lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x934c",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x9480",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x9488",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x94b0",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x94f8",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x9520",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x9534",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x9540",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bxgt    lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x9568",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bxeq    lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x959c",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x95b0",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x95f0",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x962c",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bxhs    lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x9634",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bxeq    lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x9654",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x9660",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x966c",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bxgt    lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x96b4",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bxlo    lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0x96c0",
+      "isa": "arm",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0xb120",
+      "isa": "thumb",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0xb17a",
+      "isa": "thumb",
+      "register": "r14",
+      "instruction": "bx      lr",
+      "kind": "LR return-form",
+      "target_source": "current LR register; incoming calling/exception context required"
+    },
+    {
+      "site": "0xb1ae",
+      "isa": "thumb",
+      "register": "r1",
+      "instruction": "bx      r1",
+      "kind": "stack-restored return-form",
+      "source_site": "0xb1ac",
+      "target_source": "word popped from current SP immediately before BX; frame integrity required"
+    }
+  ],
+  "other_pc_writes": [
+    {
+      "site": "0x4040",
+      "isa": "arm",
+      "opcode": "0xe25ef004",
+      "instruction": "sub.s   pc, lr, #0x4",
+      "kind": "data-processing PC destination",
+      "disposition": "exception return using saved LR or stack/SPSR state; valid exception frame required"
+    },
+    {
+      "site": "0x40dc",
+      "isa": "arm",
+      "opcode": "0xe8fd8000",
+      "instruction": "ldm     sp!, {pc} ^",
+      "kind": "LDM including PC",
+      "disposition": "exception return using saved LR or stack/SPSR state; valid exception frame required"
+    },
+    {
+      "site": "0x4b80",
+      "isa": "thumb",
+      "opcode": "0x448f",
+      "instruction": "add     pc, r1",
+      "kind": "high-register ADD/MOV PC",
+      "disposition": "bounded indexed dispatch to accepted Thumb starts",
+      "table_cases": 29,
+      "targets": [
+        "0x4ba2",
+        "0x4ba6",
+        "0x4baa",
+        "0x4bae",
+        "0x4bb2",
+        "0x4bb6",
+        "0x4bba",
+        "0x4bbe",
+        "0x4bc2",
+        "0x4bc6",
+        "0x4bca",
+        "0x4bce",
+        "0x4bd2",
+        "0x4bd6",
+        "0x4bda",
+        "0x4bde",
+        "0x4be2",
+        "0x4be6",
+        "0x4be6",
+        "0x4bea",
+        "0x4bea",
+        "0x4bee",
+        "0x4bee",
+        "0x4bf2",
+        "0x4bf2",
+        "0x4bf6",
+        "0x4bf6",
+        "0x4bfa",
+        "0x4bfa"
+      ]
+    },
+    {
+      "site": "0x4c30",
+      "isa": "thumb",
+      "opcode": "0x448f",
+      "instruction": "add     pc, r1",
+      "kind": "high-register ADD/MOV PC",
+      "disposition": "bounded indexed dispatch to accepted Thumb starts",
+      "table_cases": 10,
+      "targets": [
+        "0x4c3e",
+        "0x4c42",
+        "0x4c46",
+        "0x4c4a",
+        "0x4c4e",
+        "0x4c52",
+        "0x4c56",
+        "0x4c5a",
+        "0x4c5e",
+        "0x4c62"
+      ]
+    },
+    {
+      "site": "0x608a",
+      "isa": "thumb",
+      "opcode": "0x44bf",
+      "instruction": "add     pc, r7",
+      "kind": "high-register ADD/MOV PC",
+      "disposition": "bounded indexed dispatch to accepted Thumb starts",
+      "table_cases": 218,
+      "targets": [
+        "0x6240",
+        "0x6274",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x6482",
+        "0x604e",
+        "0x64b8",
+        "0x662e",
+        "0x663e",
+        "0x604e",
+        "0x604e",
+        "0x664e",
+        "0x604e",
+        "0x669c",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x64d0",
+        "0x64e2",
+        "0x64f4",
+        "0x6514",
+        "0x604e",
+        "0x62f4",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x630e",
+        "0x6334",
+        "0x635a",
+        "0x604e",
+        "0x604e",
+        "0x6672",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x66ee",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x65f2",
+        "0x6604",
+        "0x661c",
+        "0x67ec",
+        "0x6804",
+        "0x681c",
+        "0x6834",
+        "0x6850",
+        "0x6868",
+        "0x6880",
+        "0x6898",
+        "0x68b0",
+        "0x68ca",
+        "0x68e4",
+        "0x68fe",
+        "0x6918",
+        "0x6932",
+        "0x694c",
+        "0x6966",
+        "0x6980",
+        "0x699a",
+        "0x69b4",
+        "0x69ce",
+        "0x69e8",
+        "0x6a02",
+        "0x6a1c",
+        "0x6a36",
+        "0x652a",
+        "0x6558",
+        "0x657c",
+        "0x65aa",
+        "0x65ce",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x62b6",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x6380",
+        "0x63f0",
+        "0x6418",
+        "0x645a",
+        "0x6286",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x604e",
+        "0x66ac"
+      ]
+    },
+    {
+      "site": "0x809a",
+      "isa": "thumb",
+      "opcode": "0x448f",
+      "instruction": "add     pc, r1",
+      "kind": "high-register ADD/MOV PC",
+      "disposition": "bounded indexed dispatch to accepted Thumb starts",
+      "table_cases": 6,
+      "targets": [
+        "0x80d8",
+        "0x80a2",
+        "0x8100",
+        "0x80a2",
+        "0x80b2",
+        "0x814c"
+      ]
+    }
+  ],
+  "software_interrupt_sites": [],
+  "limits": [
+    "Return-form classification does not prove frame integrity or exclude stack overwrite",
+    "AIC callback values depend on programmable vector state and interrupt context",
+    "Table proofs retain the referenced audits bounds and ordinary-state assumptions",
+    "No new independent entry established; global writers, mutable code and alternate ISA evidence remain open"
+  ]
+}

@@ -107,10 +107,12 @@ The independently callable numeric entries `0x8CFC`, `0x9048`, and `0x94B4`
 retain the earlier finding of no established in-image incoming reference.
 Absence from this scan does not prove runtime unreachability.
 
-Next work is to resolve the non-LR `BX` provenance and other computed PC
-writes, trace the data windows above, and continue the global parameter,
-interrupt, and subsystem accounts. No exhaustive-entry or full-analysis
-completion claim follows from this pass.
+The subsequent [indirect-transfer audit](INDIRECT_TRANSFER_PROVENANCE.md)
+classifies the local register sources of the 60 non-LR/non-PC sites and the
+six other computed PC writes. Their runtime frame/vector assumptions, the
+data windows above, and the global parameter, interrupt and subsystem accounts
+remain open. No exhaustive-entry or full-analysis completion claim follows
+from this pass.
 
 ```sh
 python audit/tools/audit_execution_discovery.py firmware_v2.8.4HF.bin --output audit/data/execution_discovery_audit.json
