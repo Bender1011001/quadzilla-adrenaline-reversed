@@ -26,7 +26,9 @@ effects must be read from their own reviews. The loop waits until
 `0x200718` becomes nonzero, calls `0x760C` and stores its returned byte at
 `0x200790`, then enters the repeated dispatcher at `0x78E4`. The wait is a
 software condition; actual interrupt delivery and elapsed time are not
-established here.
+established here. The [initial-state review](INITIAL_STATE_CONFIG_REVIEW.md)
+traces `0x760C` and the non-image configuration source that can replace its
+initialized mode byte.
 
 ## Dispatcher and state bytes
 

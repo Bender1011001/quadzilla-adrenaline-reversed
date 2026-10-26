@@ -1,0 +1,365 @@
+{
+  "format": "quadzilla-bounded-decode-v1",
+  "raw_sha256": "1ae519ba6194e8f7bdaaa94333a83a9e6fda3b0563f87f7d48383b37288c1780",
+  "tool_version": "5.2.8722 Personal",
+  "limitation": "decoder supports a superset of ARMv4T; explicit mode and bounds are supplied hypotheses",
+  "ranges": [
+    {
+      "start": "0x760c",
+      "end": "0x7698",
+      "architecture": "thumb2",
+      "instructions": [
+        {
+          "address": "0x760c",
+          "length": 2,
+          "text": "push    {r4, r5, r6, r7}"
+        },
+        {
+          "address": "0x760e",
+          "length": 2,
+          "text": "ldr     r0, [pc, #0x94]"
+        },
+        {
+          "address": "0x7610",
+          "length": 2,
+          "text": "ldr     r0, [r0]"
+        },
+        {
+          "address": "0x7612",
+          "length": 2,
+          "text": "lsls    r0, r0, #3"
+        },
+        {
+          "address": "0x7614",
+          "length": 2,
+          "text": "bmi     #0x761a"
+        },
+        {
+          "address": "0x7616",
+          "length": 2,
+          "text": "movs    r0, #1"
+        },
+        {
+          "address": "0x7618",
+          "length": 2,
+          "text": "b       #0x761c"
+        },
+        {
+          "address": "0x761a",
+          "length": 2,
+          "text": "movs    r0, #0"
+        },
+        {
+          "address": "0x761c",
+          "length": 2,
+          "text": "ldr     r6, [pc, #0x78]"
+        },
+        {
+          "address": "0x761e",
+          "length": 2,
+          "text": "movs    r7, r6"
+        },
+        {
+          "address": "0x7620",
+          "length": 2,
+          "text": "adds    r7, #0x12"
+        },
+        {
+          "address": "0x7622",
+          "length": 2,
+          "text": "movs    r1, #1"
+        },
+        {
+          "address": "0x7624",
+          "length": 2,
+          "text": "movs    r2, #0"
+        },
+        {
+          "address": "0x7626",
+          "length": 2,
+          "text": "ldrb    r3, [r7, #0xf]"
+        },
+        {
+          "address": "0x7628",
+          "length": 2,
+          "text": "cmp     r3, #1"
+        },
+        {
+          "address": "0x762a",
+          "length": 2,
+          "text": "beq     #0x7638"
+        },
+        {
+          "address": "0x762c",
+          "length": 2,
+          "text": "cmp     r3, #2"
+        },
+        {
+          "address": "0x762e",
+          "length": 2,
+          "text": "beq     #0x7650"
+        },
+        {
+          "address": "0x7630",
+          "length": 2,
+          "text": "cmp     r3, #3"
+        },
+        {
+          "address": "0x7632",
+          "length": 2,
+          "text": "beq     #0x763c"
+        },
+        {
+          "address": "0x7634",
+          "length": 2,
+          "text": "cmp     r0, #0"
+        },
+        {
+          "address": "0x7636",
+          "length": 2,
+          "text": "beq     #0x7692"
+        },
+        {
+          "address": "0x7638",
+          "length": 2,
+          "text": "movs    r0, #1"
+        },
+        {
+          "address": "0x763a",
+          "length": 2,
+          "text": "b       #0x7692"
+        },
+        {
+          "address": "0x763c",
+          "length": 2,
+          "text": "cmp     r0, #0"
+        },
+        {
+          "address": "0x763e",
+          "length": 2,
+          "text": "beq     #0x7692"
+        },
+        {
+          "address": "0x7640",
+          "length": 2,
+          "text": "movs    r0, #3"
+        },
+        {
+          "address": "0x7642",
+          "length": 2,
+          "text": "ldr     r3, [pc, #0x64]"
+        },
+        {
+          "address": "0x7644",
+          "length": 2,
+          "text": "strb    r1, [r3]"
+        },
+        {
+          "address": "0x7646",
+          "length": 2,
+          "text": "ldr     r3, [pc, #0x64]"
+        },
+        {
+          "address": "0x7648",
+          "length": 2,
+          "text": "strb    r2, [r3]"
+        },
+        {
+          "address": "0x764a",
+          "length": 2,
+          "text": "ldr     r2, [pc, #0x64]"
+        },
+        {
+          "address": "0x764c",
+          "length": 2,
+          "text": "strb    r1, [r2]"
+        },
+        {
+          "address": "0x764e",
+          "length": 2,
+          "text": "b       #0x7692"
+        },
+        {
+          "address": "0x7650",
+          "length": 2,
+          "text": "ldrh    r0, [r7, #2]"
+        },
+        {
+          "address": "0x7652",
+          "length": 2,
+          "text": "ldr     r3, [pc, #0x60]"
+        },
+        {
+          "address": "0x7654",
+          "length": 2,
+          "text": "ldr     r4, [pc, #0x60]"
+        },
+        {
+          "address": "0x7656",
+          "length": 2,
+          "text": "ldr     r5, [pc, #0x64]"
+        },
+        {
+          "address": "0x7658",
+          "length": 2,
+          "text": "ldrb    r7, [r7]"
+        },
+        {
+          "address": "0x765a",
+          "length": 2,
+          "text": "cmp     r7, #0"
+        },
+        {
+          "address": "0x765c",
+          "length": 2,
+          "text": "beq     #0x7672"
+        },
+        {
+          "address": "0x765e",
+          "length": 2,
+          "text": "ldr     r7, [pc, #0x3c]"
+        },
+        {
+          "address": "0x7660",
+          "length": 2,
+          "text": "ldr     r6, [r6, #0x24]"
+        },
+        {
+          "address": "0x7662",
+          "length": 2,
+          "text": "str     r6, [r7]"
+        },
+        {
+          "address": "0x7664",
+          "length": 2,
+          "text": "ldr     r6, [pc, #0x58]"
+        },
+        {
+          "address": "0x7666",
+          "length": 2,
+          "text": "muls    r0, r6, r0"
+        },
+        {
+          "address": "0x7668",
+          "length": 2,
+          "text": "str     r0, [r5]"
+        },
+        {
+          "address": "0x766a",
+          "length": 2,
+          "text": "strb    r2, [r4]"
+        },
+        {
+          "address": "0x766c",
+          "length": 2,
+          "text": "strb    r1, [r3]"
+        },
+        {
+          "address": "0x766e",
+          "length": 2,
+          "text": "movs    r0, #2"
+        },
+        {
+          "address": "0x7670",
+          "length": 2,
+          "text": "b       #0x7692"
+        },
+        {
+          "address": "0x7672",
+          "length": 2,
+          "text": "ldr     r7, [pc, #0x2c]"
+        },
+        {
+          "address": "0x7674",
+          "length": 2,
+          "text": "strh    r0, [r7]"
+        },
+        {
+          "address": "0x7676",
+          "length": 2,
+          "text": "ldr     r7, [pc, #0x4c]"
+        },
+        {
+          "address": "0x7678",
+          "length": 2,
+          "text": "ldr     r7, [r7]"
+        },
+        {
+          "address": "0x767a",
+          "length": 2,
+          "text": "cmp     r0, r7"
+        },
+        {
+          "address": "0x767c",
+          "length": 2,
+          "text": "bcs     #0x7690"
+        },
+        {
+          "address": "0x767e",
+          "length": 2,
+          "text": "movs    r0, #2"
+        },
+        {
+          "address": "0x7680",
+          "length": 2,
+          "text": "ldr     r7, [pc, #0x18]"
+        },
+        {
+          "address": "0x7682",
+          "length": 2,
+          "text": "ldr     r6, [r6, #0x24]"
+        },
+        {
+          "address": "0x7684",
+          "length": 2,
+          "text": "str     r6, [r7]"
+        },
+        {
+          "address": "0x7686",
+          "length": 2,
+          "text": "ldr     r6, [pc, #0x40]"
+        },
+        {
+          "address": "0x7688",
+          "length": 2,
+          "text": "str     r6, [r5]"
+        },
+        {
+          "address": "0x768a",
+          "length": 2,
+          "text": "strb    r2, [r4]"
+        },
+        {
+          "address": "0x768c",
+          "length": 2,
+          "text": "strb    r1, [r3]"
+        },
+        {
+          "address": "0x768e",
+          "length": 2,
+          "text": "b       #0x7692"
+        },
+        {
+          "address": "0x7690",
+          "length": 2,
+          "text": "movs    r0, #0"
+        },
+        {
+          "address": "0x7692",
+          "length": 2,
+          "text": "pop     {r4, r5, r6, r7}"
+        },
+        {
+          "address": "0x7694",
+          "length": 2,
+          "text": "add     sp, #0"
+        },
+        {
+          "address": "0x7696",
+          "length": 2,
+          "text": "bx      lr"
+        }
+      ]
+    }
+  ]
+}

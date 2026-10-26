@@ -1,0 +1,359 @@
+{
+  "format": "quadzilla-config-restore-emulation-v1",
+  "raw_sha256": "1ae519ba6194e8f7bdaaa94333a83a9e6fda3b0563f87f7d48383b37288c1780",
+  "cpu": "ARM926 functional surrogate",
+  "emulator": "Unicorn 2.1.4",
+  "entry": "0x5f14",
+  "copy_helper": "0x8530",
+  "source": "0x10ff00",
+  "destination": "0x2006cc",
+  "length": 44,
+  "cases": [
+    {
+      "label": "magic_absent",
+      "flash_magic": "0x0",
+      "copied": false,
+      "source_sha256": "526aaba616b74a886d59ec7c87c33b2b95a14fa7f60b71b9737a83f004d8eb11",
+      "before_mode_byte": 4,
+      "source_mode_byte": 234,
+      "after_mode_byte": 4,
+      "config_writes": [],
+      "visited": [
+        "0x5f14",
+        "0x5f16",
+        "0x5f18",
+        "0x5f1a",
+        "0x5f1c",
+        "0x5f26"
+      ]
+    },
+    {
+      "label": "magic_present",
+      "flash_magic": "0xa5",
+      "copied": true,
+      "source_sha256": "4b8a8cee13481c7be3cb1e85fcd4d12236bb30215e18be0a12270991b8b381d6",
+      "before_mode_byte": 4,
+      "source_mode_byte": 234,
+      "after_mode_byte": 234,
+      "config_writes": [
+        {
+          "pc": "0x853c",
+          "address": "0x2006cc",
+          "size": 1,
+          "value": "0xa5"
+        },
+        {
+          "pc": "0x853c",
+          "address": "0x2006cd",
+          "size": 1,
+          "value": "0xa"
+        },
+        {
+          "pc": "0x853c",
+          "address": "0x2006ce",
+          "size": 1,
+          "value": "0x11"
+        },
+        {
+          "pc": "0x853c",
+          "address": "0x2006cf",
+          "size": 1,
+          "value": "0x18"
+        },
+        {
+          "pc": "0x853c",
+          "address": "0x2006d0",
+          "size": 1,
+          "value": "0x1f"
+        },
+        {
+          "pc": "0x853c",
+          "address": "0x2006d1",
+          "size": 1,
+          "value": "0x26"
+        },
+        {
+          "pc": "0x853c",
+          "address": "0x2006d2",
+          "size": 1,
+          "value": "0x2d"
+        },
+        {
+          "pc": "0x853c",
+          "address": "0x2006d3",
+          "size": 1,
+          "value": "0x34"
+        },
+        {
+          "pc": "0x853c",
+          "address": "0x2006d4",
+          "size": 1,
+          "value": "0x3b"
+        },
+        {
+          "pc": "0x853c",
+          "address": "0x2006d5",
+          "size": 1,
+          "value": "0x42"
+        },
+        {
+          "pc": "0x853c",
+          "address": "0x2006d6",
+          "size": 1,
+          "value": "0x49"
+        },
+        {
+          "pc": "0x853c",
+          "address": "0x2006d7",
+          "size": 1,
+          "value": "0x50"
+        },
+        {
+          "pc": "0x853c",
+          "address": "0x2006d8",
+          "size": 1,
+          "value": "0x57"
+        },
+        {
+          "pc": "0x853c",
+          "address": "0x2006d9",
+          "size": 1,
+          "value": "0x5e"
+        },
+        {
+          "pc": "0x853c",
+          "address": "0x2006da",
+          "size": 1,
+          "value": "0x65"
+        },
+        {
+          "pc": "0x853c",
+          "address": "0x2006db",
+          "size": 1,
+          "value": "0x6c"
+        },
+        {
+          "pc": "0x853c",
+          "address": "0x2006dc",
+          "size": 1,
+          "value": "0x73"
+        },
+        {
+          "pc": "0x853c",
+          "address": "0x2006dd",
+          "size": 1,
+          "value": "0x7a"
+        },
+        {
+          "pc": "0x853c",
+          "address": "0x2006de",
+          "size": 1,
+          "value": "0x81"
+        },
+        {
+          "pc": "0x853c",
+          "address": "0x2006df",
+          "size": 1,
+          "value": "0x88"
+        },
+        {
+          "pc": "0x853c",
+          "address": "0x2006e0",
+          "size": 1,
+          "value": "0x8f"
+        },
+        {
+          "pc": "0x853c",
+          "address": "0x2006e1",
+          "size": 1,
+          "value": "0x96"
+        },
+        {
+          "pc": "0x853c",
+          "address": "0x2006e2",
+          "size": 1,
+          "value": "0x9d"
+        },
+        {
+          "pc": "0x853c",
+          "address": "0x2006e3",
+          "size": 1,
+          "value": "0xa4"
+        },
+        {
+          "pc": "0x853c",
+          "address": "0x2006e4",
+          "size": 1,
+          "value": "0xab"
+        },
+        {
+          "pc": "0x853c",
+          "address": "0x2006e5",
+          "size": 1,
+          "value": "0xb2"
+        },
+        {
+          "pc": "0x853c",
+          "address": "0x2006e6",
+          "size": 1,
+          "value": "0xb9"
+        },
+        {
+          "pc": "0x853c",
+          "address": "0x2006e7",
+          "size": 1,
+          "value": "0xc0"
+        },
+        {
+          "pc": "0x853c",
+          "address": "0x2006e8",
+          "size": 1,
+          "value": "0xc7"
+        },
+        {
+          "pc": "0x853c",
+          "address": "0x2006e9",
+          "size": 1,
+          "value": "0xce"
+        },
+        {
+          "pc": "0x853c",
+          "address": "0x2006ea",
+          "size": 1,
+          "value": "0xd5"
+        },
+        {
+          "pc": "0x853c",
+          "address": "0x2006eb",
+          "size": 1,
+          "value": "0xdc"
+        },
+        {
+          "pc": "0x853c",
+          "address": "0x2006ec",
+          "size": 1,
+          "value": "0xe3"
+        },
+        {
+          "pc": "0x853c",
+          "address": "0x2006ed",
+          "size": 1,
+          "value": "0xea"
+        },
+        {
+          "pc": "0x853c",
+          "address": "0x2006ee",
+          "size": 1,
+          "value": "0xf1"
+        },
+        {
+          "pc": "0x853c",
+          "address": "0x2006ef",
+          "size": 1,
+          "value": "0xf8"
+        },
+        {
+          "pc": "0x853c",
+          "address": "0x2006f0",
+          "size": 1,
+          "value": "0xff"
+        },
+        {
+          "pc": "0x853c",
+          "address": "0x2006f1",
+          "size": 1,
+          "value": "0x6"
+        },
+        {
+          "pc": "0x853c",
+          "address": "0x2006f2",
+          "size": 1,
+          "value": "0xd"
+        },
+        {
+          "pc": "0x853c",
+          "address": "0x2006f3",
+          "size": 1,
+          "value": "0x14"
+        },
+        {
+          "pc": "0x853c",
+          "address": "0x2006f4",
+          "size": 1,
+          "value": "0x1b"
+        },
+        {
+          "pc": "0x853c",
+          "address": "0x2006f5",
+          "size": 1,
+          "value": "0x22"
+        },
+        {
+          "pc": "0x853c",
+          "address": "0x2006f6",
+          "size": 1,
+          "value": "0x29"
+        },
+        {
+          "pc": "0x853c",
+          "address": "0x2006f7",
+          "size": 1,
+          "value": "0x30"
+        }
+      ],
+      "visited": [
+        "0x5f14",
+        "0x5f16",
+        "0x5f18",
+        "0x5f1a",
+        "0x5f1c",
+        "0x5f1e",
+        "0x5f20",
+        "0x5f22",
+        "0x5f26",
+        "0x8530",
+        "0x8532",
+        "0x8534",
+        "0x8536",
+        "0x8538",
+        "0x853a",
+        "0x853c",
+        "0x853e",
+        "0x8540",
+        "0x8542",
+        "0x8544",
+        "0x8546",
+        "0x8548"
+      ]
+    }
+  ],
+  "visited_starts": [
+    "0x5f14",
+    "0x5f16",
+    "0x5f18",
+    "0x5f1a",
+    "0x5f1c",
+    "0x5f1e",
+    "0x5f20",
+    "0x5f22",
+    "0x5f26",
+    "0x8530",
+    "0x8532",
+    "0x8534",
+    "0x8536",
+    "0x8538",
+    "0x853a",
+    "0x853c",
+    "0x853e",
+    "0x8540",
+    "0x8542",
+    "0x8544",
+    "0x8546",
+    "0x8548"
+  ],
+  "limits": [
+    "0x10ff00 is synthetic mapped memory, not device flash",
+    "stops before the distinct response mirror at 0x5f34",
+    "magic-byte acceptance does not prove configuration authenticity or integrity"
+  ]
+}

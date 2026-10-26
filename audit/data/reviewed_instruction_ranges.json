@@ -1149,6 +1149,58 @@
       ]
     },
     {
+      "start": "0x5f14",
+      "end": "0x5f2e",
+      "entry": "0x5f14",
+      "isa": "thumb",
+      "account": "Complete conditional configuration-restore wrapper; stops before mirror callee in bounded run and statically traces the returning epilogue",
+      "evidence": [
+        "audit/data/config_restore_binaryninja.json",
+        "audit/data/config_restore_emulation.json",
+        "docs/INITIAL_STATE_CONFIG_REVIEW.md"
+      ],
+      "decoder_artifact": "audit/data/config_restore_binaryninja.json"
+    },
+    {
+      "start": "0x5f34",
+      "end": "0x5fec",
+      "entry": "0x5f34",
+      "isa": "thumb",
+      "account": "Complete response mirror; all 92 starts visited with ordered AID 151 byte overwrite and original table-2 reader observation",
+      "evidence": [
+        "audit/data/config_restore_binaryninja.json",
+        "audit/data/config_response_mirror_emulation.json",
+        "docs/INITIAL_STATE_CONFIG_REVIEW.md"
+      ],
+      "decoder_artifact": "audit/data/config_restore_binaryninja.json"
+    },
+    {
+      "start": "0x760c",
+      "end": "0x7698",
+      "entry": "0x760c",
+      "isa": "thumb",
+      "account": "Complete initial-state selector; all 70 starts visited across 12 synthetic pin, mode and threshold cases",
+      "evidence": [
+        "audit/data/initial_state_binaryninja.json",
+        "audit/data/initial_state_emulation.json",
+        "docs/INITIAL_STATE_CONFIG_REVIEW.md"
+      ],
+      "decoder_artifact": "audit/data/initial_state_binaryninja.json"
+    },
+    {
+      "start": "0x8530",
+      "end": "0x854a",
+      "entry": "0x8530",
+      "isa": "thumb",
+      "account": "Complete forward-copy helper; all 13 starts visited during 44-byte configuration restore, including IDA invalid-ISA boundary correction",
+      "evidence": [
+        "audit/data/config_restore_binaryninja.json",
+        "audit/data/config_restore_emulation.json",
+        "docs/INITIAL_STATE_CONFIG_REVIEW.md"
+      ],
+      "decoder_artifact": "audit/data/config_restore_binaryninja.json"
+    },
+    {
       "start": "0x8970",
       "end": "0x96c4",
       "entry": "0x8970",

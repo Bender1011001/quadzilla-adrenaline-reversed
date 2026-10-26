@@ -9,7 +9,7 @@
     "0x8038",
     "0x7cc4"
   ],
-  "remaining_entries": 27,
+  "remaining_entries": 24,
   "queue": [
     {
       "entry": "0x4214",
@@ -49,20 +49,6 @@
         "0x41f0"
       ],
       "reference_regions": {}
-    },
-    {
-      "entry": "0x5f14",
-      "undirected_call_distance": 3,
-      "anchor_path": [
-        "0x601c",
-        "0x4384",
-        "0x77b8",
-        "0x5f14"
-      ],
-      "reference_regions": {
-        "external_or_literal": 1,
-        "image": 2
-      }
     },
     {
       "entry": "0x7364",
@@ -172,21 +158,6 @@
       }
     },
     {
-      "entry": "0x760c",
-      "undirected_call_distance": 3,
-      "anchor_path": [
-        "0x601c",
-        "0x4384",
-        "0x77b8",
-        "0x760c"
-      ],
-      "reference_regions": {
-        "image": 14,
-        "peripheral": 1,
-        "sram": 13
-      }
-    },
-    {
       "entry": "0x6b20",
       "undirected_call_distance": 4,
       "anchor_path": [
@@ -195,18 +166,6 @@
         "0x77b8",
         "0x73e4",
         "0x6b20"
-      ],
-      "reference_regions": {}
-    },
-    {
-      "entry": "0x8530",
-      "undirected_call_distance": 4,
-      "anchor_path": [
-        "0x601c",
-        "0x4384",
-        "0x77b8",
-        "0x5f14",
-        "0x8530"
       ],
       "reference_regions": {}
     },
@@ -317,5 +276,5 @@
       "reference_regions": {}
     }
   ],
-  "catalog_lf_text_sha256": "c88ad5bb2d19c668fbd41400f4b134430f423def61affc351c88428ff581b44c"
+  "catalog_lf_text_sha256": "50549b16c92822dc015bddfbdd906f22d0392c4c89622031502c0b8b7813252c"
 }
