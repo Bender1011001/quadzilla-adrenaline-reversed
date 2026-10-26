@@ -276,7 +276,11 @@
       "entry": "0x4818",
       "isa": "thumb",
       "account": "Complete high-idle delay/input gate state machine; all 85 body starts visited across 16390 original-byte synthetic calls with state, flag, timer, register and write checks",
-      "evidence": ["audit/data/input_gate_binaryninja.json", "audit/data/input_gate_emulation.json", "docs/INPUT_GATE_STATE_REVIEW.md"],
+      "evidence": [
+        "audit/data/input_gate_binaryninja.json",
+        "audit/data/input_gate_emulation.json",
+        "docs/INPUT_GATE_STATE_REVIEW.md"
+      ],
       "decoder_artifact": "audit/data/input_gate_binaryninja.json"
     },
     {
@@ -354,7 +358,11 @@
       "entry": "0x4b38",
       "isa": "thumb",
       "account": "Capture scalar entry with first gate, curve index bounds check, and first computed Thumb jump-table dispatch",
-      "evidence": ["audit/data/capture_scalar_binaryninja.json", "audit/data/capture_scalar_structure.json", "docs/CAPTURE_SCALAR_REVIEW.md"],
+      "evidence": [
+        "audit/data/capture_scalar_binaryninja.json",
+        "audit/data/capture_scalar_structure.json",
+        "docs/CAPTURE_SCALAR_REVIEW.md"
+      ],
       "decoder_artifact": "audit/data/capture_scalar_binaryninja.json"
     },
     {
@@ -363,7 +371,11 @@
       "entry": "0x4b38",
       "isa": "thumb",
       "account": "First curve dispatch arms, percentage scaling, second gate and second bounded Thumb jump-table dispatch",
-      "evidence": ["audit/data/capture_scalar_binaryninja.json", "audit/data/capture_scalar_structure.json", "docs/CAPTURE_SCALAR_REVIEW.md"],
+      "evidence": [
+        "audit/data/capture_scalar_binaryninja.json",
+        "audit/data/capture_scalar_structure.json",
+        "docs/CAPTURE_SCALAR_REVIEW.md"
+      ],
       "decoder_artifact": "audit/data/capture_scalar_binaryninja.json"
     },
     {
@@ -372,7 +384,11 @@
       "entry": "0x4b38",
       "isa": "thumb",
       "account": "Second curve dispatch arms, latch-dependent state and telemetry copy, conditional signed table adjustment, and 4095 cap/return",
-      "evidence": ["audit/data/capture_scalar_binaryninja.json", "audit/data/capture_scalar_structure.json", "docs/CAPTURE_SCALAR_REVIEW.md"],
+      "evidence": [
+        "audit/data/capture_scalar_binaryninja.json",
+        "audit/data/capture_scalar_structure.json",
+        "docs/CAPTURE_SCALAR_REVIEW.md"
+      ],
       "decoder_artifact": "audit/data/capture_scalar_binaryninja.json"
     },
     {
@@ -1104,27 +1120,55 @@
       ]
     },
     {
-      "start": "0x7178", "end": "0x71be", "entry": "0x7178", "isa": "thumb",
+      "start": "0x7178",
+      "end": "0x71be",
+      "entry": "0x7178",
+      "isa": "thumb",
       "account": "Complete USART interrupt body with all timeout/TX-end/PDC-enabled status combinations executed and exact write sequence checked",
-      "evidence": ["audit/data/uart_buffer_binaryninja.json", "audit/data/usart_pdc_emulation.json", "docs/USART0_BUFFER_REVIEW.md"],
+      "evidence": [
+        "audit/data/uart_buffer_binaryninja.json",
+        "audit/data/usart_pdc_emulation.json",
+        "docs/USART0_BUFFER_REVIEW.md"
+      ],
       "decoder_artifact": "audit/data/uart_buffer_binaryninja.json"
     },
     {
-      "start": "0x71d0", "end": "0x720c", "entry": "0x71d0", "isa": "thumb",
+      "start": "0x71d0",
+      "end": "0x720c",
+      "entry": "0x71d0",
+      "isa": "thumb",
       "account": "Complete TX current/next staging body executed against frozen-register queue model, including both counts busy and zero requested count",
-      "evidence": ["audit/data/uart_buffer_binaryninja.json", "audit/data/usart_pdc_emulation.json", "docs/USART0_BUFFER_REVIEW.md"],
+      "evidence": [
+        "audit/data/uart_buffer_binaryninja.json",
+        "audit/data/usart_pdc_emulation.json",
+        "docs/USART0_BUFFER_REVIEW.md"
+      ],
       "decoder_artifact": "audit/data/uart_buffer_binaryninja.json"
     },
     {
-      "start": "0x720c", "end": "0x7256", "entry": "0x720c", "isa": "thumb",
+      "start": "0x720c",
+      "end": "0x7256",
+      "entry": "0x720c",
+      "isa": "thumb",
       "account": "Complete RX current/next staging body executed against frozen-register queue model and three explicit write-only US_CR read assumptions",
-      "evidence": ["audit/data/uart_buffer_binaryninja.json", "audit/data/usart_pdc_emulation.json", "docs/USART0_BUFFER_REVIEW.md"],
+      "evidence": [
+        "audit/data/uart_buffer_binaryninja.json",
+        "audit/data/usart_pdc_emulation.json",
+        "docs/USART0_BUFFER_REVIEW.md"
+      ],
       "decoder_artifact": "audit/data/uart_buffer_binaryninja.json"
     },
     {
-      "start": "0x725c", "end": "0x72fe", "entry": "0x725c", "isa": "thumb",
+      "start": "0x725c",
+      "end": "0x72fe",
+      "entry": "0x725c",
+      "isa": "thumb",
       "account": "Complete USART/PDC/AIC initializer with original-byte write trace under three explicit write-only US_CR read assumptions; hardware command effects not emulated",
-      "evidence": ["audit/data/uart_buffer_binaryninja.json", "audit/data/usart_pdc_emulation.json", "docs/USART0_BUFFER_REVIEW.md"],
+      "evidence": [
+        "audit/data/uart_buffer_binaryninja.json",
+        "audit/data/usart_pdc_emulation.json",
+        "docs/USART0_BUFFER_REVIEW.md"
+      ],
       "decoder_artifact": "audit/data/uart_buffer_binaryninja.json"
     },
     {
@@ -1231,6 +1275,19 @@
         "docs/STARTUP_PERSISTENCE_REVIEW.md"
       ],
       "decoder_artifact": "audit/data/adc_init_vector_binaryninja.json"
+    },
+    {
+      "start": "0x7434",
+      "end": "0x743c",
+      "entry": "0x7434",
+      "isa": "thumb",
+      "account": "Complete source-bound wrapper/flag or keyed reset-request body; every body start exercised with synthetic SRAM/MMIO",
+      "evidence": [
+        "audit/data/startup_persistence_binaryninja.json",
+        "audit/data/residual_code_adjudication.json",
+        "docs/RESIDUAL_CODE_ADJUDICATION.md"
+      ],
+      "decoder_artifact": "audit/data/startup_persistence_binaryninja.json"
     },
     {
       "start": "0x7444",
@@ -1350,6 +1407,110 @@
         "docs/MAIN_LOOP_STATE_REVIEW.md"
       ],
       "decoder_artifact": "audit/data/main_loop_binaryninja.json"
+    },
+    {
+      "start": "0x7af8",
+      "end": "0x7b02",
+      "entry": "0x7af8",
+      "isa": "thumb",
+      "account": "Complete source-bound wrapper/flag or keyed reset-request body; every body start exercised with synthetic SRAM/MMIO",
+      "evidence": [
+        "audit/data/uart_buffer_binaryninja.json",
+        "audit/data/residual_code_adjudication.json",
+        "docs/RESIDUAL_CODE_ADJUDICATION.md"
+      ],
+      "decoder_artifact": "audit/data/uart_buffer_binaryninja.json"
+    },
+    {
+      "start": "0x7b04",
+      "end": "0x7b0a",
+      "entry": "0x7b04",
+      "isa": "thumb",
+      "account": "Complete source-bound wrapper/flag or keyed reset-request body; every body start exercised with synthetic SRAM/MMIO",
+      "evidence": [
+        "audit/data/uart_buffer_binaryninja.json",
+        "audit/data/residual_code_adjudication.json",
+        "docs/RESIDUAL_CODE_ADJUDICATION.md"
+      ],
+      "decoder_artifact": "audit/data/uart_buffer_binaryninja.json"
+    },
+    {
+      "start": "0x7b10",
+      "end": "0x7b16",
+      "entry": "0x7b10",
+      "isa": "thumb",
+      "account": "Complete source-bound wrapper/flag or keyed reset-request body; every body start exercised with synthetic SRAM/MMIO",
+      "evidence": [
+        "audit/data/uart_buffer_binaryninja.json",
+        "audit/data/residual_code_adjudication.json",
+        "docs/RESIDUAL_CODE_ADJUDICATION.md"
+      ],
+      "decoder_artifact": "audit/data/uart_buffer_binaryninja.json"
+    },
+    {
+      "start": "0x7b1c",
+      "end": "0x7b28",
+      "entry": "0x7b1c",
+      "isa": "thumb",
+      "account": "Complete source-bound wrapper/flag or keyed reset-request body; every body start exercised with synthetic SRAM/MMIO",
+      "evidence": [
+        "audit/data/uart_buffer_binaryninja.json",
+        "audit/data/residual_code_adjudication.json",
+        "docs/RESIDUAL_CODE_ADJUDICATION.md"
+      ],
+      "decoder_artifact": "audit/data/uart_buffer_binaryninja.json"
+    },
+    {
+      "start": "0x7b28",
+      "end": "0x7b30",
+      "entry": "0x7b28",
+      "isa": "thumb",
+      "account": "Complete source-bound wrapper/flag or keyed reset-request body; every body start exercised with synthetic SRAM/MMIO",
+      "evidence": [
+        "audit/data/uart_buffer_binaryninja.json",
+        "audit/data/residual_code_adjudication.json",
+        "docs/RESIDUAL_CODE_ADJUDICATION.md"
+      ],
+      "decoder_artifact": "audit/data/uart_buffer_binaryninja.json"
+    },
+    {
+      "start": "0x7b30",
+      "end": "0x7b38",
+      "entry": "0x7b30",
+      "isa": "thumb",
+      "account": "Complete source-bound wrapper/flag or keyed reset-request body; every body start exercised with synthetic SRAM/MMIO",
+      "evidence": [
+        "audit/data/uart_buffer_binaryninja.json",
+        "audit/data/residual_code_adjudication.json",
+        "docs/RESIDUAL_CODE_ADJUDICATION.md"
+      ],
+      "decoder_artifact": "audit/data/uart_buffer_binaryninja.json"
+    },
+    {
+      "start": "0x7b38",
+      "end": "0x7b44",
+      "entry": "0x7b38",
+      "isa": "thumb",
+      "account": "Complete source-bound wrapper/flag or keyed reset-request body; every body start exercised with synthetic SRAM/MMIO",
+      "evidence": [
+        "audit/data/uart_buffer_binaryninja.json",
+        "audit/data/residual_code_adjudication.json",
+        "docs/RESIDUAL_CODE_ADJUDICATION.md"
+      ],
+      "decoder_artifact": "audit/data/uart_buffer_binaryninja.json"
+    },
+    {
+      "start": "0x7b4c",
+      "end": "0x7b58",
+      "entry": "0x7b4c",
+      "isa": "thumb",
+      "account": "Complete source-bound wrapper/flag or keyed reset-request body; every body start exercised with synthetic SRAM/MMIO",
+      "evidence": [
+        "audit/data/uart_buffer_binaryninja.json",
+        "audit/data/residual_code_adjudication.json",
+        "docs/RESIDUAL_CODE_ADJUDICATION.md"
+      ],
+      "decoder_artifact": "audit/data/uart_buffer_binaryninja.json"
     },
     {
       "start": "0x7b60",
@@ -1667,6 +1828,90 @@
         "audit/data/startup_init_emulation.json"
       ],
       "decoder_artifact": "audit/data/startup_persistence_binaryninja.json"
+    },
+    {
+      "start": "0x8564",
+      "end": "0x8566",
+      "entry": "0x8564",
+      "isa": "thumb",
+      "account": "Integer runtime interworking/body bytes; all non-padding starts covered by committed original-byte division suites",
+      "evidence": [
+        "audit/data/integer_runtime_binaryninja.json",
+        "audit/data/integer_runtime_emulation.json",
+        "audit/data/residual_code_adjudication.json",
+        "docs/RESIDUAL_CODE_ADJUDICATION.md"
+      ],
+      "decoder_artifact": "audit/data/integer_runtime_binaryninja.json"
+    },
+    {
+      "start": "0x8568",
+      "end": "0x8574",
+      "entry": "0x8568",
+      "isa": "arm",
+      "account": "Integer runtime interworking/body bytes; all non-padding starts covered by committed original-byte division suites",
+      "evidence": [
+        "audit/data/integer_runtime_binaryninja.json",
+        "audit/data/integer_runtime_emulation.json",
+        "audit/data/residual_code_adjudication.json",
+        "docs/RESIDUAL_CODE_ADJUDICATION.md"
+      ],
+      "decoder_artifact": "audit/data/integer_runtime_binaryninja.json"
+    },
+    {
+      "start": "0x8574",
+      "end": "0x8576",
+      "entry": "0x8574",
+      "isa": "thumb",
+      "account": "Integer runtime interworking/body bytes; all non-padding starts covered by committed original-byte division suites",
+      "evidence": [
+        "audit/data/integer_runtime_binaryninja.json",
+        "audit/data/integer_runtime_emulation.json",
+        "audit/data/residual_code_adjudication.json",
+        "docs/RESIDUAL_CODE_ADJUDICATION.md"
+      ],
+      "decoder_artifact": "audit/data/integer_runtime_binaryninja.json"
+    },
+    {
+      "start": "0x8578",
+      "end": "0x8584",
+      "entry": "0x8578",
+      "isa": "arm",
+      "account": "Integer runtime interworking/body bytes; all non-padding starts covered by committed original-byte division suites",
+      "evidence": [
+        "audit/data/integer_runtime_binaryninja.json",
+        "audit/data/integer_runtime_emulation.json",
+        "audit/data/residual_code_adjudication.json",
+        "docs/RESIDUAL_CODE_ADJUDICATION.md"
+      ],
+      "decoder_artifact": "audit/data/integer_runtime_binaryninja.json"
+    },
+    {
+      "start": "0x8584",
+      "end": "0x8586",
+      "entry": "0x8584",
+      "isa": "thumb",
+      "account": "Integer runtime interworking/body bytes; all non-padding starts covered by committed original-byte division suites",
+      "evidence": [
+        "audit/data/integer_runtime_binaryninja.json",
+        "audit/data/integer_runtime_emulation.json",
+        "audit/data/residual_code_adjudication.json",
+        "docs/RESIDUAL_CODE_ADJUDICATION.md"
+      ],
+      "decoder_artifact": "audit/data/integer_runtime_binaryninja.json"
+    },
+    {
+      "start": "0x8588",
+      "end": "0x8678",
+      "entry": "0x8588",
+      "isa": "arm",
+      "account": "Integer runtime interworking/body bytes; all non-padding starts covered by committed original-byte division suites",
+      "evidence": [
+        "audit/data/integer_runtime_binaryninja.json",
+        "audit/data/integer_runtime_emulation.json",
+        "audit/data/residual_code_adjudication.json",
+        "docs/RESIDUAL_CODE_ADJUDICATION.md"
+      ],
+      "decoder_artifact": "audit/data/integer_runtime_binaryninja.json"
     },
     {
       "start": "0x8678",

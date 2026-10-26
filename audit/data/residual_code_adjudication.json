@@ -1,0 +1,510 @@
+{
+  "format": "quadzilla-residual-code-adjudication-v1",
+  "raw_sha256": "1ae519ba6194e8f7bdaaa94333a83a9e6fda3b0563f87f7d48383b37288c1780",
+  "alignment_after_unconditional_transfer": [
+    {
+      "start": "0x4302",
+      "bytes": "c046",
+      "preceding_transfer": "BX              R0"
+    },
+    {
+      "start": "0x435e",
+      "bytes": "c046",
+      "preceding_transfer": "BX              LR"
+    },
+    {
+      "start": "0x4596",
+      "bytes": "c046",
+      "preceding_transfer": "BX              R0"
+    },
+    {
+      "start": "0x46c2",
+      "bytes": "c046",
+      "preceding_transfer": "BX              LR"
+    },
+    {
+      "start": "0x4942",
+      "bytes": "c046",
+      "preceding_transfer": "BX              R1"
+    },
+    {
+      "start": "0x570e",
+      "bytes": "c046",
+      "preceding_transfer": "BX              R12 ; sub_893C"
+    },
+    {
+      "start": "0x5736",
+      "bytes": "c046",
+      "preceding_transfer": "BX              LR"
+    },
+    {
+      "start": "0x5756",
+      "bytes": "c046",
+      "preceding_transfer": "BX              LR"
+    },
+    {
+      "start": "0x5cba",
+      "bytes": "c046",
+      "preceding_transfer": "BX              R0"
+    },
+    {
+      "start": "0x5dea",
+      "bytes": "c046",
+      "preceding_transfer": "BX              R0"
+    },
+    {
+      "start": "0x5ef2",
+      "bytes": "c046",
+      "preceding_transfer": "BX              R0"
+    },
+    {
+      "start": "0x5f2e",
+      "bytes": "c046",
+      "preceding_transfer": "BX              R0"
+    },
+    {
+      "start": "0x6702",
+      "bytes": "c046",
+      "preceding_transfer": "B               loc_67E6"
+    },
+    {
+      "start": "0x6b1a",
+      "bytes": "c046",
+      "preceding_transfer": "BX              R12 ; sub_89B0"
+    },
+    {
+      "start": "0x6bd2",
+      "bytes": "c046",
+      "preceding_transfer": "BX              R1"
+    },
+    {
+      "start": "0x6c5e",
+      "bytes": "c046",
+      "preceding_transfer": "BX              LR"
+    },
+    {
+      "start": "0x6c82",
+      "bytes": "c046",
+      "preceding_transfer": "BX              LR"
+    },
+    {
+      "start": "0x6f56",
+      "bytes": "c046",
+      "preceding_transfer": "BX              R0"
+    },
+    {
+      "start": "0x70ca",
+      "bytes": "c046",
+      "preceding_transfer": "BX              LR"
+    },
+    {
+      "start": "0x7132",
+      "bytes": "c046",
+      "preceding_transfer": "BX              R12 ; byte_89C8"
+    },
+    {
+      "start": "0x7172",
+      "bytes": "c046",
+      "preceding_transfer": "BX              R12 ; loc_8EF4"
+    },
+    {
+      "start": "0x73c6",
+      "bytes": "c046",
+      "preceding_transfer": "BX              LR"
+    },
+    {
+      "start": "0x742e",
+      "bytes": "c046",
+      "preceding_transfer": "BX              R1"
+    },
+    {
+      "start": "0x7486",
+      "bytes": "c046",
+      "preceding_transfer": "BX              LR"
+    },
+    {
+      "start": "0x7a3e",
+      "bytes": "c046",
+      "preceding_transfer": "B               loc_78E2"
+    },
+    {
+      "start": "0x7b0a",
+      "bytes": "c046",
+      "preceding_transfer": "BX              LR"
+    },
+    {
+      "start": "0x7b16",
+      "bytes": "c046",
+      "preceding_transfer": "BX              LR"
+    },
+    {
+      "start": "0x7c52",
+      "bytes": "c046",
+      "preceding_transfer": "BX              LR"
+    },
+    {
+      "start": "0x7c9e",
+      "bytes": "c046",
+      "preceding_transfer": "BX              LR"
+    },
+    {
+      "start": "0x84fe",
+      "bytes": "c046",
+      "preceding_transfer": "BX              R1"
+    },
+    {
+      "start": "0x6b46",
+      "bytes": "ffff",
+      "preceding_transfer": "BX              LR"
+    },
+    {
+      "start": "0x74c2",
+      "bytes": "ffff",
+      "preceding_transfer": "BX              LR"
+    },
+    {
+      "start": "0x7b02",
+      "bytes": "ffff",
+      "preceding_transfer": "BX              R0"
+    },
+    {
+      "start": "0x7be6",
+      "bytes": "ffff",
+      "preceding_transfer": "BX              R1"
+    },
+    {
+      "start": "0x7bee",
+      "bytes": "ffff",
+      "preceding_transfer": "BX              LR"
+    },
+    {
+      "start": "0x7fd6",
+      "bytes": "ffff",
+      "preceding_transfer": "BX              LR"
+    },
+    {
+      "start": "0x852e",
+      "bytes": "ffff",
+      "preceding_transfer": "BX              LR"
+    },
+    {
+      "start": "0x8562",
+      "bytes": "ffff",
+      "preceding_transfer": "BX              LR"
+    }
+  ],
+  "interworking_nops": [
+    "0x8566",
+    "0x8576",
+    "0x8586"
+  ],
+  "division_visited_starts": [
+    "0x8564",
+    "0x8568",
+    "0x856c",
+    "0x8570",
+    "0x8574",
+    "0x8578",
+    "0x857c",
+    "0x8580",
+    "0x8584",
+    "0x8588",
+    "0x858c",
+    "0x8590",
+    "0x8594",
+    "0x8598",
+    "0x859c",
+    "0x85a0",
+    "0x85a4",
+    "0x85a8",
+    "0x85ac",
+    "0x85b0",
+    "0x85b4",
+    "0x85b8",
+    "0x85bc",
+    "0x85c0",
+    "0x85c4",
+    "0x85c8",
+    "0x85cc",
+    "0x85d0",
+    "0x85d4",
+    "0x85d8",
+    "0x85dc",
+    "0x85e0",
+    "0x85e4",
+    "0x85e8",
+    "0x85ec",
+    "0x85f0",
+    "0x85f4",
+    "0x85f8",
+    "0x85fc",
+    "0x8600",
+    "0x8604",
+    "0x8608",
+    "0x860c",
+    "0x8610",
+    "0x8614",
+    "0x8618",
+    "0x861c",
+    "0x8620",
+    "0x8624",
+    "0x8628",
+    "0x862c",
+    "0x8630",
+    "0x8634",
+    "0x8638",
+    "0x863c",
+    "0x8640",
+    "0x8644",
+    "0x8648",
+    "0x864c",
+    "0x8650",
+    "0x8654",
+    "0x8658",
+    "0x865c",
+    "0x8660",
+    "0x8664",
+    "0x8668",
+    "0x866c",
+    "0x8670",
+    "0x8674"
+  ],
+  "ratio_table_range": [
+    "0x9f88",
+    "0x9ff0"
+  ],
+  "ratio_table_sha256": "79c206a7d9ce79de8a04f947c599d9b599eee07d3ed9aeb013bb1d1ae3ebb1a0",
+  "spi_adc_zero_pad": "0xa02f",
+  "new_execution_cases": 519,
+  "wrapper_reset_ranges": [
+    [
+      "0x7af8",
+      "0x7b02"
+    ],
+    [
+      "0x7b04",
+      "0x7b0a"
+    ],
+    [
+      "0x7b10",
+      "0x7b16"
+    ],
+    [
+      "0x7b1c",
+      "0x7b28"
+    ],
+    [
+      "0x7b28",
+      "0x7b30"
+    ],
+    [
+      "0x7b30",
+      "0x7b38"
+    ],
+    [
+      "0x7b38",
+      "0x7b44"
+    ],
+    [
+      "0x7b4c",
+      "0x7b58"
+    ],
+    [
+      "0x7434",
+      "0x743c"
+    ]
+  ],
+  "wrapper_reset_visited_starts": [
+    "0x7434",
+    "0x7436",
+    "0x7438",
+    "0x743a",
+    "0x7af8",
+    "0x7afa",
+    "0x7afe",
+    "0x7b00",
+    "0x7b04",
+    "0x7b06",
+    "0x7b08",
+    "0x7b10",
+    "0x7b12",
+    "0x7b14",
+    "0x7b1c",
+    "0x7b1e",
+    "0x7b20",
+    "0x7b24",
+    "0x7b26",
+    "0x7b28",
+    "0x7b2a",
+    "0x7b2c",
+    "0x7b2e",
+    "0x7b30",
+    "0x7b32",
+    "0x7b34",
+    "0x7b36",
+    "0x7b38",
+    "0x7b3a",
+    "0x7b3c",
+    "0x7b3e",
+    "0x7b40",
+    "0x7b42",
+    "0x7b4c",
+    "0x7b4e",
+    "0x7b50",
+    "0x7b52",
+    "0x7b54",
+    "0x7b56"
+  ],
+  "examples": [
+    {
+      "entry": "0x7b28",
+      "writes": [
+        [
+          "0x20070e",
+          1,
+          "0x0"
+        ]
+      ]
+    },
+    {
+      "entry": "0x7b30",
+      "writes": [
+        [
+          "0x20070c",
+          1,
+          "0x0"
+        ]
+      ]
+    },
+    {
+      "entry": "0x7b38",
+      "writes": [
+        [
+          "0x20070f",
+          1,
+          "0x1"
+        ],
+        [
+          "0x20070e",
+          1,
+          "0x1"
+        ]
+      ]
+    },
+    {
+      "entry": "0x7b4c",
+      "writes": [
+        [
+          "0x20070d",
+          1,
+          "0x1"
+        ],
+        [
+          "0x20070c",
+          1,
+          "0x1"
+        ]
+      ]
+    },
+    {
+      "entry": "0x7434",
+      "writes": [
+        [
+          "0xfffffd00",
+          4,
+          "0xa500000d"
+        ]
+      ]
+    },
+    {
+      "entry": "0x7af8",
+      "writes": [
+        [
+          "0x20070b",
+          1,
+          "0x0"
+        ],
+        [
+          "0xfffc0108",
+          4,
+          "0x200840"
+        ],
+        [
+          "0xfffc010c",
+          4,
+          "0x17"
+        ],
+        [
+          "0xfffc0118",
+          4,
+          "0x0"
+        ],
+        [
+          "0xfffc011c",
+          4,
+          "0x0"
+        ],
+        [
+          "0xfffc0008",
+          4,
+          "0x10"
+        ],
+        [
+          "0xfffc0120",
+          4,
+          "0x100"
+        ]
+      ]
+    },
+    {
+      "entry": "0x7b1c",
+      "writes": [
+        [
+          "0x200afd",
+          1,
+          "0x0"
+        ],
+        [
+          "0xfffc0100",
+          4,
+          "0x200840"
+        ],
+        [
+          "0xfffc0104",
+          4,
+          "0x10"
+        ],
+        [
+          "0xfffc0110",
+          4,
+          "0x0"
+        ],
+        [
+          "0xfffc0114",
+          4,
+          "0x0"
+        ],
+        [
+          "0xfffc0000",
+          4,
+          "0x800"
+        ],
+        [
+          "0xfffc0008",
+          4,
+          "0x100"
+        ],
+        [
+          "0xfffc0120",
+          4,
+          "0x1"
+        ]
+      ]
+    }
+  ],
+  "limits": [
+    "No electrical reset or DMA effect is simulated",
+    "No exhaustive alternate-entry or global writer claim",
+    "Byte classification does not close the full subsystem analysis"
+  ]
+}
