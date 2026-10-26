@@ -136,6 +136,10 @@ AID 85 (requested stretch) -> SRAM 0x200B30 / 0x200590 -> 0x601C clamp -> 0x4A94
 
 `0x200604` is a telemetry word (a scaled copy surfaced as AID 149), **not** the timer operand. This is a structural trace of the image; it has not been
 measured on a bench or with the engine running. Converting the timer value to microseconds needs a measured clock.
+The [backdown and stretch review](BACKDOWN_STRETCH_REVIEW.md) traces the
+automatic AID 13 response writer to two clamped 0..80 candidates and records
+the guarded integer divisions in `0x4A94`; it does not establish all live
+sensor ranges or downstream pulse timing.
 
 Known SRAM locations: the TPS-gate input byte `0x2005D7`, the capture structure at `0x2005C4`, telemetry `0x200604`, and the boost-curve AIDs 113-136 at
 `0x200B3B`-`0x200B69`.
