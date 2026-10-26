@@ -2392,10 +2392,14 @@
       "semantics": [
         {
           "entry": "0x499c",
-          "label": "Backdown-percentage threshold walk used to update AID 13",
-          "assurance": "static_closed_chain",
+          "label": "Two-candidate 0..80 backdown updater for AID 13 response byte",
+          "assurance": "static_instruction_trace_and_bounded_emulation",
           "evidence": [
-            "quadzilla_vp44_chain.json:roles.backdown_percent"
+            "audit/data/backdown_stretch_binaryninja.json",
+            "audit/data/backdown_emulation.json",
+            "docs/BACKDOWN_STRETCH_REVIEW.md",
+            "audit/data/aid_table_audit.json",
+            "docs/COMPOUND_AID_UPDATE_REVIEW.md"
           ]
         }
       ],
@@ -2578,11 +2582,13 @@
       "semantics": [
         {
           "entry": "0x4a94",
-          "label": "Applied-stretch percentage arithmetic using the AID 85 working copy",
-          "assurance": "static_closed_chain",
+          "label": "Signed-byte table stretch arithmetic with staged integer divisions and gate/ramp inputs",
+          "assurance": "static_instruction_trace_and_bounded_emulation",
           "evidence": [
-            "quadzilla_mcu_map.json:functions.sub_4A94",
-            "quadzilla_vp44_chain.json:roles.internal_limited_stretch"
+            "audit/data/backdown_stretch_binaryninja.json",
+            "audit/data/stretch_arithmetic_emulation.json",
+            "docs/BACKDOWN_STRETCH_REVIEW.md",
+            "docs/INTEGER_ARITHMETIC_REVIEW.md"
           ]
         }
       ],
@@ -17903,7 +17909,7 @@
     },
     "labels": {
       "path": "audit/data/semantic_labels.json",
-      "sha256": "de5069863989533fb761245c81ba1e58adf78f73fa8691b419ed92077e034526"
+      "sha256": "25bd15d04f44c4c852e1511e74df616cfcd9adc50a5b00d8ca6a3d06ab7da3cc"
     }
   },
   "input_hash_policy": "SHA-256 of JSON text with CRLF normalized to LF"

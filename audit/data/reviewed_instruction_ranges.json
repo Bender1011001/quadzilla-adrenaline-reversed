@@ -313,6 +313,33 @@
       "decoder_artifact": "audit/data/control_helper_binaryninja.json"
     },
     {
+      "start": "0x499c",
+      "end": "0x4a88",
+      "entry": "0x499c",
+      "isa": "thumb",
+      "account": "Complete two-candidate backdown routine; all 118 decoded starts visited across 4126 synthetic states",
+      "evidence": [
+        "audit/data/backdown_stretch_binaryninja.json",
+        "audit/data/backdown_emulation.json",
+        "docs/BACKDOWN_STRETCH_REVIEW.md"
+      ],
+      "decoder_artifact": "audit/data/backdown_stretch_binaryninja.json"
+    },
+    {
+      "start": "0x4a94",
+      "end": "0x4b26",
+      "entry": "0x4a94",
+      "isa": "thumb",
+      "account": "Complete applied-stretch returning body; all 68 decoded starts visited across 2092 synthetic states",
+      "evidence": [
+        "audit/data/backdown_stretch_binaryninja.json",
+        "audit/data/stretch_arithmetic_emulation.json",
+        "docs/BACKDOWN_STRETCH_REVIEW.md",
+        "docs/INTEGER_ARITHMETIC_REVIEW.md"
+      ],
+      "decoder_artifact": "audit/data/backdown_stretch_binaryninja.json"
+    },
+    {
       "start": "0x506c",
       "end": "0x50dc",
       "entry": "0x506c",
