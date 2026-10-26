@@ -1,0 +1,4908 @@
+{
+  "format": "quadzilla-aic-vector-installation-v1",
+  "raw_sha256": "1ae519ba6194e8f7bdaaa94333a83a9e6fda3b0563f87f7d48383b37288c1780",
+  "scope": "Composed selected returning initializers, PIO prefix and main spurious slice; not a complete startup execution",
+  "cases": [
+    {
+      "seed": "0xa5000000",
+      "pio_pin17": 0,
+      "tc_clock_enabled": 0,
+      "us_cr_read": "0x0",
+      "vector_write_count": 39,
+      "final_vectors": [
+        "0x40e0",
+        "0x40e4",
+        "0x7449",
+        "0x40e4",
+        "0x40e4",
+        "0x6b45",
+        "0x7179",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x6c49",
+        "0x6c69",
+        "0x6c95",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0xa500001f"
+      ],
+      "spurious_vector": "0x7445",
+      "phases": [
+        {
+          "phase": "clock_fallbacks",
+          "entry": "0x414c",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x41a0",
+              "address": "0xfffff080",
+              "value": "0x40e0"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff084",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff088",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff08c",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff090",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff094",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff098",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff09c",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0a0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0a4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0a8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0ac",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0b0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0b4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0b8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0bc",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0c0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0c4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0c8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0cc",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0d0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0d4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0d8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0dc",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0e0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0e4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0e8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0ec",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0f0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0f4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0f8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41b6",
+              "address": "0xfffff134",
+              "value": "0x40e8"
+            }
+          ],
+          "visited_starts": 57
+        },
+        {
+          "phase": "memory_descriptors",
+          "entry": "0x4114",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [],
+          "visited_starts": 46
+        },
+        {
+          "phase": "main_spurious_slice",
+          "entry": "0x77de",
+          "stop": "0x77e4",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x77e2",
+              "address": "0xfffff134",
+              "value": "0x7445"
+            }
+          ],
+          "visited_starts": 4
+        },
+        {
+          "phase": "pio_prefix",
+          "entry": "0x74e8",
+          "stop": "0x757a",
+          "stack_pointer_after_segment": "0x202ff4",
+          "vector_writes": [
+            {
+              "site": "0x7564",
+              "address": "0xfffff088",
+              "value": "0x7449"
+            }
+          ],
+          "visited_starts": 73
+        },
+        {
+          "phase": "timer_setup",
+          "entry": "0x6fb4",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x6fe2",
+              "address": "0xfffff0b0",
+              "value": "0x6c49"
+            },
+            {
+              "site": "0x703a",
+              "address": "0xfffff0b4",
+              "value": "0x6c69"
+            },
+            {
+              "site": "0x708e",
+              "address": "0xfffff0b8",
+              "value": "0x6c95"
+            }
+          ],
+          "visited_starts": 139
+        },
+        {
+          "phase": "spi_setup",
+          "entry": "0x6bd8",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x6bf8",
+              "address": "0xfffff094",
+              "value": "0x6b45"
+            }
+          ],
+          "visited_starts": 30
+        },
+        {
+          "phase": "usart_setup",
+          "entry": "0x725c",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x72d6",
+              "address": "0xfffff098",
+              "value": "0x7179"
+            }
+          ],
+          "visited_starts": 81
+        }
+      ]
+    },
+    {
+      "seed": "0xa5000000",
+      "pio_pin17": 0,
+      "tc_clock_enabled": 0,
+      "us_cr_read": "0xffffffff",
+      "vector_write_count": 39,
+      "final_vectors": [
+        "0x40e0",
+        "0x40e4",
+        "0x7449",
+        "0x40e4",
+        "0x40e4",
+        "0x6b45",
+        "0x7179",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x6c49",
+        "0x6c69",
+        "0x6c95",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0xa500001f"
+      ],
+      "spurious_vector": "0x7445",
+      "phases": [
+        {
+          "phase": "clock_fallbacks",
+          "entry": "0x414c",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x41a0",
+              "address": "0xfffff080",
+              "value": "0x40e0"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff084",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff088",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff08c",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff090",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff094",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff098",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff09c",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0a0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0a4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0a8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0ac",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0b0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0b4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0b8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0bc",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0c0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0c4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0c8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0cc",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0d0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0d4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0d8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0dc",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0e0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0e4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0e8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0ec",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0f0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0f4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0f8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41b6",
+              "address": "0xfffff134",
+              "value": "0x40e8"
+            }
+          ],
+          "visited_starts": 57
+        },
+        {
+          "phase": "memory_descriptors",
+          "entry": "0x4114",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [],
+          "visited_starts": 46
+        },
+        {
+          "phase": "main_spurious_slice",
+          "entry": "0x77de",
+          "stop": "0x77e4",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x77e2",
+              "address": "0xfffff134",
+              "value": "0x7445"
+            }
+          ],
+          "visited_starts": 4
+        },
+        {
+          "phase": "pio_prefix",
+          "entry": "0x74e8",
+          "stop": "0x757a",
+          "stack_pointer_after_segment": "0x202ff4",
+          "vector_writes": [
+            {
+              "site": "0x7564",
+              "address": "0xfffff088",
+              "value": "0x7449"
+            }
+          ],
+          "visited_starts": 73
+        },
+        {
+          "phase": "timer_setup",
+          "entry": "0x6fb4",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x6fe2",
+              "address": "0xfffff0b0",
+              "value": "0x6c49"
+            },
+            {
+              "site": "0x703a",
+              "address": "0xfffff0b4",
+              "value": "0x6c69"
+            },
+            {
+              "site": "0x708e",
+              "address": "0xfffff0b8",
+              "value": "0x6c95"
+            }
+          ],
+          "visited_starts": 139
+        },
+        {
+          "phase": "spi_setup",
+          "entry": "0x6bd8",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x6bf8",
+              "address": "0xfffff094",
+              "value": "0x6b45"
+            }
+          ],
+          "visited_starts": 30
+        },
+        {
+          "phase": "usart_setup",
+          "entry": "0x725c",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x72d6",
+              "address": "0xfffff098",
+              "value": "0x7179"
+            }
+          ],
+          "visited_starts": 81
+        }
+      ]
+    },
+    {
+      "seed": "0xa5000000",
+      "pio_pin17": 0,
+      "tc_clock_enabled": 1,
+      "us_cr_read": "0x0",
+      "vector_write_count": 39,
+      "final_vectors": [
+        "0x40e0",
+        "0x40e4",
+        "0x7449",
+        "0x40e4",
+        "0x40e4",
+        "0x6b45",
+        "0x7179",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x6c49",
+        "0x6c69",
+        "0x6c95",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0xa500001f"
+      ],
+      "spurious_vector": "0x7445",
+      "phases": [
+        {
+          "phase": "clock_fallbacks",
+          "entry": "0x414c",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x41a0",
+              "address": "0xfffff080",
+              "value": "0x40e0"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff084",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff088",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff08c",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff090",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff094",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff098",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff09c",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0a0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0a4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0a8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0ac",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0b0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0b4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0b8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0bc",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0c0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0c4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0c8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0cc",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0d0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0d4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0d8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0dc",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0e0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0e4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0e8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0ec",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0f0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0f4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0f8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41b6",
+              "address": "0xfffff134",
+              "value": "0x40e8"
+            }
+          ],
+          "visited_starts": 57
+        },
+        {
+          "phase": "memory_descriptors",
+          "entry": "0x4114",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [],
+          "visited_starts": 46
+        },
+        {
+          "phase": "main_spurious_slice",
+          "entry": "0x77de",
+          "stop": "0x77e4",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x77e2",
+              "address": "0xfffff134",
+              "value": "0x7445"
+            }
+          ],
+          "visited_starts": 4
+        },
+        {
+          "phase": "pio_prefix",
+          "entry": "0x74e8",
+          "stop": "0x757a",
+          "stack_pointer_after_segment": "0x202ff4",
+          "vector_writes": [
+            {
+              "site": "0x7564",
+              "address": "0xfffff088",
+              "value": "0x7449"
+            }
+          ],
+          "visited_starts": 73
+        },
+        {
+          "phase": "timer_setup",
+          "entry": "0x6fb4",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x6fe2",
+              "address": "0xfffff0b0",
+              "value": "0x6c49"
+            },
+            {
+              "site": "0x703a",
+              "address": "0xfffff0b4",
+              "value": "0x6c69"
+            },
+            {
+              "site": "0x708e",
+              "address": "0xfffff0b8",
+              "value": "0x6c95"
+            }
+          ],
+          "visited_starts": 127
+        },
+        {
+          "phase": "spi_setup",
+          "entry": "0x6bd8",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x6bf8",
+              "address": "0xfffff094",
+              "value": "0x6b45"
+            }
+          ],
+          "visited_starts": 30
+        },
+        {
+          "phase": "usart_setup",
+          "entry": "0x725c",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x72d6",
+              "address": "0xfffff098",
+              "value": "0x7179"
+            }
+          ],
+          "visited_starts": 81
+        }
+      ]
+    },
+    {
+      "seed": "0xa5000000",
+      "pio_pin17": 0,
+      "tc_clock_enabled": 1,
+      "us_cr_read": "0xffffffff",
+      "vector_write_count": 39,
+      "final_vectors": [
+        "0x40e0",
+        "0x40e4",
+        "0x7449",
+        "0x40e4",
+        "0x40e4",
+        "0x6b45",
+        "0x7179",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x6c49",
+        "0x6c69",
+        "0x6c95",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0xa500001f"
+      ],
+      "spurious_vector": "0x7445",
+      "phases": [
+        {
+          "phase": "clock_fallbacks",
+          "entry": "0x414c",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x41a0",
+              "address": "0xfffff080",
+              "value": "0x40e0"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff084",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff088",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff08c",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff090",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff094",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff098",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff09c",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0a0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0a4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0a8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0ac",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0b0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0b4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0b8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0bc",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0c0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0c4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0c8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0cc",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0d0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0d4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0d8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0dc",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0e0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0e4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0e8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0ec",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0f0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0f4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0f8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41b6",
+              "address": "0xfffff134",
+              "value": "0x40e8"
+            }
+          ],
+          "visited_starts": 57
+        },
+        {
+          "phase": "memory_descriptors",
+          "entry": "0x4114",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [],
+          "visited_starts": 46
+        },
+        {
+          "phase": "main_spurious_slice",
+          "entry": "0x77de",
+          "stop": "0x77e4",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x77e2",
+              "address": "0xfffff134",
+              "value": "0x7445"
+            }
+          ],
+          "visited_starts": 4
+        },
+        {
+          "phase": "pio_prefix",
+          "entry": "0x74e8",
+          "stop": "0x757a",
+          "stack_pointer_after_segment": "0x202ff4",
+          "vector_writes": [
+            {
+              "site": "0x7564",
+              "address": "0xfffff088",
+              "value": "0x7449"
+            }
+          ],
+          "visited_starts": 73
+        },
+        {
+          "phase": "timer_setup",
+          "entry": "0x6fb4",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x6fe2",
+              "address": "0xfffff0b0",
+              "value": "0x6c49"
+            },
+            {
+              "site": "0x703a",
+              "address": "0xfffff0b4",
+              "value": "0x6c69"
+            },
+            {
+              "site": "0x708e",
+              "address": "0xfffff0b8",
+              "value": "0x6c95"
+            }
+          ],
+          "visited_starts": 127
+        },
+        {
+          "phase": "spi_setup",
+          "entry": "0x6bd8",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x6bf8",
+              "address": "0xfffff094",
+              "value": "0x6b45"
+            }
+          ],
+          "visited_starts": 30
+        },
+        {
+          "phase": "usart_setup",
+          "entry": "0x725c",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x72d6",
+              "address": "0xfffff098",
+              "value": "0x7179"
+            }
+          ],
+          "visited_starts": 81
+        }
+      ]
+    },
+    {
+      "seed": "0xa5000000",
+      "pio_pin17": 1,
+      "tc_clock_enabled": 0,
+      "us_cr_read": "0x0",
+      "vector_write_count": 39,
+      "final_vectors": [
+        "0x40e0",
+        "0x40e4",
+        "0x7449",
+        "0x40e4",
+        "0x40e4",
+        "0x6b45",
+        "0x7179",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x6c49",
+        "0x6c69",
+        "0x6c95",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0xa500001f"
+      ],
+      "spurious_vector": "0x7445",
+      "phases": [
+        {
+          "phase": "clock_fallbacks",
+          "entry": "0x414c",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x41a0",
+              "address": "0xfffff080",
+              "value": "0x40e0"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff084",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff088",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff08c",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff090",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff094",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff098",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff09c",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0a0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0a4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0a8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0ac",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0b0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0b4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0b8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0bc",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0c0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0c4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0c8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0cc",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0d0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0d4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0d8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0dc",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0e0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0e4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0e8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0ec",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0f0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0f4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0f8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41b6",
+              "address": "0xfffff134",
+              "value": "0x40e8"
+            }
+          ],
+          "visited_starts": 57
+        },
+        {
+          "phase": "memory_descriptors",
+          "entry": "0x4114",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [],
+          "visited_starts": 46
+        },
+        {
+          "phase": "main_spurious_slice",
+          "entry": "0x77de",
+          "stop": "0x77e4",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x77e2",
+              "address": "0xfffff134",
+              "value": "0x7445"
+            }
+          ],
+          "visited_starts": 4
+        },
+        {
+          "phase": "pio_prefix",
+          "entry": "0x74e8",
+          "stop": "0x757a",
+          "stack_pointer_after_segment": "0x202ff4",
+          "vector_writes": [
+            {
+              "site": "0x7564",
+              "address": "0xfffff088",
+              "value": "0x7449"
+            }
+          ],
+          "visited_starts": 72
+        },
+        {
+          "phase": "timer_setup",
+          "entry": "0x6fb4",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x6fe2",
+              "address": "0xfffff0b0",
+              "value": "0x6c49"
+            },
+            {
+              "site": "0x703a",
+              "address": "0xfffff0b4",
+              "value": "0x6c69"
+            },
+            {
+              "site": "0x708e",
+              "address": "0xfffff0b8",
+              "value": "0x6c95"
+            }
+          ],
+          "visited_starts": 139
+        },
+        {
+          "phase": "spi_setup",
+          "entry": "0x6bd8",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x6bf8",
+              "address": "0xfffff094",
+              "value": "0x6b45"
+            }
+          ],
+          "visited_starts": 30
+        },
+        {
+          "phase": "usart_setup",
+          "entry": "0x725c",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x72d6",
+              "address": "0xfffff098",
+              "value": "0x7179"
+            }
+          ],
+          "visited_starts": 81
+        }
+      ]
+    },
+    {
+      "seed": "0xa5000000",
+      "pio_pin17": 1,
+      "tc_clock_enabled": 0,
+      "us_cr_read": "0xffffffff",
+      "vector_write_count": 39,
+      "final_vectors": [
+        "0x40e0",
+        "0x40e4",
+        "0x7449",
+        "0x40e4",
+        "0x40e4",
+        "0x6b45",
+        "0x7179",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x6c49",
+        "0x6c69",
+        "0x6c95",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0xa500001f"
+      ],
+      "spurious_vector": "0x7445",
+      "phases": [
+        {
+          "phase": "clock_fallbacks",
+          "entry": "0x414c",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x41a0",
+              "address": "0xfffff080",
+              "value": "0x40e0"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff084",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff088",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff08c",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff090",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff094",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff098",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff09c",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0a0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0a4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0a8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0ac",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0b0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0b4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0b8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0bc",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0c0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0c4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0c8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0cc",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0d0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0d4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0d8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0dc",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0e0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0e4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0e8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0ec",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0f0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0f4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0f8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41b6",
+              "address": "0xfffff134",
+              "value": "0x40e8"
+            }
+          ],
+          "visited_starts": 57
+        },
+        {
+          "phase": "memory_descriptors",
+          "entry": "0x4114",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [],
+          "visited_starts": 46
+        },
+        {
+          "phase": "main_spurious_slice",
+          "entry": "0x77de",
+          "stop": "0x77e4",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x77e2",
+              "address": "0xfffff134",
+              "value": "0x7445"
+            }
+          ],
+          "visited_starts": 4
+        },
+        {
+          "phase": "pio_prefix",
+          "entry": "0x74e8",
+          "stop": "0x757a",
+          "stack_pointer_after_segment": "0x202ff4",
+          "vector_writes": [
+            {
+              "site": "0x7564",
+              "address": "0xfffff088",
+              "value": "0x7449"
+            }
+          ],
+          "visited_starts": 72
+        },
+        {
+          "phase": "timer_setup",
+          "entry": "0x6fb4",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x6fe2",
+              "address": "0xfffff0b0",
+              "value": "0x6c49"
+            },
+            {
+              "site": "0x703a",
+              "address": "0xfffff0b4",
+              "value": "0x6c69"
+            },
+            {
+              "site": "0x708e",
+              "address": "0xfffff0b8",
+              "value": "0x6c95"
+            }
+          ],
+          "visited_starts": 139
+        },
+        {
+          "phase": "spi_setup",
+          "entry": "0x6bd8",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x6bf8",
+              "address": "0xfffff094",
+              "value": "0x6b45"
+            }
+          ],
+          "visited_starts": 30
+        },
+        {
+          "phase": "usart_setup",
+          "entry": "0x725c",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x72d6",
+              "address": "0xfffff098",
+              "value": "0x7179"
+            }
+          ],
+          "visited_starts": 81
+        }
+      ]
+    },
+    {
+      "seed": "0xa5000000",
+      "pio_pin17": 1,
+      "tc_clock_enabled": 1,
+      "us_cr_read": "0x0",
+      "vector_write_count": 39,
+      "final_vectors": [
+        "0x40e0",
+        "0x40e4",
+        "0x7449",
+        "0x40e4",
+        "0x40e4",
+        "0x6b45",
+        "0x7179",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x6c49",
+        "0x6c69",
+        "0x6c95",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0xa500001f"
+      ],
+      "spurious_vector": "0x7445",
+      "phases": [
+        {
+          "phase": "clock_fallbacks",
+          "entry": "0x414c",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x41a0",
+              "address": "0xfffff080",
+              "value": "0x40e0"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff084",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff088",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff08c",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff090",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff094",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff098",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff09c",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0a0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0a4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0a8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0ac",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0b0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0b4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0b8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0bc",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0c0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0c4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0c8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0cc",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0d0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0d4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0d8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0dc",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0e0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0e4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0e8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0ec",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0f0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0f4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0f8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41b6",
+              "address": "0xfffff134",
+              "value": "0x40e8"
+            }
+          ],
+          "visited_starts": 57
+        },
+        {
+          "phase": "memory_descriptors",
+          "entry": "0x4114",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [],
+          "visited_starts": 46
+        },
+        {
+          "phase": "main_spurious_slice",
+          "entry": "0x77de",
+          "stop": "0x77e4",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x77e2",
+              "address": "0xfffff134",
+              "value": "0x7445"
+            }
+          ],
+          "visited_starts": 4
+        },
+        {
+          "phase": "pio_prefix",
+          "entry": "0x74e8",
+          "stop": "0x757a",
+          "stack_pointer_after_segment": "0x202ff4",
+          "vector_writes": [
+            {
+              "site": "0x7564",
+              "address": "0xfffff088",
+              "value": "0x7449"
+            }
+          ],
+          "visited_starts": 72
+        },
+        {
+          "phase": "timer_setup",
+          "entry": "0x6fb4",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x6fe2",
+              "address": "0xfffff0b0",
+              "value": "0x6c49"
+            },
+            {
+              "site": "0x703a",
+              "address": "0xfffff0b4",
+              "value": "0x6c69"
+            },
+            {
+              "site": "0x708e",
+              "address": "0xfffff0b8",
+              "value": "0x6c95"
+            }
+          ],
+          "visited_starts": 127
+        },
+        {
+          "phase": "spi_setup",
+          "entry": "0x6bd8",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x6bf8",
+              "address": "0xfffff094",
+              "value": "0x6b45"
+            }
+          ],
+          "visited_starts": 30
+        },
+        {
+          "phase": "usart_setup",
+          "entry": "0x725c",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x72d6",
+              "address": "0xfffff098",
+              "value": "0x7179"
+            }
+          ],
+          "visited_starts": 81
+        }
+      ]
+    },
+    {
+      "seed": "0xa5000000",
+      "pio_pin17": 1,
+      "tc_clock_enabled": 1,
+      "us_cr_read": "0xffffffff",
+      "vector_write_count": 39,
+      "final_vectors": [
+        "0x40e0",
+        "0x40e4",
+        "0x7449",
+        "0x40e4",
+        "0x40e4",
+        "0x6b45",
+        "0x7179",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x6c49",
+        "0x6c69",
+        "0x6c95",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0xa500001f"
+      ],
+      "spurious_vector": "0x7445",
+      "phases": [
+        {
+          "phase": "clock_fallbacks",
+          "entry": "0x414c",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x41a0",
+              "address": "0xfffff080",
+              "value": "0x40e0"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff084",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff088",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff08c",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff090",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff094",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff098",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff09c",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0a0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0a4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0a8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0ac",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0b0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0b4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0b8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0bc",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0c0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0c4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0c8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0cc",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0d0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0d4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0d8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0dc",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0e0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0e4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0e8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0ec",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0f0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0f4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0f8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41b6",
+              "address": "0xfffff134",
+              "value": "0x40e8"
+            }
+          ],
+          "visited_starts": 57
+        },
+        {
+          "phase": "memory_descriptors",
+          "entry": "0x4114",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [],
+          "visited_starts": 46
+        },
+        {
+          "phase": "main_spurious_slice",
+          "entry": "0x77de",
+          "stop": "0x77e4",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x77e2",
+              "address": "0xfffff134",
+              "value": "0x7445"
+            }
+          ],
+          "visited_starts": 4
+        },
+        {
+          "phase": "pio_prefix",
+          "entry": "0x74e8",
+          "stop": "0x757a",
+          "stack_pointer_after_segment": "0x202ff4",
+          "vector_writes": [
+            {
+              "site": "0x7564",
+              "address": "0xfffff088",
+              "value": "0x7449"
+            }
+          ],
+          "visited_starts": 72
+        },
+        {
+          "phase": "timer_setup",
+          "entry": "0x6fb4",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x6fe2",
+              "address": "0xfffff0b0",
+              "value": "0x6c49"
+            },
+            {
+              "site": "0x703a",
+              "address": "0xfffff0b4",
+              "value": "0x6c69"
+            },
+            {
+              "site": "0x708e",
+              "address": "0xfffff0b8",
+              "value": "0x6c95"
+            }
+          ],
+          "visited_starts": 127
+        },
+        {
+          "phase": "spi_setup",
+          "entry": "0x6bd8",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x6bf8",
+              "address": "0xfffff094",
+              "value": "0x6b45"
+            }
+          ],
+          "visited_starts": 30
+        },
+        {
+          "phase": "usart_setup",
+          "entry": "0x725c",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x72d6",
+              "address": "0xfffff098",
+              "value": "0x7179"
+            }
+          ],
+          "visited_starts": 81
+        }
+      ]
+    },
+    {
+      "seed": "0x5a000000",
+      "pio_pin17": 0,
+      "tc_clock_enabled": 0,
+      "us_cr_read": "0x0",
+      "vector_write_count": 39,
+      "final_vectors": [
+        "0x40e0",
+        "0x40e4",
+        "0x7449",
+        "0x40e4",
+        "0x40e4",
+        "0x6b45",
+        "0x7179",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x6c49",
+        "0x6c69",
+        "0x6c95",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x5a00001f"
+      ],
+      "spurious_vector": "0x7445",
+      "phases": [
+        {
+          "phase": "clock_fallbacks",
+          "entry": "0x414c",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x41a0",
+              "address": "0xfffff080",
+              "value": "0x40e0"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff084",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff088",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff08c",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff090",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff094",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff098",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff09c",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0a0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0a4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0a8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0ac",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0b0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0b4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0b8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0bc",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0c0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0c4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0c8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0cc",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0d0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0d4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0d8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0dc",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0e0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0e4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0e8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0ec",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0f0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0f4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0f8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41b6",
+              "address": "0xfffff134",
+              "value": "0x40e8"
+            }
+          ],
+          "visited_starts": 57
+        },
+        {
+          "phase": "memory_descriptors",
+          "entry": "0x4114",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [],
+          "visited_starts": 46
+        },
+        {
+          "phase": "main_spurious_slice",
+          "entry": "0x77de",
+          "stop": "0x77e4",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x77e2",
+              "address": "0xfffff134",
+              "value": "0x7445"
+            }
+          ],
+          "visited_starts": 4
+        },
+        {
+          "phase": "pio_prefix",
+          "entry": "0x74e8",
+          "stop": "0x757a",
+          "stack_pointer_after_segment": "0x202ff4",
+          "vector_writes": [
+            {
+              "site": "0x7564",
+              "address": "0xfffff088",
+              "value": "0x7449"
+            }
+          ],
+          "visited_starts": 73
+        },
+        {
+          "phase": "timer_setup",
+          "entry": "0x6fb4",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x6fe2",
+              "address": "0xfffff0b0",
+              "value": "0x6c49"
+            },
+            {
+              "site": "0x703a",
+              "address": "0xfffff0b4",
+              "value": "0x6c69"
+            },
+            {
+              "site": "0x708e",
+              "address": "0xfffff0b8",
+              "value": "0x6c95"
+            }
+          ],
+          "visited_starts": 139
+        },
+        {
+          "phase": "spi_setup",
+          "entry": "0x6bd8",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x6bf8",
+              "address": "0xfffff094",
+              "value": "0x6b45"
+            }
+          ],
+          "visited_starts": 30
+        },
+        {
+          "phase": "usart_setup",
+          "entry": "0x725c",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x72d6",
+              "address": "0xfffff098",
+              "value": "0x7179"
+            }
+          ],
+          "visited_starts": 81
+        }
+      ]
+    },
+    {
+      "seed": "0x5a000000",
+      "pio_pin17": 0,
+      "tc_clock_enabled": 0,
+      "us_cr_read": "0xffffffff",
+      "vector_write_count": 39,
+      "final_vectors": [
+        "0x40e0",
+        "0x40e4",
+        "0x7449",
+        "0x40e4",
+        "0x40e4",
+        "0x6b45",
+        "0x7179",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x6c49",
+        "0x6c69",
+        "0x6c95",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x5a00001f"
+      ],
+      "spurious_vector": "0x7445",
+      "phases": [
+        {
+          "phase": "clock_fallbacks",
+          "entry": "0x414c",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x41a0",
+              "address": "0xfffff080",
+              "value": "0x40e0"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff084",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff088",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff08c",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff090",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff094",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff098",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff09c",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0a0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0a4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0a8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0ac",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0b0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0b4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0b8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0bc",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0c0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0c4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0c8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0cc",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0d0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0d4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0d8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0dc",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0e0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0e4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0e8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0ec",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0f0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0f4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0f8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41b6",
+              "address": "0xfffff134",
+              "value": "0x40e8"
+            }
+          ],
+          "visited_starts": 57
+        },
+        {
+          "phase": "memory_descriptors",
+          "entry": "0x4114",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [],
+          "visited_starts": 46
+        },
+        {
+          "phase": "main_spurious_slice",
+          "entry": "0x77de",
+          "stop": "0x77e4",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x77e2",
+              "address": "0xfffff134",
+              "value": "0x7445"
+            }
+          ],
+          "visited_starts": 4
+        },
+        {
+          "phase": "pio_prefix",
+          "entry": "0x74e8",
+          "stop": "0x757a",
+          "stack_pointer_after_segment": "0x202ff4",
+          "vector_writes": [
+            {
+              "site": "0x7564",
+              "address": "0xfffff088",
+              "value": "0x7449"
+            }
+          ],
+          "visited_starts": 73
+        },
+        {
+          "phase": "timer_setup",
+          "entry": "0x6fb4",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x6fe2",
+              "address": "0xfffff0b0",
+              "value": "0x6c49"
+            },
+            {
+              "site": "0x703a",
+              "address": "0xfffff0b4",
+              "value": "0x6c69"
+            },
+            {
+              "site": "0x708e",
+              "address": "0xfffff0b8",
+              "value": "0x6c95"
+            }
+          ],
+          "visited_starts": 139
+        },
+        {
+          "phase": "spi_setup",
+          "entry": "0x6bd8",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x6bf8",
+              "address": "0xfffff094",
+              "value": "0x6b45"
+            }
+          ],
+          "visited_starts": 30
+        },
+        {
+          "phase": "usart_setup",
+          "entry": "0x725c",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x72d6",
+              "address": "0xfffff098",
+              "value": "0x7179"
+            }
+          ],
+          "visited_starts": 81
+        }
+      ]
+    },
+    {
+      "seed": "0x5a000000",
+      "pio_pin17": 0,
+      "tc_clock_enabled": 1,
+      "us_cr_read": "0x0",
+      "vector_write_count": 39,
+      "final_vectors": [
+        "0x40e0",
+        "0x40e4",
+        "0x7449",
+        "0x40e4",
+        "0x40e4",
+        "0x6b45",
+        "0x7179",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x6c49",
+        "0x6c69",
+        "0x6c95",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x5a00001f"
+      ],
+      "spurious_vector": "0x7445",
+      "phases": [
+        {
+          "phase": "clock_fallbacks",
+          "entry": "0x414c",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x41a0",
+              "address": "0xfffff080",
+              "value": "0x40e0"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff084",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff088",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff08c",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff090",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff094",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff098",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff09c",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0a0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0a4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0a8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0ac",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0b0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0b4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0b8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0bc",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0c0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0c4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0c8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0cc",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0d0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0d4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0d8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0dc",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0e0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0e4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0e8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0ec",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0f0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0f4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0f8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41b6",
+              "address": "0xfffff134",
+              "value": "0x40e8"
+            }
+          ],
+          "visited_starts": 57
+        },
+        {
+          "phase": "memory_descriptors",
+          "entry": "0x4114",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [],
+          "visited_starts": 46
+        },
+        {
+          "phase": "main_spurious_slice",
+          "entry": "0x77de",
+          "stop": "0x77e4",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x77e2",
+              "address": "0xfffff134",
+              "value": "0x7445"
+            }
+          ],
+          "visited_starts": 4
+        },
+        {
+          "phase": "pio_prefix",
+          "entry": "0x74e8",
+          "stop": "0x757a",
+          "stack_pointer_after_segment": "0x202ff4",
+          "vector_writes": [
+            {
+              "site": "0x7564",
+              "address": "0xfffff088",
+              "value": "0x7449"
+            }
+          ],
+          "visited_starts": 73
+        },
+        {
+          "phase": "timer_setup",
+          "entry": "0x6fb4",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x6fe2",
+              "address": "0xfffff0b0",
+              "value": "0x6c49"
+            },
+            {
+              "site": "0x703a",
+              "address": "0xfffff0b4",
+              "value": "0x6c69"
+            },
+            {
+              "site": "0x708e",
+              "address": "0xfffff0b8",
+              "value": "0x6c95"
+            }
+          ],
+          "visited_starts": 127
+        },
+        {
+          "phase": "spi_setup",
+          "entry": "0x6bd8",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x6bf8",
+              "address": "0xfffff094",
+              "value": "0x6b45"
+            }
+          ],
+          "visited_starts": 30
+        },
+        {
+          "phase": "usart_setup",
+          "entry": "0x725c",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x72d6",
+              "address": "0xfffff098",
+              "value": "0x7179"
+            }
+          ],
+          "visited_starts": 81
+        }
+      ]
+    },
+    {
+      "seed": "0x5a000000",
+      "pio_pin17": 0,
+      "tc_clock_enabled": 1,
+      "us_cr_read": "0xffffffff",
+      "vector_write_count": 39,
+      "final_vectors": [
+        "0x40e0",
+        "0x40e4",
+        "0x7449",
+        "0x40e4",
+        "0x40e4",
+        "0x6b45",
+        "0x7179",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x6c49",
+        "0x6c69",
+        "0x6c95",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x5a00001f"
+      ],
+      "spurious_vector": "0x7445",
+      "phases": [
+        {
+          "phase": "clock_fallbacks",
+          "entry": "0x414c",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x41a0",
+              "address": "0xfffff080",
+              "value": "0x40e0"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff084",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff088",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff08c",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff090",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff094",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff098",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff09c",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0a0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0a4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0a8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0ac",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0b0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0b4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0b8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0bc",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0c0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0c4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0c8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0cc",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0d0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0d4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0d8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0dc",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0e0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0e4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0e8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0ec",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0f0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0f4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0f8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41b6",
+              "address": "0xfffff134",
+              "value": "0x40e8"
+            }
+          ],
+          "visited_starts": 57
+        },
+        {
+          "phase": "memory_descriptors",
+          "entry": "0x4114",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [],
+          "visited_starts": 46
+        },
+        {
+          "phase": "main_spurious_slice",
+          "entry": "0x77de",
+          "stop": "0x77e4",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x77e2",
+              "address": "0xfffff134",
+              "value": "0x7445"
+            }
+          ],
+          "visited_starts": 4
+        },
+        {
+          "phase": "pio_prefix",
+          "entry": "0x74e8",
+          "stop": "0x757a",
+          "stack_pointer_after_segment": "0x202ff4",
+          "vector_writes": [
+            {
+              "site": "0x7564",
+              "address": "0xfffff088",
+              "value": "0x7449"
+            }
+          ],
+          "visited_starts": 73
+        },
+        {
+          "phase": "timer_setup",
+          "entry": "0x6fb4",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x6fe2",
+              "address": "0xfffff0b0",
+              "value": "0x6c49"
+            },
+            {
+              "site": "0x703a",
+              "address": "0xfffff0b4",
+              "value": "0x6c69"
+            },
+            {
+              "site": "0x708e",
+              "address": "0xfffff0b8",
+              "value": "0x6c95"
+            }
+          ],
+          "visited_starts": 127
+        },
+        {
+          "phase": "spi_setup",
+          "entry": "0x6bd8",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x6bf8",
+              "address": "0xfffff094",
+              "value": "0x6b45"
+            }
+          ],
+          "visited_starts": 30
+        },
+        {
+          "phase": "usart_setup",
+          "entry": "0x725c",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x72d6",
+              "address": "0xfffff098",
+              "value": "0x7179"
+            }
+          ],
+          "visited_starts": 81
+        }
+      ]
+    },
+    {
+      "seed": "0x5a000000",
+      "pio_pin17": 1,
+      "tc_clock_enabled": 0,
+      "us_cr_read": "0x0",
+      "vector_write_count": 39,
+      "final_vectors": [
+        "0x40e0",
+        "0x40e4",
+        "0x7449",
+        "0x40e4",
+        "0x40e4",
+        "0x6b45",
+        "0x7179",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x6c49",
+        "0x6c69",
+        "0x6c95",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x5a00001f"
+      ],
+      "spurious_vector": "0x7445",
+      "phases": [
+        {
+          "phase": "clock_fallbacks",
+          "entry": "0x414c",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x41a0",
+              "address": "0xfffff080",
+              "value": "0x40e0"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff084",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff088",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff08c",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff090",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff094",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff098",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff09c",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0a0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0a4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0a8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0ac",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0b0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0b4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0b8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0bc",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0c0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0c4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0c8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0cc",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0d0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0d4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0d8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0dc",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0e0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0e4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0e8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0ec",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0f0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0f4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0f8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41b6",
+              "address": "0xfffff134",
+              "value": "0x40e8"
+            }
+          ],
+          "visited_starts": 57
+        },
+        {
+          "phase": "memory_descriptors",
+          "entry": "0x4114",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [],
+          "visited_starts": 46
+        },
+        {
+          "phase": "main_spurious_slice",
+          "entry": "0x77de",
+          "stop": "0x77e4",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x77e2",
+              "address": "0xfffff134",
+              "value": "0x7445"
+            }
+          ],
+          "visited_starts": 4
+        },
+        {
+          "phase": "pio_prefix",
+          "entry": "0x74e8",
+          "stop": "0x757a",
+          "stack_pointer_after_segment": "0x202ff4",
+          "vector_writes": [
+            {
+              "site": "0x7564",
+              "address": "0xfffff088",
+              "value": "0x7449"
+            }
+          ],
+          "visited_starts": 72
+        },
+        {
+          "phase": "timer_setup",
+          "entry": "0x6fb4",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x6fe2",
+              "address": "0xfffff0b0",
+              "value": "0x6c49"
+            },
+            {
+              "site": "0x703a",
+              "address": "0xfffff0b4",
+              "value": "0x6c69"
+            },
+            {
+              "site": "0x708e",
+              "address": "0xfffff0b8",
+              "value": "0x6c95"
+            }
+          ],
+          "visited_starts": 139
+        },
+        {
+          "phase": "spi_setup",
+          "entry": "0x6bd8",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x6bf8",
+              "address": "0xfffff094",
+              "value": "0x6b45"
+            }
+          ],
+          "visited_starts": 30
+        },
+        {
+          "phase": "usart_setup",
+          "entry": "0x725c",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x72d6",
+              "address": "0xfffff098",
+              "value": "0x7179"
+            }
+          ],
+          "visited_starts": 81
+        }
+      ]
+    },
+    {
+      "seed": "0x5a000000",
+      "pio_pin17": 1,
+      "tc_clock_enabled": 0,
+      "us_cr_read": "0xffffffff",
+      "vector_write_count": 39,
+      "final_vectors": [
+        "0x40e0",
+        "0x40e4",
+        "0x7449",
+        "0x40e4",
+        "0x40e4",
+        "0x6b45",
+        "0x7179",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x6c49",
+        "0x6c69",
+        "0x6c95",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x5a00001f"
+      ],
+      "spurious_vector": "0x7445",
+      "phases": [
+        {
+          "phase": "clock_fallbacks",
+          "entry": "0x414c",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x41a0",
+              "address": "0xfffff080",
+              "value": "0x40e0"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff084",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff088",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff08c",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff090",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff094",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff098",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff09c",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0a0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0a4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0a8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0ac",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0b0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0b4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0b8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0bc",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0c0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0c4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0c8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0cc",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0d0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0d4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0d8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0dc",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0e0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0e4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0e8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0ec",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0f0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0f4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0f8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41b6",
+              "address": "0xfffff134",
+              "value": "0x40e8"
+            }
+          ],
+          "visited_starts": 57
+        },
+        {
+          "phase": "memory_descriptors",
+          "entry": "0x4114",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [],
+          "visited_starts": 46
+        },
+        {
+          "phase": "main_spurious_slice",
+          "entry": "0x77de",
+          "stop": "0x77e4",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x77e2",
+              "address": "0xfffff134",
+              "value": "0x7445"
+            }
+          ],
+          "visited_starts": 4
+        },
+        {
+          "phase": "pio_prefix",
+          "entry": "0x74e8",
+          "stop": "0x757a",
+          "stack_pointer_after_segment": "0x202ff4",
+          "vector_writes": [
+            {
+              "site": "0x7564",
+              "address": "0xfffff088",
+              "value": "0x7449"
+            }
+          ],
+          "visited_starts": 72
+        },
+        {
+          "phase": "timer_setup",
+          "entry": "0x6fb4",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x6fe2",
+              "address": "0xfffff0b0",
+              "value": "0x6c49"
+            },
+            {
+              "site": "0x703a",
+              "address": "0xfffff0b4",
+              "value": "0x6c69"
+            },
+            {
+              "site": "0x708e",
+              "address": "0xfffff0b8",
+              "value": "0x6c95"
+            }
+          ],
+          "visited_starts": 139
+        },
+        {
+          "phase": "spi_setup",
+          "entry": "0x6bd8",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x6bf8",
+              "address": "0xfffff094",
+              "value": "0x6b45"
+            }
+          ],
+          "visited_starts": 30
+        },
+        {
+          "phase": "usart_setup",
+          "entry": "0x725c",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x72d6",
+              "address": "0xfffff098",
+              "value": "0x7179"
+            }
+          ],
+          "visited_starts": 81
+        }
+      ]
+    },
+    {
+      "seed": "0x5a000000",
+      "pio_pin17": 1,
+      "tc_clock_enabled": 1,
+      "us_cr_read": "0x0",
+      "vector_write_count": 39,
+      "final_vectors": [
+        "0x40e0",
+        "0x40e4",
+        "0x7449",
+        "0x40e4",
+        "0x40e4",
+        "0x6b45",
+        "0x7179",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x6c49",
+        "0x6c69",
+        "0x6c95",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x5a00001f"
+      ],
+      "spurious_vector": "0x7445",
+      "phases": [
+        {
+          "phase": "clock_fallbacks",
+          "entry": "0x414c",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x41a0",
+              "address": "0xfffff080",
+              "value": "0x40e0"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff084",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff088",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff08c",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff090",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff094",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff098",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff09c",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0a0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0a4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0a8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0ac",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0b0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0b4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0b8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0bc",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0c0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0c4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0c8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0cc",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0d0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0d4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0d8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0dc",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0e0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0e4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0e8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0ec",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0f0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0f4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0f8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41b6",
+              "address": "0xfffff134",
+              "value": "0x40e8"
+            }
+          ],
+          "visited_starts": 57
+        },
+        {
+          "phase": "memory_descriptors",
+          "entry": "0x4114",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [],
+          "visited_starts": 46
+        },
+        {
+          "phase": "main_spurious_slice",
+          "entry": "0x77de",
+          "stop": "0x77e4",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x77e2",
+              "address": "0xfffff134",
+              "value": "0x7445"
+            }
+          ],
+          "visited_starts": 4
+        },
+        {
+          "phase": "pio_prefix",
+          "entry": "0x74e8",
+          "stop": "0x757a",
+          "stack_pointer_after_segment": "0x202ff4",
+          "vector_writes": [
+            {
+              "site": "0x7564",
+              "address": "0xfffff088",
+              "value": "0x7449"
+            }
+          ],
+          "visited_starts": 72
+        },
+        {
+          "phase": "timer_setup",
+          "entry": "0x6fb4",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x6fe2",
+              "address": "0xfffff0b0",
+              "value": "0x6c49"
+            },
+            {
+              "site": "0x703a",
+              "address": "0xfffff0b4",
+              "value": "0x6c69"
+            },
+            {
+              "site": "0x708e",
+              "address": "0xfffff0b8",
+              "value": "0x6c95"
+            }
+          ],
+          "visited_starts": 127
+        },
+        {
+          "phase": "spi_setup",
+          "entry": "0x6bd8",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x6bf8",
+              "address": "0xfffff094",
+              "value": "0x6b45"
+            }
+          ],
+          "visited_starts": 30
+        },
+        {
+          "phase": "usart_setup",
+          "entry": "0x725c",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x72d6",
+              "address": "0xfffff098",
+              "value": "0x7179"
+            }
+          ],
+          "visited_starts": 81
+        }
+      ]
+    },
+    {
+      "seed": "0x5a000000",
+      "pio_pin17": 1,
+      "tc_clock_enabled": 1,
+      "us_cr_read": "0xffffffff",
+      "vector_write_count": 39,
+      "final_vectors": [
+        "0x40e0",
+        "0x40e4",
+        "0x7449",
+        "0x40e4",
+        "0x40e4",
+        "0x6b45",
+        "0x7179",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x6c49",
+        "0x6c69",
+        "0x6c95",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x40e4",
+        "0x5a00001f"
+      ],
+      "spurious_vector": "0x7445",
+      "phases": [
+        {
+          "phase": "clock_fallbacks",
+          "entry": "0x414c",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x41a0",
+              "address": "0xfffff080",
+              "value": "0x40e0"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff084",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff088",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff08c",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff090",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff094",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff098",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff09c",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0a0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0a4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0a8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0ac",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0b0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0b4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0b8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0bc",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0c0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0c4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0c8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0cc",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0d0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0d4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0d8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0dc",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0e0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0e4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0e8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0ec",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0f0",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0f4",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41aa",
+              "address": "0xfffff0f8",
+              "value": "0x40e4"
+            },
+            {
+              "site": "0x41b6",
+              "address": "0xfffff134",
+              "value": "0x40e8"
+            }
+          ],
+          "visited_starts": 57
+        },
+        {
+          "phase": "memory_descriptors",
+          "entry": "0x4114",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [],
+          "visited_starts": 46
+        },
+        {
+          "phase": "main_spurious_slice",
+          "entry": "0x77de",
+          "stop": "0x77e4",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x77e2",
+              "address": "0xfffff134",
+              "value": "0x7445"
+            }
+          ],
+          "visited_starts": 4
+        },
+        {
+          "phase": "pio_prefix",
+          "entry": "0x74e8",
+          "stop": "0x757a",
+          "stack_pointer_after_segment": "0x202ff4",
+          "vector_writes": [
+            {
+              "site": "0x7564",
+              "address": "0xfffff088",
+              "value": "0x7449"
+            }
+          ],
+          "visited_starts": 72
+        },
+        {
+          "phase": "timer_setup",
+          "entry": "0x6fb4",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x6fe2",
+              "address": "0xfffff0b0",
+              "value": "0x6c49"
+            },
+            {
+              "site": "0x703a",
+              "address": "0xfffff0b4",
+              "value": "0x6c69"
+            },
+            {
+              "site": "0x708e",
+              "address": "0xfffff0b8",
+              "value": "0x6c95"
+            }
+          ],
+          "visited_starts": 127
+        },
+        {
+          "phase": "spi_setup",
+          "entry": "0x6bd8",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x6bf8",
+              "address": "0xfffff094",
+              "value": "0x6b45"
+            }
+          ],
+          "visited_starts": 30
+        },
+        {
+          "phase": "usart_setup",
+          "entry": "0x725c",
+          "stop": "returned",
+          "stack_pointer_after_segment": "0x203000",
+          "vector_writes": [
+            {
+              "site": "0x72d6",
+              "address": "0xfffff098",
+              "value": "0x7179"
+            }
+          ],
+          "visited_starts": 81
+        }
+      ]
+    }
+  ],
+  "case_count": 16,
+  "segments_per_case": 7,
+  "literal_address_seeds": [
+    {
+      "site": "0x419c",
+      "literal": "0x41dc",
+      "value": "0xfffff080"
+    },
+    {
+      "site": "0x41a4",
+      "literal": "0x41dc",
+      "value": "0xfffff080"
+    },
+    {
+      "site": "0x41b2",
+      "literal": "0x41e8",
+      "value": "0xfffff134"
+    },
+    {
+      "site": "0x6bee",
+      "literal": "0x6c28",
+      "value": "0xfffff094"
+    },
+    {
+      "site": "0x6fd8",
+      "literal": "0x70d8",
+      "value": "0xfffff0b0"
+    },
+    {
+      "site": "0x7030",
+      "literal": "0x70f4",
+      "value": "0xfffff0b4"
+    },
+    {
+      "site": "0x7086",
+      "literal": "0x7100",
+      "value": "0xfffff0b8"
+    },
+    {
+      "site": "0x72cc",
+      "literal": "0x7318",
+      "value": "0xfffff098"
+    },
+    {
+      "site": "0x755a",
+      "literal": "0x75d8",
+      "value": "0xfffff088"
+    },
+    {
+      "site": "0x77de",
+      "literal": "0x7a44",
+      "value": "0xfffff134"
+    }
+  ],
+  "installed_source_entries": [
+    "0x40e0",
+    "0x40e4",
+    "0x6b44",
+    "0x6c48",
+    "0x6c68",
+    "0x6c94",
+    "0x7178",
+    "0x7444",
+    "0x7448"
+  ],
+  "all_written_source_entries": [
+    "0x40e0",
+    "0x40e4",
+    "0x40e8",
+    "0x6b44",
+    "0x6c48",
+    "0x6c68",
+    "0x6c94",
+    "0x7178",
+    "0x7444",
+    "0x7448"
+  ],
+  "slot31": "Untouched in all selected segments; seeded sentinel is not a device measurement",
+  "limits": [
+    "Clock ready, PIO and TC status are supplied synthetic values",
+    "US_CR reads are explicit synthetic values for a write-only register",
+    "No hardware interrupt selection, DMA or command side effects are modeled",
+    "Skipped initialization/security/vector-page operations prevent a full startup claim",
+    "Literal-seed coverage does not exclude computed/generic-pointer writers or runtime mutation"
+  ]
+}
