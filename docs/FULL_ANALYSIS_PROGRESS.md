@@ -77,6 +77,13 @@ by a controlled signed-cell read. Actual remap state, later restoration and
 global target-set closure remain open; the initial 0..100 table contents are
 not a whole-execution invariant by themselves.
 
+The [startup table-lifetime review](STARTUP_TABLE_LIFETIME_REVIEW.md) follows
+the original post-descriptor setup and first cycle in 16 ready-state cases,
+plus two bounded waits. No sampled later setup or first-cycle path restores
+the overwritten prefix. The first scalar call bypasses lookup in those
+initial states; no first-cycle harmful consumption is inferred. Remap state,
+later cycles and asynchronous writers remain open.
+
 ## Full-image baseline
 
 The byte-verified IDA export now records 13,201 items over the entire 32,000-byte

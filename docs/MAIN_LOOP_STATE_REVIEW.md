@@ -30,6 +30,12 @@ established here. The [initial-state review](INITIAL_STATE_CONFIG_REVIEW.md)
 traces `0x760C` and the non-image configuration source that can replace its
 initialized mode byte.
 
+The later [startup table-lifetime review](STARTUP_TABLE_LIFETIME_REVIEW.md)
+executes this post-descriptor setup through a first normal cycle under
+explicit synthetic ready/status inputs and one software-event injection.
+It records complete subordinate calls, blocked negative controls and lookup
+table hashes; it does not claim actual interrupt delivery or device timing.
+
 ## Dispatcher and state bytes
 
 The byte at `0x200790` selects states 1, 2 and 3. Any other value enters
