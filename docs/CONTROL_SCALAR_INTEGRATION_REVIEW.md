@@ -65,6 +65,10 @@ local value. This is not evidence that an interrupt actually violates it.
 
 ## Whole-routine execution and assumptions
 
+The later [capture-percent integration](CAPTURE_PERCENT_CONTROL_REVIEW.md)
+follows the known parser producer through original cycles and both P reads.
+Its stable observed values do not remove the asynchronous-writer condition above.
+
 Every call starts from the exact initialized-data copy and zeroed remaining
 synthetic SRAM, followed by explicit controlled overrides. The matrix varies
 capture word `0x2005EC` across 26 boundary/high-word values, word `0x2005F0`
