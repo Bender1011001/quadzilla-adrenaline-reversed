@@ -34,7 +34,7 @@ class PercentRunner(AdmissionControlRunner):
         for address in (0xFFFC0000, 0xFFFE0000, 0xFFFFF000, 0xFFFD8000):
             self.cpu.mem_write(address, bytes(0x1000))
         for address, v in ((0x2005E0, 0xFFFE0000), (0xFFFE0010, status),
-                           (0xFFFFF43C, 0x818), (0x200728, 0xFFFC0000),
+                           (0xFFFFF43C, 0x818), (0x200728, 0xFFFA0080),
                            (0x2007E8, 0x2007F0), (0x2005F0, retained)):
             self.cpu.mem_write(address, v.to_bytes(4, 'little'))
         frame = bytearray(14)

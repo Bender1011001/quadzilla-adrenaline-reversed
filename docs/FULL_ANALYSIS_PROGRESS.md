@@ -94,6 +94,13 @@ authentication and global writer exclusion remain unproven.
 
 ## Full-image baseline
 
+The [peripheral-pointer fixture review](PERIPHERAL_POINTER_FIXTURE_REVIEW.md)
+corrects four transport harnesses to retain TC2's initialized `0x200728` base.
+Original callback reads distinguish that slot from USART's direct status
+address. All four prior artifacts reproduce unchanged after correction. This
+removes an unused artificial pointer assumption before interrupt composition;
+it does not close global pointer-writer or asynchronous-stability requirements.
+
 The [capture-percent producer/control review](CAPTURE_PERCENT_CONTROL_REVIEW.md)
 connects the known `0x2005F0` writer to 512 original cycles across all payload
 byte values and two DLCs, plus six retained-value cycles. It establishes local
