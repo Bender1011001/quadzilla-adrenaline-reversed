@@ -13,11 +13,33 @@ ROOT = Path(__file__).resolve().parents[2]
 MASK = 0xFFFFFFFF
 POINTERS = {0x200700: 0xFFFA0000, 0x200704: 0xFFFA0040, 0x200728: 0xFFFA0080}
 STACK_OFFSETS = tuple(range(-256, 0, 4))
+SET_LIMIT = 64
+
+
+def compact(values):
+    values = frozenset(values)
+    return next(iter(values)) if len(values) == 1 else values if len(values) <= SET_LIMIT else None
+
+
+def merge_finite(x, y):
+    if x == y:
+        return x
+    if x is None or y is None:
+        return None
+    if isinstance(x, (int, frozenset)) and isinstance(y, (int, frozenset)):
+        return compact((x if isinstance(x, frozenset) else {x}) | (y if isinstance(y, frozenset) else {y}))
+    return None
 
 
 def add(a, b):
     if a is None or b is None:
         return None
+    if isinstance(a, frozenset) or isinstance(b, frozenset):
+        if not isinstance(a, (int, frozenset)) or not isinstance(b, (int, frozenset)):
+            return None
+        left = a if isinstance(a, frozenset) else {a}
+        right = b if isinstance(b, frozenset) else {b}
+        return compact((x+y) & MASK for x in left for y in right)
     if isinstance(a, int) and isinstance(b, int):
         return (a+b) & MASK
     if isinstance(a, tuple) and isinstance(b, int):
@@ -29,21 +51,34 @@ def join(a, b):
     return tuple(x if x == y else None for x, y in zip(a, b))
 
 
-def analyze(raw, instructions, entry, pointers, additional_entries=(), allow_external_edges=False, computed_targets=None):
+def analyze(raw, instructions, entry, pointers, additional_entries=(), allow_external_edges=False, computed_targets=None,
+            frame_transfer_targets=(), callee_contracts=None, finite_joins=False):
     """Explore both conditional successors; merge unequal constants to unknown.
 
     Calls are local summaries: preserve SP/R4-R11, forget caller-saved regs.
     Their transitive stores remain explicit obligations, never silently closed.
+    Optional reviewed parent-frame transfers bypass ordinary call summaries.
+    Optional finite joins retain bounded integer alternatives and widen to unknown.
     """
     initial = tuple([None]*13+[('entry_sp', 0), None, None]+[None]*len(STACK_OFFSETS))
     states = {at: initial for at in (entry, *additional_entries)}
     work = deque(sorted(states))
     calls, exits, unsupported = {}, {}, set()
+    frame_transfers = {}
+    used_contracts = {}
     def word(at):
         if not 0x4000 <= at <= 0xBCFC:
             return None
         return int.from_bytes(raw[at-0x4000:at-0x4000+4], 'little')
     def load(s, address, width):
+        if isinstance(address, frozenset):
+            result = None
+            for n, at in enumerate(sorted(address)):
+                value = load(s, at, width)
+                if value is None:
+                    return None
+                result = value if n == 0 else merge_finite(result, value)
+            return result
         if isinstance(address, tuple) and width == 4 and address[1] in STACK_OFFSETS:
             return s[16+STACK_OFFSETS.index(address[1])]
         if (isinstance(address, int) and 0x4000 <= address and address+width <= 0xBD00
@@ -63,10 +98,21 @@ def analyze(raw, instructions, entry, pointers, additional_entries=(), allow_ext
             delta = ((op & 0x7FF) << 12) | ((low & 0x7FF) << 1)
             if delta & 0x400000:
                 delta -= 0x800000
-            calls[at] = at+4+delta
-            for r in (0, 1, 2, 3, 12, 14):
-                s[r] = None
-            s[16:] = [None]*len(STACK_OFFSETS)
+            target = at+4+delta
+            if target in frame_transfer_targets:
+                frame_transfers[at] = target
+                successors = [target]
+                s[14] = (at+4) | 1
+            else:
+                calls[at] = target
+                contract = (callee_contracts or {}).get(target, {})
+                if contract:
+                    used_contracts[at] = target
+                for r in (0, 1, 2, 3, 12, 14):
+                    if r not in contract.get('preserved_caller_registers', ()):
+                        s[r] = None
+                if not contract.get('preserves_caller_stack', False):
+                    s[16:] = [None]*len(STACK_OFFSETS)
         elif op & 0xF000 == 0xD000 and (op >> 8) & 15 < 14:
             delta = (op & 255) - (256 if op & 128 else 0)
             successors.append(at+4+2*delta)
@@ -203,7 +249,8 @@ def analyze(raw, instructions, entry, pointers, additional_entries=(), allow_ext
                     exits[at] = f'edge outside selected Thumb instruction domain: {target:#x}'
                     continue
                 raise ValueError(('local control flow leaves body', hex(at), hex(target)))
-            combined = tuple(s) if target not in states else join(states[target], s)
+            combined = (tuple(s) if target not in states else
+                        tuple(merge_finite(x, y) for x, y in zip(states[target], s)) if finite_joins else join(states[target], s))
             if states.get(target) != combined:
                 states[target] = combined
                 work.append(target)
@@ -222,12 +269,20 @@ def analyze(raw, instructions, entry, pointers, additional_entries=(), allow_ext
                        'address': hex(address) if isinstance(address, int) else None,
                        'entry_sp_offset': address[1] if isinstance(address, tuple) else None,
                        'byte_count': form['width']*len(form.get('registers', [0])),
-                       'status': 'fixed' if isinstance(address, int) else 'stack-relative' if isinstance(address, tuple)
+                       'status': 'fixed' if isinstance(address, int) else 'finite-address-set' if isinstance(address, frozenset)
+                       else 'stack-relative' if isinstance(address, tuple)
                        else 'unresolved' if s else 'unreached-by-local-CFG'})
-    return {'stores': stores, 'reachable_starts': len(states),
+        if isinstance(address, frozenset):
+            stores[-1]['addresses'] = [hex(a) for a in sorted(address)]
+    result = {'stores': stores, 'reachable_starts': len(states),
             'unsupported_starts': [hex(a) for a in sorted(unsupported)],
             'callee_obligations': [{'site': hex(a), 'target': hex(b)} for a, b in sorted(calls.items())],
             'exit_obligations': [{'site': hex(a), 'condition': b} for a, b in sorted(exits.items())]}
+    if frame_transfers:
+        result['frame_transfer_edges'] = [{'site': hex(a), 'target': hex(b)} for a, b in sorted(frame_transfers.items())]
+    if used_contracts:
+        result['applied_call_contracts'] = [{'site': hex(a), 'target': hex(b)} for a, b in sorted(used_contracts.items())]
+    return result
 
 
 def main():

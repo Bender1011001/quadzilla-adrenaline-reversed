@@ -1,0 +1,2544 @@
+{
+  "format": "quadzilla-dispatcher-store-context-v1",
+  "raw_sha256": "1ae519ba6194e8f7bdaaa94333a83a9e6fda3b0563f87f7d48383b37288c1780",
+  "entry": "0x601c",
+  "selected_starts": 908,
+  "frame_transfer_targets": [
+    "0x6042",
+    "0x6048",
+    "0x604c",
+    "0x604e"
+  ],
+  "callee_contract_assumptions": {
+    "0x4384": {
+      "preserves_caller_stack": true,
+      "preserved_caller_registers": []
+    },
+    "0x47b0": {
+      "preserves_caller_stack": true,
+      "preserved_caller_registers": []
+    },
+    "0x6b08": {
+      "preserves_caller_stack": true,
+      "preserved_caller_registers": []
+    },
+    "0x6b10": {
+      "preserves_caller_stack": true,
+      "preserved_caller_registers": []
+    },
+    "0x7128": {
+      "preserves_caller_stack": true,
+      "preserved_caller_registers": []
+    },
+    "0x7138": {
+      "preserves_caller_stack": true,
+      "preserved_caller_registers": []
+    },
+    "0x7160": {
+      "preserves_caller_stack": true,
+      "preserved_caller_registers": []
+    },
+    "0x8574": {
+      "preserves_caller_stack": true,
+      "preserved_caller_registers": [
+        2,
+        3
+      ]
+    },
+    "0x8584": {
+      "preserves_caller_stack": true,
+      "preserved_caller_registers": [
+        2,
+        3
+      ]
+    }
+  },
+  "callee_contract_evidence": [
+    "integer_runtime_emulation.json",
+    "control_helper_emulation.json",
+    "soft_float_emulation.json",
+    "callback_transitive_stores.json"
+  ],
+  "status_counts": {
+    "stack-relative": 4,
+    "fixed": 104,
+    "finite-address-set": 10
+  },
+  "previous_unresolved_now_classified": [
+    "0x6048",
+    "0x604c",
+    "0x6056",
+    "0x606a",
+    "0x6260",
+    "0x626c",
+    "0x6270",
+    "0x6294",
+    "0x6298",
+    "0x62b0",
+    "0x62b4",
+    "0x62ca",
+    "0x62e2",
+    "0x62f0",
+    "0x631c",
+    "0x6320",
+    "0x6330",
+    "0x6342",
+    "0x6346",
+    "0x6356",
+    "0x6368",
+    "0x636c",
+    "0x637c",
+    "0x638e",
+    "0x6392",
+    "0x63fe",
+    "0x642a",
+    "0x6440",
+    "0x6468",
+    "0x64a6",
+    "0x64b4",
+    "0x64cc",
+    "0x64f0",
+    "0x6510",
+    "0x6554",
+    "0x65a6",
+    "0x6600",
+    "0x662a",
+    "0x6694",
+    "0x6698",
+    "0x684a"
+  ],
+  "stores": [
+    {
+      "site": "0x601c",
+      "instruction": "push    {r4, r5, r6, r7, lr}",
+      "form": {
+        "kind": "PUSH register list",
+        "base": 13,
+        "registers": [
+          4,
+          5,
+          6,
+          7,
+          14
+        ],
+        "width": 4,
+        "offset": -20,
+        "writeback": true
+      },
+      "address": null,
+      "entry_sp_offset": -20,
+      "byte_count": 20,
+      "status": "stack-relative"
+    },
+    {
+      "site": "0x602e",
+      "instruction": "str     r0, [sp, #4]",
+      "form": {
+        "kind": "SP-relative store",
+        "base": 13,
+        "source": 0,
+        "width": 4,
+        "offset": 4
+      },
+      "address": null,
+      "entry_sp_offset": -44,
+      "byte_count": 4,
+      "status": "stack-relative"
+    },
+    {
+      "site": "0x6048",
+      "instruction": "strb    r3, [r0, #0xf]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 0,
+        "source": 3,
+        "width": 1,
+        "offset": 15
+      },
+      "address": "0x2005af",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x604c",
+      "instruction": "strb    r3, [r0]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 0,
+        "source": 3,
+        "width": 1,
+        "offset": 0
+      },
+      "address": null,
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "finite-address-set",
+      "addresses": [
+        "0x200c17",
+        "0x200c19",
+        "0x200c1b",
+        "0x200c1d",
+        "0x200c1f",
+        "0x200c21",
+        "0x200c23",
+        "0x200c25",
+        "0x200c27",
+        "0x200c29",
+        "0x200c2b",
+        "0x200c2d",
+        "0x200c2f",
+        "0x200c31",
+        "0x200c33",
+        "0x200c35"
+      ]
+    },
+    {
+      "site": "0x6056",
+      "instruction": "str     r0, [sp, #4]",
+      "form": {
+        "kind": "SP-relative store",
+        "base": 13,
+        "source": 0,
+        "width": 4,
+        "offset": 4
+      },
+      "address": null,
+      "entry_sp_offset": -44,
+      "byte_count": 4,
+      "status": "stack-relative"
+    },
+    {
+      "site": "0x606a",
+      "instruction": "str     r0, [sp]",
+      "form": {
+        "kind": "SP-relative store",
+        "base": 13,
+        "source": 0,
+        "width": 4,
+        "offset": 0
+      },
+      "address": null,
+      "entry_sp_offset": -48,
+      "byte_count": 4,
+      "status": "stack-relative"
+    },
+    {
+      "site": "0x6260",
+      "instruction": "strb    r0, [r1]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 1,
+        "source": 0,
+        "width": 1,
+        "offset": 0
+      },
+      "address": "0x2006cd",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x626c",
+      "instruction": "strb    r1, [r0]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 0,
+        "source": 1,
+        "width": 1,
+        "offset": 0
+      },
+      "address": "0x2006cd",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x6270",
+      "instruction": "strb    r0, [r6]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 6,
+        "source": 0,
+        "width": 1,
+        "offset": 0
+      },
+      "address": "0x200ac4",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x6282",
+      "instruction": "strb    r0, [r1]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 1,
+        "source": 0,
+        "width": 1,
+        "offset": 0
+      },
+      "address": "0x200aff",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x6294",
+      "instruction": "strb    r1, [r2, #2]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 2,
+        "source": 1,
+        "width": 1,
+        "offset": 2
+      },
+      "address": "0x2006cf",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x6298",
+      "instruction": "strb    r1, [r6]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 6,
+        "source": 1,
+        "width": 1,
+        "offset": 0
+      },
+      "address": "0x200ac4",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x62b0",
+      "instruction": "strb    r0, [r1, #3]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 1,
+        "source": 0,
+        "width": 1,
+        "offset": 3
+      },
+      "address": "0x2006d0",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x62b4",
+      "instruction": "strb    r0, [r6]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 6,
+        "source": 0,
+        "width": 1,
+        "offset": 0
+      },
+      "address": "0x200ac4",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x62c0",
+      "instruction": "strb    r1, [r4, #0x1c]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 4,
+        "source": 1,
+        "width": 1,
+        "offset": 28
+      },
+      "address": "0x2006f4",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x62c6",
+      "instruction": "str     r2, [r1]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 1,
+        "source": 2,
+        "width": 4,
+        "offset": 0
+      },
+      "address": "0x20073c",
+      "entry_sp_offset": null,
+      "byte_count": 4,
+      "status": "fixed"
+    },
+    {
+      "site": "0x62ca",
+      "instruction": "strb    r1, [r6]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 6,
+        "source": 1,
+        "width": 1,
+        "offset": 0
+      },
+      "address": "0x200ac4",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x62d6",
+      "instruction": "strb    r0, [r4, #0x1d]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 4,
+        "source": 0,
+        "width": 1,
+        "offset": 29
+      },
+      "address": "0x2006f5",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x62e2",
+      "instruction": "str     r1, [r6, #4]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 6,
+        "source": 1,
+        "width": 4,
+        "offset": 4
+      },
+      "address": "0x200ac8",
+      "entry_sp_offset": null,
+      "byte_count": 4,
+      "status": "fixed"
+    },
+    {
+      "site": "0x62f0",
+      "instruction": "str     r1, [r6, #8]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 6,
+        "source": 1,
+        "width": 4,
+        "offset": 8
+      },
+      "address": "0x200acc",
+      "entry_sp_offset": null,
+      "byte_count": 4,
+      "status": "fixed"
+    },
+    {
+      "site": "0x6300",
+      "instruction": "strb    r0, [r4, #0x1e]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 4,
+        "source": 0,
+        "width": 1,
+        "offset": 30
+      },
+      "address": "0x2006f6",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x6306",
+      "instruction": "str     r0, [r1]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 1,
+        "source": 0,
+        "width": 4,
+        "offset": 0
+      },
+      "address": "0x200748",
+      "entry_sp_offset": null,
+      "byte_count": 4,
+      "status": "fixed"
+    },
+    {
+      "site": "0x630a",
+      "instruction": "str     r0, [r1]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 1,
+        "source": 0,
+        "width": 4,
+        "offset": 0
+      },
+      "address": "0x20074c",
+      "entry_sp_offset": null,
+      "byte_count": 4,
+      "status": "fixed"
+    },
+    {
+      "site": "0x631c",
+      "instruction": "strb    r1, [r2, #4]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 2,
+        "source": 1,
+        "width": 1,
+        "offset": 4
+      },
+      "address": "0x2006d1",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x6320",
+      "instruction": "strb    r1, [r6]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 6,
+        "source": 1,
+        "width": 1,
+        "offset": 0
+      },
+      "address": "0x200ac4",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x6330",
+      "instruction": "strb    r0, [r1, #5]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 1,
+        "source": 0,
+        "width": 1,
+        "offset": 5
+      },
+      "address": "0x2006d2",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x6342",
+      "instruction": "strb    r1, [r2, #6]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 2,
+        "source": 1,
+        "width": 1,
+        "offset": 6
+      },
+      "address": "0x2006d3",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x6346",
+      "instruction": "strb    r1, [r6]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 6,
+        "source": 1,
+        "width": 1,
+        "offset": 0
+      },
+      "address": "0x200ac4",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x6356",
+      "instruction": "strb    r0, [r1, #7]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 1,
+        "source": 0,
+        "width": 1,
+        "offset": 7
+      },
+      "address": "0x2006d4",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x6368",
+      "instruction": "strb    r1, [r2, #8]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 2,
+        "source": 1,
+        "width": 1,
+        "offset": 8
+      },
+      "address": "0x2006d5",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x636c",
+      "instruction": "strb    r1, [r6]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 6,
+        "source": 1,
+        "width": 1,
+        "offset": 0
+      },
+      "address": "0x200ac4",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x637c",
+      "instruction": "strb    r0, [r1, #9]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 1,
+        "source": 0,
+        "width": 1,
+        "offset": 9
+      },
+      "address": "0x2006d6",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x638e",
+      "instruction": "strb    r1, [r2, #0xa]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 2,
+        "source": 1,
+        "width": 1,
+        "offset": 10
+      },
+      "address": "0x2006d7",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x6392",
+      "instruction": "strb    r1, [r6]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 6,
+        "source": 1,
+        "width": 1,
+        "offset": 0
+      },
+      "address": "0x200ac4",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x63a8",
+      "instruction": "strh    r0, [r4]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 4,
+        "source": 0,
+        "width": 2,
+        "offset": 0
+      },
+      "address": "0x2006d8",
+      "entry_sp_offset": null,
+      "byte_count": 2,
+      "status": "fixed"
+    },
+    {
+      "site": "0x63fa",
+      "instruction": "strb    r1, [r4, #2]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 4,
+        "source": 1,
+        "width": 1,
+        "offset": 2
+      },
+      "address": "0x2006da",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x63fe",
+      "instruction": "strb    r1, [r6]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 6,
+        "source": 1,
+        "width": 1,
+        "offset": 0
+      },
+      "address": "0x200ac4",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x6414",
+      "instruction": "strh    r0, [r4, #4]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 4,
+        "source": 0,
+        "width": 2,
+        "offset": 4
+      },
+      "address": "0x2006dc",
+      "entry_sp_offset": null,
+      "byte_count": 2,
+      "status": "fixed"
+    },
+    {
+      "site": "0x6426",
+      "instruction": "strb    r2, [r4, #7]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 4,
+        "source": 2,
+        "width": 1,
+        "offset": 7
+      },
+      "address": "0x2006df",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x642a",
+      "instruction": "strb    r2, [r6]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 6,
+        "source": 2,
+        "width": 1,
+        "offset": 0
+      },
+      "address": "0x200ac4",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x643c",
+      "instruction": "strb    r1, [r4, #6]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 4,
+        "source": 1,
+        "width": 1,
+        "offset": 6
+      },
+      "address": "0x2006de",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x6440",
+      "instruction": "strb    r1, [r6]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 6,
+        "source": 1,
+        "width": 1,
+        "offset": 0
+      },
+      "address": "0x200ac4",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x6456",
+      "instruction": "strh    r0, [r4, #8]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 4,
+        "source": 0,
+        "width": 2,
+        "offset": 8
+      },
+      "address": "0x2006e0",
+      "entry_sp_offset": null,
+      "byte_count": 2,
+      "status": "fixed"
+    },
+    {
+      "site": "0x6464",
+      "instruction": "strb    r1, [r4, #0xa]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 4,
+        "source": 1,
+        "width": 1,
+        "offset": 10
+      },
+      "address": "0x2006e2",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x6468",
+      "instruction": "strb    r1, [r6]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 6,
+        "source": 1,
+        "width": 1,
+        "offset": 0
+      },
+      "address": "0x200ac4",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x647e",
+      "instruction": "strh    r0, [r4, #0xc]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 4,
+        "source": 0,
+        "width": 2,
+        "offset": 12
+      },
+      "address": "0x2006e4",
+      "entry_sp_offset": null,
+      "byte_count": 2,
+      "status": "fixed"
+    },
+    {
+      "site": "0x6494",
+      "instruction": "strb    r0, [r5]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 5,
+        "source": 0,
+        "width": 1,
+        "offset": 0
+      },
+      "address": "0x200580",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x6498",
+      "instruction": "strb    r0, [r1]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 1,
+        "source": 0,
+        "width": 1,
+        "offset": 0
+      },
+      "address": "0x200bea",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x64a6",
+      "instruction": "strb    r1, [r2]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 2,
+        "source": 1,
+        "width": 1,
+        "offset": 0
+      },
+      "address": "0x200433",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x64b4",
+      "instruction": "strb    r0, [r2]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 2,
+        "source": 0,
+        "width": 1,
+        "offset": 0
+      },
+      "address": "0x200434",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x64c2",
+      "instruction": "strb    r0, [r5, #8]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 5,
+        "source": 0,
+        "width": 1,
+        "offset": 8
+      },
+      "address": "0x200588",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x64c6",
+      "instruction": "strb    r0, [r1]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 1,
+        "source": 0,
+        "width": 1,
+        "offset": 0
+      },
+      "address": "0x200bed",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x64cc",
+      "instruction": "strb    r1, [r0]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 0,
+        "source": 1,
+        "width": 1,
+        "offset": 0
+      },
+      "address": null,
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "finite-address-set",
+      "addresses": [
+        "0x200426",
+        "0x200bf0"
+      ]
+    },
+    {
+      "site": "0x64da",
+      "instruction": "strb    r2, [r0, #0x10]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 0,
+        "source": 2,
+        "width": 1,
+        "offset": 16
+      },
+      "address": "0x2005b0",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x64de",
+      "instruction": "strb    r2, [r0]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 0,
+        "source": 2,
+        "width": 1,
+        "offset": 0
+      },
+      "address": "0x200bf1",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x64ec",
+      "instruction": "strb    r1, [r0, #0x11]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 0,
+        "source": 1,
+        "width": 1,
+        "offset": 17
+      },
+      "address": "0x2005b1",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x64f0",
+      "instruction": "strb    r1, [r0]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 0,
+        "source": 1,
+        "width": 1,
+        "offset": 0
+      },
+      "address": null,
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "finite-address-set",
+      "addresses": [
+        "0x200426",
+        "0x200bf2"
+      ]
+    },
+    {
+      "site": "0x64fe",
+      "instruction": "strb    r1, [r0, #0x12]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 0,
+        "source": 1,
+        "width": 1,
+        "offset": 18
+      },
+      "address": "0x2005b2",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x6502",
+      "instruction": "strb    r1, [r2]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 2,
+        "source": 1,
+        "width": 1,
+        "offset": 0
+      },
+      "address": "0x200bf3",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x6510",
+      "instruction": "str     r1, [r2]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 2,
+        "source": 1,
+        "width": 4,
+        "offset": 0
+      },
+      "address": "0x20046c",
+      "entry_sp_offset": null,
+      "byte_count": 4,
+      "status": "fixed"
+    },
+    {
+      "site": "0x651e",
+      "instruction": "strb    r1, [r0, #0x13]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 0,
+        "source": 1,
+        "width": 1,
+        "offset": 19
+      },
+      "address": "0x2005b3",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x6522",
+      "instruction": "strb    r1, [r0]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 0,
+        "source": 1,
+        "width": 1,
+        "offset": 0
+      },
+      "address": "0x200bf4",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x653e",
+      "instruction": "str     r1, [r0, #0x14]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 0,
+        "source": 1,
+        "width": 4,
+        "offset": 20
+      },
+      "address": "0x2005b4",
+      "entry_sp_offset": null,
+      "byte_count": 4,
+      "status": "fixed"
+    },
+    {
+      "site": "0x6542",
+      "instruction": "strb    r1, [r2]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 2,
+        "source": 1,
+        "width": 1,
+        "offset": 0
+      },
+      "address": "0x200bf5",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x6546",
+      "instruction": "strb    r1, [r2, #1]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 2,
+        "source": 1,
+        "width": 1,
+        "offset": 1
+      },
+      "address": "0x200bf6",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x6554",
+      "instruction": "str     r1, [r2]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 2,
+        "source": 1,
+        "width": 4,
+        "offset": 0
+      },
+      "address": null,
+      "entry_sp_offset": null,
+      "byte_count": 4,
+      "status": "finite-address-set",
+      "addresses": [
+        "0x200458",
+        "0x20045c",
+        "0x200464"
+      ]
+    },
+    {
+      "site": "0x656c",
+      "instruction": "str     r1, [r0, #0x18]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 0,
+        "source": 1,
+        "width": 4,
+        "offset": 24
+      },
+      "address": "0x2005b8",
+      "entry_sp_offset": null,
+      "byte_count": 4,
+      "status": "fixed"
+    },
+    {
+      "site": "0x6570",
+      "instruction": "strb    r1, [r2]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 2,
+        "source": 1,
+        "width": 1,
+        "offset": 0
+      },
+      "address": "0x200bf7",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x6574",
+      "instruction": "strb    r1, [r2, #1]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 2,
+        "source": 1,
+        "width": 1,
+        "offset": 1
+      },
+      "address": "0x200bf8",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x6590",
+      "instruction": "str     r1, [r0, #0x1c]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 0,
+        "source": 1,
+        "width": 4,
+        "offset": 28
+      },
+      "address": "0x2005bc",
+      "entry_sp_offset": null,
+      "byte_count": 4,
+      "status": "fixed"
+    },
+    {
+      "site": "0x6594",
+      "instruction": "strb    r1, [r2]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 2,
+        "source": 1,
+        "width": 1,
+        "offset": 0
+      },
+      "address": "0x200bf9",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x6598",
+      "instruction": "strb    r1, [r2, #1]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 2,
+        "source": 1,
+        "width": 1,
+        "offset": 1
+      },
+      "address": "0x200bfa",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x65a6",
+      "instruction": "str     r1, [r2]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 2,
+        "source": 1,
+        "width": 4,
+        "offset": 0
+      },
+      "address": null,
+      "entry_sp_offset": null,
+      "byte_count": 4,
+      "status": "finite-address-set",
+      "addresses": [
+        "0x200460",
+        "0x200468"
+      ]
+    },
+    {
+      "site": "0x65be",
+      "instruction": "str     r1, [r0, #0x20]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 0,
+        "source": 1,
+        "width": 4,
+        "offset": 32
+      },
+      "address": "0x2005c0",
+      "entry_sp_offset": null,
+      "byte_count": 4,
+      "status": "fixed"
+    },
+    {
+      "site": "0x65c2",
+      "instruction": "strb    r1, [r2]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 2,
+        "source": 1,
+        "width": 1,
+        "offset": 0
+      },
+      "address": "0x200bfb",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x65c6",
+      "instruction": "strb    r1, [r2, #1]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 2,
+        "source": 1,
+        "width": 1,
+        "offset": 1
+      },
+      "address": "0x200bfc",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x65e2",
+      "instruction": "str     r0, [r5, #4]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 5,
+        "source": 0,
+        "width": 4,
+        "offset": 4
+      },
+      "address": "0x200584",
+      "entry_sp_offset": null,
+      "byte_count": 4,
+      "status": "fixed"
+    },
+    {
+      "site": "0x65e6",
+      "instruction": "strb    r0, [r1]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 1,
+        "source": 0,
+        "width": 1,
+        "offset": 0
+      },
+      "address": "0x200beb",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x65ea",
+      "instruction": "strb    r0, [r1, #1]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 1,
+        "source": 0,
+        "width": 1,
+        "offset": 1
+      },
+      "address": "0x200bec",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x65fc",
+      "instruction": "strb    r0, [r5, #0xc]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 5,
+        "source": 0,
+        "width": 1,
+        "offset": 12
+      },
+      "address": "0x20058c",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x6600",
+      "instruction": "strb    r0, [r1]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 1,
+        "source": 0,
+        "width": 1,
+        "offset": 0
+      },
+      "address": null,
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "finite-address-set",
+      "addresses": [
+        "0x200bee",
+        "0x200c01",
+        "0x200c03",
+        "0x200c07",
+        "0x200c0b",
+        "0x200c0f",
+        "0x200c13"
+      ]
+    },
+    {
+      "site": "0x6616",
+      "instruction": "strb    r0, [r5, #0xe]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 5,
+        "source": 0,
+        "width": 1,
+        "offset": 14
+      },
+      "address": "0x20058e",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x6626",
+      "instruction": "strb    r0, [r5, #0xd]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 5,
+        "source": 0,
+        "width": 1,
+        "offset": 13
+      },
+      "address": "0x20058d",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x662a",
+      "instruction": "strb    r0, [r1]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 1,
+        "source": 0,
+        "width": 1,
+        "offset": 0
+      },
+      "address": null,
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "finite-address-set",
+      "addresses": [
+        "0x200bef",
+        "0x200c05",
+        "0x200c09",
+        "0x200c11"
+      ]
+    },
+    {
+      "site": "0x6638",
+      "instruction": "strb    r0, [r5, #0xa]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 5,
+        "source": 0,
+        "width": 1,
+        "offset": 10
+      },
+      "address": "0x20058a",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x6648",
+      "instruction": "strb    r0, [r5, #0xb]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 5,
+        "source": 0,
+        "width": 1,
+        "offset": 11
+      },
+      "address": "0x20058b",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x666c",
+      "instruction": "strb    r1, [r5, #9]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 5,
+        "source": 1,
+        "width": 1,
+        "offset": 9
+      },
+      "address": "0x200589",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x6690",
+      "instruction": "str     r0, [r5, #0x10]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 5,
+        "source": 0,
+        "width": 4,
+        "offset": 16
+      },
+      "address": "0x200590",
+      "entry_sp_offset": null,
+      "byte_count": 4,
+      "status": "fixed"
+    },
+    {
+      "site": "0x6694",
+      "instruction": "strb    r0, [r1]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 1,
+        "source": 0,
+        "width": 1,
+        "offset": 0
+      },
+      "address": null,
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "finite-address-set",
+      "addresses": [
+        "0x200bfd",
+        "0x200bff"
+      ]
+    },
+    {
+      "site": "0x6698",
+      "instruction": "strb    r0, [r1, #1]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 1,
+        "source": 0,
+        "width": 1,
+        "offset": 1
+      },
+      "address": null,
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "finite-address-set",
+      "addresses": [
+        "0x200bfe",
+        "0x200c00"
+      ]
+    },
+    {
+      "site": "0x66b4",
+      "instruction": "strb    r1, [r4, #0xe]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 4,
+        "source": 1,
+        "width": 1,
+        "offset": 14
+      },
+      "address": "0x2006e6",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x66bc",
+      "instruction": "strb    r1, [r4, #0xf]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 4,
+        "source": 1,
+        "width": 1,
+        "offset": 15
+      },
+      "address": "0x2006e7",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x66ea",
+      "instruction": "str     r5, [r4, #0x10]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 4,
+        "source": 5,
+        "width": 4,
+        "offset": 16
+      },
+      "address": "0x2006e8",
+      "entry_sp_offset": null,
+      "byte_count": 4,
+      "status": "fixed"
+    },
+    {
+      "site": "0x67e6",
+      "instruction": "str     r0, [r5, #0x14]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 5,
+        "source": 0,
+        "width": 4,
+        "offset": 20
+      },
+      "address": "0x200594",
+      "entry_sp_offset": null,
+      "byte_count": 4,
+      "status": "fixed"
+    },
+    {
+      "site": "0x67fe",
+      "instruction": "strb    r0, [r5, #0x18]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 5,
+        "source": 0,
+        "width": 1,
+        "offset": 24
+      },
+      "address": "0x200598",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x6816",
+      "instruction": "strb    r0, [r5, #0x19]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 5,
+        "source": 0,
+        "width": 1,
+        "offset": 25
+      },
+      "address": "0x200599",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x682e",
+      "instruction": "strb    r0, [r5, #0x1a]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 5,
+        "source": 0,
+        "width": 1,
+        "offset": 26
+      },
+      "address": "0x20059a",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x6846",
+      "instruction": "strb    r0, [r5, #0x1b]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 5,
+        "source": 0,
+        "width": 1,
+        "offset": 27
+      },
+      "address": "0x20059b",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x684a",
+      "instruction": "strb    r0, [r1]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 1,
+        "source": 0,
+        "width": 1,
+        "offset": 0
+      },
+      "address": null,
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "finite-address-set",
+      "addresses": [
+        "0x200c0d",
+        "0x200c15"
+      ]
+    },
+    {
+      "site": "0x6862",
+      "instruction": "strb    r0, [r5, #0x1c]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 5,
+        "source": 0,
+        "width": 1,
+        "offset": 28
+      },
+      "address": "0x20059c",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x687a",
+      "instruction": "strb    r0, [r5, #0x1d]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 5,
+        "source": 0,
+        "width": 1,
+        "offset": 29
+      },
+      "address": "0x20059d",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x6892",
+      "instruction": "strb    r0, [r5, #0x1e]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 5,
+        "source": 0,
+        "width": 1,
+        "offset": 30
+      },
+      "address": "0x20059e",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x68aa",
+      "instruction": "strb    r0, [r5, #0x1f]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 5,
+        "source": 0,
+        "width": 1,
+        "offset": 31
+      },
+      "address": "0x20059f",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x68c2",
+      "instruction": "strb    r3, [r0]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 0,
+        "source": 3,
+        "width": 1,
+        "offset": 0
+      },
+      "address": "0x2005a0",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x68dc",
+      "instruction": "strb    r3, [r0, #1]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 0,
+        "source": 3,
+        "width": 1,
+        "offset": 1
+      },
+      "address": "0x2005a1",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x68f6",
+      "instruction": "strb    r3, [r0, #2]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 0,
+        "source": 3,
+        "width": 1,
+        "offset": 2
+      },
+      "address": "0x2005a2",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x6910",
+      "instruction": "strb    r3, [r0, #3]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 0,
+        "source": 3,
+        "width": 1,
+        "offset": 3
+      },
+      "address": "0x2005a3",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x692a",
+      "instruction": "strb    r3, [r0, #4]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 0,
+        "source": 3,
+        "width": 1,
+        "offset": 4
+      },
+      "address": "0x2005a4",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x6944",
+      "instruction": "strb    r3, [r0, #5]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 0,
+        "source": 3,
+        "width": 1,
+        "offset": 5
+      },
+      "address": "0x2005a5",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x695e",
+      "instruction": "strb    r3, [r0, #6]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 0,
+        "source": 3,
+        "width": 1,
+        "offset": 6
+      },
+      "address": "0x2005a6",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x6978",
+      "instruction": "strb    r3, [r0, #7]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 0,
+        "source": 3,
+        "width": 1,
+        "offset": 7
+      },
+      "address": "0x2005a7",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x6992",
+      "instruction": "strb    r3, [r0, #8]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 0,
+        "source": 3,
+        "width": 1,
+        "offset": 8
+      },
+      "address": "0x2005a8",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x69ac",
+      "instruction": "strb    r3, [r0, #9]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 0,
+        "source": 3,
+        "width": 1,
+        "offset": 9
+      },
+      "address": "0x2005a9",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x69c6",
+      "instruction": "strb    r3, [r0, #0xa]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 0,
+        "source": 3,
+        "width": 1,
+        "offset": 10
+      },
+      "address": "0x2005aa",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x69e0",
+      "instruction": "strb    r3, [r0, #0xb]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 0,
+        "source": 3,
+        "width": 1,
+        "offset": 11
+      },
+      "address": "0x2005ab",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x69fa",
+      "instruction": "strb    r3, [r0, #0xc]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 0,
+        "source": 3,
+        "width": 1,
+        "offset": 12
+      },
+      "address": "0x2005ac",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x6a14",
+      "instruction": "strb    r3, [r0, #0xd]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 0,
+        "source": 3,
+        "width": 1,
+        "offset": 13
+      },
+      "address": "0x2005ad",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    },
+    {
+      "site": "0x6a2e",
+      "instruction": "strb    r3, [r0, #0xe]",
+      "form": {
+        "kind": "immediate-offset store",
+        "base": 0,
+        "source": 3,
+        "width": 1,
+        "offset": 14
+      },
+      "address": "0x2005ae",
+      "entry_sp_offset": null,
+      "byte_count": 1,
+      "status": "fixed"
+    }
+  ],
+  "reachable_starts": 908,
+  "unsupported_starts": [],
+  "callee_obligations": [
+    {
+      "site": "0x6024",
+      "target": "0x8038"
+    },
+    {
+      "site": "0x6242",
+      "target": "0x47b0"
+    },
+    {
+      "site": "0x62de",
+      "target": "0x8584"
+    },
+    {
+      "site": "0x62ec",
+      "target": "0x8574"
+    },
+    {
+      "site": "0x64a2",
+      "target": "0x8584"
+    },
+    {
+      "site": "0x64b0",
+      "target": "0x8584"
+    },
+    {
+      "site": "0x650c",
+      "target": "0x8584"
+    },
+    {
+      "site": "0x6550",
+      "target": "0x8574"
+    },
+    {
+      "site": "0x65a2",
+      "target": "0x8574"
+    },
+    {
+      "site": "0x66a6",
+      "target": "0x4384"
+    },
+    {
+      "site": "0x66c6",
+      "target": "0x6b08"
+    },
+    {
+      "site": "0x66ce",
+      "target": "0x7128"
+    },
+    {
+      "site": "0x66d2",
+      "target": "0x7138"
+    },
+    {
+      "site": "0x66d8",
+      "target": "0x7160"
+    },
+    {
+      "site": "0x66e0",
+      "target": "0x6b10"
+    }
+  ],
+  "exit_obligations": [
+    {
+      "site": "0x6040",
+      "condition": "BX: return-target/frame integrity required"
+    }
+  ],
+  "frame_transfer_edges": [
+    {
+      "site": "0x684c",
+      "target": "0x604e"
+    },
+    {
+      "site": "0x68c6",
+      "target": "0x604c"
+    },
+    {
+      "site": "0x68e0",
+      "target": "0x604c"
+    },
+    {
+      "site": "0x68fa",
+      "target": "0x604c"
+    },
+    {
+      "site": "0x6914",
+      "target": "0x604c"
+    },
+    {
+      "site": "0x692e",
+      "target": "0x604c"
+    },
+    {
+      "site": "0x6948",
+      "target": "0x604c"
+    },
+    {
+      "site": "0x6962",
+      "target": "0x604c"
+    },
+    {
+      "site": "0x697c",
+      "target": "0x604c"
+    },
+    {
+      "site": "0x6996",
+      "target": "0x604c"
+    },
+    {
+      "site": "0x69b0",
+      "target": "0x604c"
+    },
+    {
+      "site": "0x69ca",
+      "target": "0x604c"
+    },
+    {
+      "site": "0x69e4",
+      "target": "0x604c"
+    },
+    {
+      "site": "0x69fe",
+      "target": "0x604c"
+    },
+    {
+      "site": "0x6a18",
+      "target": "0x604c"
+    },
+    {
+      "site": "0x6a32",
+      "target": "0x604c"
+    },
+    {
+      "site": "0x6a3e",
+      "target": "0x6042"
+    },
+    {
+      "site": "0x6a44",
+      "target": "0x6048"
+    }
+  ],
+  "applied_call_contracts": [
+    {
+      "site": "0x6242",
+      "target": "0x47b0"
+    },
+    {
+      "site": "0x62de",
+      "target": "0x8584"
+    },
+    {
+      "site": "0x62ec",
+      "target": "0x8574"
+    },
+    {
+      "site": "0x64a2",
+      "target": "0x8584"
+    },
+    {
+      "site": "0x64b0",
+      "target": "0x8584"
+    },
+    {
+      "site": "0x650c",
+      "target": "0x8584"
+    },
+    {
+      "site": "0x6550",
+      "target": "0x8574"
+    },
+    {
+      "site": "0x65a2",
+      "target": "0x8574"
+    },
+    {
+      "site": "0x66a6",
+      "target": "0x4384"
+    },
+    {
+      "site": "0x66c6",
+      "target": "0x6b08"
+    },
+    {
+      "site": "0x66ce",
+      "target": "0x7128"
+    },
+    {
+      "site": "0x66d2",
+      "target": "0x7138"
+    },
+    {
+      "site": "0x66d8",
+      "target": "0x7160"
+    },
+    {
+      "site": "0x66e0",
+      "target": "0x6b10"
+    }
+  ],
+  "runtime_observations": {
+    "0x6048": [
+      "0x2005af"
+    ],
+    "0x604c": [
+      "0x200c17",
+      "0x200c19",
+      "0x200c1b",
+      "0x200c1d",
+      "0x200c1f",
+      "0x200c21",
+      "0x200c23",
+      "0x200c25",
+      "0x200c27",
+      "0x200c29",
+      "0x200c2b",
+      "0x200c2d",
+      "0x200c2f",
+      "0x200c31",
+      "0x200c33",
+      "0x200c35"
+    ],
+    "0x6260": [
+      "0x2006cd"
+    ],
+    "0x626c": [
+      "0x2006cd"
+    ],
+    "0x6270": [
+      "0x200ac4"
+    ],
+    "0x6282": [
+      "0x200aff"
+    ],
+    "0x6294": [
+      "0x2006cf"
+    ],
+    "0x6298": [
+      "0x200ac4"
+    ],
+    "0x62b0": [
+      "0x2006d0"
+    ],
+    "0x62b4": [
+      "0x200ac4"
+    ],
+    "0x62c0": [
+      "0x2006f4"
+    ],
+    "0x62c6": [
+      "0x20073c"
+    ],
+    "0x62ca": [
+      "0x200ac4"
+    ],
+    "0x62d6": [
+      "0x2006f5"
+    ],
+    "0x62e2": [
+      "0x200ac8"
+    ],
+    "0x62f0": [
+      "0x200acc"
+    ],
+    "0x6300": [
+      "0x2006f6"
+    ],
+    "0x6306": [
+      "0x200748"
+    ],
+    "0x630a": [
+      "0x20074c"
+    ],
+    "0x631c": [
+      "0x2006d1"
+    ],
+    "0x6320": [
+      "0x200ac4"
+    ],
+    "0x6330": [
+      "0x2006d2"
+    ],
+    "0x6342": [
+      "0x2006d3"
+    ],
+    "0x6346": [
+      "0x200ac4"
+    ],
+    "0x6356": [
+      "0x2006d4"
+    ],
+    "0x6368": [
+      "0x2006d5"
+    ],
+    "0x636c": [
+      "0x200ac4"
+    ],
+    "0x637c": [
+      "0x2006d6"
+    ],
+    "0x638e": [
+      "0x2006d7"
+    ],
+    "0x6392": [
+      "0x200ac4"
+    ],
+    "0x63a8": [
+      "0x2006d8"
+    ],
+    "0x63fa": [
+      "0x2006da"
+    ],
+    "0x63fe": [
+      "0x200ac4"
+    ],
+    "0x6414": [
+      "0x2006dc"
+    ],
+    "0x6426": [
+      "0x2006df"
+    ],
+    "0x642a": [
+      "0x200ac4"
+    ],
+    "0x643c": [
+      "0x2006de"
+    ],
+    "0x6440": [
+      "0x200ac4"
+    ],
+    "0x6456": [
+      "0x2006e0"
+    ],
+    "0x6464": [
+      "0x2006e2"
+    ],
+    "0x6468": [
+      "0x200ac4"
+    ],
+    "0x647e": [
+      "0x2006e4"
+    ],
+    "0x6494": [
+      "0x200580"
+    ],
+    "0x6498": [
+      "0x200bea"
+    ],
+    "0x64a6": [
+      "0x200433"
+    ],
+    "0x64b4": [
+      "0x200434"
+    ],
+    "0x64c2": [
+      "0x200588"
+    ],
+    "0x64c6": [
+      "0x200bed"
+    ],
+    "0x64cc": [
+      "0x200426",
+      "0x200bf0"
+    ],
+    "0x64da": [
+      "0x2005b0"
+    ],
+    "0x64de": [
+      "0x200bf1"
+    ],
+    "0x64ec": [
+      "0x2005b1"
+    ],
+    "0x64f0": [
+      "0x200426",
+      "0x200bf2"
+    ],
+    "0x64fe": [
+      "0x2005b2"
+    ],
+    "0x6502": [
+      "0x200bf3"
+    ],
+    "0x6510": [
+      "0x20046c"
+    ],
+    "0x651e": [
+      "0x2005b3"
+    ],
+    "0x6522": [
+      "0x200bf4"
+    ],
+    "0x653e": [
+      "0x2005b4"
+    ],
+    "0x6542": [
+      "0x200bf5"
+    ],
+    "0x6546": [
+      "0x200bf6"
+    ],
+    "0x6554": [
+      "0x200458",
+      "0x20045c",
+      "0x200464"
+    ],
+    "0x656c": [
+      "0x2005b8"
+    ],
+    "0x6570": [
+      "0x200bf7"
+    ],
+    "0x6574": [
+      "0x200bf8"
+    ],
+    "0x6590": [
+      "0x2005bc"
+    ],
+    "0x6594": [
+      "0x200bf9"
+    ],
+    "0x6598": [
+      "0x200bfa"
+    ],
+    "0x65a6": [
+      "0x200460",
+      "0x200468"
+    ],
+    "0x65be": [
+      "0x2005c0"
+    ],
+    "0x65c2": [
+      "0x200bfb"
+    ],
+    "0x65c6": [
+      "0x200bfc"
+    ],
+    "0x65e2": [
+      "0x200584"
+    ],
+    "0x65e6": [
+      "0x200beb"
+    ],
+    "0x65ea": [
+      "0x200bec"
+    ],
+    "0x65fc": [
+      "0x20058c"
+    ],
+    "0x6600": [
+      "0x200bee",
+      "0x200c01",
+      "0x200c03",
+      "0x200c07",
+      "0x200c0b",
+      "0x200c0f",
+      "0x200c13"
+    ],
+    "0x6616": [
+      "0x20058e"
+    ],
+    "0x6626": [
+      "0x20058d"
+    ],
+    "0x662a": [
+      "0x200bef",
+      "0x200c05",
+      "0x200c09",
+      "0x200c11"
+    ],
+    "0x6638": [
+      "0x20058a"
+    ],
+    "0x6648": [
+      "0x20058b"
+    ],
+    "0x666c": [
+      "0x200589"
+    ],
+    "0x6690": [
+      "0x200590"
+    ],
+    "0x6694": [
+      "0x200bfd",
+      "0x200bff"
+    ],
+    "0x6698": [
+      "0x200bfe",
+      "0x200c00"
+    ],
+    "0x66b4": [
+      "0x2006e6"
+    ],
+    "0x66bc": [
+      "0x2006e7"
+    ],
+    "0x66ea": [
+      "0x2006e8"
+    ],
+    "0x67e6": [
+      "0x200594"
+    ],
+    "0x67fe": [
+      "0x200598"
+    ],
+    "0x6816": [
+      "0x200599"
+    ],
+    "0x682e": [
+      "0x20059a"
+    ],
+    "0x6846": [
+      "0x20059b"
+    ],
+    "0x684a": [
+      "0x200c0d",
+      "0x200c15"
+    ],
+    "0x6862": [
+      "0x20059c"
+    ],
+    "0x687a": [
+      "0x20059d"
+    ],
+    "0x6892": [
+      "0x20059e"
+    ],
+    "0x68aa": [
+      "0x20059f"
+    ],
+    "0x68c2": [
+      "0x2005a0"
+    ],
+    "0x68dc": [
+      "0x2005a1"
+    ],
+    "0x68f6": [
+      "0x2005a2"
+    ],
+    "0x6910": [
+      "0x2005a3"
+    ],
+    "0x692a": [
+      "0x2005a4"
+    ],
+    "0x6944": [
+      "0x2005a5"
+    ],
+    "0x695e": [
+      "0x2005a6"
+    ],
+    "0x6978": [
+      "0x2005a7"
+    ],
+    "0x6992": [
+      "0x2005a8"
+    ],
+    "0x69ac": [
+      "0x2005a9"
+    ],
+    "0x69c6": [
+      "0x2005aa"
+    ],
+    "0x69e0": [
+      "0x2005ab"
+    ],
+    "0x69fa": [
+      "0x2005ac"
+    ],
+    "0x6a14": [
+      "0x2005ad"
+    ],
+    "0x6a2e": [
+      "0x2005ae"
+    ]
+  },
+  "observation_artifacts": [
+    "selector_update_emulation.json",
+    "compound_update_emulation.json",
+    "remaining_update_emulation.json"
+  ],
+  "limits": [
+    "ordinary 0x601C prologue/frame, not arbitrary standalone continuation entries",
+    "four parent-frame BL targets retain register/stack state and do not return to BL fallthrough",
+    "bounded dispatcher target set retains prior table/index assumptions",
+    "nine specified ordinary callees retain caller-frame facts under their reviewed private-stack/fixed-global contracts",
+    "integer division additionally preserves R2/R3; numeric tail wrappers do not imply return preservation of operand registers",
+    "finite integer/address joins capped at 64 alternatives; overflow widens to unknown, never truncates alternatives",
+    "local handler stores only; receive walker, default initializer and other callees require separate accounts",
+    "no global writer exclusion, interrupt, DMA, physical delivery or firmware-completion claim"
+  ]
+}

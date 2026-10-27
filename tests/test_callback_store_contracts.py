@@ -5,7 +5,7 @@ import unittest
 from tests._paths import ROOT
 
 sys.path.insert(0, str(ROOT / 'audit/tools'))
-from audit_callback_store_contracts import analyze
+from audit_callback_store_contracts import analyze, merge_finite
 
 
 class CallbackStoreContracts(unittest.TestCase):
@@ -104,6 +104,27 @@ class CallbackStoreContracts(unittest.TestCase):
         self.assertEqual(analyze(raw, rows, 0x4000, {})['stores'][0]['status'], 'unreached-by-local-CFG')
         supplied = analyze(raw, rows, 0x4000, {}, computed_targets={0x4002: (0x4004,)})
         self.assertEqual(supplied['stores'][0]['address'], '0x200000')
+
+    def test_finite_join_keeps_both_addresses_and_widens_on_capacity(self):
+        self.assertEqual(merge_finite(0x200000, 0x200004), frozenset({0x200000, 0x200004}))
+        self.assertIsNone(merge_finite(frozenset(range(64)), 64))
+        self.assertIsNone(merge_finite(None, 0x200000))
+
+    def test_parent_frame_bl_does_not_take_call_fallthrough(self):
+        raw = bytearray(0x8000)
+        ops = {0: 0xB500, 2: 0x4804, 4: 0xF000, 6: 0xF803, 8: 0x2000,
+               10: 0x4770, 12: 0x46C0, 14: 0x6001, 16: 0xBC08, 18: 0x4718}
+        for off, op in ops.items():
+            raw[off:off+2] = op.to_bytes(2, 'little')
+        raw[20:24] = (0x200000).to_bytes(4, 'little')
+        rows = {0x4000+off: {'length': 4 if off == 4 else 2, 'text': hex(op)}
+                for off, op in ops.items() if off != 6}
+        ordinary = analyze(raw, rows, 0x4000, {})
+        contextual = analyze(raw, rows, 0x4000, {}, frame_transfer_targets=(0x400E,))
+        self.assertEqual(next(s for s in ordinary['stores'] if s['site'] == '0x400e')['status'], 'unreached-by-local-CFG')
+        self.assertEqual(next(s for s in contextual['stores'] if s['site'] == '0x400e')['address'], '0x200000')
+        self.assertEqual(contextual['callee_obligations'], [])
+        self.assertEqual(contextual['frame_transfer_edges'], [{'site': '0x4004', 'target': '0x400e'}])
 
 
 if __name__ == '__main__':
