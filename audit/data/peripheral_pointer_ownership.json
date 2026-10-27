@@ -1,0 +1,55 @@
+{
+  "format": "quadzilla-peripheral-pointer-ownership-v1",
+  "raw_sha256": "1ae519ba6194e8f7bdaaa94333a83a9e6fda3b0563f87f7d48383b37288c1780",
+  "image_words": {
+    "0x9e10": "0xfffa0080",
+    "0x6f58": "0x200708",
+    "0x71c0": "0xfffc0014"
+  },
+  "initialized_sram_slot": "0x200728",
+  "cases": [
+    {
+      "supplied_pointer": "0xfffa0080",
+      "pointer_after": "0xfffa0080",
+      "peripheral_reads": [
+        {
+          "callback": "tc2",
+          "site": "0x6c9a",
+          "address": "0xfffa00a0",
+          "size": 4
+        },
+        {
+          "callback": "usart",
+          "site": "0x717c",
+          "address": "0xfffc0014",
+          "size": 4
+        }
+      ]
+    },
+    {
+      "supplied_pointer": "0xfffc0000",
+      "pointer_after": "0xfffc0000",
+      "peripheral_reads": [
+        {
+          "callback": "tc2",
+          "site": "0x6c9a",
+          "address": "0xfffc0020",
+          "size": 4
+        },
+        {
+          "callback": "usart",
+          "site": "0x717c",
+          "address": "0xfffc0014",
+          "size": 4
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "original complete TC2 and USART callback bodies execute with controlled flags/status",
+    "second case deliberately reproduces the historical artificial fixture override",
+    "callback body calls are not ARM IRQ entry, banked state or interrupt interleaving simulation",
+    "initial pointer ownership does not exclude later alias/pointer writers",
+    "no device traffic, hardware timing, DMA, flashing or physical-output claim"
+  ]
+}

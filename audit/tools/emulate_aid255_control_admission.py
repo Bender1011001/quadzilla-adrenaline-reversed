@@ -65,7 +65,7 @@ class AdmissionControlRunner(IntegrationRunner):
         # Scalar settings use reviewed handler ranges. Other globals are
         # controlled inputs without an entire live-history claim.
         for address, value in ((0x2005E4, 4095), (0x200AC8, 100), (0x200ACC, 100),
-                               (0x2007E8, 0x2007F0), (0x200728, 0xFFFC0000),
+                               (0x2007E8, 0x2007F0), (0x200728, 0xFFFA0080),
                                (0x2005E0, 0xFFFE0000), (0xFFFE0010, 0x30), (0xFFFFF43C, 0x800),
                                *((0x200458+4*i, 1280) for i in range(5))):
             self.cpu.mem_write(address, struct.pack('<I', value))

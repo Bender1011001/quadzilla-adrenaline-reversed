@@ -32,7 +32,7 @@ class QueueOwnerRunner(AidRunner):
     def setup(self):
         self.reset()
         self.cpu.mem_write(0xFFFC0000, bytes(0x2000))
-        self.cpu.mem_write(0x200728, struct.pack('<I', 0xFFFC0000))
+        self.cpu.mem_write(0x200728, struct.pack('<I', 0xFFFA0080))
         self.cpu.mem_write(0x201000, bytes(range(1, 16)))
         self.writes.clear()
         self.visited.clear()

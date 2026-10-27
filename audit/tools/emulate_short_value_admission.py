@@ -34,7 +34,7 @@ class AdmissionRunner(RemainingRunner):
     def setup(self):
         self.prepare(((0x200000,0x202000),(0xFFFC0000,0xFFFC1000)))
         self.cpu.mem_write(0xFFFC0000,bytes(0x1000))
-        self.word(0x200728,0xFFFC0000)
+        self.word(0x200728,0xFFFA0080)
         self.word(0x2007E8,0x2007F0)
         self.cpu.mem_write(0x2006E6,b'\0\0'+struct.pack('<I',0x3F000000))
 
