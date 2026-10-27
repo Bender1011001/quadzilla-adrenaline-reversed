@@ -122,6 +122,12 @@ owner's board, whether later initialization restores the table, how aliases
 map at that time and which other writers exist remain explicit open questions.
 No live malfunction or defect severity is assigned.
 
+The subsequent [startup lifetime review](STARTUP_TABLE_LIFETIME_REVIEW.md)
+executes the later setup and selected first cycles without function-result
+stubs. It finds no table restoration in those paths, while explicitly
+recording that their first scalar call bypasses the lookup. Later cycles and
+actual remap/configuration state remain unverified.
+
 ## Global audit priorities now made concrete
 
 1. Trace caller/resolver ranges for generic copy/fill and parameter-pointer

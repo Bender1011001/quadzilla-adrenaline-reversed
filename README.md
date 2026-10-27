@@ -49,6 +49,8 @@ The [knot writer/consumer review](docs/KNOT_UPDATE_CONSUMER_REVIEW.md) follows A
 
 The [global store inventory and alias review](docs/GLOBAL_STORE_INVENTORY_REVIEW.md) inventories all accepted memory-store instructions and reproduces a conditional vector-maintenance scratch overlap with the scalar table. Runtime remap state and later restoration remain open.
 
+The [startup table-lifetime review](docs/STARTUP_TABLE_LIFETIME_REVIEW.md) follows original setup and first-cycle paths, finding no sampled restoration of the overlapping table prefix. It records the first scalar bypass and two blocked negative controls without inferring live device behavior.
+
 ## Try it
 
 Python 3.10+, standard library only (`pyserial` for the USB tool).
