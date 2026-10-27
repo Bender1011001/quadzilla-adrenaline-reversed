@@ -84,6 +84,14 @@ the overwritten prefix. The first scalar call bypasses lookup in those
 initial states; no first-cycle harmful consumption is inferred. Remap state,
 later cycles and asynchronous writers remain open.
 
+The [generic writer/alias admission review](GENERIC_WRITER_FOOTPRINT_REVIEW.md)
+bounds the three identified direct copy/fill callers and all byte-AID resolved
+staging extents, with 768 original walker calls. Three complete original
+cycles establish AID-255 response-coefficient writes through valid CRC and
+incomplete-width paths, plus a damaged-CRC negative control. Scalar and response
+models confirm the controlled computational effects; physical delivery,
+authentication and global writer exclusion remain unproven.
+
 ## Full-image baseline
 
 The byte-verified IDA export now records 13,201 items over the entire 32,000-byte

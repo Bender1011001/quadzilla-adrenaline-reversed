@@ -189,3 +189,5 @@ uv run --with unicorn==2.1.4 python audit/tools/emulate_short_value_admission.py
 python audit/tools/audit_payload_header_boundaries.py firmware_v2.8.4HF.bin --output audit/data/payload_header_boundaries.json
 python -m unittest discover -s tests -t .
 ```
+
+The [generic writer/admission review](GENERIC_WRITER_FOOTPRINT_REVIEW.md) adds the complete resolved staging footprint and follows AID 255 through complete original cycles, including an incomplete value whose response-byte stores are consumed by control.
