@@ -19,10 +19,12 @@ engine. This assessment asks who can change what, and what stops them.
 | F3 | Phone link is Bluetooth Classic RFCOMM with no app-level pairing or crypto | 287 | Info | **Verified** in the APK; pairing strength **untested** |
 | F4 | X2com protocol has no authentication, nonce or encryption; a CRC-8 is the only check | 306, 294 | Medium | **Verified** (static); on-air behaviour **untested** |
 | F5 | The device clamps most values, but its limits differ from the app's (AID 85 floor 800 vs 1200 us; timing points 137-138 up to 30 deg vs 20/26) | 602 | Low | **Verified** statically; run-time behaviour untested |
+| F6 | AID 255 crosses the staging pointer-table boundary; complete and incomplete values can alter coefficients consumed by the same original control cycle | 125, 787 | Unassigned; live impact unverified | **Reproduced in controlled emulation**, including original CRC/receive and control instructions; physical delivery untested |
 
-Severity is a qualitative judgement of realistic impact. Every attack needs proximity or
-physical access to an aftermarket tuner for an older vehicle, and the asset is engine health, not
-personal data. "Medium" reflects that the consequence of an unauthorised write is physical.
+Severity is a qualitative judgement of potential impact. Exploitation requirements
+depend on the entry path and have not been established for every finding. The
+ratings above do not establish physical delivery or engine consequences. F6 has
+no live-impact severity pending that evidence.
 
 ## Scope, method and limits
 
@@ -40,11 +42,41 @@ note-taking; every number below is backed by a test or a command in this reposit
 
 ## Findings
 
-A subsequent [AID table boundary review](AID_TABLE_BOUNDARY_REVIEW.md) confirms
-that AID 255 indexes beyond both firmware pointer tables. Offline execution of
-the original helpers reproduces an unintended SRAM alias write and a read from
-`0x43C02097`. This additional bounds defect has no assigned live-impact severity:
-complete transport reachability and hardware consequences remain untested.
+### F6. AID-255 table-boundary alias reaches control consumers (live impact unassigned)
+
+The [AID table boundary review](AID_TABLE_BOUNDARY_REVIEW.md) establishes that
+AID 255 indexes beyond both firmware pointer tables. Original helper execution
+reproduces a staging write alias and a separate response read from `0x43C02097`.
+The [writer and admission review](GENERIC_WRITER_FOOTPRINT_REVIEW.md) extends
+the staging finding through three complete original `0x76CC` cycles without
+function stubs, starting from a supplied completed receive buffer and controlled
+peripheral state. These are computational admission tests, not radio or DMA tests.
+
+With valid CRC, both a complete 13-byte value and a value declaring 14 bytes but
+providing 13 write `0x200BBA..0x200BC6`. This fixed interval includes response
+coefficients `0x200BC2/BC3`. Original control code consumes the supplied 200/240
+before automatic producers replace them with 100/80. The incomplete receive
+status does not roll back the stores or prevent that cycle's control call.
+A damaged-CRC comparison produces zero alias stores.
+
+Under the documented fixture, telemetry changes from 1041 to 1280 and the
+filtered response average from 313 to 387. Those values depend on explicitly
+controlled source values and retained filter history; they are not vehicle
+measurements. Full response and scalar results agree with the independent
+bounded models. Exact inputs, store traces and reproduction commands are linked
+in the review and its source-bound artifacts.
+
+**Established:** an out-of-table ID admits a fixed-interval write whose values
+reach same-cycle computations, including an incomplete-value path. This is not
+an arbitrary-address write. Physical delivery, pairing/authentication, real
+source ranges, asynchronous ordering, waveforms and engine consequences remain
+unverified. The separate response-read alias has no additional complete-cycle
+reachability claim from these three cases.
+
+**Corrective direction:** reject out-of-table IDs before both lookups, restrict
+writable parameters, check complete width and destination capacity before
+storing, and isolate or roll back incomplete staging. CRC checking alone does
+not enforce those conditions. No firmware patch has been deployed.
 
 ### F1. Firmware container is obfuscated, not encrypted (Low, verified)
 
