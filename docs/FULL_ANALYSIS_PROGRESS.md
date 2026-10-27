@@ -94,6 +94,13 @@ authentication and global writer exclusion remain unproven.
 
 ## Full-image baseline
 
+The [retained-sample and timer-branch review](CONTROL_RETENTION_BRANCH_REVIEW.md)
+adds 120 complete original control calls, checking both sample-equality gates,
+the 601 capture threshold, wrapping counter increment, retained-source refresh
+and 24 optional timer-floor cases. Twelve additional main starts bring the
+union with the initial integration suite to 507/574; 67 remain listed. Setup
+at count 2001, the idle branch, upper timer clamp and global writers remain open.
+
 The byte-verified IDA export now records 13,201 items over the entire 32,000-byte
 image. It includes decoded direct branch operands, because IDA's reference graph
 omits some targets in unmapped SRAM. Exported item kinds and Thumb state remain
