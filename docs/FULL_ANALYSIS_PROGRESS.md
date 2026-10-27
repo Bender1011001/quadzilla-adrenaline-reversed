@@ -94,6 +94,12 @@ authentication and global writer exclusion remain unproven.
 
 ## Full-image baseline
 
+The [capture-percent producer/control review](CAPTURE_PERCENT_CONTROL_REVIEW.md)
+connects the known `0x2005F0` writer to 512 original cycles across all payload
+byte values and two DLCs, plus six retained-value cycles. It establishes local
+producer range and observed same-cycle ordering; retention and asynchronous
+global writer exclusion remain separate. No entry/coverage completion follows.
+
 The [alternate-axis and clamp review](CONTROL_AXIS_CLAMP_REVIEW.md) adds 265
 complete calls, an instruction-level conditional 0..19 alternate-axis bound,
 original stretch-model comparisons and directed lower/in-range/upper timer
