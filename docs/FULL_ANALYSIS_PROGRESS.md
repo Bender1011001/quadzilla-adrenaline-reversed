@@ -94,6 +94,14 @@ authentication and global writer exclusion remain unproven.
 
 ## Full-image baseline
 
+The [alternate-axis and clamp review](CONTROL_AXIS_CLAMP_REVIEW.md) adds 265
+complete calls, an instruction-level conditional 0..19 alternate-axis bound,
+original stretch-model comparisons and directed lower/in-range/upper timer
+clamp cases with both clock-status admissions. All remaining main starts
+execute: the six-suite union is 574/574. This is instruction coverage only;
+global writers, parameter admission, asynchronous paths, numerical status and
+the wider subsystem/documentation requirements remain incomplete.
+
 The [full-control response review](FULL_CONTROL_RESPONSE_REVIEW.md) adds 288
 complete original calls with actual-boundary scalar/response inputs and exact
 byte, derived-word and full-filter comparisons. Twenty-nine additional main
