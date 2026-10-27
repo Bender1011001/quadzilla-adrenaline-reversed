@@ -193,3 +193,9 @@ python audit/tools/build_image_ledger.py firmware_v2.8.4HF.bin
 ```
 
 No connected hardware, device traffic, flashing or setting changes were used.
+
+The later [knot update/consumer review](KNOT_UPDATE_CONSUMER_REVIEW.md)
+connects normal knot-handler scaling to this calculation's in-place clamps,
+retained state after a handler-driven mode change, and restoration by
+same-value updates. It establishes a conditional 1024..3840 caller-store
+bound for those reviewed writers, without excluding alternate writers.
