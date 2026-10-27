@@ -94,6 +94,13 @@ authentication and global writer exclusion remain unproven.
 
 ## Full-image baseline
 
+The [selected callback interleaving review](CONTROL_CALLBACK_INTERLEAVING_REVIEW.md)
+pauses original control between repeated percent loads, executes original
+callback bodies with a saved CPU context/separate synthetic stack, and resumes
+with memory effects retained. All 33 cases preserve P and match scalar/response
+models; TC2 numeric state changes demonstrably reach the response consumer.
+ARM exception entry, all callback states and global writer exclusion remain open.
+
 The [peripheral-pointer fixture review](PERIPHERAL_POINTER_FIXTURE_REVIEW.md)
 corrects four transport harnesses to retain TC2's initialized `0x200728` base.
 Original callback reads distinguish that slot from USART's direct status
