@@ -47,6 +47,8 @@ The [control-response arithmetic review](docs/CONTROL_RESPONSE_ARITHMETIC_REVIEW
 
 The [knot writer/consumer review](docs/KNOT_UPDATE_CONSUMER_REVIEW.md) follows AIDs 137–141 through handler updates, consumer clamps, mode changes and original readback. It reproduces history-dependent scaled state and restoration by same-value updates, with transport and global-writer limits explicit.
 
+The [global store inventory and alias review](docs/GLOBAL_STORE_INVENTORY_REVIEW.md) inventories all accepted memory-store instructions and reproduces a conditional vector-maintenance scratch overlap with the scalar table. Runtime remap state and later restoration remain open.
+
 ## Try it
 
 Python 3.10+, standard library only (`pyserial` for the USB tool).

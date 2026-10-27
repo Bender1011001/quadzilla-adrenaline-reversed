@@ -69,6 +69,14 @@ retention after a handler-driven mode change, and restoration by same-value
 updates while raw readbacks remain unchanged. A scripted receive boundary and
 stable state remain explicit; global writer exclusion is not claimed.
 
+The [global store inventory](GLOBAL_STORE_INVENTORY_REVIEW.md) inventories
+1,063 raw store sites over all 8,051 accepted starts and links the 15 indexed
+forms to local contracts. Original-byte vector-path execution demonstrates
+a conditional scratch alias into the scalar table's first 128 bytes, followed
+by a controlled signed-cell read. Actual remap state, later restoration and
+global target-set closure remain open; the initial 0..100 table contents are
+not a whole-execution invariant by themselves.
+
 ## Full-image baseline
 
 The byte-verified IDA export now records 13,201 items over the entire 32,000-byte
