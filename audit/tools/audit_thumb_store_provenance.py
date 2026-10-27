@@ -65,8 +65,16 @@ def audit(raw):
             raise ValueError('bounded dispatch leaves accepted Thumb starts')
         dispatches.append(row)
     computed = {int(row['site'], 0): tuple(sorted({int(a, 0) for a in row['targets']})) for row in dispatches}
+    frame_targets = (0x6042, 0x6048, 0x604C, 0x604E)
+    frame_sources = [row for row in load('execution_discovery_audit.json')['direct_transfers']
+                     if row['kind'] == 'BL' and int(row['source_target'], 0) in frame_targets]
+    if any(not 0x601C <= int(row['site'], 0) < 0x6A48 for row in frame_sources):
+        raise ValueError('parent-frame continuation has an unreviewed outside caller')
     first, *others = sorted(roots)
-    account = analyze(raw, instructions, first, POINTERS, others, allow_external_edges=True, computed_targets=computed)
+    account = analyze(raw, instructions, first, POINTERS, others, allow_external_edges=True, computed_targets=computed,
+                      frame_transfer_targets=frame_targets)
+    if {row['site'] for row in account.get('frame_transfer_edges', [])} != {row['site'] for row in frame_sources}:
+        raise ValueError('frame-transfer accounting differs from raw direct-transfer inventory')
     bx_kinds = {r['site']: r['kind'] for r in transfer_evidence['bx_dispositions']}
     for row in account['exit_obligations']:
         if row['site'] in bx_kinds:
@@ -99,6 +107,7 @@ def audit(raw):
                                       'reason': 'outside selected reviewed Thumb manifest domain'}
                                      for s in inventory['stores'] if int(s['site'], 0) not in instructions],
             'pointer_assumptions': {hex(a): hex(b) for a, b in POINTERS.items()},
+            'parent_frame_transfer_targets': [hex(a) for a in frame_targets],
             'bounded_dispatch_assumptions': [{'site': row['site'], 'table_cases': row['table_cases'],
                                               'distinct_targets': len(set(row['targets'])),
                                               'targets': sorted(set(row['targets']), key=lambda a: int(a, 0))} for row in dispatches],
@@ -107,6 +116,7 @@ def audit(raw):
                        'computed exits and out-of-domain edges are obligations; missing dispatch roots can invalidate global exclusion',
                        'four provided computed-target sets retain the bounds/normal-state assumptions of the indirect-transfer audit',
                        'calls summarize preserved SP/R4-R11; callee preservation and writes require separate contracts',
+                       'eighteen reviewed parent-frame BL sites transfer directly without ordinary-call fallthrough',
                        'fixed results conditional on modeled entry/flow, immutable image and stable three peripheral pointers',
                        'stack addresses require valid disjoint frames; unresolved and unreached stores remain live obligations',
                        'ARM stores and copied executable template bodies are outside this selected Thumb domain',

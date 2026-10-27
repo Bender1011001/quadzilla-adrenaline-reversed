@@ -30,7 +30,7 @@ bounds remain conditions from that audit:
 
 With those edges, propagation reaches all selected starts. This is graph reach,
 not proof that every start is live-reachable or every path executes. The artifact
-records 347 call sites and 114 exit sites. Many exits are normal returns or
+records 329 ordinary call sites, 18 parent-frame BL transfers and 113 exit sites. Many exits are normal returns or
 interworking forms, not newly discovered defects; prior transfer classifications
 and their conditions are retained.
 
@@ -46,9 +46,9 @@ against this exact image.
 
 | Classification | Sites | Meaning |
 |---|---:|---|
-| Conditional fixed address | 791 | Same address over modeled paths, under the recorded conditions. |
+| Conditional fixed address | 805 | Same address over modeled paths, under the recorded conditions. |
 | Entry-SP relative | 137 | Derived offsets; actual frame validity, bounds and nonaliasing still required. |
-| Unresolved | 111 | Destination depends on information this abstraction does not establish. |
+| Unresolved | 97 | Destination depends on information this abstraction does not establish. |
 | **Selected total** | **1,039** | Every selected raw store is represented. |
 
 All 83 fixed sites with observations in the prior store inventory agree in
@@ -63,7 +63,14 @@ transitive artifacts still regenerate byte for byte after the engine extensions.
 
 ## Remaining obligations
 
-The 111 unresolved sites are not 111 new vulnerabilities or unreviewed functions.
+The subsequent [dispatcher parent-frame review](DISPATCHER_STORE_CONTEXT_REVIEW.md)
+supplies contextual address contracts for 41 of these unresolved sites. It also
+refines the broader CFG to treat eighteen documented BL continuations as
+parent-frame transfers, improving the earlier 791-fixed/111-unresolved result
+to 805-fixed/97-unresolved. The broader entry roots remain independently seeded;
+the stronger ordinary-parent-frame contracts are recorded separately.
+
+The 97 unresolved sites are not 97 new vulnerabilities or unreviewed functions.
 They include generic fill/copy, indexed filter/output buffers, mutable peripheral
 bases and handlers requiring their parent's register/frame context. IDA owner
 labels/grouped counts are navigation only; shared continuations can make them

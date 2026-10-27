@@ -94,10 +94,18 @@ authentication and global writer exclusion remain unproven.
 
 ## Full-image baseline
 
+The [ordinary dispatcher-frame review](DISPATCHER_STORE_CONTEXT_REVIEW.md)
+uses eighteen non-returning BL continuation edges, explicit helper contracts
+and capped finite address joins to classify all 118 local stores: 104 fixed,
+ten finite sets and four SP-relative. All 114 nonstack sites agree with earlier
+handler observations. It supplies contextual contracts for 41 broad unresolved
+sites without erasing their separate general-entry obligations or callee scope.
+
 The [reviewed Thumb store-provenance pass](THUMB_STORE_PROVENANCE_REVIEW.md)
 represents all 1,039 selected stores over 6,813 starts and 118 normal-entry roots,
-including four previously bounded dispatches. It derives 791 conditional fixed
-addresses and 137 SP-relative stores, retaining 111 unresolved sites and 24
+including four previously bounded dispatches and eighteen typed parent-frame
+transfers. It derives 805 conditional fixed addresses and 137 SP-relative stores,
+retaining 97 unresolved sites and 24
 excluded ARM/template stores. These are address obligations, not new defects;
 entry, frame, pointer and callee conditions prevent global exclusion claims.
 

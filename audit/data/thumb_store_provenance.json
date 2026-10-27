@@ -124,8 +124,8 @@
   ],
   "status_counts": {
     "stack-relative": 137,
-    "fixed": 791,
-    "unresolved": 111
+    "fixed": 805,
+    "unresolved": 97
   },
   "unresolved_owner_counts_navigation_only": {
     "unowned": 4,
@@ -139,7 +139,7 @@
     "0x50f0": 2,
     "0x6048": 1,
     "0x604c": 1,
-    "0x601c": 53,
+    "0x601c": 39,
     "0x6b64": 3,
     "0x6b9c": 6,
     "0x6fa0": 1,
@@ -395,6 +395,12 @@
     "0x200704": "0xfffa0040",
     "0x200728": "0xfffa0080"
   },
+  "parent_frame_transfer_targets": [
+    "0x6042",
+    "0x6048",
+    "0x604c",
+    "0x604e"
+  ],
   "bounded_dispatch_assumptions": [
     {
       "site": "0x4b80",
@@ -8876,10 +8882,10 @@
         "width": 1,
         "offset": 1
       },
-      "address": null,
+      "address": "0x2005a1",
       "entry_sp_offset": null,
       "byte_count": 1,
-      "status": "unresolved",
+      "status": "fixed",
       "ida_owner_navigation_only": "0x601c"
     },
     {
@@ -8892,10 +8898,10 @@
         "width": 1,
         "offset": 2
       },
-      "address": null,
+      "address": "0x2005a2",
       "entry_sp_offset": null,
       "byte_count": 1,
-      "status": "unresolved",
+      "status": "fixed",
       "ida_owner_navigation_only": "0x601c"
     },
     {
@@ -8908,10 +8914,10 @@
         "width": 1,
         "offset": 3
       },
-      "address": null,
+      "address": "0x2005a3",
       "entry_sp_offset": null,
       "byte_count": 1,
-      "status": "unresolved",
+      "status": "fixed",
       "ida_owner_navigation_only": "0x601c"
     },
     {
@@ -8924,10 +8930,10 @@
         "width": 1,
         "offset": 4
       },
-      "address": null,
+      "address": "0x2005a4",
       "entry_sp_offset": null,
       "byte_count": 1,
-      "status": "unresolved",
+      "status": "fixed",
       "ida_owner_navigation_only": "0x601c"
     },
     {
@@ -8940,10 +8946,10 @@
         "width": 1,
         "offset": 5
       },
-      "address": null,
+      "address": "0x2005a5",
       "entry_sp_offset": null,
       "byte_count": 1,
-      "status": "unresolved",
+      "status": "fixed",
       "ida_owner_navigation_only": "0x601c"
     },
     {
@@ -8956,10 +8962,10 @@
         "width": 1,
         "offset": 6
       },
-      "address": null,
+      "address": "0x2005a6",
       "entry_sp_offset": null,
       "byte_count": 1,
-      "status": "unresolved",
+      "status": "fixed",
       "ida_owner_navigation_only": "0x601c"
     },
     {
@@ -8972,10 +8978,10 @@
         "width": 1,
         "offset": 7
       },
-      "address": null,
+      "address": "0x2005a7",
       "entry_sp_offset": null,
       "byte_count": 1,
-      "status": "unresolved",
+      "status": "fixed",
       "ida_owner_navigation_only": "0x601c"
     },
     {
@@ -8988,10 +8994,10 @@
         "width": 1,
         "offset": 8
       },
-      "address": null,
+      "address": "0x2005a8",
       "entry_sp_offset": null,
       "byte_count": 1,
-      "status": "unresolved",
+      "status": "fixed",
       "ida_owner_navigation_only": "0x601c"
     },
     {
@@ -9004,10 +9010,10 @@
         "width": 1,
         "offset": 9
       },
-      "address": null,
+      "address": "0x2005a9",
       "entry_sp_offset": null,
       "byte_count": 1,
-      "status": "unresolved",
+      "status": "fixed",
       "ida_owner_navigation_only": "0x601c"
     },
     {
@@ -9020,10 +9026,10 @@
         "width": 1,
         "offset": 10
       },
-      "address": null,
+      "address": "0x2005aa",
       "entry_sp_offset": null,
       "byte_count": 1,
-      "status": "unresolved",
+      "status": "fixed",
       "ida_owner_navigation_only": "0x601c"
     },
     {
@@ -9036,10 +9042,10 @@
         "width": 1,
         "offset": 11
       },
-      "address": null,
+      "address": "0x2005ab",
       "entry_sp_offset": null,
       "byte_count": 1,
-      "status": "unresolved",
+      "status": "fixed",
       "ida_owner_navigation_only": "0x601c"
     },
     {
@@ -9052,10 +9058,10 @@
         "width": 1,
         "offset": 12
       },
-      "address": null,
+      "address": "0x2005ac",
       "entry_sp_offset": null,
       "byte_count": 1,
-      "status": "unresolved",
+      "status": "fixed",
       "ida_owner_navigation_only": "0x601c"
     },
     {
@@ -9068,10 +9074,10 @@
         "width": 1,
         "offset": 13
       },
-      "address": null,
+      "address": "0x2005ad",
       "entry_sp_offset": null,
       "byte_count": 1,
-      "status": "unresolved",
+      "status": "fixed",
       "ida_owner_navigation_only": "0x601c"
     },
     {
@@ -9084,10 +9090,10 @@
         "width": 1,
         "offset": 14
       },
-      "address": null,
+      "address": "0x2005ae",
       "entry_sp_offset": null,
       "byte_count": 1,
-      "status": "unresolved",
+      "status": "fixed",
       "ida_owner_navigation_only": "0x601c"
     },
     {
@@ -18286,78 +18292,6 @@
       "target": "0x6b10"
     },
     {
-      "site": "0x684c",
-      "target": "0x604e"
-    },
-    {
-      "site": "0x68c6",
-      "target": "0x604c"
-    },
-    {
-      "site": "0x68e0",
-      "target": "0x604c"
-    },
-    {
-      "site": "0x68fa",
-      "target": "0x604c"
-    },
-    {
-      "site": "0x6914",
-      "target": "0x604c"
-    },
-    {
-      "site": "0x692e",
-      "target": "0x604c"
-    },
-    {
-      "site": "0x6948",
-      "target": "0x604c"
-    },
-    {
-      "site": "0x6962",
-      "target": "0x604c"
-    },
-    {
-      "site": "0x697c",
-      "target": "0x604c"
-    },
-    {
-      "site": "0x6996",
-      "target": "0x604c"
-    },
-    {
-      "site": "0x69b0",
-      "target": "0x604c"
-    },
-    {
-      "site": "0x69ca",
-      "target": "0x604c"
-    },
-    {
-      "site": "0x69e4",
-      "target": "0x604c"
-    },
-    {
-      "site": "0x69fe",
-      "target": "0x604c"
-    },
-    {
-      "site": "0x6a18",
-      "target": "0x604c"
-    },
-    {
-      "site": "0x6a32",
-      "target": "0x604c"
-    },
-    {
-      "site": "0x6a3e",
-      "target": "0x6042"
-    },
-    {
-      "site": "0x6a44",
-      "target": "0x6048"
-    },
-    {
       "site": "0x6b28",
       "target": "0x200c84"
     },
@@ -19036,10 +18970,6 @@
       "condition": "stack-restored return-form; retain prior indirect-transfer audit conditions"
     },
     {
-      "site": "0x6a44",
-      "condition": "edge outside selected Thumb instruction domain: 0x6a48"
-    },
-    {
       "site": "0x6b0a",
       "condition": "fixed numeric veneer; retain prior indirect-transfer audit conditions"
     },
@@ -19348,11 +19278,86 @@
       "condition": "ISA interworking veneer; retain prior indirect-transfer audit conditions"
     }
   ],
+  "frame_transfer_edges": [
+    {
+      "site": "0x684c",
+      "target": "0x604e"
+    },
+    {
+      "site": "0x68c6",
+      "target": "0x604c"
+    },
+    {
+      "site": "0x68e0",
+      "target": "0x604c"
+    },
+    {
+      "site": "0x68fa",
+      "target": "0x604c"
+    },
+    {
+      "site": "0x6914",
+      "target": "0x604c"
+    },
+    {
+      "site": "0x692e",
+      "target": "0x604c"
+    },
+    {
+      "site": "0x6948",
+      "target": "0x604c"
+    },
+    {
+      "site": "0x6962",
+      "target": "0x604c"
+    },
+    {
+      "site": "0x697c",
+      "target": "0x604c"
+    },
+    {
+      "site": "0x6996",
+      "target": "0x604c"
+    },
+    {
+      "site": "0x69b0",
+      "target": "0x604c"
+    },
+    {
+      "site": "0x69ca",
+      "target": "0x604c"
+    },
+    {
+      "site": "0x69e4",
+      "target": "0x604c"
+    },
+    {
+      "site": "0x69fe",
+      "target": "0x604c"
+    },
+    {
+      "site": "0x6a18",
+      "target": "0x604c"
+    },
+    {
+      "site": "0x6a32",
+      "target": "0x604c"
+    },
+    {
+      "site": "0x6a3e",
+      "target": "0x6042"
+    },
+    {
+      "site": "0x6a44",
+      "target": "0x6048"
+    }
+  ],
   "limits": [
     "normal entry roots from reviewed catalog, adjudications and manifest; discovery is not claimed exhaustive",
     "computed exits and out-of-domain edges are obligations; missing dispatch roots can invalidate global exclusion",
     "four provided computed-target sets retain the bounds/normal-state assumptions of the indirect-transfer audit",
     "calls summarize preserved SP/R4-R11; callee preservation and writes require separate contracts",
+    "eighteen reviewed parent-frame BL sites transfer directly without ordinary-call fallthrough",
     "fixed results conditional on modeled entry/flow, immutable image and stable three peripheral pointers",
     "stack addresses require valid disjoint frames; unresolved and unreached stores remain live obligations",
     "ARM stores and copied executable template bodies are outside this selected Thumb domain",
