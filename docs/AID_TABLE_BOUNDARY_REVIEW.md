@@ -6,6 +6,12 @@ reproduces an unintended SRAM write alias and an invalid read address. This is
 a confirmed in-image bounds defect. Hardware consequences and complete transport
 reachability have not been demonstrated.
 
+Update: the subsequent [generic writer/admission review](GENERIC_WRITER_FOOTPRINT_REVIEW.md)
+executes CRC/receive/walker/validation inside complete original control cycles.
+It follows a 13-byte AID-255 alias into response coefficients consumed by
+control, including an incomplete-width case. This supplies completed-buffer
+code-path evidence; physical delivery and hardware consequences remain open.
+
 The source is the 32,000-byte application image with SHA-256
 `1ae519ba6194e8f7bdaaa94333a83a9e6fda3b0563f87f7d48383b37288c1780`.
 The [complete byte-domain map](../audit/data/aid_table_audit.json) records both

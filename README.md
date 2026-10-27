@@ -51,6 +51,8 @@ The [global store inventory and alias review](docs/GLOBAL_STORE_INVENTORY_REVIEW
 
 The [startup table-lifetime review](docs/STARTUP_TABLE_LIFETIME_REVIEW.md) follows original setup and first-cycle paths, finding no sampled restoration of the overlapping table prefix. It records the first scalar bypass and two blocked negative controls without inferring live device behavior.
 
+The [generic writer footprint and admission review](docs/GENERIC_WRITER_FOOTPRINT_REVIEW.md) bounds copy/fill and byte-AID staging destinations, and reproduces AID-255 coefficient writes consumed by complete original cycles after both complete and incomplete values. CRC-negative and physical-delivery limits are explicit.
+
 ## Try it
 
 Python 3.10+, standard library only (`pyserial` for the USB tool).

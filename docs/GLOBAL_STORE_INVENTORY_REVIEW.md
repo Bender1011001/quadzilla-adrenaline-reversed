@@ -148,3 +148,5 @@ python -m unittest discover -s tests -t .
 The alias artifact is generated first because the inventory incorporates its
 observations. No hardware, host-device access, flashing or settings change
 was performed. The full firmware-analysis goal remains active.
+
+The [generic writer footprint review](GENERIC_WRITER_FOOTPRINT_REVIEW.md) now bounds the identified direct copy/fill callers and resolved payload-data intervals. It preserves metadata/stack and other-writer limits, and connects the AID-255 response interval to complete-cycle consumers.
