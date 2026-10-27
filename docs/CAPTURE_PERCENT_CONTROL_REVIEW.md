@@ -36,6 +36,10 @@ establishing physical delivery under the same timing/status conditions.
 
 ## Retained values and writer limits
 
+The subsequent [callback compositions](CONTROL_CALLBACK_INTERLEAVING_REVIEW.md)
+execute selected callback bodies between control's repeated loads. Their
+bounded no-change result does not establish exhaustive interrupt-time stability.
+
 Six cases supply old P in 0/100/`0xFFFFFFFF` with either an unknown header and
 ready status `0x30`, or recognized header and status `0x10` (ENDTX clear).
 No percent store occurs. All watched reads retain the old word through the
