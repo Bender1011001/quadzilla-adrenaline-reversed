@@ -94,6 +94,14 @@ authentication and global writer exclusion remain unproven.
 
 ## Full-image baseline
 
+The [idle-control integration review](IDLE_CONTROL_INTEGRATION_REVIEW.md)
+adds 150 complete calls, including three persistent two-call sequences. It
+establishes original gate overwriting of the earlier entry-active override,
+state-transition delay before fresh consumption, accumulator model agreement
+and actual caller saturation. The three-suite union reaches 520/574 main
+starts. Supplied events do not establish interrupt timing or live admission;
+setup, other branches and global writer bounds remain open.
+
 The [retained-sample and timer-branch review](CONTROL_RETENTION_BRANCH_REVIEW.md)
 adds 120 complete original control calls, checking both sample-equality gates,
 the 601 capture threshold, wrapping counter increment, retained-source refresh

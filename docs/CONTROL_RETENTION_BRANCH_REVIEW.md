@@ -49,6 +49,11 @@ The entry override of `0x20042D` does **not** cause the idle-helper branch at
 variation; this pass makes no claim that it proves that branch unreachable.
 Its producer and earlier gate behavior need a separate account.
 
+The subsequent [idle integration review](IDLE_CONTROL_INTEGRATION_REVIEW.md)
+supplies that earlier-gate account and reaches the original branch, including
+persistent transition/fresh-consumption ordering. This suite's original
+non-admission observation remains valid for its disabled/nonzero-selector fixture.
+
 ## Coverage and limits
 
 Twelve previously unvisited main starts execute. Union with the original
