@@ -94,6 +94,13 @@ authentication and global writer exclusion remain unproven.
 
 ## Full-image baseline
 
+The [reviewed Thumb store-provenance pass](THUMB_STORE_PROVENANCE_REVIEW.md)
+represents all 1,039 selected stores over 6,813 starts and 118 normal-entry roots,
+including four previously bounded dispatches. It derives 791 conditional fixed
+addresses and 137 SP-relative stores, retaining 111 unresolved sites and 24
+excluded ARM/template stores. These are address obligations, not new defects;
+entry, frame, pointer and callee conditions prevent global exclusion claims.
+
 The [callback transitive store-address review](CALLBACK_TRANSITIVE_STORE_REVIEW.md)
 accounts for nine fixed numeric wrappers and two flag helpers. The whole ARM
 numeric-region superset has seven SP-relative stores and one fixed status-byte
