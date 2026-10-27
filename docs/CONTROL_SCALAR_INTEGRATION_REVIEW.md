@@ -112,6 +112,10 @@ that every old counter occurs in normal service.
 
 ## Coverage and remaining work
 
+The later [retained-sample review](CONTROL_RETENTION_BRANCH_REVIEW.md) adds
+120 calls and twelve previously unvisited starts. The union of these two
+suites is 507/574; the original suite's counts below remain its own coverage.
+
 The suite visits **495 of 574 main starts** and lists the other 79 explicitly.
 It is not full branch/path coverage. Reinitialization at `0x74E8` is rejected
 if reached; no case reaches it. Its omission is not hidden behind a return

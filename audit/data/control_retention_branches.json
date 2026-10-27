@@ -1,0 +1,9158 @@
+{
+  "format": "quadzilla-control-retention-branches-v1",
+  "raw_sha256": "1ae519ba6194e8f7bdaaa94333a83a9e6fda3b0563f87f7d48383b37288c1780",
+  "cases": [
+    {
+      "capture": 600,
+      "old_count": 0,
+      "match": "both",
+      "optional": false,
+      "overrides": [
+        [
+          2098248,
+          4,
+          0
+        ],
+        [
+          2098236,
+          4,
+          600
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          0
+        ],
+        [
+          2098924,
+          1,
+          0
+        ],
+        [
+          2099933,
+          1,
+          0
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 0,
+          "saved_capture": 600,
+          "capture": 600,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 600,
+      "old_count": 0,
+      "match": "both",
+      "optional": true,
+      "overrides": [
+        [
+          2098248,
+          4,
+          0
+        ],
+        [
+          2098236,
+          4,
+          600
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          1
+        ],
+        [
+          2098924,
+          1,
+          1
+        ],
+        [
+          2099933,
+          1,
+          1
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x539e",
+          "r0": 1,
+          "r6": 119
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 0,
+          "saved_capture": 600,
+          "capture": 600,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 600,
+      "old_count": 0,
+      "match": "capture_mismatch",
+      "optional": false,
+      "overrides": [
+        [
+          2098248,
+          4,
+          0
+        ],
+        [
+          2098236,
+          4,
+          601
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          0
+        ],
+        [
+          2098924,
+          1,
+          0
+        ],
+        [
+          2099933,
+          1,
+          0
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 0,
+          "saved_capture": 601,
+          "capture": 600,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 600,
+      "old_count": 0,
+      "match": "capture_mismatch",
+      "optional": true,
+      "overrides": [
+        [
+          2098248,
+          4,
+          0
+        ],
+        [
+          2098236,
+          4,
+          601
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          1
+        ],
+        [
+          2098924,
+          1,
+          1
+        ],
+        [
+          2099933,
+          1,
+          1
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x539e",
+          "r0": 1,
+          "r6": 119
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 0,
+          "saved_capture": 601,
+          "capture": 600,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 600,
+      "old_count": 0,
+      "match": "source_mismatch",
+      "optional": false,
+      "overrides": [
+        [
+          2098248,
+          4,
+          0
+        ],
+        [
+          2098236,
+          4,
+          600
+        ],
+        [
+          2098240,
+          4,
+          1
+        ],
+        [
+          2098221,
+          1,
+          0
+        ],
+        [
+          2098924,
+          1,
+          0
+        ],
+        [
+          2099933,
+          1,
+          0
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 0,
+          "saved_capture": 600,
+          "capture": 600,
+          "saved_source": 1,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 600,
+      "old_count": 0,
+      "match": "source_mismatch",
+      "optional": true,
+      "overrides": [
+        [
+          2098248,
+          4,
+          0
+        ],
+        [
+          2098236,
+          4,
+          600
+        ],
+        [
+          2098240,
+          4,
+          1
+        ],
+        [
+          2098221,
+          1,
+          1
+        ],
+        [
+          2098924,
+          1,
+          1
+        ],
+        [
+          2099933,
+          1,
+          1
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x539e",
+          "r0": 1,
+          "r6": 119
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 0,
+          "saved_capture": 600,
+          "capture": 600,
+          "saved_source": 1,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 600,
+      "old_count": 1,
+      "match": "both",
+      "optional": false,
+      "overrides": [
+        [
+          2098248,
+          4,
+          1
+        ],
+        [
+          2098236,
+          4,
+          600
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          0
+        ],
+        [
+          2098924,
+          1,
+          0
+        ],
+        [
+          2099933,
+          1,
+          0
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 1,
+          "saved_capture": 600,
+          "capture": 600,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 600,
+      "old_count": 1,
+      "match": "both",
+      "optional": true,
+      "overrides": [
+        [
+          2098248,
+          4,
+          1
+        ],
+        [
+          2098236,
+          4,
+          600
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          1
+        ],
+        [
+          2098924,
+          1,
+          1
+        ],
+        [
+          2099933,
+          1,
+          1
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x539e",
+          "r0": 1,
+          "r6": 119
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 1,
+          "saved_capture": 600,
+          "capture": 600,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 600,
+      "old_count": 1,
+      "match": "capture_mismatch",
+      "optional": false,
+      "overrides": [
+        [
+          2098248,
+          4,
+          1
+        ],
+        [
+          2098236,
+          4,
+          601
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          0
+        ],
+        [
+          2098924,
+          1,
+          0
+        ],
+        [
+          2099933,
+          1,
+          0
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 1,
+          "saved_capture": 601,
+          "capture": 600,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 600,
+      "old_count": 1,
+      "match": "capture_mismatch",
+      "optional": true,
+      "overrides": [
+        [
+          2098248,
+          4,
+          1
+        ],
+        [
+          2098236,
+          4,
+          601
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          1
+        ],
+        [
+          2098924,
+          1,
+          1
+        ],
+        [
+          2099933,
+          1,
+          1
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x539e",
+          "r0": 1,
+          "r6": 119
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 1,
+          "saved_capture": 601,
+          "capture": 600,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 600,
+      "old_count": 1,
+      "match": "source_mismatch",
+      "optional": false,
+      "overrides": [
+        [
+          2098248,
+          4,
+          1
+        ],
+        [
+          2098236,
+          4,
+          600
+        ],
+        [
+          2098240,
+          4,
+          1
+        ],
+        [
+          2098221,
+          1,
+          0
+        ],
+        [
+          2098924,
+          1,
+          0
+        ],
+        [
+          2099933,
+          1,
+          0
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 1,
+          "saved_capture": 600,
+          "capture": 600,
+          "saved_source": 1,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 600,
+      "old_count": 1,
+      "match": "source_mismatch",
+      "optional": true,
+      "overrides": [
+        [
+          2098248,
+          4,
+          1
+        ],
+        [
+          2098236,
+          4,
+          600
+        ],
+        [
+          2098240,
+          4,
+          1
+        ],
+        [
+          2098221,
+          1,
+          1
+        ],
+        [
+          2098924,
+          1,
+          1
+        ],
+        [
+          2099933,
+          1,
+          1
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x539e",
+          "r0": 1,
+          "r6": 119
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 1,
+          "saved_capture": 600,
+          "capture": 600,
+          "saved_source": 1,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 600,
+      "old_count": 1999,
+      "match": "both",
+      "optional": false,
+      "overrides": [
+        [
+          2098248,
+          4,
+          1999
+        ],
+        [
+          2098236,
+          4,
+          600
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          0
+        ],
+        [
+          2098924,
+          1,
+          0
+        ],
+        [
+          2099933,
+          1,
+          0
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 1999,
+          "saved_capture": 600,
+          "capture": 600,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 600,
+      "old_count": 1999,
+      "match": "both",
+      "optional": true,
+      "overrides": [
+        [
+          2098248,
+          4,
+          1999
+        ],
+        [
+          2098236,
+          4,
+          600
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          1
+        ],
+        [
+          2098924,
+          1,
+          1
+        ],
+        [
+          2099933,
+          1,
+          1
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x539e",
+          "r0": 1,
+          "r6": 119
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 1999,
+          "saved_capture": 600,
+          "capture": 600,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 600,
+      "old_count": 1999,
+      "match": "capture_mismatch",
+      "optional": false,
+      "overrides": [
+        [
+          2098248,
+          4,
+          1999
+        ],
+        [
+          2098236,
+          4,
+          601
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          0
+        ],
+        [
+          2098924,
+          1,
+          0
+        ],
+        [
+          2099933,
+          1,
+          0
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 1999,
+          "saved_capture": 601,
+          "capture": 600,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 600,
+      "old_count": 1999,
+      "match": "capture_mismatch",
+      "optional": true,
+      "overrides": [
+        [
+          2098248,
+          4,
+          1999
+        ],
+        [
+          2098236,
+          4,
+          601
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          1
+        ],
+        [
+          2098924,
+          1,
+          1
+        ],
+        [
+          2099933,
+          1,
+          1
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x539e",
+          "r0": 1,
+          "r6": 119
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 1999,
+          "saved_capture": 601,
+          "capture": 600,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 600,
+      "old_count": 1999,
+      "match": "source_mismatch",
+      "optional": false,
+      "overrides": [
+        [
+          2098248,
+          4,
+          1999
+        ],
+        [
+          2098236,
+          4,
+          600
+        ],
+        [
+          2098240,
+          4,
+          1
+        ],
+        [
+          2098221,
+          1,
+          0
+        ],
+        [
+          2098924,
+          1,
+          0
+        ],
+        [
+          2099933,
+          1,
+          0
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 1999,
+          "saved_capture": 600,
+          "capture": 600,
+          "saved_source": 1,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 600,
+      "old_count": 1999,
+      "match": "source_mismatch",
+      "optional": true,
+      "overrides": [
+        [
+          2098248,
+          4,
+          1999
+        ],
+        [
+          2098236,
+          4,
+          600
+        ],
+        [
+          2098240,
+          4,
+          1
+        ],
+        [
+          2098221,
+          1,
+          1
+        ],
+        [
+          2098924,
+          1,
+          1
+        ],
+        [
+          2099933,
+          1,
+          1
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x539e",
+          "r0": 1,
+          "r6": 119
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 1999,
+          "saved_capture": 600,
+          "capture": 600,
+          "saved_source": 1,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 600,
+      "old_count": 4294967295,
+      "match": "both",
+      "optional": false,
+      "overrides": [
+        [
+          2098248,
+          4,
+          4294967295
+        ],
+        [
+          2098236,
+          4,
+          600
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          0
+        ],
+        [
+          2098924,
+          1,
+          0
+        ],
+        [
+          2099933,
+          1,
+          0
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 4294967295,
+          "saved_capture": 600,
+          "capture": 600,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 600,
+      "old_count": 4294967295,
+      "match": "both",
+      "optional": true,
+      "overrides": [
+        [
+          2098248,
+          4,
+          4294967295
+        ],
+        [
+          2098236,
+          4,
+          600
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          1
+        ],
+        [
+          2098924,
+          1,
+          1
+        ],
+        [
+          2099933,
+          1,
+          1
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x539e",
+          "r0": 1,
+          "r6": 119
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 4294967295,
+          "saved_capture": 600,
+          "capture": 600,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 600,
+      "old_count": 4294967295,
+      "match": "capture_mismatch",
+      "optional": false,
+      "overrides": [
+        [
+          2098248,
+          4,
+          4294967295
+        ],
+        [
+          2098236,
+          4,
+          601
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          0
+        ],
+        [
+          2098924,
+          1,
+          0
+        ],
+        [
+          2099933,
+          1,
+          0
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 4294967295,
+          "saved_capture": 601,
+          "capture": 600,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 600,
+      "old_count": 4294967295,
+      "match": "capture_mismatch",
+      "optional": true,
+      "overrides": [
+        [
+          2098248,
+          4,
+          4294967295
+        ],
+        [
+          2098236,
+          4,
+          601
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          1
+        ],
+        [
+          2098924,
+          1,
+          1
+        ],
+        [
+          2099933,
+          1,
+          1
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x539e",
+          "r0": 1,
+          "r6": 119
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 4294967295,
+          "saved_capture": 601,
+          "capture": 600,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 600,
+      "old_count": 4294967295,
+      "match": "source_mismatch",
+      "optional": false,
+      "overrides": [
+        [
+          2098248,
+          4,
+          4294967295
+        ],
+        [
+          2098236,
+          4,
+          600
+        ],
+        [
+          2098240,
+          4,
+          1
+        ],
+        [
+          2098221,
+          1,
+          0
+        ],
+        [
+          2098924,
+          1,
+          0
+        ],
+        [
+          2099933,
+          1,
+          0
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 4294967295,
+          "saved_capture": 600,
+          "capture": 600,
+          "saved_source": 1,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 600,
+      "old_count": 4294967295,
+      "match": "source_mismatch",
+      "optional": true,
+      "overrides": [
+        [
+          2098248,
+          4,
+          4294967295
+        ],
+        [
+          2098236,
+          4,
+          600
+        ],
+        [
+          2098240,
+          4,
+          1
+        ],
+        [
+          2098221,
+          1,
+          1
+        ],
+        [
+          2098924,
+          1,
+          1
+        ],
+        [
+          2099933,
+          1,
+          1
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x539e",
+          "r0": 1,
+          "r6": 119
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 4294967295,
+          "saved_capture": 600,
+          "capture": 600,
+          "saved_source": 1,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 601,
+      "old_count": 0,
+      "match": "both",
+      "optional": false,
+      "overrides": [
+        [
+          2098248,
+          4,
+          0
+        ],
+        [
+          2098236,
+          4,
+          601
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          0
+        ],
+        [
+          2098924,
+          1,
+          0
+        ],
+        [
+          2099933,
+          1,
+          0
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 0,
+          "saved_capture": 601,
+          "capture": 601,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 1
+        }
+      ],
+      "count_after": 1,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 601,
+      "old_count": 0,
+      "match": "both",
+      "optional": true,
+      "overrides": [
+        [
+          2098248,
+          4,
+          0
+        ],
+        [
+          2098236,
+          4,
+          601
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          1
+        ],
+        [
+          2098924,
+          1,
+          1
+        ],
+        [
+          2099933,
+          1,
+          1
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x539e",
+          "r0": 1,
+          "r6": 119
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 0,
+          "saved_capture": 601,
+          "capture": 601,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 1
+        }
+      ],
+      "count_after": 1,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 601,
+      "old_count": 0,
+      "match": "capture_mismatch",
+      "optional": false,
+      "overrides": [
+        [
+          2098248,
+          4,
+          0
+        ],
+        [
+          2098236,
+          4,
+          602
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          0
+        ],
+        [
+          2098924,
+          1,
+          0
+        ],
+        [
+          2099933,
+          1,
+          0
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 0,
+          "saved_capture": 602,
+          "capture": 601,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 601,
+      "old_count": 0,
+      "match": "capture_mismatch",
+      "optional": true,
+      "overrides": [
+        [
+          2098248,
+          4,
+          0
+        ],
+        [
+          2098236,
+          4,
+          602
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          1
+        ],
+        [
+          2098924,
+          1,
+          1
+        ],
+        [
+          2099933,
+          1,
+          1
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x539e",
+          "r0": 1,
+          "r6": 119
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 0,
+          "saved_capture": 602,
+          "capture": 601,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 601,
+      "old_count": 0,
+      "match": "source_mismatch",
+      "optional": false,
+      "overrides": [
+        [
+          2098248,
+          4,
+          0
+        ],
+        [
+          2098236,
+          4,
+          601
+        ],
+        [
+          2098240,
+          4,
+          1
+        ],
+        [
+          2098221,
+          1,
+          0
+        ],
+        [
+          2098924,
+          1,
+          0
+        ],
+        [
+          2099933,
+          1,
+          0
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 0,
+          "saved_capture": 601,
+          "capture": 601,
+          "saved_source": 1,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 601,
+      "old_count": 0,
+      "match": "source_mismatch",
+      "optional": true,
+      "overrides": [
+        [
+          2098248,
+          4,
+          0
+        ],
+        [
+          2098236,
+          4,
+          601
+        ],
+        [
+          2098240,
+          4,
+          1
+        ],
+        [
+          2098221,
+          1,
+          1
+        ],
+        [
+          2098924,
+          1,
+          1
+        ],
+        [
+          2099933,
+          1,
+          1
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x539e",
+          "r0": 1,
+          "r6": 119
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 0,
+          "saved_capture": 601,
+          "capture": 601,
+          "saved_source": 1,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 601,
+      "old_count": 1,
+      "match": "both",
+      "optional": false,
+      "overrides": [
+        [
+          2098248,
+          4,
+          1
+        ],
+        [
+          2098236,
+          4,
+          601
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          0
+        ],
+        [
+          2098924,
+          1,
+          0
+        ],
+        [
+          2099933,
+          1,
+          0
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 1,
+          "saved_capture": 601,
+          "capture": 601,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 2
+        }
+      ],
+      "count_after": 2,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 601,
+      "old_count": 1,
+      "match": "both",
+      "optional": true,
+      "overrides": [
+        [
+          2098248,
+          4,
+          1
+        ],
+        [
+          2098236,
+          4,
+          601
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          1
+        ],
+        [
+          2098924,
+          1,
+          1
+        ],
+        [
+          2099933,
+          1,
+          1
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x539e",
+          "r0": 1,
+          "r6": 119
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 1,
+          "saved_capture": 601,
+          "capture": 601,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 2
+        }
+      ],
+      "count_after": 2,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 601,
+      "old_count": 1,
+      "match": "capture_mismatch",
+      "optional": false,
+      "overrides": [
+        [
+          2098248,
+          4,
+          1
+        ],
+        [
+          2098236,
+          4,
+          602
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          0
+        ],
+        [
+          2098924,
+          1,
+          0
+        ],
+        [
+          2099933,
+          1,
+          0
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 1,
+          "saved_capture": 602,
+          "capture": 601,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 601,
+      "old_count": 1,
+      "match": "capture_mismatch",
+      "optional": true,
+      "overrides": [
+        [
+          2098248,
+          4,
+          1
+        ],
+        [
+          2098236,
+          4,
+          602
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          1
+        ],
+        [
+          2098924,
+          1,
+          1
+        ],
+        [
+          2099933,
+          1,
+          1
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x539e",
+          "r0": 1,
+          "r6": 119
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 1,
+          "saved_capture": 602,
+          "capture": 601,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 601,
+      "old_count": 1,
+      "match": "source_mismatch",
+      "optional": false,
+      "overrides": [
+        [
+          2098248,
+          4,
+          1
+        ],
+        [
+          2098236,
+          4,
+          601
+        ],
+        [
+          2098240,
+          4,
+          1
+        ],
+        [
+          2098221,
+          1,
+          0
+        ],
+        [
+          2098924,
+          1,
+          0
+        ],
+        [
+          2099933,
+          1,
+          0
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 1,
+          "saved_capture": 601,
+          "capture": 601,
+          "saved_source": 1,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 601,
+      "old_count": 1,
+      "match": "source_mismatch",
+      "optional": true,
+      "overrides": [
+        [
+          2098248,
+          4,
+          1
+        ],
+        [
+          2098236,
+          4,
+          601
+        ],
+        [
+          2098240,
+          4,
+          1
+        ],
+        [
+          2098221,
+          1,
+          1
+        ],
+        [
+          2098924,
+          1,
+          1
+        ],
+        [
+          2099933,
+          1,
+          1
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x539e",
+          "r0": 1,
+          "r6": 119
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 1,
+          "saved_capture": 601,
+          "capture": 601,
+          "saved_source": 1,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 601,
+      "old_count": 1999,
+      "match": "both",
+      "optional": false,
+      "overrides": [
+        [
+          2098248,
+          4,
+          1999
+        ],
+        [
+          2098236,
+          4,
+          601
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          0
+        ],
+        [
+          2098924,
+          1,
+          0
+        ],
+        [
+          2099933,
+          1,
+          0
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 1999,
+          "saved_capture": 601,
+          "capture": 601,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 2000
+        }
+      ],
+      "count_after": 2000,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 601,
+      "old_count": 1999,
+      "match": "both",
+      "optional": true,
+      "overrides": [
+        [
+          2098248,
+          4,
+          1999
+        ],
+        [
+          2098236,
+          4,
+          601
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          1
+        ],
+        [
+          2098924,
+          1,
+          1
+        ],
+        [
+          2099933,
+          1,
+          1
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x539e",
+          "r0": 1,
+          "r6": 119
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 1999,
+          "saved_capture": 601,
+          "capture": 601,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 2000
+        }
+      ],
+      "count_after": 2000,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 601,
+      "old_count": 1999,
+      "match": "capture_mismatch",
+      "optional": false,
+      "overrides": [
+        [
+          2098248,
+          4,
+          1999
+        ],
+        [
+          2098236,
+          4,
+          602
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          0
+        ],
+        [
+          2098924,
+          1,
+          0
+        ],
+        [
+          2099933,
+          1,
+          0
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 1999,
+          "saved_capture": 602,
+          "capture": 601,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 601,
+      "old_count": 1999,
+      "match": "capture_mismatch",
+      "optional": true,
+      "overrides": [
+        [
+          2098248,
+          4,
+          1999
+        ],
+        [
+          2098236,
+          4,
+          602
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          1
+        ],
+        [
+          2098924,
+          1,
+          1
+        ],
+        [
+          2099933,
+          1,
+          1
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x539e",
+          "r0": 1,
+          "r6": 119
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 1999,
+          "saved_capture": 602,
+          "capture": 601,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 601,
+      "old_count": 1999,
+      "match": "source_mismatch",
+      "optional": false,
+      "overrides": [
+        [
+          2098248,
+          4,
+          1999
+        ],
+        [
+          2098236,
+          4,
+          601
+        ],
+        [
+          2098240,
+          4,
+          1
+        ],
+        [
+          2098221,
+          1,
+          0
+        ],
+        [
+          2098924,
+          1,
+          0
+        ],
+        [
+          2099933,
+          1,
+          0
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 1999,
+          "saved_capture": 601,
+          "capture": 601,
+          "saved_source": 1,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 601,
+      "old_count": 1999,
+      "match": "source_mismatch",
+      "optional": true,
+      "overrides": [
+        [
+          2098248,
+          4,
+          1999
+        ],
+        [
+          2098236,
+          4,
+          601
+        ],
+        [
+          2098240,
+          4,
+          1
+        ],
+        [
+          2098221,
+          1,
+          1
+        ],
+        [
+          2098924,
+          1,
+          1
+        ],
+        [
+          2099933,
+          1,
+          1
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x539e",
+          "r0": 1,
+          "r6": 119
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 1999,
+          "saved_capture": 601,
+          "capture": 601,
+          "saved_source": 1,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 601,
+      "old_count": 4294967295,
+      "match": "both",
+      "optional": false,
+      "overrides": [
+        [
+          2098248,
+          4,
+          4294967295
+        ],
+        [
+          2098236,
+          4,
+          601
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          0
+        ],
+        [
+          2098924,
+          1,
+          0
+        ],
+        [
+          2099933,
+          1,
+          0
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 4294967295,
+          "saved_capture": 601,
+          "capture": 601,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 601,
+      "old_count": 4294967295,
+      "match": "both",
+      "optional": true,
+      "overrides": [
+        [
+          2098248,
+          4,
+          4294967295
+        ],
+        [
+          2098236,
+          4,
+          601
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          1
+        ],
+        [
+          2098924,
+          1,
+          1
+        ],
+        [
+          2099933,
+          1,
+          1
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x539e",
+          "r0": 1,
+          "r6": 119
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 4294967295,
+          "saved_capture": 601,
+          "capture": 601,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 601,
+      "old_count": 4294967295,
+      "match": "capture_mismatch",
+      "optional": false,
+      "overrides": [
+        [
+          2098248,
+          4,
+          4294967295
+        ],
+        [
+          2098236,
+          4,
+          602
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          0
+        ],
+        [
+          2098924,
+          1,
+          0
+        ],
+        [
+          2099933,
+          1,
+          0
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 4294967295,
+          "saved_capture": 602,
+          "capture": 601,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 601,
+      "old_count": 4294967295,
+      "match": "capture_mismatch",
+      "optional": true,
+      "overrides": [
+        [
+          2098248,
+          4,
+          4294967295
+        ],
+        [
+          2098236,
+          4,
+          602
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          1
+        ],
+        [
+          2098924,
+          1,
+          1
+        ],
+        [
+          2099933,
+          1,
+          1
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x539e",
+          "r0": 1,
+          "r6": 119
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 4294967295,
+          "saved_capture": 602,
+          "capture": 601,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 601,
+      "old_count": 4294967295,
+      "match": "source_mismatch",
+      "optional": false,
+      "overrides": [
+        [
+          2098248,
+          4,
+          4294967295
+        ],
+        [
+          2098236,
+          4,
+          601
+        ],
+        [
+          2098240,
+          4,
+          1
+        ],
+        [
+          2098221,
+          1,
+          0
+        ],
+        [
+          2098924,
+          1,
+          0
+        ],
+        [
+          2099933,
+          1,
+          0
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 4294967295,
+          "saved_capture": 601,
+          "capture": 601,
+          "saved_source": 1,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 601,
+      "old_count": 4294967295,
+      "match": "source_mismatch",
+      "optional": true,
+      "overrides": [
+        [
+          2098248,
+          4,
+          4294967295
+        ],
+        [
+          2098236,
+          4,
+          601
+        ],
+        [
+          2098240,
+          4,
+          1
+        ],
+        [
+          2098221,
+          1,
+          1
+        ],
+        [
+          2098924,
+          1,
+          1
+        ],
+        [
+          2099933,
+          1,
+          1
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x539e",
+          "r0": 1,
+          "r6": 119
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 4294967295,
+          "saved_capture": 601,
+          "capture": 601,
+          "saved_source": 1,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 2000,
+      "old_count": 0,
+      "match": "both",
+      "optional": false,
+      "overrides": [
+        [
+          2098248,
+          4,
+          0
+        ],
+        [
+          2098236,
+          4,
+          2000
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          0
+        ],
+        [
+          2098924,
+          1,
+          0
+        ],
+        [
+          2099933,
+          1,
+          0
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 0,
+          "saved_capture": 2000,
+          "capture": 2000,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 1
+        }
+      ],
+      "count_after": 1,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 2000,
+      "old_count": 0,
+      "match": "both",
+      "optional": true,
+      "overrides": [
+        [
+          2098248,
+          4,
+          0
+        ],
+        [
+          2098236,
+          4,
+          2000
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          1
+        ],
+        [
+          2098924,
+          1,
+          1
+        ],
+        [
+          2099933,
+          1,
+          1
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x539e",
+          "r0": 1,
+          "r6": 119
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 0,
+          "saved_capture": 2000,
+          "capture": 2000,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 1
+        }
+      ],
+      "count_after": 1,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 2000,
+      "old_count": 0,
+      "match": "capture_mismatch",
+      "optional": false,
+      "overrides": [
+        [
+          2098248,
+          4,
+          0
+        ],
+        [
+          2098236,
+          4,
+          2001
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          0
+        ],
+        [
+          2098924,
+          1,
+          0
+        ],
+        [
+          2099933,
+          1,
+          0
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 0,
+          "saved_capture": 2001,
+          "capture": 2000,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 2000,
+      "old_count": 0,
+      "match": "capture_mismatch",
+      "optional": true,
+      "overrides": [
+        [
+          2098248,
+          4,
+          0
+        ],
+        [
+          2098236,
+          4,
+          2001
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          1
+        ],
+        [
+          2098924,
+          1,
+          1
+        ],
+        [
+          2099933,
+          1,
+          1
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x539e",
+          "r0": 1,
+          "r6": 119
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 0,
+          "saved_capture": 2001,
+          "capture": 2000,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 2000,
+      "old_count": 0,
+      "match": "source_mismatch",
+      "optional": false,
+      "overrides": [
+        [
+          2098248,
+          4,
+          0
+        ],
+        [
+          2098236,
+          4,
+          2000
+        ],
+        [
+          2098240,
+          4,
+          1
+        ],
+        [
+          2098221,
+          1,
+          0
+        ],
+        [
+          2098924,
+          1,
+          0
+        ],
+        [
+          2099933,
+          1,
+          0
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 0,
+          "saved_capture": 2000,
+          "capture": 2000,
+          "saved_source": 1,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 2000,
+      "old_count": 0,
+      "match": "source_mismatch",
+      "optional": true,
+      "overrides": [
+        [
+          2098248,
+          4,
+          0
+        ],
+        [
+          2098236,
+          4,
+          2000
+        ],
+        [
+          2098240,
+          4,
+          1
+        ],
+        [
+          2098221,
+          1,
+          1
+        ],
+        [
+          2098924,
+          1,
+          1
+        ],
+        [
+          2099933,
+          1,
+          1
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x539e",
+          "r0": 1,
+          "r6": 119
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 0,
+          "saved_capture": 2000,
+          "capture": 2000,
+          "saved_source": 1,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 2000,
+      "old_count": 1,
+      "match": "both",
+      "optional": false,
+      "overrides": [
+        [
+          2098248,
+          4,
+          1
+        ],
+        [
+          2098236,
+          4,
+          2000
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          0
+        ],
+        [
+          2098924,
+          1,
+          0
+        ],
+        [
+          2099933,
+          1,
+          0
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 1,
+          "saved_capture": 2000,
+          "capture": 2000,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 2
+        }
+      ],
+      "count_after": 2,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 2000,
+      "old_count": 1,
+      "match": "both",
+      "optional": true,
+      "overrides": [
+        [
+          2098248,
+          4,
+          1
+        ],
+        [
+          2098236,
+          4,
+          2000
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          1
+        ],
+        [
+          2098924,
+          1,
+          1
+        ],
+        [
+          2099933,
+          1,
+          1
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x539e",
+          "r0": 1,
+          "r6": 119
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 1,
+          "saved_capture": 2000,
+          "capture": 2000,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 2
+        }
+      ],
+      "count_after": 2,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 2000,
+      "old_count": 1,
+      "match": "capture_mismatch",
+      "optional": false,
+      "overrides": [
+        [
+          2098248,
+          4,
+          1
+        ],
+        [
+          2098236,
+          4,
+          2001
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          0
+        ],
+        [
+          2098924,
+          1,
+          0
+        ],
+        [
+          2099933,
+          1,
+          0
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 1,
+          "saved_capture": 2001,
+          "capture": 2000,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 2000,
+      "old_count": 1,
+      "match": "capture_mismatch",
+      "optional": true,
+      "overrides": [
+        [
+          2098248,
+          4,
+          1
+        ],
+        [
+          2098236,
+          4,
+          2001
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          1
+        ],
+        [
+          2098924,
+          1,
+          1
+        ],
+        [
+          2099933,
+          1,
+          1
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x539e",
+          "r0": 1,
+          "r6": 119
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 1,
+          "saved_capture": 2001,
+          "capture": 2000,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 2000,
+      "old_count": 1,
+      "match": "source_mismatch",
+      "optional": false,
+      "overrides": [
+        [
+          2098248,
+          4,
+          1
+        ],
+        [
+          2098236,
+          4,
+          2000
+        ],
+        [
+          2098240,
+          4,
+          1
+        ],
+        [
+          2098221,
+          1,
+          0
+        ],
+        [
+          2098924,
+          1,
+          0
+        ],
+        [
+          2099933,
+          1,
+          0
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 1,
+          "saved_capture": 2000,
+          "capture": 2000,
+          "saved_source": 1,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 2000,
+      "old_count": 1,
+      "match": "source_mismatch",
+      "optional": true,
+      "overrides": [
+        [
+          2098248,
+          4,
+          1
+        ],
+        [
+          2098236,
+          4,
+          2000
+        ],
+        [
+          2098240,
+          4,
+          1
+        ],
+        [
+          2098221,
+          1,
+          1
+        ],
+        [
+          2098924,
+          1,
+          1
+        ],
+        [
+          2099933,
+          1,
+          1
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x539e",
+          "r0": 1,
+          "r6": 119
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 1,
+          "saved_capture": 2000,
+          "capture": 2000,
+          "saved_source": 1,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 2000,
+      "old_count": 1999,
+      "match": "both",
+      "optional": false,
+      "overrides": [
+        [
+          2098248,
+          4,
+          1999
+        ],
+        [
+          2098236,
+          4,
+          2000
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          0
+        ],
+        [
+          2098924,
+          1,
+          0
+        ],
+        [
+          2099933,
+          1,
+          0
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 1999,
+          "saved_capture": 2000,
+          "capture": 2000,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 2000
+        }
+      ],
+      "count_after": 2000,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 2000,
+      "old_count": 1999,
+      "match": "both",
+      "optional": true,
+      "overrides": [
+        [
+          2098248,
+          4,
+          1999
+        ],
+        [
+          2098236,
+          4,
+          2000
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          1
+        ],
+        [
+          2098924,
+          1,
+          1
+        ],
+        [
+          2099933,
+          1,
+          1
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x539e",
+          "r0": 1,
+          "r6": 119
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 1999,
+          "saved_capture": 2000,
+          "capture": 2000,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 2000
+        }
+      ],
+      "count_after": 2000,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 2000,
+      "old_count": 1999,
+      "match": "capture_mismatch",
+      "optional": false,
+      "overrides": [
+        [
+          2098248,
+          4,
+          1999
+        ],
+        [
+          2098236,
+          4,
+          2001
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          0
+        ],
+        [
+          2098924,
+          1,
+          0
+        ],
+        [
+          2099933,
+          1,
+          0
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 1999,
+          "saved_capture": 2001,
+          "capture": 2000,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 2000,
+      "old_count": 1999,
+      "match": "capture_mismatch",
+      "optional": true,
+      "overrides": [
+        [
+          2098248,
+          4,
+          1999
+        ],
+        [
+          2098236,
+          4,
+          2001
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          1
+        ],
+        [
+          2098924,
+          1,
+          1
+        ],
+        [
+          2099933,
+          1,
+          1
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x539e",
+          "r0": 1,
+          "r6": 119
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 1999,
+          "saved_capture": 2001,
+          "capture": 2000,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 2000,
+      "old_count": 1999,
+      "match": "source_mismatch",
+      "optional": false,
+      "overrides": [
+        [
+          2098248,
+          4,
+          1999
+        ],
+        [
+          2098236,
+          4,
+          2000
+        ],
+        [
+          2098240,
+          4,
+          1
+        ],
+        [
+          2098221,
+          1,
+          0
+        ],
+        [
+          2098924,
+          1,
+          0
+        ],
+        [
+          2099933,
+          1,
+          0
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 1999,
+          "saved_capture": 2000,
+          "capture": 2000,
+          "saved_source": 1,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 2000,
+      "old_count": 1999,
+      "match": "source_mismatch",
+      "optional": true,
+      "overrides": [
+        [
+          2098248,
+          4,
+          1999
+        ],
+        [
+          2098236,
+          4,
+          2000
+        ],
+        [
+          2098240,
+          4,
+          1
+        ],
+        [
+          2098221,
+          1,
+          1
+        ],
+        [
+          2098924,
+          1,
+          1
+        ],
+        [
+          2099933,
+          1,
+          1
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x539e",
+          "r0": 1,
+          "r6": 119
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 1999,
+          "saved_capture": 2000,
+          "capture": 2000,
+          "saved_source": 1,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 2000,
+      "old_count": 4294967295,
+      "match": "both",
+      "optional": false,
+      "overrides": [
+        [
+          2098248,
+          4,
+          4294967295
+        ],
+        [
+          2098236,
+          4,
+          2000
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          0
+        ],
+        [
+          2098924,
+          1,
+          0
+        ],
+        [
+          2099933,
+          1,
+          0
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 4294967295,
+          "saved_capture": 2000,
+          "capture": 2000,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 2000,
+      "old_count": 4294967295,
+      "match": "both",
+      "optional": true,
+      "overrides": [
+        [
+          2098248,
+          4,
+          4294967295
+        ],
+        [
+          2098236,
+          4,
+          2000
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          1
+        ],
+        [
+          2098924,
+          1,
+          1
+        ],
+        [
+          2099933,
+          1,
+          1
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x539e",
+          "r0": 1,
+          "r6": 119
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 4294967295,
+          "saved_capture": 2000,
+          "capture": 2000,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 2000,
+      "old_count": 4294967295,
+      "match": "capture_mismatch",
+      "optional": false,
+      "overrides": [
+        [
+          2098248,
+          4,
+          4294967295
+        ],
+        [
+          2098236,
+          4,
+          2001
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          0
+        ],
+        [
+          2098924,
+          1,
+          0
+        ],
+        [
+          2099933,
+          1,
+          0
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 4294967295,
+          "saved_capture": 2001,
+          "capture": 2000,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 2000,
+      "old_count": 4294967295,
+      "match": "capture_mismatch",
+      "optional": true,
+      "overrides": [
+        [
+          2098248,
+          4,
+          4294967295
+        ],
+        [
+          2098236,
+          4,
+          2001
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          1
+        ],
+        [
+          2098924,
+          1,
+          1
+        ],
+        [
+          2099933,
+          1,
+          1
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x539e",
+          "r0": 1,
+          "r6": 119
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 4294967295,
+          "saved_capture": 2001,
+          "capture": 2000,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 2000,
+      "old_count": 4294967295,
+      "match": "source_mismatch",
+      "optional": false,
+      "overrides": [
+        [
+          2098248,
+          4,
+          4294967295
+        ],
+        [
+          2098236,
+          4,
+          2000
+        ],
+        [
+          2098240,
+          4,
+          1
+        ],
+        [
+          2098221,
+          1,
+          0
+        ],
+        [
+          2098924,
+          1,
+          0
+        ],
+        [
+          2099933,
+          1,
+          0
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 4294967295,
+          "saved_capture": 2000,
+          "capture": 2000,
+          "saved_source": 1,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 2000,
+      "old_count": 4294967295,
+      "match": "source_mismatch",
+      "optional": true,
+      "overrides": [
+        [
+          2098248,
+          4,
+          4294967295
+        ],
+        [
+          2098236,
+          4,
+          2000
+        ],
+        [
+          2098240,
+          4,
+          1
+        ],
+        [
+          2098221,
+          1,
+          1
+        ],
+        [
+          2098924,
+          1,
+          1
+        ],
+        [
+          2099933,
+          1,
+          1
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x539e",
+          "r0": 1,
+          "r6": 119
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 4294967295,
+          "saved_capture": 2000,
+          "capture": 2000,
+          "saved_source": 1,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 3200,
+      "old_count": 0,
+      "match": "both",
+      "optional": false,
+      "overrides": [
+        [
+          2098248,
+          4,
+          0
+        ],
+        [
+          2098236,
+          4,
+          3200
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          0
+        ],
+        [
+          2098924,
+          1,
+          0
+        ],
+        [
+          2099933,
+          1,
+          0
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 0,
+          "saved_capture": 3200,
+          "capture": 3200,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 1
+        }
+      ],
+      "count_after": 1,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 3200,
+      "old_count": 0,
+      "match": "both",
+      "optional": true,
+      "overrides": [
+        [
+          2098248,
+          4,
+          0
+        ],
+        [
+          2098236,
+          4,
+          3200
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          1
+        ],
+        [
+          2098924,
+          1,
+          1
+        ],
+        [
+          2099933,
+          1,
+          1
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x536a",
+          "r0": 1,
+          "r6": 119
+        },
+        {
+          "site": "0x5376",
+          "r0": 410,
+          "r6": 119
+        },
+        {
+          "site": "0x5382",
+          "clamp_input": 119,
+          "clamp_output": 410
+        },
+        {
+          "site": "0x539e",
+          "r0": 1,
+          "r6": 410
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 0,
+          "saved_capture": 3200,
+          "capture": 3200,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 1
+        }
+      ],
+      "count_after": 1,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0x2673",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0x2673"
+        }
+      ]
+    },
+    {
+      "capture": 3200,
+      "old_count": 0,
+      "match": "capture_mismatch",
+      "optional": false,
+      "overrides": [
+        [
+          2098248,
+          4,
+          0
+        ],
+        [
+          2098236,
+          4,
+          3201
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          0
+        ],
+        [
+          2098924,
+          1,
+          0
+        ],
+        [
+          2099933,
+          1,
+          0
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 0,
+          "saved_capture": 3201,
+          "capture": 3200,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 3200,
+      "old_count": 0,
+      "match": "capture_mismatch",
+      "optional": true,
+      "overrides": [
+        [
+          2098248,
+          4,
+          0
+        ],
+        [
+          2098236,
+          4,
+          3201
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          1
+        ],
+        [
+          2098924,
+          1,
+          1
+        ],
+        [
+          2099933,
+          1,
+          1
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x536a",
+          "r0": 1,
+          "r6": 119
+        },
+        {
+          "site": "0x5376",
+          "r0": 410,
+          "r6": 119
+        },
+        {
+          "site": "0x5382",
+          "clamp_input": 119,
+          "clamp_output": 410
+        },
+        {
+          "site": "0x539e",
+          "r0": 1,
+          "r6": 410
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 0,
+          "saved_capture": 3201,
+          "capture": 3200,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0x2673",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0x2673"
+        }
+      ]
+    },
+    {
+      "capture": 3200,
+      "old_count": 0,
+      "match": "source_mismatch",
+      "optional": false,
+      "overrides": [
+        [
+          2098248,
+          4,
+          0
+        ],
+        [
+          2098236,
+          4,
+          3200
+        ],
+        [
+          2098240,
+          4,
+          1
+        ],
+        [
+          2098221,
+          1,
+          0
+        ],
+        [
+          2098924,
+          1,
+          0
+        ],
+        [
+          2099933,
+          1,
+          0
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 0,
+          "saved_capture": 3200,
+          "capture": 3200,
+          "saved_source": 1,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 3200,
+      "old_count": 0,
+      "match": "source_mismatch",
+      "optional": true,
+      "overrides": [
+        [
+          2098248,
+          4,
+          0
+        ],
+        [
+          2098236,
+          4,
+          3200
+        ],
+        [
+          2098240,
+          4,
+          1
+        ],
+        [
+          2098221,
+          1,
+          1
+        ],
+        [
+          2098924,
+          1,
+          1
+        ],
+        [
+          2099933,
+          1,
+          1
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x536a",
+          "r0": 1,
+          "r6": 119
+        },
+        {
+          "site": "0x5376",
+          "r0": 410,
+          "r6": 119
+        },
+        {
+          "site": "0x5382",
+          "clamp_input": 119,
+          "clamp_output": 410
+        },
+        {
+          "site": "0x539e",
+          "r0": 1,
+          "r6": 410
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 0,
+          "saved_capture": 3200,
+          "capture": 3200,
+          "saved_source": 1,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0x2673",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0x2673"
+        }
+      ]
+    },
+    {
+      "capture": 3200,
+      "old_count": 1,
+      "match": "both",
+      "optional": false,
+      "overrides": [
+        [
+          2098248,
+          4,
+          1
+        ],
+        [
+          2098236,
+          4,
+          3200
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          0
+        ],
+        [
+          2098924,
+          1,
+          0
+        ],
+        [
+          2099933,
+          1,
+          0
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 1,
+          "saved_capture": 3200,
+          "capture": 3200,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 2
+        }
+      ],
+      "count_after": 2,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 3200,
+      "old_count": 1,
+      "match": "both",
+      "optional": true,
+      "overrides": [
+        [
+          2098248,
+          4,
+          1
+        ],
+        [
+          2098236,
+          4,
+          3200
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          1
+        ],
+        [
+          2098924,
+          1,
+          1
+        ],
+        [
+          2099933,
+          1,
+          1
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x536a",
+          "r0": 1,
+          "r6": 119
+        },
+        {
+          "site": "0x5376",
+          "r0": 410,
+          "r6": 119
+        },
+        {
+          "site": "0x5382",
+          "clamp_input": 119,
+          "clamp_output": 410
+        },
+        {
+          "site": "0x539e",
+          "r0": 1,
+          "r6": 410
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 1,
+          "saved_capture": 3200,
+          "capture": 3200,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 2
+        }
+      ],
+      "count_after": 2,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0x2673",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0x2673"
+        }
+      ]
+    },
+    {
+      "capture": 3200,
+      "old_count": 1,
+      "match": "capture_mismatch",
+      "optional": false,
+      "overrides": [
+        [
+          2098248,
+          4,
+          1
+        ],
+        [
+          2098236,
+          4,
+          3201
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          0
+        ],
+        [
+          2098924,
+          1,
+          0
+        ],
+        [
+          2099933,
+          1,
+          0
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 1,
+          "saved_capture": 3201,
+          "capture": 3200,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 3200,
+      "old_count": 1,
+      "match": "capture_mismatch",
+      "optional": true,
+      "overrides": [
+        [
+          2098248,
+          4,
+          1
+        ],
+        [
+          2098236,
+          4,
+          3201
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          1
+        ],
+        [
+          2098924,
+          1,
+          1
+        ],
+        [
+          2099933,
+          1,
+          1
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x536a",
+          "r0": 1,
+          "r6": 119
+        },
+        {
+          "site": "0x5376",
+          "r0": 410,
+          "r6": 119
+        },
+        {
+          "site": "0x5382",
+          "clamp_input": 119,
+          "clamp_output": 410
+        },
+        {
+          "site": "0x539e",
+          "r0": 1,
+          "r6": 410
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 1,
+          "saved_capture": 3201,
+          "capture": 3200,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0x2673",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0x2673"
+        }
+      ]
+    },
+    {
+      "capture": 3200,
+      "old_count": 1,
+      "match": "source_mismatch",
+      "optional": false,
+      "overrides": [
+        [
+          2098248,
+          4,
+          1
+        ],
+        [
+          2098236,
+          4,
+          3200
+        ],
+        [
+          2098240,
+          4,
+          1
+        ],
+        [
+          2098221,
+          1,
+          0
+        ],
+        [
+          2098924,
+          1,
+          0
+        ],
+        [
+          2099933,
+          1,
+          0
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 1,
+          "saved_capture": 3200,
+          "capture": 3200,
+          "saved_source": 1,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 3200,
+      "old_count": 1,
+      "match": "source_mismatch",
+      "optional": true,
+      "overrides": [
+        [
+          2098248,
+          4,
+          1
+        ],
+        [
+          2098236,
+          4,
+          3200
+        ],
+        [
+          2098240,
+          4,
+          1
+        ],
+        [
+          2098221,
+          1,
+          1
+        ],
+        [
+          2098924,
+          1,
+          1
+        ],
+        [
+          2099933,
+          1,
+          1
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x536a",
+          "r0": 1,
+          "r6": 119
+        },
+        {
+          "site": "0x5376",
+          "r0": 410,
+          "r6": 119
+        },
+        {
+          "site": "0x5382",
+          "clamp_input": 119,
+          "clamp_output": 410
+        },
+        {
+          "site": "0x539e",
+          "r0": 1,
+          "r6": 410
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 1,
+          "saved_capture": 3200,
+          "capture": 3200,
+          "saved_source": 1,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0x2673",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0x2673"
+        }
+      ]
+    },
+    {
+      "capture": 3200,
+      "old_count": 1999,
+      "match": "both",
+      "optional": false,
+      "overrides": [
+        [
+          2098248,
+          4,
+          1999
+        ],
+        [
+          2098236,
+          4,
+          3200
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          0
+        ],
+        [
+          2098924,
+          1,
+          0
+        ],
+        [
+          2099933,
+          1,
+          0
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 1999,
+          "saved_capture": 3200,
+          "capture": 3200,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 2000
+        }
+      ],
+      "count_after": 2000,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 3200,
+      "old_count": 1999,
+      "match": "both",
+      "optional": true,
+      "overrides": [
+        [
+          2098248,
+          4,
+          1999
+        ],
+        [
+          2098236,
+          4,
+          3200
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          1
+        ],
+        [
+          2098924,
+          1,
+          1
+        ],
+        [
+          2099933,
+          1,
+          1
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x536a",
+          "r0": 1,
+          "r6": 119
+        },
+        {
+          "site": "0x5376",
+          "r0": 410,
+          "r6": 119
+        },
+        {
+          "site": "0x5382",
+          "clamp_input": 119,
+          "clamp_output": 410
+        },
+        {
+          "site": "0x539e",
+          "r0": 1,
+          "r6": 410
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 1999,
+          "saved_capture": 3200,
+          "capture": 3200,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 2000
+        }
+      ],
+      "count_after": 2000,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0x2673",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0x2673"
+        }
+      ]
+    },
+    {
+      "capture": 3200,
+      "old_count": 1999,
+      "match": "capture_mismatch",
+      "optional": false,
+      "overrides": [
+        [
+          2098248,
+          4,
+          1999
+        ],
+        [
+          2098236,
+          4,
+          3201
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          0
+        ],
+        [
+          2098924,
+          1,
+          0
+        ],
+        [
+          2099933,
+          1,
+          0
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 1999,
+          "saved_capture": 3201,
+          "capture": 3200,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 3200,
+      "old_count": 1999,
+      "match": "capture_mismatch",
+      "optional": true,
+      "overrides": [
+        [
+          2098248,
+          4,
+          1999
+        ],
+        [
+          2098236,
+          4,
+          3201
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          1
+        ],
+        [
+          2098924,
+          1,
+          1
+        ],
+        [
+          2099933,
+          1,
+          1
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x536a",
+          "r0": 1,
+          "r6": 119
+        },
+        {
+          "site": "0x5376",
+          "r0": 410,
+          "r6": 119
+        },
+        {
+          "site": "0x5382",
+          "clamp_input": 119,
+          "clamp_output": 410
+        },
+        {
+          "site": "0x539e",
+          "r0": 1,
+          "r6": 410
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 1999,
+          "saved_capture": 3201,
+          "capture": 3200,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0x2673",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0x2673"
+        }
+      ]
+    },
+    {
+      "capture": 3200,
+      "old_count": 1999,
+      "match": "source_mismatch",
+      "optional": false,
+      "overrides": [
+        [
+          2098248,
+          4,
+          1999
+        ],
+        [
+          2098236,
+          4,
+          3200
+        ],
+        [
+          2098240,
+          4,
+          1
+        ],
+        [
+          2098221,
+          1,
+          0
+        ],
+        [
+          2098924,
+          1,
+          0
+        ],
+        [
+          2099933,
+          1,
+          0
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 1999,
+          "saved_capture": 3200,
+          "capture": 3200,
+          "saved_source": 1,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 3200,
+      "old_count": 1999,
+      "match": "source_mismatch",
+      "optional": true,
+      "overrides": [
+        [
+          2098248,
+          4,
+          1999
+        ],
+        [
+          2098236,
+          4,
+          3200
+        ],
+        [
+          2098240,
+          4,
+          1
+        ],
+        [
+          2098221,
+          1,
+          1
+        ],
+        [
+          2098924,
+          1,
+          1
+        ],
+        [
+          2099933,
+          1,
+          1
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x536a",
+          "r0": 1,
+          "r6": 119
+        },
+        {
+          "site": "0x5376",
+          "r0": 410,
+          "r6": 119
+        },
+        {
+          "site": "0x5382",
+          "clamp_input": 119,
+          "clamp_output": 410
+        },
+        {
+          "site": "0x539e",
+          "r0": 1,
+          "r6": 410
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 1999,
+          "saved_capture": 3200,
+          "capture": 3200,
+          "saved_source": 1,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0x2673",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0x2673"
+        }
+      ]
+    },
+    {
+      "capture": 3200,
+      "old_count": 4294967295,
+      "match": "both",
+      "optional": false,
+      "overrides": [
+        [
+          2098248,
+          4,
+          4294967295
+        ],
+        [
+          2098236,
+          4,
+          3200
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          0
+        ],
+        [
+          2098924,
+          1,
+          0
+        ],
+        [
+          2099933,
+          1,
+          0
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 4294967295,
+          "saved_capture": 3200,
+          "capture": 3200,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 3200,
+      "old_count": 4294967295,
+      "match": "both",
+      "optional": true,
+      "overrides": [
+        [
+          2098248,
+          4,
+          4294967295
+        ],
+        [
+          2098236,
+          4,
+          3200
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          1
+        ],
+        [
+          2098924,
+          1,
+          1
+        ],
+        [
+          2099933,
+          1,
+          1
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x536a",
+          "r0": 1,
+          "r6": 119
+        },
+        {
+          "site": "0x5376",
+          "r0": 410,
+          "r6": 119
+        },
+        {
+          "site": "0x5382",
+          "clamp_input": 119,
+          "clamp_output": 410
+        },
+        {
+          "site": "0x539e",
+          "r0": 1,
+          "r6": 410
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 4294967295,
+          "saved_capture": 3200,
+          "capture": 3200,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0x2673",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0x2673"
+        }
+      ]
+    },
+    {
+      "capture": 3200,
+      "old_count": 4294967295,
+      "match": "capture_mismatch",
+      "optional": false,
+      "overrides": [
+        [
+          2098248,
+          4,
+          4294967295
+        ],
+        [
+          2098236,
+          4,
+          3201
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          0
+        ],
+        [
+          2098924,
+          1,
+          0
+        ],
+        [
+          2099933,
+          1,
+          0
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 4294967295,
+          "saved_capture": 3201,
+          "capture": 3200,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 3200,
+      "old_count": 4294967295,
+      "match": "capture_mismatch",
+      "optional": true,
+      "overrides": [
+        [
+          2098248,
+          4,
+          4294967295
+        ],
+        [
+          2098236,
+          4,
+          3201
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          1
+        ],
+        [
+          2098924,
+          1,
+          1
+        ],
+        [
+          2099933,
+          1,
+          1
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x536a",
+          "r0": 1,
+          "r6": 119
+        },
+        {
+          "site": "0x5376",
+          "r0": 410,
+          "r6": 119
+        },
+        {
+          "site": "0x5382",
+          "clamp_input": 119,
+          "clamp_output": 410
+        },
+        {
+          "site": "0x539e",
+          "r0": 1,
+          "r6": 410
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 4294967295,
+          "saved_capture": 3201,
+          "capture": 3200,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0x2673",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0x2673"
+        }
+      ]
+    },
+    {
+      "capture": 3200,
+      "old_count": 4294967295,
+      "match": "source_mismatch",
+      "optional": false,
+      "overrides": [
+        [
+          2098248,
+          4,
+          4294967295
+        ],
+        [
+          2098236,
+          4,
+          3200
+        ],
+        [
+          2098240,
+          4,
+          1
+        ],
+        [
+          2098221,
+          1,
+          0
+        ],
+        [
+          2098924,
+          1,
+          0
+        ],
+        [
+          2099933,
+          1,
+          0
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 4294967295,
+          "saved_capture": 3200,
+          "capture": 3200,
+          "saved_source": 1,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 3200,
+      "old_count": 4294967295,
+      "match": "source_mismatch",
+      "optional": true,
+      "overrides": [
+        [
+          2098248,
+          4,
+          4294967295
+        ],
+        [
+          2098236,
+          4,
+          3200
+        ],
+        [
+          2098240,
+          4,
+          1
+        ],
+        [
+          2098221,
+          1,
+          1
+        ],
+        [
+          2098924,
+          1,
+          1
+        ],
+        [
+          2099933,
+          1,
+          1
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x536a",
+          "r0": 1,
+          "r6": 119
+        },
+        {
+          "site": "0x5376",
+          "r0": 410,
+          "r6": 119
+        },
+        {
+          "site": "0x5382",
+          "clamp_input": 119,
+          "clamp_output": 410
+        },
+        {
+          "site": "0x539e",
+          "r0": 1,
+          "r6": 410
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 4294967295,
+          "saved_capture": 3200,
+          "capture": 3200,
+          "saved_source": 1,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0x2673",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0x2673"
+        }
+      ]
+    },
+    {
+      "capture": 4000,
+      "old_count": 0,
+      "match": "both",
+      "optional": false,
+      "overrides": [
+        [
+          2098248,
+          4,
+          0
+        ],
+        [
+          2098236,
+          4,
+          4000
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          0
+        ],
+        [
+          2098924,
+          1,
+          0
+        ],
+        [
+          2099933,
+          1,
+          0
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 0,
+          "saved_capture": 4000,
+          "capture": 4000,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 1
+        }
+      ],
+      "count_after": 1,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 4000,
+      "old_count": 0,
+      "match": "both",
+      "optional": true,
+      "overrides": [
+        [
+          2098248,
+          4,
+          0
+        ],
+        [
+          2098236,
+          4,
+          4000
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          1
+        ],
+        [
+          2098924,
+          1,
+          1
+        ],
+        [
+          2099933,
+          1,
+          1
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x536a",
+          "r0": 1,
+          "r6": 119
+        },
+        {
+          "site": "0x5376",
+          "r0": 410,
+          "r6": 119
+        },
+        {
+          "site": "0x5382",
+          "clamp_input": 119,
+          "clamp_output": 410
+        },
+        {
+          "site": "0x539e",
+          "r0": 1,
+          "r6": 410
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 0,
+          "saved_capture": 4000,
+          "capture": 4000,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 1
+        }
+      ],
+      "count_after": 1,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0x2673",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0x2673"
+        }
+      ]
+    },
+    {
+      "capture": 4000,
+      "old_count": 0,
+      "match": "capture_mismatch",
+      "optional": false,
+      "overrides": [
+        [
+          2098248,
+          4,
+          0
+        ],
+        [
+          2098236,
+          4,
+          4001
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          0
+        ],
+        [
+          2098924,
+          1,
+          0
+        ],
+        [
+          2099933,
+          1,
+          0
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 0,
+          "saved_capture": 4001,
+          "capture": 4000,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 4000,
+      "old_count": 0,
+      "match": "capture_mismatch",
+      "optional": true,
+      "overrides": [
+        [
+          2098248,
+          4,
+          0
+        ],
+        [
+          2098236,
+          4,
+          4001
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          1
+        ],
+        [
+          2098924,
+          1,
+          1
+        ],
+        [
+          2099933,
+          1,
+          1
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x536a",
+          "r0": 1,
+          "r6": 119
+        },
+        {
+          "site": "0x5376",
+          "r0": 410,
+          "r6": 119
+        },
+        {
+          "site": "0x5382",
+          "clamp_input": 119,
+          "clamp_output": 410
+        },
+        {
+          "site": "0x539e",
+          "r0": 1,
+          "r6": 410
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 0,
+          "saved_capture": 4001,
+          "capture": 4000,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0x2673",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0x2673"
+        }
+      ]
+    },
+    {
+      "capture": 4000,
+      "old_count": 0,
+      "match": "source_mismatch",
+      "optional": false,
+      "overrides": [
+        [
+          2098248,
+          4,
+          0
+        ],
+        [
+          2098236,
+          4,
+          4000
+        ],
+        [
+          2098240,
+          4,
+          1
+        ],
+        [
+          2098221,
+          1,
+          0
+        ],
+        [
+          2098924,
+          1,
+          0
+        ],
+        [
+          2099933,
+          1,
+          0
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 0,
+          "saved_capture": 4000,
+          "capture": 4000,
+          "saved_source": 1,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 4000,
+      "old_count": 0,
+      "match": "source_mismatch",
+      "optional": true,
+      "overrides": [
+        [
+          2098248,
+          4,
+          0
+        ],
+        [
+          2098236,
+          4,
+          4000
+        ],
+        [
+          2098240,
+          4,
+          1
+        ],
+        [
+          2098221,
+          1,
+          1
+        ],
+        [
+          2098924,
+          1,
+          1
+        ],
+        [
+          2099933,
+          1,
+          1
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x536a",
+          "r0": 1,
+          "r6": 119
+        },
+        {
+          "site": "0x5376",
+          "r0": 410,
+          "r6": 119
+        },
+        {
+          "site": "0x5382",
+          "clamp_input": 119,
+          "clamp_output": 410
+        },
+        {
+          "site": "0x539e",
+          "r0": 1,
+          "r6": 410
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 0,
+          "saved_capture": 4000,
+          "capture": 4000,
+          "saved_source": 1,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0x2673",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0x2673"
+        }
+      ]
+    },
+    {
+      "capture": 4000,
+      "old_count": 1,
+      "match": "both",
+      "optional": false,
+      "overrides": [
+        [
+          2098248,
+          4,
+          1
+        ],
+        [
+          2098236,
+          4,
+          4000
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          0
+        ],
+        [
+          2098924,
+          1,
+          0
+        ],
+        [
+          2099933,
+          1,
+          0
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 1,
+          "saved_capture": 4000,
+          "capture": 4000,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 2
+        }
+      ],
+      "count_after": 2,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 4000,
+      "old_count": 1,
+      "match": "both",
+      "optional": true,
+      "overrides": [
+        [
+          2098248,
+          4,
+          1
+        ],
+        [
+          2098236,
+          4,
+          4000
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          1
+        ],
+        [
+          2098924,
+          1,
+          1
+        ],
+        [
+          2099933,
+          1,
+          1
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x536a",
+          "r0": 1,
+          "r6": 119
+        },
+        {
+          "site": "0x5376",
+          "r0": 410,
+          "r6": 119
+        },
+        {
+          "site": "0x5382",
+          "clamp_input": 119,
+          "clamp_output": 410
+        },
+        {
+          "site": "0x539e",
+          "r0": 1,
+          "r6": 410
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 1,
+          "saved_capture": 4000,
+          "capture": 4000,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 2
+        }
+      ],
+      "count_after": 2,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0x2673",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0x2673"
+        }
+      ]
+    },
+    {
+      "capture": 4000,
+      "old_count": 1,
+      "match": "capture_mismatch",
+      "optional": false,
+      "overrides": [
+        [
+          2098248,
+          4,
+          1
+        ],
+        [
+          2098236,
+          4,
+          4001
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          0
+        ],
+        [
+          2098924,
+          1,
+          0
+        ],
+        [
+          2099933,
+          1,
+          0
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 1,
+          "saved_capture": 4001,
+          "capture": 4000,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 4000,
+      "old_count": 1,
+      "match": "capture_mismatch",
+      "optional": true,
+      "overrides": [
+        [
+          2098248,
+          4,
+          1
+        ],
+        [
+          2098236,
+          4,
+          4001
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          1
+        ],
+        [
+          2098924,
+          1,
+          1
+        ],
+        [
+          2099933,
+          1,
+          1
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x536a",
+          "r0": 1,
+          "r6": 119
+        },
+        {
+          "site": "0x5376",
+          "r0": 410,
+          "r6": 119
+        },
+        {
+          "site": "0x5382",
+          "clamp_input": 119,
+          "clamp_output": 410
+        },
+        {
+          "site": "0x539e",
+          "r0": 1,
+          "r6": 410
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 1,
+          "saved_capture": 4001,
+          "capture": 4000,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0x2673",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0x2673"
+        }
+      ]
+    },
+    {
+      "capture": 4000,
+      "old_count": 1,
+      "match": "source_mismatch",
+      "optional": false,
+      "overrides": [
+        [
+          2098248,
+          4,
+          1
+        ],
+        [
+          2098236,
+          4,
+          4000
+        ],
+        [
+          2098240,
+          4,
+          1
+        ],
+        [
+          2098221,
+          1,
+          0
+        ],
+        [
+          2098924,
+          1,
+          0
+        ],
+        [
+          2099933,
+          1,
+          0
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 1,
+          "saved_capture": 4000,
+          "capture": 4000,
+          "saved_source": 1,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 4000,
+      "old_count": 1,
+      "match": "source_mismatch",
+      "optional": true,
+      "overrides": [
+        [
+          2098248,
+          4,
+          1
+        ],
+        [
+          2098236,
+          4,
+          4000
+        ],
+        [
+          2098240,
+          4,
+          1
+        ],
+        [
+          2098221,
+          1,
+          1
+        ],
+        [
+          2098924,
+          1,
+          1
+        ],
+        [
+          2099933,
+          1,
+          1
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x536a",
+          "r0": 1,
+          "r6": 119
+        },
+        {
+          "site": "0x5376",
+          "r0": 410,
+          "r6": 119
+        },
+        {
+          "site": "0x5382",
+          "clamp_input": 119,
+          "clamp_output": 410
+        },
+        {
+          "site": "0x539e",
+          "r0": 1,
+          "r6": 410
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 1,
+          "saved_capture": 4000,
+          "capture": 4000,
+          "saved_source": 1,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0x2673",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0x2673"
+        }
+      ]
+    },
+    {
+      "capture": 4000,
+      "old_count": 1999,
+      "match": "both",
+      "optional": false,
+      "overrides": [
+        [
+          2098248,
+          4,
+          1999
+        ],
+        [
+          2098236,
+          4,
+          4000
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          0
+        ],
+        [
+          2098924,
+          1,
+          0
+        ],
+        [
+          2099933,
+          1,
+          0
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 1999,
+          "saved_capture": 4000,
+          "capture": 4000,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 2000
+        }
+      ],
+      "count_after": 2000,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 4000,
+      "old_count": 1999,
+      "match": "both",
+      "optional": true,
+      "overrides": [
+        [
+          2098248,
+          4,
+          1999
+        ],
+        [
+          2098236,
+          4,
+          4000
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          1
+        ],
+        [
+          2098924,
+          1,
+          1
+        ],
+        [
+          2099933,
+          1,
+          1
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x536a",
+          "r0": 1,
+          "r6": 119
+        },
+        {
+          "site": "0x5376",
+          "r0": 410,
+          "r6": 119
+        },
+        {
+          "site": "0x5382",
+          "clamp_input": 119,
+          "clamp_output": 410
+        },
+        {
+          "site": "0x539e",
+          "r0": 1,
+          "r6": 410
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 1999,
+          "saved_capture": 4000,
+          "capture": 4000,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 2000
+        }
+      ],
+      "count_after": 2000,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0x2673",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0x2673"
+        }
+      ]
+    },
+    {
+      "capture": 4000,
+      "old_count": 1999,
+      "match": "capture_mismatch",
+      "optional": false,
+      "overrides": [
+        [
+          2098248,
+          4,
+          1999
+        ],
+        [
+          2098236,
+          4,
+          4001
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          0
+        ],
+        [
+          2098924,
+          1,
+          0
+        ],
+        [
+          2099933,
+          1,
+          0
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 1999,
+          "saved_capture": 4001,
+          "capture": 4000,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 4000,
+      "old_count": 1999,
+      "match": "capture_mismatch",
+      "optional": true,
+      "overrides": [
+        [
+          2098248,
+          4,
+          1999
+        ],
+        [
+          2098236,
+          4,
+          4001
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          1
+        ],
+        [
+          2098924,
+          1,
+          1
+        ],
+        [
+          2099933,
+          1,
+          1
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x536a",
+          "r0": 1,
+          "r6": 119
+        },
+        {
+          "site": "0x5376",
+          "r0": 410,
+          "r6": 119
+        },
+        {
+          "site": "0x5382",
+          "clamp_input": 119,
+          "clamp_output": 410
+        },
+        {
+          "site": "0x539e",
+          "r0": 1,
+          "r6": 410
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 1999,
+          "saved_capture": 4001,
+          "capture": 4000,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0x2673",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0x2673"
+        }
+      ]
+    },
+    {
+      "capture": 4000,
+      "old_count": 1999,
+      "match": "source_mismatch",
+      "optional": false,
+      "overrides": [
+        [
+          2098248,
+          4,
+          1999
+        ],
+        [
+          2098236,
+          4,
+          4000
+        ],
+        [
+          2098240,
+          4,
+          1
+        ],
+        [
+          2098221,
+          1,
+          0
+        ],
+        [
+          2098924,
+          1,
+          0
+        ],
+        [
+          2099933,
+          1,
+          0
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 1999,
+          "saved_capture": 4000,
+          "capture": 4000,
+          "saved_source": 1,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 4000,
+      "old_count": 1999,
+      "match": "source_mismatch",
+      "optional": true,
+      "overrides": [
+        [
+          2098248,
+          4,
+          1999
+        ],
+        [
+          2098236,
+          4,
+          4000
+        ],
+        [
+          2098240,
+          4,
+          1
+        ],
+        [
+          2098221,
+          1,
+          1
+        ],
+        [
+          2098924,
+          1,
+          1
+        ],
+        [
+          2099933,
+          1,
+          1
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x536a",
+          "r0": 1,
+          "r6": 119
+        },
+        {
+          "site": "0x5376",
+          "r0": 410,
+          "r6": 119
+        },
+        {
+          "site": "0x5382",
+          "clamp_input": 119,
+          "clamp_output": 410
+        },
+        {
+          "site": "0x539e",
+          "r0": 1,
+          "r6": 410
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 1999,
+          "saved_capture": 4000,
+          "capture": 4000,
+          "saved_source": 1,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0x2673",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0x2673"
+        }
+      ]
+    },
+    {
+      "capture": 4000,
+      "old_count": 4294967295,
+      "match": "both",
+      "optional": false,
+      "overrides": [
+        [
+          2098248,
+          4,
+          4294967295
+        ],
+        [
+          2098236,
+          4,
+          4000
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          0
+        ],
+        [
+          2098924,
+          1,
+          0
+        ],
+        [
+          2099933,
+          1,
+          0
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 4294967295,
+          "saved_capture": 4000,
+          "capture": 4000,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 4000,
+      "old_count": 4294967295,
+      "match": "both",
+      "optional": true,
+      "overrides": [
+        [
+          2098248,
+          4,
+          4294967295
+        ],
+        [
+          2098236,
+          4,
+          4000
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          1
+        ],
+        [
+          2098924,
+          1,
+          1
+        ],
+        [
+          2099933,
+          1,
+          1
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x536a",
+          "r0": 1,
+          "r6": 119
+        },
+        {
+          "site": "0x5376",
+          "r0": 410,
+          "r6": 119
+        },
+        {
+          "site": "0x5382",
+          "clamp_input": 119,
+          "clamp_output": 410
+        },
+        {
+          "site": "0x539e",
+          "r0": 1,
+          "r6": 410
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 4294967295,
+          "saved_capture": 4000,
+          "capture": 4000,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0x2673",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0x2673"
+        }
+      ]
+    },
+    {
+      "capture": 4000,
+      "old_count": 4294967295,
+      "match": "capture_mismatch",
+      "optional": false,
+      "overrides": [
+        [
+          2098248,
+          4,
+          4294967295
+        ],
+        [
+          2098236,
+          4,
+          4001
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          0
+        ],
+        [
+          2098924,
+          1,
+          0
+        ],
+        [
+          2099933,
+          1,
+          0
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 4294967295,
+          "saved_capture": 4001,
+          "capture": 4000,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 4000,
+      "old_count": 4294967295,
+      "match": "capture_mismatch",
+      "optional": true,
+      "overrides": [
+        [
+          2098248,
+          4,
+          4294967295
+        ],
+        [
+          2098236,
+          4,
+          4001
+        ],
+        [
+          2098240,
+          4,
+          0
+        ],
+        [
+          2098221,
+          1,
+          1
+        ],
+        [
+          2098924,
+          1,
+          1
+        ],
+        [
+          2099933,
+          1,
+          1
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x536a",
+          "r0": 1,
+          "r6": 119
+        },
+        {
+          "site": "0x5376",
+          "r0": 410,
+          "r6": 119
+        },
+        {
+          "site": "0x5382",
+          "clamp_input": 119,
+          "clamp_output": 410
+        },
+        {
+          "site": "0x539e",
+          "r0": 1,
+          "r6": 410
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 4294967295,
+          "saved_capture": 4001,
+          "capture": 4000,
+          "saved_source": 0,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0x2673",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0x2673"
+        }
+      ]
+    },
+    {
+      "capture": 4000,
+      "old_count": 4294967295,
+      "match": "source_mismatch",
+      "optional": false,
+      "overrides": [
+        [
+          2098248,
+          4,
+          4294967295
+        ],
+        [
+          2098236,
+          4,
+          4000
+        ],
+        [
+          2098240,
+          4,
+          1
+        ],
+        [
+          2098221,
+          1,
+          0
+        ],
+        [
+          2098924,
+          1,
+          0
+        ],
+        [
+          2099933,
+          1,
+          0
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 4294967295,
+          "saved_capture": 4000,
+          "capture": 4000,
+          "saved_source": 1,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0xb2b",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0xb2b"
+        }
+      ]
+    },
+    {
+      "capture": 4000,
+      "old_count": 4294967295,
+      "match": "source_mismatch",
+      "optional": true,
+      "overrides": [
+        [
+          2098248,
+          4,
+          4294967295
+        ],
+        [
+          2098236,
+          4,
+          4000
+        ],
+        [
+          2098240,
+          4,
+          1
+        ],
+        [
+          2098221,
+          1,
+          1
+        ],
+        [
+          2098924,
+          1,
+          1
+        ],
+        [
+          2099933,
+          1,
+          1
+        ]
+      ],
+      "events": [
+        {
+          "site": "0x530a",
+          "r0": 0,
+          "r6": 0
+        },
+        {
+          "site": "0x536a",
+          "r0": 1,
+          "r6": 119
+        },
+        {
+          "site": "0x5376",
+          "r0": 410,
+          "r6": 119
+        },
+        {
+          "site": "0x5382",
+          "clamp_input": 119,
+          "clamp_output": 410
+        },
+        {
+          "site": "0x539e",
+          "r0": 1,
+          "r6": 410
+        },
+        {
+          "site": "0x55ba",
+          "old_count": 4294967295,
+          "saved_capture": 4000,
+          "capture": 4000,
+          "saved_source": 1,
+          "source": 0,
+          "expected_count": 0
+        }
+      ],
+      "count_after": 0,
+      "timer_calls": [
+        {
+          "base": "0xfffa0000",
+          "value": "0x2673",
+          "clock_enabled": false
+        }
+      ],
+      "timer_writes": [
+        {
+          "site": "0x6fa6",
+          "address": "0xfffa001c",
+          "size": 4,
+          "value": "0x2673"
+        }
+      ]
+    }
+  ],
+  "reference_mismatches": 0,
+  "new_main_starts": [
+    "0x536a",
+    "0x536c",
+    "0x536e",
+    "0x5370",
+    "0x5372",
+    "0x5374",
+    "0x5376",
+    "0x5378",
+    "0x539e",
+    "0x53a0",
+    "0x55d6",
+    "0x55d8"
+  ],
+  "combined_main_starts": 507,
+  "remaining_main_starts": [
+    "0x51d4",
+    "0x51d6",
+    "0x51e0",
+    "0x51e2",
+    "0x51e4",
+    "0x51e6",
+    "0x51ea",
+    "0x51ec",
+    "0x51ee",
+    "0x51f0",
+    "0x51f2",
+    "0x51f4",
+    "0x51f8",
+    "0x51fa",
+    "0x51fc",
+    "0x52f0",
+    "0x52f2",
+    "0x52f4",
+    "0x52f6",
+    "0x52f8",
+    "0x52fa",
+    "0x52fc",
+    "0x52fe",
+    "0x5300",
+    "0x5302",
+    "0x5306",
+    "0x5308",
+    "0x5310",
+    "0x537a",
+    "0x537c",
+    "0x537e",
+    "0x5380",
+    "0x53bc",
+    "0x53be",
+    "0x53c0",
+    "0x53c2",
+    "0x549a",
+    "0x549c",
+    "0x549e",
+    "0x54a2",
+    "0x54a4",
+    "0x54a6",
+    "0x54aa",
+    "0x54ae",
+    "0x54b0",
+    "0x54b4",
+    "0x54b8",
+    "0x54bc",
+    "0x54be",
+    "0x54d2",
+    "0x54fa",
+    "0x54fc",
+    "0x54fe",
+    "0x5500",
+    "0x555e",
+    "0x556e",
+    "0x5570",
+    "0x5572",
+    "0x5574",
+    "0x5578",
+    "0x5588",
+    "0x55e4",
+    "0x55e8",
+    "0x55ea",
+    "0x55ec",
+    "0x55ee",
+    "0x55f0"
+  ],
+  "limits": [
+    "controlled entry-state overrides after initialized SRAM; not live admission",
+    "complete original control calls with existing scalar/table/timer checks",
+    "optional branch events are observations, not complete arithmetic models",
+    "2001-count reinitialization remains rejected by the inherited runner",
+    "no interrupts, DMA, hardware timing or physical output claim"
+  ]
+}
