@@ -45,6 +45,8 @@ The [complete-control integration review](docs/CONTROL_SCALAR_INTEGRATION_REVIEW
 
 The [control-response arithmetic review](docs/CONTROL_RESPONSE_ARITHMETIC_REVIEW.md) checks the integer, floating-point and filter calculations in 1,072 original response slices, and confirms retained BC2/BC3 input ordering across consecutive complete control calls.
 
+The [knot writer/consumer review](docs/KNOT_UPDATE_CONSUMER_REVIEW.md) follows AIDs 137–141 through handler updates, consumer clamps, mode changes and original readback. It reproduces history-dependent scaled state and restoration by same-value updates, with transport and global-writer limits explicit.
+
 ## Try it
 
 Python 3.10+, standard library only (`pyserial` for the USB tool).

@@ -62,6 +62,13 @@ control calls demonstrate retained `0x200BC2/BC3` dependencies. NaN source
 paths, numeric status effects, physical units and global writer bounds remain
 open, along with the other unexercised main-control branches.
 
+The [knot writer/consumer review](KNOT_UPDATE_CONSUMER_REVIEW.md) composes
+306 update/control/readback sequences, including 1,224 whole control calls.
+It establishes the normal knot-handler bound, in-place scaled-word reductions,
+retention after a handler-driven mode change, and restoration by same-value
+updates while raw readbacks remain unchanged. A scripted receive boundary and
+stable state remain explicit; global writer exclusion is not claimed.
+
 ## Full-image baseline
 
 The byte-verified IDA export now records 13,201 items over the entire 32,000-byte

@@ -121,6 +121,11 @@ their clamped values at `0x200458`, `0x20045C`, `0x200460`, `0x200464` and
 within these bounds. The raw limits are not independent proof of engineering
 units; profile names/scales remain separately recorded.
 
+The subsequent [knot writer/consumer composition](KNOT_UPDATE_CONSUMER_REVIEW.md)
+follows those scaled words through complete control calls and original AID
+readers. It records in-place consumer clamps, handler-driven mode changes,
+unchanged raw echoes and restoration by reapplying the same knot settings.
+
 For AID 22, let V be the source byte and L be working byte `0x20058D`:
 
 ```text
