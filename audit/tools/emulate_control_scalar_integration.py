@@ -69,7 +69,7 @@ class IntegrationRunner(AidRunner):
 
     def trace(self, cpu, address, size, user):
         super().trace(cpu, address, size, user)
-        if address == 0x74E8:
+        if address == 0x74E8 and not getattr(self, 'allow_reinitialization', False):
             raise ValueError('reinitialization branch is outside this integration suite')
         if address == 0x4D38:
             args = self.regs()

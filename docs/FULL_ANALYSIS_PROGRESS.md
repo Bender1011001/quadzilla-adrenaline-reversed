@@ -94,6 +94,13 @@ authentication and global writer exclusion remain unproven.
 
 ## Full-image baseline
 
+The [control reinitialization review](CONTROL_REINITIALIZATION_REVIEW.md)
+adds 32 complete returns and one readiness-budget wait. Sixteen triggered calls
+execute original peripheral setup and all six initializers, retaining its 221
+non-stack writes and checking lookup retention and caller byte/count updates.
+The four-suite main-start union reaches 526/574. No asynchronous timeout or
+physical peripheral behavior is inferred from the blocked synthetic case.
+
 The [idle-control integration review](IDLE_CONTROL_INTEGRATION_REVIEW.md)
 adds 150 complete calls, including three persistent two-call sequences. It
 establishes original gate overwriting of the earlier entry-active override,
