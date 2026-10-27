@@ -112,6 +112,10 @@ that every old counter occurs in normal service.
 
 ## Coverage and remaining work
 
+The later [reinitialization extension](CONTROL_REINITIALIZATION_REVIEW.md)
+explicitly enables and executes the setup call with additional peripheral
+pages. The base suite retains its default rejection and original scope.
+
 The later [retained-sample review](CONTROL_RETENTION_BRANCH_REVIEW.md) adds
 120 calls and twelve previously unvisited starts. The union of these two
 suites is 507/574; the original suite's counts below remain its own coverage.
