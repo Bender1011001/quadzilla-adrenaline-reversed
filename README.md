@@ -79,6 +79,8 @@ The subsequent [offline write-path review](docs/OFFLINE_WRITE_PATH_REVIEW.md) tr
 
 **Full firmware analysis is ongoing.** The [coverage ledger and progress report](docs/FULL_ANALYSIS_PROGRESS.md) identify relocated SRAM code and additional entry candidates beyond the original catalog. The 145-entry figure is a starting inventory, not an exhaustive count of execution entries or runtime addresses.
 
+Six complete-control execution suites now collectively visit all 574 accepted main-control instruction starts. The [axis and timer-clamp review](docs/CONTROL_AXIS_CLAMP_REVIEW.md) records the final cases and their bounds. This is instruction coverage; exhaustive paths, shared-state writer constraints, asynchronous behavior and the full firmware analysis remain incomplete.
+
 The [startup and persistence review](docs/STARTUP_PERSISTENCE_REVIEW.md) supports six additional source entries (at least 151 total), reconstructs exception dispatch and SRAM helpers, and identifies the startup attempt to set the MCU security bit. Installed hardware state remains unmeasured.
 
 The [USART0 buffer review](docs/USART0_BUFFER_REVIEW.md) expands the baseline to 36 semantic roles, leaving 109 baseline entries unlabeled. It traces DMA and frame parsing, identifies queue-full behavior, and models the conditions under which a reused short-receive buffer can retain a CRC-valid suffix.

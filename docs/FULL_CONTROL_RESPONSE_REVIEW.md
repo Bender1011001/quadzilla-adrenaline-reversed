@@ -50,6 +50,10 @@ outside the response reference. No physical units or live impact are assigned.
 
 ## Coverage and remaining scope
 
+The subsequent [axis/clamp review](CONTROL_AXIS_CLAMP_REVIEW.md) exercises the
+19 starts listed by this suite. The six-suite union is 574/574; this suite's
+own model and execution scope remain unchanged.
+
 Twenty-nine additional main starts execute. Union with the initial scalar,
 retention, idle and reinitialization suites reaches **555/574**; the 19 listed
 remaining starts belong to the alternate axis calculation and optional timer
