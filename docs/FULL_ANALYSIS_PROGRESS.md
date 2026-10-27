@@ -94,6 +94,13 @@ authentication and global writer exclusion remain unproven.
 
 ## Full-image baseline
 
+The [local callback store-contract review](CALLBACK_STORE_CONTRACT_REVIEW.md)
+accounts for all 114 stores across seven returning callback bodies, with 110
+fixed destinations and four entry-SP-relative stores under explicit pointer,
+callee-preservation and stack assumptions. All fixed sites agree with existing
+observations. Twenty calls to eleven entries remain transitive obligations;
+local nonoverlap with P does not close the asynchronous/global writer proof.
+
 The [selected callback interleaving review](CONTROL_CALLBACK_INTERLEAVING_REVIEW.md)
 pauses original control between repeated percent loads, executes original
 callback bodies with a saved CPU context/separate synthetic stack, and resumes
