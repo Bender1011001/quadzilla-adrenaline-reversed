@@ -1,0 +1,385 @@
+{
+  "format": "quadzilla-callback-transitive-stores-v1",
+  "raw_sha256": "1ae519ba6194e8f7bdaaa94333a83a9e6fda3b0563f87f7d48383b37288c1780",
+  "call_sites_accounted": 20,
+  "numeric_wrappers": [
+    {
+      "entry": "0x7120",
+      "target": "0x86d8",
+      "literal": "0x7124",
+      "stack_push_bytes": 0,
+      "transfer": "fixed ARM target via R3"
+    },
+    {
+      "entry": "0x7128",
+      "target": "0x89c8",
+      "literal": "0x7134",
+      "stack_push_bytes": 4,
+      "transfer": "fixed ARM target via R12; R3 saved/restored"
+    },
+    {
+      "entry": "0x7138",
+      "target": "0x87e8",
+      "literal": "0x713c",
+      "stack_push_bytes": 0,
+      "transfer": "fixed ARM target via R3"
+    },
+    {
+      "entry": "0x7140",
+      "target": "0x9038",
+      "literal": "0x7144",
+      "stack_push_bytes": 0,
+      "transfer": "fixed ARM target via R3"
+    },
+    {
+      "entry": "0x7148",
+      "target": "0x95f4",
+      "literal": "0x714c",
+      "stack_push_bytes": 0,
+      "transfer": "fixed ARM target via R3"
+    },
+    {
+      "entry": "0x7150",
+      "target": "0x90b0",
+      "literal": "0x7154",
+      "stack_push_bytes": 0,
+      "transfer": "fixed ARM target via R3"
+    },
+    {
+      "entry": "0x7158",
+      "target": "0x874c",
+      "literal": "0x715c",
+      "stack_push_bytes": 0,
+      "transfer": "fixed ARM target via R3"
+    },
+    {
+      "entry": "0x7160",
+      "target": "0x88a4",
+      "literal": "0x7164",
+      "stack_push_bytes": 0,
+      "transfer": "fixed ARM target via R3"
+    },
+    {
+      "entry": "0x7168",
+      "target": "0x8ef4",
+      "literal": "0x7174",
+      "stack_push_bytes": 4,
+      "transfer": "fixed ARM target via R12; R3 saved/restored"
+    }
+  ],
+  "flag_helpers": [
+    {
+      "entry": "0x7f28",
+      "stores": [
+        {
+          "site": "0x7f2c",
+          "instruction": "strb    r1, [r0, #2]",
+          "form": {
+            "kind": "immediate-offset store",
+            "base": 0,
+            "source": 1,
+            "width": 1,
+            "offset": 2
+          },
+          "address": "0x2007ca",
+          "entry_sp_offset": null,
+          "byte_count": 1,
+          "status": "fixed"
+        },
+        {
+          "site": "0x7f30",
+          "instruction": "strb    r2, [r0, #0x17]",
+          "form": {
+            "kind": "immediate-offset store",
+            "base": 0,
+            "source": 2,
+            "width": 1,
+            "offset": 23
+          },
+          "address": "0x2007df",
+          "entry_sp_offset": null,
+          "byte_count": 1,
+          "status": "fixed"
+        },
+        {
+          "site": "0x7f38",
+          "instruction": "strb    r1, [r0]",
+          "form": {
+            "kind": "immediate-offset store",
+            "base": 0,
+            "source": 1,
+            "width": 1,
+            "offset": 0
+          },
+          "address": "0x2007c8",
+          "entry_sp_offset": null,
+          "byte_count": 1,
+          "status": "fixed"
+        },
+        {
+          "site": "0x7f3a",
+          "instruction": "strb    r2, [r0, #0x16]",
+          "form": {
+            "kind": "immediate-offset store",
+            "base": 0,
+            "source": 2,
+            "width": 1,
+            "offset": 22
+          },
+          "address": "0x2007de",
+          "entry_sp_offset": null,
+          "byte_count": 1,
+          "status": "fixed"
+        }
+      ],
+      "reachable_starts": 12,
+      "unsupported_starts": [],
+      "callee_obligations": [],
+      "exit_obligations": [
+        {
+          "site": "0x7f3e",
+          "condition": "BX: return-target/frame integrity required"
+        }
+      ]
+    },
+    {
+      "entry": "0x7f40",
+      "stores": [
+        {
+          "site": "0x7f44",
+          "instruction": "strb    r0, [r1, #3]",
+          "form": {
+            "kind": "immediate-offset store",
+            "base": 1,
+            "source": 0,
+            "width": 1,
+            "offset": 3
+          },
+          "address": "0x2007cb",
+          "entry_sp_offset": null,
+          "byte_count": 1,
+          "status": "fixed"
+        },
+        {
+          "site": "0x7f48",
+          "instruction": "strb    r2, [r1, #0x12]",
+          "form": {
+            "kind": "immediate-offset store",
+            "base": 1,
+            "source": 2,
+            "width": 1,
+            "offset": 18
+          },
+          "address": "0x2007da",
+          "entry_sp_offset": null,
+          "byte_count": 1,
+          "status": "fixed"
+        },
+        {
+          "site": "0x7f50",
+          "instruction": "strb    r0, [r1, #1]",
+          "form": {
+            "kind": "immediate-offset store",
+            "base": 1,
+            "source": 0,
+            "width": 1,
+            "offset": 1
+          },
+          "address": "0x2007c9",
+          "entry_sp_offset": null,
+          "byte_count": 1,
+          "status": "fixed"
+        },
+        {
+          "site": "0x7f52",
+          "instruction": "strb    r2, [r1, #0x11]",
+          "form": {
+            "kind": "immediate-offset store",
+            "base": 1,
+            "source": 2,
+            "width": 1,
+            "offset": 17
+          },
+          "address": "0x2007d9",
+          "entry_sp_offset": null,
+          "byte_count": 1,
+          "status": "fixed"
+        }
+      ],
+      "reachable_starts": 12,
+      "unsupported_starts": [],
+      "callee_obligations": [],
+      "exit_obligations": [
+        {
+          "site": "0x7f56",
+          "condition": "BX: return-target/frame integrity required"
+        }
+      ]
+    }
+  ],
+  "runtime_instruction_superset": 1042,
+  "runtime_reachable_overapproximation": 708,
+  "runtime_stores_superset": [
+    {
+      "site": "0x893c",
+      "instruction": "push    {lr}",
+      "form": {
+        "base": 13,
+        "condition": 14,
+        "kind": "STM register list",
+        "registers": [
+          14
+        ],
+        "width": 4,
+        "offset": -4,
+        "writeback": true,
+        "user_bank": false
+      },
+      "status": "current-SP-relative; valid nonaliasing runtime frame required"
+    },
+    {
+      "site": "0x8964",
+      "instruction": "strb    r12, [r2]",
+      "form": {
+        "base": 2,
+        "condition": 14,
+        "kind": "single-data store",
+        "source": 12,
+        "width": 1,
+        "pre_index": true,
+        "increment": true,
+        "writeback": false,
+        "offset": 0,
+        "index_adjustment": 0
+      },
+      "status": "fixed status-byte destination",
+      "address": "0x200af8"
+    },
+    {
+      "site": "0x89b0",
+      "instruction": "push    {lr}",
+      "form": {
+        "base": 13,
+        "condition": 14,
+        "kind": "STM register list",
+        "registers": [
+          14
+        ],
+        "width": 4,
+        "offset": -4,
+        "writeback": true,
+        "user_bank": false
+      },
+      "status": "current-SP-relative; valid nonaliasing runtime frame required"
+    },
+    {
+      "site": "0x8a4c",
+      "instruction": "push    {r4, r5, r6, r7}",
+      "form": {
+        "base": 13,
+        "condition": 14,
+        "kind": "STM register list",
+        "registers": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "width": 4,
+        "offset": -16,
+        "writeback": true,
+        "user_bank": false
+      },
+      "status": "current-SP-relative; valid nonaliasing runtime frame required"
+    },
+    {
+      "site": "0x8a50",
+      "instruction": "push    {lr}",
+      "form": {
+        "base": 13,
+        "condition": 14,
+        "kind": "STM register list",
+        "registers": [
+          14
+        ],
+        "width": 4,
+        "offset": -4,
+        "writeback": true,
+        "user_bank": false
+      },
+      "status": "current-SP-relative; valid nonaliasing runtime frame required"
+    },
+    {
+      "site": "0x8aa8",
+      "instruction": "push    {r4, r5, r6, r7}",
+      "form": {
+        "base": 13,
+        "condition": 14,
+        "kind": "STM register list",
+        "registers": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "width": 4,
+        "offset": -16,
+        "writeback": true,
+        "user_bank": false
+      },
+      "status": "current-SP-relative; valid nonaliasing runtime frame required"
+    },
+    {
+      "site": "0x8cfc",
+      "instruction": "push    {r4, r6}",
+      "form": {
+        "base": 13,
+        "condition": 14,
+        "kind": "STM register list",
+        "registers": [
+          4,
+          6
+        ],
+        "width": 4,
+        "offset": -8,
+        "writeback": true,
+        "user_bank": false
+      },
+      "status": "current-SP-relative; valid nonaliasing runtime frame required"
+    },
+    {
+      "site": "0x8ef4",
+      "instruction": "push    {r4, r6}",
+      "form": {
+        "base": 13,
+        "condition": 14,
+        "kind": "STM register list",
+        "registers": [
+          4,
+          6
+        ],
+        "width": 4,
+        "offset": -8,
+        "writeback": true,
+        "user_bank": false
+      },
+      "status": "current-SP-relative; valid nonaliasing runtime frame required"
+    }
+  ],
+  "status_store_predecessor_chain": [
+    "0x8958",
+    "0x895c",
+    "0x8960",
+    "0x8964"
+  ],
+  "status_destination": "0x200af8",
+  "limits": [
+    "fixed normal wrapper entries and immutable image literals/code assumed",
+    "whole ARM numeric region is a conservative store superset, not all claimed reachable",
+    "direct calls include return fallthrough; LR returns require valid call frames",
+    "SP-relative stores require valid stack placement disjoint from reviewed globals",
+    "caller register-preservation, stack/return integrity and mutable-vector assumptions remain conditions",
+    "address footprint does not establish numeric correctness; prior soft-float mismatches remain",
+    "not DMA, arbitrary entry/corruption, interrupt routing or hardware-output proof"
+  ]
+}

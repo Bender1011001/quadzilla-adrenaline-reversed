@@ -74,6 +74,12 @@ vectors, other entries, external engines and global aliases are not excluded.
 
 ## Explicit transitive obligations
 
+The subsequent [transitive address review](CALLBACK_TRANSITIVE_STORE_REVIEW.md)
+accounts for these callees' write destinations using fixed wrapper targets,
+flag-helper propagation and the ARM numeric-region store superset. Preservation,
+frame and normal-entry assumptions remain conditions; the local-only scope of
+this artifact is unchanged.
+
 All twenty call sites are in TC2 and target eleven entries:
 `0x7120`, `0x7128`, `0x7138`, `0x7140`, `0x7148`, `0x7150`, `0x7158`,
 `0x7160`, `0x7168`, `0x7F28` and `0x7F40`. Numeric wrappers and their lower
