@@ -94,6 +94,13 @@ authentication and global writer exclusion remain unproven.
 
 ## Full-image baseline
 
+The [callback transitive store-address review](CALLBACK_TRANSITIVE_STORE_REVIEW.md)
+accounts for nine fixed numeric wrappers and two flag helpers. The whole ARM
+numeric-region superset has seven SP-relative stores and one fixed status-byte
+store; its ordinary transfer graph stays inside reviewed code. Composed address
+nonoverlap with P is conditional on pointer, register, frame and normal-entry
+contracts. Numeric defects, DMA and unrelated global writers remain open.
+
 The [local callback store-contract review](CALLBACK_STORE_CONTRACT_REVIEW.md)
 accounts for all 114 stores across seven returning callback bodies, with 110
 fixed destinations and four entry-SP-relative stores under explicit pointer,
