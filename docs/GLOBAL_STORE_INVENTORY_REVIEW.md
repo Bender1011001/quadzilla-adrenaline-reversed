@@ -1,5 +1,10 @@
 # Global memory-store inventory and conditional vector/table alias
 
+The subsequent [Thumb provenance review](THUMB_STORE_PROVENANCE_REVIEW.md)
+adds conditional CFG address accounts for 1,039 of this inventory's sites,
+while preserving unresolved and excluded sites. The raw inventory remains
+the complete store-form baseline, not a proof of destination bounds.
+
 This pass inventories memory-store instructions in the exact V2.8.4HF image,
 SHA-256 `1ae519ba6194e8f7bdaaa94333a83a9e6fda3b0563f87f7d48383b37288c1780`.
 The [raw store inventory](../audit/data/store_inventory.json) scans all 8,051

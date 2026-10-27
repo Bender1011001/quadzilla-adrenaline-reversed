@@ -60,6 +60,51 @@ class CallbackStoreContracts(unittest.TestCase):
         self.assertTrue(d['runtime_observed_fixed_sites'])
         self.assertTrue(any('transitive' in s for s in d['limits']))
 
+    def test_additional_entry_does_not_inherit_unknown_caller_registers(self):
+        raw = bytearray(0x8000)
+        ops = [0x4801, 0x6002, 0x4770]
+        for n, op in enumerate(ops):
+            raw[2*n:2*n+2] = op.to_bytes(2, 'little')
+        raw[8:12] = (0x200000).to_bytes(4, 'little')
+        rows = {0x4000+2*n: {'length': 2, 'text': hex(op)} for n, op in enumerate(ops)}
+        self.assertEqual(analyze(raw, rows, 0x4000, {})['stores'][0]['address'], '0x200000')
+        self.assertEqual(analyze(raw, rows, 0x4000, {}, additional_entries=(0x4002,))['stores'][0]['status'], 'unresolved')
+
+    def test_zero_shift_encodings_are_not_all_pointer_copies(self):
+        raw = bytearray(0x8000)
+        ops = [0x4802, 0x0004, 0x6022, 0x4770]
+        rows = {0x4000+2*n: {'length': 2, 'text': hex(op)} for n, op in enumerate(ops)}
+        for n, op in enumerate(ops):
+            raw[2*n:2*n+2] = op.to_bytes(2, 'little')
+        for shift, value, expected in ((0x0004, 0x200000, '0x200000'),
+                                       (0x0804, 0x200000, '0x0'), (0x1004, 0x80000000, '0xffffffff')):
+            raw[2:4] = shift.to_bytes(2, 'little')
+            raw[12:16] = value.to_bytes(4, 'little')
+            self.assertEqual(analyze(raw, rows, 0x4000, {})['stores'][0]['address'], expected)
+
+    def test_rom_dereference_does_not_make_mutable_ram_constant(self):
+        raw = bytearray(0x8000)
+        ops = [0x4803, 0x6804, 0x6022, 0x4770]
+        rows = {0x4000+2*n: {'length': 2, 'text': hex(op)} for n, op in enumerate(ops)}
+        for n, op in enumerate(ops):
+            raw[2*n:2*n+2] = op.to_bytes(2, 'little')
+        raw[16:20] = (0x4014).to_bytes(4, 'little')
+        raw[20:24] = (0x200000).to_bytes(4, 'little')
+        self.assertEqual(analyze(raw, rows, 0x4000, {})['stores'][0]['address'], '0x200000')
+        raw[16:20] = (0x200000).to_bytes(4, 'little')
+        self.assertEqual(analyze(raw, rows, 0x4000, {})['stores'][0]['status'], 'unresolved')
+
+    def test_computed_dispatch_requires_an_explicit_target_contract(self):
+        raw = bytearray(0x8000)
+        ops = [0x4802, 0x448F, 0x6002, 0x4770]
+        rows = {0x4000+2*n: {'length': 2, 'text': hex(op)} for n, op in enumerate(ops)}
+        for n, op in enumerate(ops):
+            raw[2*n:2*n+2] = op.to_bytes(2, 'little')
+        raw[12:16] = (0x200000).to_bytes(4, 'little')
+        self.assertEqual(analyze(raw, rows, 0x4000, {})['stores'][0]['status'], 'unreached-by-local-CFG')
+        supplied = analyze(raw, rows, 0x4000, {}, computed_targets={0x4002: (0x4004,)})
+        self.assertEqual(supplied['stores'][0]['address'], '0x200000')
+
 
 if __name__ == '__main__':
     unittest.main()
