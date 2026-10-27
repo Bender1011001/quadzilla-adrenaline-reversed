@@ -21,6 +21,11 @@ or moving averages with stubs.
 
 ## Source selection and integer derived state
 
+The later [full-control response review](FULL_CONTROL_RESPONSE_REVIEW.md)
+checks this model against 288 complete original control calls, taking actual
+upstream state and frame flags at the response boundary. The slice suite and
+its counts remain separately scoped below.
+
 If byte `0x2005D4` is zero, select raw word `0x200600` and scalar word
 `0x200604`; otherwise select raw word `0x2005E4` and scalar word `0x2005E8`.
 Any nonzero selector takes the second path. Define:

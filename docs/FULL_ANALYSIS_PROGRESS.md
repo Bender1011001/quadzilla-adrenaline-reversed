@@ -94,6 +94,13 @@ authentication and global writer exclusion remain unproven.
 
 ## Full-image baseline
 
+The [full-control response review](FULL_CONTROL_RESPONSE_REVIEW.md) adds 288
+complete original calls with actual-boundary scalar/response inputs and exact
+byte, derived-word and full-filter comparisons. Twenty-nine additional main
+starts bring the five-suite union to 555/574. Finite-source intermediate
+overflow is checked, but source NaNs, numeric status effects, alternate axis
+and upper-clamp starts, global writers and asynchronous ordering remain open.
+
 The [control reinitialization review](CONTROL_REINITIALIZATION_REVIEW.md)
 adds 32 complete returns and one readiness-budget wait. Sixteen triggered calls
 execute original peripheral setup and all six initializers, retaining its 221
