@@ -11,6 +11,11 @@ column and response inputs/results. No function result is stubbed.
 
 ## Host composition and its boundaries
 
+The subsequent [local store-contract review](CALLBACK_STORE_CONTRACT_REVIEW.md)
+uses conservative CFG propagation for all stores in these seven body ranges.
+Its conditional intrabody nonoverlap result retains transitive callee and frame
+obligations; it does not turn these sampled executions into full IRQ validation.
+
 The first original control segment stops before instruction `0x5210` executes.
 The host saves Unicorn's full CPU context, supplies a separate callback stack
 at `0x202800` and an external return link, then invokes the original callback
