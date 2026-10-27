@@ -59,6 +59,13 @@ On inequality it copies 32 words (128 bytes) from address zero to SRAM
 the constant helpers. The comparison depends on memory alias/remap state,
 which this image alone does not establish.
 
+The subsequent [store/alias review](GLOBAL_STORE_INVENTORY_REVIEW.md)
+executes both comparison outcomes with explicit synthetic alias/status inputs
+and the original copied flash helpers. It connects scratch `0x200000` to the
+scalar lookup table, recording 37 prefix word writes on the different branch
+and later signed-byte consumption. It does not establish live remap state or
+exclude subsequent table restoration.
+
 `0x6B20..0x6B44` saves the three arguments, calls SRAM helper `0x200C84`,
 calls interrupt-state helper `0x7498`, then calls SRAM page writer `0x200C94`
 with the original arguments and restores interrupt state via `0x74B4`.

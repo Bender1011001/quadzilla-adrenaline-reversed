@@ -199,3 +199,10 @@ connects normal knot-handler scaling to this calculation's in-place clamps,
 retained state after a handler-driven mode change, and restoration by
 same-value updates. It establishes a conditional 1024..3840 caller-store
 bound for those reviewed writers, without excluding alternate writers.
+
+The [global store/alias review](GLOBAL_STORE_INVENTORY_REVIEW.md) establishes
+another conditional writer: vector maintenance can use the table prefix as
+scratch space. Original-byte execution with explicit synthetic aliases
+produces high-bit cells later consumed by this helper. Initial 0..100 contents
+therefore do not alone prove a persistent nonnegative-cell invariant; actual
+boot/remap conditions and later restoration remain open.
